@@ -23,6 +23,10 @@ The current version of the ITFlow API is v1. It can be accessed at **/api/v1/{mo
   * read
   * create //(partial)//
   * update //(partial)//
+  * delete //(partial)//
+
+
+  * //We may also add archive//
 ===== Generating an API Key =====
 
   - Navigate to the **Admin** panel
