@@ -1,0 +1,46 @@
+====== Domains ======
+Keep track of what your client domains are, where they're hosted & when they're due to expire.
+{{:domains-list.png?direct|}}
+
+===== Domain Fields =====
+  * Name
+  * Registrar / Webhost (link vendors)
+  * Expiry date
+
+===== Domain Features =====
+  * Automatically detects and adds the associated SSL certificate, if one exists
+  * Fetches domain expiry (whois data) automatically
+  * Expiry notifications (see Alerts)
+  * Records DNS records (IP, Name servers & mail exchange servers)
+
+{{:domains-edit.png?direct|}}
+
+===== API =====
+/api/v1/domains
+
+==== Read - Retrieve domain information via API (/read.php) ====
+
+  * Default / No params - Returns all domains
+  * domain_id - Specific domain ID from the ITFlow database
+  * domain_name - Domain Name
+  * client_id - Returns all domains for a specific client
+
+<code>
+Invoke-RestMethod -Uri "http://127.0.0.1/itflow/api/v1/domains/read.php?api_key=XetQjoZiti5Opg7y&domain_id=7" | ConvertTo-Json
+
+{
+    "success":  "True",
+    "count":  1,
+    "data":  [
+                 {
+                     "0":  "7",
+                     "domain_id":  "7",
+                     "1":  "itflow.org",
+                     "domain_name":  "itflow.org",
+                     "2":  "2022-02-06",
+                     "domain_expire":  "2022-02-06",
+                     "3":  "2022-02-05 18:15:07",
+                     "domain_created_at":  "2022-02-05 18:15:07",
+
+[...]
+</code>

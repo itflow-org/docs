@@ -1,0 +1,92 @@
+====== Tickets ======
+
+Tickets allow you to easily track issues and service requests from your clients.
+
+==== Views ====
+
+There are currently two main views for tickets
+
+  * All tickets (from all clients)
+{{:tickets-listing.png?900|}}
+
+  * Client-specific tickets - accessed via a client's view/page
+{{:client-tickets-list.png?900|}}
+
+
+==== Fields ====
+
+  * Subject
+  * Ticket description
+  * Client & Contact
+  * Priority (low/med/high)
+  * Status (open, working, hold, auto-close, closed)
+  * Related asset (future feature is to allow multiple assets)
+
+
+==== Features ====
+
+  * Agent Assignment/Re-assignment
+{{:tickets-assign_agent.png|}}
+  * Custom ticket prefix
+{{:ticket-settings-ticket_prefix.png|}}
+  * Time tracking
+{{:tickets-time_tracking.png|}}
+  * Email integration
+{{:tickets-public_updates.png|}}
+  * Private/internal notes
+{{:tickets-private_notes.png|}}
+  * Merging
+
+  * Scheduled tickets
+{{:scheduled-tickets-create.png?500|}}
+  * Invoicing
+{{:tickets-invoice.png?300|}}
+  * Close - Once a ticket is closed, it cannot be re-opened
+  * Auto-close tickets - sends a friendly chaser message before automatically closing the ticket for good
+
+==== Email Ticketing ====
+Registered client contacts can create/update tickets via e-mail.
+  * Configure at: **Settings > Mail**:
+    * IMAP Host, Port, Encryption
+    * Ticket from email/name
+  * Turn on: **Settings > Ticket > Email-to-ticket parsing**
+  * Add a cron job to run email_parser_cron.php every min
+
+=== Notifications ===
+  * Client notifications can be configured to be sent on ticket creation & closure //("Send clients general notification emails")//
+  * New ticket email notifications can be configured to a email/distribution list, so your team is always aware of new tickets //("Email address to notify when new tickets are raised")//
+  * IN PROGRESS: Agents will be notified when assigned a ticket & when their assigned ticket is replied to / updated
+
+==== Notes ====
+  * Only supports basic authentication (no oAuth) for now - a "nice to have" in the future
+  * Emails from unregistered contacts without a ticket reference are ignored (unless the from domain matches a domain registered in ITFlow)
+==== API ====
+/api/v1/tickets
+
+**Read - Retrieve ticket information (/read.php) (GET)**
+  * **Default / No params - Returns all tickets**
+  * ticket_id - Specific ticket ID from the ITFlow database (may, but usually shouldn't, differ from ticket number)
+
+<code>
+
+Invoke-RestMethod -Uri "https://demo.itflow.org/api/v1/tickets/read.php?api_key=YOUR-API-KEY&ticket_id=3" | ConvertTo-Json
+{
+    "success":  "True",
+    "count":  1,
+    "data":  [
+                 {
+                     "0":  "3",
+                     "ticket_id":  "3",
+                     "1":  "TCK-",
+                     "ticket_prefix":  "TCK-",
+                     "2":  "3",
+                     "ticket_number":  "3",
+                     "3":  null,
+                     "ticket_category":  null,
+                     "4":  "Computer broken",
+                     "ticket_subject":  "Computer broken",
+
+[...]
+
+</code>
+

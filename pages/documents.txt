@@ -1,0 +1,12 @@
+Documents is where you can enter textual documentation of your client.
+
+The information you can enter in each document is as follows:
+
+  * Name - This is the name of the document (ie. Patch panel layout)
+  * Text box - You can enter the document data within. There are various formatting options such as Heading, Bold, Italic, Font Colours, Bulleting, Alignment and Tables
+  * Folder - You can create folders to organize your Documents within
+  * Description - You can put a short summary (ie. 1 paragraph) of what the document contains within
+
+After creating a Document, you are able to associate Files, Contacts, Assets, Licenses and Vendors to that Document.
+
+Primary & technical client contacts are able to see all documents in the Client Portal.

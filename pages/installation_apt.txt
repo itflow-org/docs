@@ -1,0 +1,141 @@
+====== Installation - Local via apt ======
+
+===== Security message =====
+
+  * This project is currently in **Beta** with many ongoing changes.
+
+  * Whilst we're confident the majority of code is safe, nothing in life is 100% safe or risk-free. Writing functional, secure code is very difficult. The current fast pace of development/change may unintentionally introduce bugs/security issues. Use your best judgment before storing highly confidential information in the app. You may wish to consider running ITFlow on it's own server, using a web-app firewall, restricting access (except /portal) to trusted IP addresses, etc.
+
+  * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]]
+
+  * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
+
+===== Install Overview =====
+ITFlow runs on most "standard" Linux web servers. For the core functionality, you just need Apache, a database (MariaDB is highly recommended over MySQL) and PHP.
+
+  - Install a LAMP stack (Linux, Apache, MariaDB & PHP)
+  - Create a SQL database, username & password
+  - Clone ITFlow (https://github.com/itflow-org/itflow.git) in your web directory root
+  - Point your browser to https://itflow.yourdomain.com
+  - Go!
+
+There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itflow_install.sh|a script]] that automates this process for you and uses Let's Encrypt certificates. The script also takes care of setting up [[cron|cron]].
+
+===== Debian Setup Guide =====
+
+//This guide assumes you want to install ITFlow to the default ''/var/www/html/'' directory, adjust this as required if you're using vhosts.//
+
+**Update apt**
+
+  * ''sudo apt update''
+
+**Install Apache**
+
+  * ''sudo apt install apache2 -y''
+
+**Install MariaDB**
+
+  * ''sudo apt install mariadb-server -y''
+//NOTE: We **highly recommend MariaDB** over MySQL. They are very similar but some pages do not load properly when using MySQL.//
+
+**Install PHP**
+
+  * ''sudo apt install php php-intl php-imap php-mailparse php-mysqli php-curl php-gd libapache2-mod-php -y''
+
+**Install Git & whois**
+
+  * ''sudo apt install git whois -y''
+
+**Harden your Linux installation**. //As a starting point://
+
+  * MariaDB: ''sudo mysql_secure_installation''
+  * UFW: ''sudo ufw allow ssh'' & ''sudo ufw allow "Apache Full"'' & ''sudo ufw enable''
+  * Consider setting up a web app firewall, like [[https://github.com/SpiderLabs/ModSecurity|ModSecurity]]
+
+**Enable PHP** //(hint: hit tab after typing php to get a suggested version number)//
+
+  * ''sudo a2enmod php8.3''
+
+
+**Adjust PHP File Upload Limits**
+
+  * ''sudo nano  /etc/php/{PHP VERSION}/apache2/php.ini'' - Adjust:
+    * ''upload_max_filesize = 500M''
+    * ''post_max_size = 500M''
+
+**Enable SSL**
+
+  * ''sudo a2enmod ssl''
+
+**Add public/private TLS keys.** //You could also use LetsEncrypt, but setting this up is beyond the scope of this guide.//
+  * Place public key at: ''/etc/ssl/certs/public.pem''
+  * Place private key at: ''/etc/ssl/private/private.key''
+
+**Adjust Apache's default SSL config** to reflect the location of your keys:
+
+  * ''sudo nano /etc/apache2/sites-available/default-ssl.conf'' - Adjust:
+    * ''SSLCertificateKeyFile /etc/ssl/certs/public.pem''
+    * ''SSLCertificateFile /etc/ssl/private/private.key''
+
+**Check Apache config**
+
+  * ''sudo apachectl configtest''
+
+**Enable the 00-default site**
+
+  * ''sudo a2ensite default-ssl''
+
+**Reload Apache Service** to apply the changes
+
+  * ''sudo systemctl reload apache2''
+
+**Test: HTTP & HTTPS**
+
+  * Check you can access the default Apache page using HTTP & HTTPS
+
+**Configure Apache to redirect HTTP to HTTPS**
+
+  * ''sudo nano /etc/apache2/sites-enabled/000-default.conf''
+    * Add the line ''Redirect permanent / https://itflow.yourdomain.com/'' (or similar) under the VirtualHost for port 80
+	
+**Log in to the database**
+  * ''sudo mysql -u root''
+
+**Create a new database for ITFlow**
+  * ''MariaDB> CREATE DATABASE itflow;''
+  * ''MariaDB> FLUSH PRIVILEGES;''
+  
+**Setup a user for the ITFlow app**
+  * ''MariaDB> CREATE USER 'itflow'@'localhost' IDENTIFIED BY 'supersecurepassword';''
+  * ''MariaDB> GRANT ALL PRIVILEGES on itflow.* to 'itflow'@'localhost';''
+  * ''exit''
+  
+**Clone ITFlow to the Apache web directory**
+  * ''cd /var/www/html''
+  * ''rm index.html''
+  * ''git clone https://github.com/itflow-org/itflow.git .''
+  
+**Set the web folder to be owned by Apache's www-data user**
+  * ''sudo chown -R www-data:www-data /var/www/html''
+
+**Set web folder & git permissions**
+  * ''sudo chmod -R 777 /var/www/html''
+  * ''sudo git config --system --add safe.directory '*'''
+
+**Run through the initial setup by navigating to your web server using HTTPS**
+  * Provide the database name, username, and password you set up earlier when prompted
+  
+**Once complete, tidy up the webserver permissions** //(The Apache/www-data user needs access to edit files as it self-updates using Git)//
+  * ''sudo chmod -R 775 /var/www/html''
+  * ''sudo chmod 640 /var/www/html/config.php''
+  
+
+**Done!**
+
+
+----
+
+
+==== ITFlow on Windows is unsupported ====
+
+Whilst it is //technically possible// to install ITFlow on Windows, we do not recommend this and cannot offer support for it. Many PHP functions simply do not work properly on Windows.

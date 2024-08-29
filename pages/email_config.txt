@@ -1,0 +1,64 @@
+====== Outbound Email Configuration ======
+
+ITFlow must be configured with your mail server settings to send outbound emails for things such as ticket notifications and invoices.
+
+Configure at Settings > Mail:
+  * SMTP Host
+  * SMTP Port
+  * Encryption
+  * SMTP Username / Password
+  * Outbound email to send as (use SMTP username if unsure) //(can be different for invoices/quotes/tickets)//
+  * Outbound name to send as (e.g. ITFlow) //(can be different for invoices/quotes/tickets)//
+
+===== Mail Queue ===== 
+
+  * Currently, many pages send emails immediately - but this has a few limitations
+  * We are in the process of moving all messages to a queue-based system accessible via Settings > Mail Queue
+  * Messages that fail (e.g. config/mail server issues) to send can be manually retried
+
+-- 
+
+===== Microsoft 365 =====
+
+  * SMTP: smtp.office365.com
+  * PORT: 587
+  * SMTP Username: your-email@yourdomain.com
+  * SMTP Password: generate app password (see below setup)
+
+Make sure your SMTP is enabled for your account (ask your provider to check, if you don't have admin access)
+  - Open the Microsoft 365 admin center and go to Users > Active users.
+  - Select the user, and in the flyout that appears, click Mail.
+  - In the Email apps section, click Manage email apps.
+  - Verify the Authenticated SMTP setting: unchecked = disabled, checked = enabled.
+  - When you're finished, click Save changes.
+
+Generating an app password requires MFA.
+  - Go to the Security basics page and sign in to your Microsoft account (aka.ms/MFASetup).
+  - Select More security options. 
+  - Under App passwords, select Create a new app password. A new app password is generated and appears on your screen.
+  - Enter this app password where you would enter your normal Microsoft account password in the application.
+
+
+===== Google Workspace (Gsuite) =====
+  * SMTP: smtp.gmail.com
+  * PORT: 587
+  * SMTP Username: your-email@yourdomain.com
+  * SMTP Password: If your email password not working, try to generate app password (see below setup)
+
+App Password
+  - Go to your Google Account.
+  - Select Security.
+  - Under "Signing in to Google," select App Passwords. You may need to sign in. If you don’t have this option, it might be because:
+    - 2-Step Verification is not set up for your account.
+    - 2-Step Verification is only set up for security keys.
+    - Your account is through work, school, or other organization.
+    - You turned on Advanced Protection.
+  - At the bottom, choose Select app and choose the app you using and then Select device and choose the device you’re using and then Generate.
+  - Follow the instructions to enter the App Password. The App Password is the 16-character code in the yellow bar on your device.
+  - Tap Done.
+
+
+===== Notes =====
+  * Only supports **basic auth**entication. Many cloud providers consider this legacy. We aim to add support for OAuth in the future.
+  * Email ticketing currently uses/relies on these SMTP credentials to connect
+  * Known error: If mail settings are incorrect (e.g. encryption) the app can freeze up - [[https://github.com/itflow-org/itflow/issues/696|GitHub issue]]

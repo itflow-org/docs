@@ -1,0 +1,40 @@
+====== Backups ======
+
+As ITFlow will hold essential data about you and your clients, it is essential that you take (and test) regular nightly backups, in addition to on-demand backups before & after performing updates.
+
+Summary:
+
+**1. You should regularly back up up the __entire Virtual machine__ running ITFlow.**
+  * The terminology for this may differ depending on your virtualization platform, but essentially you want an image/snapshot of the entire VM. 
+  * This allows you to easily capture & restore the files & database. 
+
+**2. You should retrieve and securely store your __master encryption key__**
+
+
+
+----
+
+
+ITFlow is split into three main areas. If you are unable to backup the entire VM, you'll need to backup the files & database individually 
+
+  * Files
+  * Database
+  * **Master Encryption key**
+
+{{backups.png?400|}}
+
+===== Files =====
+  * You should regularly take copies of the PHP files that power ITFlow. 
+  * As updates are released, these files may reference new database fields. **Your file backup should be taken at the same time as your database backup** to prevent running into strange issues (e.g. pages failing to load).
+  * Additionally, ITFlow stores any uploaded files in ''/uploads/''. This includes images, PDFs, etc.
+
+===== Database =====
+  * Your MariaDB database will contain all information entered into ITFlow. 
+  * Each database update will change the schema - restoring an older backup may fail or not work as intended as fields will have been added/removed
+  * It is essential that you back up the database regularly, and **perform an on-demand backup before and after performing updates**.
+    * You can take one-off database backups at ''/settings_backup.php'' - note these must be restored via the command line/phpMyAdmin - __currently there is no built-in restore utility__.
+
+===== Master Encryption key =====
+  * ITFlow allows you to store login credentials for assets, websites, etc. 
+  * Usernames and passwords entered are encrypted in the database using a //**master encryption key**//. This key is never stored in plaintext on the disk or in the database. You'll need this key if you ever need to recover encrypted passwords from the database.
+  * You can retrieve your key at ''/settings_backup.php'' by entering your account password. The key should never change, so only needs to be backed up somewhere safe once.

@@ -1,0 +1,20 @@
+====== Payments ======
+Review all of your client's payments towards invoices in one place.
+
+{{payments.png?700|}}
+
+
+The following information is recorded for each payment:
+  * Payment Date
+  * Invoice Date
+  * Invoice id/ref
+  * Client
+  * Amount
+  * Payment method (cash/cheque/Stripe)
+  * Reference
+  * Account credited
+
+===== Notes =====
+
+  * You cannot add/remove a payment directly from the payments page - you have to apply/remove the payment against an invoice
+  * Removing a Stripe payment does not automatically refund it in Stripe

@@ -1,0 +1,26 @@
+====== Invoices ======
+Quickly and easily invoice customers & track payments
+
+{{invoices.png?direct|}}
+
+===== Invoice Fields =====
+
+  * Client
+  * Date
+  * Category
+  * Scope
+  * Item/Product
+  * Description
+  * Quantity
+  * Price
+  * Tax
+  * Notes
+
+===== Features =====
+  * Recurring invoices
+  * Email invoice details to client
+  * Client can review invoices in portal or using a guest link
+{{:invoice-guest_url.png?direct|}}
+  * Duplicate/copy invoices
+  * Track payment of invoices
+  * Stripe invoice payment

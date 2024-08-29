@@ -1,0 +1,167 @@
+====== Assets ======
+Manage your client's laptops, servers and networking gear with the assets module.
+
+{{assets.png?300|}}
+
+The following information can be recorded for each asset:
+
+  * Name
+  * Type (Desktop/Laptop/Server/Mobile, etc)
+  * Make/Manufacturer
+  * Model
+  * Serial Number
+  * OS
+  * IP & MAC addresses
+  * Status (Prep, deployed, etc)
+  * Vendor
+  * Purchase, install, and warranty dates
+  * Notes
+
+Assets can also be associated with other data in ITFlow, such as:
+
+  * Clients
+  * Locations
+  * Networks
+  * Logins
+  * Tickets
+  * Services
+
+===== Import & Export CSV =====
+
+  * You can easily export assets for a client using the Export button.
+
+
+  * You can import a list of assets for a client using the Import button and uploading a CSV
+    * Headings: Name, Description, Type, Make, Model, Serial Number, OS, Assigned To, Location
+
+
+----
+
+
+===== API =====
+''/api/v1/assets''
+
+==== Read ====
+Retrieve asset information - ''/read.php''.
+
+  * Default / No params - Returns all assets
+  * asset_id - Specific asset ID from the ITFlow database
+  * asset_name - Asset Name
+  * asset_type - Type of asset (e.g. Laptop, Desktop, Server, etc)
+  * asset_serial - Asset Serial Number
+  * client_id - Returns all assets for a specific client
+
+
+  Invoke-RestMethod -Uri "https://demo.itflow.org/api/v1/assets/read.php?api_key=YOUR-API-KEY&asset_id=7" | ConvertTo-Json
+  
+  
+  {
+    "success":  "True",
+    "count":  1,
+    "data":  [
+           {
+             "0":  "7",
+             "asset_id":  "7",
+             "1":  "Laptop",
+             "asset_type":  "Laptop",
+             "2":  "Sample Laptop",
+             "asset_name":  "Sample Laptop",
+  [...]
+
+==== Create ====
+Create a new asset - ''/create.php''.
+
+Specify parameters as below. The new asset ID will be returned.
+
+
+  $uri = "https://demo.itflow.org/api/v1/assets/create.php"
+  
+  $body = @"
+  {
+    "api_key" : "YOUR-API-KEY",
+    "asset_name" : "Sample Laptop",
+    "asset_type" : "Laptop",
+    "asset_make" : "Dell",
+    "asset_model" : "Optiplex",
+    "asset_serial" : "XYZ",
+    "asset_os" : "Win 10",
+    "asset_ip" : "",
+    "asset_mac" : "",
+    "asset_status" : "Deployed",
+    "asset_purchase_date" : "0000-00-00",
+    "asset_warranty_expire" : "0000-00-00",
+    "install_date" : "0000-00-00",
+    "asset_notes" : "",
+    "asset_vendor_id" : "",
+    "asset_location_id" : "",
+    "asset_contact_id" : "",
+    "asset_network_id" : "",
+    "client_id" : "1"
+  }
+  "@
+  
+  
+  Invoke-RestMethod -Method Post -Uri $uri -Body $body
+  
+  success count data       
+  ------- ----- ----       
+  True  1   {@{insert_id=41}}
+
+==== Update ====
+Update attributes of an existing asset - ''/update.php''.
+
+Only parameters specified are changed, remove parameters you don't want to modify. True/False is returned. 
+
+  $uri = "https://demo.itflow.org/api/v1/assets/update.php"
+  
+  $body = @"
+  {
+    "api_key" : "YOUR-API-KEY",
+    "asset_name" : "Sample Changed Laptop",
+    "asset_type" : "Laptop",
+    "asset_make" : "Dell",
+    "asset_model" : "Optiplex",
+    "asset_serial" : "XYZ",
+    "asset_os" : "Win 10",
+    "asset_ip" : "",
+    "asset_mac" : "",
+    "asset_status" : "Deployed",
+    "asset_purchase_date" : "",
+    "asset_warranty_expire" : "",
+    "install_date" : "",
+    "asset_notes" : "",
+    "asset_vendor_id" : "",
+    "asset_location_id" : "",
+    "asset_contact_id" : "",
+    "asset_network_id" : "",
+    "client_id" : "1"
+  }
+  "@
+  
+  
+  Invoke-RestMethod -Method Post -Uri $uri -Body $body
+  
+  success count
+  ------- -----
+  True    1
+
+
+==== Delete ====
+Delete an asset - ''/delete.php''.
+
+  $uri = "https://demo.itflow.org/api/v1/assets/delete.php"
+  
+  $body = @"
+  {
+    "api_key" : "YOUR-API-KEY",
+    "asset_id" : "10",
+    "client_id" : "1"
+  }
+  "@
+  
+  
+  Invoke-RestMethod -Method Post -Uri $uri -Body $body
+  
+  success count
+  ------- -----
+  True    1

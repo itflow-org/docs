@@ -1,0 +1,45 @@
+====== Contribute Code ======
+
+
+If you are able to make a contribution that would make ITFlow better for everyone, please fork the repository and create a pull request.
+
+For large changes/new features, please discuss the issue with other contributors first.
+
+  - Fork the Project
+  - Create your Feature Branch (''git checkout -b feature'')
+  - Commit your Changes (''git commit -m 'Add some''')
+  - Push to the Branch (''git push origin feature'')
+  - Open a Pull Request
+
+ITFlow, along with all contributions, is [[https://github.com/itflow-org/itflow/blob/master/LICENSE|licensed under the GNU GPL]]. By contributing you grant us a perpetual & irrevocable license to include your work in ITFlow - on behalf of the community, thank you.
+
+
+===== I'm not a developer but want to try and contribute code =====
+
+
+The core maintainers of ITFlow are more Sysadmins than developers. If you've got an idea of something you'd like to change in ITFlow, give it a try! This could be anything and doesn't have to be huge to be helpful to the project - fixing typos, adjusting icons, etc.
+
+First, review the [[code_standards|code standards]] page. This will give you an idea of how we name variables and what files do what.
+
+If you need some help with using Git/GitHub, [[https://www.dataschool.io/how-to-contribute-on-github/|this article]] is a great resource.
+
+Once you've got a working [[installation|installation]], switch to a new branch (''git checkout -b mybranch'').
+
+Locate the page that holds the functionality you'd like to amend and start making changes. It's usually helpful to break down your desired goal into small chunks you can incrementally add.
+
+//If you're doing lots of work with forms (generally submitting to post.php), you might want to look into something like Burp Suite to speed things up.//
+
+Once you've got your changes working, add & commit your files (''git add myfile.php && git commit -m "My change"''), and push them to your GitHub account (''git push origin mybranch'').
+
+You'll be prompted to raise a pull request where we can discuss your changes and eventually merge them into ITFlow!
+
+----
+
+====== Other ways to contribute ======
+
+There are other ways to contribute to ITFlow:
+
+  * Help out with the documentation //(ask on the forum for a Docuwiki account)//
+  * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
+  * Report bugs and raise feature requests
+  * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//

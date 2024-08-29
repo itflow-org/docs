@@ -1,0 +1,48 @@
+====== Certificates ======
+Keep track of all your clients TLS (SSL) certificates automatically with the certificate tracker.
+
+{{:certificates.gif?direct|}}
+
+The following information can be recorded for each certificate:
+  * Name
+  * Domain
+  * Issued by
+  * Expires
+  * Public Key
+  * Related domain
+
+===== Features =====
+  * Expiry notifications (see Alerts)
+  * Auto-grab cert info after entering domain name
+  * Parse public key for info (for non-public certificates)
+
+
+
+----
+
+
+===== API =====
+''/api/v1/certificates''
+
+==== Read ====
+Retrieve certificate information - ''/read.php''.
+
+  * Default / No params - Returns all certificates
+  * certificate_id - Specific certificate ID from the ITFlow database
+  * certificate_name - Certificate Name
+  * client_id - Returns all certificates for a specific client
+
+  Invoke-RestMethod -Uri "http://127.0.0.1/itflow/api/v1/certificates/read.php?api_key=XetQjoZiti5Opg7y&certificate_id=10" | ConvertTo-Json
+  
+  {
+    "success":  "True",
+    "count":  1,
+    "data":  [
+           {
+             "0":  "10",
+             "certificate_id":  "10",
+             "1":  "ITFlow Demo",
+             "certificate_name":  "ITFlow Demo",
+             "2":  "demo.itflow.org",
+             "certificate_domain":  "demo.itflow.org",
+  [...]

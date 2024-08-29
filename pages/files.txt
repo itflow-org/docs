@@ -1,0 +1,1 @@
+ITFlow allows you to upload files (e.g. PDFs, images, etc)

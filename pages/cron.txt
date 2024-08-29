@@ -1,0 +1,31 @@
+====== Cron ======
+
+ITFlow comes with an array of PHP scripts that are meant to be executed automatically using Cron. The operation of scripts via Cron guarantees that actions are carried out autonomously in the background, eliminating the need for a user to be logged in. We strongly recommend configuring cron.
+
+==== Cron Activation & Key ====
+
+For the sole execution of the scripts by Cron, not by an arbitrary user or bot visiting the pages, it is necessary to activate Cron and generate a Cron Key.
+
+Sign in to ITFlow with administrative rights. Proceed to **Settings** > **Notifications**:
+  * Enable cron
+  * Generate a Cron Key
+
+== Cron Scripts ==
+The following scripts should be added to your Cron:
+  *NOTE: THESE ARE SETUP BY DEFAULT IF YOU INSTALLED ITFLOW USING THE [[installation_script|SCRIPT]]
+
+  * ''php /full/path/to/**cron.php** **[KEY]**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
+  * ''php /full/path/to/**cron_ticket_email_parser.php** **[KEY]**'' -- This should run every minute: it interprets emails and creates/updates tickets
+  * ''php /full/path/to/**cron_mail_queue.php** **[KEY]**'' -- This should run every minute: it's used for in-app email sending
+  * ''php /full/path/to/**cron_domain_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated domain
+
+Please note: Swap [KEY] with your actual Cron key, and don't include the brackets [ ]
+
+== Example ==
+<code>
+# /etc/crontab: system-wide crontab
+
+# ITFlow - Nightly cron script
+0  02   * * *   root    php /var/www/pr-review-base.itflow.org/cron.php 4PlrCJ2kJ5cvf4jnJmoB2E1oTY4PsX8w 2>&1 | logger -t itflow-nightlycron
+</code>
+{{:cron_example.png?direct|}}

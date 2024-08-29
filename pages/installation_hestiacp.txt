@@ -1,0 +1,78 @@
+===== Security message =====
+
+  * This project is currently in **Beta** with many ongoing changes.
+
+  * Whilst we're confident the majority of code is safe, nothing in life is 100% safe or risk-free. Writing functional, secure code is very difficult. The current fast pace of development/change may unintentionally introduce bugs/security issues. Use your best judgment before storing highly confidential information in the app. You may wish to consider running ITFlow on it's own server, using a web-app firewall, restricting access (except /portal) to trusted IP addresses, etc.
+
+  * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]]
+
+  * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
+
+
+----
+
+A Fantastic Free and Opensource Web Hosting Control Panel [[https://hestiacp.com]]
+
+
+====== Admin Level ======
+
+===== Install HestiaCP =====
+  * Install on Debian 12 **without** Mail, DNS and Apache //(Nginx will be used instead)// This will provide the most ultimate performance for ITFlow
+
+===== Install PHP Mods =====
+//These modules are not installed as part of the default HestiaCP Install//
+
+  * Login as root: ''apt install php-intl php-imap php-mailparse php-curl -y''
+
+===== Create User =====
+  - Login to HestiaCP as admin https://host.yourdomain.ext:8083
+  - Create Normal user with bash shell access - //it defaults to no login// {{:hestia-install-8.png?direct&200|}}
+  - Logout as admin
+
+
+====== User Level ======
+
+===== Create Web Domain =====
+  - Login as newly created user
+  - Click Create Web Domain {{:hestia-install-1.png?direct&200|}}
+  - Enter your FQDN - //for example itflow.mycompany.com// {{:hestia-install-2.png?direct&200|}}
+  - Click Save
+  - Edit the newly created Web Domain
+  - Click Enable SSL for this domain and the 3 options under it should be checked as well. {{:hestia-install-4.png?direct&200|}}
+    - Use Let's Encrypt to obtain SSL certificate
+    - Enable automatic HTTPS redirection
+    - Enable HTTP Strict Transport Security (HSTS)
+  - Click Save
+
+===== Create Database =====
+  - Click DB {{:hestia-install-5.png?direct&200|}}
+  - Click Add Database {{:hestia-install-6.png?direct&200|}}
+  - Name the database
+  - create username for database you can use the same name as the database name for simplicity
+  - make a secure password {{:hestia-install-7.png?direct&200|}}
+  - Click Save
+
+===== Pull down ITFlow install files =====
+  - Login with your new user via ssh - ssh username@host.domain.ext
+  - Change to Web root Directory ''cd /home/[USERNAME]/web/[HOST.DOMAIN.EXT]/public_html''
+  - Delete HestiaCP automatic created files ''rm *'' - //This will delete index.html and robots.txt//
+  - Install ITFlow files via git - ''git clone https://github.com/itflow-org/itflow.git .'' - Do not forget the . at the end
+
+===== Follow Web Install Process =====
+
+===== Setup Cron Jobs =====
+  - Log back into HestiaCP
+  - Click Cron
+  - Add each of the Cron Jobs in the documentation [[cron|here]]
+{{:hestia-cron_add.png?direct|}}
+
+===== Tweaks (Optional) =====
+  * Click Users > Packages > Edit Default Package
+    * Set Backups to something other than the default 1 - **7 to 14** is a good practice
+    * Set SSH Access from nologin to bash
+  * PHP Settings Default to the following - Click gear icon top right > Click on php8.2-fpm
+{{:hestia-php_settings.png?direct|}}
+  * MariaDB Settings - Click gear icon top right > Click on mariadb
+{{:hestia-mariadb_settings.png?direct|}}
+  * NginX Settings - Click gear icon top right > Click on nginx
+{{:hestia-nginx_settings.png?direct|}}

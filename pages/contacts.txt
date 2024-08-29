@@ -1,0 +1,133 @@
+====== Contacts ======
+
+Each of your customer have different key stakeholders that you may correspond with during the course of business. These stakeholders are considered Contacts within the ITFlow system. When a Contact within a Client record submits a ticket via email into your ITFlow system, the ticket is automatically assigned to the relevant Client based on the email contact of the Contact.
+
+Allow your clients to interact with the ITFlow portal by creating contacts.
+
+{{::contacts-listing.png?direct|}}
+
+You can record the following information about a client contact:
+
+  * Name
+  * Title
+  * Mark as "important"
+  * Mark as a technical / billing contact - this also allows them to see technical and/or billing info in the client portal
+  * Department
+  * Phone / Extension / Mobile
+  * Location
+  * Email
+  * Notes
+  * Portal Auth method (local/SSO)
+
+===== API =====
+
+/api/v1/contacts
+
+==== Read - Retrieve contact information (/read.php) ====
+
+
+  * **Default / No params - Returns all contacts**
+  * contact_id - Specific contact ID from the ITFlow database
+  * contact_email - Specific contact via e-mail
+  * contact_phone_or_mobile - Specific contact via their mobile or office phone
+
+<code>
+Invoke-RestMethod -Uri "https://demo.itflow.org/api/v1/contacts/read.php?api_key=XetQjoZiti5Opg7y&contact_id=8" | ConvertTo-Json
+
+{
+    "success":  "True",
+    "count":  1,
+    "data":  [
+                 {
+                     "0":  "8",
+                     "contact_id":  "8",
+                     "1":  "Sample Contact",
+                     "contact_name":  "Sample Contact",
+                     "2":  "Accounting Person",
+                     "contact_title":  "Accounting Person",
+                     "3":  "a@itflow.org",
+                     "contact_email":  "a@itflow.org",
+
+[...]
+</code>
+
+==== Create - Create a new contact (/create.php) ====
+
+
+Specify all parameters as below, even if empty. E-mail must not already exist. The new contact ID will be returned.
+
+
+<code>
+$uri = "https://demo.itflow.org/api/v1/contacts/create.php"
+
+$body = @"
+{
+    "api_key" : "3iVeTipINS9eDGpm",
+    "contact_name" : "Sample Contact",
+    "contact_title" : "Head of Accounting",
+    "contact_department" : "Accounts",
+    "contact_email" : "sally@itflow.org",
+    "contact_phone" : "123456",
+    "contact_extension" : "",
+    "contact_mobile" : "",
+    "contact_notes" : "We like Sally - she pays us!",
+    "contact_auth_method" : "local",
+    "contact_important" : "1",
+    "contact_billing" : "1",
+    "contact_technical" : "0",
+    "contact_location_id" : "0",
+    "client_id" : "1"
+}
+"@
+
+Invoke-RestMethod -Method Post -Uri $uri -Body $body
+
+
+success   count   data            
+-------   -----       ----            
+True      1           {@{insert_id=9}}
+
+</code>
+
+==== Update - Update an new contact (/update.php) ====
+
+Specify all parameters as below, even if empty. Same parameters as create endpoint, just additionally specify the contact_id to update.
+Success (true/false) and count of affected objects (1) will be returned.
+
+<code>
+
+$uri = "https://demo.itflow.org/api/v1/contacts/update.php"
+
+$body = @"
+{
+    "api_key" : "3iVeTipINS9eDGpm",
+    "contact_id" : "31",
+    "contact_name" : "Sample Contact",
+    "contact_title" : "Head of Accounting",
+    "contact_department" : "Accounts",
+    "contact_email" : "sally@itflow.org",
+    "contact_phone" : "123456",
+    "contact_extension" : "",
+    "contact_mobile" : "",
+    "contact_notes" : "We like Sally - she pays us!",
+    "contact_auth_method" : "local",
+    "contact_important" : "1",
+    "contact_billing" : "1",
+    "contact_technical" : "0",
+    "contact_location_id" : "0",
+    "client_id" : "1"
+}
+"@
+
+Invoke-RestMethod -Method Post -Uri $uri -Body $body
+
+
+success count
+------- -----
+True        1
+
+</code>
+
+
+
+

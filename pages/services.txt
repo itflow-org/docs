@@ -1,0 +1,24 @@
+====== Services ======
+
+The Services module provides the ability to tie together multiple pieces of information in ITFlow.
+
+A Service may be something like a client's Active Directory infrastructure or a Web App they use.
+
+{{:services-details.png?direct|}}
+
+===== Service Information =====
+
+The following information can currently be recorded/related for each service:
+
+  * Name
+  * Description
+  * Category
+  * Importance
+  * Backup Info
+  * Notes
+  * Client Contacts
+  * Vendors
+  * Client Documents
+  * Client Assets
+  * Client Logins
+  * Client Domains

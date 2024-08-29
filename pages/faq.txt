@@ -1,0 +1,36 @@
+====== FAQ ======
+
+=== Q: Do you offer hosting for ITFlow? ===
+A: Not currently - you must host ITFlow yourself.
+
+
+=== Q: Where/How to request features? ===
+A: The [[https://forum.itflow.org/t/features|forum]]
+
+
+=== Q: Where/How to get product support?===
+A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
+
+
+=== Q: When will ITFlow be out of Beta/stable? ===
+A: Approx Quarter 2 of 2024
+
+
+=== Q: Can we hide/disable the invoicing parts of ITFlow? ===
+A: Sure, go to Settings > Modules to hide the module areas you don't need to see.
+
+
+=== Q: Do you have an API? ===
+A: Yes - still a work in progress. Check out the /api/ directory
+
+
+=== Q: Can you add direct integration with X? ===
+A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility.
+
+=== Q: Files that are larger than 2MB do not upload? ===
+A: We have a hard limit of **20MB** per file set in the code of ITFlow, but there is also a limit set by PHP by default 
+edit /etc/php/php.ini file and change the following options to:
+
+''upload_max_filesize = 20M''
+
+''post_max_size = 20M''

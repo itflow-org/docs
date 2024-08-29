@@ -1,0 +1,35 @@
+====== Updates ======
+
+  * It's important to take regular (e.g. nightly) backups of your ITFlow instance, especially before updating
+  * **Keep your ITFlow instance updated** with the latest features and security patches. 
+  * Updates will contain changes to both the filesystem and the database schema.
+  * The updater can be accessed via **Settings > Update**. 
+
+===== Files =====
+
+The majority of ITFlow updates are just changes to the PHP files. The update tab will show the latest [[https://github.com/itflow-org/itflow/commits/master|git commits]] and offer to download them for you. In the background, this is just running ''git pull''. 
+
+If you've edited any files, the auto-updater will fail - navigate to your web directory and run git pull to review and resolve the issue.
+
+{{updates_git_pull.png?direct|}}
+
+===== Database =====
+
+After pulling down the latest files, the update page will then show if the latest database version has increased. If it has, it will offer to run the commands in //database_updates.php// to update the database.
+
+If you have updated your files and the database is showing it needs an update, it is crucial that you run the database updater as soon as possible.
+
+If you do not update the database after updating the files, you will start seeing database-related errors
+  * e.g. ''PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /var/www/html/''. 
+
+  * What this error is saying is that PHP failed to correctly pull data from the database. The query returned boolean false rather than a dataset. This would be due to something not matching (table/column names may have been added/changed).
+
+  * If you are ever unable to login to due not updating the database, you can manually apply the relevant SQL changes in //database_updates.php// at the CLI / using phpMyAdmin.
+
+
+**Additional notes: ** 
+  * The database update applies one update at a time. If there are multiple updates needed, you will need to manually cycle through each update.
+
+  * If you run into any issues running multiple database updates, it may be worth signing out and back in again between updates. Some updates alter files in your PHP session, which might only be set during login.
+
+{{:updates_database.png?direct|}}

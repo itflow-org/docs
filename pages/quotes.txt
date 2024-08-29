@@ -1,0 +1,26 @@
+====== Quotes ======
+Quickly generate & send quotes to your clients.
+
+{{quotes.png|}}
+
+===== Quote Fields =====
+  * Client
+  * Date
+  * Category
+  * Scope
+  * Item/Product
+  * Description
+  * Quantity
+  * Price
+  * Tax
+  * Notes
+
+{{quotes_typeahead.png?direct|}}
+
+===== Features =====
+  * Email quote details to client
+  * Client can approve/decline quote using a guest link
+{{:quote-guest_url.png?direct|}}
+  * Duplicate/copy quotes
+  * 1-click to convert accepted quote to invoice
+{{:quote-invoice.png?direct|}}

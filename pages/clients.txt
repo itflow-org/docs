@@ -1,0 +1,65 @@
+====== Clients ======
+
+Each customer that you provide IT services for is considered to be a client within ITFlow. This is the first order of business in creating and populating your clients into your ITFlow installation.
+
+**Instructions in creating your first client record**
+  - From the sidebar, select "Client Management".
+  - In the "Client Management" screen, click on the "+ New Client" button on the top right.
+  - A pop up window will appear with 5 tabs. Do fill the fields up accordingly.
+  - Do note that the "Location" and "Contact" tabs will be used to create a separate Location and Contact; after creating the Client record, you have to edit the Location and Contact details separately within the Client record itself as they cannot be edited in the Client Edit (3 button) pop-up screen.
+
+{{::clients.png?600|}}
+
+The following information can be recorded for each client:
+  * Name
+  * Type/Industry
+  * Referral
+  * Website
+  * Currency
+  * Location Information
+  * Primary contact information
+  * Currency & Invoice info
+  * Tax ID Number
+  * Notes
+  * Tags
+
+Clients are where the magic happens. As you'd expect, it's where you store/access the majority of documentation - assets, passwords, networks, certs, docs, etc.
+
+**Client Portal**
+
+The client portal is located at /portal and allows clients to open and track tickets. Authentication to the client portal is performed using the contact's e-mail address and local password. Alternatively, you may set up an Azure App registration and authenticate clients via Azure AD SSO.
+
+For more details on client portal authentication, see [[aad_sso|Client Portal - Azure AD SSO]].
+
+
+----
+
+
+===== API =====
+''/api/v1/clients''
+
+==== Read ====
+Retrieve client information - ''/read.php''.
+
+  * Default / No params - Returns all clients
+  * client_id - Specific client ID from the ITFlow database
+  * client_name - Lookup by client name
+
+  Invoke-RestMethod -Uri "https://demo.itflow.org/api/v1/clients/read.php?api_key=YOUR-API-KEY&client_id=111" | ConvertTo-Json
+  
+  {
+    "success":  "True",
+    "count":  1,
+    "data":  [
+                 {
+                     "0":  "111",
+                     "client_id":  "111",
+                     "1":  "0",
+                     "client_lead":  "0",
+                     "2":  "Let it burn Inc",
+                     "client_name":  "Let it burn Inc",
+                     "3":  "Safety and Fire",
+                     "client_type":  "Safety and Fire",
+                     "4":  "",
+                     "client_website":  "example.com",
+  [...]

@@ -1,0 +1,40 @@
+====== Email ticketing ======
+
+Client contacts can create/update tickets via e-mail.
+
+1. Install PHP extensions: (//These will be installed if you installed via script method//)
+  * php-imap
+  * php-mailparse
+
+2. Configure at Settings > Mail:
+  * IMAP Host
+  * IMAP Port
+  * IMAP Encryption
+  * IMAP Username
+  * IMAP Password
+
+3. Turn on: Settings > Ticket > Email-to-ticket parsing
+
+4. Add a cron job to run //cron_ticket_email_parser.php// every minute (skip if you set it up [[cron#cron_scripts|earlier]] or installed using the [[installation_script|script]])
+
+5. Ensure that all clients have the correct 'domains' added in the Domain tracker module //(optional - for auto-contact creation)//
+
+====== How it works ======
+  - Cron runs cron_ticket_email_parser.php
+  - The email inbox is checked for unread messages
+  - If an unread message is found, it's marked as read & checked for a ticket reference in the subject ((e.g. [TCK-091])
+  - If there is a ticket reference
+    - The ticket info is fetched & checked to be open
+      - If the ticket is open, the reply is added
+      - If the ticket is closed, an auto response is sent and a notification raised
+  - If there isn't a ticket reference - it's treated as a new message
+    - We check for an existing contact (based on the email) and raise the ticket under them
+    - If there's no contact, we check if the from domain exists as a website for a client
+      - If so, we create a new contact under that client for the user and raise the ticket under them
+      - If not, we leave the email in the inbox to be actioned manually
+  - If the email was successfully processed (e.g. a ticket raised / reply added) the message is moved to the ITFlow folder once attachments are processed
+
+===== Notes =====
+  * Only supports **basic auth**entication. This will not work with Microsoft as they require OAuth.
+  * As closed tickets cannot be re-opened, replies to closed tickets raise a notification
+  * Emails from addresses that can't be matched to a client (via registered domains), contact (via email), or existing ticket (via subject line) are left in the inbox and flagged for review

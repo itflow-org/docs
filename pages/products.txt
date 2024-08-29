@@ -1,0 +1,12 @@
+====== Products ======
+Track your products for consistent pricing and quicker quote/invoice generation.
+
+{{products.png?700|}}
+
+===== Product Fields =====
+
+  * Name
+  * Category
+  * Description
+  * Price
+  * Tax

@@ -1,0 +1,43 @@
+====== Client Portal - Azure AD SSO ======
+
+If any of your clients use Azure AD as an IdP, you can utilize this for authentication to the ITFlow portal. This means one less password for users to remember!
+
+==== Create an App Registration in Azure ====
+{{::aad_sso_msregister.png?600|}}
+
+  - Sign into the **Azure Portal** with an administrative account **for your MSP**
+  - Navigate to **Azure Active Directory > App Registrations**
+  - Select **New Registration**
+    - Name: **ITFlow SSO**
+    - Supported Account Types: **Accounts in any organization directory (multi tenant)**
+    - Redirect URL: **https://itflow.yourdomain.com/portal/login_microsoft.php**
+  - Select **Register**
+  - On the new app registration, select the **Authentication** blade
+    - Under **Implicit grant and hybrid flows** select only **ID tokens**
+  - Select the **Certificates & secrets** blade
+    - Generate a **new client secret** (copy it's value)
+
+==== Add app registration details to ITFlow ====
+
+{{::aad_sso_itfsettings.png?300|}}
+
+  - Login to ITFlow as an admin
+  - Navigate to **Settings > Integrations > Client Portal SSO via Microsoft Azure AD**
+  - Enter the Application (client) ID in the top field
+  - Enter the Client Secret in the bottom field
+
+
+==== Test SSO ====
+  - Login to ITFlow as an admin
+  - Select **Clients** > //[test client]// > **Contacts**
+  - **Edit** a contact
+    - **Email: needs to match** a valid **Azure** account
+    - Portal > Login: **Azure**
+  - Navigate to /portal on your ITFlow instance and select **Login with Microsoft Azure AD**
+{{::aad_sso_portal_sucess.png?250|}}
+
+==== Notes ====
+  * You may need to accept/approve the app registration on behalf of the org using an admin account registered in each client portal
+  * SSO cannot be used for Agent/Technician authentication
+
+{{:aad_sso_perms.png?300|}}

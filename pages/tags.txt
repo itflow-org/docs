@@ -1,0 +1,33 @@
+====== Tags ======
+
+
+Tags to be associated with client which will help you to easily take decision when needed and also will be useful for the campaign emails which will allow you yo send an campaign by client tags.
+
+
+Please access **Tags** section https://itflow.yourdomain.com/tags.php
+  * add the text you need for each company: **Eg: Maintenance, Non-Maintenance, Support, Charity and so on**
+  * choose the preferred color
+  * look for icon from this url: https://fontawesome.com/v5/search?o=r&m=free and browse and select the icon you would like to associate with the tag name
+
+in our example, we will need the handshake one, so on the font awesome website, you will see the code for it as: **fa-handshake** so we will use only the word: **handshake**. With other words, removed the **"fa-"**from the chosen icon
+
+
+{{::tags-create.png|}}
+
+Now that we have the tags in place, is time to assign them to the client. 
+
+Go to the clients list and from the Action select Edit
+
+{{::tags-edit_client_action.png|}}
+
+Now, the tags will be visible and ready to be assigned.
+
+{{::tags-edit_client.png|}}
+
+Note: you can and one or more tags for the same client
+
+Tags will now show to your clients list as well on each client`s side navigation
+
+{{::tags-client_listing.png|}}
+
+{{::tags-client_side_nav.png|}}

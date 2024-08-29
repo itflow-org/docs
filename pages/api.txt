@@ -1,0 +1,54 @@
+====== API ======
+
+
+Use ITFlow's API to work with ITFlow in scripts and (eventually) third-party apps.
+
+The current version of the ITFlow API is v1. It can be accessed at **/api/v1/{module}/{function}.php**
+
+===== Modules with API support at present =====
+
+  * assets
+  * certificates
+  * clients
+  * contacts
+  * credentials (logins)
+  * domains
+  * networks
+  * software
+  * tickets
+
+
+===== API Functions =====
+
+  * read
+  * create //(partial)//
+  * update //(partial)//
+===== Generating an API Key =====
+
+  - Navigate to the **Admin** panel
+  - Click on **API**
+  - Click on **New Key** to generate a new key
+
+
+===== Request Methods =====
+
+  * GET - Retrieving (READ) data
+  * POST - Inserting (CREATE), Updating (UPDATE) or Deleting (DELETE) data
+
+==== Data Returned ====
+
+  * Success - True/False
+  * Message - Failure info / Helpful debug info
+  * Count - Count of rows affected/returned
+  * Data - The data requested/created/changed
+
+
+==== Notes ====
+
+  * For read requests, 50 records are shown by default. This can be adjusted by supplying the ''limit'' and ''offset'' parameters.
+  * For POST requests, the ''client_id'' parameter is always required if the API key used has scope/access to all clients
+  * Be sure to check your Apache/PHP error logs if you're running into issues
+
+==== API Docs/Examples ====
+
+Documentation / an example of how to use a module API endpoint is shown on that module's doc page. Additional examples are available [[https://github.com/itflow-org/itflow-api-powershell|here]].

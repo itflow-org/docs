@@ -1,0 +1,56 @@
+====== Code Standards ======
+
+We're trying to standardize the code for ITFlow to make it cleaner and easier to understand/contribute to. We see this as an ongoing, iterative process.
+
+===== Variable Naming =====
+  * Javascript - camelCase
+  * PHP - under_score separator all lowercase
+
+===== Formatting =====
+  * Tab Spacing - Converting everything to 4 spaces
+  * Generally moving towards PSR 1, but we're not too strict
+
+===== SQL Table Structure =====
+  * **Table Naming**: Using plural naming. Example users
+  * **Column Naming**: Define by non-plural word of the table name separated with an underscore. Example table users has user_id user_first_name
+  * **Primary Keys**: Defined first and are defined with the non-plural word of the table with id at the end example user_id
+  * **Foreign Keys**: Defined by the linked table primary_key field name ex table name companies foreign key company_user_id links to table users primary key user_id
+  * **Field Ordering**: Primary Key -> Data Fields -> created_at -> Foreign Keys
+
+===== Code Structure =====
+  * Procedural Code along with some object-oriented ideas. This makes the code clean and simple, as well as easy to contribute to.
+  * Less is more approach, but sometimes more for better code explanation
+  * Consider how others will use features. Generic features/code/concepts that can be useful to everyone are more helpful than a feature that solves your specific unique requirement.
+
+===== File/Folder Structure =====
+  * /api
+    * /v1
+      * /module/
+  * /css
+  * /js
+  * /plugins
+    * /bootstrap
+    * /phpMailer
+    * /Jquery
+  * /uploads
+  * /portal
+  * /post
+    * //individual modules// 
+
+===== Crucial PHP Files =====
+  * ajax.php - Used to dynamically load/populate content
+  * post.php - This file is used for all forms to POST to as well as GET. This acts as both the "model" and "controller" in a traditional MVC architecture. Individual files are in the post directory
+  * check_login.php - Checks to see if a user is logged in otherwise send to login screen
+  * header.php - Beginning of HTML data and added CSS libraries
+  * footer.php - End of HTML Data and added js Libraries
+  * config.php - DB Connection and other defined PHP vars
+  * README - General info about the app: Install guide, documentation, etc.
+  * LICENSE - Licensing & copyright info
+  * setup.php - Initial setup file (configures database, config.php, etc)
+
+===== PHP File naming =====
+''section_element_action_function.php''
+
+E.g.:
+  * user_add_modal.php
+  * client_contact_add_modal.php

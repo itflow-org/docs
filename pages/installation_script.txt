@@ -1,0 +1,36 @@
+====== Installation via Script (Recommended Method) ======
+
+
+===== Security message =====
+
+  * This project is currently in **Beta** with many ongoing changes.
+
+  * Whilst we're confident the majority of code is safe, nothing in life is 100% safe or risk-free. Writing functional, secure code is very difficult. The current fast pace of development/change may unintentionally introduce bugs/security issues. Use your best judgment before storing highly confidential information in the app. You may wish to consider running ITFlow on it's own server, using a web-app firewall, restricting access (except /portal) to trusted IP addresses, etc.
+
+  * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]]
+
+  * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
+
+===== Requirements =====
+
+  * Clean Install of **Debian 12** or Ubuntu 24.04
+  * A public IP Address
+  * Ports **80** (HTTP) and **443** (HTTPS) TCP accessible from the outside in
+  * A Fully Qualified Domain Name pointing to the public IP Address -- //example itflow.example.com//
+
+===== Process =====
+
+**[[https://www.youtube.com/watch?v=kKz9NOU_1XE|Video tutorial]]**
+
+  - Login as **root**
+  - ''wget https://github.com/itflow-org/itflow-install-script/raw/main/itflow_install.sh''
+  - ''bash itflow_install.sh''
+  - Follow Instructions
+
+==== Essential Housekeeping ====
+
+  * [[backups|Backups]]: Especially your master encryption key
+  * [[email_config|Email Configuration]]: To send outbound emails (invoicing, tickets, etc)
+  * [[ticket_email_parse|Email to Ticket]]: To receive inbound ticketing emails
+
+**Done!**

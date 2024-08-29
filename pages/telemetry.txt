@@ -1,0 +1,25 @@
+====== Telemetry ======
+By choosing to enable telemetry (Data Collection), you provide us with valuable insights to help us prioritize and enhance our development efforts. 
+
+===== Information gathered ===== 
+
+  * Name of your company
+  * Installation ID //(see config.php)//
+  * Location details: City, State, and Country
+  * Currency used
+  * Any comments you may have
+  * Counts of items in tables (such as total contacts, total clients, etc.)
+
+===== Data collection occurs at the following times =====     
+
+  * During the initial installation process
+  * When updates are installed
+  * When the cron job is executed
+  * Manually, through the telemetry settings
+
+
+//Note: You need to **actively** opt in for us to collect data - see Settings > Telemetry //
+
+===== How we use the data ===== 
+  * All data collected will be used exclusively for improving ITFlow - we won't sell your data or share it with third parties
+  * If you'd like us to delete your data, please create a forum post requesting this with your installation ID
