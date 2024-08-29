@@ -62,6 +62,7 @@ Registered client contacts can create/update tickets via e-mail.
 ==== Notes ====
   * Only supports basic authentication (no oAuth) for now - a "nice to have" in the future
   * Emails from unregistered contacts without a ticket reference are ignored (unless the from domain matches a domain registered in ITFlow)
+  * Client contacts with the "Technical contact" role are able to see all tickets under their Client
 ==== API ====
 /api/v1/tickets
 
