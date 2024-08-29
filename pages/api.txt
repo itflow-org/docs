@@ -32,6 +32,7 @@ The current version of the ITFlow API is v1. It can be accessed at **/api/v1/{mo
   - Navigate to the **Admin** panel
   - Click on **API**
   - Click on **New Key** to generate a new key
+  - Select whether the key will have access limited to a specific client, or have access to data for all clients
 
 
 ===== Request Methods =====
