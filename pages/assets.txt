@@ -26,6 +26,10 @@ Assets can also be associated with other data in ITFlow, such as:
   * Tickets
   * Services
 
+Assets can be transferred between clients. On the backend this involves the asset being archived and most data being copied to the new asset under the new client. Transferring an asset changes it's ID. 
+
+//Note: The asset history tab is currently based on audit logs. If you adjust the audit log retention, older asset events may disappear. We plan to incorporate recording asset activities (including user assignment and transfers) into a dedicated asset history table at a later date.//
+
 ===== Import & Export CSV =====
 
   * You can easily export assets for a client using the Export button.
