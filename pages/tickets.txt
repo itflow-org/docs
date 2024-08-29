@@ -4,7 +4,7 @@ Tickets allow you to easily track issues and service requests from your clients.
 
 ==== Views ====
 
-There are currently two main views for tickets
+There are currently two main views for tickets on the agent side
 
   * All tickets (from all clients)
 {{:tickets-listing.png?900|}}
@@ -42,27 +42,30 @@ There are currently two main views for tickets
   * Invoicing
 {{:tickets-invoice.png?300|}}
 
-  * Resolved - A ticket is resolved before being closed. Agents and client contacts can re-open resolved tickets for 72 hrs (configurable) before they automatically close. 
+  * Schedule future work (specifying onsite/remote)
 
-  * Close - Once a ticket is closed, it cannot be re-opened
+  * Support for Project & Task management
 
-==== Email Ticketing ====
-Registered client contacts can create/update tickets via e-mail.
-  * Configure at: **Settings > Mail**:
-    * IMAP Host, Port, Encryption
-    * Ticket from email/name
-  * Turn on: **Settings > Ticket > Email-to-ticket parsing**
-  * Add a cron job to run email_parser_cron.php every min
+  * Watchers / Collaborators to allow others to receive updates
+
+  * Custom ticket states
+
+  * Resolved state - A ticket is resolved before being closed. Agents and client contacts can re-open resolved tickets for 72 hrs (configurable) before they automatically close. 
+
+  * Closed state - Once a ticket is closed, it cannot be re-opened
+
+  * Client contacts with the "Technical contact" role are able to see all tickets under their Client 
+
+  * Reporting on tickets per client, time worked, average time to solve
+
+==== Email Ticketing/Email to Ticket Parsing ====
+  * See [[ticket_email_parse|here]]
 
 === Notifications ===
   * Client notifications can be configured to be sent on ticket creation & closure //("Send clients general notification emails")//
   * New ticket email notifications can be configured to a email/distribution list, so your team is always aware of new tickets //("Email address to notify when new tickets are raised")//
-  * IN PROGRESS: Agents will be notified when assigned a ticket & when their assigned ticket is replied to / updated
+  * Agents will be notified when assigned a ticket & when their assigned ticket is replied to / updated 
 
-==== Notes ====
-  * Only supports basic authentication (no oAuth) for now - a "nice to have" in the future
-  * Emails from unregistered contacts without a ticket reference are ignored (unless the from domain matches a domain registered in ITFlow)
-  * Client contacts with the "Technical contact" role are able to see all tickets under their Client
 ==== API ====
 /api/v1/tickets
 
