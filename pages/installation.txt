@@ -24,7 +24,7 @@ ITFlow is written in PHP and works best on Apache with MariaDB as the back-end d
 A few steps to ensure everything stays running smoothly:
 
   * [[backups|Backups]]: Especially your master encryption key
-  * [[config_php|Config.php]]: Check you don't need to add any specific variables (e.g. not using HTTPS)
   * [[cron|Cron]]: For scheduled activities //(the install script adds these for you)//
-  * [[email_config|Email Configuration]]: To send outbound emails (invoicing, tickets, etc)
-  * [[ticket_email_parse|Email to Ticket]]: To receive inbound ticketing emails
+  * [[email_config|Outbound Emails - Email SMTP Configuration]]: To send outbound emails (invoicing, tickets, etc)
+  * [[ticket_email_parse|Inbound Emails - Email to Ticket]]: To parse inbound emails & create/update tickets 
+  * [[config_php|Config.php]]: Check you don't need to add any specific variables (e.g. If you're behind a WAF, or not using HTTPS) 
