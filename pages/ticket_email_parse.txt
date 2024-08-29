@@ -17,7 +17,11 @@ Client contacts can create/update tickets via e-mail.
 
 4. Add a cron job to run //cron_ticket_email_parser.php// every minute (skip if you set it up [[cron#cron_scripts|earlier]] or installed using the [[installation_script|script]])
 
-5. Ensure that all clients have the correct 'domains' added in the Domain tracker module //(optional - for auto-contact creation)//
+5. Decide whether you wish to automatically create tickets for every email, or just emails from client domains:
+
+- Ensure that all clients have the correct 'domains' added in the Domain tracker module //(default)//, or
+
+- Enable Admin > Ticket > "//Create tickets for emails from unknown senders/domains//"
 
 ====== How it works ======
   - Cron runs cron_ticket_email_parser.php
