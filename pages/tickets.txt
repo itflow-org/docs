@@ -37,12 +37,14 @@ There are currently two main views for tickets
 {{:tickets-private_notes.png|}}
   * Merging
 
-  * Scheduled tickets
+  * Scheduled/Recurring tickets
 {{:scheduled-tickets-create.png?500|}}
   * Invoicing
 {{:tickets-invoice.png?300|}}
+
+  * Resolved - A ticket is resolved before being closed. Agents and client contacts can re-open resolved tickets for 72 hrs (configurable) before they automatically close. 
+
   * Close - Once a ticket is closed, it cannot be re-opened
-  * Auto-close tickets - sends a friendly chaser message before automatically closing the ticket for good
 
 ==== Email Ticketing ====
 Registered client contacts can create/update tickets via e-mail.
