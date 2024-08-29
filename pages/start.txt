@@ -2,7 +2,7 @@
 //A free ITGlue / Hudu alternative, for small MSPs (beta). [[https://itflow.org/#about|Learn more]].//
 
 
-**Welcome to the official ITFlow Docs.** 
+**Welcome to the official ITFlow Docs!** 
 
   * __**[[installation|START HERE]]**__
 
