@@ -19,7 +19,7 @@ There are currently two main views for tickets on the agent side
   * Ticket description
   * Client & Contact
   * Priority (low/med/high)
-  * Status (open, working, hold, auto-close, closed)
+  * Status (new, open, on-hold, resolved, closed)
   * Related asset (future feature is to allow multiple assets)
 
 
