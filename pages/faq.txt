@@ -13,7 +13,7 @@ A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries
 
 
 === Q: When will ITFlow be out of Beta/stable? ===
-A: Approx Quarter 2 of 2024
+A: Approx Quarter 4 of 2024
 
 
 === Q: Can we hide/disable the invoicing parts of ITFlow? ===
