@@ -9,7 +9,7 @@ A: The [[https://forum.itflow.org/t/features|forum]]
 
 
 === Q: Where/How to get product support?===
-A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
+A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Monthly donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
 
 
 === Q: When will ITFlow be out of Beta/stable? ===
@@ -27,6 +27,7 @@ A: Yes - still a work in progress. Check out the /api/ directory
 === Q: Can you add direct integration with X? ===
 A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility.
 
+
 === Q: Files that are larger than 2MB do not upload? ===
 A: We have a hard limit of **20MB** per file set in the code of ITFlow, but there is also a limit set by PHP by default 
 edit /etc/php/php.ini file and change the following options to:
@@ -34,3 +35,6 @@ edit /etc/php/php.ini file and change the following options to:
 ''upload_max_filesize = 20M''
 
 ''post_max_size = 20M''
+
+=== Q: How to remove 'Powered by ITFlow' branding/attribution banner ===
+A: Monthly donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]] and are given a white-label key that hides ITFlow attribution. //There's nothing stopping you removing this by editing files, but you'll break your updates.//
