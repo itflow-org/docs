@@ -1,0 +1,24 @@
+====== Built With ======
+//Standing on the shoulders of giants//
+
+**Backend / PHP libs**
+  * PHP
+  * MariaDB
+  * PHPMailer
+  * HTML Purifier
+  * PHP Mime Mail Parser
+  * Zap Calendar
+
+**CSS**
+  * Bootstrap
+  * AdminLTE
+  * fontawesome
+
+**JS Libraries**
+  * chart.js
+  * moments.js
+  * jQuery
+  * pdfmake
+  * Select2
+  * TinyMCE
+  * FullCalendar.io
