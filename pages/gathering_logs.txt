@@ -1,0 +1,26 @@
+====== Troubleshooting & Gathering Logs ======
+
+If you're having issues with ITFlow, please reach out on the [[https://forum.itflow.org/t/support|Forum]] - in addition to the main developers, we have active community members that can help solve your problem. When raising an issue in the Forum, select the tag 'Support' unless you're certain the issue is a bug. 
+
+//Monthly donators may alternatively log tickets in the private support portal.//
+
+=== Basic Info ===
+
+At a minimum, please tell us:
+
+  * How did you install ITFlow
+  * What Operating System, Web Server and Database you're using
+  * What app & database version you're on
+  * How to reproduce the issue & whether you can reproduce the issue on demo.itflow.org
+
+//If you're still able to access ITFlow, we have a page at /admin_debug.php that allows you to easily provide the technical info.//
+{{::admin_debug.png?500|}}
+
+=== Error Logs ===
+
+It is usually helpful if you can provide specific error logs generated as a result of the issue. To do this:
+
+  - SSH to your server
+  - Tail the Apache2 error log by typing: <code>tail -F /var/log/apache2/error.log</code>
+  - Perform the action that causes the issue/bug
+  - Copy any new errors that are logged into your bug report
