@@ -48,6 +48,7 @@
   * [[faq|FAQ]]
   * [[tags|Tags]]
   * [[telemetry|Telemetry]]
+  * [[gathering_logs|Troubleshooting & Gathering Logs]]
 
 ====== Development @console.svg ======
 
