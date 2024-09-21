@@ -1,0 +1,34 @@
+====== Hardening ITFlow with Fail2Ban ======
+
+To help prevent brute force login attempts, ITFlow automatically blocks IP addresses that fail 15 login attempts in 10 minutes. This only applies to logins to the technician portal, //but not the API or the Client Portal//.
+
+You can use Fail2Ban to help prevent Brute Force attacks against ITFlow using the below steps:
+
+**Install Fail2Ban**
+
+  * ''sudo apt install fail2ban''
+
+**Set up a filter**
+  * ''sudo nano /etc/fail2ban/filter.d/apache-itflow-filter.conf'':-
+
+    * ''[Definition]''
+    * '' failregex = ^<HOST> .+\" 401 \d+ .*$''
+
+**Create the jail**
+  * ''sudo nano /etc/fail2ban/jail.local'':-
+
+    * ''[apache-itflow]''
+    * ''enabled = true''
+    * ''port = http,https''
+    * ''filter = apache-itflow-filter''
+    * ''logpath = /var/log/apache2/access.log''
+    * ''findtime = 10m''
+    * ''maxretry = 5''
+    * ''bantime = 10m''
+
+**Enable Fail2Ban**
+  * ''sudo systemctl enable fail2ban''
+  * ''sudo systemctl start fail2ban''
+
+**Check it works!**
+  * ''sudo tail -F /var/log/fail2ban.log''
