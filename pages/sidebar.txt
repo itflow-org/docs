@@ -49,6 +49,7 @@
   * [[tags|Tags]]
   * [[telemetry|Telemetry]]
   * [[gathering_logs|Troubleshooting & Gathering Logs]]
+  * [[fail2ban|Fail2Ban]]
 
 ====== Development @console.svg ======
 
