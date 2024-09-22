@@ -46,10 +46,13 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 
   * ''sudo apt install git whois -y''
 
-**Harden your Linux installation**. //As a starting point://
+**Harden your Linux installation**
+
+//As a starting point://
 
   * MariaDB: ''sudo mysql_secure_installation''
   * UFW: ''sudo ufw allow ssh'' & ''sudo ufw allow "Apache Full"'' & ''sudo ufw enable''
+  * Setup [[fail2ban|Fail2Ban]]
   * Consider setting up a web app firewall, like [[https://github.com/SpiderLabs/ModSecurity|ModSecurity]]
 
 **Enable PHP** //(hint: hit tab after typing php to get a suggested version number)//
