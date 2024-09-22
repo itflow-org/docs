@@ -11,7 +11,7 @@
   * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
 
 ===== Install Overview =====
-ITFlow runs on most "standard" Linux web servers. For the core functionality, you just need Apache, a database (MariaDB is highly recommended over MySQL) and PHP.
+ITFlow runs on most "standard" Linux web servers. For the core functionality, you just need Apache, a database (MariaDB is **highly** recommended over MySQL) and PHP.
 
   - Install a LAMP stack (Linux, Apache, MariaDB & PHP)
   - Create a SQL database, username & password
@@ -40,7 +40,7 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 
 **Install PHP**
 
-  * ''sudo apt install php php-intl php-imap php-mailparse php-mysqli php-curl php-gd libapache2-mod-php -y''
+  * ''sudo apt install php php-intl php-imap php-mailparse php-mysqli php-curl php-gd php-mbstring libapache2-mod-php -y''
 
 **Install Git & whois**
 
