@@ -12,6 +12,7 @@
   * [[cron|Cron]]
   * [[email_config|Email Configuration]]
   * [[ticket_email_parse|Email to Ticket]]
+  * [[ai|AI]]
   * [[updates|Updates]]
 
 ====== Client Management @account-group.svg ======
