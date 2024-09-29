@@ -33,6 +33,7 @@ ITFlow is split into three main areas. If you are unable to backup the entire VM
   * Each database update will change the schema - restoring an older backup may fail or not work as intended as fields will have been added/removed
   * It is essential that you back up the database regularly, and **perform an on-demand backup before and after performing updates**.
     * You can take one-off database backups at ''/settings_backup.php'' - note these must be restored via the command line/phpMyAdmin - __currently there is no built-in restore utility__.
+    * Recommended: You can automate backups using the mysqldump / mariadb-dump command
 
 ===== Master Encryption key =====
   * ITFlow allows you to store login credentials for assets, websites, etc. 
