@@ -9,7 +9,7 @@ A: The [[https://forum.itflow.org/t/features|forum]]
 
 
 === Q: Where/How to get product support?===
-A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Monthly donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
+A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Monthly sponsors may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
 
 
 === Q: When will ITFlow be out of Beta/stable? ===
@@ -25,7 +25,7 @@ A: Yes - still a work in progress. Check out the /api/ directory
 
 
 === Q: Can you add direct integration with X? ===
-A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility.
+A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility and reduces vendor lock in.
 
 
 === Q: Files that are larger than 2MB do not upload? ===
@@ -37,4 +37,4 @@ edit /etc/php/php.ini file and change the following options to:
 ''post_max_size = 20M''
 
 === Q: How to remove 'Powered by ITFlow' branding/attribution banner ===
-A: Monthly donators may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]] and are given a white-label key that hides ITFlow attribution. //There's nothing stopping you removing this by editing files, but you'll break your updates.//
+A: Monthly [[https://donate.itflow.org|sponsors]] can hide the ITFlow branding using a white-label key. //(There's nothing stopping you removing this by editing files, but this may break your updates).//
