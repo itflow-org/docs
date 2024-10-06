@@ -2,7 +2,7 @@
 
 If you're having issues with ITFlow, please reach out on the [[https://forum.itflow.org/t/support|Forum]] - in addition to the main developers, we have active community members that can help solve your problem. When raising an issue in the Forum, select the tag 'Support' unless you're certain the issue is a bug. 
 
-//Monthly donators may alternatively log tickets in the private support portal.//
+//Monthly sponsors may alternatively log tickets in the private support portal.//
 
 === Basic Info ===
 
