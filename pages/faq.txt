@@ -9,15 +9,19 @@ A: The [[https://forum.itflow.org/t/features|forum]]
 
 
 === Q: Where/How to get product support?===
-A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Monthly sponsors may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
+A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Sponsors may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
 
 
 === Q: When will ITFlow be out of Beta/stable? ===
 A: Approx Quarter 4 of 2024
 
 
-=== Q: Can we hide/disable the invoicing parts of ITFlow? ===
-A: Sure, go to Settings > Modules to hide the module areas you don't need to see.
+=== Q: How to disable the invoicing parts of ITFlow? ===
+A: Go to Settings > Modules to hide the module areas you don't need to see.
+
+
+=== Q: Is it possible to use ITFlow for an internal IT department or homelab? ===
+A: Kind-of, but it's not a perfect solution. You can create a single client, disable billing modules and then set the default page or URL to be shown after login at Settings > Defaults > Start Page to //client_overview.php?client_id=1//
 
 
 === Q: Do you have an API? ===
