@@ -9,7 +9,7 @@ A: The [[https://forum.itflow.org/t/features|forum]]
 
 
 === Q: Where/How to get product support?===
-A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Sponsors may access [[https://donate.itflow.org/monthly_donate_signup.php|private support]].
+A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries. Sponsors may access [[https://services.itflow.org|private support]].
 
 
 === Q: When will ITFlow be out of Beta/stable? ===
@@ -41,4 +41,4 @@ edit /etc/php/php.ini file and change the following options to:
 ''post_max_size = 20M''
 
 === Q: How to remove 'Powered by ITFlow' branding/attribution banner ===
-A: Monthly [[https://donate.itflow.org|sponsors]] can hide the ITFlow branding using a white-label key. //(There's nothing stopping you removing this by editing files, but this may break your updates).//
+A: Monthly [[https://services.itflow.org|sponsors]] can hide the ITFlow branding using a white-label key. //(There's nothing stopping you removing this by editing files, but this may break your updates).//
