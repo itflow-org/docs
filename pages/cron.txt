@@ -14,10 +14,10 @@ Sign in to ITFlow with administrative rights. Proceed to **Settings** > **Notifi
 The following scripts should be added to your Cron:
   *NOTE: THESE ARE SETUP BY DEFAULT IF YOU INSTALLED ITFLOW USING THE [[installation_script|SCRIPT]]
 
-  * ''php /full/path/to/**cron.php** **[KEY]**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
-  * ''php /full/path/to/**cron_ticket_email_parser.php** **[KEY]**'' -- This should run every minute: it interprets emails and creates/updates tickets
-  * ''php /full/path/to/**cron_mail_queue.php** **[KEY]**'' -- This should run every minute: it's used for in-app email sending
-  * ''php /full/path/to/**cron_domain_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated domain
+  * ''sudo -u www-data php /full/path/to/**cron.php** **[KEY]**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
+  * ''sudo -u www-data php /full/path/to/**cron_ticket_email_parser.php** **[KEY]**'' -- This should run every minute: it interprets emails and creates/updates tickets
+  * ''sudo -u www-data php /full/path/to/**cron_mail_queue.php** **[KEY]**'' -- This should run every minute: it's used for in-app email sending
+  * ''sudo -u www-data php /full/path/to/**cron_domain_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated domain
 
 Please note: Swap [KEY] with your actual Cron key, and don't include the brackets [ ]
 
