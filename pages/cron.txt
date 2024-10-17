@@ -18,6 +18,7 @@ The following scripts should be added to your Cron:
   * ''sudo -u www-data php /full/path/to/**cron_ticket_email_parser.php** **[KEY]**'' -- This should run every minute: it interprets emails and creates/updates tickets
   * ''sudo -u www-data php /full/path/to/**cron_mail_queue.php** **[KEY]**'' -- This should run every minute: it's used for in-app email sending
   * ''sudo -u www-data php /full/path/to/**cron_domain_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated domain
+  * ''sudo -u www-data php /full/path/to/**cron_certificate_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated certificates.
 
 Please note: Swap [KEY] with your actual Cron key, and don't include the brackets [ ]
 
