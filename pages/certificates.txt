@@ -46,3 +46,6 @@ Retrieve certificate information - ''/read.php''.
              "2":  "demo.itflow.org",
              "certificate_domain":  "demo.itflow.org",
   [...]
+  
+===== More =====
+You can also configure CRON to automatically update certs See [[cron|Cron]]
