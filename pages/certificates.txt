@@ -48,4 +48,4 @@ Retrieve certificate information - ''/read.php''.
   [...]
   
 ===== Cron =====
-You can also configure CRON to automatically update the certificates daily See [[cron|Cron]]
+You can also configure cron to automatically update the certificates daily See [[cron|Cron]]
