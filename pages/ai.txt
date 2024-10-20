@@ -3,7 +3,7 @@
 ITFlow integrates with three AI platforms, providing on-the-fly "Reword" functionality for your ticket wording.\\
 To use the AI Reword feature, simply enable it by navigating to Admin > Settings > AI.
 
-Here is a list of the 3 AI APIs you can use:
+There are 3 AI APIs you can use::
   *[[https://ollama.com|Ollama]]
   *[[https://platform.openai.com/api-keys|OpenAI]]
   *[[https://localai.io/|LocalAI]]
