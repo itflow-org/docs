@@ -1,12 +1,15 @@
-====== ITFlow Docs ======
-//A free ITGlue / Hudu alternative, for small MSPs (beta). [[https://itflow.org/#about|Learn more]].//
+====== ITFlow: Docs ======
+//A free ITGlue / Hudu alternative, for small MSPs (beta).//
 
+ [[https://itflow.org/#about|About]] · [[https://forum.itflow.org|Forum]] · [[https://forum.itflow.org/t/bug|Report Bug]] · [[https://forum.itflow.org/t/features|Request Feature]] · [[https://services.itflow.org/|Services]] · [[https://github.com/itflow-org/itflow/security/policy|Security]]
+
+----
 
 **Welcome to the official ITFlow Docs!** 
 
   * __**[[installation|START HERE]]**__
 
-  * We hope you're able to find the information you need, however these docs are a work in progress. If you have any unanswered questions or need help, please don't hesitate to create a post on the [[https://forum.itflow.org/|forum]].
+  * We hope you're able to find the information you need, however these docs are a work in progress. If you need assistance, create a post on the [[https://forum.itflow.org/t/support|forum]].
 
   * If you'd like to help improve the docs - please do! Edit pages here or on [[https://github.com/itflow-org/docs/|GitHub]].
 
