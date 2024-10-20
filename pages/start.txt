@@ -8,6 +8,4 @@
 
   * We hope you're able to find the information you need, however these docs are a work in progress. If you have any unanswered questions or need help, please don't hesitate to create a post on the [[https://forum.itflow.org/|forum]].
 
-  * If you'd like to help out with the docs, please feel free to [[https://github.com/itflow-org/docs/|raise a PR]]. 
-
 {{dash.png?700|}}
