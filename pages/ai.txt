@@ -18,5 +18,5 @@ There are 3 AI APIs you can use:
 Select **Save**
 
 ===== Example =====
-Here is an example snippet setup using OpenAI\\
+Example snippet setup using OpenAI\\
 {{:1727389827-913741-image.png?700|}}
