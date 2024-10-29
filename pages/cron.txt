@@ -9,7 +9,11 @@ For the sole execution of the scripts by Cron, not by an arbitrary user or bot v
 Sign in to ITFlow with administrative rights. Proceed to **Settings** > **Notifications**:
   * Enable cron
   * Generate a Cron Key
-
+== Cron Script 2.0 as of 2024-10-27 ==
+''root@install:/etc/cron.d# cat itflow
+0 2 * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron.php hhy4rK5R0jaSRP4ao9Oq
+* * * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron_ticket_email_parser.php hhy4rK5R0jaSRP4ao9Oq
+* * * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron_mail_queue.php hhy4rK5R0jaSRP4ao9Oq''
 == Cron Scripts ==
 The following scripts should be added to your Cron:
   *NOTE: THESE ARE SETUP BY DEFAULT IF YOU INSTALLED ITFLOW USING THE [[installation_script|SCRIPT]]
