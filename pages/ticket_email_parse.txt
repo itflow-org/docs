@@ -34,8 +34,8 @@ Client contacts can create/update tickets via e-mail.
   - If there isn't a ticket reference - it's treated as a new message
     - We check for an existing contact (based on the email) and raise the ticket under them
     - If there's no contact, we check if the from domain exists as a website for a client
-      - If so (or the //unknown senders// setting is enabled), we create a new contact under that client for the user and raise the ticket under them
-      - If not, we leave the email in the inbox to be actioned manually
+      - If so, we create a new contact under that client for the user and raise the ticket under them
+      - If not, we leave the email in the inbox to be actioned manually (or if the //unknown senders// setting is enabled we create the ticket with no contact/client)
   - If the email was successfully processed (e.g. a ticket raised / reply added), the message is moved to the ITFlow folder once attachments are processed
 
 ===== Notes =====
