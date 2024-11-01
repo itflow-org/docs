@@ -12,8 +12,7 @@ Configure at Settings > Mail:
 
 ===== Mail Queue ===== 
 
-  * Currently, many pages send emails immediately - but this has a few limitations
-  * We are in the process of moving all messages to a queue-based system accessible via Settings > Mail Queue
+  * We have moved (almost) all messages to a queue-based system accessible via Settings > Mail Queue
   * Messages that fail (e.g. config/mail server issues) to send can be manually retried
 
 -- 
