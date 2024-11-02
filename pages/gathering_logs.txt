@@ -24,3 +24,8 @@ It is usually helpful if you can provide specific error logs generated as a resu
   - Tail the Apache2 error log by typing: <code>tail -F /var/log/apache2/error.log</code>
   - Perform the action that causes the issue/bug
   - Copy any new errors that are logged into your bug report
+
+
+=== Cron Error Logs ===
+
+If you're having issues with a script run via Cron failing, the logs for this won't be in the Apache error log. Adjust the Cron job to output to logger, and then grep syslog instead.
