@@ -62,6 +62,7 @@ A Fantastic Free and Opensource Web Hosting Control Panel [[https://hestiacp.com
 
 ===== Follow Web Install Process =====
 
+  * Visit https://yourdomain.com
 ===== Setup Cron Jobs =====
   - Log back into HestiaCP
   - Click Cron
