@@ -32,10 +32,10 @@ ITFlow is split into three main areas. If you are unable to backup the entire VM
   * Your MariaDB database will contain all information entered into ITFlow. 
   * Each database update will change the schema - restoring an older backup may fail or not work as intended as fields will have been added/removed
   * It is essential that you back up the database regularly, and **perform an on-demand backup before and after performing updates**.
-    * You can take one-off database backups at ''/settings_backup.php'' - note these must be restored via the command line/phpMyAdmin - __currently there is no built-in restore utility__.
+    * You can take one-off database backups at ''/admin_backup.php'' - note these must be restored via the command line/phpMyAdmin - __currently there is no built-in restore utility__. **NOTE:** Older installations may reference ''/settings_backup.php'' to take one-off database backups.
     * Recommended: You can automate backups using the mysqldump / mariadb-dump command
 
 ===== Master Encryption key =====
   * ITFlow allows you to store login credentials for assets, websites, etc. 
   * Usernames and passwords entered are encrypted in the database using a //**master encryption key**//. This key is never stored in plaintext on the disk or in the database. You'll need this key if you ever need to recover encrypted passwords from the database.
-  * You can retrieve your key at ''/settings_backup.php'' by entering your account password. The key should never change, so only needs to be backed up somewhere safe once.
+  * You can retrieve your key at ''/admin_backup.php'' by entering your account password. The key should never change, so only needs to be backed up somewhere safe once. **NOTE:** Older installations may reference ''/settings_backup.php'' to retrieve the key.
