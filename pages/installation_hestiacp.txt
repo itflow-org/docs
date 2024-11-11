@@ -79,3 +79,8 @@ A Fantastic Free and Opensource Web Hosting Control Panel [[https://hestiacp.com
 {{:hestia-mariadb_settings.png?direct|}}
   * NginX Settings - Click gear icon top right > Click on nginx
 {{:hestia-nginx_settings.png?direct|}}
+
+
+===== Troubleshooting =====
+  * shell_exec and exec must be enabled in Server Settings > Configure > Web Server > php-fpm
+  * If mailparse is listed as not installed in ITFlow - Debug and no feedback is returned when running ''php -m | grep mailparse'', you must install mailparse for your version of PHP. E.g., ''apt-get install php8.2-mailparse''
