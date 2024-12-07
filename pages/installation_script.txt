@@ -23,8 +23,7 @@
 **[[https://www.youtube.com/watch?v=kKz9NOU_1XE|Video tutorial]]**
 
   - Login as **root**
-  - ''wget https://github.com/itflow-org/itflow-install-script/raw/main/itflow_install.sh''
-  - ''bash itflow_install.sh''
+  - ''wget https://github.com/itflow-org/itflow-install-script/raw/main/itflow_install.sh && bash itflow_install.sh''
   - Follow Instructions
 
 ==== Essential Housekeeping ====
