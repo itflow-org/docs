@@ -39,7 +39,7 @@ You'll be prompted to raise a pull request where we can discuss your changes and
 
 There are other ways to contribute to ITFlow:
 
-  * Help out with the documentation //(ask on the forum for a Docuwiki account)//
+  * Help out with the documentation
   * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
   * Report bugs and raise feature requests
   * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//
