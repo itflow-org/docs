@@ -33,7 +33,6 @@ Once you've got your changes working, add & commit your files (''git add myfile.
 
 You'll be prompted to raise a pull request where we can discuss your changes and eventually merge them into ITFlow!
 
-----
 
 ====== Other ways to contribute ======
 
