@@ -3,13 +3,13 @@
   * It's important to take regular (e.g. nightly) backups of your ITFlow instance, especially before updating
   * **Keep your ITFlow instance updated** with the latest features and security patches. 
   * Updates will contain changes to both the filesystem and the database schema.
-  * The updater can be accessed via **Settings > Update**. 
+  * The updater can be run in the app via **Settings > Update** or at the CLI using **update_cli.php**
 
 ===== Files =====
 
 The majority of ITFlow updates are just changes to the PHP files. The update tab will show the latest [[https://github.com/itflow-org/itflow/commits/master|git commits]] and offer to download them for you. In the background, this is just running ''git pull''. 
 
-If you've edited any files, the auto-updater will fail - navigate to your web directory and run git pull to review and resolve the issue.
+If you've manually edited any files, the updater will fail - navigate to your web directory and run git pull to review and resolve the issue.
 
 {{updates_git_pull.png?direct|}}
 
