@@ -10,7 +10,7 @@ We have moved to using two main branches:
 
 **Steps to raise a PR**
   - Fork the Project on GitHub
-  - Clone the development branch: (''git clone --branch develop https://github.com/itflow-org/itflow.git'')
+  - Clone the development branch: (''git clone //-//-branch develop https://github.com/itflow-org/itflow.git'')
   - Create your Feature Branch (''git checkout -b my-feature'')
   - Commit your Changes (''git add something.txt && git commit -m 'Add some''')
   - Push to the Branch (''git push origin my-feature'')
