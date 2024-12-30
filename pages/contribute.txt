@@ -8,7 +8,7 @@ We have moved to using two main branches:
 
 //For large changes/new features, please ensure to discuss the issue/idea with other contributors on the Forum first. This saves everyone time.//
 
-**Steps**
+**Steps to raise a PR**
   - Fork the Project on GitHub
   - Clone the development branch: (''git clone --branch develop https://github.com/itflow-org/itflow.git'')
   - Create your Feature Branch (''git checkout -b my-feature'')
@@ -16,7 +16,6 @@ We have moved to using two main branches:
   - Push to the Branch (''git push origin my-feature'')
   - Open a Pull Request, adusting the base from master to develop
   - {{:pr_-_select-mh.png?direct&550|}}
-
 
 **General Guidance**
   * Review the [[code_standards|code standards]] and the [[https://github.com/itflow-org/itflow/blob/master/CODE_OF_CONDUCT.md|code of conduct]]
@@ -36,3 +35,14 @@ There are other ways to contribute to ITFlow:
   * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
   * Report bugs and raise feature requests
   * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//
+
+======Maintainer Steps for monthly releases======
+
+Once a month, we will merge develop into master:
+
+  - Ensure testing has been completed as much as possible
+  - In develop, increment version.php in the YY.M.V format (e.g. 25.1 for the first release in Jan 2025, 25.1.2 for the second release of Jan 2025, and 25.6 for the first release in June 2025)
+  - Look over the recent changes and write a short release summary
+  - Raise a PR to merge develop into master
+  - Test a final time on PR Review & ensure no other issues (Sonar, Linting, etc)
+  - Approve the PR & Merge
