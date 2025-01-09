@@ -22,7 +22,7 @@ You may need to tweak these values occasionally.
 
 ===== Repo Branch =====
 
-  * ''$repo_branch'' - Used to specify the GitHub branch to update against (//master//)
+  * ''$repo_branch'' - Used to specify the GitHub branch to update against (usually //master//, but change to //develop// if required)
 
 ===== Application instance name =====
 
