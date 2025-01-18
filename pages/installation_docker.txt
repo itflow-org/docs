@@ -10,14 +10,12 @@
 ===== Docker Compose Example =====
 
 <code>
-version: "3.9"
 ########################### NETWORKS
-
 networks:
   wan:
     name: wan
     driver: bridge
-      
+
   itflow-db:
     name: itflow-db
     external: false
@@ -30,11 +28,14 @@ volumes:
 ########################### ITFLOW
 services:
   itflow:
+    platform: linux/amd64
     hostname: itflow
     container_name: itflow
-    # Comment out build for docker.io image
-    image: lued/itflow
-    # build: .
+    # Comment out image for DockerHub image, use build for local DockerFile if you prefer to build from base
+    image: itfloworg/itflow
+    #build: 
+      #context: .
+      #dockerfile: Dockerfile
     restart: unless-stopped
     depends_on: 
       - itflow-db
