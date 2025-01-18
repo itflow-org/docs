@@ -1,14 +1,12 @@
 ====== Installation - Local via apt ======
 
-===== Security message =====
+===== Security =====
 
-  * This project is currently in **Beta** with many ongoing changes.
+  * Whilst we are confident in the safety of the code, no system is risk-free. Nearly all software has bugs. Use your best judgement before storing highly confidential information in ITFlow.
 
-  * Whilst we're confident the majority of code is safe, nothing in life is 100% safe or risk-free. Writing functional, secure code is very difficult. The current fast pace of development/change may unintentionally introduce bugs/security issues. Use your best judgment before storing highly confidential information in the app. You may wish to consider running ITFlow on it's own server, using a web-app firewall, restricting access (except /portal) to trusted IP addresses, etc.
+  * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]].
 
-  * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]]
-
-  * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
+  * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**.
 
 ===== Install Overview =====
 ITFlow runs on most "standard" Linux web servers. For the core functionality, you just need Apache, a database (MariaDB is **highly** recommended over MySQL) and PHP.
