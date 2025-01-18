@@ -4,7 +4,7 @@
 **GitHub Link** - [[https://github.com/itflow-org/itflow-docker]]
 
 **Important:**
-  * The Docker file was created by a community member, and is not maintained by the ITFlow core team. We don't officially support Docker.
+  * The Docker file/image is primarily maintained by the ITFlow community. We don't officially support Docker.
   * We are looking for contributors to help maintain the Docker edition - see [[https://forum.itflow.org/d/1364-anyone-want-to-help-work-on-the-docker-version|here]].
 
 ===== Docker Compose Example =====
