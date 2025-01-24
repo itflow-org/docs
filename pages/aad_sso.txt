@@ -10,7 +10,7 @@ If any of your clients use Azure AD as an IdP, you can utilize this for authenti
   - Select **New Registration**
     - Name: **ITFlow SSO**
     - Supported Account Types: **Accounts in any organization directory (multi tenant)**
-    - Redirect URL: **https://itflow.yourdomain.com/portal/login_microsoft.php**
+    - Redirect URL: **https://itflow.yourdomain.com/client/login_microsoft.php**
   - Select **Register**
   - On the new app registration, select the **Authentication** blade
     - Under **Implicit grant and hybrid flows** select only **ID tokens**
