@@ -1,5 +1,5 @@
 ====== ITFlow: Docs ======
-//A free ITGlue / Hudu alternative, for small MSPs (beta).//
+//A free ITGlue / Hudu alternative, for small MSPs.//
 
  [[https://itflow.org/#about|About]] · [[https://forum.itflow.org|Forum]] · [[https://forum.itflow.org/t/bug|Report Bug]] · [[https://forum.itflow.org/t/features|Request Feature]] · [[https://services.itflow.org/|Services]] · [[https://github.com/itflow-org/itflow/security/policy|Security]]
 
