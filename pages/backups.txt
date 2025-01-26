@@ -38,4 +38,5 @@ ITFlow is split into three main areas. If you are unable to backup the entire VM
 ===== Master Encryption key =====
   * ITFlow allows you to store login credentials for assets, websites, etc. 
   * Usernames and passwords entered are encrypted in the database using a //**master encryption key**//. This key is never stored in plaintext on the disk or in the database. You'll need this key if you ever need to recover encrypted passwords from the database.
-  * You can retrieve your key at ''/admin_backup.php'' by entering your account password. The key should never change, so only needs to be backed up somewhere safe once. **NOTE:** Older installations may reference ''/settings_backup.php'' to retrieve the key.
+  * You can retrieve your key at ''/admin_backup.php'' by entering your account password. The key should never change, so only needs to be backed up somewhere safe once. 
+    * **NOTE:** Older installations may reference ''/settings_backup.php'' to retrieve the key.
