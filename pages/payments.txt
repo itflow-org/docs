@@ -16,5 +16,4 @@ The following information is recorded for each payment:
 
 ===== Notes =====
 
-  * You cannot add/remove a payment directly from the payments page - you have to apply/remove the payment against an invoice
   * Removing a Stripe payment does not automatically refund it in Stripe
