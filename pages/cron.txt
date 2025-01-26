@@ -2,33 +2,35 @@
 
 ITFlow comes with an array of PHP scripts that are meant to be executed automatically using Cron. The operation of scripts via Cron guarantees that actions are carried out autonomously in the background, eliminating the need for a user to be logged in. We strongly recommend configuring cron.
 
-==== Cron Activation & Key ====
+==== Cron Activation ====
 
-For the sole execution of the scripts by Cron, not by an arbitrary user or bot visiting the pages, it is necessary to activate Cron and generate a Cron Key.
+  * Sign in to ITFlow with administrative rights.
+  * Navigate to **Settings** > **Notifications**:
+  * Enable Cron
 
-Sign in to ITFlow with administrative rights. Proceed to **Settings** > **Notifications**:
-  * Enable cron
-  * Generate a Cron Key
-== Cron Script 2.0 as of 2024-10-27 ==
-If installed by script after the date above location will now be ''/etc/cron/cron.d/itflow''
+== Cron Scripts of v25.01 ==
+If installed by script after the date above location will now be ''/etc/cron.d/itflow''
 <code>
-0 2 * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron.php hhy4rK5R0jaSRP4ao9Oq
-* * * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron_ticket_email_parser.php hhy4rK5R0jaSRP4ao9Oq
-* * * * * www-data /usr/bin/php /var/www/install.dev.itflow.org/cron_mail_queue.php hhy4rK5R0jaSRP4ao9Oq
+0 2 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron.php
+* * * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_ticket_email_parser.php
+* * * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_mail_queue.php
+0 3 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_domain_refresher.php
+0 4 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_certificate_refresher.php
 </code>
-== Cron Scripts ==
+
+--
+
+== OLD / Cron Scripts ==
 The following scripts should be added to your Cron:
   *NOTE: THESE ARE SETUP BY DEFAULT IF YOU INSTALLED ITFLOW USING THE [[installation_script|SCRIPT]]
 
-  * ''sudo -u www-data php /full/path/to/**cron.php** **[KEY]**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
-  * ''sudo -u www-data php /full/path/to/**cron_ticket_email_parser.php** **[KEY]**'' -- This should run every minute: it interprets emails and creates/updates tickets
-  * ''sudo -u www-data php /full/path/to/**cron_mail_queue.php** **[KEY]**'' -- This should run every minute: it's used for in-app email sending
-  * ''sudo -u www-data php /full/path/to/**cron_domain_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated domain
-  * ''sudo -u www-data php /full/path/to/**cron_certificate_refresher.php** **[KEY]**'' -- This should run every day: each run will update the details of the oldest updated certificates.
+  * ''sudo -u www-data php /full/path/to/**cron.php**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
+  * ''sudo -u www-data php /full/path/to/**cron_ticket_email_parser.php**'' -- This should run every minute: it interprets emails and creates/updates tickets
+  * ''sudo -u www-data php /full/path/to/**cron_mail_queue.php**'' -- This should run every minute: it's used for in-app email sending
+  * ''sudo -u www-data php /full/path/to/**cron_domain_refresher.php**'' -- This should run every day: each run will update the details of the oldest updated domain
+  * ''sudo -u www-data php /full/path/to/**cron_certificate_refresher.php**'' -- This should run every day: each run will update the details of the oldest updated certificates.
 
-Please note: Swap [KEY] with your actual Cron key, and don't include the brackets [ ]
-
-== Example ==
+== OLD / Example ==
 <code>
 # /etc/crontab: system-wide crontab
 
