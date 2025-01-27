@@ -1,6 +1,6 @@
 ====== AI Integration Configuration ======
 
-ITFlow integrates with three AI platforms, providing on-the-fly "Reword" and "Ticket Summaries" functionality in your tickets.\\
+ITFlow integrates with three AI platforms, providing on-the-fly "Reword" and "Ticket Summary" functionality in your tickets.\\
 To use the AI features, simply enable it by navigating to Admin > Settings > AI.
 
 There are 3 AI APIs you can use:
