@@ -19,4 +19,4 @@ Select **Save**
 
 ===== Example =====
 Below is an example snippet of the settings for using OpenAI\\
-{{:1727389827-913741-image.png?700|}}
+{{:1738008176-79235-image.png?700|}}
