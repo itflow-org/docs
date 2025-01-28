@@ -1,55 +1,6 @@
-** Installation **  
-  * [[installation|Installation]]  
-  * [[installation_script|Installation (script)]]  
-  * [[installation_apt|Manual Installation (apt)]]  
-  * [[installation_hestiacp|Installation (HestiaCP)]]  
-
-** Configuration **  
-  * [[aad_sso|Portal SSO]]  
-  * [[backups|Backups]]  
-  * [[config_php|Config.php]]  
-  * [[cron|Cron]]  
-  * [[email_config|Email Configuration]]  
-  * [[ticket_email_parse|Email to Ticket]]  
-  * [[ai|AI]]  
-  * [[updates|Updates]]  
-
-** Client Management **  
-  * [[assets|Assets]]  
-  * [[certificates|Certificates]]  
-  * [[clients|Clients]]  
-  * [[contacts|Contacts]]  
-  * [[documents|Documents]]  
-  * [[domains|Domains]]  
-  * [[files|Files]]  
-  * [[licenses|Licenses]]  
-  * [[networks|Networks]]  
-  * [[passwords|Credentials]]  
-  * [[services|Services]]  
-  * [[shared_links|Shared Links]]  
-  * [[tickets|Tickets]]  
-  * [[vendors|Vendors]]  
-
-**Accounting**  
-  * [[expenses|Expenses]]  
-  * [[invoices|Invoices]]  
-  * [[payments|Payments]]  
-  * [[products|Products]]  
-  * [[quotes|Quotes]]  
-  * [[recurring|Recurring]]  
-  * [[trips|Trips]]  
-
-**General**  
-  * [[logs|Audit Logs]]  
-  * [[api|API]]  
-  * [[faq|FAQ]]  
-  * [[tags|Tags]]  
-  * [[telemetry|Telemetry]]  
-  * [[gathering_logs|Troubleshooting & Gathering Logs]]  
-  * [[fail2ban|Fail2Ban]]  
-
-**Development**  
-  * [[code_standards|Code Standards]]  
-  * [[contribute|How to Contribute]]  
-  * [[built_with|Built With]]  
-  * [[https://github.com/itflow-org/itflow/security/policy|Security]]
+** Caption1 **
+  * [[page1]]
+  * [[page2]]
+** Caption2 **
+  * page3
+  * page4
