@@ -4,7 +4,7 @@
   * [[installation_apt|Manual Installation (apt)]]  
   * [[installation_hestiacp|Installation (HestiaCP)]]  
 
-**Configuration**  
+** Configuration **  
   * [[aad_sso|Portal SSO]]  
   * [[backups|Backups]]  
   * [[config_php|Config.php]]  
@@ -14,7 +14,7 @@
   * [[ai|AI]]  
   * [[updates|Updates]]  
 
-**Client Management**  
+** Client Management **  
   * [[assets|Assets]]  
   * [[certificates|Certificates]]  
   * [[clients|Clients]]  
