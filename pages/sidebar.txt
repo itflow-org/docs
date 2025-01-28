@@ -1,8 +1,8 @@
-**Installation**  
-  * [[installation|Installation]]  
-  * [[installation_script|Installation (script)]]  
-  * [[installation_apt|Manual Installation (apt)]]  
-  * [[installation_hestiacp|Installation (HestiaCP)]]  
+**Installation**
+  * [[installation|Installation]]
+  * [[installation_script|Installation (script)]] 
+  * [[installation_apt|Manual Installation (apt)]]
+  * [[installation_hestiacp|Installation (HestiaCP)]]
 
 **Configuration**  
   * [[aad_sso|Portal SSO]]  
