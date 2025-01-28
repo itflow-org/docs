@@ -1,4 +1,4 @@
-**Installation**  
+** Installation **  
   * [[installation|Installation]]  
   * [[installation_script|Installation (script)]]  
   * [[installation_apt|Manual Installation (apt)]]  
