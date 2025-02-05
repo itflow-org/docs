@@ -2,7 +2,7 @@
 
 Internal ITFlow users are assigned roles to manage their permissions. Roles for client contact users may come later, but are currently restricted to Primary Contact or being tagged as a Tech/Accounting contact.
 
-Historically ITFlow was built with 3 roles: Technician, Account and Admin. Over time we found that this wasn't flexible enough so we've slowly added the ability to edit these roles and create your own.
+Historically ITFlow was built with 3 roles: Technician, Accountant and Admin. Over time, we found that this wasn't flexible enough so we've slowly added the ability to edit these roles and create your own.
 
 Roles are managed in Admin Settings > Roles
   * Users can only be added to one role
