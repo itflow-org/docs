@@ -14,6 +14,7 @@
   * [[ticket_email_parse|Email to Ticket]]
   * [[ai|AI]]
   * [[updates|Updates]]
+  * [[roles|Roles]]
 
 ====== Client Management @account-group.svg ======
 
