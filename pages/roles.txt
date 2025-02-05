@@ -1,1 +1,26 @@
 ====== User Roles and Permissions ======
+
+Internal ITFlow users are assigned roles to manage their permissions. Roles for client contact users may come later, but are currently restricted to Primary Contact or being tagged as a Tech/Accounting contact.
+
+Historically ITFlow was built with 3 roles: Technician, Account and Admin. Over time we found that this wasn't flexible enough so we've slowly added the ability to edit these roles and create your own.
+
+Roles are managed in Admin Settings > Roles
+  * Users can only be added to one role
+  * Setting "Admin Access" on a role bypasses all permissions checks (user_role_is_admin)
+
+**Modules**
+
+Access to areas of ITFlow is now broken down into modules. In the database, these are stored in the appropriately named //modules// table:
+  * client - General client & contact management
+  * support - Access to ticketing, assets and documentation
+  * credential - Access to client credentials - usernames, passwords and 2FA codes
+  * sales - Access to quotes, invoices and products
+  * financial - Access to payments, accounts, expenses and budgets. //If you're giving this role to a bookkeeper, give them at least read to sales too.//
+  * reporting - Access to reports, in addition to other roles. To actually get anything useful, you need read rights to support or financial.
+
+**Permissions**
+
+You may be assigned the following permissions for each module:
+  * Read (1)
+  * Modify (2)
+  * Delete (3)
