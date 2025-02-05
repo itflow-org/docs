@@ -1,7 +1,7 @@
 ====== FAQ ======
 
 === Q: Do you offer hosting for ITFlow? ===
-A: Not currently - you must host ITFlow yourself.
+A: You must currently host ITFlow yourself, but we are very close to providing hosting as a service.
 
 
 === Q: Where/How to request features? ===
