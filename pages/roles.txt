@@ -20,7 +20,7 @@ Access to areas of ITFlow is now broken down into modules. In the database, thes
 
 **Permissions**
 
-You may be assigned the following permissions for each module:
+You may assign the following permissions for each module:
   * Read (1)
   * Modify (2)
   * Delete (3)
