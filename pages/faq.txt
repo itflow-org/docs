@@ -13,7 +13,7 @@ A: The [[https://forum.itflow.org/t/support|forum]] is the place for all queries
 
 
 === Q: When did ITFlow become stable? ===
-A: When we released 24.12 in late December of 2024
+A: When we released 24.12 in late December of 2024.
 
 
 === Q: How to disable the invoicing parts of ITFlow? ===
