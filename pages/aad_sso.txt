@@ -33,7 +33,7 @@ If any of your clients use Azure AD (Entra ID) as an IdP, you can utilize this f
   - **Edit** a contact
     - **Email: needs to match** a valid **Azure** account
     - Portal > Login: **Azure**
-  - Navigate to /portal on your ITFlow instance and select **Login with Microsoft Azure AD**
+  - Navigate to /client on your ITFlow instance and select **Login with Microsoft Azure AD**
 {{::aad_sso_portal_sucess.png?250|}}
 
 ==== Notes ====
