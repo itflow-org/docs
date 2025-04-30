@@ -75,8 +75,8 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 **Adjust Apache's default SSL config** to reflect the location of your keys:
 
   * ''sudo nano /etc/apache2/sites-available/default-ssl.conf'' - Adjust:
-    * ''SSLCertificateKeyFile /etc/ssl/certs/public.pem''
-    * ''SSLCertificateFile /etc/ssl/private/private.key''
+    * ''SSLCertificateFile /etc/ssl/certs/public.pem''
+    * ''SSLCertificateKeyFile /etc/ssl/private/private.key''
 
 **Check Apache config**
 
