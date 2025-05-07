@@ -120,10 +120,6 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 **Set the web folder to be owned by Apache's www-data user**
   * ''sudo chown -R www-data:www-data /var/www/html''
 
-**Set web folder & git permissions**
-  * ''sudo chmod -R 777 /var/www/html''
-  * ''sudo git config --system --add safe.directory '*'''
-
 **Run through the initial setup by navigating to your web server using HTTPS**
   * Provide the database name, username, and password you set up earlier when prompted
   
