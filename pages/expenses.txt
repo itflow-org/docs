@@ -1,6 +1,8 @@
 ======Expenses======
 Quickly and easily track your expenses
 
+b
+
 {{:playground:itflow_exp.png?direct|}}
 
 ===== Expense Fields =====
