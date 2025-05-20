@@ -23,4 +23,4 @@ Quickly and easily invoice customers & track payments
 {{:invoice-guest_url.png?direct|}}
   * Duplicate/copy invoices
   * Track payment of invoices
-  * Stripe invoice payment
+  * Stripe invoice payments - one off and recurring against saved payment method
