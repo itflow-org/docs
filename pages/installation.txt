@@ -1,16 +1,16 @@
 ====== Requirements ======
 
-* **Operating System**:
+**Operating System**:
   * [[https://debian.org|Debian Linux]] or [[https://ubuntu.com/download/server|Ubuntu Server]] with root shell access (SSH).
   * Ensure the server is updated to the latest stable release for security and performance improvements.
 
-* **Software Packages**:
+**Software Packages**:
   * [[https://httpd.apache.org|Apache]]: A robust and widely-used web server software.
   * [[https://mariadb.org|MariaDB]]: A reliable and open-source relational database management system.
   * [[https://php.net|PHP]]: A popular server-side scripting language for web development.
   * Additional packages may be required depending on specific project needs.
 
-* **Technical Skills**:
+**Technical Skills**:
   * Familiarity with the Linux shell, including basic commands and navigation.
   * Experience with package management tools like `apt` or `apt-get` for installing and updating software.
 
