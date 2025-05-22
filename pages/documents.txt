@@ -1,10 +1,18 @@
 ====== Documents ======
 
-The Documents section allows you to enter and manage textual documentation for your clients. Documents can be created using templates, which are available for setup in the Administration Panel:
+The Documents section allows you to enter and manage textual documentation for your clients. 
+
+{{:documents_overview.png?400|}}
+
+====== Templates ======
+
+Documents can be created using templates, which are available for setup in the Administration Panel:
 
 {{:adminuserpanel.png?200|}}
 
 {{:templates.png?150|}}
+
+====== Functions ======
 
 Here's what you can include in each document:
 
@@ -18,8 +26,6 @@ Here's what you can include in each document:
     * Tables
   * **Folder**: Organize your documents by creating folders.
   * **Description**: Provide a brief summary (e.g., a paragraph) of the document's contents.
-
-{{:documents_overview.png?400|}}
 
 After creating a document, you can associate it with Files, Contacts, Assets, Licenses, and Vendors. Additionally, documents can be forwarded to external contacts with an automatic expiration date and can even be set to automatically delete after being read. Printing documents or exporting them as PDFs is also possible. A robust versioning system is available for all documents, allowing you to access previous versions of the document. The documents can be set as visible or invisible for the Client Portal:
 
