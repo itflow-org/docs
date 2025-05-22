@@ -35,10 +35,6 @@ ITFlow is written in PHP and works best on Apache with MariaDB as the back-end d
     * Docker provides a containerized environment for running applications. This method is suitable for users familiar with Docker who want to isolate ITFlow in a container. Note that this method is unsupported and may require additional configuration steps.
 
 //You're more than welcome to try other methods and ways of running ITFlow, but it will be bumpy & have very limited support. We assume that if you're comfortable enough to deviate from the methods above, you're comfortable to debug the entire stack on your own.//
-
-{{:itflow-setup.png?600|}}
-
-
 ====== Post-installation essential housekeeping ====== 
 
 A few steps to ensure everything stays running smoothly:
