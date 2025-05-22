@@ -22,5 +22,3 @@ Here's what you can include in each document:
 After creating a document, you can associate it with Files, Contacts, Assets, Licenses, and Vendors.
 
 **Note**: Primary and technical client contacts can view all documents in the Client Portal.
-
-
