@@ -12,7 +12,7 @@
 
 **Technical Skills**:
   * Familiarity with the Linux shell, including basic commands and navigation.
-  * Experience with package management tools like `apt` or `apt-get` for installing and updating software.
+  * Experience with package management tools like `//apt//` or `//apt-get//` for installing and updating software.
 
 **Personal Attributes**:
   * A little patience and willingness to troubleshoot when things go wrong.
