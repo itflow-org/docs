@@ -44,3 +44,5 @@ A few steps to ensure everything stays running smoothly:
   * [[email_config|Outbound Emails - Email SMTP Configuration]]: To send outbound emails (invoicing, tickets, etc)
   * [[ticket_email_parse|Inbound Emails - Email to Ticket]]: To parse inbound emails & create/update tickets 
   * [[config_php|Config.php]]: Check you don't need to add any specific variables (e.g. If you're behind a WAF, or not using HTTPS) 
+
+{{:itflow-setup.png?600|}}
