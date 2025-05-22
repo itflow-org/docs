@@ -6,7 +6,7 @@ The Documents section allows you to create and manage textual documentation for 
 
 ====== Templates ======
 
-Documents can be created using templates, which are available for setup in the Administration Panel:
+Document templates, accessible through the Administration Panel, enable the quick creation of standardized documents. These templates ensure consistency in customer documentation and save time, making them ideal for efficient document management. By using predefined structures and styles, templates help maintain a uniform look and feel across all your customer documentation.
 
 {{:adminuserpanel.png?200|}}
 
