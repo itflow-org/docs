@@ -20,12 +20,19 @@
 
 ====== Choose your Installation Method ======
 
-ITFlow is written in PHP and works best on Apache with MariaDB as the back-end database. We recommend running ITFlow on Debian using the installation script.
+ITFlow is written in PHP and works best on Apache with MariaDB as the back-end database. We recommend running ITFlow on Debian using the installation script for optimal performance and ease of setup.
 
   * **[[installation_script|Installation via Script]] -- Recommended method ([[https://www.youtube.com/watch?v=kKz9NOU_1XE|video]])**
+    * This method automates the setup process, ensuring that all dependencies are correctly installed and configured. It's ideal for users who prefer a straightforward and hassle-free installation.
+
   * [[installation_apt|Manual Installation on Debian]]
+    * Suitable for users who prefer manual control over the installation process. This method involves step-by-step commands to install and configure ITFlow and its dependencies.
+
   * [[installation_hestiacp| HestiaCP Install]]
+    * HestiaCP is a control panel that simplifies the management of web hosting environments. This installation method is ideal for users who are already using HestiaCP and want to integrate ITFlow.
+
   * [[installation_docker|Installation via Docker Container]] //(unsupported)//
+    * Docker provides a containerized environment for running applications. This method is suitable for users familiar with Docker who want to isolate ITFlow in a container. Note that this method is unsupported and may require additional troubleshooting.
 
 //You're more than welcome to try other methods and ways of running ITFlow, but it will be bumpy & have very limited support. We assume that if you're comfortable enough to deviate from the methods above, you're comfortable to debug the entire stack on your own.//
 
