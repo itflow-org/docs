@@ -1,12 +1,26 @@
-Documents is where you can enter textual documentation of your client.
+====== Documents ======
 
-The information you can enter in each document is as follows:
+The Documents section allows you to enter and manage textual documentation for your clients. Documents can be created using templates, which are available for setup in the Administration Panel:
 
-  * Name - This is the name of the document (ie. Patch panel layout)
-  * Text box - You can enter the document data within. There are various formatting options such as Heading, Bold, Italic, Font Colours, Bulleting, Alignment and Tables
-  * Folder - You can create folders to organize your Documents within
-  * Description - You can put a short summary (ie. 1 paragraph) of what the document contains within
+{{:adminuserpanel.png?250|}}
 
-After creating a Document, you are able to associate Files, Contacts, Assets, Licenses and Vendors to that Document.
+Here's what you can include in each document:
 
-Primary & technical client contacts are able to see all documents in the Client Portal.
+  * **Name**: The title of the document (e.g., "Patch Panel Layout").
+  * **Text Box**: Enter the document content here. Various formatting options are available, including:
+    * Headings
+    * Bold and Italic text
+    * Font Colors
+    * Bullet Points
+    * Alignment
+    * Tables
+  * **Folder**: Organize your documents by creating folders.
+  * **Description**: Provide a brief summary (e.g., a paragraph) of the document's contents.
+
+{{:documents_overview.png?400|}}
+
+After creating a document, you can associate it with Files, Contacts, Assets, Licenses, and Vendors.
+
+**Note**: Primary and technical client contacts can view all documents in the Client Portal.
+
+
