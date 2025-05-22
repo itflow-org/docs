@@ -32,7 +32,7 @@ ITFlow is written in PHP and works best on Apache with MariaDB as the back-end d
     * HestiaCP is a control panel that simplifies the management of web hosting environments. This installation method is ideal for users who are already using HestiaCP and want to integrate ITFlow.
 
   * [[installation_docker|Installation via Docker Container]] //(unsupported)//
-    * Docker provides a containerized environment for running applications. This method is suitable for users familiar with Docker who want to isolate ITFlow in a container. Note that this method is unsupported and may require additional troubleshooting.
+    * Docker provides a containerized environment for running applications. This method is suitable for users familiar with Docker who want to isolate ITFlow in a container. Note that this method is unsupported and may require additional configuration steps.
 
 //You're more than welcome to try other methods and ways of running ITFlow, but it will be bumpy & have very limited support. We assume that if you're comfortable enough to deviate from the methods above, you're comfortable to debug the entire stack on your own.//
 
