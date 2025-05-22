@@ -1,6 +1,6 @@
 ====== Documents ======
 
-The Documents section allows you to enter and manage textual documentation for your clients. 
+The Documents section allows you to create and manage textual documentation for your clients, which they can access and review. Maintaining external infrastructure documentation is essential for quick recovery in case of system failures.
 
 {{:documents_overview.png?400|}}
 
