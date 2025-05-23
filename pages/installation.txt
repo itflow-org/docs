@@ -1,40 +1,24 @@
 ====== Requirements ======
+  * [[https://debian.org|Debian Linux]] or Ubuntu Server with root shell access (SSH)
+  * Some packages: [[https://httpd.apache.org|Apache]], [[https://mariadb.org|MariaDB]], [[https://php.net|PHP]], etc
+  * Familiarity with the Linux shell
+  * A little patience and willingness to troubleshoot when things go wrong
 
-**Operating System**:
-  * [[https://debian.org|Debian Linux]] or [[https://ubuntu.com/download/server|Ubuntu Server]] with root shell access (SSH).
-  * Ensure the server is updated to the latest stable release for security and performance improvements.
-
-**Software Packages**:
-  * [[https://httpd.apache.org|Apache]]: A robust and widely-used web server software.
-  * [[https://mariadb.org|MariaDB]]: A reliable and open-source relational database management system.
-  * [[https://php.net|PHP]]: A popular server-side scripting language for web development.
-  * Additional packages may be required depending on specific project needs.
-
-**Technical Skills**:
-  * Familiarity with the Linux shell, including basic commands and navigation.
-  * Experience with package management tools like `//apt//` or `//apt-get//` for installing and updating software.
-
-**Personal Attributes**:
-  * A little patience and willingness to troubleshoot when things go wrong.
-  * Problem-solving skills to diagnose and resolve issues that may arise during setup or operation.
 
 ====== Choose your Installation Method ======
 
-ITFlow is written in PHP and works best on Apache with MariaDB as the back-end database. We recommend running ITFlow on Debian using the installation script for optimal performance and ease of setup.
+ITFlow is written in PHP and works best on Apache with MariaDB as the back-end database. We recommend running ITFlow on Debian using the installation script.
 
   * **[[installation_script|Installation via Script]] -- Recommended method ([[https://www.youtube.com/watch?v=kKz9NOU_1XE|video]])**
-    * This method automates the setup process, ensuring that all dependencies are correctly installed and configured. It's ideal for users who prefer a straightforward and hassle-free installation.
-
   * [[installation_apt|Manual Installation on Debian]]
-    * Suitable for users who prefer manual control over the installation process. This method involves step-by-step commands to install and configure ITFlow and its dependencies.
-
   * [[installation_hestiacp| HestiaCP Install]]
-    * HestiaCP is a control panel that simplifies the management of web hosting environments. This installation method is ideal for users who are already using HestiaCP and want to integrate ITFlow.
-
   * [[installation_docker|Installation via Docker Container]] //(unsupported)//
-    * Docker provides a containerized environment for running applications. This method is suitable for users familiar with Docker who want to isolate ITFlow in a container. Note that this method is unsupported and may require additional configuration steps.
 
 //You're more than welcome to try other methods and ways of running ITFlow, but it will be bumpy & have very limited support. We assume that if you're comfortable enough to deviate from the methods above, you're comfortable to debug the entire stack on your own.//
+
+{{:itflow-setup.png?600|}}
+
+
 ====== Post-installation essential housekeeping ====== 
 
 A few steps to ensure everything stays running smoothly:
@@ -44,5 +28,3 @@ A few steps to ensure everything stays running smoothly:
   * [[email_config|Outbound Emails - Email SMTP Configuration]]: To send outbound emails (invoicing, tickets, etc)
   * [[ticket_email_parse|Inbound Emails - Email to Ticket]]: To parse inbound emails & create/update tickets 
   * [[config_php|Config.php]]: Check you don't need to add any specific variables (e.g. If you're behind a WAF, or not using HTTPS) 
-
-{{:itflow-setup.png?600|}}
