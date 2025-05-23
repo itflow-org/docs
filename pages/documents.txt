@@ -1,34 +1,12 @@
-====== Documents ======
+Documents is where you can enter textual documentation of your client.
 
-The Documents section allows you to create and manage textual documentation for your clients, which they can access and review. Maintaining external infrastructure documentation is essential for quick recovery in case of system failures.
+The information you can enter in each document is as follows:
 
-{{:documents_overview.png?400|}}
+  * Name - This is the name of the document (ie. Patch panel layout)
+  * Text box - You can enter the document data within. There are various formatting options such as Heading, Bold, Italic, Font Colours, Bulleting, Alignment and Tables
+  * Folder - You can create folders to organize your Documents within
+  * Description - You can put a short summary (ie. 1 paragraph) of what the document contains within
 
-====== Templates ======
+After creating a Document, you are able to associate Files, Contacts, Assets, Licenses and Vendors to that Document.
 
-Document templates, accessible through the Administration Panel, enable the quick creation of standardized documents. These templates ensure consistency in customer documentation and save time, making them ideal for efficient document management. By using predefined structures and styles, templates help maintain a uniform look and feel across all your customer documentation.
-
-{{:adminuserpanel.png?200|}}
-
-{{:templates.png?150|}}
-
-====== Functions ======
-
-Here's what you can include in each document:
-
-  * **Name**: The title of the document (e.g., "Patch Panel Layout").
-  * **Text Box**: Enter the document content here. Various formatting options are available, including:
-    * Headings
-    * Bold and Italic text
-    * Font Colors
-    * Bullet Points
-    * Alignment
-    * Tables
-  * **Folder**: Organize your documents by creating folders.
-  * **Description**: Provide a brief summary (e.g., a paragraph) of the document's contents.
-
-After creating a document, you can associate it with Files, Contacts, Assets, Licenses, and Vendors. Additionally, documents can be forwarded to external contacts with an automatic expiration date and can even be set to automatically delete after being read. Printing documents or exporting them as PDFs is also possible. A robust versioning system is available for all documents, allowing you to access previous versions of the document. The documents can be set as visible or invisible for the Client Portal:
-
-{{:document_sidepanel.png?150|}}
-
-**Note**: Primary and technical client contacts can view all documents in the Client Portal.
+Primary & technical client contacts are able to see all documents in the Client Portal.
