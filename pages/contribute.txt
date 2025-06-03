@@ -32,7 +32,6 @@ ITFlow, along with all contributions, is [[https://github.com/itflow-org/itflow/
 
 There are other ways to contribute to ITFlow:
 
-  * Help out with the documentation
   * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
   * Report bugs and raise feature requests
   * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//
