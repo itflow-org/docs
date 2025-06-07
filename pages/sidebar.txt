@@ -55,8 +55,9 @@
 
 ====== Development @console.svg ======
 
-  * [[code_standards|Code Standards]]
   * [[contribute|How to Contribute]]
-  * [[built_with|Built With]]
+  * [[code_standards|Code Standards]]
+  * [[doc_standards|Documentation Standards]
   * [[ai_llm_policy|Use of AI / LLM]]
+  * [[built_with|Built With]]
   * [[https://github.com/itflow-org/itflow/security/policy|Security]]
