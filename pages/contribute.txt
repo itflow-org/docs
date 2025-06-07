@@ -1,12 +1,12 @@
 ====== Contribute Code ======
 
-If you are able to make a contribution that would make ITFlow better for everyone, please fork the repository and create a pull request.
+If you are able to make a contribution that would make ITFlow better for everyone, please fork the repository and create a pull request. For large changes/new features, please ensure to discuss the issue/idea with other contributors on the Forum first - this saves everyone time.
 
-We have moved to using two main branches:
-  - **master** - The main codebase for all installs, updated monthly
-  - **develop** - The active development branch, all PRs should be merged here
+The code for ITFlow is split into two branches:
+  - **master** - The main codebase for all installs, updated ~monthly (demo: demo.itflow.org)
+  - **develop** - The active development branch, all PRs should be merged here (demo: develop.dev.itflow.org)
 
-//For large changes/new features, please ensure to discuss the issue/idea with other contributors on the Forum first. This saves everyone time.//
+
 
 **Steps to raise a PR**
   - Fork the Project on GitHub
@@ -35,6 +35,8 @@ There are other ways to contribute to ITFlow:
   * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
   * Report bugs and raise feature requests
   * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//
+
+--
 
 ======Maintainer Steps for monthly releases======
 
