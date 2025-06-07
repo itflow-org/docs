@@ -1,46 +1,51 @@
-====== Contribute Code ======
+====== Contributing to ITFlow ======
 
-If you are able to make a contribution that would make ITFlow better for everyone, please fork the repository and create a pull request. For large changes/new features, please ensure to discuss the issue/idea with other contributors on the Forum first - this saves everyone time.
+If you are able to make a contribution that would make ITFlow better for everyone, please do!
+
+You can contribute to ITFlow in a few ways:
+
+  * Contribute code
+  * Report bugs
+  * Suggest feature enhancements
+  * Star the project on GitHub
+  * Tell others of your success using ITFlow (please don't spam)
+
+
+===== Policies & Guidelines =====
+
+Before contributing to ITFlow you should be aware of the documents:
+
+  * [[https://github.com/itflow-org/itflow/blob/master/LICENSE|GNU GPL License]]
+  * [[https://github.com/itflow-org/itflow/blob/master/CODE_OF_CONDUCT.md|Code of conduct]]
+  * [[https://github.com/itflow-org/itflow/security|Security policy]]
+  * [[code_standards|Code Standards]]
+  * [[doc_standards|Documentation standards]]
+  * [[ai_llm_policy|Use of AI / LLM]]
+
+===== Contribute Code =====
+
+To contribute code to ITFlow, you will need to fork the repository and create a pull request.
+
+Before doing so, please ensure to discuss the issue/idea with other contributors on the Forum first - this saves everyone time and ensures your contribution is aligned with our goals.
 
 The code for ITFlow is split into two branches:
   - **master** - The main codebase for all installs, updated ~monthly (demo: demo.itflow.org)
   - **develop** - The active development branch, all PRs should be merged here (demo: develop.dev.itflow.org)
 
-
-
-**Steps to raise a PR**
+==== Steps to raise a pull request (PR) ====
   - Fork the Project on GitHub
-  - Clone the development branch: (''git clone //-//-branch develop https://github.com/itflow-org/itflow.git'')
-  - Create your Feature Branch (''git checkout -b my-feature'')
+  - Clone the develop branch: (''git clone //-//-branch develop https://github.com/itflow-org/itflow.git'') and follow the setup guide
+  - Set your ''$repo_branch'' in ''config.php'' to 'develop'
+  - Create your branch (''git checkout -b my-branch'')
   - Commit your Changes (''git add something.txt && git commit -m 'Add some''')
-  - Push to the Branch (''git push origin my-feature'')
-  - Open a Pull Request, adusting the base from master to develop
+  - Push to your branch (''git push origin my-branch'')
+  - Open a Pull Request, ensuring to adjust the base from master to develop
   - {{:pr_-_select-mh.png?direct&550|}}
 
-**General Guidance**
-  * Don't forget to set your $repo_branch in config.php to 'develop'
-  * Review the [[code_standards|code standards]] and the [[https://github.com/itflow-org/itflow/blob/master/CODE_OF_CONDUCT.md|code of conduct]]
-  * Discuss changes with the community first
-  * The core maintainers of ITFlow are Sysadmins just like you! If you've got an idea of something you'd like to change in ITFlow, give it a try!
-  * If you need some help with using Git/GitHub, [[https://www.dataschool.io/how-to-contribute-on-github/|this article]] is a great resource.
-  * Don't test on production; run a separate ITFlow instance for development
-  * Have some patience, this is a volunteer project
 
-ITFlow, along with all contributions, is [[https://github.com/itflow-org/itflow/blob/master/LICENSE|licensed under the GNU GPL]]. By contributing you grant us a perpetual & irrevocable license to include your work in ITFlow - on behalf of the community, thank you.
+=====Maintainer Steps for monthly releases=====
 
-====== Other ways to contribute ======
-
-There are other ways to contribute to ITFlow:
-
-  * Share your experience / methodologies / tactics using ITFlow on the forum to inspire others
-  * Report bugs and raise feature requests
-  * Tell others in the industry of your success using ITFlow to manage your clients //(but please don't spam)//
-
---
-
-======Maintainer Steps for monthly releases======
-
-Once a month, we will merge develop into master:
+Around once a month, we will merge develop into master for a new release. The steps are:
 
   - Ensure testing has been completed as much as possible
   - In develop, increment version.php in the YY.M.V format (e.g. 25.1 for the first release in Jan 2025, 25.1.1 for the second release of Jan 2025, and 25.6 for the first release in June 2025)
