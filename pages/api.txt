@@ -1,9 +1,18 @@
 ====== API ======
 
 
-Use ITFlow's API to work with ITFlow in scripts and (eventually) third-party apps.
+Use ITFlow's API to work with ITFlow in scripts third-party applications.
 
-The current version of the ITFlow API is v1. It can be accessed at **/api/v1/{module}/{function}.php**
+The current version of the ITFlow API is v1. It can be accessed at **itflow.example.com/api/v1/{module}/{function}.php**
+
+===== Generating an API Key =====
+
+  - Login and navigate to the **Admin Settings** page
+  - Select **API Keys**
+  - Select **Create** to open the New Key modal
+  - On Details tab, input the key name and expiration date. Select whether the key will allow access to all clients or a specific client
+  - On Keys tab, note down the API key and credential password and select the checkbox to confirm you've made a copy of the keys. You will not see these admin in the admin interface.
+  - Select Create to add the key into the database
 
 ===== Modules with API support at present =====
 
@@ -27,13 +36,6 @@ The current version of the ITFlow API is v1. It can be accessed at **/api/v1/{mo
 
 
   * //We may also add archive//
-===== Generating an API Key =====
-
-  - Navigate to the **Admin** panel
-  - Click on **API**
-  - Click on **New Key** to generate a new key
-  - Select whether the key will have access limited to a specific client, or have access to data for all clients
-
 
 ===== Request Methods =====
 
