@@ -10,5 +10,6 @@ We'd like to maintain a consistent look and feel for this documentation at docs.
   * Be simple, direct and to the point
   * Avoid using emojis
   * When you need an example domain, use itflow.yourdomain.com
+  * Include useful edit summaries
 
 
