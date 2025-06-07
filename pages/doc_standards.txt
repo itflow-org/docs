@@ -2,8 +2,8 @@
 
 We'd like to maintain a consistent look and feel for this documentation at docs.itflow.org. If you choose to [[contribute|contribute]] to our documentation, please try to follow these guidelines:
 
-  * Page titles and main headings should start with a level 1 headline, i.e. <nowiki>====== Title ======</nowiki>
-  * Subheadings should utilize level 2 and level 3 headlines, i.e. <nowiki>===== Subheading under a topic =====</nowiki>
+  * Page titles and main headings should start with a level 1 headline, e.g. <nowiki>====== Title ======</nowiki>
+  * Subheadings should utilize level 2 and level 3 headlines, e.g. <nowiki>===== Subheading under a topic =====</nowiki>
   * Use bold text to indicate actions, e.g. <nowiki>Select **yes** to continue</nowiki>
   * Use italics to add emphasis
   * Code, PHP variables and commands should be placed into codeblocks, e.g.  <nowiki>''$dbhost''</nowiki>
