@@ -1,0 +1,5 @@
+====== Use of generative artificial intelligence / large language models ======
+
+We strongly discourage contributions to ITFlow generated solely by artificial intelligence (AI) and large languages models (LLM). This includes, but is not limited to, tools such as ChatGPT, Copilot and Gemini.
+
+Whilst AI technologies have some practical applications, such as brainstorming ideas and debugging errors, you should refrain from submitting AI-generated code or using AI to write documentation, forum posts or security disclosures.
