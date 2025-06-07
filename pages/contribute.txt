@@ -14,7 +14,7 @@ You can contribute to ITFlow in a few ways:
 
 ===== Policies & Guidelines =====
 
-Before contributing to ITFlow you should be aware of the documents:
+Before contributing to ITFlow you should be aware of these documents:
 
   * [[https://github.com/itflow-org/itflow/blob/master/LICENSE|GNU GPL License]]
   * [[https://github.com/itflow-org/itflow/blob/master/CODE_OF_CONDUCT.md|Code of conduct]]
