@@ -5,6 +5,7 @@ If you are able to make a contribution that would make ITFlow better for everyon
 You can contribute to ITFlow in a few ways:
 
   * Contribute code
+  * Update documentation
   * Report bugs
   * Suggest feature enhancements
   * Star the project on GitHub
