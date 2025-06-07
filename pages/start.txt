@@ -9,7 +9,9 @@
 
   * __**[[installation|START HERE]]**__
 
-  * We hope you're able to find the information you need, however these docs are a work in progress. If you need assistance, create a post on the [[https://forum.itflow.org/t/support|forum]].
+  * We hope you're able to find the information you need, however these docs will always be a work in progress. If you need assistance, create a post on the [[https://forum.itflow.org/t/support|forum]].
+
+  * If you'd like to help improve the docs - please do! See our [[contribute|contribution guide]].
 
 
 {{dash.png?700|}}
