@@ -48,6 +48,7 @@ The code for ITFlow is split into two branches:
 Around once a month, we will merge develop into master for a new release. The steps are:
 
   - Ensure testing has been completed as much as possible
+  - Update the changelog
   - In develop, increment version.php in the YY.M.V format (e.g. 25.1 for the first release in Jan 2025, 25.1.1 for the second release of Jan 2025, and 25.6 for the first release in June 2025)
   - Look over the recent changes and write a short release summary
   - Raise a PR to merge develop into master
