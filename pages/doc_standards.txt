@@ -7,7 +7,7 @@ We'd like to maintain a consistent look and feel for this documentation at docs.
   * Use bold text to indicate actions, e.g. <nowiki>Select **yes** to continue</nowiki>
   * Use italics to add emphasis
   * Code, PHP variables and commands should be placed into codeblocks, e.g.  <nowiki>''$dbhost''</nowiki>
-  * Be simple, direct and to the point
+  * Be simple, direct and to the point - write for a human
   * Avoid using emojis
   * When you need an example domain, use itflow.yourdomain.com
   * Include useful edit summaries
