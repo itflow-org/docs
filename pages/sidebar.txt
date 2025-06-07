@@ -58,4 +58,5 @@
   * [[code_standards|Code Standards]]
   * [[contribute|How to Contribute]]
   * [[built_with|Built With]]
+  * [[ai_llm_policy|Use of AI / LLM]]
   * [[https://github.com/itflow-org/itflow/security/policy|Security]]
