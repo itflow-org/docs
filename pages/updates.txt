@@ -1,11 +1,30 @@
 ====== Updates ======
 
-  * It's important to take regular (e.g. nightly) backups of your ITFlow instance, especially before updating
-  * **Keep your ITFlow instance updated** with the latest features and security patches. 
-  * Updates will contain changes to both the filesystem and the database schema.
-  * The updater can be run in the app via **Settings > Update** or at the CLI using ''update_cli.php'' in the scripts folder
+  * New features, bug fixes and security patches are regularly released - it's important to stay up-to-date
+  * It's important to take regular (e.g. nightly) backups of your ITFlow instance; **you should not attempt to run updates without a current backup** (e.g. VM snapshot)
+  * Always look over the changelog before running updates to check for breaking changes
+  * Updates are a two part process:
+    * Download the updated files
+    * Apply any required database migrations
 
-===== Files =====
+===== Web Interface =====
+  - Login to ITFlow as an admin
+  - Navigate to Admin Settings > Update
+  - Select **Update App**
+  - If prompted, also select **Update database** (you may have to do this several times)
+
+===== CLI =====
+  - Connect to your server via SSH as a user with root privileges
+  - Navigiate to the ITFlow scripts directory (usually /var/www/itflow.yourdomain.com/scripts)
+  - To update the app files run: ''sudo -u www-data php update_cli.php''
+  - Then apply database updates: ''sudo -u www-data php update_cli.php %%--%%update_db'' (this may have to be run several times)
+
+----
+
+----
+
+===== Explanatory notes about updates (to be tidied up) =====
+==== Files ====
 
 The majority of ITFlow updates are just changes to the PHP files. The update tab will show the latest [[https://github.com/itflow-org/itflow/commits/master|git commits]] and offer to download them for you. In the background, this is just running ''git pull''. 
 
@@ -13,7 +32,7 @@ If you've manually edited any files, the updater will fail - navigate to your we
 
 {{updates_git_pull.png?direct|}}
 
-===== Database =====
+==== Database ====
 
 After pulling down the latest files, the update page will then show if the latest database version has increased. If it has, it will offer to run the commands in //database_updates.php// to update the database.
 
