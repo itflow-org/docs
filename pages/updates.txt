@@ -3,7 +3,7 @@
   * It's important to take regular (e.g. nightly) backups of your ITFlow instance, especially before updating
   * **Keep your ITFlow instance updated** with the latest features and security patches. 
   * Updates will contain changes to both the filesystem and the database schema.
-  * The updater can be run in the app via **Settings > Update** or at the CLI using **update_cli.php**
+  * The updater can be run in the app via **Settings > Update** or at the CLI using ''update_cli.php'' in the scripts folder
 
 ===== Files =====
 
