@@ -13,7 +13,7 @@ Client contacts can create/update tickets via e-mail.
   * IMAP Username
   * IMAP Password
 
-3. Turn on: Settings > Ticket > Email-to-ticket parsing
+3. Turn on: Settings > Ticket > **Email-to-ticket parsing**
 
 4. Add a cron job to run //cron_ticket_email_parser.php// every minute (skip if you set it up [[cron#cron_scripts|earlier]] or installed using the [[installation_script|script]])
 
