@@ -1,12 +1,13 @@
 ====== Updates ======
 
+{{::update-warning.png}}
+
   * New features, bug fixes and security patches are regularly released - it's important to stay up-to-date
   * It's important to take regular (e.g. nightly) backups of your ITFlow instance; **you should not attempt to run updates without a current backup** (e.g. VM snapshot)
   * Always look over the changelog before running updates to check for breaking changes
   * Updates are a two part process:
     * Download the updated files
     * Apply any required database migrations
-
 ===== Web Interface =====
   - Login to ITFlow as an admin
   - Navigate to Admin Settings > Update
