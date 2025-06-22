@@ -11,7 +11,7 @@
 ===== Web Interface =====
   - Login to ITFlow as an admin
   - Navigate to Admin Settings > Update
-  - Select **Update App**
+  - Select **Update App** (this updates the app files)
   - If prompted, also select **Update database** (you may have to do this several times)
 
 ===== CLI =====
