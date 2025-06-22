@@ -11,7 +11,8 @@
 ===== Web Interface =====
   - Login to ITFlow as an admin
   - Navigate to Admin Settings > Update
-  - Select **Update App** (this updates the app files)
+  - If any updates are available, you will see the git commit details
+  - Select **Update App** (this downloads the latest app files)
   - If prompted, also select **Update database** (you may have to do this several times)
 
 ===== CLI =====
