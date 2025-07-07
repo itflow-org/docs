@@ -1,10 +1,10 @@
-====== Installation - Docker (Not Recommended) ======
+====== Installation - Docker ======
 
 
 **GitHub Link** - [[https://github.com/itflow-org/itflow-docker]]
 
 **Important:**
-  * The Docker file/image is primarily maintained by the ITFlow community. We don't officially support Docker.
+  * We don't officially support Docker and are limited in our ability to assist. The Docker file/image was created, and is primarily maintained by the ITFlow community. 
   * We are looking for contributors to help maintain the Docker edition - see [[https://forum.itflow.org/d/1364-anyone-want-to-help-work-on-the-docker-version|here]].
 
 ===== Docker Compose Example =====
