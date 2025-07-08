@@ -18,7 +18,7 @@
 
 ===== CLI =====
   - Connect to your server via SSH as a user with root privileges
-  - Navigiate to the ITFlow scripts directory (usually /var/www/itflow.yourdomain.com/scripts)
+  - Navigiate to the ITFlow scripts directory (usually ''/var/www/itflow.yourdomain.com/scripts'')
   - To update the app files run: ''sudo -u www-data php update_cli.php''
   - Then apply database updates: ''sudo -u www-data php update_cli.php %%--%%update_db'' (this may have to be run several times)
 
