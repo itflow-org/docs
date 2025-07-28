@@ -4,7 +4,7 @@ As ITFlow will hold essential data about you and your clients, it is essential t
 
 Summary:
 
-**1. You should regularly back up up the __entire Virtual machine__ running ITFlow.**
+**1. You should regularly back up the __entire Virtual machine__ running ITFlow.**
   * The terminology for this may differ depending on your virtualization platform, but essentially you want an image/snapshot of the entire VM. 
   * This allows you to easily capture & restore the files & database. 
 
