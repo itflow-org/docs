@@ -8,7 +8,6 @@
   * Need to report a security issue? Check the [[https://github.com/itflow-org/itflow/security/policy|security policy]].
 
   * **ITFlow comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law**
-222
 ===== Requirements =====
 
   * Clean Install of **Debian 12** or Ubuntu 24.04
