@@ -2,7 +2,7 @@
   * [[https://debian.org|Debian Linux]] or Ubuntu Server with root shell access (SSH)
   * Some packages: [[https://httpd.apache.org|Apache]], [[https://mariadb.org|MariaDB]], [[https://php.net|PHP]], etc
   * Familiarity with the Linux shell
-  * A little patience and willingness to troubleshoot when things go wrong
+  * A little patience and willingness to troubleshoot when things go wrong11111111
 
 
 ====== Choose your Installation Method ======
