@@ -44,7 +44,7 @@ By default, ITFlow will retrieve IP addresses using PHP's //REMOTE_ADDR//. If yo
 
 From 25.06 onwards, if you are using Cloudflare, you will need to specify HTTP_CF_CONNECTING_IP instead.
 
-===== Display Errors (For Development / Testing Purposes)
+===== Display Errors (For Development / Testing Purposes) =====
 
   * ''ini_set('display_errors', 1);''
   * ''ini_set('display_startup_errors', 1);''
