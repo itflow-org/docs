@@ -43,3 +43,10 @@ You may need to tweak these values occasionally.
 By default, ITFlow will retrieve IP addresses using PHP's //REMOTE_ADDR//. If you are using a reverse-proxy, you'll need to configure ITFlow to use the //Forwarded For// header instead.
 
 From 25.06 onwards, if you are using Cloudflare, you will need to specify HTTP_CF_CONNECTING_IP instead.
+
+===== Display Errors (For Development / Testing Purposes)
+
+''// Show all errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);''
