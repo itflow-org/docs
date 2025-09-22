@@ -14,7 +14,7 @@ A Fantastic Free and Opensource Web Hosting Control Panel [[https://hestiacp.com
 ====== Admin Level ======
 
 ===== Install HestiaCP =====
-  * Install on Debian 12 **without** Mail, DNS and Apache //(Nginx will be used instead)// This will provide the most ultimate performance for ITFlow
+  * Install on Debian 13 **without** Mail, DNS and Apache //(Nginx will be used instead)// This will provide the most ultimate performance for ITFlow
 
 ===== Install PHP Mods =====
 //These modules are not installed as part of the default HestiaCP Install//
