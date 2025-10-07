@@ -8,7 +8,7 @@ ITFlow comes with an array of PHP scripts that are meant to be executed automati
   * Navigate to **Settings** > **Notifications**:
   * Enable Cron
 
-== Cron Scripts of v25.01 ==
+== Cron Scripts of v25.10.1 ==
 If installed by script after the date above location will now be ''/etc/cron.d/itflow''
 <code>
 0 2 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/cron.php
