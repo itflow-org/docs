@@ -11,11 +11,11 @@ ITFlow comes with an array of PHP scripts that are meant to be executed automati
 == Cron Scripts of v25.01 ==
 If installed by script after the date above location will now be ''/etc/cron.d/itflow''
 <code>
-0 2 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron.php
+0 2 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/cron.php
 * * * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/ticket_email_parser.php
 * * * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/mail_queue.php
-0 3 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_domain_refresher.php
-0 4 * * * www-data /usr/bin/php /var/www/itflow.example.com/scripts/cron_certificate_refresher.php
+0 3 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/domain_refresher.php
+0 4 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/certificate_refresher.php
 </code>
 
 --
