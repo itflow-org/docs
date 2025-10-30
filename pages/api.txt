@@ -21,10 +21,18 @@ The current version of the ITFlow API is v1. It can be accessed at **itflow.exam
   * clients
   * contacts
   * credentials (logins)
+  * documents
   * domains
+  * expenses
+  * invoices
+  * locations
   * networks
+  * payments
+  * products
+  * quotes
   * software
   * tickets
+  * vendors
 
 
 ===== API Functions =====
