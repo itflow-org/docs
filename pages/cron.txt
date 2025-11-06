@@ -1,40 +1,27 @@
 ====== Cron ======
 
-ITFlow comes with an array of PHP scripts that are meant to be executed automatically using Cron. The operation of scripts via Cron guarantees that actions are carried out autonomously in the background, eliminating the need for a user to be logged in. We strongly recommend configuring cron.
+ITFlow includes PHP scripts designed to run automatically via [[https://en.wikipedia.org/wiki/Cron|Cron]], ensuring background tasks execute without user interacton. We strongly recommend configuring Cron.
+
+
+==== Script purposes ====
+All Cron scripts are now in the ''/scripts/'' directory. There are several different cron scripts, each with a particular purpose:
+  * ''cron.php'' - Daily maintenance tasks (cleanup, auto-closing resolved tickets, alerts, recurring invoices, etc.)
+  * ''mail_queue.php'' - Sends e-mails (SMTP)
+  * ''ticket_email_parser.php'' - Reads e-mails and creates/updates tickets (IMAP)
+  * ''domain_refresher.php'' - Updates domain details (expiry, records, whois)
+  * ''certificate_refresher.php'' - Updates certificate details (expiry, issuer, key)
+
+  
+==== Crontab file ====
+
+To setup the scheduled tasks, copy the [[https://github.com/itflow-org/itflow-install-script/blob/main/cron.d-itflow|provided cron.d-itflow file]] to your system's cron directory (e.g. ''/etc/cron.d/itflow'').
+
+//NB: If installed using the automated script after v25.10, this will have been done for you.//
+
 
 ==== Cron Activation ====
+You must then activate Cron within ITFlow:
 
   * Sign in to ITFlow with administrative rights.
-  * Navigate to **Settings** > **Notifications**:
+  * Navigate to **Settings** > **Notifications**
   * Enable Cron
-
-== Cron Scripts of v25.10.1 ==
-If installed by script after the date above location will now be ''/etc/cron.d/itflow''
-<code>
-0 2 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/cron.php
-* * * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/ticket_email_parser.php
-* * * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/mail_queue.php
-0 3 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/domain_refresher.php
-0 4 * * * www-data /usr/bin/php /var/www/itflow.example.com/cron/certificate_refresher.php
-</code>
-
---
-
-== OLD / Cron Scripts ==
-The following scripts should be added to your Cron:
-  *NOTE: THESE ARE SETUP BY DEFAULT IF YOU INSTALLED ITFLOW USING THE [[installation_script|SCRIPT]]
-
-  * ''sudo -u www-data php /full/path/to/**cron.php**'' -- This should run daily at 2 AM for tasks such as cleanup, auto-closing resolved tickets, alerts, recurring invoices, and more.
-  * ''sudo -u www-data php /full/path/to/**cron_ticket_email_parser.php**'' -- This should run every minute: it interprets emails and creates/updates tickets
-  * ''sudo -u www-data php /full/path/to/**cron_mail_queue.php**'' -- This should run every minute: it's used for in-app email sending
-  * ''sudo -u www-data php /full/path/to/**cron_domain_refresher.php**'' -- This should run every day: each run will update the details of the oldest updated domain
-  * ''sudo -u www-data php /full/path/to/**cron_certificate_refresher.php**'' -- This should run every day: each run will update the details of the oldest updated certificates.
-
-== OLD / Example ==
-<code>
-# /etc/crontab: system-wide crontab
-
-# ITFlow - Nightly cron script
-0  02   * * *   root    php /var/www/pr-review-base.itflow.org/cron.php 4PlrCJ2kJ5cvf4jnJmoB2E1oTY4PsX8w 2>&1 | logger -t itflow-nightlycron
-</code>
-{{:cron_example.png?direct|}}
