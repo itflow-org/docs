@@ -19,7 +19,7 @@ ITFlow runs on most "standard" Linux web servers. For the core functionality, yo
 
 There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itflow_install.sh|a script]] that automates this process for you and uses Let's Encrypt certificates. The script also takes care of setting up [[cron|cron]].
 
-===== Debian Setup Guide =====
+===== Ubuntu/Debian Setup Guide =====
 
 //This guide assumes you want to install ITFlow to the default ''/var/www/html/'' directory, adjust this as required if you're using vhosts.//
 
@@ -38,7 +38,7 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 
 **Install PHP**
 
-  * ''sudo apt install php php-intl php-mysqli php-curl php-gd php-mbstring php-zip libapache2-mod-php -y''
+  * ''sudo apt install php php-intl php-mysqli php-curl php-gd php-mbstring php-zip libapache2-mod-php php-imap php-mailparse -y''
 
 **Install Git & whois**
 
