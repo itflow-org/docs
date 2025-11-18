@@ -12,7 +12,7 @@ ITFlow is written in PHP and works best on Apache with MariaDB as the back-end d
   * **[[installation_script|Installation via Script]] -- Recommended method ([[https://www.youtube.com/watch?v=kKz9NOU_1XE|video]])**
   * [[installation_apt|Manual Installation on Debian]]
   * [[installation_hestiacp| HestiaCP Install]]
-  * [[installation_docker|Installation via Docker Container]] //(unsupported)//
+  * [[installation_docker|Installation via Docker Container]] //(community supported)//
 
 //You're more than welcome to try other methods and ways of running ITFlow, but it will be bumpy & have very limited support. We assume that if you're comfortable enough to deviate from the methods above, you're comfortable to debug the entire stack on your own.//
 
