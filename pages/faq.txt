@@ -29,7 +29,7 @@ A: Yes - still a work in progress. Check out the /api/ directory
 
 
 === Q: Can you add direct integration with X? ===
-A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility and reduces vendor lock in.
+A: Probably not. Generally speaking, we'd prefer people build/share scripts that utilize the API. This allows for a lot more flexibility and reduces vendor lock in. Community members have used n8n for this purpose - see the [[https://forum.itflow.org/d/2256-how-do-i-do-in-n8n|forum]] and [[https://github.com/itflow-org/itflow-n8n|Github]].
 
 
 === Q: Files that are larger than 2MB do not upload? ===
