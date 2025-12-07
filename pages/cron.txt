@@ -4,7 +4,7 @@ ITFlow includes PHP scripts designed to run automatically via [[https://en.wikip
 
 
 ==== Script purposes ====
-All Cron scripts are now in the ''/scripts/'' directory. There are several different cron scripts, each with a particular purpose:
+All Cron scripts are now in the ''/cron/'' directory. There are several different cron scripts, each with a particular purpose:
   * ''cron.php'' - Daily maintenance tasks (cleanup, auto-closing resolved tickets, alerts, recurring invoices, etc.)
   * ''mail_queue.php'' - Sends e-mails (SMTP)
   * ''ticket_email_parser.php'' - Reads e-mails and creates/updates tickets (IMAP)
