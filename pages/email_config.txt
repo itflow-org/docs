@@ -12,7 +12,8 @@ Configure at Settings > Mail:
 
 ===== Mail Queue ===== 
 
-  * We have moved (almost) all messages to a queue-based system accessible via Settings > Mail Queue
+  * Messages are sent a queue-based system stored in the database, accessible via Settings > Mail Queue
+  * The mail_queue.php [[cron|cron]] script checks for messages and attempts to send these
   * Messages that fail (e.g. config/mail server issues) to send can be manually retried
 
 -- 
