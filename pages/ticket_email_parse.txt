@@ -1,6 +1,6 @@
 ====== Email ticketing ======
 
-Client contacts can create/update tickets via e-mail.
+Clients can create/update tickets via e-mail.
 
 1. Install PHP extensions: (//These will be installed if you installed via script method//)
   * php-imap
@@ -39,7 +39,68 @@ Client contacts can create/update tickets via e-mail.
   - If the email was successfully processed (e.g. a ticket raised / reply added), the message is moved to the ITFlow folder once attachments are processed
 
 ===== Notes =====
-  * Only supports **basic auth**entication. This will not work with Microsoft as they require OAuth.
   * As closed tickets cannot be re-opened, replies to closed tickets raise a notification
   * By default, emails from addresses that can't be matched to a client (via registered domains), contact (via email), or existing ticket (via subject line) are left in the inbox and flagged for review. 
     * This behaviour can be adjusted by enabling "//Create tickets for emails from unknown senders/domains//" 
+
+
+===== Microsoft 365 & Google OAuth Support=====
+As of IT Flow version 26.02 OAuth support has been added. Setup for this is very simple. The guide below will focus on Office 365.
+
+==IT Flow Initial Configuration==
+1. Open Administration > Settings > Mail
+
+2. Select SMTP Provider as Microsoft 365 (OAuth) or Google Workspace (OAuth).
+Note that there are no settings to configure under SMTP, these are inherited from your IMAP settings entered in the next step.
+
+3. In 'IMAP Provider' Select IMAP Provider as Microsoft 365 (OAuth) or Google Workspace (OAuth).
+
+4. In 'IMAP Username' Enter your IMAP username which is your email address you wish for to be monitored for new emails
+
+
+==Microsoft Entra ID Configutation==
+1. Open up Entra and go to App Registrations > All Applications or [[https://entra.microsoft.com/?l=en.en-gb#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade/quickStartType~/null/sourceType/Microsoft_AAD_IAM|Click Here]]
+
+2. Create a new app by slecting New Registration
+
+3. The name can be anything you want, but i suggest using IT Flow. Set the 'Supported Account Types' to be 'Accounts in this organizational directory only' and leave 'Redirect URI blank' for now, click Register.
+
+4. Go to 'API Permissions' and click 'Add a Permission', 'Microsoft Graph' and then 'Delegated Permissions' Add the following permissions
+  * IMAP.AccessAsUser.All
+  * offline_access
+  * openid
+  * profile
+  * SMTP.Send
+  * User.Read
+
+5. When these are added, **do not forget** to click the 'Grant Admin Consent for {{Your Organisation}}' button. just above the list of permissions you just added.
+
+6. Next, go to 'Authentication (Preview)' and click 'Add Redirect URI', Select 'Web' and enter the URI shown on the IT Flow Mail Settings page , this is in the 'IMAP Mail Settings' section under the heading 'Microsoft OAuth Connect (Web)'. Click 'Configure' to add this.
+
+7. Go to 'Certificates & Secrets' and click 'New Client Secret'. Give the secret a name of your choosing and set a validity period that you're confortable with. Then click 'Add' Copy the key under the 'Value' heading. **Note: This Value is only shown once, if you navigate away from the page it will not be shown again. Save it somewhere temporarily**
+
+8. We need 2 more things, so lets go back to the Overview page and copy your 'Application (client) ID' and your 'Directory (tenant) ID'.
+
+
+==IT Flow Final Configuration==
+1. Back in IT Flow, paste the 'Application (client) ID' into the 'OAuth Client ID' field
+
+2. Paste the 'Value' from the 'Certificates & Secrets' page into the 'OAuth Client Secret' field
+
+3. Paste the 'Directory (tenant) ID' into the 'Tenant ID (Microsoft 365 only)'
+
+4. Hit the 'Save' Button now!
+
+5. In the 'Microsoft OAuth Connect (Web)' field, you should see a buton that says 'Connect Microsoft 365'. Now you've entered those details, go ahead and click this button.
+
+6. Sign-in to Microsoft 365 with the account you will be monitoring for new tickets
+
+7. Select the 'Consent on behalf of your organisation' check box and finally Accept the permissions with the blue button.
+
+8. You should now be taken back to IT Flow and your 'Refresh Token' and 'Access Token' will have been filled out.
+
+9 Hit save one final time.
+
+
+==Verification==
+1. Scroll to the bottom of the settings page and test email sending, test the IMAP connection and finally test the OAuth token refresh. If all work, then go ahead and send an email to your mailbox and check if this is picked up and converted to a ticket. The mailbox is checked every 60 seconds.
