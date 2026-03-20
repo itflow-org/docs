@@ -1,7 +1,7 @@
 ====== Tags ======
 
 
-Tags to be associated with client which will help you to easily take decision when needed and also will be useful for the campaign emails which will allow you yo send an campaign by client tags.
+Tags to be associated with client which will help you to easily take decision when needed and also will be useful for the campaign emails which will allow you send an campaign by client tags.
 
 
 Please access **Tags** section https://itflow.yourdomain.com/tags.php
@@ -24,7 +24,7 @@ Now, the tags will be visible and ready to be assigned.
 
 {{::tags-edit_client.png|}}
 
-Note: you can and one or more tags for the same client
+Note: you can add one or more tags for the same client
 
 Tags will now show to your clients list as well on each client`s side navigation
 
