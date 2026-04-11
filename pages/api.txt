@@ -25,6 +25,7 @@ The current version of the ITFlow API is v1. It can be accessed at **itflow.exam
   * domains
   * expenses
   * invoices
+  * invoice_items
   * locations
   * networks
   * payments
@@ -99,6 +100,7 @@ The current version of the ITFlow API is v1. It can be accessed at **itflow.exam
   * domains
   * expenses
   * invoices
+  * invoice_items
   * locations
   * networks
   * payments
@@ -611,6 +613,72 @@ curl -X POST "https://itflow.example.com/api/v1/assets/create.php" \
 
 ----
 
+===== Invoice Items ''/api/v1/invoice_items/'' =====
+
+**Purpose**: Retrieve line items associated with invoices
+
+**Available Endpoints**:
+  * ''GET /read.php'' - List/get invoice line items
+
+==== Read Parameters (GET) ====
+
+^ Parameter ^ Type ^ Description ^
+| invoice_id | integer | Filter items by invoice ID |
+| item_id | integer | Get a specific line item by ID |
+
+==== Response Fields ====
+
+^ Field ^ Type ^ Description ^
+| item_id | integer | Unique line item ID |
+| item_name | string | Name/title of the line item |
+| item_description | string | Description or notes |
+| item_quantity | decimal | Quantity billed |
+| item_price | decimal | Unit price |
+| item_subtotal | decimal | quantity × price |
+| item_tax | decimal | Tax amount applied |
+| item_total | decimal | subtotal + tax |
+| item_order | integer | Display sort order |
+| item_tax_id | integer | Associated tax rate ID (0 = no tax) |
+| item_product_id | integer | Associated product ID (0 = ad-hoc item) |
+| item_invoice_id | integer | Parent invoice ID |
+| item_created_at | datetime | Record creation timestamp |
+| item_updated_at | datetime | Last update timestamp |
+| item_archived_at | datetime | Archive timestamp (null if active) |
+
+==== Example - Get all items for an invoice ====
+
+<code bash>
+curl "https://itflow.example.com/api/v1/invoice_items/read.php?api_key=YOUR_KEY&invoice_id=101"
+</code>
+
+==== Example Response ====
+
+<code json>
+{
+  "success": "True",
+  "count": 2,
+  "data": [
+    {
+      "item_id": "184",
+      "item_name": "make pizza",
+      "item_description": "Do it",
+      "item_quantity": "1.00",
+      "item_price": "100.00",
+      "item_subtotal": "100.00",
+      "item_tax": "0.00",
+      "item_total": "100.00",
+      "item_order": "1",
+      "item_tax_id": "0",
+      "item_product_id": "0",
+      "item_invoice_id": "101",
+      "item_created_at": "2026-03-10 13:11:30",
+      "item_updated_at": null,
+      "item_archived_at": null
+    }
+  ]
+}
+</code>
+
 ==== Locations ''/api/v1/locations/'' ====
 
 **Purpose**: Manage client office/site locations
@@ -970,6 +1038,7 @@ curl -X POST "https://itflow.example.com/api/v1/contacts/create.php" \
 | Domains | ✓ | - | - | - | - | - |
 | Expenses | ✓ | - | - | - | - | - |
 | Invoices | ✓ | - | - | - | - | - |
+| [[#invoice_items_api_v1_invoice_items|Invoice Items]] | ✓ | - | - | - | - | - |
 | Locations | ✓ | ✓ | - | - | - | - |
 | Networks | ✓ | - | - | - | - | - |
 | Payments | ✓ | - | - | - | - | - |
