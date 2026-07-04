@@ -16,8 +16,6 @@ All Cron scripts are now in the ''/cron/'' directory. There are several differen
 
 To setup the scheduled tasks, copy the [[https://github.com/itflow-org/itflow-install-script/blob/main/cron.d-itflow|provided cron.d-itflow file]] to your system's cron directory (e.g. ''/etc/cron.d/itflow'').
 
-//NB: If installed using the automated script after v25.10, this will have been done for you.//
-
 
 ==== Cron Activation ====
 You must then activate Cron within ITFlow:
