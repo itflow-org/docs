@@ -15,6 +15,7 @@
   * [[ai|AI]]
   * [[updates|Updates]]
   * [[roles|Roles]]
+  * [[slas|SLAs]]
 
 ====== Client Management @account-group.svg ======
 
