@@ -1,0 +1,176 @@
+====== SLAs ======
+
+Service Level Agreements (SLAs) put response and resolution targets on tickets, warn you before a target is missed, and record whether each target was met.
+
+SLAs are entirely optional. Until you assign one, nothing about ticketing changes - no targets are set, no colours appear and no notifications are sent. You can also switch them off for a single client, a single priority, or a single ticket.
+
+===== Requirements =====
+
+  * ITFlow 26.08 or newer (database version 2.5.0)
+  * The Ticketing module enabled
+  * The ''ticket_sla.php'' cron script scheduled - see [[cron|Cron]]. Without it, targets are still calculated and displayed, but you get no warnings, no breach alerts and no row colouring
+  * ''mail_queue.php'' running, if you want SLA alerts by e-mail as well as in-app
+
+===== Concepts =====
+
+An **SLA plan** is a named pair of targets, for example //Gold// with a 30 minute response and 240 minute resolution. Plans are reusable.
+
+An **assignment** connects a plan to a priority. Assignments exist at two levels:
+
+  * **Global defaults** - apply to every client, set in **Admin** > **SLAs**
+  * **Client overrides** - apply to one client, set on that client
+
+When a ticket is created, ITFlow looks for an assignment matching the ticket's client and priority. A client override wins if one exists, otherwise the global default applies. If neither exists, the ticket simply has no SLA.
+
+Targets are calculated once, when the ticket is created, and stored on the ticket. They are counted in **business minutes**, so only time inside your configured business hours is consumed.
+
+===== Setting up =====
+
+==== Step 1 - Create your SLA plans ====
+
+Navigate to **Admin** > **SLAs** and select **New SLA**.
+
+^ Field ^ Notes ^
+| Name | How the plan appears throughout ITFlow, e.g. //Gold//, //Standard//, //Best effort// |
+| Description | Optional short note for your own reference |
+| Response target | Business minutes allowed to make a first response. Required |
+| Resolution target | Business minutes allowed to resolve the ticket. Leave empty for a response-only plan |
+
+Most MSPs need two or three plans. A common starting point:
+
+  * //Priority// - 30 minute response, 240 minute resolution
+  * //Standard// - 120 minute response, 480 minute resolution
+  * //Best effort// - 480 minute response, no resolution target
+
+Plans can be **archived** later rather than deleted, which preserves the history on tickets that used them.
+
+==== Step 2 - Set your business hours ====
+
+On the same page, fill in **Business Hours & Notifications**.
+
+^ Setting ^ Notes ^
+| Business days | Days the SLA clock runs. Defaults to Monday-Friday. Unchecking every day makes SLAs count 24x7 |
+| Business hours start / end | Defaults to 09:00 and 17:00 |
+| Warn at % of target | How far through a target a warning fires. Defaults to 75, meaning a 60 minute response target warns at 45 minutes |
+| Notification email | Optional address that receives every SLA alert, e.g. a dispatch or helpdesk distribution list |
+
+These settings apply to the whole install and use your ITFlow timezone.
+
+Changing business hours recalculates targets on all open tickets that have an SLA, because the underlying maths has changed. The number of tickets updated is shown after saving.
+
+==== Step 3 - Assign global defaults ====
+
+Under **SLA Assignments**, choose a plan for each priority - **Low**, **Medium**, **High** and **Urgent** - then select **Save Defaults**.
+
+Leave a priority set to **None** if it should not carry an SLA at all. Many MSPs set None for Low so that long-running, low-urgency work is never counted as breached.
+
+Saving defaults re-evaluates every open ticket against the new assignments.
+
+==== Step 4 - Add client overrides where needed ====
+
+Client overrides live on the client, not in the admin area. Edit a client, open the **Notes** tab and use the **Ticket SLAs** selectors.
+
+Each priority offers three choices:
+
+  * **Default** - follow the global default for that priority
+  * **None** - this client gets no SLA at that priority, even if a global default exists
+  * A named plan - this client uses that plan at that priority
+
+The same selectors appear when creating a client. They are only shown once at least one active SLA plan exists.
+
+Saving a change re-evaluates that client's open tickets. Saving a client with the SLA selectors untouched changes nothing.
+
+===== How targets are calculated =====
+
+Targets count business minutes from the moment the ticket was created. Time outside business hours does not count.
+
+With business hours of 09:00-17:00 Monday to Friday and a 60 minute response target:
+
+^ Ticket created ^ Respond by ^
+| Tuesday 10:00 | Tuesday 11:00 |
+| Tuesday 16:30 | Wednesday 09:30 |
+| Friday 16:45 | Monday 09:45 |
+| Saturday 11:00 | Monday 10:00 |
+
+If no usable business calendar is configured - no days selected, no hours set, or an end time earlier than the start - the clock runs 24x7.
+
+===== The two clocks =====
+
+==== Response ====
+
+Starts when the ticket is created and stops at the first response. A first response is recorded by:
+
+  * A **public** reply to the ticket
+  * Resolving the ticket, if no reply was made first
+  * Merging the ticket
+
+Internal notes do //not// count as a response. This applies to bulk replies as well as single replies.
+
+==== Resolution ====
+
+Starts when the ticket is created and stops when the ticket is resolved, or closed without being resolved.
+
+Reopening a resolved ticket puts it back on the resolution clock against its original due date. There is no pause or extension yet.
+
+===== Day to day use =====
+
+==== On a ticket ====
+
+The ticket view shows the SLA name alongside the priority, and the two target dates under the ticket details. A green tick means the target was met, a red warning triangle means it was missed.
+
+Selecting the SLA name opens a modal where you can pin the ticket to a different plan, or to **None** to remove its targets entirely. This needs support module write access, and is unavailable once the ticket is closed. Changing the SLA recalculates both targets from the ticket's creation time.
+
+==== On the ticket list ====
+
+  * **Yellow** - a target is approaching, at the warning percentage you configured
+  * **Red** - a target has been missed
+
+Closed tickets are never coloured.
+
+==== Notifications ====
+
+Once the cron script is scheduled, each ticket generates at most one warning and one breach alert per clock. Alerts are sent in-app and by e-mail to the SLA notification address and the assigned agent - if these are the same person, only one e-mail is sent.
+
+===== Behaviour worth knowing =====
+
+==== Priority and client changes recalculate targets ====
+
+Changing a ticket's priority or client re-runs the assignment lookup and recalculates both targets **from the ticket's creation time**. This also clears a per-ticket SLA you pinned manually.
+
+This matters for a common pattern: an outage raised as Urgent, then downgraded to Low and left open for a week of monitoring. After the downgrade, the resolution target is measured from when the outage started, so it may be missed almost immediately. Three ways to handle it:
+
+  * Resolve the outage ticket when the outage ends and monitor on a separate ticket - the cleanest option, and the most accurate reporting
+  * Downgrade the priority //first//, then pin the ticket's SLA to **None** - order matters, because changing priority afterwards clears the pin
+  * Assign **None** to Low, so downgrading to Low drops the SLA automatically
+
+Status-based pausing is planned and will make this unnecessary.
+
+==== Editing plans and settings restamps open tickets ====
+
+Editing a plan's targets recalculates open tickets using that plan. Changing business hours recalculates all open tickets with an SLA. Closed and archived tickets are never touched.
+
+==== Archived plans ====
+
+Archiving a plan leaves existing tickets with the targets they already have, but any assignment pointing at it stops applying, so new tickets get no SLA. Restore the plan to undo this.
+
+==== Tickets created outside the agent interface ====
+
+Tickets raised through the client portal, the e-mail parser, the API and recurring tickets all get targets in the same way.
+
+===== Troubleshooting =====
+
+^ Symptom ^ Likely cause ^
+| No colours, warnings or breach alerts | ''ticket_sla.php'' is not scheduled |
+| In-app alerts appear but no e-mail | ''mail_queue.php'' is not running, or the notification address is empty and the ticket has no assigned agent |
+| Tickets have no SLA at all | No assignment matches their client and priority, or the assigned plan is archived |
+| Targets look hours out | Business hours, business days or the ITFlow timezone are set incorrectly |
+| A ticket shows a red missed response but you replied quickly | The reply was an internal note - only public replies count |
+| Targets moved unexpectedly | Someone changed the ticket's priority or client, edited the plan, or changed business hours |
+
+===== Not yet supported =====
+
+These are planned for a future release:
+
+  * Pausing the resolution clock on statuses such as //Waiting on client//
+  * SLA reporting and filtering tickets by SLA state
+  * SLA colouring on the kanban board
