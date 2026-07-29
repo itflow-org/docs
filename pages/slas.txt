@@ -6,7 +6,7 @@ SLAs are entirely optional. Until you assign one, nothing about ticketing change
 
 ===== Requirements =====
 
-  * ITFlow 26.08 or newer (database version 2.5.0)
+  * ITFlow 26.08 or newer (database version 2.5.1)
   * The Ticketing module enabled
   * The ''ticket_sla.php'' cron script scheduled - see [[cron|Cron]]. Without it, targets are still calculated and displayed, but you get no warnings, no breach alerts and no row colouring
   * ''mail_queue.php'' running, if you want SLA alerts by e-mail as well as in-app
@@ -108,9 +108,43 @@ Internal notes do //not// count as a response. This applies to bulk replies as w
 
 ==== Resolution ====
 
-Starts when the ticket is created and stops when the ticket is resolved, or closed without being resolved.
+Starts when the ticket is created and stops when the ticket is resolved, or closed without being resolved. It can also be paused - see below.
 
-Reopening a resolved ticket puts it back on the resolution clock against its original due date. There is no pause or extension yet.
+Reopening a resolved ticket puts it back on the resolution clock with whatever budget was left when it was resolved. A ticket resolved after two hours of an eight hour target comes back with six hours, not with its original deadline.
+
+===== Pausing the resolution clock =====
+
+Time spent waiting on someone else does not have to count against a resolution target. Any ticket status can be set to pause the clock.
+
+Navigate to **Admin** > **Ticket Statuses**, edit a status, and set **SLA** to **Pause the resolution clock**. Statuses that pause are marked //Paused// in the SLA column on that page. Nothing pauses by default, so this is entirely opt-in.
+
+A typical setup is to pause on statuses like //Waiting on client//, //Waiting on vendor// or //Scheduled//, and leave //Open// and //In progress// running.
+
+While a ticket sits in a paused status:
+
+  * Its resolution clock stops, and the time already spent is kept
+  * It cannot warn or breach on resolution, so it is never coloured on the ticket list or kanban board
+  * The ticket shows //Paused// in place of its resolve-by date
+
+When it moves back to a running status the clock restarts and the resolve-by date moves out by whatever budget is left. A ticket that had used six hours of an eight hour target comes back with two hours, whether it was paused for an afternoon or a fortnight.
+
+Two things worth knowing:
+
+  * The **response clock is never paused**. A ticket that has not been replied to yet will still breach its response target, on the grounds that nobody can be waiting on the client before anyone has answered them
+  * Pausing only applies to statuses. Closing, resolving and archiving stop the clock regardless
+
+===== Reporting =====
+
+Two reports live under **Reports** > **Technical**, and both need read access to the support module.
+
+  * **SLA Summary** - overall response and resolution compliance for a year, broken down by priority and by month
+  * **SLA by Client** - the same figures per client, with average time to respond and average time to resolve. Useful for a QBR pack
+
+Percentages count only tickets whose targets have been judged. A ticket still awaiting a response is neither a hit nor a miss and is left out until its outcome is known, so the figures do not swing about as open work ages.
+
+Tickets raised before you assigned any SLA carry no SLA at all and never appear in these reports. Compliance figures therefore start from the day you set SLAs up, not from the beginning of your ticket history.
+
+On **SLA by Client**, time to respond is wall-clock from when the ticket was raised, while time to resolve counts only business hours with the clock actually running - paused spells are excluded, matching what the SLA itself judged on.
 
 ===== Day to day use =====
 
@@ -125,7 +159,11 @@ Selecting the SLA name opens a modal where you can pin the ticket to a different
   * **Yellow** - a target is approaching, at the warning percentage you configured
   * **Red** - a target has been missed
 
-Closed tickets are never coloured.
+Closed tickets are never coloured, and neither are paused ones - though a breach recorded before a ticket was paused still stands.
+
+The **SLA state** filter narrows the list to tickets that are breached, at risk, paused, met, or have no SLA at all. It only appears once you have at least one active SLA plan.
+
+Kanban cards carry the same states: a coloured border plus a stopwatch badge, amber when a target is approaching and red when one has been missed.
 
 ==== Notifications ====
 
@@ -137,13 +175,12 @@ Once the cron script is scheduled, each ticket generates at most one warning and
 
 Changing a ticket's priority or client re-runs the assignment lookup and recalculates both targets **from the ticket's creation time**. This also clears a per-ticket SLA you pinned manually.
 
-This matters for a common pattern: an outage raised as Urgent, then downgraded to Low and left open for a week of monitoring. After the downgrade, the resolution target is measured from when the outage started, so it may be missed almost immediately. Three ways to handle it:
+This matters for a common pattern: an outage raised as Urgent, then downgraded to Low and left open for a week of monitoring. After the downgrade, the resolution target is measured from the budget already spent, so it may be missed almost immediately. Options, best first:
 
-  * Resolve the outage ticket when the outage ends and monitor on a separate ticket - the cleanest option, and the most accurate reporting
+  * Move the ticket to a status that pauses the clock while it is only being monitored - this is what pausing is for
+  * Resolve the outage ticket when the outage ends and monitor on a separate ticket, which gives the most accurate reporting
   * Downgrade the priority //first//, then pin the ticket's SLA to **None** - order matters, because changing priority afterwards clears the pin
   * Assign **None** to Low, so downgrading to Low drops the SLA automatically
-
-Status-based pausing is planned and will make this unnecessary.
 
 ==== Editing plans and settings restamps open tickets ====
 
@@ -166,11 +203,12 @@ Tickets raised through the client portal, the e-mail parser, the API and recurri
 | Targets look hours out | Business hours, business days or the ITFlow timezone are set incorrectly |
 | A ticket shows a red missed response but you replied quickly | The reply was an internal note - only public replies count |
 | Targets moved unexpectedly | Someone changed the ticket's priority or client, edited the plan, or changed business hours |
+| A ticket shows Paused but you expected a countdown | Its status is set to pause the resolution clock, under Admin > Ticket Statuses |
+| A resolved ticket shows no met or missed verdict | It was resolved before 26.08 through the kanban board or the client portal, where the verdict was not being recorded |
+| Reports show fewer tickets than you expected | Only tickets carrying an SLA are counted, so anything raised before you set SLAs up is excluded |
 
-===== Not yet supported =====
+===== Current limitations =====
 
-These are planned for a future release:
-
-  * Pausing the resolution clock on statuses such as //Waiting on client//
-  * SLA reporting and filtering tickets by SLA state
-  * SLA colouring on the kanban board
+  * The response clock cannot be paused - only the resolution clock can
+  * Changing a ticket's priority or client clears an SLA that was pinned to that ticket by hand
+  * Logged clock time keeps the business hours that were in force when it was recorded, so changing business hours does not rewrite history
