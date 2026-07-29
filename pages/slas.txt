@@ -112,6 +112,8 @@ Starts when the ticket is created and stops when the ticket is resolved, or clos
 
 Reopening a resolved ticket puts it back on the resolution clock with whatever budget was left when it was resolved. A ticket resolved after two hours of an eight hour target comes back with six hours, not with its original deadline.
 
+A ticket that had already missed its target stays missed if no budget remains. Reopening cannot turn a recorded miss into a met - only genuinely unused time earns a clean window.
+
 ===== Pausing the resolution clock =====
 
 Time spent waiting on someone else does not have to count against a resolution target. Any ticket status can be set to pause the clock.
@@ -205,6 +207,7 @@ Tickets raised through the client portal, the e-mail parser, the API and recurri
 | Targets moved unexpectedly | Someone changed the ticket's priority or client, edited the plan, or changed business hours |
 | A ticket shows Paused but you expected a countdown | Its status is set to pause the resolution clock, under Admin > Ticket Statuses |
 | A resolved ticket shows no met or missed verdict | It was resolved before 26.08 through the kanban board or the client portal, where the verdict was not being recorded |
+| A reopened ticket still shows a missed verdict | Its resolution budget was already spent when it was reopened - a miss is only cleared when real time remains |
 | Reports show fewer tickets than you expected | Only tickets carrying an SLA are counted, so anything raised before you set SLAs up is excluded |
 
 ===== Current limitations =====
