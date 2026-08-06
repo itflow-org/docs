@@ -42,7 +42,7 @@ There's also [[https://github.com/itflow-org/itflow_install_script/blob/main/itf
 
 **Install Git & whois**
 
-  * ''sudo apt install git whois -y''
+  * ''sudo apt install git -y''
 
 **Harden your Linux installation**
 
