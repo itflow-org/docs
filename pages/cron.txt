@@ -1,6 +1,6 @@
 ====== Cron ======
 
-ITFlow includes PHP scripts designed to run automatically via [[https://en.wikipedia.org/wiki/Cron|Cron]], ensuring background tasks execute without user interacton. We strongly recommend configuring Cron.
+ITFlow includes PHP script designed to run automatically via [[https://en.wikipedia.org/wiki/Cron|Cron]], ensuring background tasks execute without user interacton. We strongly recommend configuring Cron.
 
 
 ==== Script purposes ====
