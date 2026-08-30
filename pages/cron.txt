@@ -21,5 +21,7 @@ To setup the scheduled tasks, copy the [[https://github.com/itflow-org/itflow-in
 You must then activate Cron within ITFlow:
 
   * Sign in to ITFlow with administrative rights.
-  * Navigate to **Settings** > **Notifications**
+  * Navigate to **Settings** > **Cron**
   * Enable Cron
+
+{{::cron_switched_off.png?direct&900 |}}
