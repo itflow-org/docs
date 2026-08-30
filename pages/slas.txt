@@ -2,7 +2,7 @@
 
 Service Level Agreements (SLAs) put response and resolution targets on tickets, warn you before a target is missed, and record whether each target was met.
 
-SLAs are entirely optional. Until you assign one, nothing about ticketing changes - no targets are set, no colours appear and no notifications are sent. You can also switch them off for a single client, a single priority, or a single ticket.
+SLAs are entirely optional and remain inactive until assigned. You can also disable them per client, priority, or per ticket.
 
 ===== Requirements =====
 
