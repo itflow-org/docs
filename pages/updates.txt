@@ -2,8 +2,8 @@
 
 {{::update-warning.png}}
 
-  * New features, bug fixes and security patches are regularly released - it's important to stay up-to-date
-  * It's important to take regular (e.g. nightly) backups of your ITFlow instance; **you should not attempt to run updates without a current backup** (e.g. VM snapshot)
+  * New features, bug fixes and security patches are released roughly once a month - it's important to stay up-to-date
+  * It's also important to take regular (e.g. nightly) backups of your ITFlow instance; **you should not attempt to run updates without a current backup** (e.g. VM snapshot)
   * Always look over the changelog before running updates to check for breaking changes
   * Updates are a two part process:
     * Download the updated files
@@ -19,15 +19,12 @@
 ===== CLI =====
   - Connect to your server via SSH as a user with root privileges
   - Navigiate to the ITFlow scripts directory (usually ''/var/www/itflow.yourdomain.com/scripts'')
-  - To update the app files run: ''sudo -u www-data php update_cli.php''
-  - Then apply database updates: ''sudo -u www-data php update_cli.php %%--%%update_db'' (this may have to be run several times)
+  - The script will update the app files and database together, run: ''sudo -u www-data php update_cli.php''
 
 ----
 
 
 ===== Additional notes =====
   * It is crucial that you run the database updater as soon as possible after downloading the latest app files. Otherwise, you will begin seeing database-related issues in your error log.
-
-  * The database update applies one update at a time (see //database_updates.php//). If there are multiple updates needed, you will need to manually cycle through each update.
 
   * If you run into any issues running multiple database updates, you should try running the database updates via the CLI. Some updates alter files in your PHP session, which might only be set during login. This is usually mentioned in the breaking changes.
