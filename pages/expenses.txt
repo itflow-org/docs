@@ -4,7 +4,6 @@ Quickly and easily track your expenses
 {{:playground:itflow_exp.png?direct|}}
 
 ===== Expense Fields =====
- (*Required)
 
   *Date
   *Amount
