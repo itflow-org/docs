@@ -9,7 +9,7 @@ SLAs are entirely optional and remain inactive until assigned. You can also disa
   * ITFlow 26.08 or newer (database version 2.5.1)
   * The Ticketing module enabled
   * The ''ticket_sla.php'' cron script scheduled - see [[cron|Cron]]. Without it, targets are still calculated and displayed, but you get no warnings, no breach alerts and no row colouring
-  * ''mail_queue.php'' running, if you want SLA alerts by e-mail as well as in-app
+  * Email configured with the ''mail_queue.php'' cron running, if you want SLA alerts by e-mail as well as in-app
 
 ===== Concepts =====
 
