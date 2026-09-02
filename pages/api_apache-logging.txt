@@ -1,0 +1,21 @@
+====== API - Prevent keys being logged ======
+
+Until we add the ability for API keys to be sent by a header, GET requests may log the API key in the web server logs.
+
+If you are using Apache, adjust the logging configuration for requests to /api/ to not log the request query string.
+
+Amend ''/etc/apache2/sites-enabled/itflow.example.com''. Comment the current logging configuration and add:
+
+<code>
+# API endpoints should not log query strings
+SetEnvIf Request_URI "^/api/" is_api_request
+
+# Standard Apache combined format, but without query strings
+LogFormat "%h %l %u %t \"%m %U %H\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined_api
+
+# API traffic
+CustomLog ${APACHE_LOG_DIR}/access.log combined_api env=is_api_request
+
+# Everything else
+CustomLog ${APACHE_LOG_DIR}/access.log combined env=!is_api_request
+</code>
