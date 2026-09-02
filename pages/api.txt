@@ -61,6 +61,7 @@ The current version of the ITFlow API is v1. It can be accessed at **itflow.exam
   * For read requests, 50 records are shown by default. This can be adjusted by supplying the ''limit'' and ''offset'' parameters.
   * For POST requests, the ''client_id'' parameter is always required if the API key used has scope/access to all clients
   * Be sure to check your Apache/PHP error logs if you're running into issues
+  * To prevent your server from accidentally logging API keys, see [[api_apache-logging|here]]
 
 ----
 
