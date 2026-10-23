@@ -1,0 +1,169 @@
+<?php
+/*
+ * ITFlow Docs - the menu. Sections in order, each with its pages in order.
+ *
+ * A page's file is content/<section>/<page>.md, and its address /<section>/<page>.
+ * Add a page by adding a line here and its file. The title here is the one in
+ * the menu; the page's own title (at the top of its file) can be longer.
+ */
+
+defined('ITFLOW_DOCS') || exit;
+
+return [
+    'getting-started' => [
+        'title' => 'Getting started',
+        'icon' => 'compass',
+        'summary' => 'Find your way around: the menus, search, lists and your own account.',
+        'pages' => [
+            'tour' => 'Finding your way around',
+            'search' => 'Searching',
+            'lists' => 'Lists, quick looks and bulk actions',
+            'notifications' => 'Notifications',
+            'account' => 'Your account',
+            'ai' => 'Using AI',
+        ],
+    ],
+    'clients' => [
+        'title' => 'Clients',
+        'icon' => 'building',
+        'summary' => 'Your clients and the people, places and vendors that go with them.',
+        'pages' => [
+            'clients' => 'Clients',
+            'overview' => 'The client overview',
+            'contacts' => 'Contacts',
+            'locations' => 'Locations',
+            'vendors' => 'Vendors',
+            'export' => 'Exporting a client\'s data',
+        ],
+    ],
+    'service-desk' => [
+        'title' => 'Service desk',
+        'icon' => 'headset',
+        'summary' => 'Tickets from first email to resolved, recurring work, projects and the calendar.',
+        'pages' => [
+            'tickets' => 'The tickets list',
+            'new-ticket' => 'Raising a ticket',
+            'working-a-ticket' => 'Working a ticket',
+            'canned-responses' => 'Canned responses',
+            'recurring-tickets' => 'Recurring tickets',
+            'projects' => 'Projects',
+            'calendar' => 'Calendar',
+        ],
+    ],
+    'documentation' => [
+        'title' => 'IT documentation',
+        'icon' => 'sitemap',
+        'summary' => 'Everything you look after for a client: devices, networks, logins, licenses and documents.',
+        'pages' => [
+            'assets' => 'Assets',
+            'networks' => 'Networks and IP addresses',
+            'racks' => 'Racks',
+            'credentials' => 'Credentials',
+            'licenses' => 'Licenses',
+            'domains' => 'Domains',
+            'certificates' => 'Certificates',
+            'services' => 'Services',
+            'files-and-documents' => 'Files and documents',
+            'shared-links' => 'Shared links',
+        ],
+    ],
+    'billing' => [
+        'title' => 'Billing',
+        'icon' => 'file-invoice-dollar',
+        'summary' => 'Quotes, invoices, payments and recurring billing, and getting your time onto invoices.',
+        'pages' => [
+            'products' => 'Products and stock',
+            'quotes' => 'Quotes',
+            'invoices' => 'Invoices',
+            'payments' => 'Taking payments',
+            'recurring-invoices' => 'Recurring invoices',
+            'unbilled-time' => 'Unbilled time',
+            'reminders-and-statements' => 'Reminders and statements',
+            'trips' => 'Trips and mileage',
+        ],
+    ],
+    'finance' => [
+        'title' => 'Finance',
+        'icon' => 'coins',
+        'summary' => 'Expenses, income, your bank accounts and the reports that sum it all up.',
+        'pages' => [
+            'expenses' => 'Expenses',
+            'recurring-expenses' => 'Recurring expenses',
+            'importing-statements' => 'Importing bank statements',
+            'income' => 'Income',
+            'accounts' => 'Accounts and transfers',
+            'reconciling' => 'Reconciling an account',
+            'reports' => 'Reports',
+        ],
+    ],
+    'portal' => [
+        'title' => 'Client portal',
+        'icon' => 'globe',
+        'summary' => 'What your clients see when they sign in, and how to give them access.',
+        'pages' => [
+            'overview' => 'What clients see',
+            'access' => 'Giving contacts access',
+            'tickets' => 'Tickets and requests',
+            'billing' => 'Invoices, quotes and payments',
+            'your-it' => 'Devices, licenses and documents',
+        ],
+    ],
+    'admin' => [
+        'title' => 'Administration',
+        'icon' => 'user-shield',
+        'summary' => 'Setting ITFlow up for your team: users, roles, mail, billing, templates and upkeep.',
+        'pages' => [
+            'settings' => 'Settings',
+            'users' => 'Users',
+            'roles' => 'Roles and permissions',
+            'mail' => 'Mail',
+            'tickets' => 'Tickets, statuses and SLAs',
+            'billing' => 'Invoices and billing settings',
+            'payment-providers' => 'Card payments with Stripe',
+            'taxes' => 'Taxes',
+            'categories-and-tags' => 'Categories and tags',
+            'ticket-templates' => 'Ticket and project templates',
+            'document-templates' => 'Document templates',
+            'license-and-vendor-templates' => 'License and vendor templates',
+            'canned-responses' => 'Shared canned responses',
+            'client-portal' => 'Client portal settings',
+            'security' => 'Security and sign-in',
+            'ai' => 'AI providers and models',
+            'api-keys' => 'API keys',
+            'logs' => 'Audit logs, sign-ins and app logs',
+            'maintenance' => 'Backups, cron, updates and starter content',
+        ],
+    ],
+    'api' => [
+        'title' => 'API',
+        'icon' => 'code',
+        'summary' => 'Connect your RMM, phone system and scripts to ITFlow: keys, requests, examples and every endpoint.',
+        'pages' => [
+            'overview' => 'Getting started',
+            'requests' => 'Requests and responses',
+            'permissions' => 'Keys and permissions',
+            'examples' => 'Examples',
+            'clients' => 'Clients and contacts',
+            'tickets' => 'Tickets',
+            'documentation' => 'IT documentation',
+            'billing' => 'Billing and expenses',
+            'lookups' => 'Tags, categories and roles',
+        ],
+    ],
+    'install' => [
+        'title' => 'Installing ITFlow',
+        'icon' => 'server',
+        'summary' => 'Putting ITFlow on a server of your own, setting it up, keeping it updated, and fixing problems.',
+        'pages' => [
+            'requirements' => 'Before you install',
+            'install-script' => 'Install with the script',
+            'manual' => 'Install by hand',
+            'setup' => 'The setup wizard',
+            'after-install' => 'After installing',
+            'config-php' => 'config.php',
+            'updating' => 'Updating ITFlow',
+            'moving' => 'Moving to a new server',
+            'troubleshooting' => 'When something goes wrong',
+        ],
+    ],
+];

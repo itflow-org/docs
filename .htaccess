@@ -1,0 +1,15 @@
+# ITFlow Docs on Apache: every address that isn't a real file goes to index.php
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Nothing but the site itself is served
+<FilesMatch "^(config|config\.local|nav|build)\.php$|\.md$">
+    Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/(includes|content|dist)(/|$)
