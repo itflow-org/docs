@@ -12,6 +12,8 @@ A canned response is a reply you write once and reuse: "we've received your tick
 2. Click **Canned response**, or type <kbd>/</kbd> in the reply and keep typing to narrow the list.
 3. Search by name or by what it says, and click one (or press <kbd>Enter</kbd> for the first).
 
+Changed your mind? **Cancel**, beside the search, closes the list and puts you back in your reply - or just click into the reply.
+
 ![The canned response picker over the reply box](sd-canned-picker.webp "The picker: the responses for this ticket's category first, then the ones for every ticket, each with what it sets up")
 
 The response goes in where your cursor is. The ones offered are those for the ticket's category and those for every ticket; your own come first, as **Yours**.

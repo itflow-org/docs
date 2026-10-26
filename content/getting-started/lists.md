@@ -45,6 +45,8 @@ Many values can be changed right where they are shown, without opening an edit f
 - a project's manager and a recurring ticket's technician
 - an asset's status, location and assigned contact, and a contact's location
 
+**Cancel**, at the top of the list, closes it without changing anything - as <kbd>Esc</kbd> does, or a click anywhere else.
+
 ![Clicking a ticket's priority in the tickets list opens a picker with Low, Medium, High and Urgent](gs-quick-pick.webp "Click a value to change it in place")
 
 ## Copy buttons
@@ -80,5 +82,7 @@ Most records also have a full page of their own. They share one layout:
 ## Forms
 
 Forms have an icon in front of every field. Long forms are split into tabs; if you save with a required field empty on another tab, ITFlow takes you to it.
+
+A field with a list of choices opens it under the field, with a search box when the list is long. **Cancel** at the top closes it without changing the field, and **Done** closes one where you tick several. A click anywhere else closes it too, a reply or other text box included.
 
 ITFlow asks before it deletes or turns off anything, and before you leave a page with a reply or note you haven't saved.
