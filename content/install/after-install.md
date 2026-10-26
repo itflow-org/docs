@@ -93,20 +93,22 @@ Backups are kept on the server, in ITFlow's `uploads/backups` folder. Copy them 
 ![The Support step](inst-start-support.webp "Support: business hours, response times, ticket numbers and the client portal")
 
 - **Business hours** - the **Days**, and the hours **From** and **To**. Response times only count these: an urgent ticket on Friday evening is due Monday morning. Add holidays in [Admin > SLAs](/admin/tickets#slas).
-- **Response times** - how soon a ticket is answered and put right, by its priority. **Use these** makes them your default SLAs, for every client without their own, and gives them to open tickets too.
+- **Response times** - how soon a ticket is answered, by its priority. **Use these** makes them your default SLAs, for every client without their own, and gives them to open tickets too.
 - **Ticket numbers** - the **Prefix** and **Next number**.
 - **Client portal** - switch on **Clients can sign in to raise and follow tickets**. They can also pay invoices and see quotes and documents. What each contact sees is set on the contact - see [Giving contacts access](/portal/access).
 
 The standard response times are:
 
-| Priority | Answered within | Put right within |
-|---|---|---|
-| Urgent | 1 business hour | 4 business hours |
-| High | 2 business hours | 1 business day |
-| Medium | 4 business hours | 2 business days |
-| Low | 1 business day | 5 business days |
+| Priority | Answered within |
+|---|---|
+| Urgent | 1 business hour |
+| High | 2 business hours |
+| Medium | 4 business hours |
+| Low | 1 business day |
 
-If you already have default SLAs, the step shows yours and only fills in the priorities that have none. Change them, or add more, in [Admin > SLAs](/admin/tickets#slas).
+They have no time to resolve a ticket by. To add one - or change them, or add more SLAs - go to [Admin > SLAs](/admin/tickets#slas).
+
+If you already have default SLAs, the step shows yours - with their time to resolve by, when they have one - and only fills in the priorities that have none.
 
 ## Your team {#team}
 
