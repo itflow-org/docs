@@ -70,13 +70,16 @@ return [
     'billing' => [
         'title' => 'Billing',
         'icon' => 'file-invoice-dollar',
-        'summary' => 'Quotes, invoices, payments and recurring billing, and getting your time onto invoices.',
+        'summary' => 'Quotes, invoices, payments, recurring billing and contracts, and getting your time onto invoices.',
         'pages' => [
             'products' => 'Products and stock',
             'quotes' => 'Quotes',
             'invoices' => 'Invoices',
             'payments' => 'Taking payments',
             'recurring-invoices' => 'Recurring invoices',
+            'contracts' => 'Contracts',
+            'contract-signing' => 'Sending a contract to sign',
+            'prepaid-hours' => 'Prepaid hours',
             'unbilled-time' => 'Unbilled time',
             'reminders-and-statements' => 'Reminders and statements',
             'trips' => 'Trips and mileage',
@@ -103,6 +106,7 @@ return [
         'pages' => [
             'overview' => 'What clients see',
             'access' => 'Giving contacts access',
+            'invites' => 'Invites and signing up',
             'tickets' => 'Tickets and requests',
             'billing' => 'Invoices, quotes and payments',
             'your-it' => 'Devices, licenses and documents',
@@ -125,6 +129,7 @@ return [
             'ticket-templates' => 'Ticket and project templates',
             'document-templates' => 'Document templates',
             'license-and-vendor-templates' => 'License and vendor templates',
+            'contract-templates' => 'Contract templates',
             'canned-responses' => 'Shared canned responses',
             'client-portal' => 'Client portal settings',
             'security' => 'Security and sign-in',

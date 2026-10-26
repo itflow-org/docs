@@ -1,11 +1,11 @@
 ---
 title: Client portal settings
-description: Two-step sign-in for portal contacts, signing in with Microsoft 365, and announcements on every client's portal home page.
+description: Two-step sign-in for portal contacts, letting people sign up, signing in with Microsoft 365, and announcements on every client's portal home page.
 where: Admin > Settings > Client portal
 access: Admins
 ---
 
-The client portal mostly looks after itself: who sees what comes from each contact's roles (see [Giving contacts access](/portal/access)), and your request forms come from [ticket templates](/admin/ticket-templates#client-portal). The admin side has three things.
+The client portal mostly looks after itself: who sees what comes from each contact's roles (see [Giving contacts access](/portal/access)), and your request forms come from [ticket templates](/admin/ticket-templates#client-portal). The admin side has four things.
 
 ![Client portal settings](adm-client-portal.webp "Client portal: two-step sign-in for contacts, and announcements")
 
@@ -14,6 +14,12 @@ The client portal mostly looks after itself: who sees what comes from each conta
 Switch on **Require two-step sign-in** and contacts who sign in with a password are asked for a code from an authenticator app too. Anyone who hasn't set it up is taken to set it up before anything else. Contacts who sign in with Microsoft 365 are left to Microsoft.
 
 If a contact loses their phone, turn it off for them from their contact page - see [Giving contacts access](/portal/access#signing-in-safely).
+
+## Signing up {#signing-up}
+
+Switch on **Signing up** to let the people at a client make their own portal account from the sign-in page, with an address at one of the client's domains. It's off for every client until you turn it on for one, with **Let them sign up** on the client's **Contacts > Invites**. This section lists the clients that let people sign up, and their domains.
+
+They prove their address with an emailed link, and join as a plain contact who sees the tickets they raise. You and the client's primary contact are told. See [Invites and signing up](/portal/invites#sign-up).
 
 ## Signing in with Microsoft 365
 

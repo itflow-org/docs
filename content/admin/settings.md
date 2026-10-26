@@ -56,7 +56,22 @@ Switch off the parts of ITFlow you don't use - **IT documentation**, **Ticketing
 
 ## Custom links
 
-**Admin > Custom Links** adds your own links to ITFlow's menus - your RMM, your documentation wiki, a supplier portal. Each has a **Name**, an address, an **Icon** and where it goes: the **Main Side Nav**, the **Top Nav** (as an icon), the **Client Portal Nav**, the **Admin Nav** or the **Reports Nav**. Tick **Open New Tab** to open it in a new tab.
+**Admin > Custom Links** adds your own links to ITFlow's menus - your RMM, your team's wiki, a distributor's portal. There's a tab for each menu a link can show in, with how many it holds, plus **All menus** and **Archived**. Each link shows its icon, what it's for, where it shows and where it goes. A link whose address can't work is flagged.
+
+![Custom links](adm-custom-links.webp "Custom links: each link, the menu it shows in and where it goes")
+
+Click **New Link**, or **Edit** on a link's menu:
+
+![The window for a custom link](adm-custom-link-form.webp "A link: how it will look in its menu, where it goes and its icon")
+
+- **Looks like** shows the link in its menu as it will be.
+- **Name**, and **Goes to** - a web address, a page of ITFlow such as `/agent/unbilled_time.php`, `mailto:`, `tel:`, or a remote tool such as `rdp:` or `ssh:`. A `javascript:` or `data:` address isn't allowed.
+- **Open it in a new tab** switches itself on for another site and off for a page of ITFlow, until you change it.
+- **Shows in** - the **Agent menu** (under **Tools**), the **Top bar** (as an icon, with its name when pointed at), the **Client portal**, the **Admin menu** (under **Links**) or the **Reports menu**.
+- **Description** - shown when someone points at the link.
+- **Icon** - search the icons, or type any Font Awesome icon's name.
+
+On a menu's tab, drag the links into the order the menu shows them in, or use **Move up** and **Move down**. A new link goes at the end of its menu. **Copy** makes the same link again, to put it in a second menu too. **Archive** hides a link without losing it, **Restore** brings it back, and **Open** tries it.
 
 ## Numbering
 

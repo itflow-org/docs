@@ -30,6 +30,9 @@ The contact's page then shows that they can sign in, and when they last did. **V
 
 To take access away, set **Login** back to **No access**. Archiving a contact takes it away too.
 
+> [!TIP]
+> Someone who isn't a contact yet can be invited by email instead, and fills in their own details when they join - or you can let the people at a client sign up for themselves. See [Invites and signing up](/portal/invites).
+
 ## The primary contact manages their own people
 
 A client's primary contact - usually the owner or office manager - can look after their own people in the portal, under **Your IT > Contacts**:
@@ -37,6 +40,7 @@ A client's primary contact - usually the owner or office manager - can look afte
 - **Add a person**, with their roles
 - change a person's details and roles
 - **Give access and email an invite**, send it again, or turn access off
+- **Invite people** by email, who join as their colleagues - see [Invites and signing up](/portal/invites#primary)
 - **Left the company** for someone who's gone: their access is turned off straight away, and a ticket is opened for you to close down their email, accounts and devices
 
 ![The client's primary contact managing a colleague in the portal](portal-contact.webp "The primary contact can give a colleague access, change their roles, or tell you they've left")

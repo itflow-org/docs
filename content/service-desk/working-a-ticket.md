@@ -44,7 +44,7 @@ Above the conversation are three buttons. Nothing is picked for you, so who sees
 | **Public note** | The client, in the client portal. No email is sent. |
 | **Email reply** | The contact and the ticket's watchers, by email, and it shows in the portal. Only there when mail is set up and the contact has an email address. |
 
-Pick one and the reply box opens, with a line saying exactly who will see it.
+Pick one and the reply box opens, with a line saying exactly who will see it. An email reply carries the conversation so far, as short excerpts, and a link to the ticket that opens without signing in - see [The ticket link in emails](/portal/tickets#ticket-link).
 
 ![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the editor, files, the status after it and the time worked")
 

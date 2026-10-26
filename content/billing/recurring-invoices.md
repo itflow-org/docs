@@ -86,5 +86,7 @@ ITFlow's nightly job makes each invoice on its day, dated that day:
 
 If a run is missed - the server was off, say - the job catches up on runs up to a week old. A recurring invoice whose next date has passed further back than that is listed under **Late**, and won't bill until you use **Invoice Now** or **Edit** its **Next invoice** date.
 
+A recurring invoice that bills a [contract](/billing/contracts#recurring) shows the contract, on its page and in the list. It's paused while the contract is a draft, starts when the contract is made active or renewed, and is paused once the contract ends.
+
 > [!NOTE]
 > Your admin can turn off emailing recurring invoices for everyone in **Admin > Settings > Notifications** - then they're all made as drafts.

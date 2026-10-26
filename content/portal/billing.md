@@ -1,10 +1,10 @@
 ---
 title: Invoices, quotes and payments
-description: What billing contacts see in the portal - their invoices and statement, paying by card, accepting quotes, and saving a card for autopay.
+description: What billing contacts see in the portal - their invoices and statement, paying by card, accepting quotes, their contracts, and saving a card for autopay.
 where: Client portal > Billing
 ---
 
-Billing contacts and the primary contact see the client's money side of things under **Billing**. They can pay what's owed by card, accept or decline quotes, and look up any invoice or receipt themselves - which saves you a lot of "can you resend that invoice?" emails.
+Billing contacts and the primary contact see the client's money side of things under **Billing**. They can pay what's owed by card, accept or decline quotes, sign contracts, and look up any invoice or receipt themselves - which saves you a lot of "can you resend that invoice?" emails.
 
 ## Invoices
 
@@ -47,6 +47,14 @@ Once accepted, **Signed copy or PO** lets them send you the signed quote or a pu
 ## Recurring invoices
 
 **Recurring invoices** shows what you bill them each month, quarter or year, when the next invoice comes, and whether autopay pays it. Each opens to show what it covers.
+
+## Contracts {#contracts}
+
+**Billing > Contracts** lists the client's contracts: **To sign**, **In force** and **All**. A contract you've [sent them to sign](/billing/contract-signing) shows there and on their home page until it's signed. Drafts you haven't sent don't show.
+
+![A contract in the portal](portal-contract.webp "A contract in the portal: the document, where it stands, and its term")
+
+A contract opens as its document, with where it stands and its term alongside. One waiting for them has the signing panel - their name, job title and signature, drawn or typed - and one that's signed has the copy signed by both, to download as a PDF. A contract with [prepaid hours](/billing/prepaid-hours) shows the hours left, what runs out when, and the tickets they went on.
 
 ## Cards and autopay
 

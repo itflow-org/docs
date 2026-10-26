@@ -1,6 +1,6 @@
 ---
 title: Maintenance
-description: Keeping ITFlow running - cron and its jobs, backups and the encryption key, updates, and the starter content library.
+description: Keeping ITFlow running - cron and its jobs, backups and the encryption key, updates, the starter content library, and Debug's checks.
 where: Admin > Maintenance
 access: Admins
 ---
@@ -89,8 +89,29 @@ Request forms come with the ticket templates, turned off - turn each on in its t
 
 **Demo Data** removes the sample clients and records from a demo install, ready for your own.
 
+## Debug
+
+**Admin > Debug** checks the install and the server it runs on. It says first what needs putting right - problems, then warnings - each with what it found, what to do and a link to where to do it. When nothing does, it says everything looks good.
+
+![Debug](adm-debug.webp "Debug: what needs a look first, the essentials along the top, then every check")
+
+Along the top are the version and the database's version (with an update waiting), PHP, when cron last ran, failed email this week, the last backup and errors logged in the last day - each a link to its page. Below them, every check by section:
+
+- **ITFlow** - the version, the database's version against the one the code expects, and whether updates can run here
+- **Background jobs** - cron running and switched on (with the crontab line when it isn't), jobs that failed in the last day, and jobs switched off
+- **Mail** - sending, email given up on or waiting to be tried again, and when the ticket mailbox was last read
+- **Backups** - the last one, one that failed, and the backup folder
+- **PHP** - the version, the extensions ITFlow needs, and the upload size, memory and time limits
+- **Web and security** - HTTPS and the certificate, the address in ITFlow's emails against the one in use, and HTTPS only
+- **Files and disk**, **Server** and **Errors logged** - the uploads folder, free space, the web and database servers, the time zone, and the latest errors
+
+Further down are the database - its tables and size, the biggest tables, and any difference from a fresh install's tables and columns - and the uploads folder by size. **Count exactly** counts every table's rows, where the page shows the database's own estimate.
+
+**Copy for support** puts the whole report on your clipboard as plain text, for a forum post or a support email: versions, what needs a look and the size of things, without host names, paths, addresses or keys. The same report is on the page, to read before you post it.
+
+The page still opens when the database is behind the code - which is when you most need it.
+
 ## Other maintenance pages
 
 - **Admin > Mail Queue** - every email sent or waiting. See [Mail](/admin/mail#the-mail-queue).
 - **Admin > Audit Logs** and **App Logs** - see [Logs](/admin/logs).
-- **Admin > Debug** - details of your server and install, for when you ask for help on the forum.

@@ -23,6 +23,7 @@ A row of tiles counting what needs doing for this client. Each one opens a list 
 - **service reviews due**, **passwords due for a change**, **licenses over seats** and **certificate problems**
 - documents, licenses or vendors the client should have and doesn't
 - warranties, licenses, domains and certificates **expired** or **expiring soon**
+- [contracts](/billing/contracts) **ending** or **renewing soon**
 
 ## Technical
 
@@ -46,7 +47,8 @@ If your role covers billing, the overview ends with the client's money:
 - **Paid this year**, against last year.
 - **Recurring** - what their recurring invoices bring in a month.
 - **Not yet invoiced** - billable tickets and expenses waiting to be billed, and what they come to. Click it to open [Unbilled time](/billing/unbilled-time) for this client.
-- **Terms** - their hourly rate, payment terms, tax ID and tax rate, or that they're tax exempt.
+- **Contract** - the [contract](/billing/contracts) in force, and the prepaid hours left across their contracts.
+- **Terms** - their hourly rate, payment terms, tax ID and tax rate, or that they're tax exempt. While a contract is in force, its rate and net terms show instead.
 - **Unpaid invoices**, **Recurring invoices** and a chart of what was **invoiced and paid** each month for the last year.
 
 > [!TIP]

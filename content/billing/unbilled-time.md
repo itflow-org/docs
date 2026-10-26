@@ -63,4 +63,6 @@ Each ticket's billed hours start as the time logged on it, rounded the way your 
 
 A ticket with no time logged goes on with no charge unless you type the hours. A client with no hourly rate of its own uses your default rate from **Admin > Settings > Defaults**.
 
+While a [contract](/billing/contracts#in-force) is in force, its rates apply: each ticket bills at its own rate, an after-hours ticket says so, and the rate is left empty when a client's tickets don't all bill at one rate - type one to bill them all at it. Time covered by a contract's [prepaid hours](/billing/prepaid-hours) never shows here. **Draw now** takes what's waiting from the hours straight away, and a ticket says how much its hours were cut by.
+
 **Report** opens the **Unbilled Work** report: what invoicing it all would come to, per client and then ticket by ticket, longest waiting first.

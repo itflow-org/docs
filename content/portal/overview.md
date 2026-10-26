@@ -14,7 +14,7 @@ It carries your company's name and works on a phone as well as a computer. What 
 
 ## Signing in
 
-Clients sign in at the same address as you, with their email and password, or with their Microsoft account if you've set that up. **Forgot password?** emails them a link to choose a new one.
+Clients sign in at the same address as you, with their email and password, or with their Microsoft account if you've set that up. **Forgot password?** emails them a link to choose a new one. When you [let people sign up](/portal/invites#sign-up), **Create an account** is there too.
 
 ![The sign-in page](portal-login.webp "Clients sign in at the same address as your team")
 

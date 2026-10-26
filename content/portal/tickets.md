@@ -54,3 +54,21 @@ The ticket shows where it stands - **Received**, **In progress**, **Resolved**, 
 ### Approvals
 
 When a task on a ticket needs the client's say-so - buying a replacement, giving someone admin access - the contact you picked sees it under **Waiting for your approval** on the ticket and on their home page, with **Approve**. They can approve it from the email too. The task is marked approved in ITFlow. See [Working a ticket](/service-desk/working-a-ticket#tasks).
+
+## The ticket link in emails {#ticket-link}
+
+Your ticket emails have a link to the ticket that opens without signing in - for whoever the email went to, contact or not. It looks like the portal's ticket page: your logo, where the ticket stands, and the conversation oldest first, with the files that came with each message. Alongside are who's working on it and on which device, and your phone, email and website.
+
+![The ticket link in an email](portal-ticket-link.webp "The ticket link: where it stands, work booked, the conversation, and how to reply")
+
+It also shows:
+
+- when you'll reply, while the SLA's response time is still ahead
+- work booked on the ticket - onsite, with the site's address, or remote - with **Add to calendar**
+- tasks waiting for the client's approval, and who was emailed the link to approve them
+- **Reply by email**, with the ticket number in the subject so the reply lands on the ticket, **Reply in the client portal**, and **Call** for an Urgent or High ticket
+
+Replies come by email or from the portal, where you know who wrote them - the link can also go to people watching the ticket. Internal notes and their files never show. Closing, reopening and rating the ticket are buttons on the page, so nothing that follows links in an email can close or reopen a ticket by itself.
+
+> [!TIP]
+> Ticket emails carry the conversation too: the new message first, then the earlier public replies, newest first, and the request at the end - each as a short excerpt, with who wrote it and when. An email says what the ticket is about even when nothing new was written, such as Resolved or Work booked.

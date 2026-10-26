@@ -10,7 +10,7 @@ A contact is a person at a client: the owner, the office manager, the person who
 
 ![A client's contacts list with role tabs, reach details and linked records](cl-contacts.webp "Contacts: role tabs, how to reach each person, and what's linked to them")
 
-The tabs split contacts by role - **Important**, **Billing**, **Technical** and **Portal** (those who can sign in to the client portal). Each row shows:
+The tabs split contacts by role - **Important**, **Billing**, **Technical** and **Portal** (those who can sign in to the client portal) - and **Invites** lists people invited to the portal who haven't joined yet. Each row shows:
 
 - the contact's name, title and department, with role labels such as **Primary** and **Billing**, and their tags
 - **Reach** - phone with extension, mobile and email, each with a copy button when you point at it
@@ -45,6 +45,8 @@ On the contact's **Access** tab, set **Login**:
 - **No access** - the default.
 
 What they see in the portal depends on their roles: billing contacts see invoices, technical contacts see devices and documentation, and the primary contact can manage their company's contacts. See [Giving contacts access](/portal/access).
+
+To bring in people who aren't contacts yet, use **Invite to the portal** on the **New Contact** menu - they fill in their own details when they join. The **Invites** tab lists the invites waiting. See [Invites and signing up](/portal/invites).
 
 ## The contact's page
 
