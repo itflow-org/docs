@@ -52,6 +52,8 @@ The tabs are **Waiting**, **Sending**, **Retrying**, **Failed**, **Sent** and **
 
 If something is stopping email going out - sending switched off, or cron not running - it says so at the top.
 
+A ticket's conversation shows the same for each email reply: who it was emailed to and whether each one was sent, is waiting, or failed. See [The conversation](/service-desk/working-a-ticket#the-conversation).
+
 ## Notifications
 
 **Admin > Settings > Notifications** decides which emails ITFlow sends clients by itself, and the alerts it raises for your team:

@@ -134,6 +134,8 @@ To say why when you resolve, add a reply with `"ticket_status": 4` instead. See 
       "ticket_reply_id": "2553",
       "ticket_reply": "Repository share was offline after a NAS update. Remounted and re-ran the job - it completed.",
       "ticket_reply_type": "Internal",
+      "ticket_reply_emailed": "0",
+      "ticket_reply_emailed_to": null,
       "ticket_reply_time_worked": "00:25:00",
       "ticket_reply_created_at": "2026-10-22 00:37:54",
       "ticket_reply_by": "1",
@@ -150,7 +152,9 @@ To say why when you resolve, add a reply with `"ticket_status": 4` instead. See 
 
 `ticket_reply_by` is an agent's id on Internal and Public replies, and a contact's id on Client replies. `ticket_reply_by_name` is their name either way.
 
-**Fields:** `ticket_reply_id`, `ticket_reply`, `ticket_reply_type`, `ticket_reply_time_worked`, `ticket_reply_created_at`, `ticket_reply_updated_at`, `ticket_reply_archived_at`, `ticket_reply_by`, `ticket_reply_by_name`, `ticket_reply_ticket_id`, and the ticket's `ticket_prefix`, `ticket_number`, `ticket_subject` and `ticket_client_id`.
+`ticket_reply_emailed` is `1` when a Public reply was emailed and `0` when one of your replies wasn't. It's `null` on a Client reply, and on one from before ITFlow kept this. `ticket_reply_emailed_to` is who it went to, as a JSON list - `[{"email": "praghavan@ravenwooddental.example", "name": "Priya Raghavan"}]`, with an empty name for a watcher.
+
+**Fields:** `ticket_reply_id`, `ticket_reply`, `ticket_reply_type`, `ticket_reply_emailed`, `ticket_reply_emailed_to`, `ticket_reply_time_worked`, `ticket_reply_created_at`, `ticket_reply_updated_at`, `ticket_reply_archived_at`, `ticket_reply_by`, `ticket_reply_by_name`, `ticket_reply_ticket_id`, and the ticket's `ticket_prefix`, `ticket_number`, `ticket_subject` and `ticket_client_id`.
 
 ### Create {#replies-create}
 

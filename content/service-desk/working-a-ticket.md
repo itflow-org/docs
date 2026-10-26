@@ -54,14 +54,29 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work.
 5. Click the button: **Add note** for an internal note, **Post note** for a public note, **Send email** for an email reply. Your signature is added to email replies.
 
+Once an email reply is sent, the message at the top says how many people it went to. If nobody got it - the ticket has no contact or watcher with an email address, or mail isn't set up - it says so, and the reply is kept as a public note.
+
 > [!TIP]
 > If you try to leave the page with a reply half written, ITFlow asks first.
 
 ### The conversation
 
-Replies are listed newest first. Client replies are marked **From client**, yours **Internal** or **Public**, and each shows the time logged with it. Use **All**, **Public** and **Internal** above the conversation to filter it.
+Replies are listed newest first. Client replies are marked **From client**. Yours are marked **Internal**, **Public note** or **Email reply**, and each shows the time logged with it. Use **All**, **Public** and **Internal** above the conversation to filter it.
 
-Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shouldn't be kept, such as a password the client sent) and **Archive**.
+An email reply also says who it was emailed to - **Emailed to Priya Raghavan and 1 more**. Click that to see each person and where their email stands:
+
+![An email reply, with who it went to](sd-reply-emailed.webp "An email reply: who it was emailed to, and whether each email was sent")
+
+- **Sent** - and when
+- **Waiting** or **Retrying** - still in the [mail queue](/admin/mail#the-mail-queue). Until they've gone, the reply says **Sending to**.
+- **Failed** - with why, such as an address that doesn't exist. The reply says **Couldn't email** when nobody got it, or how many weren't sent.
+- **Cancelled** - someone stopped it in the mail queue
+
+Admins also get a link to the ticket's email in the mail queue, to retry one that failed. The mail queue keeps email for 90 days, so after that the reply still says who it went to, but no longer whether each one went.
+
+Replies from before ITFlow kept this are marked **Public**, as it isn't known whether they were emailed - unless the mail queue still had their email when you updated, in which case they show as email replies too.
+
+Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shouldn't be kept, such as a password the client sent) and **Archive**. Editing an email reply changes it on the ticket and in the portal - the people it was emailed to keep the email as it was sent.
 
 ## Contact, site and vendor
 
