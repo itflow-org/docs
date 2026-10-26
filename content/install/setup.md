@@ -76,7 +76,7 @@ The last step shows a few things to note before you sign in.
 
 - **Your backup key** - backups are locked with it. Copy it somewhere safe, away from the server. Without it, nobody can restore a backup. You can also find it later in [Admin > Backup](/admin/maintenance#backup).
 - **Its address** - where links in emails and the client portal go
-- **Once you are signed in** - the first things to set up. [After installing](/install/after-install) goes through them.
+- **Once you are signed in** - Get started opens and takes you through the rest, a step at a time: cron, email, backups, billing and support, your team and starter content, and your first client. The cron line ITFlow needs is here too, to copy. See [After installing](/install/after-install).
 - **Tell the ITFlow project about this install** - optional. It sends your company's name, website, city, state, country and currency to the ITFlow project, once, with a random id made for this install.
 
 Click **Finish and sign in**. Setup closes, and the sign-in page opens.

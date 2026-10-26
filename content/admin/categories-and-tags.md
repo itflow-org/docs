@@ -30,7 +30,9 @@ Where the order of a list matters, such as asset statuses, drag the categories i
 
 ## Tags
 
-Tags are your own labels on records - "Managed", "Key Account", "Cyber Insurance", "Break Fix" on clients; "Licensed user" on contacts; "Loaner" on assets. They show as coloured badges, and every list can be filtered by them.
+Tags are your own labels on records - "Managed", "Key Account", "Cyber Insurance", "Break Fix" on clients; "Licensed user" on contacts; "Loaner" on assets. Every list can be filtered by them.
+
+A tag shows as a soft badge: its icon in the tag's colour, its name in the page's own text colour, on a faint wash of the colour with an edge of it. So a page full of tags stays easy to read, in light mode and dark - even a pale yellow or a near-black tag.
 
 ![Tags](adm-tags.webp "Tags: the tags for each kind of record, and how many records have each")
 

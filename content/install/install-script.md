@@ -68,4 +68,4 @@ bash itflow_install.sh --domain itflow.example.com --timezone America/New_York -
 - **No certificate** - Let's Encrypt can't reach the server by its name. Check the name points at the server and port 80 is open, then get the certificate on its own: `certbot --apache -d itflow.example.com`. Until then, ITFlow won't let you sign in.
 - The script prints what it is doing as it goes. Scroll back to see where it stopped, and see [When something goes wrong](/install/troubleshooting).
 
-Once the setup wizard is done, go through [After installing](/install/after-install).
+Once the setup wizard is done, sign in: Get started takes you through the rest. See [After installing](/install/after-install).

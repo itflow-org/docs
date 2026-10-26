@@ -67,7 +67,23 @@ The Update Check job looks for updates once a day; **Check now** looks straight 
 
 ![Starter content](adm-starter.webp "Starter content: libraries of templates, categories and products, with what's already here")
 
+Each pack shows how many are in the library, how many you already have, and how many **Add** would bring in. **Add all** at the top adds every pack at once.
+
 Adding never overwrites or deletes anything: what you already have under the same name is skipped, so adding twice never makes duplicates. When a newer version of ITFlow brings improved templates, **Update the ones you have** brings yours up to date.
+
+### Pick which {#pick-which}
+
+To add only some of a pack, open **Pick which** under it. It lists what the pack would add - only what you don't have yet - each as it will look: a category or tag with its colour and icon, a product with its price and how it's billed, a template with what it's for.
+
+![Pick which, open on Products & Services](adm-starter-pick.webp "Pick which: what a pack would add, as it will look - untick what you don't want")
+
+Everything is ticked to start with. Untick what you don't want, or use **All** and **None**. The count under **Will be added** follows - "75 of 77" - and **Add** adds only the ones ticked.
+
+**Preview** shows a template in full before you add it - a ticket template's subject, category, tags, what it says and what it asks for; a document template's fill-ins and the document itself; a product's price and how it's billed.
+
+![The preview of a document template](adm-starter-preview.webp "Preview: the Network Overview document template, as it comes in")
+
+The [Starter content step](/install/after-install#starter-content) of Get started has the same packs, with Pick which and Preview.
 
 Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
 

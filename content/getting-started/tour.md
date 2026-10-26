@@ -74,9 +74,11 @@ The **Dashboard** is the first page you see when you sign in. What it shows depe
 - **Your day**: your open tickets, your schedule for the week, the time you have logged this week, and tickets opened against resolved. Admins also see open tickets for each technician.
 - **Finance**, if your role covers sales or the books: income, expenses and profit for the period you pick at the top right, cash flow, money owed to you, your top clients and your account balances.
 
+On a new install, admins also see **Finish setting up** at the top, until every step of [Get started](/install/after-install#dashboard) is done or skipped.
+
 ## Administration
 
-Admins have an **Administration** item under their name in the top bar. It has its own menu - Access, Lists, Integrations, Templates, Maintenance and Settings - and **Back** to return. See [Settings](/admin/settings) for where to start.
+Admins have an **Administration** item under their name in the top bar. It has its own menu - **Get started**, then Access, Lists, Integrations, Templates, Maintenance and Settings - and **Back** to return. See [Settings](/admin/settings) for where to start.
 
 ## Light or dark
 
