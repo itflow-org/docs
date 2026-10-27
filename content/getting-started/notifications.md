@@ -31,7 +31,7 @@ What reaches you depends on your role and what you're working on. Common ones ar
 - **Recurring tickets** and **projects** assigned to you
 - **Shared links** - a client opening a link you shared (you can switch this off for a link when you make it), a link locking after wrong tries, and a login a client sent back to you
 - **Billing** - an invoice paid online, and stock running low on a product
-- **Renewals** - domains, certificates and warranties about to expire, and service reviews due
+- **Renewals** - domains, certificates and warranties about to expire, UPS batteries due for replacing, and service reviews due
 - **The client portal** - a client adding a contact, giving someone portal access or adding a document
 - **For admins** - repeated failed sign-ins, emails that couldn't be sent, backups and updates
 

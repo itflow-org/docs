@@ -10,7 +10,7 @@ Nothing secret is shown: logins, license keys, network details and your internal
 
 ## Devices
 
-**Devices** lists everything you look after at the company - computers, servers, network gear, phones and the rest - in tabs by kind, with who uses each and where it is. **Mine** narrows it to their own. They can search by name, model, serial number or person.
+**Devices** lists everything you look after at the company - computers, servers and storage, network gear, power (UPSs and PDUs), phones and the rest - in tabs by kind, with who uses each and where it is. **Mine** narrows it to their own. They can search by name, model, serial number or person.
 
 ![The client's devices](portal-devices.webp "Devices: everything you look after, by kind, with who uses each")
 

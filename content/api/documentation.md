@@ -27,7 +27,7 @@ These endpoints need the **Support** area of the key's role, apart from credenti
 | `client_id` | Just this client's assets |
 | `limit`, `offset` | [Paging](/api/requests#paging) |
 
-The list and `asset_mac` include each asset's primary network interface - its IP and MAC address and network. The other lookups return the asset alone. The list includes archived assets.
+The list and `asset_mac` include each asset's primary network interface - its IP and MAC address and network. The other lookups return the asset alone. The list includes archived assets. Every asset comes with its details as `asset_specs` - see [Details](#assets-details).
 
 ```
 curl -G https://itflow.example.com/api/v1/assets/read.php \
@@ -55,13 +55,14 @@ curl -G https://itflow.example.com/api/v1/assets/read.php \
       "interface_ip": "192.168.10.11",
       "interface_mac": "02:56:C0:D6:2E:2C",
       "interface_network_id": "1",
-      "tags": [ { "tag_id": 65, "tag_name": "Business Critical", "tag_kind": "asset", "tag_color": "#d81b60", "tag_icon": "exclamation-circle" } ]
+      "tags": [ { "tag_id": 65, "tag_name": "Business Critical", "tag_kind": "asset", "tag_color": "#d81b60", "tag_icon": "exclamation-circle" } ],
+      "asset_specs": { "ports": "6", "sfp_ports": "2" }
     }
   ]
 }
 ```
 
-**Fields:** `asset_id`, `asset_type`, `asset_name`, `asset_description`, `asset_make`, `asset_model`, `asset_serial`, `asset_os`, `asset_uri`, `asset_uri_2`, `asset_uri_client`, `asset_status`, `asset_purchase_reference`, `asset_purchase_date`, `asset_warranty_expire`, `asset_install_date`, `asset_photo`, `asset_physical_location`, `asset_notes`, `asset_favorite`, `asset_vendor_id`, `asset_location_id`, `asset_contact_id`, `asset_client_id`, `asset_product_id`, `asset_invoice_id`, `asset_invoice_item_id`, `asset_created_at`, `asset_updated_at`, `asset_archived_at`, `asset_accessed_at`, `tags`. With the interface: `interface_id`, `interface_name`, `interface_description`, `interface_type`, `interface_mac`, `interface_ip`, `interface_nat_ip`, `interface_ipv6`, `interface_vlans`, `interface_notes`, `interface_primary`, `interface_network_id`.
+**Fields:** `asset_id`, `asset_type`, `asset_name`, `asset_description`, `asset_make`, `asset_model`, `asset_serial`, `asset_os`, `asset_uri`, `asset_uri_2`, `asset_uri_client`, `asset_status`, `asset_purchase_reference`, `asset_purchase_date`, `asset_warranty_expire`, `asset_install_date`, `asset_photo`, `asset_physical_location`, `asset_notes`, `asset_favorite`, `asset_vendor_id`, `asset_location_id`, `asset_contact_id`, `asset_client_id`, `asset_product_id`, `asset_invoice_id`, `asset_invoice_item_id`, `asset_created_at`, `asset_updated_at`, `asset_archived_at`, `asset_accessed_at`, `tags`. With the interface: `interface_id`, `interface_name`, `interface_description`, `interface_type`, `interface_mac`, `interface_ip`, `interface_nat_ip`, `interface_ipv6`, `interface_vlans`, `interface_notes`, `interface_primary`, `interface_network_id`. And `asset_specs`, its details (`{}` for none).
 
 ### Create {#assets-create}
 
@@ -69,7 +70,7 @@ curl -G https://itflow.example.com/api/v1/assets/read.php \
 |---|---|
 | `client_id` | Required |
 | `asset_name` | Required |
-| `asset_type` | `Laptop`, `Desktop`, `Server`, `Virtual Machine`, `Phone`, `Mobile Phone`, `Tablet`, `Firewall/Router`, `Switch`, `Access Point`, `Printer`, `Display`, `Camera` or `Other` |
+| `asset_type` | `Laptop`, `Desktop`, `Server`, `NAS`, `Virtual Machine`, `Firewall/Router`, `Switch`, `Access Point`, `Modem/ONT`, `UPS`, `PDU`, `Printer`, `Phone`, `Mobile Phone`, `Tablet`, `Display`, `Camera`, `NVR/DVR` or `Other` - in any capitals, saved as written here |
 | `asset_make`, `asset_model`, `asset_serial`, `asset_os` | |
 | `asset_description` | |
 | `asset_status` | One of your asset statuses, such as `Deployed` - see [categories](/api/lookups#categories) |
@@ -79,6 +80,7 @@ curl -G https://itflow.example.com/api/v1/assets/read.php \
 | `asset_vendor_id` | A [vendor](/api/clients#vendors) |
 | `asset_ip`, `asset_mac`, `asset_network_id` | Its primary network interface: IP address, MAC address and [network](#networks) |
 | `asset_notes` | |
+| `asset_specs` | Its details, as `{"key": "value"}` - see [Details](#assets-details) |
 
 ```
 curl -X POST https://itflow.example.com/api/v1/assets/create.php \
@@ -88,10 +90,39 @@ curl -X POST https://itflow.example.com/api/v1/assets/create.php \
 
 ### Update {#assets-update}
 
-Send `asset_id`, `client_id` (the asset's own client), and any of the fields under [Create](#assets-create), or `asset_uri_2` for a second link.
+Send `asset_id`, `client_id` (the asset's own client), and any of the fields under [Create](#assets-create), or `asset_uri_2` for a second link. A field you don't send keeps what the asset has - its primary IP address, MAC address and network included.
 
-> [!WARNING]
-> An update sets the asset's primary IP address, MAC address and network to what you send, and clears them when you don't send them. Send `asset_ip`, `asset_mac` and `asset_network_id` with every update.
+`asset_specs` on an update is laid over the details the asset has: send just the ones to change, and `""` to clear one. When `asset_type` changes, the asset keeps only the details its new type has.
+
+### Details {#assets-details}
+
+`asset_specs` holds what only that kind of device has, by key. Each type takes its own, and a key it doesn't have is left out. A value a detail can't take isn't kept either, and the answer says why in `asset_specs_not_kept`, such as `["PoE budget: a number from 0 to 100000 W"]`.
+
+| Type | Keys |
+|---|---|
+| `Laptop`, `Desktop`, `Server` | `cpu`, `ram_gb`, `storage` |
+| `Virtual Machine` | `vm_host` (the id or name of one of the client's servers or NAS units), `vcpus`, `ram_gb`, `storage` |
+| `NAS` | `drive_bays`, `drives`, `raw_tb`, `usable_tb`, `raid`, `ports` |
+| `Firewall/Router` | `ports`, `sfp_ports` |
+| `Switch` | `ports`, `sfp_ports`, `poe_watts`, `managed` (`Managed`, `Smart` or `Unmanaged`) |
+| `Access Point` | `wifi` (`Wi-Fi 4 (802.11n)`, `Wi-Fi 5 (802.11ac)`, `Wi-Fi 6 (802.11ax)`, `Wi-Fi 6E` or `Wi-Fi 7 (802.11be)`) |
+| `Modem/ONT` | `circuit_id`, `isp_account`, `ports` |
+| `UPS` | `va`, `watts`, `runtime_min`, `outlets`, `battery_installed`, `battery_replace` (dates, `YYYY-MM-DD`) |
+| `PDU` | `pdu_type` (`Basic`, `Metered`, `Monitored` or `Switched`), `outlets`, `power_input` |
+| `Printer` | `color` (`Color` or `Black and white`), `supplies` |
+| `Phone` | `extension` |
+| `Mobile Phone`, `Tablet` | `phone_number`, `carrier`, `imei` |
+| `Display` | `size_in`, `resolution` |
+| `Camera` | `resolution` |
+| `NVR/DVR` | `channels`, `storage`, `ports` |
+
+`ports` and `sfp_ports` add the network interfaces the asset doesn't have yet when they are new or changed, as the asset form does - see [Details by type](/documentation/assets#details-by-type).
+
+```
+curl -X POST https://itflow.example.com/api/v1/assets/update.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "asset_id": 2, "asset_specs": {"ports": 24, "sfp_ports": 2, "poe_watts": 400, "managed": "Managed"}}'
+```
 
 ### Delete {#assets-delete}
 
