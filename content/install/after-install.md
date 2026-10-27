@@ -24,12 +24,13 @@ ITFlow is running, but some of it is switched off until you set it up. The first
 - Each step is a short form. **Save and continue** saves it and goes on to the next.
 - **Skip for now** leaves a step for later. On **Your team** it's **It's just me**.
 - A step ticks itself off once what it's about is set up - here, or on its own settings page. A step you skipped shows a dash until then.
-- **Go to ITFlow** leaves at any time. What you've saved stays saved, and you can carry on later.
+- **Do it later**, at the top, leaves at any time. What you've saved stays saved, and the dashboard shows what's left to carry on from.
+- **Skip all**, beside it, skips every step that's still to do, once you say yes, and the dashboard stops showing it. Each step is still in **Admin > Get started**, and doing one there ticks it off.
 
 **Billing** only shows while invoicing is turned on, and **Support** while ticketing is, in [Admin > Settings > Modules](/admin/settings#modules).
 
 > [!NOTE]
-> Get started opens by itself once, for the first admin to sign in to a new install. An install updated from an earlier version doesn't open it. Open it yourself from **Admin > Get started**, at the top of the Administration menu.
+> Get started opens by itself once, for the first admin to sign in to a new install. An install updated from an earlier version doesn't open it, and neither does one set up from the command line with `--skip-get-started` (see [Set up from the command line](/install/manual#setup-cli)). Open it yourself from **Admin > Get started**, at the top of the Administration menu.
 
 ## Cron {#cron}
 
@@ -158,7 +159,7 @@ Until every step is done or skipped, the dashboard shows admins how far setting 
 
 ![Finish setting up, on the dashboard](inst-start-card.webp "Finish setting up: how far it has got, and what's next")
 
-The **×** on the card stops showing it - so does **Don't show it on the dashboard**, at the foot of Get started. Get started stays in **Admin > Get started**, with how many steps are done or skipped, such as **3/8**.
+The **×** on the card stops showing it, as **Skip all** does. Get started stays in **Admin > Get started**, with how many steps are done or skipped, such as **3/8**.
 
 ## The rest of your settings {#settings}
 

@@ -172,6 +172,8 @@ sudo -u www-data php scripts/setup_cli.php --non-interactive \
 
 It works out the language and currency from the country, and the timezone too when the country has only one. Give `--timezone` for a country with several, and `--locale` or `--currency` to choose your own. `--help` lists every option, including the company's address and phone. When it's done, it shows the [backup key](/install/after-install#backup-key) and the cron line.
 
+The first time you sign in, [Get started](/install/after-install) opens to take you through the rest. Add `--skip-get-started` if you set those up another way - for a scripted build, say. Get started then doesn't open, and the dashboard doesn't show it, but it's still in **Admin > Get started**.
+
 ## Other ways to host it {#other-ways}
 
 A control panel such as HestiaCP, or a container, can run ITFlow if it does what the steps above do:
