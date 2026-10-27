@@ -21,6 +21,22 @@ The PDF has a cover, a contents page with page numbers, and an overview with the
 2. Leave **Documentation PDF** picked, and tick the parts to include. **All** and **None** tick or untick the lot.
 3. Click **Download PDF**.
 
+### What the PDF looks like
+
+It opens with a cover, named for the client and who prepared it, and a contents page:
+
+![The cover and the contents page of a client's documentation PDF](cl-export-pdf-cover.webp "The cover and contents - every chapter and section with its page number")
+
+The overview has the client's details, key contacts, what is in the document and the service levels you work to, with how to reach you on the next page. Then each part you picked has a chapter of its own - here the networks, with every IP address on each:
+
+![The overview page and the networks chapter](cl-export-pdf-overview.webp "The overview, and the networks with their address, gateway, DNS and DHCP range and each one's IP addresses")
+
+Assets come grouped by kind - servers and storage, network equipment, power, workstations, phones, printers - each with its make and model, serial number, operating system or firmware, IP address, location and warranty. Every document follows in full, on its own pages:
+
+![The assets chapter and a document in the PDF](cl-export-pdf-assets.webp "Assets by kind, and a document - the site runbook - in full")
+
+After the cover, every page has the client's name at the top, and your company, *Confidential*, the date and the page number at the bottom.
+
 ## Full export
 
 ![The Export window on Full export, with switches for the PDF, archived records, internal notes and passwords](cl-export-full.webp "Full export: every record as a spreadsheet and as JSON, documents, files and ticket conversations")
@@ -32,6 +48,69 @@ The zip has:
 - tickets and projects, with the ticket conversations and their attachments
 - invoices, quotes and payments
 - photos, the documentation PDF, and a **README.html** that links it all together
+
+### What is in the zip
+
+Unzipped, it is one folder named for the client and the day. For Ravenwood Dental Group it looks like this - a folder marked *(if any)* is only there when the client has something to put in it:
+
+```
+Ravenwood Dental Group - Export 2026-10-27/
+├── README.html
+├── Ravenwood Dental Group - IT Documentation - 2026-10-27.pdf
+├── data/
+│   ├── export.json
+│   ├── csv/
+│   │   ├── assets.csv
+│   │   ├── asset_interfaces.csv
+│   │   ├── contacts.csv
+│   │   ├── credentials.csv
+│   │   ├── invoices.csv
+│   │   ├── networks.csv
+│   │   ├── tickets.csv
+│   │   ├── ticket_replies.csv
+│   │   └── ...             one for each kind of record
+│   └── json/
+│       └── ...             the same records, as .json
+├── documents/
+│   ├── RDG - Backup and Recovery Plan.html
+│   ├── RDG - Getting Help.html
+│   ├── RDG - Site Runbook.html
+│   ├── RDG - Vendors and Escalation.html
+│   └── _images/            the documents' images (if any)
+├── files/
+│   ├── Main Office network.png
+│   └── Contracts/
+│       └── Managed Services Agreement - signed.pdf
+├── tickets/
+│   ├── TCK-93 - Site internet dropping intermittently.html
+│   ├── TCK-94 - New starter setup - workstation, mailbox and access.html
+│   ├── ...                 one for each ticket
+│   └── attachments/        a folder for each ticket (if any)
+└── photos/                 (if any)
+    ├── assets/
+    ├── contacts/
+    ├── locations/
+    └── racks/
+```
+
+| In the zip | What it holds |
+|---|---|
+| **README.html** | Start here. It says when the export was made, by whom and what is in it, and links every part: each set of records with how many rows it has, and every document, file and ticket. |
+| **The PDF** | The documentation PDF, when **The documentation PDF** is switched on. |
+| **data/csv** | One spreadsheet for each kind of record - assets, contacts, tickets and their replies, invoices and so on - that opens in Excel, Numbers or LibreOffice. Linked records are named, not numbered: an asset's location and who uses it, a ticket's contact. |
+| **data/json** | The same records as JSON, for moving them into another system. **data/export.json** describes the export: when and by whom it was made, what is in it and what isn't, and the columns of each set. |
+| **documents** | Each document as a web page, in the same folders as in ITFlow, with its images in **_images**. |
+| **files** | The client's files, in their folders, under their own names. |
+| **tickets** | Each ticket as a web page - its details and the whole conversation - with its attachments in **attachments**, a folder for each ticket. Your team's internal notes are only there when **Internal notes** is switched on. |
+| **photos** | Photos of the client's contacts, locations, assets and racks, named for each. |
+
+**README.html** opens in any browser, so the client can find their way around without ITFlow:
+
+![The README.html page of a full export](cl-export-readme.webp "README.html: what is in the export, and every set of records with its row count and links to the CSV and JSON")
+
+Each ticket opens as a page of its own, with its details and conversation:
+
+![A ticket's page in a full export](cl-export-ticket.webp "A ticket from the export: its contact, asset, project and vendor, the time worked and the whole conversation")
 
 Under the parts to include are switches for **The documentation PDF**, **Archived records** (marked with when they were archived), **Internal notes** (your team's ticket notes and the client's quick notes) and **Passwords and 2FA secrets**.
 
