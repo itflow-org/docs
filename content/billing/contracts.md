@@ -28,6 +28,8 @@ The tabs are **Active**, **Due soon**, **Signing** (out for signature, or waitin
 3. Fill in the **Agreement** tab, then **Cover**, **Terms** and **Notes**.
 4. Click **Create**.
 
+You can also start one from a template on the client itself: **Contract** on the **Billing** tab of New Client, or **New contract** when you edit one, makes it active from the day you pick. **Start Contract**, in the **Action** menu of the [clients list](/clients/clients#the-clients-list), does it for every client you tick. A client with none in force shows **Start a contract** on the list, which opens New Contract for it.
+
 ![New Contract, the Agreement tab](bill-contract-new.webp "New Contract: the client, its type, who looks after it, and its term")
 
 **Agreement**
