@@ -47,8 +47,8 @@ ITFlow answers with JSON:
   "success": "True",
   "count": 2,
   "data": [
-    { "client_id": "1", "client_name": "Ravenwood Dental Group", "client_rate": "145.00" },
-    { "client_id": "2", "client_name": "Kestrel Precision Manufacturing", "client_rate": "155.00" }
+    { "client_id": "1", "client_name": "Ravenwood Dental Group", "client_type": "Healthcare" },
+    { "client_id": "2", "client_name": "Kestrel Precision Manufacturing", "client_type": "Manufacturing" }
   ]
 }
 ```

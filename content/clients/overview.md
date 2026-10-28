@@ -48,7 +48,7 @@ If your role covers billing, the overview ends with the client's money:
 - **Recurring** - what their recurring invoices bring in a month.
 - **Not yet invoiced** - billable tickets and expenses waiting to be billed, and what they come to. Click it to open [Unbilled time](/billing/unbilled-time) for this client.
 - **Contract** - the [contract](/billing/contracts) in force, and the prepaid hours left across their contracts.
-- **Terms** - their hourly rate, payment terms, tax ID and tax rate, or that they're tax exempt. While a contract is in force, its rate and net terms show instead.
+- **Terms** - the hourly rate, after-hours rate and payment terms they're billed on, and whether those are their [contract](/billing/contracts#in-force)'s or your defaults, with their tax ID and tax rate, or that they're tax exempt.
 - **Unpaid invoices**, **Recurring invoices** and a chart of what was **invoiced and paid** each month for the last year.
 
 > [!TIP]

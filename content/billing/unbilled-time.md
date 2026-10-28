@@ -29,7 +29,7 @@ To bill them all:
 5. Under **Lines**, pick **A line for each ticket**, or **One line for all of them**.
 6. Click **Make Invoices**.
 
-Expenses and trips go on with a line each, at their price. Each client's time is billed at their own hourly rate.
+Expenses and trips go on with a line each, at their price. Each client's time is billed at the rate its contract sets, else your default rate.
 
 ## One client {#one-client}
 
@@ -44,7 +44,7 @@ Click **Review** on a client, or open **Unbilled Time** from the client's own me
 Untick anything to leave it for later. Then, under **Bill them**:
 
 1. Pick the **Invoice**: **A new draft invoice**, or one of the client's drafts to add it to.
-2. Set the **Invoice date**, **Category** and **Scope**, the **Line** name, the **Rate** (the client's hourly rate to start with) and the **Tax**.
+2. Set the **Invoice date**, **Category** and **Scope**, the **Line** name, the **Rate** (the client's rate to start with - its contract's, else your default) and the **Tax**.
 3. Pick **Lines**: one for each ticket, or one for all.
 4. Click **Make Invoice**.
 
@@ -61,7 +61,7 @@ Tick the tickets that shouldn't be billed - a warranty fix, a goodwill visit - a
 
 Each ticket's billed hours start as the time logged on it, rounded the way your admin set in **Admin > Settings > Invoices and billing**: to the nearest 15 minutes, say, or always up, and with the least a ticket bills, such as half an hour. The page says how it's rounding, with a link to change it.
 
-A ticket with no time logged goes on with no charge unless you type the hours. A client with no hourly rate of its own uses your default rate from **Admin > Settings > Defaults**.
+A ticket with no time logged goes on with no charge unless you type the hours. A client whose contract sets no hourly rate - or that has no contract in force - uses your default rate from **Admin > Settings > Defaults**, and a ticket opened out of hours your default after-hours rate, when you have one.
 
 While a [contract](/billing/contracts#in-force) is in force, its rates apply: each ticket bills at its own rate, an after-hours ticket says so, and the rate is left empty when a client's tickets don't all bill at one rate - type one to bill them all at it. Time covered by a contract's [prepaid hours](/billing/prepaid-hours) never shows here. **Draw now** takes what's waiting from the hours straight away, and a ticket says how much its hours were cut by.
 

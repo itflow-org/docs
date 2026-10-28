@@ -83,8 +83,8 @@ Backups are kept on the server, in ITFlow's `uploads/backups` folder. Copy them 
 
 ![The Billing step, filled in](inst-start-billing.webp "Billing: your rate, when invoices are due, tax, numbering and card payments")
 
-- **Hourly rate** - what you charge for time on a ticket. A client can have their own.
-- **Invoices are due** - the payment terms a new client starts with.
+- **Hourly rate** - what you charge for time on a ticket. A client's [contract](/billing/contracts#in-force) can set its own.
+- **Invoices are due** - your payment terms, unless a client's contract sets its own.
 - **Tax** - the rate new invoice and quote lines get, as a **Name** and a **Rate**. Leave it empty if you don't charge tax. A rate in parts, such as GST and PST, is made in [Admin > Taxes](/admin/taxes). Once you have a default rate, the step just shows it.
 - **Invoice numbers** and **Quote numbers** - the **Prefix** and **Next number**, with how the next one will look.
 - **Card payments** - switch on **Let clients pay invoices by card, with Stripe** and give your Stripe keys and the account payments go into. Every invoice gets a Pay button, and clients can save cards for autopay. Test keys work too. See [Card payments with Stripe](/admin/payment-providers).

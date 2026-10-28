@@ -137,10 +137,10 @@ Click **Close** to close it straight away. Closing is final: a closed ticket can
 
 ## Billing a ticket
 
-Set **Billing** in the Details card to **Billable** for work the client pays for. Once it's resolved, the ticket waits in [Unbilled time](/billing/unbilled-time) with everything else to bill - or click **Invoice** on the ticket to bill it on its own. The Invoice window shows the time each technician logged, the hours that bills, and the client's rate. **Create quote** in the menu starts a quote from the ticket, for work that needs agreeing first.
+Set **Billing** in the Details card to **Billable** for work the client pays for. Once it's resolved, the ticket waits in [Unbilled time](/billing/unbilled-time) with everything else to bill - or click **Invoice** on the ticket to bill it on its own. The Invoice window shows the time each technician logged, the hours that bills, and the rate - the client's contract's, or your default. **Create quote** in the menu starts a quote from the ticket, for work that needs agreeing first.
 
 ## SLAs
 
-An SLA (service level agreement) sets how fast you reply to and fix tickets, by priority - for example, an Urgent ticket gets a first response within an hour and is fixed within four. Each client has an SLA, set on the Billing tab of their Edit window, or your default.
+An SLA (service level agreement) sets how fast you reply to and fix tickets, by priority - for example, an Urgent ticket gets a first response within an hour and is fixed within four. A ticket gets the SLA the client's [contract](/billing/contracts#in-force) sets for its priority, or your default.
 
 The ticket's **SLA** row shows the next target: **First response due in 2 hours**, then the resolution target once you've replied where the client can see it. Internal notes don't count as a response. A status that pauses the SLA, such as On Hold, stops the clock. When a target is close, the ticket turns amber; once it's missed, it shows **Breached**, and the SLA alert address and the technician are emailed. Your admin sets SLAs up in [Tickets, statuses and SLAs](/admin/tickets).

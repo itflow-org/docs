@@ -58,7 +58,7 @@ SLAs are optional. With none assigned, tickets have no targets. **Admin > SLAs**
 
 **The SLAs** - each has a **Response target** and a **Resolution target**, in business minutes: "Standard Support - 4 hours to respond, 2 days to resolve", "Critical Response - 30 minutes to respond".
 
-**SLA assignments** - which SLA a ticket gets by its priority: Low, Medium, High and Urgent. The defaults apply to every client; set a client's own on that client's Edit window, for a contract with different terms.
+**SLA assignments** - the default SLA for each priority: Low, Medium, High and Urgent. A client has no SLAs of its own: a new ticket gets the SLA its client's [contract](/billing/contracts#in-force) sets for its priority, and the default for a priority the contract leaves empty, or when the client has no contract in force.
 
 **Business hours and notifications** - your **Business days**, and when the working day starts and ends. SLA clocks only run in business hours. **Warn at % of target** sends a warning before a target is missed, and **Notification email** sends warnings and breaches to a shared address as well as the assigned agent.
 

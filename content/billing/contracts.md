@@ -48,7 +48,7 @@ The tabs are **Active**, **Due soon**, **Signing** (out for signature, or waitin
 - **Hourly rate**, **After hours** rate and **Net terms**
 - **SLA by ticket priority** - an SLA from [Admin > SLAs](/admin/tickets#slas) for **Low**, **Medium**, **High** and **Urgent**
 
-Leave a rate, the net terms or an SLA empty and the client's own apply.
+Leave a rate, the net terms or an SLA empty and what applies without it does - another contract in force for the client that sets it, else your default from [Admin > Settings > Defaults](/admin/settings) and [Admin > SLAs](/admin/tickets#slas). The empty fields show the default.
 
 **Terms** is the agreement itself, in an editor, with placeholders that fill in from the contract - see [Sending a contract to sign](/billing/contract-signing#placeholders). **Notes** are for your team only - what was agreed, who to talk to about renewing.
 
@@ -83,15 +83,19 @@ A month before a contract's notice date, its owner is emailed what it is, when n
 
 ## While a contract is in force {#in-force}
 
-From its first day to its last - and while one that renews itself waits for the night's renewal - a contract sets the client's terms:
+A client has no rates, net terms or SLAs of its own - they come from its contract. From its first day to its last - and while one that renews itself waits for the night's renewal - a contract sets the client's terms:
 
-- **SLAs** - a new ticket gets the contract's SLA for its priority, ahead of the client's own.
-- **Rates** - time bills at the contract's rate, and at its after-hours rate for a ticket opened outside the business days and hours in Admin > Settings (the ones SLAs use). ITFlow goes by the contract in force on the day the work was done.
+- **SLAs** - a new ticket gets the contract's SLA for its priority, ahead of your default from Admin > SLAs.
+- **Rates** - time bills at the contract's rate, and at its after-hours rate for a ticket opened outside the business days and hours in Admin > SLAs. ITFlow goes by the contract in force on the day the work was done.
 - **Net terms** - new invoices are due on the contract's terms.
 
-Whatever the contract leaves empty, the client's own applies. When two contracts are in force, the one that started last comes first. **What it covers**, on the contract's page, says whether it's in force now.
+When two contracts are in force, the one that started last comes first, and what it leaves empty comes from the other. Whatever no contract in force sets, your defaults apply: the hourly rate, after-hours rate and net terms in [Admin > Settings > Defaults](/admin/settings), and the SLAs in [Admin > SLAs](/admin/tickets#slas). With no after-hours rate anywhere, after-hours time bills at the hourly rate. **What it covers**, on the contract's page, says whether it's in force now, and where each thing it leaves empty comes from - another contract, by name, or the default.
 
-[Unbilled time](/billing/unbilled-time) bills each ticket at its own rate and says when a contract's rate or terms are the ones used - and so do the ticket's **Invoice** window, a quote from a ticket, the New Invoice window's due date and the Unbilled Work report. Editing a client says when a contract's terms apply instead of the client's.
+[Unbilled time](/billing/unbilled-time) bills each ticket at its own rate and says when a contract's rate or terms are the ones used - and so do the ticket's **Invoice** window, a quote from a ticket, the New Invoice window's due date and the Unbilled Work report. The client's overview and the Billing tab of its Edit window show the terms it's billed on, and whether they're a contract's or your defaults.
+
+### Standard terms
+
+A client that had its own hourly rate, net terms or SLAs before the 26.11 update - different from your defaults - was given a contract called **Standard terms** that sets just those. It's active, renews itself every year, and starts the day the client was added, so any other contract the client has still comes first. Change it, or end it once the client's other contract covers everything. The client import and the API make one the same way for a client whose rate or terms aren't your defaults.
 
 ## The recurring invoice {#recurring}
 

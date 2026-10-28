@@ -41,10 +41,10 @@ The colour of the top bar, links, buttons and highlights, and the icon on the br
 What forms start with - each can still be changed on the form:
 
 - **Start page** - the page ITFlow opens on after signing in, and the **Calendar** new events go on
-- **New clients** - their **Net terms** and **Hourly rate**
+- **Rates and terms** - the **Net terms**, **Hourly rate** and **After-hours rate** a client is billed on when no [contract](/billing/contracts#in-force) in force sets them. A client has none of its own. The after-hours rate is for tickets opened outside the business days and hours in Admin > SLAs; leave it empty and that time bills at the hourly rate. The SLAs are in [Admin > SLAs](/admin/tickets#slas).
 - **Accounts** - the account **Payments go into**, the one **Expenses come out of**, the usual payment methods, and where transfers start from and go to
 
-![Defaults](adm-defaults.webp "Defaults: where ITFlow opens, what new clients start with, and the usual accounts")
+![Defaults](adm-defaults.webp "Defaults: where ITFlow opens, the rates and terms a client is billed on without a contract, and the usual accounts")
 
 ## Modules
 

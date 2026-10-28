@@ -17,7 +17,7 @@ Each row shows:
 - their primary **location**
 - their open **tickets**
 - their **balance** - what they owe you, with how much of it is overdue
-- **recurring** - what their recurring invoices bring in a month, and their hourly rate
+- **recurring** - what their recurring invoices bring in a month, and the hourly rate their [contract](/billing/contracts#in-force) sets
 
 Click anywhere in the client's name to open it. The **⋮** at the end of the row has **Edit** and **New Ticket**.
 
@@ -36,7 +36,7 @@ A lead is a company that isn't a client yet - someone you're quoting for. The ti
    - Tick **Is Lead**, beside the name, if they aren't a client yet.
 3. On **Location**, add their main office's address and phone. It becomes their primary location.
 4. On **Contact**, add the main person you deal with. They become the primary contact.
-5. On **Billing**, set how they are billed (see below).
+5. On **Billing**, set their tax and reminders (see below).
 6. Click **Create Client**.
 
 ![The New Client window on its Details tab](cl-new-client.webp "New Client: Details, Location, Contact, Billing and Notes")
@@ -45,15 +45,14 @@ You can add more locations and contacts afterwards. See [Locations](/clients/loc
 
 ### Billing details
 
-![The Billing tab of the New Client window](cl-new-client-billing.webp "Billing: rate, terms, tax and reminders")
+![The Billing tab of the New Client window](cl-new-client-billing.webp "Billing: where the rates, terms and SLAs come from, tax and reminders")
 
-- **Hourly Rate** - what an hour of your time costs this client. It's used when you bill tickets. Leave it empty to use your default rate.
-- **Payment Terms** - how many days they have to pay an invoice. New invoices work out their due date from it.
+A client has no hourly rate, payment terms or SLAs of its own - they come from its [contract](/billing/contracts#in-force), and your defaults cover the rest, from [Admin > Settings > Defaults](/admin/settings) and [Admin > SLAs](/admin/tickets#slas). The Billing tab says what the client is billed on and where it comes from, with a link to its contracts. A new client is billed on your defaults until it has a contract.
+
 - **Tax ID** - the client's own tax number, if they need it on invoices.
 - **Payment reminders and statements** - switch off to leave this client out of automatic payment reminders and monthly statements. You can still send them by hand.
 - **Tax Rate** - the tax their invoice lines start with, when it isn't your default.
 - **Tax exempt** - for a client that doesn't pay tax, such as a charity or school, with their **Exemption Certificate** number and when it **Expires**. Their new lines start untaxed, and their invoices say they are exempt.
-- **Ticket SLAs** - the response and resolution targets their tickets get. **Default** uses your default SLA. See [Tickets, statuses and SLAs](/admin/tickets).
 
 ## Change a client's details
 
@@ -74,7 +73,7 @@ Tick the clients in the list and click **Action**. You can:
 
 - **Open Tickets** - raise the same ticket for each of them, such as a quarterly check. Each ticket can go to the client's primary contact, and can start from a ticket template.
 - **Send Email** - email them, with your logo and details around what you write.
-- **Tags**, **Set Industry**, **Set Referral**, **Set Hourly Rate** and **Set Net Terms**
+- **Tags**, **Set Industry** and **Set Referral**
 - **Archive**
 
 ## Archive a client

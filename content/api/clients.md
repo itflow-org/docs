@@ -42,9 +42,7 @@ curl -G https://itflow.example.com/api/v1/clients/read.php \
       "client_name": "Ravenwood Dental Group",
       "client_type": "Healthcare",
       "client_website": "https://www.ravenwooddental.example",
-      "client_rate": "145.00",
       "client_currency_code": "USD",
-      "client_net_terms": "15",
       "client_abbreviation": "RDG",
       "client_archived_at": null,
       "tags": [ { "tag_id": 8, "tag_name": "Key Account", "tag_kind": "client", "tag_color": "#ffc107", "tag_icon": "star" } ]
@@ -53,7 +51,7 @@ curl -G https://itflow.example.com/api/v1/clients/read.php \
 }
 ```
 
-**Fields:** `client_id`, `client_name`, `client_type`, `client_website`, `client_referral`, `client_rate`, `client_currency_code`, `client_net_terms`, `client_reminders`, `client_tax_id_number`, `client_default_tax_id`, `client_tax_exempt`, `client_tax_exempt_number`, `client_tax_exempt_expires`, `client_abbreviation`, `client_lead`, `client_notes`, `client_favorite`, `client_created_at`, `client_updated_at`, `client_archived_at`, `client_accessed_at`, `tags`.
+**Fields:** `client_id`, `client_name`, `client_type`, `client_website`, `client_referral`, `client_currency_code`, `client_reminders`, `client_tax_id_number`, `client_default_tax_id`, `client_tax_exempt`, `client_tax_exempt_number`, `client_tax_exempt_expires`, `client_abbreviation`, `client_lead`, `client_notes`, `client_favorite`, `client_created_at`, `client_updated_at`, `client_archived_at`, `client_accessed_at`, `tags`.
 
 ### Create {#clients-create}
 
@@ -65,9 +63,9 @@ Don't send `client_id` - the new client gets one, returned as `insert_id`.
 | `client_type` | Such as "Healthcare" |
 | `client_website` | `https://` is taken off |
 | `client_referral` | How they found you |
-| `client_rate` | Hourly rate, such as `145` |
+| `client_rate` | Their hourly rate, such as `145` - see below |
 | `client_currency_code` | Such as `USD`. Set it. A client made without one has no currency. |
-| `client_net_terms` | Days to pay an invoice |
+| `client_net_terms` | Days they have to pay an invoice - see below |
 | `client_tax_id_number` | Their tax ID |
 | `client_abbreviation` | Up to 6 characters |
 | `client_lead` | `1` for a lead, `0` for a client |
@@ -83,17 +81,19 @@ curl -X POST https://itflow.example.com/api/v1/clients/create.php \
 ```
 
 ```json
-{ "success": "True", "count": "1", "data": [ { "insert_id": 27 } ] }
+{ "contract_id": 41, "success": "True", "count": "1", "data": [ { "insert_id": 27 } ] }
 ```
+
+A client has no rate or payment terms of its own - they come from its [contract](/billing/contracts#in-force), else your defaults. When `client_rate` or `client_net_terms` differs from your defaults, the new client is given a contract called **Standard terms** that sets it, and its id comes back as `contract_id`. Change the client's terms on its contracts after that - with neither sent, or both your defaults, no contract is made.
 
 A client made through the API has no locations or contacts yet. Add them with [locations](#locations-create) and [contacts](#contacts-create).
 
 ### Update, archive and unarchive {#clients-update}
 
-Send `client_id` and any of the fields under [Create](#clients-create). Only what you send changes.
+Send `client_id` and any of the fields under [Create](#clients-create). Only what you send changes - but not `client_rate` or `client_net_terms`: a client's terms are its contract's, so they're left alone, and the answer says so in `not_kept`.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "client_id": 27, "client_rate": 150, "client_notes": "Two clinics, one front desk." }
+{ "api_key": "YOUR_API_KEY", "client_id": 27, "client_type": "Veterinary", "client_notes": "Two clinics, one front desk." }
 ```
 
 `archive.php` and `unarchive.php` take just `client_id`. Archiving a client also stops their recurring invoices.

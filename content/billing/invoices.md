@@ -59,7 +59,7 @@ On the left is the invoice as the client will see it. Down the right:
 
 ![Add Tickets to an invoice](bill-add-tickets.webp "Add Tickets: the client's unbilled tickets, and the line and rate to bill them at")
 
-With **Bill their time** on, they're added as lines at the client's hourly rate - **One each**, or **One for all** of them. Switch it off to put the tickets on the invoice without adding lines, for work you've already billed by hand.
+With **Bill their time** on, they're added as lines at the client's rate - its contract's, else your default - **One each**, or **One for all** of them. Switch it off to put the tickets on the invoice without adding lines, for work you've already billed by hand.
 
 **Add** on the **Expenses** card does the same for billable expenses - what you paid on the client's behalf - at their cost with their markup. Each goes on as a line of its own.
 
