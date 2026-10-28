@@ -113,11 +113,12 @@ If you already have default SLAs, the step shows yours - with their time to reso
 
 ## Your team {#team}
 
-![The Your team step, adding someone](inst-start-team.webp "Your team: who can sign in now, and someone to add")
+![The Your team step, inviting someone](inst-start-team.webp "Your team: who can sign in now, and someone to invite")
 
-The step lists who can sign in now. To add someone, give their **Name**, **Email** and **Role**, and click **Add them**. Add as many people as you like, one at a time.
+The step lists who can sign in now, and who is invited. To add someone, give their **Name**, **Email** and **Role**, and click **Invite them**. Add as many people as you like, one at a time.
 
-- ITFlow makes their password. With email set up, they're emailed their sign-in details, once cron is running. Without it, ITFlow shows you the password once - give it to them to sign in with, and they change it.
+- With email set up, they're emailed an invite, once cron is running - a link to choose their own password and join. See [Invite someone](/admin/users#invite-someone).
+- Without email, the button is **Add them**: ITFlow makes their password and shows it to you once - give it to them to sign in with, and they change it.
 - **Role** decides what they can see and change. Most people are **Technician**. See [Roles and permissions](/admin/roles).
 - A role that isn't an admin one sees every client, until you limit them in [Admin > Users](/admin/users#which-clients-they-see).
 
