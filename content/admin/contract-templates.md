@@ -9,7 +9,7 @@ A contract template is one of your standard agreements: "Fully Managed Services"
 
 ![Contract templates](adm-contract-templates.webp "Contract templates: each with its term, what it covers, and how many contracts were started from it")
 
-**Admin > Contract Templates** shows each template with its type, its term and renewal, the notice, its cover - support hours, rate and net terms, and the SLA for each priority - and how many contracts were started from it. There are tabs for the ones **In use** and the **Archived** ones. Search, and sort by name, term or contracts.
+**Admin > Contract Templates** shows each template with its type, its term and renewal, the notice, its cover - support hours, rate and net terms, and the SLA for each priority, with your default for anything the template leaves empty, marked **default** - and how many contracts were started from it. There are tabs for the ones **In use** and the **Archived** ones. Search, and sort by name, term or contracts.
 
 ## Add or change a template
 

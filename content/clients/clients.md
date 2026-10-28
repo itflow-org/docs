@@ -17,7 +17,7 @@ Each row shows:
 - their primary **location**
 - their open **tickets**
 - their **balance** - what they owe you, with how much of it is overdue
-- **recurring** - what their recurring invoices bring in a month, and the hourly rate their [contract](/billing/contracts#in-force) sets
+- **recurring** - what their recurring invoices bring in a month, and the hourly rate they're billed at - their [contract](/billing/contracts#in-force)'s, or your default rate, marked **(default)**
 
 Click anywhere in the client's name to open it. The **⋮** at the end of the row has **Edit** and **New Ticket**.
 
