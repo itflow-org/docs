@@ -26,7 +26,7 @@ The funnel button beside the search box opens the filters: **Tags**, **Industry*
 
 ### Leads
 
-A lead is a company that isn't a client yet - someone you're quoting for. The title bar shows how many clients and leads you have: click **Leads** to switch to them, and back. You can send a lead a quote and keep notes on them like any client. When they sign up, edit them and untick **Is Lead**.
+A lead is a company that isn't a client yet - someone you're quoting for. The title bar shows how many clients and leads you have: click **Leads** to switch to them, and back. You can send a lead a quote and keep notes on them like any client. When they sign up, edit them and untick **Is Lead** - or [onboard them](/clients/onboarding), which makes them a client and takes you through the rest.
 
 ## Add a client
 
@@ -43,6 +43,8 @@ A lead is a company that isn't a client yet - someone you're quoting for. The ti
 ![The New Client window on its Details tab](cl-new-client.webp "New Client: Details, Location, Contact, Billing and Notes")
 
 You can add more locations and contacts afterwards. See [Locations](/clients/locations) and [Contacts](/clients/contacts).
+
+Taking on a client properly? **Onboard a client**, under the arrow beside **New Client**, walks you through their sites, people, agreement, billing, domains, vendors, licenses and onboarding project a step at a time. See [Onboarding a client](/clients/onboarding).
 
 ### Billing details
 
@@ -64,6 +66,7 @@ Open the client and click **⋮** in its header, then **Edit Client**. The Edit 
 The same **⋮** menu has:
 
 - **New Ticket** and **New Project** for this client
+- **Onboard** - take the client on a step at a time, or **Carry on onboarding**. See [Onboarding a client](/clients/onboarding).
 - **Export Data** - a documentation PDF or a full export. See [Exporting a client's data](/clients/export).
 - **Client Review** - a report of the client's quarter, made to print for a business review. See [Reports](/finance/reports).
 - **Archive Client**

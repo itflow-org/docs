@@ -29,6 +29,7 @@ return [
         'summary' => 'Your clients and the people, places and vendors that go with them.',
         'pages' => [
             'clients' => 'Clients',
+            'onboarding' => 'Onboarding a client',
             'overview' => 'The client overview',
             'contacts' => 'Contacts',
             'locations' => 'Locations',

@@ -12,7 +12,9 @@ Opening a client takes you to its **Overview**. It's built to answer "what do I 
 
 Along the top: the client's initials, name, industry and tags, their primary contact with phone and email, their primary location, and details such as their website, how long they've been a client and who referred them.
 
-**New Ticket** raises a ticket for this client. The **⋮** menu has **New Project**, **Edit Client**, **Export Data**, **Client Review** and **Archive Client**.
+**New Ticket** raises a ticket for this client. The **⋮** menu has **New Project**, **Edit Client**, **Onboard**, **Export Data**, **Client Review** and **Archive Client**.
+
+While the client is being [onboarded](/clients/onboarding#carry-on), **Finish onboarding** shows under the header, with how far it has got and **Carry on**.
 
 ## Needs attention
 

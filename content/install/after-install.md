@@ -144,6 +144,8 @@ Adding never changes anything you already have. Any pack can be added later, or 
 
 Give the **Client** name and, if you like, their **Website**, **Who you talk to** and **Their email**. Then click **Add the client**. The website's domain and certificate are added too, to watch for renewals. The rest - their address, phones, rate and SLAs - is on the client once it's made. See [Add a client](/clients/clients#add-a-client).
 
+Or click **Or onboard them step by step** to take them on properly - their sites, people, agreement, billing and more, a step at a time. The step is done once the client is made. See [Onboarding a client](/clients/onboarding).
+
 Or click **Load the demo data** to look around first: 20 made-up clients, each with contacts, assets, tickets and a year of invoices. They come out again in one go from [Admin > Starter Content](/admin/maintenance#starter-content).
 
 ## Where it stands {#summary}
