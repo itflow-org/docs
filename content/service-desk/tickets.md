@@ -16,6 +16,7 @@ The tabs along the top are the views you'll use most, each with a count:
 |---|---|
 | **Open** | Every ticket that isn't resolved or closed |
 | **Mine** | Open tickets assigned to you |
+| **Mentioned me** | Open tickets with an internal note that [mentions you](/service-desk/working-a-ticket#mention) |
 | **Unassigned** | Open tickets nobody has picked up |
 | **Needs reply** | Open tickets where the client spoke last, or nobody has replied yet |
 | **Waiting** | Open tickets waiting on the client (you replied last) or parked in a status like On Hold |
@@ -66,4 +67,4 @@ Tick tickets and use **Bulk Action** to:
 
 ### Reply to many tickets at once
 
-**Reply or add a note** opens **Update & Reply**, which sends the same reply to every ticket you ticked - handy when an outage affects many clients. Placeholders such as `[First Name]` and `[Ticket]` are filled in for each ticket as it's sent, and you can pick a [canned response](/service-desk/canned-responses). Set the status the tickets move to and the time worked on each, or tick **Mark as internal** to add a note only your team sees.
+**Reply or add a note** opens **Update & Reply**, which sends the same reply to every ticket you ticked - handy when an outage affects many clients. Placeholders such as `[First Name]` and `[Ticket]` are filled in for each ticket as it's sent, and you can pick a [canned response](/service-desk/canned-responses). Set the status the tickets move to and the time worked on each, or tick **Mark as internal** to add a note only your team sees. Mentions don't tell anyone from here - mention someone in a note on the ticket itself.

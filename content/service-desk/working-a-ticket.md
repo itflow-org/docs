@@ -59,9 +59,30 @@ Once an email reply is sent, the message at the top says how many people it went
 > [!TIP]
 > If you try to leave the page with a reply half written, ITFlow asks first.
 
+### Mention someone on your team {#mention}
+
+In an internal note, type **@** to bring someone on your team in. A list of the agents who can open this ticket comes up, and narrows as you type a name or role. Click one, or press <kbd>Enter</kbd>, and their name goes into the note.
+
+![Typing @jo in an internal note, with Jordan Lee offered](sd-mention-picker.webp "Type @ in an internal note and pick who to mention")
+
+When you add the note, everyone it mentions is told:
+
+- in ITFlow - a notification that opens the ticket at your note
+- by email, from the ticket mailbox, with your note and the ticket's details
+
+The message at the top says who was told, and the ticket's history keeps it.
+
+On the ticket, a note that mentions you says **Mentions you**, and your name in it is picked out. **Mentioned me** on the [tickets list](/service-desk/tickets#views) shows the open tickets you've been mentioned on.
+
+![An internal note that mentions you](sd-mention-note.webp "A note that mentions you, as you see it")
+
+- Mentions are for internal notes only. In a public note or an email reply they're plain text and nobody is told - the reply box says so if you switch with a mention in it.
+- Only agents who can open the ticket are offered: someone whose role has no access to tickets, or who is kept away from this client, isn't on the list.
+- Editing a note tells anyone you add to it, and nobody twice. Take someone out, or archive the note, and it no longer counts as mentioning them.
+
 ### The conversation
 
-Replies are listed newest first. Client replies are marked **From client**. Yours are marked **Internal**, **Public note** or **Email reply**, and each shows the time logged with it. Use **All**, **Public** and **Internal** above the conversation to filter it.
+Replies are listed newest first. Client replies are marked **From client**. Yours are marked **Internal**, **Public note** or **Email reply**, and each shows the time logged with it. A note that [mentions you](#mention) also says **Mentions you**. Use **All**, **Public** and **Internal** above the conversation to filter it.
 
 An email reply also says who it was emailed to - **Emailed to Priya Raghavan and 1 more**. Click that to see each person and where their email stands:
 

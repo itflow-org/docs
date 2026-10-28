@@ -27,7 +27,7 @@ The full page lists every notification you've had, with a search box, a filter b
 
 What reaches you depends on your role and what you're working on. Common ones are:
 
-- **Tickets** - a ticket assigned to you, a client replying to one of your tickets, a task waiting for your approval, and a client's rating of a ticket
+- **Tickets** - a ticket assigned to you, someone [mentioning you](/service-desk/working-a-ticket#mention) in an internal note, a client replying to one of your tickets, a task waiting for your approval, and a client's rating of a ticket
 - **Recurring tickets** and **projects** assigned to you
 - **Shared links** - a client opening a link you shared (you can switch this off for a link when you make it), a link locking after wrong tries, and a login a client sent back to you
 - **Billing** - an invoice paid online, and stock running low on a product
@@ -36,4 +36,4 @@ What reaches you depends on your role and what you're working on. Common ones ar
 - **For admins** - repeated failed sign-ins, emails that couldn't be sent, backups and updates
 
 > [!TIP]
-> Some of these come by email too, such as tickets assigned to you and SLA warnings. Which emails go out, and to which addresses, is set by your admin in **Admin > Settings > Notifications**.
+> Some of these come by email too, such as tickets assigned to you, mentions and SLA warnings. Which emails go out, and to which addresses, is set by your admin in **Admin > Settings > Notifications**.
