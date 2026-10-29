@@ -21,6 +21,10 @@ Along the top:
 
 The tabs are **Active**, **Due soon**, **Signing** (out for signature, or waiting for you to countersign), **Drafts**, **Ended** and **All**. Search, filter by type and client, and sort by name, client, type, start, end or owner. Each row says when the contract renews or ends, when notice is due, and where its signing stands. The menu shows how many are due soon.
 
+**Due soon** is within a month of a contract's notice date, when there's something to do: it ends, or it renews itself and notice is given during its term. One with no notice to give, like [Standard terms](#standard-terms), or with notice as long as its term - a monthly contract with 30 days' notice - just renews, so it isn't listed.
+
+Across every client, an archived client's contracts are left out. They're still on the client's own **Contracts**.
+
 ## Add a contract {#add}
 
 1. Click **New Contract** - on the list, or on a client's Contracts.
@@ -38,7 +42,7 @@ You can also start one from a template on the client itself: **Contract** on the
 - **Contact at the client** - the client's primary contact to start with
 - **Owner** - who looks after it for you. They're reminded before it renews or ends.
 - **Status** - **Active**, in force from its start date, or **Draft**, not in force yet. A draft [sent to sign](/billing/contract-signing) becomes active once both sides have signed.
-- **Starts**, **Term** and **Ends** - the end follows the start and term until you change it
+- **Starts**, **Term** and **Ends** - the end follows the start and term until you change it. A term keeps to the day of the month it starts on, or the last day of a shorter month: a monthly contract from January 31 runs to February 27, then March 30.
 - **Renews itself for another term**, and the **Notice to end it** in days. The window says when notice is due.
 
 ![New Contract, the Cover tab](bill-contract-cover.webp "Cover: support hours, hours included each month, rates, payment terms and an SLA for each priority")
@@ -76,12 +80,14 @@ Click a contract to open it. The header says where it stands - draft, starts soo
 ## Renew, cancel or make active {#renew}
 
 - **Renew** sets a new last day - a term on, to start with.
-- **Cancel** takes the last day it's in force and why. It doesn't renew after that.
+- **Cancel** takes the last day it's in force and why. It doesn't renew after that, and a request to sign it that's still out - or waiting for you to countersign - is withdrawn.
 - **Make active**, on a draft, takes the day it starts and sets its end a term later.
 
-You don't have to renew a contract that renews itself. Every night, ITFlow renews each one for another term once it ends, and marks one that doesn't renew as ended.
+You don't have to renew a contract that renews itself. Every night, ITFlow renews each one for another term once it ends - on the day of the month it started, unless you set its end to another day - and marks one that doesn't renew as ended.
 
-A month before a contract's notice date, its owner is emailed what it is, when notice is due and a link to it, and agents are notified in ITFlow. That happens once a term. The client's overview lists contracts ending or renewing soon under **Needs attention**, and shows the contract in force in its **Financial** row.
+A month before a contract's notice date, when there's something to do - it ends, or it renews itself and notice is given during its term - its owner is emailed what it is, when notice is due and a link to it, and agents are notified in ITFlow. That happens once a term. Nothing is sent for a contract with no notice to give, or with notice as long as its term.
+
+An archived client's contracts are left as they are - not renewed, ended or reminded of - until the client is restored. The client's overview lists contracts ending or renewing soon under **Needs attention**, and shows the contract in force in its **Financial** row.
 
 ## While a contract is in force {#in-force}
 
@@ -97,7 +103,7 @@ When two contracts are in force, the one that started last comes first, and what
 
 ### Standard terms
 
-A client that had its own hourly rate, net terms or SLAs before the 26.11 update - different from your defaults - was given a contract called **Standard terms** that sets just those. It's active, renews itself every year, and starts the day the client was added, so any other contract the client has still comes first. Change it, or end it once the client's other contract covers everything. The client import and the API make one the same way for a client whose rate or terms aren't your defaults.
+A client that had its own hourly rate, net terms or SLAs before the 26.11 update - different from your defaults - was given a contract called **Standard terms** that sets just those. It's active, renews itself every year with no notice - so no one is reminded of it - and starts the day the client was added, so any other contract the client has still comes first. Change it, or end it once the client's other contract covers everything. The client import and the API make one the same way for a client whose rate or terms aren't your defaults.
 
 ## The recurring invoice {#recurring}
 
@@ -114,4 +120,11 @@ See [Recurring invoices](/billing/recurring-invoices).
 
 ## Delete a contract
 
-**Delete** is on a contract's menu. Deleting a client deletes its contracts too.
+**Delete** is on a contract's menu, for a contract made by mistake. Any prepaid hours and signing requests on it go with it.
+
+A contract stays, and its menu says why in place of **Delete**, once:
+
+- tickets' time was drawn from its [prepaid hours](/billing/prepaid-hours) - deleting it would send them back to bill. Put them back first, or cancel it.
+- it was signed by both of you - it's the record of what was agreed. Cancel it instead.
+
+Deleting a client deletes its contracts too.

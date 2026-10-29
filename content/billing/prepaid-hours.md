@@ -18,6 +18,8 @@ Set **Hours included each month** on the **Cover** tab of the contract's window 
 4. Switch on **Make a draft invoice for them, at the price** to bill them, and pick the invoice category. It's one line, at the client's usual tax rate for time. Send it from the invoice when it's ready.
 5. Click **Add hours**.
 
+Hours are added to a draft or active contract, or a cancelled one until its last day.
+
 ![The Add hours window](bill-contract-hours-add.webp "Add hours: how many, the price, the days they're good for, and a draft invoice")
 
 ## How hours are drawn {#draw}
@@ -26,6 +28,7 @@ Every night, the time on the client's billable tickets is drawn from their hours
 
 - the oldest ticket first, from the hours that run out first
 - only from hours that cover the day the ticket was done
+- only while the contract is active - or, once it's cancelled, until its last day
 - rounded the way [Billing time](/admin/billing#billing-time) in Admin > Settings > Invoice says
 
 A ticket the hours cover leaves [Unbilled time](/billing/unbilled-time). One they run out on part way stays there with the rest of its time, billed at the usual rate. **Draw now** - on the contract, or on the client's Unbilled Time - does it straight away.

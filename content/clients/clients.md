@@ -85,6 +85,6 @@ Tick the clients in the list and click **Action**. You can:
 
 ## Archive a client
 
-When you stop working with a client, archive them rather than deleting them. An archived client drops out of the lists and menus, but everything you had for them - tickets, invoices, documentation - is kept, and their contacts can no longer sign in to the client portal.
+When you stop working with a client, archive them rather than deleting them. An archived client drops out of the lists and menus, but everything you had for them - tickets, invoices, documentation - is kept, and their contacts can no longer sign in to the client portal. Their [contracts](/billing/contracts#renew) are left as they are - not renewed, ended or reminded of overnight - and a contract out for them to sign is withdrawn.
 
 Open the client, click **⋮ > Archive Client** and confirm. To see archived clients, click **Archived** on the clients list. **Restore** is in each one's **⋮** menu, and in the header menu of an archived client.

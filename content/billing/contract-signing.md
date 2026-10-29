@@ -76,5 +76,7 @@ The signed PDF ends with how it was signed: when it was sent and opened, who sig
 
 > [!NOTE]
 > Changing a contract while it's out for signature withdraws the request when what it says has changed, so no one signs an old version. Send it again for the new one. A signed contract that no longer matches the copy signed says so on its page.
+>
+> Nothing is signed on a contract that was cancelled or has ended, or whose client was archived. A request still out - or waiting for you to countersign - is withdrawn when you cancel the contract or archive the client, and overnight when the contract ends. The link, the client portal and **Countersign** then refuse it. An archived client's contracts aren't sent to sign.
 
 The contract emails - Please sign, Signed by the client, the signed copy, the reminder before the notice date and Prepaid hours running low - are in [Admin > Mail > Previews](/admin/mail#tests-and-previews) with the rest.
