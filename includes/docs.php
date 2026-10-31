@@ -290,7 +290,7 @@ function docsLayout($slug, $title, $description, $body, array $toc = [])
             <a href="<?= e($docs['github_url']) ?>">GitHub</a>
         </nav>
     </div>
-    <p class="footer-note">ITFlow is free and open source, under the GPL. Screenshots show made-up demo data.</p>
+    <p class="footer-note">ITFlow is free and open source, under the AGPL-3.0. Screenshots show made-up demo data.</p>
 </footer>
 
 <dialog class="search-dialog" data-search-dialog aria-label="Search the docs">
