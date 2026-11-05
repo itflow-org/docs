@@ -6,10 +6,10 @@ where: Clients > a client > ⋮ > Export Data
 
 There are two ways to export a client, both from **Export Data** in the **⋮** menu of the client's header:
 
-- **Documentation PDF** - a printable runbook of their IT, to hand over or keep on file.
+- **Documentation PDF** - a printable runbook of their IT, to hand over or keep on file. You can download it, or send it as a secure link.
 - **Full export** - one zip with everything you hold for the client, for a handover, when they leave you, or for your own records.
 
-Each export is recorded in the client's audit log, including whether passwords went out.
+Each export, downloaded or shared, is recorded in the client's audit log, including whether passwords went out.
 
 ## Documentation PDF
 
@@ -19,7 +19,26 @@ The PDF has a cover, a contents page with page numbers, and an overview with the
 
 1. Open the client and click **⋮ > Export Data**.
 2. Leave **Documentation PDF** picked, and tick the parts to include. **All** and **None** tick or untick the lot.
-3. Click **Download PDF**.
+3. Click **Download PDF** - or **Share a link** to send it to someone securely instead.
+
+### Share it as a link {#share}
+
+Rather than downloading the PDF and attaching it to an email, you can send it as a [shared link](/documentation/shared-links): one that only works for as long and as many times as you set, can ask for a passphrase or an emailed code first, and tells you when it's downloaded.
+
+1. In **Export Data**, tick the parts to include and click **Share a link**. Or, on the client's **Shared Links**, use the arrow beside **Secure Note** and pick **Share the IT documentation**.
+2. The share window opens with the same parts ticked - change them here if you like.
+3. Pick who it's for, how long it **Works for**, how many times it **Can be opened** and what it asks for **Before it opens**, as for any shared link.
+4. Click **Make the link**. Copy the link, and the passphrase if it has one - they're shown once.
+
+![The share window for the IT documentation, with the parts to include, passwords switched on, and who it's for](cl-export-share.webp "Share the IT documentation: the parts to include, then who it's for and how long it works")
+
+The PDF is made when you make the link, from what you can see - changes to the client after that aren't in it. It's kept encrypted with the link's own key until the link stops working, and then deleted, so neither the server's disk nor its database can open it without the link.
+
+They see who sent it, how big it is and when it was made, and download it from there:
+
+![The page the link opens, with a button to download the PDF](doc-share-export-guest.webp "What they see: the IT documentation, ready to download")
+
+With **Include passwords and 2FA secrets** switched on, you set a password for the PDF too, just as for a download, and the page tells them the PDF will ask for it. Give them that password, and the link's passphrase, by phone or text - not with the link. If your admin requires a passphrase or code on shared passwords, sharing the documentation with passwords in it needs one too.
 
 ### What the PDF looks like
 
@@ -120,7 +139,7 @@ Under the parts to include are switches for **The documentation PDF**, **Archive
 
 ## Passwords
 
-Passwords and 2FA secrets are left out unless you ask for them. When you include them, you set a password for the file, and the PDF or zip is locked with it (AES-256 encryption). Give the client the password separately - by phone, say - not in the same email as the file.
+Passwords and 2FA secrets are left out unless you ask for them. When you include them, you set a password for the file, and the PDF or zip is locked with it (AES-256 encryption) - a PDF sent as a [link](#share) as well. Give the client the password separately - by phone, say - not in the same email as the file.
 
 > [!WARNING]
 > An encrypted zip opens with 7-Zip, WinRAR, Keka or The Unarchiver. The zip tools built into Windows and macOS can't open it.

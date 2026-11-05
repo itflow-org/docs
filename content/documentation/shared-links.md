@@ -1,6 +1,6 @@
 ---
 title: Shared links
-description: Send a login, a document, a file or a secure note to someone as a link that expires - or ask a client to send you a login safely - instead of putting it in an email.
+description: Send a login, a document, a file, a secure note or a client's IT documentation to someone as a link that expires - or ask a client to send you a login safely - instead of putting it in an email.
 where: Clients > a client > Shared Links
 ---
 
@@ -11,6 +11,7 @@ You can share:
 - **a login** (credential), with its 2FA code if you like
 - **a document** or **a file**
 - **a secure note** - a Wi-Fi key, a recovery code, anything typed in. It isn't saved anywhere else.
+- **the client's IT documentation**, as a PDF - see [Exporting a client's data](/clients/export#share).
 
 And you can **ask for a login**: the client gets a form to send you one, instead of emailing it.
 
@@ -41,7 +42,7 @@ They open the link and, if you set one, type the passphrase or the code from the
 
 ![The shared login, with copy buttons and a button to destroy the link](doc-share-revealed.webp "Then the login, with copy buttons and a way to destroy the link")
 
-Documents can be printed and files downloaded from their link.
+Documents can be printed, and files and the IT documentation downloaded, from their link.
 
 ## Ask the client for a login
 
@@ -68,7 +69,7 @@ Click one for its quick look and history: when it was opened, from which address
 
 Turn off a link from its menu, or tick several and use **Bulk Action > Turn off**. When someone leaves your team, or a client's mailbox is compromised, **Turn off every open link** (in the menu at the top of a client's Shared Links) ends them all at once.
 
-The **Secure Note** button at the top of Shared Links sends a note. Your admin sets the longest a link may last, and whether passwords and notes must have a passphrase or code, in **Admin > Settings > Security**.
+The **Secure Note** button at the top of Shared Links sends a note, and the arrow beside it shares the client's IT documentation or asks for a login. Your admin sets the longest a link may last, and whether passwords and notes must have a passphrase or code, in **Admin > Settings > Security**.
 
 > [!TIP]
-> The key that opens a link is the part after the `#`, which browsers never send to a server - so it stays out of web server and proxy logs. Logins, notes and what clients send back are encrypted with it, and the key isn't stored, so the database alone can't open them.
+> The key that opens a link is the part after the `#`, which browsers never send to a server - so it stays out of web server and proxy logs. Logins, notes, the IT documentation and what clients send back are encrypted with it, and the key isn't stored, so the server alone can't open them.
