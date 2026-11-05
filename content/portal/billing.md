@@ -24,6 +24,10 @@ When you've connected a payment provider, **Pay invoices** - on Home, Invoices a
 
 The payment is recorded on each invoice in ITFlow straight away, and they get a receipt. See [Taking payments](/billing/payments#online-payments).
 
+When you have [clients pay the card fee](/admin/payment-providers#card-fee), **Pay invoices** shows it under what the invoices come to, with the total to pay, and follows as they tick and untick. The payment page, the invoice's **Pay** button and the page its link opens show it too. It goes on each invoice they pay as a **Card Fee** line.
+
+![Pay invoices with the card fee](portal-pay-card-fee.webp "The card fee, shown before they pay and added to the total")
+
 **Payments** lists everything they've paid - by card, check, transfer or autopay - each with its receipt.
 
 ## Statement
@@ -62,6 +66,6 @@ Under **Cards & autopay**, they can save a card - entered on the payment provide
 
 ![Cards and autopay](portal-cards.webp "Cards & autopay: their saved cards, and which recurring invoices pay themselves")
 
-**Autopay** lists their recurring invoices. Picking a card for one means each invoice it makes is charged on its due date, with a receipt emailed every time. **Off - I'll pay each invoice** turns it off.
+**Autopay** lists their recurring invoices. Picking a card for one means each invoice it makes is charged on its due date, with a receipt emailed every time. **Off - I'll pay each invoice** turns it off. When they pay the card fee, the page says so, and autopay adds it to each charge.
 
 A saved card also lets your team use **Charge Saved Card** on an invoice, and shows on the client's recurring invoices in ITFlow - see [Recurring invoices](/billing/recurring-invoices#autopay).

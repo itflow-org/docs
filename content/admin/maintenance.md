@@ -23,6 +23,7 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Ticket Email Parser | every minute | Turns email to your support mailbox into tickets and replies |
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
+| Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
 | Backup | daily | Makes the scheduled backup |
 | Update Check | daily | Checks for a new version |
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |

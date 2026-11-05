@@ -37,8 +37,10 @@ When your admin has connected a payment provider such as Stripe in **Admin > Pay
 
 - the payment is recorded on the invoice, into the account your admin picked
 - the client gets a receipt
-- the provider's fee is recorded as an expense overnight, so your income and costs both add up
+- the provider's fee is recorded as an expense a few minutes later, so your income and costs both add up
 - an email goes to whoever your admin set to hear about invoices paid online
+
+If your admin has [clients pay the card fee](/admin/payment-providers#card-fee), the client sees it before paying, it goes on the invoice as a **Card Fee** line when the payment goes through, and the payment includes it - so the invoice is paid in full. A client let off it, with **No card fee** on their details, pays just the invoice.
 
 Your admin can limit online payment to invoices under a set amount.
 
@@ -46,7 +48,7 @@ Your admin can limit online payment to invoices under a set amount.
 
 A client can save a card in the client portal. Then:
 
-- on a sent invoice, the arrow beside **Add Payment** has **Charge Saved Card**. The card is charged straight away, the payment is recorded and a receipt goes to the client.
+- on a sent invoice, the arrow beside **Add Payment** has **Charge Saved Card**. The card is charged straight away, the payment is recorded and a receipt goes to the client. When the client pays the card fee, the window shows it and what is charged in all.
 - a [recurring invoice](/billing/recurring-invoices#autopay) can charge the card by itself on the due date of each invoice it makes.
 
 ![The Charge Saved Card window](bill-charge-card.webp "Charge Saved Card: the card is charged at once and the payment recorded")
@@ -54,6 +56,8 @@ A client can save a card in the client portal. Then:
 ## Change or remove a payment
 
 Each payment is listed on the invoice's **Payments** card. Its **⋮** menu has **Edit** and **Delete**. Deleting a payment takes it off the invoice and its account, so the invoice is owed again - no money moves.
+
+A card payment also has **Refund through Stripe**, which gives the money back to the client's card and takes the payment off the same way. A card fee the payment carried is refunded with it, and its **Card Fee** line comes off the invoice.
 
 Every payment, and income that isn't for an invoice, is also listed in **Finance > Income**. Click one for its quick look, with **Open Invoice**, **Email Receipt**, **Edit** and **Delete**.
 

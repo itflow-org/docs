@@ -76,6 +76,8 @@ Products set up as **Per user** or **Per device** in the [catalog](/billing/prod
 
 When the client has saved a card in the client portal, the **Autopay** card can charge it on the due date of each invoice this makes. Pick the card - it's saved as you pick it - or **Off** for the client to pay each invoice themselves. Invoices autopay will charge aren't sent payment reminders before their due date.
 
+When the client pays the [card fee](/admin/payment-providers#card-fee), autopay charges it too, and it goes on the invoice as a **Card Fee** line.
+
 ## When the invoices are made
 
 ITFlow's nightly job makes each invoice on its day, dated that day:

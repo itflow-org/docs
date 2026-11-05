@@ -58,6 +58,7 @@ A client has no hourly rate, payment terms or SLAs of its own - they come from i
 - **Payment reminders and statements** - switch off to leave this client out of automatic payment reminders and monthly statements. You can still send them by hand.
 - **Tax Rate** - the tax their invoice lines start with, when it isn't your default.
 - **Tax exempt** - for a client that doesn't pay tax, such as a charity or school, with their **Exemption Certificate** number and when it **Expires**. Their new lines start untaxed, and their invoices say they are exempt.
+- **No card fee** - when clients [pay the card fee](/admin/payment-providers#card-fee), switch this on for a client who shouldn't. Their card payments are just the invoice. It shows while Stripe is set up.
 
 ## Change a client's details
 
