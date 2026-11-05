@@ -24,6 +24,8 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
 | Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
+| Manager Check-in | every minute | Checks in with the ITFlow that [manages this one](/admin/managed-instances#managed-by), if one does |
+| Managed Instances | every 5 minutes | Notices [instances you manage](/admin/managed-instances) that have stopped checking in |
 | Backup | daily | Makes the scheduled backup |
 | Update Check | daily | Checks for a new version |
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |
@@ -65,6 +67,8 @@ The Update Check job looks for updates once a day; **Check now** looks straight 
 **Update ITFlow** hands the update to cron, which updates the files and then the database within a minute. The page shows it running and refreshes itself, then says when ITFlow was updated - or, if it stopped, what stopped it. When the database is behind ITFlow's files - after the files were put in place by hand, say - the button is **Finish updating**.
 
 **From the command line** has the command to run the same update in a shell, with this server's folder and user filled in. See [Updating ITFlow](/install/updating).
+
+An ITFlow [managed by another](/admin/managed-instances#managed-by) is updated from there, so it has no **Update ITFlow** button - the page says who updates it, and whether automatically.
 
 > [!WARNING]
 > Take a backup before updating - a snapshot of the server is safest - and read the changelog first: some releases need steps of their own.

@@ -58,7 +58,7 @@ From a row's menu:
 
 To change an invite - a different role, say - use **New User** again with the same email. Their invite takes what you set now, and they're sent a new link.
 
-If your installation has a limit on agents, an invite waiting holds a seat until it's accepted, cancelled or runs out, so there's one for them when they join.
+If your installation has a limit on agents, an invite waiting holds a seat until it's accepted, cancelled or runs out, so there's one for them when they join. On an ITFlow [managed by another](/admin/managed-instances#managed-by), the manager may set the limit; its support user, marked **Support**, doesn't take a seat.
 
 ## Which clients they see
 

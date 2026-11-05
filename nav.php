@@ -136,6 +136,7 @@ return [
             'security' => 'Security and sign-in',
             'ai' => 'AI providers and models',
             'api-keys' => 'API keys',
+            'managed-instances' => 'Managing other ITFlow installs',
             'logs' => 'Audit logs, sign-ins and app logs',
             'maintenance' => 'Backups, cron, updates and starter content',
         ],

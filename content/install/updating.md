@@ -19,6 +19,8 @@ A new version of ITFlow comes with new features and fixes. Most updates change t
 
 Cron picks the update up within a minute and updates the files and then the database. The page shows it running and refreshes itself until it's done, and you get a notification when it finishes. Cron needs to be running - the page says so if it isn't, and the update waits until it is. See [Update](/admin/maintenance#update) for more on the page.
 
+If your ITFlow is [managed by another](/admin/managed-instances#managed-by), it's updated from there instead, by hand or automatically.
+
 ## From the command line {#command-line}
 
 Run the updater as the user that owns ITFlow's files, `www-data` on Debian and Ubuntu:
