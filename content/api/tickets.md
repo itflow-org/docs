@@ -77,8 +77,13 @@ curl -G https://itflow.example.com/api/v1/tickets/read.php \
 | `ticket_vendor_id`, `ticket_vendor_ticket_number` | A vendor it's with - the client's or yours - and their reference for it |
 | `ticket_assigned_to` | An active agent's `technician_id`. An assigned ticket starts Open, and an unassigned one starts New. |
 | `ticket_billable` | `1` if the time on it is billable |
+| `ticket_template_id` | Raise it from this [ticket template](/admin/ticket-templates). See [From a template](#tickets-template). |
+| `ticket_fill_ins` | The template's fill-ins answered, as an object: `{"Employee Name": "Sam Reyes", "Needs a Computer": "Yes"}` |
+| `ticket_notify` | `1` to tell people about it as when it's raised in ITFlow. See below. |
 
-A contact, asset or vendor that isn't the client's is left off. The ticket gets its number and SLA as any other ticket does, and its source is **API**. No email goes to the contact.
+A contact, asset or vendor that isn't the client's is left off. The ticket gets its number and SLA as any other ticket does, and its source is **API**.
+
+No email goes out unless you send `ticket_notify`. With it, the contact and the ticket's watchers get the **Ticket Created** email (when **Email clients about their tickets** is on, in [Admin > Settings > Notifications](/admin/mail#notifications)), the [new-ticket address](/admin/tickets) hears about it, and so does the agent it's assigned to.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/tickets/create.php \
@@ -87,8 +92,34 @@ curl -X POST https://itflow.example.com/api/v1/tickets/create.php \
 ```
 
 ```json
-{ "success": "True", "count": "1", "data": [ { "insert_id": 1880 } ] }
+{ "success": "True", "count": "1", "data": [ { "insert_id": 1880 } ], "ticket_reference": "TCK-1880", "ticket_url": "https://itflow.example.com/guest/guest_view_ticket.php?ticket_id=1880&url_key=..." }
 ```
+
+`ticket_reference` is the number people see. `ticket_url` is the link its contact opens it with - the one in its emails - so a form on your website can link to it.
+
+#### From a template {#tickets-template}
+
+With `ticket_template_id`, the ticket gets what the template sets up: its subject and details unless you send your own, its category, priority, billing and agent unless you send them, and its tags, due time and tasks. The tasks that are only for some answers come along when the answers in `ticket_fill_ins` call for them, and the answers fill in the template's square-bracket words in the subject, details and tasks. They stay on the ticket, where [canned responses](/admin/canned-responses) fill them in too.
+
+```json
+{
+  "api_key": "YOUR_API_KEY",
+  "client_id": 1,
+  "ticket_subject": "Hosted ITFlow: Ravenwood Dental - ravenwood.itflow.app",
+  "ticket_details": "<p>Signed up on our website.</p>",
+  "ticket_template_id": 12,
+  "ticket_fill_ins": { "Hostname": "ravenwood.itflow.app", "Address": "Our domain", "Technicians": "4" },
+  "ticket_notify": 1
+}
+```
+
+The answer has `ticket_tasks` too, the number of tasks it got. A template that isn't there or is archived, a required fill-in left out, a choice that isn't one of a list's, or `ticket_fill_ins` that isn't an object is refused with `400` and why in `message`:
+
+```json
+{ "success": "False", "message": "Fill in Hostname - it is needed for this template." }
+```
+
+The template's id is the number in its address in Admin > Ticket Templates. Fill-ins are matched by name, whatever the case; ones the template doesn't have are left out. A **Yes or no** fill-in takes `Yes` or `No`, and a **Date** one `2026-11-05`.
 
 ### Update {#tickets-update}
 

@@ -25,7 +25,7 @@ Click **New Canned Response**. The window has three tabs.
 2. Pick the ticket categories it's **Offered on** - "Account and Access" for "Account unlocked". Leave it empty to offer it on every ticket.
 3. Write the **Response**. Click a placeholder to put it where the cursor is: `[Contact]`, `[First Name]`, `[Client]`, `[Ticket]`, `[Subject]`, `[Ticket Link]`, `[Asset]`, `[Site]`, `[Project]`, `[Agent]`, `[Date]`, `[Month]`, `[Quarter]` and `[Year]` are filled in from the ticket as it goes in.
 
-Anything else in square brackets - `[Date of visit]` - stays as it is, and the agent is asked to fill it in before sending.
+On a ticket raised from a [ticket template](/admin/ticket-templates#fill-ins), its answers fill in too: a response that says `[Hostname]` gets the answer that ticket's template asked for as Hostname, so one response serves every ticket from the template. Anything else in square brackets - `[Date of visit]`, or an answer left blank - stays as it is, and the agent is asked to fill it in before sending.
 
 **Sets up** - what the reply becomes: an internal note, public note or email reply, the ticket's status after it - such as **Resolved** or **On Hold** - and the time worked to add.
 

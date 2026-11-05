@@ -29,6 +29,8 @@ The **Category**, **Priority**, who to **Assign to**, when it's **Due**, whether
 
 The questions asked when a ticket is raised from it - on New Ticket, from a request form, or once for a recurring ticket. Each fill-in is **Text**, a **Date**, **Yes or no** or a **List** to pick from, and can be **Required**. A fill-in marked **Agents only** isn't asked in the portal. Drag them into the order they're asked.
 
+The answers stay on the ticket, and [canned responses](/admin/canned-responses) fill them in too - a response that says `[Employee Name]` gets that ticket's answer. A form on your website can raise a ticket from a template with its fill-ins answered, through the [API](/api/tickets#tickets-create).
+
 ### Tasks
 
 The tasks each ticket gets, in order, with the time each takes. A task can depend on an answer: pick **Only when** a fill-in is a choice - "Order a laptop" only when **Needs a Computer** is Yes - instead of **Always**.
