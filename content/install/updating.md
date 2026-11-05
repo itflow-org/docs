@@ -9,15 +9,15 @@ A new version of ITFlow comes with new features and fixes. Most updates change t
 ## Before you update {#before}
 
 - **Take a backup.** A snapshot of the whole VM is safest, because you can roll back in a minute if something goes wrong. Otherwise, make a [Full Backup](/admin/maintenance#backup) and copy it off the server.
-- **Read the changelog.** It's on the Update page and on [GitHub](https://github.com/itflow-org/itflow/blob/master/CHANGELOG.md). Some releases need a step of their own, and each release says what changes for your team.
+- **Read what's new.** The Update page shows the notes for each release between yours and the newest, and [GitHub](https://github.com/itflow-org/itflow/blob/master/CHANGELOG.md) has them all. Some releases need a step of their own, under **Upgrading**, and each release says what changes for your team.
 - **Pick a quiet time.** Your team may see errors for a minute or two while an update runs.
 
 ## From ITFlow {#from-itflow}
 
-1. Go to **Admin > Update**. It shows the version you're on and whether a newer one is waiting.
-2. Click **Queue Update**.
+1. Go to **Admin > Update**. It says whether a newer version is waiting, what's new in it and what to do first - including whether any of ITFlow's own files have been changed on your install, which updating would put back.
+2. Click **Update ITFlow**, and confirm.
 
-Cron picks the update up within a minute, updates the files and then the database, and records how it went on the Update page. Cron needs to be running. If it isn't, the update waits in the queue. See [Update](/admin/maintenance#update) for more on the page.
+Cron picks the update up within a minute and updates the files and then the database. The page shows it running and refreshes itself until it's done, and you get a notification when it finishes. Cron needs to be running - the page says so if it isn't, and the update waits until it is. See [Update](/admin/maintenance#update) for more on the page.
 
 ## From the command line {#command-line}
 

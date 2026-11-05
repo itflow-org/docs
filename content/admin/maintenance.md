@@ -53,11 +53,18 @@ To restore, use `scripts/restore_cli.php` on the server, as the page shows. On a
 
 ## Update
 
-**Admin > Update** shows the version you're on - its release, branch, database version and commit - and whether a newer one is waiting.
+**Admin > Update** says where your install stands - up to date, an update available, an update running, or the database still to update - with the one button for it. Alongside are this install's version, the branch it updates from, its database version and commit, when it last checked for updates and last updated, and whether cron is running.
 
-![Update](adm-update.webp "Update: the version you're on, and whether there's a newer one")
+![Update](adm-update.webp "Update: a newer version waiting, what to do first, and what's new in it")
 
-The Update Check job looks for updates once a day; **Check now** looks straight away. **Queue Update** hands the update to cron, which updates the files and then the database. To update from the command line instead, see [Updating ITFlow](/install/updating).
+The Update Check job looks for updates once a day; **Check now** looks straight away. When a newer version is waiting, the page shows:
+
+- **What's new** - each release's notes from the changelog, newest first, with any step of its own under **Upgrading**. The notes for developers and the commits behind them are folded away.
+- **What to do first** - take a backup, read what's changing, pick a quiet time - and whether any of ITFlow's own files have been changed on this install. Updating puts back the released versions, so those changes would be lost. Your `config.php`, `uploads` and `custom` folders are never touched.
+
+**Update ITFlow** hands the update to cron, which updates the files and then the database within a minute. The page shows it running and refreshes itself, then says when ITFlow was updated - or, if it stopped, what stopped it. When the database is behind ITFlow's files - after the files were put in place by hand, say - the button is **Finish updating**.
+
+**From the command line** has the command to run the same update in a shell, with this server's folder and user filled in. See [Updating ITFlow](/install/updating).
 
 > [!WARNING]
 > Take a backup before updating - a snapshot of the server is safest - and read the changelog first: some releases need steps of their own.
