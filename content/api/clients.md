@@ -182,6 +182,27 @@ curl -X POST https://itflow.example.com/api/v1/contacts/create.php \
 
 Each takes `contact_id` and `client_id`, the contact's own client. `update.php` also takes any of the fields under [Create](#contacts-create), and changes only what you send. Archiving a contact also archives their client portal sign-in. `delete.php` needs **Full** on Clients, and the contact has to be archived first.
 
+## Client portal invites {#portal-invites}
+
+| Endpoint | Does |
+|---|---|
+| POST `portal_invites/create.php` | Invites someone to a client's portal |
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `email` | Required: who to invite |
+| `name` | Their name, filled in for them |
+| `billing`, `technical` | `1` and they join as a billing or technical contact |
+
+They get the same invite an agent sends from the client's Contacts, from your company: they choose their own password from its link, and become a contact with portal access - or the client's contact with that address is given access. Asked again, a waiting invite goes again with a new link. It needs mail set up, to send it.
+
+```json
+{ "api_key": "YOUR_API_KEY", "client_id": 1, "email": "jortiz@ravenwooddental.example", "name": "Janelle Ortiz", "billing": 1 }
+```
+
+The answer's `invite` is `invited`, `resent` or `skipped` - with why in `message`, such as someone who signs in already.
+
 ## Locations {#locations}
 
 | Endpoint | Does |

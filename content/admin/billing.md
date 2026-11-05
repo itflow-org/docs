@@ -23,6 +23,8 @@ Switch on **Late fees** and set **Each late fee** as a percent of what's still o
 
 When a client pays by card, through a [payment provider](/admin/payment-providers), an email goes to **Email invoices paid online to** - a shared mailbox or list works best. The payment is recorded either way.
 
+**A lead that pays an invoice becomes a client** - on unless you turn it off. However an invoice is paid in full - online, by autopay or a payment you record - a lead it's for becomes a client by itself, and the [tickets waiting on it](/billing/payments#paid-in-full) hear that it's paid.
+
 ## Reminders and statements {#reminders-and-statements}
 
 Switch on **Email payment reminders** and set the schedule:

@@ -53,6 +53,13 @@ A client can save a card in the client portal. Then:
 
 ![The Charge Saved Card window](bill-charge-card.webp "Charge Saved Card: the card is charged at once and the payment recorded")
 
+## When an invoice is paid in full {#paid-in-full}
+
+However the last of it is paid - recorded here, online, by autopay or as part of a batch:
+
+- **A lead becomes a client.** Your admin can turn this off in [Admin > Settings > Invoices and billing](/admin/billing).
+- **A ticket waiting on the invoice hears about it.** It gets an internal note saying the invoice was paid, goes from On Hold back to Open, and the agent it's assigned to is emailed. A ticket waits on an invoice when it's one of the tickets of a quote that became the invoice, or was raised for it through the [API](/api/tickets#tickets-create) - a sign-up form on your website, say. A billable ticket whose time is on the invoice is left as it is.
+
 ## Change or remove a payment
 
 Each payment is listed on the invoice's **Payments** card. Its **⋮** menu has **Edit** and **Delete**. Deleting a payment takes it off the invoice and its account, so the invoice is owed again - no money moves.

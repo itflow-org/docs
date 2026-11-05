@@ -13,10 +13,10 @@ Each kind of record belongs to an area of the role:
 
 | Records | Role area |
 |---|---|
-| Clients, contacts, locations, vendors | Clients |
+| Clients, contacts, locations, vendors, client portal invites | Clients |
 | Tickets, ticket replies, technicians, assets, networks, licenses, domains, certificates, services, documents | Support |
 | Credentials | Credentials |
-| Invoices, invoice items, quotes, products, taxes | Sales |
+| Invoices, invoice items, recurring invoices, quotes, products, taxes | Sales |
 | Expenses | Financial |
 
 What a call does sets the level it needs in that area:

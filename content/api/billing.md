@@ -1,6 +1,6 @@
 ---
 title: Billing and expenses
-description: API reference for invoices and their lines, quotes, products, taxes and expenses.
+description: API reference for invoices and their lines, recurring invoices, quotes, products, taxes and expenses.
 ---
 
 These endpoints need the **Sales** area of the key's role, apart from expenses, which need **Financial**. See [Keys and permissions](/api/permissions).
@@ -106,6 +106,54 @@ curl -X POST https://itflow.example.com/api/v1/invoice_items/create.php \
   -H "Content-Type: application/json" \
   -d '{"api_key": "YOUR_API_KEY", "invoice_id": 475, "name": "Patch cables", "description": "Cat6, 3 ft", "qty": 4, "price": 6.50, "tax_id": "default"}'
 ```
+
+## Recurring invoices {#recurring-invoices}
+
+| Endpoint | Does |
+|---|---|
+| GET `recurring_invoices/read.php` | Lists recurring invoices, or gets one with its lines |
+| POST `recurring_invoices/create.php` | Makes one, and its first invoice now if you ask |
+
+### Read {#recurring-invoices-read}
+
+| Parameter | Does |
+|---|---|
+| `recurring_invoice_id` | Just this one, with its lines as `items` |
+| `client_id` | Just this client's |
+| `limit`, `offset` | [Paging](/api/requests#paging) |
+
+### Create {#recurring-invoices-create}
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `items` | Required: its lines, 1 to 100. Each is a `product_id` - its name, description and price unless you send them - or a `name` and `price`; with `qty` (1 if left out), `description`, and `tax_id`: a tax's id, or `default` for the client's usual rate. |
+| `frequency` | `month` (the default), `quarter` or `year` |
+| `start_date` | Its first run, as `2026-11-05`. Today if you leave it out. |
+| `scope` | What it's for, shown on each invoice |
+| `note`, `category_id`, `discount` | The note each invoice carries, an income category, and an amount off each one |
+| `auto_send` | `1`, the default: each invoice it makes is emailed by itself. `0` leaves them as drafts. |
+| `invoice_now` | `1` makes the first invoice now, in place of the run on `start_date` - the next is a period later |
+| `invoice_send` | With `invoice_now`, `1` (the default) emails it to the client's primary and billing contacts and marks it Sent, so it can be paid from its link. `0` leaves it a draft. |
+
+It's made in the client's currency, as a recurring invoice in ITFlow is. A client, date, product or line that won't do is refused with `400` and why in `message`.
+
+```
+curl -X POST https://itflow.example.com/api/v1/recurring_invoices/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "scope": "Managed services", "items": [{"product_id": 4, "tax_id": "default"}, {"product_id": 5, "qty": 12, "tax_id": "default"}], "invoice_now": 1}'
+```
+
+```json
+{
+  "success": "True", "count": "1", "data": [ { "insert_id": 19 } ],
+  "recurring_invoice_reference": "REC-19", "amount": 450, "next_date": "2026-12-05",
+  "invoice": { "invoice_id": 469, "reference": "INV-469", "amount": 450, "currency": "USD", "due": "2026-12-05", "status": "Sent",
+               "url": "https://itflow.example.com/guest/guest_view_invoice.php?invoice_id=469&url_key=...", "emailed_to": ["Priya Raghavan (praghavan@ravenwooddental.example)"] }
+}
+```
+
+`invoice.url` is where the client views and pays it - put it behind a Pay button. To have a ticket wait for that invoice to be paid, raise it with `ticket_invoice_id` - see [Tickets](/api/tickets#tickets-create).
 
 ## Quotes {#quotes}
 

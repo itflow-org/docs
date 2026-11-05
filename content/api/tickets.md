@@ -79,11 +79,13 @@ curl -G https://itflow.example.com/api/v1/tickets/read.php \
 | `ticket_billable` | `1` if the time on it is billable |
 | `ticket_template_id` | Raise it from this [ticket template](/admin/ticket-templates). See [From a template](#tickets-template). |
 | `ticket_fill_ins` | The template's fill-ins answered, as an object: `{"Employee Name": "Sam Reyes", "Needs a Computer": "Yes"}` |
-| `ticket_notify` | `1` to tell people about it as when it's raised in ITFlow. See below. |
+| `ticket_status` | An open status to start in, by number - `3` On Hold, say. Not Resolved or Closed. Otherwise it starts New, or Open when assigned. |
+| `ticket_invoice_id` | One of the client's invoices it waits on. When that's paid in full, the ticket gets a note, goes from On Hold back to Open, and its agent is told. |
+| `ticket_notify` | `1` to tell people about it as when it's raised in ITFlow, or `agents` to tell only your team. See below. |
 
 A contact, asset or vendor that isn't the client's is left off. The ticket gets its number and SLA as any other ticket does, and its source is **API**.
 
-No email goes out unless you send `ticket_notify`. With it, the contact and the ticket's watchers get the **Ticket Created** email (when **Email clients about their tickets** is on, in [Admin > Settings > Notifications](/admin/mail#notifications)), the [new-ticket address](/admin/tickets) hears about it, and so does the agent it's assigned to.
+No email goes out unless you send `ticket_notify`. With `1`, the contact and the ticket's watchers get the **Ticket Created** email (when **Email clients about their tickets** is on, in [Admin > Settings > Notifications](/admin/mail#notifications)), the [new-ticket address](/admin/tickets) hears about it, and so does the agent it's assigned to. With `agents`, only the new-ticket address and the agent do - for a ticket the client already has an email about, such as its invoice.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/tickets/create.php \
@@ -118,6 +120,8 @@ The answer has `ticket_tasks` too, the number of tasks it got. A template that i
 ```json
 { "success": "False", "message": "Fill in Hostname - it is needed for this template." }
 ```
+
+A status or invoice that won't do is refused the same way.
 
 The template's id is the number in its address in Admin > Ticket Templates. Fill-ins are matched by name, whatever the case; ones the template doesn't have are left out. A **Yes or no** fill-in takes `Yes` or `No`, and a **Date** one `2026-11-05`.
 
