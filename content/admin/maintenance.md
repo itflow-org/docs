@@ -32,6 +32,7 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |
 | Certificate Refresher | daily | Checks every certificate |
 | Domain Refresher | daily | Looks up domains that are due |
+| Demo Reset | daily | Puts a [public demo](/install/demo) back to fresh demo data. Only there in demo mode, where the domain and certificate refreshers aren't. |
 
 Each job's menu has **Run Now**, **Edit Schedule** (the time of day for a daily job) and **Disable**. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
 

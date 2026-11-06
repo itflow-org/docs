@@ -170,6 +170,7 @@ return [
             'setup' => 'The setup wizard',
             'after-install' => 'After installing',
             'config-php' => 'config.php',
+            'demo' => 'Running a public demo',
             'updating' => 'Updating ITFlow',
             'moving' => 'Moving to a new server',
             'troubleshooting' => 'When something goes wrong',
