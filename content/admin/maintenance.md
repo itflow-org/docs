@@ -24,8 +24,8 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
 | Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
-| Manager Check-in | every minute | Checks in with the ITFlow that [manages this one](/admin/managed-instances#managed-by), if one does |
-| Managed Instances | every 5 minutes | Notices [instances you manage](/admin/managed-instances) that have stopped checking in |
+| Manager Check-in | every minute | Checks in with the ITFlow that [manages this one](/admin/managed-instances#managed-by). Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
+| Managed Instances | every 5 minutes | Notices [instances you manage](/admin/managed-instances) that have stopped checking in. Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
 | Backup | daily | Makes the scheduled backup |
 | Update Check | daily | Checks for a new version |
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |

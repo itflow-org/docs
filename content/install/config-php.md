@@ -1,6 +1,6 @@
 ---
 title: config.php
-description: The settings ITFlow keeps in config.php - the database connection, its address, HTTPS, the update branch and the backup key - and what to add behind a reverse proxy or Cloudflare.
+description: The settings ITFlow keeps in config.php - the database connection, its address, HTTPS, the update branch and the backup key - and what to add behind a reverse proxy or Cloudflare, or to turn on managed mode.
 access: Server admins
 ---
 
@@ -46,3 +46,13 @@ define('CONST_GET_IP_METHOD', 'HTTP_CF_CONNECTING_IP');
 
 > [!WARNING]
 > Add this only when every request reaches ITFlow through the proxy. Anyone can put an address in these headers. ITFlow trusts them only because the line says your proxy sets them. With `HTTP_X_FORWARDED_FOR`, ITFlow turns away any request that comes straight to it without the header. If people in your office reach ITFlow directly, point the name at the proxy for them as well, with split DNS on your network.
+
+## Managed mode {#managed}
+
+[Managed mode](/admin/managed-instances) - one ITFlow managing others - is off until one of these lines is added:
+
+| Line | What it does |
+|---|---|
+| `$config_enable_managed_instances = true;` | Lets this ITFlow manage others: adds **Admin > Managed Instances** and its cron job |
+| `$config_enable_managed_by = true;` | Lets another ITFlow manage this one: adds **Admin > Managed By**, its cron job and support sign-in |
+| `$config_manager_required = true;` | Does what `$config_enable_managed_by` does, and keeps this ITFlow managed - its admins can't disconnect it. For an ITFlow you host for a customer. |

@@ -9,6 +9,19 @@ One ITFlow can manage others: your clients' own ITFlows, a reseller's, or the on
 
 The ITFlow that manages is the **manager**; the ones it manages are **instances**. Any ITFlow can be either, or both - a reseller's ITFlow can be managed by its provider and manage its own clients'.
 
+## Turn it on {#turn-on}
+
+Managed mode is off on every ITFlow until a line in its `config.php` turns it on - see [config.php](/install/config-php#managed). Each side has its own line, added to the end of the file:
+
+| On | Add | And it gets |
+|---|---|---|
+| The manager | `$config_enable_managed_instances = true;` | **Admin > Managed Instances** and the Managed Instances cron job |
+| Each instance | `$config_enable_managed_by = true;` | **Admin > Managed By**, the Manager Check-in cron job and support sign-in |
+
+A reseller's ITFlow that is managed and manages others has both lines. An ITFlow with neither shows nothing of managed mode - no menu entries, pages or cron jobs.
+
+Taking a line out again keeps what's there. An instance stays connected but stops checking in, so its manager sees it go offline, and nothing the manager set is locked any more - read-only and suspended included. A manager keeps its instances: their check-ins are turned away until the line is back, and then they carry on.
+
 ## Add an instance
 
 1. Go to **Admin > Managed Instances** and click **Add Instance**.
@@ -16,7 +29,7 @@ The ITFlow that manages is the **manager**; the ones it manages are **instances*
 3. On **Seats & updates** and **Access**, set what you want to control now - you can change it any time.
 4. Click **Add**. Its page opens with a **connection code**.
 5. Copy the code. It's shown this once, and works once, for a week.
-6. On the other ITFlow, an admin goes to **Admin > Managed By**, pastes the code and clicks **Connect**.
+6. On the other ITFlow - with managed mode [turned on](#turn-on) there too - an admin goes to **Admin > Managed By**, pastes the code and clicks **Connect**.
 
 ![A new instance and its connection code](adm-managed-instance-connect.webp "A new instance, waiting for its code")
 
@@ -95,4 +108,4 @@ Add a **Message** to say why - "Your subscription has ended - call us to carry o
 **Check in now** checks in straight away rather than waiting for cron - after the manager makes it active again, say. **Disconnect** stops it being managed: the manager is told, its support sign-ins stop, and what it set comes off.
 
 > [!NOTE]
-> For an ITFlow you host for a customer, add `$config_manager_required = true;` to its `config.php`. Its admins then can't disconnect it.
+> For an ITFlow you host for a customer, add `$config_manager_required = true;` to its `config.php`. It turns **Managed By** on, as `$config_enable_managed_by` does, and its admins then can't disconnect it.
