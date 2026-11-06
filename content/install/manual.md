@@ -145,7 +145,7 @@ Make `/etc/cron.d/itflow` with this one line:
 * * * * * www-data php /var/www/itflow.example.com/cron/cron.php
 ```
 
-It runs ITFlow's background work every minute, as `www-data`, the user that owns the files. Nothing runs until you [turn cron on](/install/after-install#cron) after setup.
+It runs ITFlow's background work every minute, as `www-data`, the user that owns the files. Its jobs start once setup is done - see [Cron](/install/after-install#cron).
 
 ## 8. Run the setup wizard {#setup}
 

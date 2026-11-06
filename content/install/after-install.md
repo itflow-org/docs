@@ -34,11 +34,11 @@ ITFlow is running, but some of it is switched off until you set it up. The first
 
 ## Cron {#cron}
 
-Cron runs ITFlow's background work: sending email, turning email into tickets, watching SLAs, making recurring invoices and tickets, and backups. It needs one line in the crontab of the user that owns ITFlow's files. The [install script](/install/install-script) adds it for you. If you're adding it by hand, the step shows the line for your server, with a copy button.
+Cron runs ITFlow's background work: sending email, turning email into tickets, watching SLAs, making recurring invoices and tickets, and backups. It needs one line in the crontab of the user that owns ITFlow's files. The [install script](/install/install-script) adds it for you. If you're adding it by hand, the step shows the line for your server, with a copy button. On a hosting control panel such as Jabali, HestiaCP or cPanel, add it as a cron job that runs every minute.
 
 Once cron has run, the step says when - **Cron ran 40 seconds ago**. Until then it waits, and checks again every few seconds by itself.
 
-ITFlow comes with cron switched off, so a copy of ITFlow never emails clients or charges cards by surprise. Click **Turn cron on**.
+Cron is on in a new install, so its jobs start as soon as the cron job runs. If someone has switched it off in [Admin > Cron](/admin/maintenance#cron), the step shows **Turn cron on**.
 
 [Cron](/admin/maintenance#cron) describes each job.
 
