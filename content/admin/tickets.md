@@ -1,6 +1,6 @@
 ---
 title: Tickets, statuses and SLAs
-description: How tickets are numbered, made from email, billed and closed; your own ticket statuses; and SLA targets with business hours and holidays.
+description: How tickets are numbered, made from email and texts, billed and closed; your own ticket statuses; and SLA targets with business hours and holidays.
 where: Admin > Settings > Tickets, Admin > Ticket Statuses, Admin > SLAs
 access: Admins
 ---
@@ -22,6 +22,14 @@ access: Admins
 Switch on **Turn emails into tickets**, and an email to your support mailbox becomes a ticket, and a reply goes onto its ticket. The mailbox is set up in [Mail](/admin/mail#receiving).
 
 Email from someone who isn't a contact, at a domain no client has, is left in the mailbox, flagged and unread - unless you switch on **From unknown senders too**.
+
+### Text to ticket {#text-to-ticket}
+
+Once [text messaging](/admin/text-messaging) is set up, a text from one of your contacts - from their mobile or phone number - opens a ticket for them. What they text next goes on it as their reply, with any photos attached, and opens it again if it was resolved. A text about a ticket that's being texted on goes on that ticket for two weeks after the last text, while it's open.
+
+- **Turn texts into tickets** - on to start with. Off, every text waits in [Texts](/service-desk/texts) for an agent. STOP, START and HELP are still answered.
+- **From unknown numbers too** - a text from a number that isn't a contact's opens a ticket with no client. Off, those wait in Texts, where an agent opens a ticket from one. Verification codes and spam wait there either way.
+- **Text back the ticket number** - the first text of a new ticket is answered with its number, so they know it landed and that replying adds to it.
 
 ## Ticket statuses
 

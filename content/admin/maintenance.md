@@ -20,6 +20,7 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Job | Runs | Does |
 |---|---|---|
 | Mail Queue | every minute | Sends invoices, quotes, ticket replies and notifications |
+| Text Messages | every minute | Sends the texts waiting to go, texts reminders of visits and calls coming up, and tidies the text log. Does nothing until [text messaging](/admin/text-messaging) is set up. |
 | Ticket Email Parser | every minute | Turns email to your support mailbox into tickets and replies |
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
@@ -126,4 +127,5 @@ The page still opens when the database is behind the code - which is when you mo
 ## Other maintenance pages
 
 - **Admin > Mail Queue** - every email sent or waiting. See [Mail](/admin/mail#the-mail-queue).
+- **Admin > Text Messages** - every text sent and received, once texting is set up. See [Text messaging](/admin/text-messaging#log).
 - **Admin > Audit Logs** and **App Logs** - see [Logs](/admin/logs).

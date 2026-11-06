@@ -64,4 +64,6 @@ A ticket's conversation shows the same for each email reply: who it was emailed 
 
 Payment reminders and statements have their own schedule, in [Invoices and billing](/admin/billing#reminders-and-statements).
 
+Once texting is set up, **Texts to clients** on the same page decides what ITFlow texts clients by itself - see [Text messaging](/admin/text-messaging#texts-to-clients).
+
 ![Notification settings](adm-notifications.webp "Notifications: the alerts your team gets, and the emails clients get by themselves")

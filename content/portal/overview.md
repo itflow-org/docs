@@ -36,7 +36,7 @@ Announcements you post - planned maintenance, a holiday closure - show at the to
 
 The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **New ticket** is always there.
 
-Their name opens **Your account** - their details, the emails they get from you, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
+Their name opens **Your account** - their details, the emails they get from you, whether you text them, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
 
 ![The portal on a phone](portal-home-phone.webp "On a phone, the portal fits the screen")
 

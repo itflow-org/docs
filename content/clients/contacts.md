@@ -28,6 +28,7 @@ To see the contacts of every client together, use **All Client Docs > Contacts**
    - **Important** - pinned to the top of the contacts list.
    - **Billing** - receives invoices and quotes.
    - **Technical** - who to talk to about the technical side.
+   - **Texts** - once texting is set up: they get texts about their tickets, visits and invoices. Only with their say-so - see [Texts to clients](/admin/text-messaging#who-gets-them).
 4. On **Access**, set up the client portal if they need it (see below), and a **PIN** to check it's really them when they call.
 5. On **Notes**, add notes, tags and a photo.
 6. Click **Create**.
@@ -56,7 +57,7 @@ Click a contact's name to open their page.
 
 - Along the top: **Call** and **Email**, **New** (a ticket, recurring ticket, meeting, asset, credential, document, file, license or note for them), **Link** (to link a service, file or other record that already exists) and **Edit**.
 - **Reach** - their phone numbers and email.
-- **Details** - their location, their PIN, whether they can sign in to the portal and when they last did, and which ticket emails they get. **View portal as them** opens the client portal as they see it, read only.
+- **Details** - their location, their PIN, whether they can sign in to the portal and when they last did, which ticket emails they get, and whether they agreed to texts. **View portal as them** opens the client portal as they see it, read only. **Ask them by text** asks whether texts are all right - a YES turns them on.
 - **Quick notes** - notes that save as you click away.
 - Tabs for their **Assets**, **Credentials**, **Tickets**, **Recurring** tickets, **Licenses**, **Documents**, **Files**, **Services**, **Notes** and **History**.
 

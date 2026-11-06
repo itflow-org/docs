@@ -34,15 +34,16 @@ The **Details** card shows where the ticket stands. Click a value to change it.
 - **SLA** - the next target and when it's due, or **Breached** once it's missed. See [SLAs](#slas) below.
 - **Category**, **Scheduled** (see [Book a visit](#book-a-visit-or-a-call)), **Billing** and **Time logged**.
 
-## Reply to the client or your team
+## Reply to the client or your team {#reply}
 
-Above the conversation are three buttons. Nothing is picked for you, so who sees a reply is always your choice:
+Above the conversation are the reply buttons. Nothing is picked for you, so who sees a reply is always your choice:
 
 | Button | Who sees it |
 |---|---|
 | **Internal note** | Only your team. For notes, findings and handovers. |
 | **Public note** | The client, in the client portal. No email is sent. |
 | **Email reply** | The contact and the ticket's watchers, by email, and it shows in the portal. Only there when mail is set up and the contact has an email address. |
+| **Text reply** | The contact, by text to their mobile, and it shows in the portal. Only there when [text messaging](/admin/text-messaging) is set up and the contact has a mobile number - or someone who isn't a contact is texting on the ticket. |
 
 Pick one and the reply box opens, with a line saying exactly who will see it. An email reply carries the conversation so far, as short excerpts, and a link to the ticket that opens without signing in - see [The ticket link in emails](/portal/tickets#ticket-link).
 
@@ -82,7 +83,7 @@ On the ticket, a note that mentions you says **Mentions you**, and your name in 
 
 ### The conversation
 
-Replies are listed newest first. Client replies are marked **From client**. Yours are marked **Internal**, **Public note** or **Email reply**, and each shows the time logged with it. A note that [mentions you](#mention) also says **Mentions you**. Use **All**, **Public** and **Internal** above the conversation to filter it.
+Replies are listed newest first. Client replies are marked **From client**, and **By text** when they texted it. Yours are marked **Internal**, **Public note**, **Email reply** or **Text reply**, and each shows the time logged with it. A text reply says who it was texted to and whether it went. A note that [mentions you](#mention) also says **Mentions you**. Use **All**, **Public** and **Internal** above the conversation to filter it.
 
 An email reply also says who it was emailed to - **Emailed to Priya Raghavan and 1 more**. Click that to see each person and where their email stands:
 
@@ -139,7 +140,7 @@ A ticket raised from a template that asks questions has a **Fill-ins** card with
 
 ## Book a visit or a call
 
-Click **Scheduled** in the Details card, pick the **Date and time** and whether it's a **Remote** or **Onsite** visit. The contact, the watchers and the assigned technician are emailed the time, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar). Changing or cancelling it tells them the same way.
+Click **Scheduled** in the Details card, pick the **Date and time** and whether it's a **Remote** or **Onsite** visit. The contact, the watchers and the assigned technician are emailed the time, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar). Changing or cancelling it tells them the same way. A contact who agreed to texts is texted the time too, and reminded before it - see [Texts to clients](/admin/text-messaging#texts-to-clients).
 
 ## Resolve and close
 
