@@ -25,7 +25,7 @@ Taking a line out again keeps what's there. An instance stays connected but stop
 ## Add an instance
 
 1. Go to **Admin > Managed Instances** and click **Add Instance**.
-2. Give it a **Name**, and pick the **Client** it belongs to, if it's a client's.
+2. Give it a **Name**, and pick the **Client** it belongs to, if it's a client's. **Address** is where it will be reached, such as `itflow.ravenwooddental.com` - it goes in the [setup command](#set-up-new). Once it connects, its address is the one it says it has.
 3. On **Seats & updates** and **Access**, set what you want to control now - you can change it any time.
 4. Click **Add**. Its page opens with a **connection code**.
 5. Copy the code. It's shown this once, and works once, for a week.
@@ -37,11 +37,24 @@ The instance needs to be on the same version of ITFlow or newer, with cron runni
 
 Lost the code, or moving the instance to a new server? **New connection code** in its menu makes another; the old one stops working, and whatever connects with the new one takes the place of what was connected.
 
+### Set up a new install and connect it in one go {#set-up-new}
+
+For an install you're setting up yourself - one you host for a client, say - the page also gives a command for [setting up from the command line](/install/manual#setup-cli) under **Setting up a new install for it?**, with the code in it. It fills in what your ITFlow knows: the address, and the client's company name, primary location, phone, website, tax ID and currency, with its primary contact as the first admin.
+
+1. Download ITFlow into the new install's folder, and make an empty database for it - in the hosting control panel, if it has one.
+2. Copy the command, and run it in that folder as the user that owns its files.
+3. It asks for the database, and anything else it couldn't fill in, such as the time zone.
+4. It sets ITFlow up and connects it with the code. Managed mode is turned on in its `config.php` and kept on (`--manager-required`), so its admins can't disconnect it. Take that option off the command if they should be able to.
+5. It shows the password it made for the first admin - give it to them by a [secure link](/documentation/shared-links) - its backup key, and its cron job.
+6. Add the cron job: in the crontab, or in the hosting control panel as a cron job that runs every minute with the command it shows.
+
+Until its cron job runs, the instance shows as **Waiting for its cron job** here, with the command to add. Once it runs, the instance checks in every minute.
+
 ## See how they're doing
 
 ![Managed instances](adm-managed-instances.webp "Managed instances: each one's version, health, seats and last check-in")
 
-The list shows each instance with its version and whether an update is waiting - a security update stands out - and whether it updates itself; what needs a look; its agents against its seat limit; and when it last checked in. A green dot is checking in, a red one has stopped.
+The list shows each instance with its version and whether an update is waiting - a security update stands out - and whether it updates itself; what needs a look; its agents against its seat limit; and when it last checked in. A green dot is checking in, a red one has stopped, and a yellow one is a new instance **Waiting for its cron job** - connected, but its cron has never run.
 
 Click an instance for everything it reported:
 
@@ -51,7 +64,7 @@ Click an instance for everything it reported:
 - **Requests** is what you've asked it to do - updates and checks for updates, yours and automatic ones - and how they went.
 - **The instance** has its version, branch and database, when it last checked for updates, its agents and clients, last backup, cron, errors today, storage, PHP, time zone and where it checks in from.
 
-You're notified when an instance stops checking in for ten minutes, and again when it's back, and when an update on one fails.
+You're notified when an instance stops checking in for ten minutes - or, for a new one, that it's still waiting for its cron job - and again when it's back, and when an update on one fails.
 
 > [!NOTE]
 > Instances send how they're doing - never tickets, documents, credentials, invoices or contacts. Their admins can see exactly what's sent on **Admin > Managed By**.

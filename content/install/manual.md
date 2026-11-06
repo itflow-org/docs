@@ -170,7 +170,20 @@ sudo -u www-data php scripts/setup_cli.php --non-interactive \
   --company-name="Summit IT Partners" --country="United States" --timezone=America/New_York
 ```
 
-It works out the language and currency from the country, and the timezone too when the country has only one. Give `--timezone` for a country with several, and `--locale` or `--currency` to choose your own. `--help` lists every option, including the company's address and phone. When it's done, it shows the [backup key](/install/after-install#backup-key) and the cron line.
+It works out the language and currency from the country, and the timezone too when the country has only one. Give `--timezone` for a country with several, and `--locale` or `--currency` to choose your own. `--help` lists every option, including the company's address and phone. When it's done, it shows the [backup key](/install/after-install#backup-key) and the cron job - as a crontab line, and as the command for a hosting control panel's cron job that runs every minute, with the full path of the PHP that ran setup.
+
+Other options:
+
+| Option | Does |
+|---|---|
+| `--ask-missing` | Asks only for what's needed and wasn't given, and the database password. The rest takes its default or suggestion. |
+| `--generate-password` | Makes a strong password for the account, instead of asking for one, and shows it once at the end. |
+| `--json` | Ends with a summary in JSON - the address, the account and any password made for it, the backup key, the cron job and whether it connected. Everything else goes to standard error. |
+| `--manager-code`, `--manager-required` | Connects it to the ITFlow that manages it, and keeps it connected - see [Set up a new install and connect it](/admin/managed-instances#set-up-new). |
+
+Any option can come from the environment instead, as `ITFLOW_SETUP_` and its name in capitals - `ITFLOW_SETUP_PASSWORD` for `--password`, `ITFLOW_SETUP_USER_PASSWORD` for `--user-password` - so a password needn't be typed on the command line.
+
+It ends with `0` when it's set up and `1` when it stopped before setting anything up. `3` means it's set up, but it couldn't connect to the ITFlow that manages it - make a new connection code there and paste it into **Admin > Managed By**.
 
 The first time you sign in, [Get started](/install/after-install) opens to take you through the rest. Add `--skip-get-started` if you set those up another way - for a scripted build, say. Get started then doesn't open, and the dashboard doesn't show it, but it's still in **Admin > Get started**.
 
