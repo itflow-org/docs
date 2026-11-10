@@ -39,7 +39,7 @@ Anything nothing fills in - a contract with no contact, say - is pointed out bef
 ## Send it to sign {#send}
 
 1. On the contract's page, click **Send to sign**.
-2. Pick **Who signs** - one of the client's contacts - or type **a name** and **their email**.
+2. Pick **Who signs** - one of the client's contacts, each shown with their job title and the address it goes to - or type **a name** and **their email**. A contact with no email address can't be picked.
 3. Add **A note for them**, if you like. It goes in the email.
 4. Click **Send**. **Preview** shows the document first.
 

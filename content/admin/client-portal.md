@@ -13,7 +13,7 @@ The client portal mostly looks after itself: who sees what comes from each conta
 
 Switch on **Require two-step sign-in** and contacts who sign in with a password are asked for a code from an authenticator app too. Anyone who hasn't set it up is taken to set it up before anything else. Contacts who sign in with Microsoft 365 are left to Microsoft.
 
-If a contact loses their phone, turn it off for them from their contact page - see [Giving contacts access](/portal/access#signing-in-safely).
+If a contact loses their phone, turn it off for them from their contact page - see [Giving contacts access](/portal/access#signing-in-safely). To see who has it on, and who signs in with a password alone, show **No two-step** on [Admin > Users > Client portal](/admin/users#client-portal).
 
 ## Signing up {#signing-up}
 

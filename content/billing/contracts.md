@@ -39,7 +39,7 @@ You can also start one from a template on the client itself: **Contract** on the
 **Agreement**
 
 - **Client**, **Name** and **Type** - **Fully managed**, **Co-managed**, **Block hours**, **Time and materials**, **Break/fix**, **Project** or **Other**
-- **Contact at the client** - the client's primary contact to start with
+- **Contact at the client** - one of the client's contacts, its primary contact to start with. On New Contract from the contracts list, the contacts show once you pick the client.
 - **Owner** - who looks after it for you. They're reminded before it renews or ends.
 - **Status** - **Active**, in force from its start date, or **Draft**, not in force yet. A draft [sent to sign](/billing/contract-signing) becomes active once both sides have signed.
 - **Starts**, **Term** and **Ends** - the end follows the start and term until you change it. A term keeps to the day of the month it starts on, or the last day of a shorter month: a monthly contract from January 31 runs to February 27, then March 30.

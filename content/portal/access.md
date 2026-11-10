@@ -30,6 +30,8 @@ The contact's page then shows that they can sign in, and when they last did. **V
 
 To take access away, set **Login** back to **No access**. Archiving a contact takes it away too.
 
+An admin can see everyone with access, at every client, in one list - who signs in how, who never has, and who has no two-step sign-in - and turn access off or back on from there: **Admin > Users > Client portal**. See [Client portal logins](/admin/users#client-portal).
+
 > [!TIP]
 > Someone who isn't a contact yet can be invited by email instead, and fills in their own details when they join - or you can let the people at a client sign up for themselves. See [Invites and signing up](/portal/invites).
 
@@ -51,7 +53,7 @@ They can't change their own record or another primary contact's. What they chang
 
 Each contact sets their own password, and can turn on **Two-step sign-in** with an authenticator app under **Your account**. Your admin can require it for everyone who signs in with a password, in **Admin > Settings > Client portal**.
 
-If a contact loses their phone, open their contact page and use **Turn off two-step sign-in**. They sign in with their password alone until they set it up again.
+If a contact loses their phone, open their contact page and use **Turn off two-step sign-in** - or an admin can from [Client portal logins](/admin/users#client-portal). They sign in with their password alone until they set it up again.
 
 Each contact also has a **Phone PIN** you can ask for when they call, to check it's really them. They can see and change it under **Your account**.
 

@@ -1,15 +1,15 @@
 ---
 title: Users
-description: The agents who sign in to ITFlow - inviting them, their role and the clients they see, two-step sign-in, and what to do when someone leaves.
+description: The agents who sign in to ITFlow - inviting them, their role and the clients they see, two-step sign-in, and what to do when someone leaves - and every client's portal logins in one list.
 where: Admin > Users
 access: Admins
 ---
 
-Users are your team: everyone who signs in to ITFlow to work. (Your clients' contacts sign in to the client portal instead - see [Giving contacts access](/portal/access).)
+Users are your team: everyone who signs in to ITFlow to work. Your clients' contacts sign in to the client portal instead - see [Giving contacts access](/portal/access) - and the last tab here, **Client portal**, lists them all: see [Client portal logins](#client-portal).
 
 ![The users list](adm-users.webp "Users: each agent's role, how they sign in, the clients they see and when they last signed in")
 
-Each row shows the agent, their **Role**, whether they can sign in and how (with or without two-step sign-in), the **Clients** they can see, and when they **Last signed in** and from where. The tabs show **Users**, **Admins**, **No MFA** (not using two-step sign-in), **Disabled**, **Invited** (people asked to join who aren't in yet) and **Archived**.
+Each row shows the agent, their **Role**, whether they can sign in and how (with or without two-step sign-in), the **Clients** they can see, and when they **Last signed in** and from where. The tabs show **Users**, **Admins**, **No MFA** (not using two-step sign-in), **Disabled**, **Invited** (people asked to join who aren't in yet) and **Archived**. **Client portal**, at the end, isn't your team - it's your clients' contacts.
 
 Your own row can't be changed here - that's your [account](/getting-started/account) - so you can't lock yourself out by mistake.
 
@@ -84,6 +84,41 @@ If someone loses their phone, open them with **Edit** and use **Reset it** under
 
 > [!WARNING]
 > If an agent's account may have been compromised, use **Incident response** in the menu beside **New User**. It resets the password of every other agent, shows you the new passwords once to give out by phone, and forgets every remembered browser. Client portal logins are left alone. Change your own password first.
+
+## Client portal logins {#client-portal}
+
+The **Client portal** tab lists every contact who can sign in to the client portal, at all your clients - the place to check who has access, and to help one of them without finding their client first. The number on the tab is how many can sign in.
+
+![The Client portal tab](adm-users-portal.webp "Client portal: every contact with a portal login, their client, how they sign in and when they last did")
+
+Each row shows the contact, their **Client**, how they **Sign in** - with a **Password** or **Microsoft 365**, and whether two-step sign-in is on - and when they **Last signed in** and from where. Search by name, email or client, and click a heading to sort by it.
+
+Two pickers beside the search narrow the list:
+
+- the **client** - one client's logins
+- how they sign in - **Can sign in** (everyone with access, as it opens), **Password**, **Microsoft 365**, **No two-step**, **Never signed in** or **Access off**
+
+**Never signed in** finds the invites nobody took up, and **No two-step** the people who sign in with a password alone. **Access off** lists the logins that can't be used, and says why: their access was turned off, their contact is archived, or their client is.
+
+From a row's menu:
+
+- **Open contact** goes to their contact page, and **View the portal as them** opens the portal as they see it, read only.
+- **Audit log** shows their sign-ins and what they did.
+- **Email a password link** sends them a link to choose a new password, good for an hour. Their password stays as it is until they use it. For someone who has never signed in, **Send the invite again** sends their invite.
+- **Turn off two-step sign-in** is for a lost or replaced phone. They sign in with their password alone until they set it up again, and are emailed that it was turned off.
+- **Forget remembered browsers** makes every browser ask for their code again.
+- **Turn off portal access** signs them out on their next click, and they can't sign in. Their contact stays as it is.
+
+![A portal login's menu](adm-users-portal-menu.webp "A row's menu: open the contact, email a password link, turn off two-step sign-in, or turn their access off")
+
+Tick several and use **Bulk Action** to email password links, turn off two-step sign-in, or turn off access for all of them. The actions that send an email show once [Mail](/admin/mail) is set up.
+
+To turn someone's access back on, show **Access off** and use **Turn on portal access** in their row's menu: pick how they sign in, and whether to email them how. The password they had still works. A login whose contact or client is archived stays off until that's restored.
+
+You never set a password for a contact here - they choose their own from the emailed link. New portal logins aren't made here either: give a contact access from their own page, as in [Giving contacts access](/portal/access).
+
+> [!NOTE]
+> If the **Client portal** module is switched off in [Settings > Modules](/admin/settings#modules), the tab says so - nobody listed can sign in until it's back on.
 
 ## Sign-ins
 
