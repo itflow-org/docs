@@ -25,7 +25,7 @@ When a search or filter leaves nothing, the list says so, with **Clear filters**
 The blue button at the top right of the list adds a new record: **New Asset**, **New Ticket**, **New Invoice**. The small arrow beside it opens more choices, such as **Import** and **Export**.
 
 - **Import** takes a CSV spreadsheet. The window has a template to download, so you can see which columns it expects.
-- **Export** downloads the list as a CSV spreadsheet. It uses the same search and filters you have on screen, so set them first.
+- **Export** downloads the list as a CSV spreadsheet or a PDF. Its window opens with the search and filters you have on screen, and you can change them there. The **Columns** tab picks what goes in the file. Some columns start unticked - **Client** is one, on contacts, assets, tickets and most other lists - so tick it when you export across all clients and want to see whose each row is.
 
 ## Quick looks
 
