@@ -31,7 +31,7 @@ Tick items and use the bulk menu to set their category or archive them. **Archiv
 For a product, the window also has **Track stock**, the reorder level and where it's kept, and **Client asset** (see below).
 
 > [!TIP]
-> To put something from the catalog on a quote or invoice, start typing its name in the **Add a line** box and pick it. Its price, description, tax and billing come with it - change any of them on the line if you need to.
+> To put something from the catalog on a quote or invoice, start typing its name or code in the **Add a line** box and pick it. It goes on as a line with its price, description, tax and billing - click any of them on the line to change it. See [Add and change the lines](/billing/invoices#add-and-change-the-lines).
 
 ## The product's page
 

@@ -34,7 +34,34 @@ An invoice moves through these statuses:
 
 ![The New Invoice window](bill-invoice-new.webp "New Invoice: what it's for, its category and dates")
 
-The invoice opens as a draft. Add lines at the bottom: type in **Add a line** and pick from the catalog, or type anything. Set the **Qty**, **Price** and **Tax**, and click **Add**. Drag a line by its handle to move it, and use its **⋮** menu to **Edit** or **Remove** it.
+The invoice opens as a draft, ready for its lines.
+
+### Add and change the lines
+
+Lines go on, and change, on the page itself - nothing reloads, and the totals follow as you go.
+
+Under the lines is one box, **Add a line**:
+
+1. Type a product's or service's name or code. The list shows each match with its price, its tax, how it's billed and, for a stocked product, how many are on the shelf.
+2. Press **Enter** to take the one picked out, or click another. It goes on as a line with its description, price and tax.
+3. The new line's quantity is ready to type over. Press **Enter** to go back to the box for the next line.
+
+![Adding a line to an invoice from the catalog](bill-add-line.webp "Add a line: type a name or code and pick from your catalog - or add what you typed as a line of its own")
+
+For something that isn't in your catalog, type what it is and pick **Add** at the bottom of the list. With nothing like it in the catalog, that's the only row, so just press **Enter**. Type its quantity, press **Enter**, and type its price.
+
+To change a line, click what you want to change - its name, description, quantity, price or tax - and type over it:
+
+- **Enter**, or clicking somewhere else, saves it. **Esc** puts it back as it was.
+- **Tab** moves on to the next thing on the line.
+- In a description, **Enter** starts a new line and **Ctrl+Enter** saves.
+- **Tax** opens the list of your rates.
+
+![Changing a line's quantity on the invoice](bill-line-change.webp "Click a quantity, a price or anything else on a line to change it where it is")
+
+A line with no description shows **Add a description** while you're working on it. From the keyboard, **Tab** to anything on a line and press **Enter** to change it.
+
+Drag a line by its handle to move it. Its **⋮** menu has **Edit**, which has everything about the line in one window, and **Remove**. Lines can be changed until the invoice is paid or cancelled.
 
 The **Notes** under the lines are printed on the invoice - payment details, terms, a thank you.
 

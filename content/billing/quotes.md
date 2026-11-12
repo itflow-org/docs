@@ -38,13 +38,15 @@ A quote that passes its **Valid until** date shows **Expired** as well, and the 
 
 ### Add the lines
 
-At the bottom of the lines, type in **Add a line**. Pick an item from the catalog and its price, description and tax come with it, or type anything for a one-off line. Set the **Qty**, how it's **Billed**, the **Price** and the **Tax**, and click **Add**.
+Lines go on a quote the way they do on an invoice. Under the lines, type in **Add a line** and pick an item from the catalog - it goes on with its price, description and tax, billed the way it's set up in the catalog - or type anything and pick **Add** for a one-off line. Then click a line's quantity, price or anything else on it to change it where it is. See [Add and change the lines](/billing/invoices#add-and-change-the-lines).
 
 ![A draft quote with one-time and monthly lines](bill-quote.webp "A quote with what's billed once and what's billed each month, kept apart")
 
-- **Billed** is **One time**, or **Monthly**, **Quarterly** or **Yearly**. The quote shows the two apart - what's paid up front and what's paid each month - with a total for each.
-- Drag a line by its handle to move it. Its **⋮** menu has **Edit** and **Remove**.
+- Each line is billed **One time**, or **Monthly**, **Quarterly** or **Yearly**. To change that, open the line's **⋮** menu and pick under **Billed** - the line moves under its heading. The quote shows the two apart - what's paid up front and what's paid each month - with a total for each.
+- Drag a line by its handle to move it. Its **⋮** menu also has **Edit** and **Remove**.
 - The **Notes** under the lines are shown on the quote - terms, what's included, what happens next.
+
+![A quote line's menu, with how often it is billed](bill-quote-billed.webp "A line's menu: Edit, how often it's billed, and Remove")
 
 With AI set up, **Write it with AI** under the lines drafts them from a sentence such as "three new laptops for the new starters, set up and joined to the domain". It uses your catalog's prices and the client's rate, and you check the lines before adding them. See [Using AI](/getting-started/ai).
 

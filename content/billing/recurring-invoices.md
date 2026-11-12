@@ -27,7 +27,7 @@ There are three ways to start one:
 3. Pick a **Category**, how often it's **Billed** - **Monthly**, **Quarterly** or **Yearly** - and the date of the **First invoice**.
 4. Add a **Discount** if there is one.
 5. Under **When it is made**, pick **Send it automatically** or **Leave a draft to check**.
-6. Click **Create**, then add its lines.
+6. Click **Create**, then add its lines - the same way as on an invoice: see [Add and change the lines](/billing/invoices#add-and-change-the-lines).
 
 ![The New Recurring Invoice window](bill-recurring-new.webp "New Recurring Invoice: what it's for, how often it bills, and whether it emails itself")
 
@@ -67,7 +67,7 @@ A line's quantity can be counted from the client each time an invoice is made, i
 
 Devices that are lost, stolen or retired aren't counted. **At least** sets a contract's minimum, so the line never bills fewer. The window shows what it counts now.
 
-Products set up as **Per user** or **Per device** in the [catalog](/billing/products) start counted that way when you add them.
+Products set up as **Per user** or **Per device** in the [catalog](/billing/products) start counted that way when you add them. A quantity that's counted can't be typed over on the line - change what it counts in **Edit**.
 
 > [!TIP]
 > Keep the client's contacts, assets and licenses up to date and their bill follows: a new starter added in ITFlow is on next month's invoice, and a retired laptop drops off it.
