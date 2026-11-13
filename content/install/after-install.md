@@ -93,7 +93,7 @@ Backups are kept on the server, in ITFlow's `uploads/backups` folder. Copy them 
 
 ![The Support step](inst-start-support.webp "Support: business hours, response times, ticket numbers and the client portal")
 
-- **Business hours** - the **Days**, and the hours **From** and **To**. Response times only count these: an urgent ticket on Friday evening is due Monday morning. Add holidays in [Admin > SLAs](/admin/tickets#slas).
+- **Business hours** - the **Days**, and the hours **From** and **To**. Response times only count these: an urgent ticket on Friday evening is due Monday morning. Add holidays and other closure days in [Admin > SLAs](/admin/tickets#closure-days).
 - **Response times** - how soon a ticket is answered, by its priority. **Use these** makes them your default SLAs, for every client without their own, and gives them to open tickets too.
 - **Ticket numbers** - the **Prefix** and **Next number**.
 - **Client portal** - switch on **Clients can sign in to raise and follow tickets**. They can also pay invoices and see quotes and documents. What each contact sees is set on the contact - see [Giving contacts access](/portal/access).

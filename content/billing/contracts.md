@@ -52,7 +52,7 @@ You can also start one from a template on the client itself: **Contract** on the
 - **Support hours** - as it should read on the contract, such as "Mon-Fri 8am-6pm, emergencies 24/7"
 - **Hours included each month** and **Tell the owner under** - see [Prepaid hours](/billing/prepaid-hours)
 - **Hourly rate**, **After hours** rate and **Net terms**
-- **SLA by ticket priority** - an SLA from [Admin > SLAs](/admin/tickets#slas) for **Low**, **Medium**, **High** and **Urgent**
+- **SLA by ticket priority** - an SLA from [Admin > SLAs](/admin/tickets#slas) for **Low**, **Medium**, **High** and **Urgent**. Each shows its targets in business time, as the SLA clock counts them.
 
 Leave a rate, the net terms or an SLA empty and what applies without it does - another contract in force for the client that sets it, else your default from [Admin > Settings > Defaults](/admin/settings) and [Admin > SLAs](/admin/tickets#slas). The empty fields show the default.
 

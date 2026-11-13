@@ -12,7 +12,7 @@ Every [contract](/billing/contracts) is also a document: who it's between, the a
 
 ![A contract as a document](bill-contract-document.webp "The document: who it's between, the agreement in a few lines, the response times, then the terms")
 
-**The agreement** sums the contract up: its type, term, renewal, notice, support hours, rates and when invoices are due. **Response times** lists the SLA for each priority. Its **Terms** come next, then a place for each side to sign.
+**The agreement** sums the contract up: its type, term, renewal, notice, support hours, rates and when invoices are due. **Response times** lists how long there is to respond and to resolve for each priority, in business time as the SLA clock counts it - with a 9 to 5 day, a 48-hour target reads 6 business days. Its **Terms** come next, then a place for each side to sign.
 
 ### Placeholders {#placeholders}
 
