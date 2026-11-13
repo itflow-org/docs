@@ -13,9 +13,24 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 * * * * * php /var/www/itflow/cron/cron.php >/dev/null
 ```
 
-**Admin > Cron** shows whether cron is running - "Cron last checked less than a minute ago" - with the exact line for your server, and every job: its schedule, when it last ran, how long it took, how it went and when it runs next.
+**Admin > Cron** says whether cron is running, and how each job is doing.
 
-![Cron and its jobs](adm-cron.webp "Cron: whether it's running, and every job's schedule and last run")
+![Cron and its jobs](adm-cron.webp "Cron: whether it's running, how each job's last run went, and the cron line for your server")
+
+The top of the page says when cron last ran, how many jobs are on, and which runs next. When something needs you, it says that instead:
+
+- **Cron hasn't run yet**, or **Cron has stopped** - the cron entry is missing or failing. The line for your server is there, with a button that copies it, and the page says so by itself once cron runs.
+- **Cron is switched off** - every job stops itself until you click **Turn cron on**.
+- A job failed - the top of the page names it, and what went wrong is under the job.
+
+**Jobs** lists each job with what it does, its schedule and when it next runs, when it last ran and how long that took, and how it went:
+
+- **Completed** - it ran.
+- **Skipped** - it had nothing to do, or what it works with isn't set up. It says why under its name - texting isn't set up, say.
+- **Failed** - it stopped with an error, shown under the job. The error stays until you click **Dismiss**, and once the job has run again it says so. A run cut off part way - by a restart, say - reads **Didn't finish**.
+- **Queued** or **Running** - it's on its way, and the page keeps itself up to date until it's done.
+
+The list starts in the order the day runs - the every-minute jobs, then the nightly ones by time - and sorts by its headings.
 
 | Job | Runs | Does |
 |---|---|---|
@@ -27,14 +42,22 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 | Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
 | Manager Check-in | every minute | Checks in with the ITFlow that [manages this one](/admin/managed-instances#managed-by). Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
 | Managed Instances | every 5 minutes | Notices [instances you manage](/admin/managed-instances) that have stopped checking in. Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
-| Backup | daily | Makes the scheduled backup |
+| Backup | daily | Makes the scheduled backup, and any started from [Backup](#backup). Off until the schedule is turned on. |
 | Update Check | daily | Checks for a new version |
+| Application Update | when asked | Runs an update started from [Update](#update). Off, as there's nothing for it to do until then. |
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |
 | Certificate Refresher | daily | Checks every certificate |
 | Domain Refresher | daily | Looks up domains that are due |
 | Demo Reset | daily | Puts a [public demo](/install/demo) back to fresh demo data. Only there in demo mode, where the domain and certificate refreshers aren't. |
 
-Each job's menu has **Run Now**, **Edit Schedule** (the time of day for a daily job) and **Disable**. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
+Each job's menu has:
+
+- **Run now** - cron picks the job up within a minute, even when it's turned off.
+- **Change the schedule** - every so many minutes, or once a day at a time you choose. Nightly Tasks, Backup and Application Update only run once a day.
+- **Copy the command to run it** - the command that runs that one job on the server, where it shows what it does as it goes.
+- **Turn off** - it no longer runs on its schedule, and shows **Off**. **Turn on** puts it back.
+
+Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **The cron job** has the line for your server. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
 
 > [!WARNING]
 > If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes.

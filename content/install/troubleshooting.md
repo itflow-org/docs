@@ -36,8 +36,9 @@ After 15 failed sign-ins in 10 minutes, ITFlow turns away sign-ins from that add
 
 Go to **Admin > Cron**:
 
-- **Cron is not running** - the cron entry is missing or failing. The page shows the line to add. To see what goes wrong, run it yourself as the files' owner: `sudo -u www-data php /var/www/itflow.example.com/cron/cron.php`
+- **Cron hasn't run yet**, or **Cron has stopped** - the cron entry is missing or failing. The page shows the line to add, with a button that copies it. To see what goes wrong, run it yourself as the files' owner: `sudo -u www-data php /var/www/itflow.example.com/cron/cron.php`
 - **Cron is switched off** - click **Turn cron on**.
+- **Mail Queue** or **Ticket Email Parser** shows **Failed** or **Skipped** - the job says why under its name.
 
 If cron is running, look at [App Logs](/admin/logs#app-logs) and the [mail queue](/admin/mail#the-mail-queue) for what the mail server said.
 

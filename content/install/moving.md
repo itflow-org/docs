@@ -43,7 +43,7 @@ Running as `www-data` keeps the restored files owned by the web server's user. T
 
 ## 4. Switch over {#switch}
 
-1. On the old server, go to **Admin > Cron** and click **Turn cron off**.
+1. On the old server, go to **Admin > Cron**, click **Turn cron off**, and confirm.
 2. Point your domain name at the new server, and get its certificate. If ITFlow's address is changing, change `$config_base_url` in [config.php](/install/config-php) too.
 3. If the backup came from an older version of ITFlow, bring its database up to date:
    ```
@@ -52,7 +52,7 @@ Running as `www-data` keeps the restored files owned by the web server's user. T
 4. Put the cron entry back: `mv /root/itflow.cron /etc/cron.d/itflow`
 5. Open ITFlow. After a restore from the command line, the setup wizard opens, because setup was never finished on the new server. Click **Continue setup**, then **Finish and sign in**.
 6. Sign in with an account from the backup. Its password and two-step sign-in are as they were on the old server.
-7. In **Admin > Cron**, check cron is running and switched on.
+7. In **Admin > Cron**, check the top of the page says **Cron is running**.
 8. Send a test email from [Admin > Settings > Mail](/admin/mail), and check a few clients' files open.
 
 The new server has a backup key of its own. Copy it from [Admin > Backup](/admin/maintenance#backup): backups made from now on are locked with it. Backups from the old server still need the old key.
