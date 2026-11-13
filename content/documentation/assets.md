@@ -15,6 +15,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 - Each row shows the device's type icon, name and description, its tags, type and operating system, make, model and serial number, IP address, who it's assigned to, its location and its status. A UPS whose battery is due for replacing soon, or overdue, has a badge by its model.
 - **Web**, **SSH** and **RDP** buttons beside an IP address open a connection to the device - the browser for Web, your SSH or remote desktop app for the others.
 - The location, assigned contact and status can be changed right in the row.
+- With an [RMM](/admin/rmm) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, or the assets that aren't in it.
 
 To see every client's devices together, use **All Client Docs > Assets**.
 
@@ -80,6 +81,8 @@ Along the top are the asset's photo or type icon, name, status, type, model and 
 - **Edit**, and **⋮** for **Copy** and **Archive**
 
 The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. **Quick notes** save as you click away.
+
+A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session.
 
 A server or NAS lists the virtual machines that run on it, under **Runs**, and a virtual machine links to its host. A UPS shows how long is left until its battery is to be replaced:
 

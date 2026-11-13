@@ -16,6 +16,9 @@ They were tested with PowerShell 7. Apart from reading a password, they use noth
 
 The RMM gives the client's name, the device's serial number and the alert. The script finds the client and the device, and raises a ticket for them. It needs **Modify** on Support, and **Read** on Clients.
 
+> [!TIP]
+> With Tactical RMM, ITFlow does this itself, with no script - see [RMM providers](/admin/rmm#alerts).
+
 ```powershell
 # The alert, as your RMM gives it
 $clientName = 'Ravenwood Dental Group'
@@ -87,6 +90,9 @@ Dana Prescott, Office Manager at Ravenwood Dental Group
 ## Keep assets in step with the RMM {#asset-sync}
 
 For each device the RMM knows about, the script finds the asset by serial number. It updates the asset if ITFlow already has it, and adds it if not. It needs **Modify** on Support.
+
+> [!TIP]
+> With Tactical RMM, ITFlow does this itself, with no script - see [RMM providers](/admin/rmm#what-comes-in).
 
 ```powershell
 $clientId = 1

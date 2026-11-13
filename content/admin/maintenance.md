@@ -40,6 +40,8 @@ The list starts in the order the day runs - the every-minute jobs, then the nigh
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
 | Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
+| RMM Sync | every 15 minutes | Brings in the devices of the clients linked to your [RMM](/admin/rmm), and keeps their assets up to date. Does nothing until an RMM is set up. |
+| RMM Alerts | every minute | Opens a ticket for each new alert from an RMM whose alerts open tickets, and resolves it when the alert clears. See [RMM providers](/admin/rmm#alerts). |
 | Manager Check-in | every minute | Checks in with the ITFlow that [manages this one](/admin/managed-instances#managed-by). Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
 | Managed Instances | every 5 minutes | Notices [instances you manage](/admin/managed-instances) that have stopped checking in. Only there when managed mode is [turned on](/admin/managed-instances#turn-on). |
 | Backup | daily | Makes the scheduled backup, and any started from [Backup](#backup). Off until the schedule is turned on. |

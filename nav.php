@@ -127,6 +127,7 @@ return [
             'billing' => 'Invoices and billing settings',
             'payment-providers' => 'Card payments with Stripe',
             'text-messaging' => 'Text messaging with Skyetel',
+            'rmm' => 'RMM providers',
             'taxes' => 'Taxes',
             'categories-and-tags' => 'Categories and tags',
             'ticket-templates' => 'Ticket and project templates',

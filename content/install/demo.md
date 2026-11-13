@@ -69,7 +69,7 @@ Visitors can add and change anything an MSP would use day to day: clients, ticke
 
 - users and roles, and each account's own name, email, picture, password and two-step sign-in
 - sign-in security and identity providers
-- mail settings, payment providers and card payments, AI providers and text messaging
+- mail settings, payment providers and card payments, AI providers, text messaging and RMM providers
 - API keys, backups, updates, cron, log forwarding and telemetry
 - the company's details, modules, client portal settings and custom links
 - the starter content, the demo data and Get started

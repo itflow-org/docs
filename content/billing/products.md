@@ -21,7 +21,7 @@ Tick items and use the bulk menu to set their category or archive them. **Archiv
 2. Give it a **Name** - what the client sees on the line - and a **Category**.
 3. Set its **Price**, and its **Cost** - what it costs you. Only agents see the cost; it's how ITFlow works out your margin.
 4. Pick its **Tax**. With **No tax**, its lines take the client's own rate when the client has one.
-5. Under **Billed**, pick **One time**, or **Monthly**, **Quarterly** or **Yearly** for something billed again and again. For a recurring item, **Counted** can be **Per user** or **Per device**: on a recurring invoice the quantity then comes from the client's own count (see [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat)).
+5. Under **Billed**, pick **One time**, or **Monthly**, **Quarterly** or **Yearly** for something billed again and again. For a recurring item, **Counted** can be **Per user**, **Per device** or **Per managed device** - the client's devices in your [RMM](/admin/rmm): on a recurring invoice the quantity then comes from the client's own count (see [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat)).
 6. Add a **Code** (your SKU), the **Vendor** you buy it from and the **Vendor part number** you order it as.
 7. Write the **Description** the client sees under the line on invoices and quotes, and any **Notes** for agents - lead time, where to order it, what to check before quoting.
 8. Click **Add**.

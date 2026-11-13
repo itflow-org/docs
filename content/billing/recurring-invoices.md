@@ -1,6 +1,6 @@
 ---
 title: Recurring invoices
-description: Bill managed services, licenses and hosting automatically every month, quarter or year - per user, per device or per license seat, counted fresh each time.
+description: Bill managed services, licenses and hosting automatically every month, quarter or year - per user, per device, per managed device or per license seat, counted fresh each time.
 where: Billing > Recurring Invoices
 ---
 
@@ -61,13 +61,14 @@ A line's quantity can be counted from the client each time an invoice is made, i
 | **Typed in** | the same every time |
 | **Users** | the client's contacts - all of them, or only those with a tag such as "Licensed user" |
 | **Devices** | the client's assets - every device, or only some types: Desktop and Laptop for a per-workstation line, Server and Virtual Machine for per-server |
+| **Managed devices** | the client's devices in your [RMM](/admin/rmm) - all of them, or only some types or a tag, as for **Devices**. With more than one RMM, every one's or just one's. Only there once an RMM is set up. |
 | **License seats** | one of the client's [licenses](/documentation/licenses) - the **Seats bought** or the **Seats in use** |
 
 ![The Edit Line window, counting license seats](bill-edit-line.webp "Edit Line: count the quantity from a license's seats, with a contract minimum")
 
-Devices that are lost, stolen or retired aren't counted. **At least** sets a contract's minimum, so the line never bills fewer. The window shows what it counts now.
+Devices that are lost, stolen or retired aren't counted, and a managed device stops counting once your RMM no longer has it. **At least** sets a contract's minimum, so the line never bills fewer. The window shows what it counts now.
 
-Products set up as **Per user** or **Per device** in the [catalog](/billing/products) start counted that way when you add them. A quantity that's counted can't be typed over on the line - change what it counts in **Edit**.
+Products set up as **Per user**, **Per device** or **Per managed device** in the [catalog](/billing/products) start counted that way when you add them. A quantity that's counted can't be typed over on the line - change what it counts in **Edit**.
 
 > [!TIP]
 > Keep the client's contacts, assets and licenses up to date and their bill follows: a new starter added in ITFlow is on next month's invoice, and a retired laptop drops off it.
@@ -82,7 +83,7 @@ When the client pays the [card fee](/admin/payment-providers#card-fee), autopay 
 
 ITFlow's nightly job makes each invoice on its day, dated that day:
 
-- per-user, per-device and per-seat lines are counted again
+- per-user, per-device, per-managed-device and per-seat lines are counted again
 - placeholders such as `{month}` are filled in for the period
 - it's emailed to the client's primary and billing contacts, if it's set to **Send it automatically** and emailing is on - otherwise it's left as a draft in **Invoices**, ready for you to check and send
 
