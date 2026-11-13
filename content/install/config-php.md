@@ -20,6 +20,7 @@ access: Server admins
 | `$installation_id` | A random id made at setup. It's sent with the install details if you choose to share them with the ITFlow project. |
 | `$config_enable_setup` | Setup adds `$config_enable_setup = 0;` when it finishes, which closes the setup wizard. |
 | `$config_backup_key` | The key backups are locked with. ITFlow adds it the first time it needs it. Copy it somewhere safe, away from the server. If you ever change it, keep the old key too, because older backups still need it. |
+| `$config_backup_path` | Optional. The folder backups are kept in, such as `/srv/itflow-backups` - another disk, or a mounted share. Without it, they're kept in `uploads/backups`, inside ITFlow's folder. The web server's user, and the user cron runs as, both need to be able to write to it. |
 
 ## Behind a reverse proxy or Cloudflare {#proxy}
 

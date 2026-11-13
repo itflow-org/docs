@@ -8,9 +8,9 @@ To move ITFlow, install a fresh copy on the new server and restore a full backup
 
 ## 1. Take a full backup of the old server {#backup}
 
-1. In [Admin > Backup](/admin/maintenance#backup), click **Full Backup**. Cron makes it within a minute, so cron needs to be running.
-2. Download it from the list of backups.
-3. Copy the **Encryption Key** shown on the same page. You'll need it to restore.
+1. In [Admin > Backup](/admin/maintenance#backup), click **Back up now**. Cron makes a Full Backup within a minute, so cron needs to be running.
+2. Click its **Download** in the list of backups.
+3. Copy the **Encryption key** from the same page, with the button beside it. You'll need it to restore.
 
 Data entered on the old server after this backup won't come across. Move out of hours, and ask your team to stop using the old server once the backup is made.
 

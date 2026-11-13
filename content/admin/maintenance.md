@@ -41,19 +41,28 @@ Each job's menu has **Run Now**, **Edit Schedule** (the time of day for a daily 
 
 ## Backup
 
-**Admin > Backup** makes a backup now, keeps a schedule, and holds the encryption key backups need.
+**Admin > Backup** says whether ITFlow is backed up, makes a backup when you want one, keeps the nightly schedule, and holds the encryption key backups need.
 
-![Backup](adm-backup.webp "Backup: make one now, the backups made, the encryption key and the schedule")
+![Backup](adm-backup.webp "Backup: when the last one was made, the backups kept, the schedule, and the encryption key")
 
-- **Full Backup** - the database and everything uploaded. This is the one to keep.
-- **Database Only** - just the database. Much smaller and quicker, but no files or documents.
-- **Master Key** - exports the key to the credential vault, for when every admin's password is lost.
+The top of the page says when the last backup was made, what kind it was, and when the next scheduled one is due. When something needs you, it says that instead: a backup is being made, the last one didn't finish and why, there hasn't been one for a week, none has been made yet, or one is waiting because cron isn't running.
 
-**Scheduled Backups & Retention** sets the type made each night, how many days to keep them, and the most to keep of each type.
+- **Back up now** makes a Full Backup - the database and everything uploaded. This is the one to keep.
+- **Database only** is just the database. Much smaller and quicker, but no files or documents.
 
-Every backup is an encrypted zip. The **Encryption Key** shown on the page opens it - write it down and keep it somewhere other than the server. Without it, a backup can't be restored, by anyone.
+Cron makes it within a minute, so cron needs to be running. The page keeps itself up to date while it does, the backup appears in the list when it's done, and you get a notification.
 
-To restore, use `scripts/restore_cli.php` on the server, as the page shows. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
+**Backups** lists those kept, newest first: who made each one or that the schedule did, its size, and when it was last downloaded. A failed one says why. **Download** saves one. Each backup's menu copies its path on the server, which restoring from the command line asks for, and its SHA-256 checksum, to check a copy kept somewhere else. The same menu deletes a backup, or takes one still waiting to be made off the queue.
+
+**Schedule and retention** says whether a backup is made every night, and at what time. **Change the time** is beside it, and **Turn on** when the schedule is off - the same as the Backup job's menu in [Cron](#cron). Below that are the type made each night, how many days to keep backups, and the most to keep of each type. Old backups are removed by the nightly job, never by a backup itself, so one that fails never costs you the one before it.
+
+**At a glance** has the last Full Backup and Database Only, how many backups are on the server and the room they take, the space left there, whether cron is running, and the folder they're kept in - inside ITFlow's own folder unless `$config_backup_path` in [config.php](/install/config-php) puts them somewhere else.
+
+Every backup is an encrypted zip, and the **Encryption key** opens it. It's hidden until you click the eye, and the button beside it copies it. Keep a copy somewhere other than the server - without it, a backup can't be restored, by anyone.
+
+**Export the master key**, under **Credential vault key**, gives you the key to the credential vault, for when every user's password is lost - a restore brings the vault back by itself as long as one user still knows theirs. It asks for your password, shows the key once, and files an encrypted copy with the backups. Every agent is notified that it was exported.
+
+To restore, use `scripts/restore_cli.php` on the server - **Restoring** has the command to copy. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
 
 ## Update
 
