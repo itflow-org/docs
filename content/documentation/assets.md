@@ -82,7 +82,7 @@ Along the top are the asset's photo or type icon, name, status, type, model and 
 
 The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. **Quick notes** save as you click away.
 
-A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session.
+A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session. With [device actions](/admin/rmm#device-actions) on, the card's **Actions** reboots it, installs its patches, turns maintenance mode on and off, or runs a script on it.
 
 A server or NAS lists the virtual machines that run on it, under **Runs**, and a virtual machine links to its host. A UPS shows how long is left until its battery is to be replaced:
 

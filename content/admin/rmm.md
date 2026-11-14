@@ -1,6 +1,6 @@
 ---
 title: RMM providers
-description: Bring your RMM's devices into ITFlow as assets and keep them up to date, see whether each is online, have its alerts open tickets, and bill per managed device - with Tactical RMM.
+description: Bring your RMM's devices into ITFlow as assets and keep them up to date, see whether each is online, have its alerts open tickets, reboot devices and run scripts on them from ITFlow, and bill per managed device - with Tactical RMM.
 where: Admin > RMM Providers
 access: Admins
 ---
@@ -10,19 +10,20 @@ ITFlow reads your RMM, so the devices it looks after are your clients' assets wi
 - Each client you link has its devices as assets - matched to the ones you already have, and kept up to date. See [What comes in](#what-comes-in).
 - An asset shows whether the device is online, who's signed in and what needs attention, with **Take Control** to open a remote session. See [On the asset](#on-the-asset).
 - Alerts can open tickets, and resolve them when they clear. See [Alerts open tickets](#alerts).
+- Technicians can reboot a device, install its patches, turn maintenance mode on and off, and run a script on it - from its asset, or a ticket. See [Device actions](#device-actions).
 - A recurring invoice can bill per managed device. See [Bill per managed device](#billing).
 
 ## Before you start
 
 ITFlow reads Tactical's API with an API key. In Tactical RMM:
 
-1. Make a user just for ITFlow, with a role that has **List Clients** and **List Agents** - and **List Alerts**, if alerts are to open tickets. ITFlow only reads, so it needs nothing more. A role limited to some clients shows ITFlow only those.
+1. Make a user just for ITFlow, with a role that has **List Clients** and **List Agents** - and **List Alerts**, if alerts are to open tickets. That's all ITFlow needs to read. For [device actions](#device-actions), add the permissions for the ones you want. A role limited to some clients shows ITFlow only those.
 2. In **Settings > Global Settings > API Keys**, add a key for that user, and copy it.
 
 You also need the address of Tactical's API. Tactical's install puts it at an address starting `api.` on your domain - `https://api.example.com` - beside the dashboard at `rmm.`. ITFlow's server has to be able to reach it.
 
 > [!NOTE]
-> The key can do whatever its user can in Tactical, so give that user no more than ITFlow needs.
+> The key can do whatever its user can in Tactical, so give that user no more than ITFlow needs - and no device actions you don't want done from ITFlow.
 
 ## Add Tactical RMM
 
@@ -31,7 +32,7 @@ You also need the address of Tactical's API. Tactical's install puts it at an ad
 3. Enter the **API address** and the **API key**. The **Dashboard address** can stay empty when it's the API's address with `rmm.` for `api.`.
 4. Click **Add**. ITFlow tries the key, brings in Tactical's clients and opens its **Clients** page. If something is wrong, it says what - a key Tactical turned away, or an address that isn't Tactical's API.
 
-![The Add RMM Provider window](adm-rmm-provider-form.webp "Add RMM Provider: which RMM, its API address and key, and whether its alerts open tickets")
+![The Add RMM Provider window](adm-rmm-provider-form.webp "Add RMM Provider: which RMM, its API address and key, whether its alerts open tickets, and device actions")
 
 No devices come in yet. They come in once you link their client.
 
@@ -118,6 +119,48 @@ The alerts ITFlow sees are the ones in Tactical's dashboard. Each check's and ag
 > [!NOTE]
 > Alerts already open when you turn this on don't open tickets - nor do ones raised before their client was linked, or while the provider was off. Only new ones do.
 
+## Device actions {#device-actions}
+
+Technicians can act on a device without opening Tactical. In the provider's **Edit**, turn on **Device actions** - they're off until you do.
+
+Then, for anyone whose role can edit assets (**Modify** on **Support**):
+
+- the device's **Tactical RMM** card on its asset has **Actions**,
+- and on a ticket, the lightning button beside an asset from Tactical has the same.
+
+| Action | Does |
+|---|---|
+| **Reboot now** | Restarts it straight away. ITFlow asks first, and says who's signed in. |
+| **Install patches now** | Installs the patches its patch policy in Tactical approves, and restarts it afterwards if that policy says to. ITFlow asks first. Windows devices only. |
+| **Turn maintenance mode on** / **off** | While it's on, Tactical raises no alerts for the device, so none opens a ticket. The device shows **Online, maintenance**. |
+| **Run a script** | Runs one of Tactical's scripts on it - see [Run a script](#run-a-script). |
+
+Each goes in the asset's **History** tab and the [audit log](/admin/logs#audit-logs). Done from a ticket, it's also an internal note on that ticket, by you.
+
+Tactical does each as the API key's user, so that user's role needs:
+
+| Action | Permission in Tactical |
+|---|---|
+| **Reboot now** | **Shutdown / Reboot Agents** |
+| **Install patches now** | **Manage Windows Updates** |
+| **Maintenance mode** | **Edit Agents** |
+| **Run a script** | **List Scripts** and **Run Script** |
+
+Leave out the ones you don't want done from ITFlow. Trying one the role hasn't got says which permission it needs, and nothing is done.
+
+### Run a script {#run-a-script}
+
+![Run a script, from a ticket](doc-asset-rmm-script.webp "Run a script: a disk check run from the ticket its alert opened, with the output shown and noted on the ticket")
+
+1. Click **Actions > Run a script** - or the lightning button on a ticket.
+2. Pick the **Script**. The list has Tactical's scripts that run on the device's system - Windows, Linux or macOS - with its favorites first, then by category. Type to search it.
+3. **Arguments** start as the script's own, one a line. Change them if you need to.
+4. **Timeout** starts as the script's own, up to 600 seconds.
+5. **Note it on** picks one of the asset's tickets for what was run and its output, as an internal note. From a ticket, it's that ticket.
+6. Click **Run**. When the script is done, its output shows in the window.
+
+The device has to be online. For a script that runs a long time, turn off **Wait for its output**: Tactical runs it, and the output is in the device's history in Tactical. If a script doesn't finish within its timeout, ITFlow stops waiting and says so - if it finishes, the output is there too.
+
 ## Bill per managed device {#billing}
 
 A recurring invoice line can count the client's devices in Tactical: set its **Quantity from** to **Managed devices**. It can count only some types - Desktop and Laptop for a managed workstation, Server and Virtual Machine for a managed server - or only those with a tag. A device Tactical no longer has stops counting at the next invoice. See [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat).
@@ -135,7 +178,7 @@ The list shows each provider, how many of its clients are linked and how many ha
 From a provider's menu:
 
 - **Clients** - its [Clients page](#link).
-- **Edit** - its name, addresses, key and alerts. Leave the key empty to keep the saved one. Which RMM it is can't be changed.
+- **Edit** - its name, addresses, key, alerts and [device actions](#device-actions). Leave the key empty to keep the saved one. Which RMM it is can't be changed.
 - **Sync now** - bring in its linked clients' devices now.
 - **Test the connection** - whether Tactical takes the key, and how many clients and devices it sees.
 - **Open Tactical** - its dashboard.
