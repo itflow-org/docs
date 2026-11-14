@@ -669,3 +669,61 @@ curl -X POST https://itflow.example.com/api/v1/documents/create.php \
 ### Update, archive, unarchive and delete {#documents-update}
 
 Each takes `document_id` and `client_id`, the document's own client. `update.php` also takes any of the fields under [Create](#documents-create). The document as it was is kept in its versions, as when it's edited in ITFlow. `delete.php` needs **Full** on Support, and the document has to be archived first. Its versions and its images go with it.
+
+## Files and folders {#files}
+
+A client's [Files](/documentation/files-and-documents) - uploads, kept in folders.
+
+| Endpoint | Does |
+|---|---|
+| GET `files/read.php` | Lists a client's files, or gets one |
+| POST `files/create.php` | Uploads a file |
+| GET `files/download.php` | Gets a file's content |
+| POST `files/update.php` | Renames a file, or moves it to another folder |
+| POST `files/archive.php` | Archives a file |
+| POST `files/unarchive.php` | Brings an archived file back |
+| POST `files/delete.php` | Deletes an archived file |
+| GET `folders/read.php` | Lists a client's folders |
+| POST `folders/create.php` | Adds a folder |
+| POST `folders/update.php` | Renames or moves a folder |
+| POST `folders/delete.php` | Deletes a folder |
+
+### Read and download {#files-read}
+
+Files read takes `file_id`, `client_id` and `folder_id`, with `limit` and `offset`, newest first - archived ones too. Each has its `file_name`, `file_ext`, `file_size` in bytes, `file_mime_type`, and the folder it's in (`file_folder_id`, `0` for the top level). Folders read takes `folder_id` and `client_id`, and each has its `parent_folder`.
+
+`download.php` takes `file_id`, and answers with the file itself, to save - not JSON:
+
+```
+curl -G https://itflow.example.com/api/v1/files/download.php \
+  --data-urlencode "api_key=YOUR_API_KEY" --data-urlencode "file_id=12" -o rdg-fw-01-backup.cfg
+```
+
+### Upload {#files-create}
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `file_name` | Required: its name with its extension, such as `rdg-fw-01-backup.cfg`. It has to be a kind Files takes - documents, images, archives, configs and the like. |
+| `file_data` | Required: the file, base64 |
+| `file_description` | |
+| `folder_id` | One of the client's folders. The top level if you leave it out. |
+| `contact_id`, `asset_id`, `software_id`, `location_id`, `vendor_id` | The client's, to link it to |
+
+The file comes in the JSON body, so how big it can be is up to your server's upload limit (`post_max_size` in PHP), and a base64 file is a third bigger than the file. Up to 500 MB.
+
+```
+curl -X POST https://itflow.example.com/api/v1/files/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "file_name": "rdg-fw-01-backup.cfg", "file_data": "c2V0IHN5c3RlbSBob3N0LW5hbWUgcmRnLWZ3LTAx", "asset_id": 1}'
+```
+
+### Change, archive and delete {#files-update}
+
+- **Files update** takes `file_id` and any of `file_name`, `file_description` and `folder_id` - `0` for the top level - and changes only what you send.
+- **Files delete** needs **Full** on Support and the file archived first. It goes from the server too.
+- **Folders create** takes `client_id`, `folder_name` and `parent_folder` - one of the client's folders, or the top level if you leave it out.
+- **Folders update** takes `folder_id`, `folder_name` and `parent_folder` - never the folder itself, or one inside it.
+- **Folders delete** needs **Full** on Support. What's in it - files, documents and folders - moves up to the folder it was in.
+
+Each takes `client_id`, the client's.

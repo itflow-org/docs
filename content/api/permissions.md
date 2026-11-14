@@ -14,17 +14,17 @@ Each kind of record belongs to an area of the role:
 | Records | Role area |
 |---|---|
 | Clients, contacts and their notes, locations, vendors, client portal invites | Clients |
-| Tickets, ticket replies, tasks, recurring tickets, projects, technicians, assets and their interfaces and notes, networks and their IP addresses, racks, licenses and their keys, domains, certificates, services, documents | Support |
+| Tickets, ticket replies, tasks, recurring tickets, projects, technicians, assets and their interfaces and notes, networks and their IP addresses, racks, licenses and their keys, domains, certificates, services, documents, files and folders | Support |
 | Credentials | Credentials |
-| Invoices, quotes, recurring invoices and their lines, products, taxes | Sales |
-| Expenses, and payments - with Read on Sales too | Financial |
+| Invoices, quotes, recurring invoices and their lines, products, taxes, contracts and their prepaid hours | Sales |
+| Expenses, accounts, other income, transfers, recurring expenses, and payments - with Read on Sales too | Financial |
 
 What a call does sets the level it needs in that area:
 
 | Call | Needs |
 |---|---|
-| `read.php`, `technicians/time.php` | Read |
-| `create.php`, `update.php`, `archive.php`, `unarchive.php`, and the calls that move a record along - `resolve.php`, `close.php`, `reopen.php`, `complete.php`, `send.php`, `mark_sent.php`, `cancel.php`, `accept.php`, `decline.php`, `approve.php`, `invoice.php`, `raise.php`, `apply_template.php`, `seats.php`, `renew.php`, `status.php` | Modify |
+| `read.php`, `technicians/time.php`, `files/download.php` | Read |
+| `create.php`, `update.php`, `archive.php`, `unarchive.php`, and the calls that move a record along - `resolve.php`, `close.php`, `reopen.php`, `complete.php`, `send.php`, `mark_sent.php`, `cancel.php`, `accept.php`, `decline.php`, `approve.php`, `invoice.php`, `raise.php`, `apply_template.php`, `seats.php`, `renew.php`, `activate.php`, `skip.php`, `record.php`, `move_on.php`, `withdraw.php`, `draw.php`, `put_back.php`, `recurring.php`, `unlink.php`, `status.php` | Modify |
 | `delete.php` | Full |
 
 An admin role can do everything. When the agent doesn't have the level, the call is turned away with a 403 that says what's missing:
@@ -36,7 +36,7 @@ An admin role can do everything. When the agent doesn't have the level, the call
 }
 ```
 
-[Tags](/api/lookups#tags) and [categories](/api/lookups#categories) follow the kind of record they're for. An asset's tags need Support, and expense categories need Financial. Only admins can make and delete tags. Anyone can read [roles](/api/lookups#roles), but an agent who isn't an admin sees only their own role.
+[Calendar events](/api/calendar#events) and [trips](/api/calendar#trips) have their own rules, as on their pages: an event with no client is anyone's, and anyone logs their own trips. [Tags](/api/lookups#tags) and [categories](/api/lookups#categories) follow the kind of record they're for. An asset's tags need Support, and expense categories need Financial. Only admins can make and delete tags. Anyone can read [roles](/api/lookups#roles), but an agent who isn't an admin sees only their own role.
 
 ## Which clients a key sees {#clients}
 

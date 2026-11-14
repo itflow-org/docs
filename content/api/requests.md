@@ -106,11 +106,11 @@ Some reads leave archived records out, and some include them:
 
 | Leave archived records out | Include them |
 |---|---|
-| documents, domains, locations, networks, licenses, vendors | clients, contacts, assets, credentials, certificates, racks, asset and contact notes |
-| services, technicians, taxes, tags, categories, roles - unless you add `archived=1` | tickets, invoices, quotes, products, expenses, payments, projects |
+| documents, domains, locations, networks, licenses, vendors | clients, contacts, assets, credentials, certificates, racks, asset and contact notes, files, contracts |
+| services, technicians, taxes, tags, categories, roles, calendars, accounts - unless you add `archived=1` | tickets, invoices, quotes, products, expenses, payments, projects |
 | ticket replies - unless you add `include_archived=1` | |
 
-Check `..._archived_at`, such as `client_archived_at`, to tell the archived ones apart. Clients, contacts, locations, credentials, documents, domains, networks, licenses, certificates, services, vendors, products, projects, racks and asset and contact notes have to be archived before they can be deleted.
+Check `..._archived_at`, such as `client_archived_at`, to tell the archived ones apart. Clients, contacts, locations, credentials, documents, domains, networks, licenses, certificates, services, vendors, products, projects, racks, asset and contact notes and files have to be archived before they can be deleted.
 
 ## Errors {#errors}
 
