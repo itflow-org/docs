@@ -168,6 +168,7 @@ return [
             'requirements' => 'Before you install',
             'install-script' => 'Install with the script',
             'manual' => 'Install by hand',
+            'hosting-panel' => 'Install on a hosting panel',
             'setup' => 'The setup wizard',
             'after-install' => 'After installing',
             'config-php' => 'config.php',

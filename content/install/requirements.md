@@ -31,7 +31,8 @@ ITFlow also connects out to other services: your mail server or Microsoft 365, G
 
 - **[With the install script](/install/install-script)** - recommended. One command on a fresh Debian 13 server installs everything, gets a certificate, and leaves you at the setup wizard.
 - **[By hand](/install/manual)** - step by step on Debian or Ubuntu, with Apache or nginx. Use this to put ITFlow on a server you already run.
-- **Another way** - a control panel such as HestiaCP, or a community Docker image. These can work if they give ITFlow what it needs, but expect to sort out problems with them yourself. [Install by hand](/install/manual#other-ways) lists what each needs to do.
+- **[On a hosting panel](/install/hosting-panel)** - HestiaCP, cPanel, Plesk or Jabali, beside your other sites.
+- **Another way** - a community Docker image, say. It can work if it gives ITFlow what it needs, but expect to sort out problems with it yourself. [Install by hand](/install/manual#other-ways) lists what it needs to do.
 
 ## Have these ready
 

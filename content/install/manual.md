@@ -82,7 +82,7 @@ systemctl reload apache2
 > [!WARNING]
 > Keep `AllowOverride All`. ITFlow comes with `.htaccess` files that keep `config.php`, the `.git` folder, the cron and scripts folders, backups and receipts out of reach of the web. They also stop anything uploaded from running as code. Debian and Ubuntu set Apache to ignore `.htaccess` files under `/var/www` unless the site allows them.
 
-Run PHP through mod_php, as above. With PHP-FPM behind Apache, the `.htaccess` file in `uploads` stops uploaded images and files from loading.
+Run PHP through mod_php, as above, or PHP-FPM. Before ITFlow 26.11.9, PHP-FPM behind Apache stopped your logo, avatars and photos from loading.
 
 ### nginx {#nginx}
 
@@ -102,6 +102,7 @@ server {
     location ^~ /cron/ { deny all; }
     location ^~ /scripts/ { deny all; }
     location ^~ /uploads/backups/ { deny all; }
+    location ^~ /uploads/canned_responses/ { deny all; }
     location ^~ /uploads/expenses/ { deny all; }
     location ^~ /uploads/tmp/ { deny all; }
     location ^~ /uploads/ {
@@ -189,7 +190,7 @@ The first time you sign in, [Get started](/install/after-install) opens to take 
 
 ## Other ways to host it {#other-ways}
 
-A control panel such as HestiaCP, or a container, can run ITFlow if it does what the steps above do:
+For HestiaCP, cPanel, Plesk and Jabali, see [Install on a hosting panel](/install/hosting-panel). Another panel, or a container, can run ITFlow if it does what the steps above do:
 
 - PHP 8.2 or later, with the extensions and limits in [Before you install](/install/requirements)
 - An empty MariaDB or MySQL database, and a user that can create tables in it
