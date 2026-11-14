@@ -1,9 +1,9 @@
 ---
 title: Billing and expenses
-description: API reference for invoices and their lines, recurring invoices, quotes, products, taxes and expenses.
+description: API reference for invoices and their lines, payments, recurring invoices, quotes, products, taxes and expenses.
 ---
 
-These endpoints need the **Sales** area of the key's role, apart from expenses, which need **Financial**. Making and changing needs **Modify**, and deleting **Full**. See [Keys and permissions](/api/permissions).
+These endpoints need the **Sales** area of the key's role, apart from expenses, which need **Financial**, and payments, which need **Financial** with **Read** on Sales. Making and changing needs **Modify**, and deleting **Full**. See [Keys and permissions](/api/permissions).
 
 ## Invoices {#invoices}
 
@@ -61,7 +61,7 @@ Every invoice is listed, whatever its status. `invoice_amount` is its total. ITF
 
 **Fields:** `invoice_id`, `invoice_prefix`, `invoice_number`, `invoice_scope`, `invoice_status`, `invoice_date`, `invoice_due`, `invoice_discount_amount`, `invoice_credit_amount`, `invoice_amount`, `invoice_currency_code`, `invoice_note`, `invoice_url_key`, `invoice_category_id`, `invoice_recurring_invoice_id`, `invoice_quote_id`, `invoice_client_id`, `invoice_created_at`, `invoice_updated_at`, `invoice_archived_at`, and the sums above.
 
-Payments can't be read through the API.
+Its payments are under [Payments](#payments).
 
 ### Create {#invoices-create}
 
@@ -184,6 +184,78 @@ curl -X POST https://itflow.example.com/api/v1/invoice_items/create.php \
 ### Update and delete {#invoice-items-update}
 
 Both take `item_id` and `client_id`, the invoice's client. `update.php` takes any of `name`, `description`, `qty`, `price` and `tax_id`, and changes only what you send. `delete.php` needs **Full** on Sales. A tracked product's stock follows the line - more taken off the shelf, or put back. The invoice's totals are worked out again, and the lines of a paid, cancelled or non-billable invoice can't change.
+
+## Payments {#payments}
+
+| Endpoint | Does |
+|---|---|
+| GET `payments/read.php` | Lists payments, or gets one |
+| POST `payments/create.php` | Records a payment on an invoice |
+| POST `payments/update.php` | Changes a payment |
+| POST `payments/send.php` | Emails a payment's receipt again |
+| POST `payments/delete.php` | Deletes a payment |
+
+Payments are the money in on invoices, as on [Payments](/billing/payments). They need **Financial** on the key's role, with **Read** on Sales to see the invoices: Read to list them, Modify to record, change and send a receipt, and Full to delete.
+
+### Read {#payments-read}
+
+| Parameter | Does |
+|---|---|
+| `payment_id` | Just this payment |
+| `invoice_id` | Just this invoice's payments |
+| `client_id` | Just this client's payments |
+| `limit`, `offset` | [Paging](/api/requests#paging) |
+
+Each payment comes with its invoice's `invoice_prefix`, `invoice_number` and `invoice_client_id`, and the `account_name` of the account it went into.
+
+```json
+{
+  "success": "True",
+  "count": 1,
+  "data": [
+    { "payment_id": "455", "payment_date": "2026-11-13", "payment_amount": "40.00", "payment_currency_code": "USD", "payment_method": "Check", "payment_reference": "Check 1042", "payment_account_id": "2", "payment_invoice_id": "436", "invoice_prefix": "INV-", "invoice_number": "436", "invoice_client_id": "19", "account_name": "Operating Checking" }
+  ]
+}
+```
+
+### Record a payment {#payments-create}
+
+| Field | Notes |
+|---|---|
+| `invoice_id` | Required. It has to be sent and still owed on - Sent, Viewed or Partial. |
+| `client_id` | The invoice's client. Needed when the key's agent can see only some clients. |
+| `amount` | What was paid - no more than is owed. All that's owed if you leave it out. |
+| `date` | When, as `2026-11-05`. Today if you leave it out. |
+| `account_id` | The [account](/finance/accounts) it went into. Your default payment account if you leave it out. |
+| `payment_method` | How it was paid - one of your [payment methods](/admin/billing#payment-methods), such as `Check`. Your default if you leave it out. |
+| `reference` | A check number or transaction ID |
+| `email_receipt` | `1` emails the client's primary and billing contacts a receipt, `0` doesn't. Left out, it goes when ITFlow sends mail. |
+
+It's recorded as Add Payment records it, in the invoice's currency. The invoice becomes Partial, or Paid - and a paid one does what paying does in ITFlow: a ticket waiting on it is told, and a lead becomes a client when that's set up. The answer has `invoice_status`, `balance` - what's still owed - and `receipt_to`.
+
+```
+curl -X POST https://itflow.example.com/api/v1/payments/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "invoice_id": 436, "amount": 40.00, "account_id": 2, "payment_method": "Check", "reference": "Check 1042"}'
+```
+
+```json
+{ "invoice_status": "Partial", "balance": 52, "receipt_to": ["Isla Brennan (ibrennan@thistleandvine.example)"], "success": "True", "count": "1", "data": [ { "insert_id": 455 } ] }
+```
+
+An invoice with nothing owed, too much, or an account or method that isn't one of yours is refused with `400` and why in `message` - the message lists your accounts or methods.
+
+Card payments are charged, and refunded, in ITFlow.
+
+### Change, send a receipt and delete {#payments-update}
+
+Each takes `payment_id` and `client_id`, its invoice's client.
+
+- **Update** takes any of `date`, `amount`, `account_id`, `payment_method` and `reference`, and changes only what you send. The amount can't be more than the invoice's total with its other payments. The invoice is paid, part paid or owing again to match.
+- **Send** emails its receipt again to the client's primary and billing contacts. The answer has `receipt_to`.
+- **Delete** needs **Full** on Financial. The invoice is owing again by that much. A card payment isn't refunded by deleting it.
+
+A payment that cleared on a [reconciled statement](/finance/reconciling) keeps its date, amount and account, and can't be deleted - undo that reconciliation first.
 
 ## Recurring invoices {#recurring-invoices}
 

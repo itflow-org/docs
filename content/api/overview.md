@@ -91,4 +91,4 @@ $r.data[0].insert_id
 - [Requests and responses](/api/requests) - parameters, paging, the client a request is for, and errors
 - [Keys and permissions](/api/permissions) - what a key can see and change
 - [Examples](/api/examples) - an RMM alert, a caller lookup, an asset sync and a time report
-- The reference: [clients and contacts](/api/clients), [tickets](/api/tickets), [IT documentation](/api/documentation), [billing](/api/billing), and [tags, categories and roles](/api/lookups)
+- The reference: [clients and contacts](/api/clients), [tickets](/api/tickets), [projects](/api/projects), [IT documentation](/api/documentation), [billing](/api/billing), and [tags, categories and roles](/api/lookups)

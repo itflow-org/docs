@@ -155,6 +155,7 @@ return [
             'examples' => 'Examples',
             'clients' => 'Clients and contacts',
             'tickets' => 'Tickets',
+            'projects' => 'Projects',
             'documentation' => 'IT documentation',
             'billing' => 'Billing and expenses',
             'lookups' => 'Tags, categories and roles',

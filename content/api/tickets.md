@@ -1,6 +1,6 @@
 ---
 title: Tickets
-description: API reference for tickets, ticket replies and technicians - raising, updating, replying to, resolving and closing tickets, and the time worked on them.
+description: API reference for tickets, ticket replies, tasks, recurring tickets and technicians - raising, updating, replying to, resolving and closing tickets, their tasks and approvals, scheduled tickets, and the time worked on them.
 ---
 
 These endpoints need the **Support** area of the key's role. See [Keys and permissions](/api/permissions).
@@ -81,9 +81,10 @@ curl -G https://itflow.example.com/api/v1/tickets/read.php \
 | `ticket_fill_ins` | The template's fill-ins answered, as an object: `{"Employee Name": "Sam Reyes", "Needs a Computer": "Yes"}` |
 | `ticket_status` | An open status to start in, by number - `3` On Hold, say. Not Resolved or Closed. Otherwise it starts New, or Open when assigned. |
 | `ticket_invoice_id` | One of the client's invoices it waits on. When that's paid in full, the ticket gets a note, goes from On Hold back to Open, and its agent is told. |
+| `ticket_project_id` | The [project](/api/projects) it's part of - one of the client's, or an internal one |
 | `ticket_notify` | `1` to tell people about it as when it's raised in ITFlow, or `agents` to tell only your team. See below. |
 
-A contact, asset or vendor that isn't the client's is left off. The ticket gets its number and SLA as any other ticket does, and its source is **API**.
+A contact, asset or vendor that isn't the client's is left off. A project that isn't the client's or an internal one is refused with `400`. The ticket gets its number and SLA as any other ticket does, and its source is **API**.
 
 No email goes out unless you send `ticket_notify`. With `1`, the contact and the ticket's watchers get the **Ticket Created** email (when **Email clients about their tickets** is on, in [Admin > Settings > Notifications](/admin/mail#notifications)), the [new-ticket address](/admin/tickets) hears about it, and so does the agent it's assigned to. With `agents`, only the new-ticket address and the agent do - for a ticket the client already has an email about, such as its invoice.
 
@@ -127,7 +128,7 @@ The template's id is the number in its address in Admin > Ticket Templates. Fill
 
 ### Update {#tickets-update}
 
-Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields under [Create](#tickets-create) apart from `client_id`. Only what you send changes, and a closed ticket can't be changed. To change a ticket's status, add a [reply](#replies-create) with `ticket_status`, or resolve or close it.
+Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields under [Create](#tickets-create) apart from `client_id`. Only what you send changes, and a closed ticket can't be changed. `ticket_project_id` `0` takes it off its project. To change a ticket's status, add a [reply](#replies-create) with `ticket_status`, or resolve or close it.
 
 ```json
 { "api_key": "YOUR_API_KEY", "client_id": 1, "ticket_id": 1880, "ticket_assigned_to": 2, "ticket_priority": "Urgent" }
@@ -223,6 +224,150 @@ Both take `ticket_reply_id` and `client_id`, the ticket's own client.
 
 - **Edit** (`update.php`) takes `ticket_reply`, `ticket_reply_type` and `ticket_reply_time_worked`, and changes only what you send. A client's own reply can't be edited. Making a reply Public doesn't email it. An agent newly @mentioned in an internal note is told, as in ITFlow.
 - **Archive** takes the reply off the ticket, and its time worked stops counting.
+
+## Tasks {#tasks}
+
+| Endpoint | Does |
+|---|---|
+| GET `tasks/read.php` | A ticket's tasks, or one task, with their approvals |
+| POST `tasks/create.php` | Adds a task to a ticket |
+| POST `tasks/update.php` | Changes a task |
+| POST `tasks/complete.php` | Marks a task done, or not done |
+| POST `tasks/delete.php` | Deletes a task |
+| POST `task_approvals/create.php` | Asks for a task to be approved |
+| POST `task_approvals/approve.php` | Approves a task, as the key's agent |
+| POST `task_approvals/delete.php` | Takes an approval off a task |
+
+### Read {#tasks-read}
+
+| Parameter | Does |
+|---|---|
+| `ticket_id` | This ticket's tasks, in their order. You need this or `task_id`. |
+| `task_id` | Just this task |
+| `client_id` | Only if the ticket is this client's |
+
+Each task has its `approvals`: who is asked - `approval_scope` `client` or `internal`, and `approval_type` - and `approval_status`: `pending`, `approved` or `declined`.
+
+```json
+{
+  "success": "True",
+  "count": 1,
+  "data": [
+    {
+      "task_id": "3823", "task_name": "Check UPS runtime and battery date", "task_order": "0", "task_completion_estimate": "20",
+      "task_completed_at": null, "task_completed_by": null, "task_ticket_id": "92", "ticket_prefix": "TCK-", "ticket_number": "92", "ticket_client_id": "1",
+      "approvals": [
+        { "approval_id": "1", "approval_scope": "internal", "approval_type": "specific", "approval_required_user_id": "2", "approval_status": "pending", "approval_created_by": "1", "approval_approved_by": null, "approval_task_id": "3823" }
+      ]
+    }
+  ]
+}
+```
+
+`task_completion_estimate` is in minutes.
+
+### Create, update and delete {#tasks-create}
+
+**Create** takes `ticket_id`, `task_name` (required, up to 255 characters) and `task_completion_estimate`, and puts the task at the end of the list. **Update** takes `task_id` and any of `task_name`, `task_order` and `task_completion_estimate`, and changes only what you send. **Delete** takes `task_id`, needs **Full** on Support, and its approvals go with it. Each takes `client_id`, the ticket's client. Once a ticket is resolved or closed its tasks stay as they are.
+
+### Mark done {#tasks-complete}
+
+`complete.php` takes `task_id`, `client_id`, and `completed`: `1` (the default) marks it done, as the key's agent, and `0` not done again. The ticket gets an internal note saying so, as when it's ticked on the ticket. A task waiting on an approval, or whose approval was declined, can't be marked done. Nor can a task on a closed ticket change.
+
+### Approvals {#tasks-approvals}
+
+**Ask** (`task_approvals/create.php`) takes `task_id`, `client_id` and:
+
+| Field | Notes |
+|---|---|
+| `approval_scope` | Required: `client` or `internal` (your team) |
+| `approval_type` | From the client: `any` - the ticket's contact, the default - `technical` or `billing` (the client's technical or billing contacts). From your team: `any` - any agent but the key's - or `specific`. |
+| `approval_required_user_id` | With `specific`, the agent who has to approve it |
+
+They're emailed, with a link to approve or decline it. An agent asked by name is told in ITFlow too. The answer has `emailed`, how many it went to. A task that's done, or on a resolved or closed ticket, isn't asked about.
+
+**Approve** (`task_approvals/approve.php`) takes `approval_id` and `client_id`, and approves it as the key's agent: a pending approval asked of your team - of this agent, or of anyone but the agent who asked. The agent who asked is told. The client approves theirs from the email.
+
+**Delete** (`task_approvals/delete.php`) takes `approval_id` and `client_id`, needs **Full** on Support, and takes the approval off, whatever its status.
+
+## Recurring tickets {#recurring-tickets}
+
+| Endpoint | Does |
+|---|---|
+| GET `recurring_tickets/read.php` | Lists recurring tickets, or gets one |
+| POST `recurring_tickets/create.php` | Makes a recurring ticket |
+| POST `recurring_tickets/update.php` | Changes one |
+| POST `recurring_tickets/raise.php` | Raises its ticket now |
+| POST `recurring_tickets/status.php` | Pauses or resumes one |
+| POST `recurring_tickets/delete.php` | Deletes one |
+
+### Read {#recurring-tickets-read}
+
+| Parameter | Does |
+|---|---|
+| `recurring_ticket_id` | Just this one, with its tasks, other assets and fill-ins |
+| `client_id` | Just this client's |
+| `limit`, `offset` | [Paging](/api/requests#paging) |
+
+Paused ones are listed too, with `recurring_ticket_paused_at` set. With `recurring_ticket_id`, it also has `tasks` (each a `name` and `estimate` in minutes), `asset_ids` - its other assets - and `fill_ins`, its template's fill-ins with their answers.
+
+```json
+{
+  "success": "True",
+  "count": 1,
+  "data": [
+    {
+      "recurring_ticket_id": "22", "recurring_ticket_subject": "Port numbers - [Client]", "recurring_ticket_priority": "High", "recurring_ticket_frequency": "Monthly",
+      "recurring_ticket_start_date": "2026-12-15", "recurring_ticket_next_run": "2026-12-15", "recurring_ticket_paused_at": null, "recurring_ticket_assigned_to": "1",
+      "recurring_ticket_client_id": "1", "recurring_ticket_ticket_template_id": "1",
+      "tasks": [ { "name": "Collect LOA", "estimate": 15 }, { "name": "Confirm FOC date", "estimate": 10 } ],
+      "asset_ids": [1, 2],
+      "fill_ins": [ { "name": "Carrier", "type": "list", "value": "Lumen" } ]
+    }
+  ]
+}
+```
+
+**Fields:** `recurring_ticket_id`, `recurring_ticket_category`, `recurring_ticket_subject`, `recurring_ticket_details`, `recurring_ticket_priority`, `recurring_ticket_frequency`, `recurring_ticket_billable`, `recurring_ticket_start_date`, `recurring_ticket_next_run`, `recurring_ticket_paused_at`, `recurring_ticket_created_at`, `recurring_ticket_updated_at`, `recurring_ticket_created_by`, `recurring_ticket_assigned_to`, `recurring_ticket_client_id`, `recurring_ticket_contact_id`, `recurring_ticket_asset_id`, `recurring_ticket_ticket_template_id`.
+
+### Create {#recurring-tickets-create}
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `subject` | Required, unless a template gives it one. `[Month]`, `[Quarter]` and the like are filled in each time. |
+| `frequency` | Required: `Three Days`, `Weekly`, `Biweekly`, `Monthly`, `Quarterly`, `Biannually` or `Annually` |
+| `start_date` | Its first run, as `2026-11-05` - today or later. Today if you leave it out. |
+| `details` | The description. HTML is kept. |
+| `priority` | `Low`, `Medium` (the default), `High` or `Urgent` |
+| `billable` | `1` if the time on its tickets is billable. Needs **Modify** on Sales. |
+| `assigned_to` | The agent its tickets go to. They're told, unless it's the key's own agent. |
+| `contact_id`, `asset_id` | The client's contact and asset it's for |
+| `asset_ids` | The client's other assets, as a list |
+| `category_id` | A ticket [category](/api/lookups#categories) |
+| `ticket_template_id` | A [ticket template](/admin/ticket-templates) to raise its tickets from |
+| `fill_ins` | The template's fill-ins answered, as for [tickets](#tickets-template) - once, for every ticket it raises |
+| `tasks` | Its tasks: names, or `{"name": "Confirm FOC date", "estimate": 10}` |
+
+From a template, it gets the template's subject, details, priority, category and agent unless you send them, its billing when the key's agent may set billing, and its tasks - the ones for the answers given - unless you send `tasks`. A field that won't do - a past date, a frequency or priority that isn't one, a contact or asset that isn't the client's, a required fill-in left out - is refused with `400` and why in `message`. The answer has `next_date`, its first run.
+
+```
+curl -X POST https://itflow.example.com/api/v1/recurring_tickets/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "subject": "Backup restore test - [Month]", "frequency": "Monthly", "start_date": "2026-12-01", "assigned_to": 2, "asset_id": 8, "tasks": ["Restore a file from last night", {"name": "Note the restore time", "estimate": 5}]}'
+```
+
+### Update {#recurring-tickets-update}
+
+`update.php` takes `recurring_ticket_id`, `client_id` - its own client - and any of the fields under [Create](#recurring-tickets-create) apart from `client_id` and `start_date`, and `next_date`: its next run, today or later. Only what you send changes. A moved `next_date` is the day the schedule keeps to from then. `tasks` and `asset_ids` replace what it had. Its fill-ins keep their answers but for the ones you send in `fill_ins`.
+
+### Raise now, pause and delete {#recurring-tickets-raise}
+
+Each takes `recurring_ticket_id` and `client_id`.
+
+- **Raise** (`raise.php`) raises its ticket now, as **Raise now** does: set up as it says, the client told when ticket emails to clients are on, and the [new-ticket address](/admin/tickets) told. Its next run moves on, so this one takes that one's place. The answer has `ticket_id`, `ticket_reference` and `next_date`.
+- **Status** (`status.php`) takes `status`: `0` pauses it - kept, raising nothing - and `1` resumes it. Runs it missed while paused aren't raised; it picks up from today. The answer has `next_date`.
+- **Delete** needs **Full** on Support. Its tasks and other assets go with it; the tickets it raised stay.
 
 ## Technicians {#technicians}
 
