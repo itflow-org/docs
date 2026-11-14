@@ -134,6 +134,56 @@ Each takes `asset_id` and `client_id`, the asset's own client, and goes in the a
 
 `delete.php` takes `asset_id` and `client_id`, and needs **Full** on Support. It also deletes the asset's network interfaces and takes it out of its rack. Credentials linked to it stay with the client.
 
+### Interfaces {#asset-interfaces}
+
+An asset's ports and network cards.
+
+| Endpoint | Does |
+|---|---|
+| GET `asset_interfaces/read.php` | An asset's interfaces, or one, with what each is plugged into |
+| POST `asset_interfaces/create.php` | Adds an interface |
+| POST `asset_interfaces/update.php` | Changes, plugs in or unplugs an interface |
+| POST `asset_interfaces/delete.php` | Deletes an interface |
+
+Read takes `asset_id` or `interface_id`, and `client_id`. Each interface has its `network_name`, and `connected_to`: the `interface_id`, `interface_name`, `asset_id` and `asset_name` at the other end of the cable, or `null`.
+
+| Field | Notes |
+|---|---|
+| `asset_id` | Create only, required |
+| `interface_name` | Required - its name or port number, such as `Gi1/0/24`. The asset can't have two with the same name. |
+| `interface_type` | An [interface type](/admin/categories-and-tags), such as `SFP+` |
+| `interface_ip` | An IP address, `DHCP`, or empty for none. It has to be inside its network. |
+| `interface_network_id` | One of the client's [networks](#networks) |
+| `interface_mac` | Six pairs, such as `00:1A:2B:3C:4D:5E` |
+| `interface_nat_ip`, `interface_ipv6`, `interface_vlans` | `interface_vlans` such as `Trunk 1, 10, 20-29` |
+| `interface_description`, `interface_notes` | |
+| `interface_primary` | `1` makes it the asset's primary - the one its address shows by. The asset's first interface is its primary anyway. |
+| `connected_to` | The `interface_id` it's plugged into, on another of the client's assets. `0` unplugs it. One cable per port: whatever either end was plugged into is let go. |
+
+`client_id` is the asset's client. Update takes `interface_id` and changes only what you send. Delete needs **Full** on Support. The answer to create and update has `warnings` - such as the address being on another device too.
+
+```
+curl -X POST https://itflow.example.com/api/v1/asset_interfaces/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "asset_id": 8, "interface_name": "eth1", "interface_type": "Ethernet", "interface_network_id": 2, "interface_ip": "192.168.40.77", "connected_to": 33}'
+```
+
+### Notes {#asset-notes}
+
+The notes on an asset's page - what was done, parts replaced, changes made.
+
+| Endpoint | Does |
+|---|---|
+| GET `asset_notes/read.php` | An asset's notes, newest first, or one |
+| POST `asset_notes/create.php` | Adds a note |
+| POST `asset_notes/archive.php` | Archives a note |
+| POST `asset_notes/unarchive.php` | Brings an archived note back |
+| POST `asset_notes/delete.php` | Deletes an archived note |
+
+Read takes `asset_id` or `asset_note_id`, with `limit` and `offset`. Archived notes are listed too. Each has `asset_note_created_by_name`, the agent who wrote it.
+
+Create takes `asset_id`, `asset_note_type` - one of your [asset note types](/admin/categories-and-tags), such as `Repair` - and `asset_note`, both required. It's written by the key's agent. The others take `asset_note_id`. Delete needs **Full** on Support, and the note has to be archived first. Each takes `client_id`, the asset's client.
+
 ## Networks {#networks}
 
 | Endpoint | Does |
@@ -184,6 +234,71 @@ Archived networks are left out.
 ### Update, archive, unarchive and delete {#networks-update}
 
 Each takes `network_id` and `client_id`, the network's own client. `update.php` also takes any of the fields under [Create](#networks-create). Only active networks can be changed. `delete.php` needs **Full** on Support, and the network has to be archived first. The network interfaces on it stay, on no network.
+
+### IP addresses {#network-ips}
+
+The addresses documented on a network - its address plan.
+
+| Endpoint | Does |
+|---|---|
+| GET `network_ips/read.php` | A network's addresses, lowest first, or one |
+| POST `network_ips/create.php` | Documents an address, or a run of them |
+| POST `network_ips/update.php` | Changes an address |
+| POST `network_ips/delete.php` | Takes an address off the plan |
+
+Read takes `network_id` or `ip_id`, with `limit` and `offset`.
+
+| Field | Notes |
+|---|---|
+| `network_id` | Create only, required |
+| `ip_address` | Required. The host part alone, such as `20` on a /24, is filled out from the subnet. |
+| `ip_range_end` | Create only: the last address of a run - up to 256 at a time. Those outside the subnet or documented already are skipped. |
+| `ip_type` | `Static` (fixed, the default), `Reservation` (a DHCP reservation), `Reserved` (held back) or `Virtual` (floating) |
+| `ip_mac` | The device's MAC. A reservation needs one. |
+| `ip_hostname`, `ip_description` | |
+
+An address has to be inside the network's subnet and documented on it only once. Update takes `ip_id` and changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the network's client. The answer to create has `added` and `skipped`.
+
+```json
+{ "api_key": "YOUR_API_KEY", "network_id": 2, "ip_address": "238", "ip_range_end": "245", "ip_type": "Reserved", "ip_description": "Printer pool" }
+```
+
+## Racks {#racks}
+
+| Endpoint | Does |
+|---|---|
+| GET `racks/read.php` | Lists a client's racks, or gets one with what's in it |
+| POST `racks/create.php` | Adds a rack |
+| POST `racks/update.php` | Changes a rack |
+| POST `racks/archive.php` | Archives a rack |
+| POST `racks/unarchive.php` | Brings an archived rack back |
+| POST `racks/delete.php` | Deletes an archived rack |
+| POST `rack_units/create.php` | Mounts an item in a rack |
+| POST `rack_units/update.php` | Moves or changes an item |
+| POST `rack_units/delete.php` | Takes an item out |
+
+Read takes `rack_id`, or `client_id`, with `limit` and `offset`. Archived racks are listed too. With `rack_id` the rack has `units`, what's mounted in it, from U1 up: each item's `unit_start_number` to `unit_end_number`, `unit_face` (`front` or `rear`), `unit_full_depth`, and the `asset_id` and `asset_name` it is - or its own `unit_device` name and `unit_type`.
+
+**A rack** takes `client_id`, `rack_name`, `rack_type` - one of your [rack types](/admin/categories-and-tags) - and `rack_units`, how tall it is (1 to 70), all required to create one. Then `rack_units_descending` (`1` when U1 is at the top), `rack_model`, `rack_depth`, `rack_power_capacity` (watts), `rack_location_id` (one of the client's locations), `rack_physical_location`, `rack_description` and `rack_notes`. Update takes `rack_id` and changes only what you send - a rack can't be made shorter than the highest item in it. Delete needs **Full** on Support and the rack archived first; what's in it goes with it, and its assets stay. Photos are added in ITFlow.
+
+**An item** takes `rack_id` to create, `unit_id` to update or delete, and:
+
+| Field | Notes |
+|---|---|
+| `asset_id` | One of the client's assets - in one rack at a time |
+| `unit_device` | A name, for an item that isn't an asset |
+| `unit_type` | Without an asset: `Device` (the default), `Patch Panel`, `Cable Management`, `Shelf`, `PDU`, `UPS`, `KVM / Console` or `Blanking Panel` |
+| `unit_start_number` | Required: the lowest unit it takes |
+| `unit_height` | How many units. 1 if you leave it out. |
+| `unit_face` | `front` (the default) or `rear` |
+| `unit_full_depth` | `1` when it takes the front and the rear |
+| `unit_power_watts`, `unit_notes` | |
+
+It has to fit the rack, with nothing else on that face. Update changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the rack's client.
+
+```json
+{ "api_key": "YOUR_API_KEY", "rack_id": 1, "asset_id": 12, "unit_start_number": 10, "unit_height": 2 }
+```
 
 ## Credentials {#credentials}
 
@@ -277,12 +392,19 @@ Licenses are called software in the API.
 | POST `software/archive.php` | Archives a license |
 | POST `software/unarchive.php` | Brings an archived license back |
 | POST `software/delete.php` | Deletes an archived license |
+| POST `software/seats.php` | Sets who holds a seat |
+| POST `software/renew.php` | Renews a license |
+| GET `software_keys/read.php` | A license's keys, and who each is handed to |
+| POST `software_keys/create.php` | Adds keys |
+| POST `software_keys/update.php` | Changes a key, or who it's handed to |
+| POST `software_keys/delete.php` | Deletes a key |
 
 ### Read {#licenses-read}
 
 | Parameter | Does |
 |---|---|
 | `software_id` | Just this license |
+| `software_key` | The license with this key - its own, or one of its keys |
 | `client_id` | Just this client's licenses |
 | `limit`, `offset` | [Paging](/api/requests#paging) |
 
@@ -325,6 +447,22 @@ curl -X POST https://itflow.example.com/api/v1/software/create.php \
 ### Update, archive, unarchive and delete {#licenses-update}
 
 Each takes `software_id` and `client_id`, the license's own client. `update.php` also takes any of the fields under [Create](#licenses-create), and changes only what you send. Only active licenses can be changed. `delete.php` needs **Full** on Support, and the license has to be archived first. Its seats and keys go with it.
+
+### Seats and renewal {#licenses-seats}
+
+**Seats** (`seats.php`) takes `software_id`, `client_id`, and `asset_ids` and `contact_ids` - the client's devices and users that hold a seat, each list in place of the one it had. One you leave out stays as it is. A device or user that loses its seat gives back the keys it was handed. The answer has `added` and `removed`, by name, and `warning` when it's over its seats.
+
+**Renew** (`renew.php`) takes `software_id`, `client_id`, and `renew_term` - `1m`, `3m`, `6m`, `1y`, `2y` or `3y`, from its renewal date, or from today once that has passed - or `renew_date`, the new date. `purchase_reference` records what it was renewed on. The answer has `software_expire`.
+
+### Keys {#license-keys}
+
+Read takes `software_id` or `software_key_id`. Each key has the `assets` and `contacts` it's handed to.
+
+- **Create** takes `software_id` and `keys`: one per line, or a list. Blank ones and keys it has already are skipped. The answer has `added`.
+- **Update** takes `software_key_id`, and any of `software_key`, `asset_ids` and `contact_ids` - who it's handed to, in place of those it had. Each gets a seat if it had none. The answer has `warning`, as for seats.
+- **Delete** takes `software_key_id` and needs **Full** on Support. Its seats stay.
+
+Each takes `client_id`, the license's client.
 
 ## Domains {#domains}
 

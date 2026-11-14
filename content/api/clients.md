@@ -182,6 +182,20 @@ curl -X POST https://itflow.example.com/api/v1/contacts/create.php \
 
 Each takes `contact_id` and `client_id`, the contact's own client. `update.php` also takes any of the fields under [Create](#contacts-create), and changes only what you send. Archiving a contact also archives their client portal sign-in. `delete.php` needs **Full** on Clients, and the contact has to be archived first.
 
+### Notes {#contact-notes}
+
+The notes on a contact's page - a call, an email, a meeting.
+
+| Endpoint | Does |
+|---|---|
+| GET `contact_notes/read.php` | A contact's notes, newest first, or one |
+| POST `contact_notes/create.php` | Adds a note |
+| POST `contact_notes/archive.php` | Archives a note |
+| POST `contact_notes/unarchive.php` | Brings an archived note back |
+| POST `contact_notes/delete.php` | Deletes an archived note |
+
+They work as [asset notes](/api/documentation#asset-notes) do, with `contact_id`, `contact_note_id`, `contact_note_type` - one of your contact note types, such as `Call` - and `contact_note`. They need the **Clients** area.
+
 ## Client portal invites {#portal-invites}
 
 | Endpoint | Does |

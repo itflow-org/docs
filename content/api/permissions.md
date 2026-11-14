@@ -13,8 +13,8 @@ Each kind of record belongs to an area of the role:
 
 | Records | Role area |
 |---|---|
-| Clients, contacts, locations, vendors, client portal invites | Clients |
-| Tickets, ticket replies, tasks, recurring tickets, projects, technicians, assets, networks, licenses, domains, certificates, services, documents | Support |
+| Clients, contacts and their notes, locations, vendors, client portal invites | Clients |
+| Tickets, ticket replies, tasks, recurring tickets, projects, technicians, assets and their interfaces and notes, networks and their IP addresses, racks, licenses and their keys, domains, certificates, services, documents | Support |
 | Credentials | Credentials |
 | Invoices, quotes, recurring invoices and their lines, products, taxes | Sales |
 | Expenses, and payments - with Read on Sales too | Financial |
@@ -24,7 +24,7 @@ What a call does sets the level it needs in that area:
 | Call | Needs |
 |---|---|
 | `read.php`, `technicians/time.php` | Read |
-| `create.php`, `update.php`, `archive.php`, `unarchive.php`, and the calls that move a record along - `resolve.php`, `close.php`, `reopen.php`, `complete.php`, `send.php`, `mark_sent.php`, `cancel.php`, `accept.php`, `decline.php`, `approve.php`, `invoice.php`, `raise.php`, `apply_template.php`, `status.php` | Modify |
+| `create.php`, `update.php`, `archive.php`, `unarchive.php`, and the calls that move a record along - `resolve.php`, `close.php`, `reopen.php`, `complete.php`, `send.php`, `mark_sent.php`, `cancel.php`, `accept.php`, `decline.php`, `approve.php`, `invoice.php`, `raise.php`, `apply_template.php`, `seats.php`, `renew.php`, `status.php` | Modify |
 | `delete.php` | Full |
 
 An admin role can do everything. When the agent doesn't have the level, the call is turned away with a 403 that says what's missing:
