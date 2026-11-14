@@ -14,6 +14,7 @@ A tag needs the role area of its kind of record - Support for asset tags, Client
 | GET `tags/read.php` | Lists tags, finds one, or gets a record's tags |
 | POST `tags/create.php` | Makes a tag - admins only |
 | POST `tags/update.php` | Sets a record's tags, or adds or takes some off |
+| POST `tags/delete.php` | Deletes a tag - admins only |
 
 Records that can be tagged also come with their tags when you read them, as a `tags` list.
 
@@ -89,6 +90,10 @@ curl -X POST https://itflow.example.com/api/v1/tags/update.php \
   ]
 }
 ```
+
+### Delete {#tags-delete}
+
+Only a key whose agent is an admin can delete tags. `delete.php` takes `tag_id`, and the tag comes off every record that has it. A tag that [recurring invoice lines](/api/billing#recurring-invoice-items) count users or devices by can't be deleted - archive it, or merge it into another, in [Admin > Tags](/admin/categories-and-tags).
 
 ## Categories {#categories}
 

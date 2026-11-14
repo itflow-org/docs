@@ -16,7 +16,7 @@ Each kind of record belongs to an area of the role:
 | Clients, contacts, locations, vendors, client portal invites | Clients |
 | Tickets, ticket replies, technicians, assets, networks, licenses, domains, certificates, services, documents | Support |
 | Credentials | Credentials |
-| Invoices, invoice items, recurring invoices, quotes, products, taxes | Sales |
+| Invoices, quotes, recurring invoices and their lines, products, taxes | Sales |
 | Expenses | Financial |
 
 What a call does sets the level it needs in that area:
@@ -24,7 +24,7 @@ What a call does sets the level it needs in that area:
 | Call | Needs |
 |---|---|
 | `read.php`, `technicians/time.php` | Read |
-| `create.php`, `update.php`, `archive.php`, `unarchive.php`, `resolve.php`, `close.php` | Modify |
+| `create.php`, `update.php`, `archive.php`, `unarchive.php`, and the calls that move a record along - `resolve.php`, `close.php`, `reopen.php`, `send.php`, `mark_sent.php`, `cancel.php`, `accept.php`, `decline.php`, `invoice.php`, `status.php` | Modify |
 | `delete.php` | Full |
 
 An admin role can do everything. When the agent doesn't have the level, the call is turned away with a 403 that says what's missing:
@@ -36,7 +36,7 @@ An admin role can do everything. When the agent doesn't have the level, the call
 }
 ```
 
-[Tags](/api/lookups#tags) and [categories](/api/lookups#categories) follow the kind of record they're for. An asset's tags need Support, and expense categories need Financial. Only admins can make tags. Anyone can read [roles](/api/lookups#roles), but an agent who isn't an admin sees only their own role.
+[Tags](/api/lookups#tags) and [categories](/api/lookups#categories) follow the kind of record they're for. An asset's tags need Support, and expense categories need Financial. Only admins can make and delete tags. Anyone can read [roles](/api/lookups#roles), but an agent who isn't an admin sees only their own role.
 
 ## Which clients a key sees {#clients}
 

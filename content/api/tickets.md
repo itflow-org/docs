@@ -14,8 +14,8 @@ These endpoints need the **Support** area of the key's role. See [Keys and permi
 | POST `tickets/update.php` | Changes a ticket |
 | POST `tickets/resolve.php` | Resolves a ticket |
 | POST `tickets/close.php` | Closes a ticket |
-
-Tickets can't be deleted through the API.
+| POST `tickets/reopen.php` | Reopens a resolved ticket |
+| POST `tickets/delete.php` | Deletes a ticket that isn't closed |
 
 ### Read {#tickets-read}
 
@@ -133,14 +133,19 @@ Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields u
 { "api_key": "YOUR_API_KEY", "client_id": 1, "ticket_id": 1880, "ticket_assigned_to": 2, "ticket_priority": "Urgent" }
 ```
 
-### Resolve and close {#tickets-resolve}
+### Resolve, close and reopen {#tickets-resolve}
 
-Both take `ticket_id` and `client_id`, the ticket's own client.
+Each takes `ticket_id` and `client_id`, the ticket's own client.
 
 - **Resolve** sets the ticket to Resolved and records whether its resolution SLA was met. A ticket that hadn't had a first response gets one now.
 - **Close** resolves the ticket if it isn't already, then closes it, as the key's agent. A closed ticket can't be changed any more.
+- **Reopen** puts a resolved ticket back to Open, and its resolution SLA runs again. A closed ticket can't be reopened - raise a new one.
 
 To say why when you resolve, add a reply with `"ticket_status": 4` instead. See [Replies](#replies-create).
+
+### Delete {#tickets-delete}
+
+`delete.php` takes `ticket_id` and `client_id`, and needs **Full** on Support. The ticket's replies, tasks, attachments and history go with it, and its trips stay, without it. A closed ticket is kept, not deleted.
 
 ## Ticket replies {#replies}
 
@@ -148,6 +153,8 @@ To say why when you resolve, add a reply with `"ticket_status": 4` instead. See 
 |---|---|
 | GET `ticket_replies/read.php` | Lists replies, or gets one |
 | POST `ticket_replies/create.php` | Adds a reply or note to a ticket |
+| POST `ticket_replies/update.php` | Edits a reply or note |
+| POST `ticket_replies/archive.php` | Archives a reply or note |
 
 ### Read {#replies-read}
 
@@ -209,6 +216,13 @@ curl -X POST https://itflow.example.com/api/v1/ticket_replies/create.php \
   -H "Content-Type: application/json" \
   -d '{"api_key": "YOUR_API_KEY", "ticket_id": 1880, "ticket_reply": "Repository share was offline after a NAS update. Remounted and re-ran the job - it completed.", "ticket_reply_time_worked": "00:25:00", "ticket_status": 4}'
 ```
+
+### Edit and archive {#replies-update}
+
+Both take `ticket_reply_id` and `client_id`, the ticket's own client.
+
+- **Edit** (`update.php`) takes `ticket_reply`, `ticket_reply_type` and `ticket_reply_time_worked`, and changes only what you send. A client's own reply can't be edited. Making a reply Public doesn't email it. An agent newly @mentioned in an internal note is told, as in ITFlow.
+- **Archive** takes the reply off the ticket, and its time worked stops counting.
 
 ## Technicians {#technicians}
 

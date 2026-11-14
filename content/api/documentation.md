@@ -12,6 +12,8 @@ These endpoints need the **Support** area of the key's role, apart from credenti
 | GET `assets/read.php` | Lists assets, or finds them |
 | POST `assets/create.php` | Adds an asset |
 | POST `assets/update.php` | Changes an asset |
+| POST `assets/archive.php` | Archives an asset |
+| POST `assets/unarchive.php` | Brings an archived asset back |
 | POST `assets/delete.php` | Deletes an asset |
 
 ### Read {#assets-read}
@@ -124,6 +126,10 @@ curl -X POST https://itflow.example.com/api/v1/assets/update.php \
   -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "asset_id": 2, "asset_specs": {"ports": 24, "sfp_ports": 2, "poe_watts": 400, "managed": "Managed"}}'
 ```
 
+### Archive and unarchive {#assets-archive}
+
+Each takes `asset_id` and `client_id`, the asset's own client, and goes in the asset's history.
+
 ### Delete {#assets-delete}
 
 `delete.php` takes `asset_id` and `client_id`, and needs **Full** on Support. It also deletes the asset's network interfaces and takes it out of its rack. Credentials linked to it stay with the client.
@@ -137,6 +143,7 @@ curl -X POST https://itflow.example.com/api/v1/assets/update.php \
 | POST `networks/update.php` | Changes a network |
 | POST `networks/archive.php` | Archives a network |
 | POST `networks/unarchive.php` | Brings an archived network back |
+| POST `networks/delete.php` | Deletes an archived network |
 
 ### Read {#networks-read}
 
@@ -174,9 +181,9 @@ Archived networks are left out.
 | `network_location_id` | One of the client's [locations](/api/clients#locations) |
 | `network_description`, `network_notes` | |
 
-### Update, archive and unarchive {#networks-update}
+### Update, archive, unarchive and delete {#networks-update}
 
-Each takes `network_id` and `client_id`, the network's own client. `update.php` also takes any of the fields under [Create](#networks-create). Only active networks can be changed. Networks can't be deleted through the API.
+Each takes `network_id` and `client_id`, the network's own client. `update.php` also takes any of the fields under [Create](#networks-create). Only active networks can be changed. `delete.php` needs **Full** on Support, and the network has to be archived first. The network interfaces on it stay, on no network.
 
 ## Credentials {#credentials}
 
@@ -265,8 +272,13 @@ Licenses are called software in the API.
 | Endpoint | Does |
 |---|---|
 | GET `software/read.php` | Lists licenses, or gets one |
+| POST `software/create.php` | Adds a license |
+| POST `software/update.php` | Changes a license |
 | POST `software/archive.php` | Archives a license |
 | POST `software/unarchive.php` | Brings an archived license back |
+| POST `software/delete.php` | Deletes an archived license |
+
+### Read {#licenses-read}
 
 | Parameter | Does |
 |---|---|
@@ -274,7 +286,7 @@ Licenses are called software in the API.
 | `client_id` | Just this client's licenses |
 | `limit`, `offset` | [Paging](/api/requests#paging) |
 
-Archived licenses are left out of the list. `archive.php` and `unarchive.php` take `software_id` and `client_id`.
+Archived licenses are left out of the list.
 
 ```json
 {
@@ -288,6 +300,32 @@ Archived licenses are left out of the list. `archive.php` and `unarchive.php` ta
 
 **Fields:** `software_id`, `software_name`, `software_description`, `software_version`, `software_type`, `software_license_type`, `software_key`, `software_seats`, `software_purchase_reference`, `software_purchase`, `software_expire`, `software_notes`, `software_favorite`, `software_vendor_id`, `software_client_id`, `software_template_id`, `software_created_at`, `software_updated_at`, `software_archived_at`, `software_accessed_at`, `tags`.
 
+### Create {#licenses-create}
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `software_name` | Required |
+| `software_version`, `software_type`, `software_license_type` | |
+| `software_seats` | How many it covers. Leave it out for no limit. |
+| `software_purchase`, `software_expire` | When it was bought and when it runs out, as `2026-11-05` |
+| `software_purchase_reference` | |
+| `software_vendor_id` | One of the client's [vendors](/api/clients#vendors) |
+| `software_key` | |
+| `software_keys` | Create only: license keys to add, one per line |
+| `software_description`, `software_notes` | |
+| `software_favorite` | `1` to make it a favourite |
+
+```
+curl -X POST https://itflow.example.com/api/v1/software/create.php \
+  -H "Content-Type: application/json" \
+  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "software_name": "Dentrix Ascend", "software_license_type": "Subscription", "software_seats": 12, "software_expire": "2027-06-30"}'
+```
+
+### Update, archive, unarchive and delete {#licenses-update}
+
+Each takes `software_id` and `client_id`, the license's own client. `update.php` also takes any of the fields under [Create](#licenses-create), and changes only what you send. Only active licenses can be changed. `delete.php` needs **Full** on Support, and the license has to be archived first. Its seats and keys go with it.
+
 ## Domains {#domains}
 
 | Endpoint | Does |
@@ -297,6 +335,7 @@ Archived licenses are left out of the list. `archive.php` and `unarchive.php` ta
 | POST `domains/update.php` | Changes a domain |
 | POST `domains/archive.php` | Archives a domain |
 | POST `domains/unarchive.php` | Brings an archived domain back |
+| POST `domains/delete.php` | Deletes an archived domain |
 
 ### Read {#domains-read}
 
@@ -345,9 +384,9 @@ Archived domains are left out.
 
 When a domain is saved, ITFlow looks it up, as the app does, filling in its IP address, name servers, mail servers, TXT, DMARC and DKIM records and WHOIS. The expiry from WHOIS, when it finds one, replaces `domain_expire`.
 
-### Update, archive and unarchive {#domains-update}
+### Update, archive, unarchive and delete {#domains-update}
 
-Each takes `domain_id` and `client_id`, the domain's own client. `update.php` also takes any of the fields under [Create](#domains-create), looks the domain up again, and records what changed in the domain's history. Only active domains can be changed. Domains can't be deleted through the API.
+Each takes `domain_id` and `client_id`, the domain's own client. `update.php` also takes any of the fields under [Create](#domains-create), looks the domain up again, and records what changed in the domain's history. Only active domains can be changed. `delete.php` needs **Full** on Support, and the domain has to be archived first. It comes off the services it was on; its certificates stay, on no domain.
 
 ## Certificates {#certificates}
 
@@ -355,6 +394,10 @@ Each takes `domain_id` and `client_id`, the domain's own client. `update.php` al
 |---|---|
 | GET `certificates/read.php` | Lists certificates, or finds one |
 | POST `certificates/create.php` | Adds a certificate |
+| POST `certificates/update.php` | Changes a certificate |
+| POST `certificates/archive.php` | Archives a certificate |
+| POST `certificates/unarchive.php` | Brings an archived certificate back |
+| POST `certificates/delete.php` | Deletes an archived certificate |
 
 | Parameter | Does |
 |---|---|
@@ -388,13 +431,24 @@ Each takes `domain_id` and `client_id`, the domain's own client. `update.php` al
 | `certificate_description`, `certificate_notes` | |
 | `certificate_favorite` | `1` to make it a favourite |
 
-With a host, ITFlow connects to it as the certificate is saved, and records what it serves. Certificates can't be changed or deleted through the API.
+With a host, ITFlow connects to it as the certificate is saved, and records what it serves.
+
+### Update, archive, unarchive and delete {#certificates-update}
+
+Each takes `certificate_id` and `client_id`, the certificate's own client. `update.php` also takes any of the fields under [Create](#certificates-create), and changes only what you send - a PEM still has the last word on the issuer, dates and names. A new host is connected to as it is saved. Only active certificates can be changed, and what changed goes in the certificate's history. `delete.php` needs **Full** on Support, and the certificate has to be archived first. Its history and its links to services go with it.
 
 ## Services {#services}
 
 | Endpoint | Does |
 |---|---|
 | GET `services/read.php` | Lists a client's services, or those due a review |
+| POST `services/create.php` | Adds a service |
+| POST `services/update.php` | Changes a service |
+| POST `services/archive.php` | Archives a service |
+| POST `services/unarchive.php` | Brings an archived service back |
+| POST `services/delete.php` | Deletes an archived service |
+
+### Read {#services-read}
 
 | Parameter | Does |
 |---|---|
@@ -417,6 +471,24 @@ With a host, ITFlow connects to it as the certificate is saved, and records what
 
 **Fields:** `service_id`, `service_name`, `service_description`, `service_category`, `service_importance`, `service_backup`, `service_notes`, `service_favorite`, `service_review_due`, `service_reviewed_at`, `service_review_interval`, `service_client_id`, `service_created_at`, `service_updated_at`, `service_accessed_at`, `service_archived_at`, `tags`.
 
+### Create {#services-create}
+
+| Field | Notes |
+|---|---|
+| `client_id` | Required |
+| `service_name` | Required |
+| `service_importance` | `High`, `Medium` (the default) or `Low` |
+| `service_category` | Such as Email, Backup or Line of business |
+| `service_description`, `service_backup`, `service_notes` | `service_backup` is how it's backed up |
+| `service_review_interval` | How often it's reviewed, in months: `1`, `3`, `6`, `12` or `24`. `0`, the default, is no schedule. |
+| `service_review_due` | Its next review, as `2026-11-05`. With an interval and no date, it's worked out from today. |
+
+What it runs on and depends on is linked in ITFlow, on the service's page.
+
+### Update, archive, unarchive and delete {#services-update}
+
+Each takes `service_id` and `client_id`, the service's own client. `update.php` also takes any of the fields under [Create](#services-create), and changes only what you send. Only active services can be changed. `delete.php` needs **Full** on Support, and the service has to be archived first. Its links and tags go with it.
+
 ## Documents {#documents}
 
 | Endpoint | Does |
@@ -426,6 +498,7 @@ With a host, ITFlow connects to it as the certificate is saved, and records what
 | POST `documents/update.php` | Changes a document, keeping the version before |
 | POST `documents/archive.php` | Archives a document |
 | POST `documents/unarchive.php` | Brings an archived document back |
+| POST `documents/delete.php` | Deletes an archived document |
 
 ### Read {#documents-read}
 
@@ -455,6 +528,6 @@ curl -X POST https://itflow.example.com/api/v1/documents/create.php \
   -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "document_name": "RDG - Imaging Server Notes", "document_description": "How the imaging server is set up", "document_content": "<h2>Imaging server</h2><p>RDG-SRV-02 runs the imaging database. Restart only after 6 PM.</p>"}'
 ```
 
-### Update, archive and unarchive {#documents-update}
+### Update, archive, unarchive and delete {#documents-update}
 
-Each takes `document_id` and `client_id`, the document's own client. `update.php` also takes any of the fields under [Create](#documents-create). The document as it was is kept in its versions, as when it's edited in ITFlow.
+Each takes `document_id` and `client_id`, the document's own client. `update.php` also takes any of the fields under [Create](#documents-create). The document as it was is kept in its versions, as when it's edited in ITFlow. `delete.php` needs **Full** on Support, and the document has to be archived first. Its versions and its images go with it.

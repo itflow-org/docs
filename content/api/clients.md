@@ -187,6 +187,10 @@ Each takes `contact_id` and `client_id`, the contact's own client. `update.php` 
 | Endpoint | Does |
 |---|---|
 | POST `portal_invites/create.php` | Invites someone to a client's portal |
+| GET `portal_invites/read.php` | A client's invites that are waiting to be accepted |
+| POST `portal_invites/cancel.php` | Cancels a waiting invite |
+
+### Invite {#portal-invites-create}
 
 | Field | Notes |
 |---|---|
@@ -202,6 +206,12 @@ They get the same invite an agent sends from the client's Contacts, from your co
 ```
 
 The answer's `invite` is `invited`, `resent` or `skipped` - with why in `message`, such as someone who signs in already.
+
+### Waiting invites and cancelling {#portal-invites-read}
+
+`read.php` takes `client_id`, and lists the client's invites nobody has accepted yet, newest first: `invite_id`, `invite_email`, `invite_name`, `invite_billing`, `invite_technical`, `invite_state` - `pending`, or `expired` once its link has run out - `invite_by`, who sent it, and `invite_created_at`, `invite_sent_at`, `invite_sent_count` and `invite_expires_at`. To send one again with a new link, invite the same email again.
+
+`cancel.php` takes `invite_id` and `client_id`. The invite's link stops working.
 
 ## Locations {#locations}
 
@@ -264,6 +274,7 @@ A vendor belongs to a client - a supplier of theirs - or to no client, as one of
 | POST `vendors/update.php` | Changes a vendor |
 | POST `vendors/archive.php` | Archives a vendor |
 | POST `vendors/unarchive.php` | Brings an archived vendor back |
+| POST `vendors/delete.php` | Deletes an archived vendor |
 
 ### Read {#vendors-read}
 
@@ -301,6 +312,6 @@ Archived vendors are left out.
 | `vendor_hours`, `vendor_sla` | Support hours and response times |
 | `vendor_notes` | |
 
-### Update, archive and unarchive {#vendors-update}
+### Update, archive, unarchive and delete {#vendors-update}
 
-Each takes `vendor_id` and `client_id` - the vendor's client, or `0` for one of your own. `update.php` also takes any of the fields under [Create](#vendors-create). Only active vendors can be changed. Vendors can't be deleted through the API.
+Each takes `vendor_id` and `client_id` - the vendor's client, or `0` for one of your own. `update.php` also takes any of the fields under [Create](#vendors-create). Only active vendors can be changed. `delete.php` needs **Full** on Clients, and the vendor has to be archived first. A vendor with expenses or recurring expenses booked to it, or a payment provider's fees, can't be deleted - it stays archived. Its tickets, licenses, assets and domains stay, with no vendor.
