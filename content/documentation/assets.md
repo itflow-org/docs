@@ -32,7 +32,7 @@ To see every client's devices together, use **All Client Docs > Assets**.
 
 ![The New Asset window on its Details tab](doc-asset-form.webp "New Asset: Details, Assignment, Network, Purchase, Login and Notes")
 
-The form only asks for what the type has. A virtual machine has no serial number, purchase or warranty, a mobile phone or tablet no network, a display no operating system, and only computers, phones, tablets and displays are assigned to someone - **Other** asks for everything. A field the type doesn't ask for still shows if it already holds something, so nothing is lost when you change an asset's type. The examples in the fields change with the type, too.
+The form only asks for what the type has. A virtual machine has no serial number or warranty, a mobile phone or tablet no network, a display no operating system, and only computers, phones, tablets and displays are assigned to someone - **Other** asks for everything. A virtual machine's **Purchase** is for the provider a hosted one is rented from, such as a VPS. A field the type doesn't ask for still shows if it already holds something, so nothing is lost when you change an asset's type. The examples in the fields change with the type, too.
 
 **Copy**, in an asset's menu, starts a new asset from it - handy for a batch of identical laptops. It brings the details along, but not those that belong to the one device: an IMEI, phone number, extension, circuit ID or ISP account. To bring in many at once, use **Import** in the New Asset menu with a CSV spreadsheet. After the usual twelve columns it can take any of the details, headed as the asset export heads them - `Ports`, `RAM (GB)`, `Capacity (VA)`, `Host` and so on.
 
