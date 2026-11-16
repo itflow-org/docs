@@ -27,6 +27,8 @@ Tick services and use **Bulk Action** to set their importance, category or revie
 
 Then, on the service's page, link what it depends on.
 
+To add many at once - with what they run on, their vendors, people and domains, by name - use **Import**, under the arrow beside **New Service**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## The service's page
 
 ![The Microsoft 365 service with its importance, review date, who to call and the logins it uses](doc-service.webp "A service's page: what it is, how to recover it, who to call, and everything it depends on")

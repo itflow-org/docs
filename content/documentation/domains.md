@@ -28,6 +28,8 @@ Tick domains and use **Bulk Action** to **Look up now**, **Set registrar or host
 
 ITFlow looks the domain up when you save it, and again regularly in the background, checking up to 50 domains a run, soonest to expire first.
 
+To add many with their registrar, hosts and notes, use **Import**, under the arrow beside **New Domain**, with a CSV spreadsheet. Imported domains are looked up by the background checks, up to 50 a run. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## The domain's quick look
 
 Click a domain to see everything about it.

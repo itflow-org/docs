@@ -22,6 +22,8 @@ Each row shows the host it's served on, the issuer, when it expires and how the 
 
 ![The New Certificate window](doc-certificate-form.webp "New Certificate: check the host, or paste the certificate if ITFlow can't reach it")
 
+To add many at once, use **Import**, under the arrow beside **New Certificate**, with a CSV spreadsheet. Imported certificates with a host are checked by the background checks. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## Checks
 
 **Check now** (on the certificate's quick look, or in Bulk Action) connects to the host and records what it serves: the issuer, the dates, the names covered and the fingerprint. The result is one of:

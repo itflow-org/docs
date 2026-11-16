@@ -1,10 +1,10 @@
 ---
 title: Importing from a spreadsheet
-description: Bring clients, contacts, locations, credentials, networks, assets and products into ITFlow from a CSV file, and see what every row will do before anything goes in.
+description: Bring clients, contacts, locations, vendors, credentials, networks, assets, domains, certificates, licenses, services and products into ITFlow from a CSV file, and see what every row will do before anything goes in.
 where: Import, under the arrow beside New on a list
 ---
 
-Clients, contacts, locations, credentials, networks, assets and products can all come in from a spreadsheet, through the same **Import** window. It's under the arrow beside the list's **New** button. Contacts, locations, credentials, networks and assets belong to a client, so open the client first.
+Clients, contacts, locations, vendors, credentials, networks, assets, domains, certificates, licenses, services and products can all come in from a spreadsheet, through the same **Import** window. It's under the arrow beside the list's **New** button. Everything but clients and products belongs to a client, so open the client first - except vendors, which can also be your own: import them from your own **Vendors** list.
 
 ![The Import window for a client's contacts, with each column of the file, what it imports as, and what each row will do](gs-import.webp "Import: each column and what it goes in as, then what every row will do - before anything is imported")
 
@@ -41,7 +41,12 @@ When it's done, the window says what happened to each row. **Rows not imported**
 | Locations | Name | Its name |
 | Credentials | Name | Its name |
 | Networks | Name and Network (CIDR) | Its name and subnet |
+| Vendors | Name | Its name |
 | [Assets](/documentation/assets#import) | Name | Its name |
+| Domains | Domain | Its name |
+| Certificates | Name or Host | Its name, else its host |
+| Licenses | Name | Its name |
+| Services | Service | Its name |
 | Products | Name | Its code, else its name |
 
 A product already here can be updated from a file with just **Code** and **Price** - a new price list, say.
@@ -53,3 +58,6 @@ Some things to know:
 - A network's subnet, gateway, DNS servers and DHCP range are checked as the network form checks them.
 - Credentials' usernames and passwords are encrypted as they go in. The file has them in plain text, so delete it when you're done.
 - The first location a client gets becomes its primary location.
+- Imported domains aren't looked up as they go in. ITFlow's background checks look up their DNS records and registration, and check imported certificates that have a host, a batch at a time.
+- A license's **Assets** and **Contacts** give it seats, and a service's **Runs On**, **Vendors**, **People** and **Domains** link it to them. Each is the client's own, by name, separated by commas - added to what it already has, never taken away.
+- A certificate's issuer, dates and names are read from the **Certificate** column when it has the PEM. Without one, **Issuer** and **Expiration Date** are what's kept.

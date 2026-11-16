@@ -25,6 +25,8 @@ Each row shows the vendor's support line with its extension, their hours and SLA
    - **Notes**
 3. Click **Create**.
 
+To add many at once, use **Import**, under the arrow beside **New Vendor**, with a CSV spreadsheet - from a client's **Vendors** for theirs, or from your own **Vendors** for yours. See [Importing from a spreadsheet](/getting-started/importing).
+
 ### Start from a template
 
 Common vendors - Microsoft, Dell, your local internet provider - can be set up once as a **vendor template** by an admin. Use the arrow beside **New Vendor** and pick **New from Template**, or pick one under **Start from a template** at the top of the New Vendor window: the support details are filled in, and you add the client's own account number and PIN.

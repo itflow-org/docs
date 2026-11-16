@@ -23,6 +23,8 @@ Tick licenses and use **Bulk Action** to **Renew** several at once, tag them or 
 5. On **Notes**, add anything else - how it's licensed, where it's managed.
 6. Click **Create**.
 
+To add many at once - with their seats, by the names of the client's devices and users - use **Import**, under the arrow beside **New License**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## The license's page
 
 ![A Microsoft 365 license with its seats, keys and vendor](doc-license.webp "A license's page: seats, the key, the vendor's support details, and who has it")
