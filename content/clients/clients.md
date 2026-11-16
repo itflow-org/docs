@@ -46,6 +46,19 @@ You can add more locations and contacts afterwards. See [Locations](/clients/loc
 
 Taking on a client properly? **Onboard a client**, under the arrow beside **New Client**, walks you through their sites, people, agreement, billing, domains, vendors, licenses and onboarding project a step at a time. See [Onboarding a client](/clients/onboarding).
 
+### Import clients {#import}
+
+To bring in many clients at once, use **Import**, under the arrow beside **New Client**, with a CSV spreadsheet. Its first row is the headings, in any order - leave out the ones you don't have. Only **Client Name** is needed. The **sample csv template** link in the Import window has every heading:
+
+- **The client** - Client Name, Industry, Referral, Website, Lead, Abbreviation, Currency, Tax ID, Tags and Notes.
+- **Billing** - Tax Rate (one of your tax rates, by name), Tax Exempt, Exemption Certificate and Exemption Expires, and an Hourly Rate and Payment Terms in days. A rate or payment terms other than your defaults gives the client a **Standard terms** [contract](/billing/contracts) carrying them.
+- **Its primary location** - Primary Location Name, Location Phone, Location Address, City, State, Postal Code and Country.
+- **Its primary contact** - Primary Contact Name, Title, Contact Phone, Extension, Contact Mobile and Contact Email.
+
+Lead and Tax Exempt take **Yes**. Separate tags with commas, and write dates as YYYY-MM-DD. A phone number with + and its country code in front, such as +1 (412) 555-0100, keeps its country code. A file exported from the clients list imports as it is, and a file separated by semicolons works too.
+
+A client already in ITFlow by that name is skipped. What couldn't be used - a tax rate that isn't one of yours, a date that isn't YYYY-MM-DD, a heading that isn't one of the import's - is listed when the import is done.
+
 ### Billing details
 
 ![The Billing tab of the New Client window](cl-new-client-billing.webp "Billing: where the rates, terms and SLAs come from, tax and reminders")
