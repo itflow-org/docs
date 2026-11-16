@@ -18,7 +18,7 @@ Your own row can't be changed here - that's your [account](/getting-started/acco
 You invite people rather than set a password for them: they're emailed a link, and choose their own password when they join. Nobody else ever knows it - their password also unlocks their copy of the [credential vault](/documentation/credentials) - so there's no password to pass on, write down or email.
 
 1. Click **New User**.
-2. On **Details**, add their **Name**, the **Email** they sign in with, and their **Role** - what they can see and change (see [Roles](/admin/roles)). A picture is optional.
+2. On **Details**, add their **Name**, the **Email** they sign in with, and their **Role** - what they can see and change (see [Roles](/admin/roles)). A picture is optional - click their initials to add one (see [Change a picture](/getting-started/account#picture)).
 3. On **Sign in**, leave **Invite them** picked. Switch on **Require it** under **Multi-factor authentication** to make them set up two-step sign-in as they first sign in.
 4. On **Client access**, limit them to some clients if you need to (see below).
 5. Click **Send invite**.

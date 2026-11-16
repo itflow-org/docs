@@ -27,7 +27,7 @@ To see every client's devices together, use **All Client Docs > Assets**.
 4. On **Network**, enter its **IPv4 address** (or switch on **DHCP**), **MAC address**, and any NAT or IPv6 address. **Link** is the address you open it at, such as its management page. A **Client link** shows in the client portal.
 5. On **Purchase**, pick the **Vendor**, the **Order / invoice reference**, and when it was **Purchased** and **Installed**, and when its **Warranty expires**.
 6. On **Login**, add a username and password for it, which become a credential linked to it.
-7. On **Notes**, add notes and a photo.
+7. On **Notes**, add notes, and click **Add a photo** for a photo of it (see [Change a picture](/getting-started/account#picture)).
 8. Click **Create**.
 
 ![The New Asset window on its Details tab](doc-asset-form.webp "New Asset: Details, Assignment, Network, Purchase, Login and Notes")

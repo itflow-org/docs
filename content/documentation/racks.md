@@ -14,7 +14,7 @@ A rack's page draws it to scale, front and rear, with everything mounted in it. 
 2. Give it a **Name** and **Type** (2-post or 4-post open frame, 4-post enclosed cabinet, wall-mount open or enclosed), its **Height** in U, and whether U1 is at the bottom or the top (**Unit numbering**).
 3. Add its **Model**, **Depth**, **Location** and **Where in the building** - the server room, the comms cupboard.
 4. Set its **Power budget** in watts, if you want ITFlow to track how much power is used.
-5. Add front and rear photos, and notes.
+5. Add front and rear photos - click **Add a photo** under each (see [Change a picture](/getting-started/account#picture)) - and notes.
 6. Click **Create**.
 
 ## The rack's page

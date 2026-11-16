@@ -17,7 +17,7 @@ The **⋮** on a row has **Quick look**, **Edit** and **Make primary**.
 ## Add a location
 
 1. Open the client, go to **Locations** and click **New Location**.
-2. On **Details**, give it a **Name**, and a description, tags and a photo of the building if you like. Switch on **Primary location** if this is now their main site.
+2. On **Details**, give it a **Name**, and a description, tags and a photo of the building if you like - click **Add a photo** (see [Change a picture](/getting-started/account#picture)). Switch on **Primary location** if this is now their main site.
 3. On **Address**, type the street address. **Directions** and the map use it.
 4. On **Contact**, pick the **On-site contact** to ask for, and the site's phone, fax and **Hours**.
 5. On **Access**, add the **Access notes**: door codes, where to park, where the equipment is.

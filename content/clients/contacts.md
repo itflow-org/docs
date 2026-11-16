@@ -30,7 +30,7 @@ To see the contacts of every client together, use **All Client Docs > Contacts**
    - **Technical** - who to talk to about the technical side.
    - **Texts** - once texting is set up: they get texts about their tickets, visits and invoices. Only with their say-so - see [Texts to clients](/admin/text-messaging#who-gets-them).
 4. On **Access**, set up the client portal if they need it (see below), and a **PIN** to check it's really them when they call.
-5. On **Notes**, add notes, tags and a photo.
+5. On **Notes**, add notes and tags, and click the picture to add a photo (see [Change a picture](/getting-started/account#picture)).
 6. Click **Create**.
 
 ![The New Contact window on its Details tab](cl-contact-form.webp "New Contact: Details, Roles, Access and Notes")
