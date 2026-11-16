@@ -18,6 +18,7 @@ return [
             'tour' => 'Finding your way around',
             'search' => 'Searching',
             'lists' => 'Lists, quick looks and bulk actions',
+            'importing' => 'Importing from a spreadsheet',
             'notifications' => 'Notifications',
             'account' => 'Your account',
             'ai' => 'Using AI',

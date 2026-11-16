@@ -36,6 +36,8 @@ To see every client's credentials, use **All Client Docs > Credentials**.
 
 To link a login to a vendor, service or license, use **Link** on that record's page or the credential's quick look.
 
+To add many at once - from another password manager's export, say - use **Import**, under the arrow beside **New Credential**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## Look at a password
 
 Click a credential to open its quick look, with the username, the password (hidden until you click the eye), where it opens, its 2FA code, what it's for and its notes.

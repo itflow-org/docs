@@ -37,6 +37,8 @@ To see the contacts of every client together, use **All Client Docs > Contacts**
 
 ![The Roles tab with Primary contact, Important, Billing and Technical](cl-contact-roles.webp "Roles decide who gets invoices, who is pinned to the top, and who sees what in the portal")
 
+To add many at once - from a Microsoft 365 user export, say - use **Import**, under the arrow beside **New Contact**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
+
 ### Give a contact client portal access
 
 On the contact's **Access** tab, set **Login**:

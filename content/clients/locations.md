@@ -25,6 +25,8 @@ The **⋮** on a row has **Quick look**, **Edit** and **Make primary**.
 
 A client's first location becomes its primary location by itself. To make another one primary, use **Make primary** in its menu.
 
+To add many at once, use **Import**, under the arrow beside **New Location**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
+
 ## The location's page
 
 ![The Main Office location page](cl-location.webp "A location's page: getting there, who to ask for, access notes, and everything at the site")
