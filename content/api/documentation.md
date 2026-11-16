@@ -33,7 +33,7 @@ The list and `asset_mac` include each asset's primary network interface - its IP
 
 ```
 curl -G https://itflow.example.com/api/v1/assets/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "client_id=1" --data-urlencode "limit=1"
 ```
 
@@ -86,8 +86,9 @@ curl -G https://itflow.example.com/api/v1/assets/read.php \
 
 ```
 curl -X POST https://itflow.example.com/api/v1/assets/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "asset_name": "RDG-WS-14", "asset_type": "Desktop", "asset_make": "Dell", "asset_model": "OptiPlex 7020", "asset_serial": "H7Q2LM3", "asset_os": "Windows 11 Pro", "asset_ip": "192.168.10.64", "asset_mac": "B0:4F:13:2A:9C:11", "asset_network_id": 1, "asset_location_id": 1, "asset_status": "Deployed"}'
+  -d '{"client_id": 1, "asset_name": "RDG-WS-14", "asset_type": "Desktop", "asset_make": "Dell", "asset_model": "OptiPlex 7020", "asset_serial": "H7Q2LM3", "asset_os": "Windows 11 Pro", "asset_ip": "192.168.10.64", "asset_mac": "B0:4F:13:2A:9C:11", "asset_network_id": 1, "asset_location_id": 1, "asset_status": "Deployed"}'
 ```
 
 ### Update {#assets-update}
@@ -122,8 +123,9 @@ Send `asset_id`, `client_id` (the asset's own client), and any of the fields und
 
 ```
 curl -X POST https://itflow.example.com/api/v1/assets/update.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "asset_id": 2, "asset_specs": {"ports": 24, "sfp_ports": 2, "poe_watts": 400, "managed": "Managed"}}'
+  -d '{"client_id": 1, "asset_id": 2, "asset_specs": {"ports": 24, "sfp_ports": 2, "poe_watts": 400, "managed": "Managed"}}'
 ```
 
 ### Archive and unarchive {#assets-archive}
@@ -164,8 +166,9 @@ Read takes `asset_id` or `interface_id`, and `client_id`. Each interface has its
 
 ```
 curl -X POST https://itflow.example.com/api/v1/asset_interfaces/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "asset_id": 8, "interface_name": "eth1", "interface_type": "Ethernet", "interface_network_id": 2, "interface_ip": "192.168.40.77", "connected_to": 33}'
+  -d '{"asset_id": 8, "interface_name": "eth1", "interface_type": "Ethernet", "interface_network_id": 2, "interface_ip": "192.168.40.77", "connected_to": 33}'
 ```
 
 ### Notes {#asset-notes}
@@ -260,7 +263,7 @@ Read takes `network_id` or `ip_id`, with `limit` and `offset`.
 An address has to be inside the network's subnet and documented on it only once. Update takes `ip_id` and changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the network's client. The answer to create has `added` and `skipped`.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "network_id": 2, "ip_address": "238", "ip_range_end": "245", "ip_type": "Reserved", "ip_description": "Printer pool" }
+{ "network_id": 2, "ip_address": "238", "ip_range_end": "245", "ip_type": "Reserved", "ip_description": "Printer pool" }
 ```
 
 ## Racks {#racks}
@@ -297,7 +300,7 @@ Read takes `rack_id`, or `client_id`, with `limit` and `offset`. Archived racks 
 It has to fit the rack, with nothing else on that face. Update changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the rack's client.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "rack_id": 1, "asset_id": 12, "unit_start_number": 10, "unit_height": 2 }
+{ "rack_id": 1, "asset_id": 12, "unit_start_number": 10, "unit_height": 2 }
 ```
 
 ## Credentials {#credentials}
@@ -325,7 +328,8 @@ Credentials need the **Credentials** area of the role, and the key's credential 
 The list includes archived credentials.
 
 ```
-curl -X GET "https://itflow.example.com/api/v1/credentials/read.php?api_key=YOUR_API_KEY&credential_id=1" \
+curl -X GET "https://itflow.example.com/api/v1/credentials/read.php?credential_id=1" \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"api_key_decrypt_password": "YOUR_DECRYPTION_PASSWORD"}'
 ```
@@ -372,8 +376,9 @@ A field too long to store is turned down with a message that names it, such as "
 
 ```
 curl -X POST https://itflow.example.com/api/v1/credentials/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "api_key_decrypt_password": "YOUR_DECRYPTION_PASSWORD", "client_id": 1, "credential_name": "Imaging Server - local admin", "credential_username": "rdg-admin", "credential_password": "Tq7!mV2#pL9w", "credential_uri": "https://192.168.30.10", "credential_asset_id": 9}'
+  -d '{"api_key_decrypt_password": "YOUR_DECRYPTION_PASSWORD", "client_id": 1, "credential_name": "Imaging Server - local admin", "credential_username": "rdg-admin", "credential_password": "Tq7!mV2#pL9w", "credential_uri": "https://192.168.30.10", "credential_asset_id": 9}'
 ```
 
 ### Update, archive, unarchive and delete {#credentials-update}
@@ -440,8 +445,9 @@ Archived licenses are left out of the list.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/software/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "software_name": "Dentrix Ascend", "software_license_type": "Subscription", "software_seats": 12, "software_expire": "2027-06-30"}'
+  -d '{"client_id": 1, "software_name": "Dentrix Ascend", "software_license_type": "Subscription", "software_seats": 12, "software_expire": "2027-06-30"}'
 ```
 
 ### Update, archive, unarchive and delete {#licenses-update}
@@ -662,8 +668,9 @@ Archived documents are left out. `document_content` is the document as HTML.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/documents/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "document_name": "RDG - Imaging Server Notes", "document_description": "How the imaging server is set up", "document_content": "<h2>Imaging server</h2><p>RDG-SRV-02 runs the imaging database. Restart only after 6 PM.</p>"}'
+  -d '{"client_id": 1, "document_name": "RDG - Imaging Server Notes", "document_description": "How the imaging server is set up", "document_content": "<h2>Imaging server</h2><p>RDG-SRV-02 runs the imaging database. Restart only after 6 PM.</p>"}'
 ```
 
 ### Update, archive, unarchive and delete {#documents-update}
@@ -696,7 +703,7 @@ Files read takes `file_id`, `client_id` and `folder_id`, with `limit` and `offse
 
 ```
 curl -G https://itflow.example.com/api/v1/files/download.php \
-  --data-urlencode "api_key=YOUR_API_KEY" --data-urlencode "file_id=12" -o rdg-fw-01-backup.cfg
+  -H "X-API-Key: YOUR_API_KEY" --data-urlencode "file_id=12" -o rdg-fw-01-backup.cfg
 ```
 
 ### Upload {#files-create}
@@ -714,8 +721,9 @@ The file comes in the JSON body, so how big it can be is up to your server's upl
 
 ```
 curl -X POST https://itflow.example.com/api/v1/files/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "file_name": "rdg-fw-01-backup.cfg", "file_data": "c2V0IHN5c3RlbSBob3N0LW5hbWUgcmRnLWZ3LTAx", "asset_id": 1}'
+  -d '{"client_id": 1, "file_name": "rdg-fw-01-backup.cfg", "file_data": "c2V0IHN5c3RlbSBob3N0LW5hbWUgcmRnLWZ3LTAx", "asset_id": 1}'
 ```
 
 ### Change, archive and delete {#files-update}

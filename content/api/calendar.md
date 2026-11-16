@@ -61,8 +61,9 @@ The answer has `invited`, how many it was emailed to.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/events/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "event_title": "Onsite - patch panel cleanup", "event_calendar_id": 2, "event_start": "2026-11-20 14:00", "event_end": "2026-11-20 16:00", "attendee_user_ids": [2], "attendee_contact_ids": [1], "send_invites": 1}'
+  -d '{"client_id": 1, "event_title": "Onsite - patch panel cleanup", "event_calendar_id": 2, "event_start": "2026-11-20 14:00", "event_end": "2026-11-20 16:00", "attendee_user_ids": [2], "attendee_contact_ids": [1], "send_invites": 1}'
 ```
 
 ### Update, send, skip and delete {#events-update}
@@ -119,5 +120,5 @@ Each trip has its `driver_name` and `client_name`. `trip_miles` is the whole tri
 Update takes `trip_id` and changes only what you send. A trip paid back for keeps its driver, vehicle and distance, and one billed its client and distance. Delete takes `trip_id`, and a trip paid back for or billed can't be deleted. A field that won't do is refused with `400` and why in `message`.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "client_id": 1, "trip_source": "Office", "trip_destination": "Ravenwood Dental, 410 Grant St", "trip_purpose": "Patch panel cleanup", "trip_miles": 12.3, "round_trip": 1, "trip_billable": 1 }
+{ "client_id": 1, "trip_source": "Office", "trip_destination": "Ravenwood Dental, 410 Grant St", "trip_purpose": "Patch panel cleanup", "trip_miles": 12.3, "round_trip": 1, "trip_billable": 1 }
 ```

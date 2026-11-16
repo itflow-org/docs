@@ -1,6 +1,6 @@
 ---
 title: Requests and responses
-description: How to call ITFlow's API - reading with GET, writing with JSON, what comes back, paging through lists, the client a request is for, archived records and errors.
+description: How to call ITFlow's API - sending your key, reading with GET, writing with JSON, what comes back, paging through lists, the client a request is for, archived records and errors.
 ---
 
 ## Endpoints
@@ -18,13 +18,29 @@ Every endpoint is at `https://your-itflow/api/v1/`, followed by the kind of reco
 
 Not every kind of record has every action. Each one's page in the reference lists what it has.
 
+## Your key {#key}
+
+Send your key in the `X-API-Key` header of every request, reads and writes alike:
+
+```
+curl https://itflow.example.com/api/v1/clients/read.php \
+  -H "X-API-Key: YOUR_API_KEY"
+```
+
+In PowerShell, give `Invoke-RestMethod` the header with `-Headers @{ 'X-API-Key' = 'YOUR_API_KEY' }`. Tools such as Postman and n8n call this an API key sent in a header.
+
+> [!WARNING]
+> Don't put the key in the address, as `?api_key=`. It still works, so older scripts keep running, but your web server writes the address of every request to its access log, and a proxy in front of it may too - so the key ends up there in plain text. Headers aren't logged. A key in a JSON body as `api_key` still works too.
+>
+> If a key has been sent in the address, move the script to the header, then give it a new key and revoke the old one in [Admin > API Keys](/admin/api-keys) - the old logs still have it.
+
 ## Reading {#reading}
 
-Send a GET request with the parameters in the address, including your key as `api_key`. Encode the values for a URL. curl's `-G` with `--data-urlencode` does it for you, and in PowerShell, `[uri]::EscapeDataString()` does it:
+Send a GET request with the parameters in the address, and your key in the header. Encode the values for a URL. curl's `-G` with `--data-urlencode` does it for you, and in PowerShell, `[uri]::EscapeDataString()` does it:
 
 ```
 curl -G https://itflow.example.com/api/v1/contacts/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "contact_email=dprescott@ravenwooddental.example"
 ```
 
@@ -34,12 +50,13 @@ Lookups match the whole value, without regard to capitals. `contact_email=dpresc
 
 ## Writing {#writing}
 
-Send a POST request with a JSON object as the body. Your key goes in it as `api_key`, with the record's fields:
+Send a POST request with the record's fields as a JSON object in the body, and your key in the header:
 
 ```
 curl -X POST https://itflow.example.com/api/v1/contacts/update.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "contact_id": 2, "contact_title": "Practice Manager"}'
+  -d '{"client_id": 1, "contact_id": 2, "contact_title": "Practice Manager"}'
 ```
 
 - **Updates change only what you send.** Fields you leave out keep their values.
@@ -84,7 +101,7 @@ A list returns 50 records unless you set `limit`, in the order they were added. 
 ```powershell
 $all = @(); $offset = 0; $limit = 100
 do {
-    $r = Invoke-RestMethod -Uri "$base/assets/read.php?api_key=$key&client_id=1&limit=$limit&offset=$offset"
+    $r = Invoke-RestMethod -Headers $headers -Uri "$base/assets/read.php?client_id=1&limit=$limit&offset=$offset"
     if ($r.success -ne 'True') { break }
     $all += $r.data
     $offset += $limit
@@ -137,6 +154,3 @@ ITFlow writes each failed call to [Admin > App Logs](/admin/logs#app-logs), with
 - Every change made through the API is in [Admin > Audit Logs](/admin/logs) under the key's agent, marked "via API" with the key's name. Ticket changes are also in the ticket's history.
 - [Admin > API Keys](/admin/api-keys) shows when each key was last used and from where, and its calls by day and endpoint.
 - Calls with a wrong or expired key are logged too. When as many come from one address in 10 minutes as **Tell admins** in [Security and sign-in](/admin/security#failed-sign-ins) allows, ITFlow alerts your admins.
-
-> [!TIP]
-> A key sent in the address of a GET request ends up in your web server's access log. Keep that log private. Alternatively, send the key in a JSON body on reads too, as you would on a write - ITFlow accepts it either way.

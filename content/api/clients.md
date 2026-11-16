@@ -28,7 +28,7 @@ The list includes archived clients.
 
 ```
 curl -G https://itflow.example.com/api/v1/clients/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "client_name=Ravenwood Dental Group"
 ```
 
@@ -76,8 +76,9 @@ Don't send `client_id` - the new client gets one, returned as `insert_id`.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/clients/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_name": "Allegheny Pet Hospital", "client_type": "Veterinary", "client_rate": 140, "client_net_terms": 30, "client_currency_code": "USD"}'
+  -d '{"client_name": "Allegheny Pet Hospital", "client_type": "Veterinary", "client_rate": 140, "client_net_terms": 30, "client_currency_code": "USD"}'
 ```
 
 ```json
@@ -93,7 +94,7 @@ A client made through the API has no locations or contacts yet. Add them with [l
 Send `client_id` and any of the fields under [Create](#clients-create). Only what you send changes - but not `client_rate` or `client_net_terms`: a client's terms are its contract's, so they're left alone, and the answer says so in `not_kept`.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "client_id": 27, "client_type": "Veterinary", "client_notes": "Two clinics, one front desk." }
+{ "client_id": 27, "client_type": "Veterinary", "client_notes": "Two clinics, one front desk." }
 ```
 
 `archive.php` and `unarchive.php` take just `client_id`. Archiving a client also stops their recurring invoices.
@@ -130,7 +131,7 @@ The list includes archived contacts.
 
 ```
 curl -G https://itflow.example.com/api/v1/contacts/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "contact_email=dprescott@ravenwooddental.example"
 ```
 
@@ -174,8 +175,9 @@ curl -G https://itflow.example.com/api/v1/contacts/read.php \
 
 ```
 curl -X POST https://itflow.example.com/api/v1/contacts/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "contact_name": "Janelle Ortiz", "contact_email": "jortiz@ravenwooddental.example", "contact_title": "Office Manager", "contact_mobile": "412-555-0144", "contact_location_id": 2, "contact_billing": 1}'
+  -d '{"client_id": 1, "contact_name": "Janelle Ortiz", "contact_email": "jortiz@ravenwooddental.example", "contact_title": "Office Manager", "contact_mobile": "412-555-0144", "contact_location_id": 2, "contact_billing": 1}'
 ```
 
 ### Update, archive, unarchive and delete {#contacts-update}
@@ -216,7 +218,7 @@ They work as [asset notes](/api/documentation#asset-notes) do, with `contact_id`
 They get the same invite an agent sends from the client's Contacts, from your company: they choose their own password from its link, and become a contact with portal access - or the client's contact with that address is given access. Asked again, a waiting invite goes again with a new link. It needs mail set up, to send it.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "client_id": 1, "email": "jortiz@ravenwooddental.example", "name": "Janelle Ortiz", "billing": 1 }
+{ "client_id": 1, "email": "jortiz@ravenwooddental.example", "name": "Janelle Ortiz", "billing": 1 }
 ```
 
 The answer's `invite` is `invited`, `resent` or `skipped` - with why in `message`, such as someone who signs in already.

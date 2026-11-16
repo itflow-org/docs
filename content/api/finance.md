@@ -76,7 +76,7 @@ Read takes `transfer_id` and `account_id` - those out of or into it - with `limi
 Create takes `transfer_date`, `transfer_amount`, `transfer_from_account_id` and `transfer_to_account_id` - two different accounts - all required, and `transfer_method` (one of your payment methods) and `transfer_notes`. Update takes `transfer_id` and changes only what you send. Delete takes `transfer_id`, and both its sides go.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "transfer_date": "2026-11-12", "transfer_amount": "4250.00", "transfer_from_account_id": 4, "transfer_to_account_id": 2, "transfer_notes": "Card settlements paid out" }
+{ "transfer_date": "2026-11-12", "transfer_amount": "4250.00", "transfer_from_account_id": 4, "transfer_to_account_id": 2, "transfer_notes": "Card settlements paid out" }
 ```
 
 ## Recurring expenses {#recurring-expenses}

@@ -32,11 +32,14 @@ A key stops working when it expires, or when its agent is disabled, archived or 
 
 ## Using the API
 
-Calls go to `https://your-itflow/api/v1/`, with the key as `api_key`:
+Calls go to `https://your-itflow/api/v1/`, with the key in the `X-API-Key` header:
 
 ```
-https://itflow.example.com/api/v1/tickets/read.php?api_key=YOUR_KEY&client_id=12
+curl "https://itflow.example.com/api/v1/tickets/read.php?client_id=12" \
+  -H "X-API-Key: YOUR_API_KEY"
 ```
+
+Don't put the key in the address as `?api_key=`. It still works for older scripts, but your web server's access log keeps the address of every request, key and all. See [Your key](/api/requests#key).
 
 [The API section](/api/overview) has everything else: how to call it, what a key can see, examples, and every endpoint.
 

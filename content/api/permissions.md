@@ -63,7 +63,8 @@ Passwords in ITFlow are encrypted. To read or write [credentials](/api/documenta
 It goes in a JSON body - on a read too, so a GET request carries a body:
 
 ```
-curl -X GET "https://itflow.example.com/api/v1/credentials/read.php?api_key=YOUR_API_KEY&credential_id=1" \
+curl -X GET "https://itflow.example.com/api/v1/credentials/read.php?credential_id=1" \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"api_key_decrypt_password": "YOUR_DECRYPTION_PASSWORD"}'
 ```

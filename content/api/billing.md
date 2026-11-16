@@ -79,8 +79,9 @@ It's made as New Invoice makes one - the next number, in your company's currency
 
 ```
 curl -X POST https://itflow.example.com/api/v1/invoices/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "scope": "Wireless upgrade", "items": [{"product_id": 96, "qty": 2, "tax_id": "default"}, {"name": "Installation", "price": 150}]}'
+  -d '{"client_id": 1, "scope": "Wireless upgrade", "items": [{"product_id": 96, "qty": 2, "tax_id": "default"}, {"name": "Installation", "price": 150}]}'
 ```
 
 ```json
@@ -177,8 +178,9 @@ The invoice's totals are worked out again afterwards.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/invoice_items/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "invoice_id": 475, "name": "Patch cables", "description": "Cat6, 3 ft", "qty": 4, "price": 6.50, "tax_id": "default"}'
+  -d '{"invoice_id": 475, "name": "Patch cables", "description": "Cat6, 3 ft", "qty": 4, "price": 6.50, "tax_id": "default"}'
 ```
 
 ### Update and delete {#invoice-items-update}
@@ -235,8 +237,9 @@ It's recorded as Add Payment records it, in the invoice's currency. The invoice 
 
 ```
 curl -X POST https://itflow.example.com/api/v1/payments/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "invoice_id": 436, "amount": 40.00, "account_id": 2, "payment_method": "Check", "reference": "Check 1042"}'
+  -d '{"invoice_id": 436, "amount": 40.00, "account_id": 2, "payment_method": "Check", "reference": "Check 1042"}'
 ```
 
 ```json
@@ -293,8 +296,9 @@ It's made in the client's currency, as a recurring invoice in ITFlow is. A clien
 
 ```
 curl -X POST https://itflow.example.com/api/v1/recurring_invoices/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "scope": "Managed services", "items": [{"product_id": 4, "tax_id": "default"}, {"product_id": 5, "qty": 12, "tax_id": "default"}], "invoice_now": 1}'
+  -d '{"client_id": 1, "scope": "Managed services", "items": [{"product_id": 4, "tax_id": "default"}, {"product_id": 5, "qty": 12, "tax_id": "default"}], "invoice_now": 1}'
 ```
 
 ```json
@@ -388,8 +392,9 @@ It's made as New Quote makes one, and stays a draft until it's sent. The answer 
 
 ```
 curl -X POST https://itflow.example.com/api/v1/quotes/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "scope": "Managed workstations", "items": [{"name": "Onboarding", "price": 500}, {"product_id": 1, "qty": 12, "frequency": "month", "tax_id": "default"}]}'
+  -d '{"client_id": 1, "scope": "Managed workstations", "items": [{"name": "Onboarding", "price": 500}, {"product_id": 1, "qty": 12, "frequency": "month", "tax_id": "default"}]}'
 ```
 
 ### Update, send and mark sent {#quotes-update}
@@ -567,8 +572,9 @@ It's checked as the expense window checks it - an amount, one of your vendors, c
 
 ```
 curl -X POST https://itflow.example.com/api/v1/expenses/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "expense_date": "2026-11-10", "expense_amount": "189.00", "expense_vendor_id": 1, "expense_category_id": 76, "expense_account_id": 1, "expense_description": "Replacement switch", "expense_billable": 1}'
+  -d '{"client_id": 1, "expense_date": "2026-11-10", "expense_amount": "189.00", "expense_vendor_id": 1, "expense_category_id": 76, "expense_account_id": 1, "expense_description": "Replacement switch", "expense_billable": 1}'
 ```
 
 ### Update and delete {#expenses-update}

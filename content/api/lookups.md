@@ -56,7 +56,7 @@ Only a key whose agent is an admin can make tags, as in [Admin > Tags](/admin/ca
 | `icon` | A Font Awesome icon's name, such as `x-ray`. `tag` if you leave it out. |
 
 ```json
-{ "api_key": "YOUR_API_KEY", "kind": "asset", "name": "Imaging", "color": "#0d6efd", "icon": "x-ray" }
+{ "kind": "asset", "name": "Imaging", "color": "#0d6efd", "icon": "x-ray" }
 ```
 
 ### Set a record's tags {#tags-update}
@@ -75,8 +75,9 @@ The response lists the record's tags afterwards, with what changed in `message`:
 
 ```
 curl -X POST https://itflow.example.com/api/v1/tags/update.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "kind": "asset", "record_id": 9, "tags": ["Imaging"], "mode": "add"}'
+  -d '{"client_id": 1, "kind": "asset", "record_id": 9, "tags": ["Imaging"], "mode": "add"}'
 ```
 
 ```json

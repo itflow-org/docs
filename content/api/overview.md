@@ -22,21 +22,21 @@ Give each system that uses the API an agent of its own, with only the access it 
 
 Every endpoint is a PHP file under `api/v1/` on your ITFlow, named for the kind of record and what it does with it, such as `clients/read.php` or `tickets/create.php`.
 
-To list your clients, send a **GET** request with the key as `api_key`. With curl:
+To list your clients, send a **GET** request with the key in the `X-API-Key` header. With curl:
 
 ```
 curl -G https://itflow.example.com/api/v1/clients/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "limit=2"
 ```
 
 Or with PowerShell:
 
 ```powershell
-$base = 'https://itflow.example.com/api/v1'
-$key  = 'YOUR_API_KEY'
+$base    = 'https://itflow.example.com/api/v1'
+$headers = @{ 'X-API-Key' = 'YOUR_API_KEY' }
 
-$r = Invoke-RestMethod -Uri "$base/clients/read.php?api_key=$key&limit=2"
+$r = Invoke-RestMethod -Headers $headers -Uri "$base/clients/read.php?limit=2"
 $r.data | Select-Object client_id, client_name
 ```
 
@@ -57,23 +57,23 @@ Each record comes back with all its fields. The examples in these pages show onl
 
 ## Make a change
 
-To create, change or remove something, send a **POST** request with a JSON body. The key goes in the body, with the record's fields. To raise a ticket for client 1:
+To create, change or remove something, send a **POST** request with the record's fields as a JSON body, and the key in the header as before. To raise a ticket for client 1:
 
 ```
 curl -X POST https://itflow.example.com/api/v1/tickets/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "ticket_subject": "Backup job failed on RDG-SRV-01", "ticket_priority": "High"}'
+  -d '{"client_id": 1, "ticket_subject": "Backup job failed on RDG-SRV-01", "ticket_priority": "High"}'
 ```
 
 ```powershell
 $body = @{
-    api_key         = $key
     client_id       = 1
     ticket_subject  = 'Backup job failed on RDG-SRV-01'
     ticket_priority = 'High'
 } | ConvertTo-Json
 
-$r = Invoke-RestMethod -Method Post -Uri "$base/tickets/create.php" -ContentType 'application/json' -Body $body
+$r = Invoke-RestMethod -Headers $headers -Method Post -Uri "$base/tickets/create.php" -ContentType 'application/json' -Body $body
 $r.data[0].insert_id
 ```
 

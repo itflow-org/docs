@@ -29,7 +29,7 @@ The list has every ticket - new, open, resolved and closed. `ticket_status` is t
 
 ```
 curl -G https://itflow.example.com/api/v1/tickets/read.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "ticket_id=93"
 ```
 
@@ -90,8 +90,9 @@ No email goes out unless you send `ticket_notify`. With `1`, the contact and the
 
 ```
 curl -X POST https://itflow.example.com/api/v1/tickets/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "ticket_subject": "Backup job failed on RDG-SRV-01", "ticket_details": "Veeam reported the 01:00 job failed: repository unreachable.", "ticket_priority": "High", "ticket_asset_id": 8}'
+  -d '{"client_id": 1, "ticket_subject": "Backup job failed on RDG-SRV-01", "ticket_details": "Veeam reported the 01:00 job failed: repository unreachable.", "ticket_priority": "High", "ticket_asset_id": 8}'
 ```
 
 ```json
@@ -106,7 +107,6 @@ With `ticket_template_id`, the ticket gets what the template sets up: its subjec
 
 ```json
 {
-  "api_key": "YOUR_API_KEY",
   "client_id": 1,
   "ticket_subject": "Hosted ITFlow: Ravenwood Dental - ravenwood.itflow.app",
   "ticket_details": "<p>Signed up on our website.</p>",
@@ -131,7 +131,7 @@ The template's id is the number in its address in Admin > Ticket Templates. Fill
 Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields under [Create](#tickets-create) apart from `client_id`. Only what you send changes, and a closed ticket can't be changed. `ticket_project_id` `0` takes it off its project. To change a ticket's status, add a [reply](#replies-create) with `ticket_status`, or resolve or close it.
 
 ```json
-{ "api_key": "YOUR_API_KEY", "client_id": 1, "ticket_id": 1880, "ticket_assigned_to": 2, "ticket_priority": "Urgent" }
+{ "client_id": 1, "ticket_id": 1880, "ticket_assigned_to": 2, "ticket_priority": "Urgent" }
 ```
 
 ### Resolve, close and reopen {#tickets-resolve}
@@ -214,8 +214,9 @@ The reply is from the key's agent.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/ticket_replies/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "ticket_id": 1880, "ticket_reply": "Repository share was offline after a NAS update. Remounted and re-ran the job - it completed.", "ticket_reply_time_worked": "00:25:00", "ticket_status": 4}'
+  -d '{"ticket_id": 1880, "ticket_reply": "Repository share was offline after a NAS update. Remounted and re-ran the job - it completed.", "ticket_reply_time_worked": "00:25:00", "ticket_status": 4}'
 ```
 
 ### Edit and archive {#replies-update}
@@ -353,8 +354,9 @@ From a template, it gets the template's subject, details, priority, category and
 
 ```
 curl -X POST https://itflow.example.com/api/v1/recurring_tickets/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "subject": "Backup restore test - [Month]", "frequency": "Monthly", "start_date": "2026-12-01", "assigned_to": 2, "asset_id": 8, "tasks": ["Restore a file from last night", {"name": "Note the restore time", "estimate": 5}]}'
+  -d '{"client_id": 1, "subject": "Backup restore test - [Month]", "frequency": "Monthly", "start_date": "2026-12-01", "assigned_to": 2, "asset_id": 8, "tasks": ["Restore a file from last night", {"name": "Note the restore time", "estimate": 5}]}'
 ```
 
 ### Update {#recurring-tickets-update}
@@ -410,7 +412,7 @@ Each row is one technician's total on one ticket, from the time on their replies
 
 ```
 curl -G https://itflow.example.com/api/v1/technicians/time.php \
-  --data-urlencode "api_key=YOUR_API_KEY" \
+  -H "X-API-Key: YOUR_API_KEY" \
   --data-urlencode "year=2026" --data-urlencode "month=10"
 ```
 

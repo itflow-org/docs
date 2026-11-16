@@ -86,8 +86,9 @@ It gets the next project number, as New Project gives it. A template's tickets a
 
 ```
 curl -X POST https://itflow.example.com/api/v1/projects/create.php \
+  -H "X-API-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"api_key": "YOUR_API_KEY", "client_id": 1, "project_name": "Phone system cutover", "project_start": "2026-11-16", "project_due": "2026-12-18", "project_budget_hours": 24, "project_manager": 2, "project_template_id": 1, "assign_to_manager": 1}'
+  -d '{"client_id": 1, "project_name": "Phone system cutover", "project_start": "2026-11-16", "project_due": "2026-12-18", "project_budget_hours": 24, "project_manager": 2, "project_template_id": 1, "assign_to_manager": 1}'
 ```
 
 ```json
