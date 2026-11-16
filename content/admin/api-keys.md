@@ -30,6 +30,10 @@ The list shows each key with who it **Acts as**, what it **Can open** and which 
 
 A key stops working when it expires, or when its agent is disabled, archived or has no role. Revoking a key expires it straight away; it moves to **Expired**, where it can be deleted.
 
+### Keys sent in the address {#address}
+
+A key sent in a call's address, as `?api_key=`, is in your web server's access log. The list flags it under **Last used** - **In the address** and when - and a note at the top counts the keys sent that way in the last 30 days. Move each of those scripts to the `X-API-Key` header, give it a new key and revoke the old one, as the old logs still have it. Then turn off **Take API keys in the address** in [Security](/admin/security#api-keys), so a key in the address is turned away from then on.
+
 ## Using the API
 
 Calls go to `https://your-itflow/api/v1/`, with the key in the `X-API-Key` header:

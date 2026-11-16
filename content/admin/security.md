@@ -1,6 +1,6 @@
 ---
 title: Security
-description: The sign-in page, a login key for agents, how long two-step sign-in remembers a browser, alerts for failed sign-ins, and the rules for shared links.
+description: The sign-in page, a login key for agents, how long two-step sign-in remembers a browser, alerts for failed sign-ins, API keys in the address, and the rules for shared links.
 where: Admin > Settings > Security
 access: Admins
 ---
@@ -27,6 +27,14 @@ To make it compulsory, require it for each user, or several at once - see [Users
 Failed sign-ins are counted over 10 minutes, from one address or against one account, and an address is turned away after 15. **Tell admins** after so many failed sign-ins sends each admin a notification and an email.
 
 **Admin > Sign-ins** shows who signs in from where, and which addresses are being turned away - see [Users](/admin/users#sign-ins).
+
+## API keys {#api-keys}
+
+Older scripts send their [API key](/admin/api-keys) in the address, as `?api_key=`. Your web server's access log keeps the address of every request, so the key ends up there in plain text. A key in the `X-API-Key` header isn't logged.
+
+**Take API keys in the address** - with it off, a call with its key in the address is turned away, with a message to send the key in the header, and logged in the audit log. ITFlow updated from an earlier release keeps it on if it had API keys that still worked, so nothing using them stopped. A new ITFlow starts with it off.
+
+Before you turn it off, check [Admin > API Keys](/admin/api-keys#address): it flags each key sent in the address in the last 30 days. Move those scripts to the header and give each a new key, then turn it off.
 
 ## Shared links
 

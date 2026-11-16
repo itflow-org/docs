@@ -32,7 +32,9 @@ In PowerShell, give `Invoke-RestMethod` the header with `-Headers @{ 'X-API-Key'
 > [!WARNING]
 > Don't put the key in the address, as `?api_key=`. It still works, so older scripts keep running, but your web server writes the address of every request to its access log, and a proxy in front of it may too - so the key ends up there in plain text. Headers aren't logged. A key in a JSON body as `api_key` still works too.
 >
-> If a key has been sent in the address, move the script to the header, then give it a new key and revoke the old one in [Admin > API Keys](/admin/api-keys) - the old logs still have it.
+> If a key has been sent in the address, move the script to the header, then give it a new key and revoke the old one in [Admin > API Keys](/admin/api-keys) - the old logs still have it. Admin > API Keys flags the keys sent that way.
+>
+> An admin can stop ITFlow taking keys in the address at all, in [Security](/admin/security#api-keys), and a new ITFlow doesn't take them. A key in the address is then turned away with a 401.
 
 ## Reading {#reading}
 
@@ -135,7 +137,7 @@ Check `..._archived_at`, such as `client_archived_at`, to tell the archived ones
 |---|---|
 | 200, with `"success": "False"` | Most failures. Nothing was found, a required field was missing, it would make a duplicate, or the record doesn't belong to that client. `message` says which kind. |
 | 400 | `invoice_items/read.php` needs `invoice_id` or `item_id` |
-| 401 | No key, or a key that's wrong or has expired. With no key at all, the body is empty. |
+| 401 | No key, a key that's wrong or has expired, or a key in the address when ITFlow doesn't take keys there. With no key at all, the body is empty. |
 | 403 | The key's agent isn't allowed to do it. `message` says what's missing. |
 | 405 | The wrong method, such as GET on a create |
 | 500 | ITFlow ran into an error. See [When something goes wrong](/install/troubleshooting#error-logs). |
