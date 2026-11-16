@@ -50,6 +50,8 @@ Everything ITFlow sends goes through **Admin > Mail Queue**. The Mail Queue job 
 
 The tabs are **Waiting**, **Sending**, **Retrying**, **Failed**, **Sent** and **Cancelled**. A failed email is tried again a few times before it's marked **Failed** - its row says why, such as an address that doesn't exist. Tick emails to **Retry now**, **Cancel** or **Delete** them. Sent, failed and cancelled email is kept for 90 days.
 
+Click an email to see it as it went. A sent email keeps what it said, its attachments and its calendar file. One with a link or code that opens something - a shared login and its code, a client portal or agent invite, a password link, a contract to sign or a task to approve - is cleared once it's sent, so the link isn't kept where others can see it, and a day after it was queued if it failed or was cancelled. One cleared like that can't be retried: send a new one from where it came from.
+
 If something is stopping email going out - sending switched off, or cron not running - it says so at the top.
 
 A ticket's conversation shows the same for each email reply: who it was emailed to and whether each one was sent, is waiting, or failed. See [The conversation](/service-desk/working-a-ticket#the-conversation).
