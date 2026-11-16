@@ -46,7 +46,7 @@ Make the first account. It's an administrator.
 
 ![The Your account step, filled in](inst-account.webp "Your account: the first administrator")
 
-Enter your **Name**, the **Email** you'll sign in with, and a **Password** of at least 8 characters, twice. An **Avatar** is optional. You add the rest of your team from [Admin > Users](/admin/users) once you're signed in.
+Enter your **Name**, the **Email** you'll sign in with, and a **Password** of at least 8 characters, twice. An **Avatar** is optional - click your initials to add one (see [Change a picture](/getting-started/account#picture)). You add the rest of your team from [Admin > Users](/admin/users) once you're signed in.
 
 ## Company {#company}
 
@@ -54,7 +54,7 @@ Your company, as it appears on invoices, quotes and emails.
 
 ![The Company step, filled in](inst-company.webp "Company: as it shows on invoices, quotes and emails")
 
-Only the **Company name** and **Country** are needed now. The address, phone, email, website, tax ID and logo can wait. You can change any of them later in [Admin > Settings](/admin/settings).
+Only the **Company name** and **Country** are needed now. The address, phone, email, website, tax ID and logo can wait. To add the logo now, click the **Logo** box - **Trim the edges** cuts away the empty space round it. You can change any of them later in [Admin > Settings](/admin/settings).
 
 ## Region {#region}
 

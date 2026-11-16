@@ -27,10 +27,12 @@ Tick expenses and use **Bulk** to set their category, account, payment method or
 5. Pick the account it was **Paid from** and how it was **Paid by**. If someone on the team paid it out of their own pocket, pick **Paid personally** and who paid it.
 6. If it was for a client, pick the **Client**. It counts as a direct cost of theirs in the Client Profitability report. Switch on **Bill it on to them** to bill it, with a markup.
 7. Add a **Reference** (their invoice or order number) and a **Description**.
-8. Attach the **Receipt** - a photo or a PDF. On a phone, you can take the picture right there.
+8. Add the **Receipt**: click **Add a receipt**, then drop, paste or choose a photo or a PDF - on a phone, you can take the picture right there. Drag the corners and edges of a photo in to just the receipt, and click **Use this picture**. A PDF goes in as it is. See [Change a picture](/getting-started/account#picture).
 9. Click **Add Expense**.
 
 ![The New Expense window](fin-expense-new.webp "New Expense: who, how much, what for, where it was paid from, and the receipt")
+
+![A receipt photo in the Picture window, the frame dragged in to the receipt](fin-expense-receipt.webp "The Picture window: drag the corners and edges in to just the receipt")
 
 The vendors here are your own - the businesses you buy from - not your clients' vendors.
 
@@ -42,7 +44,7 @@ Click an expense to see it with its receipt.
 
 It shows the vendor, category, account, reference and client. For a billable expense, it says what it bills and whether it's waiting in [Unbilled Time](/billing/unbilled-time) or already on an invoice. **History** lists every change.
 
-Along the bottom: **Receipt** to download it (or **Attach** one if there's none), **Edit**, **Copy** and **Delete**.
+Along the bottom: **Receipt** to download it, **Edit**, **Copy** and **Delete**. No receipt yet? Click **Add a receipt** at the top - it's saved as soon as you click **Use this picture** (or **Use this file** for a PDF).
 
 ## Bill an expense to the client
 

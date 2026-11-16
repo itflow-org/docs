@@ -24,7 +24,9 @@ Your company as it appears on invoices, quotes, statements, emails and the clien
 
 ![Company details](adm-company.webp "Company details: your name, address, contact details and logo, as clients see them")
 
-A wide logo prints best. **Your own client record** links your company to a client in ITFlow, so your own internal tickets, assets and documentation have a home.
+Click the logo box to add or change it - a PNG or JPG. Drag the corners and edges in to just the logo, or click **Trim the edges** to cut away the empty space round it. A wide logo prints best, and a PNG keeps a see-through background. See [Change a picture](/getting-started/account#picture).
+
+**Your own client record** links your company to a client in ITFlow, so your own internal tickets, assets and documentation have a home.
 
 ### Localization
 
