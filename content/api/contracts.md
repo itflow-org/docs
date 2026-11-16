@@ -48,7 +48,7 @@ These endpoints need the **Sales** area of the key's role, as [contracts](/billi
 | `contract_contact_id`, `contract_owner_id` | The client's contact, and your agent who owns it |
 | `contract_template_id` | A [contract template](/admin/contract-templates) |
 | `contract_details`, `contract_notes` | |
-| `contract_net_terms`, `contract_rate_standard`, `contract_rate_after_hours`, `contract_support_hours` | Empty rates are the default ones |
+| `contract_net_terms`, `contract_rate_standard`, `contract_rate_after_hours`, `contract_support_hours` | Empty rates are the default ones - 0 is a rate of nothing |
 | `contract_sla_low_id`, `contract_sla_medium_id`, `contract_sla_high_id`, `contract_sla_urgent_id` | The SLA for each priority |
 | `contract_monthly_hours`, `contract_hours_alert` | Hours included each month, and how few left to be told at |
 

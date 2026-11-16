@@ -56,6 +56,8 @@ You can also start one from a template on the client itself: **Contract** on the
 
 Leave a rate, the net terms or an SLA empty and what applies without it does - another contract in force for the client that sets it, else your default from [Admin > Settings > Defaults](/admin/settings) and [Admin > SLAs](/admin/tickets#slas). The empty fields show the default.
 
+A rate of **0** is a rate: the time it covers bills at no charge. For a plan that covers business-hours work and bills after hours, give the contract an **Hourly rate** of 0 and an **After hours** rate. The tickets still wait in [Unbilled Time](/billing/unbilled-time) at $0 - put them on an invoice, where the time shows at $0, or mark them **Not billable**.
+
 **Terms** is the agreement itself, in an editor, with placeholders that fill in from the contract - see [Sending a contract to sign](/billing/contract-signing#placeholders). **Notes** are for your team only - what was agreed, who to talk to about renewing.
 
 **Copy**, on a contract's page, starts a new contract from it.
