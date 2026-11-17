@@ -57,6 +57,18 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 
 Once an email reply is sent, the message at the top says how many people it went to. If nobody got it - the ticket has no contact or watcher with an email address, or mail isn't set up - it says so, and the reply is kept as a public note.
 
+### Timers in the top bar {#timers}
+
+A ticket's timer keeps counting when you go to another page. While any ticket has time on its timer, a stopwatch shows in the top bar, with how many - it pulses while one is running. Click it to see each ticket and its time.
+
+![Ticket timers in the top bar](sd-ticket-timers.webp "Ticket timers: one running, one paused")
+
+- Click a ticket to go back to it and log the time.
+- **Pause** or **Resume** a timer from here.
+- The bin throws a timer's time away, after you confirm - for time that shouldn't go on the ticket.
+
+Timers are kept in your browser, so the list shows the ones in this browser on this computer.
+
 ### Who an email reply goes to {#email-to}
 
 **Email reply** adds a **To** line above the reply. It starts with the contact, the watchers, and anyone at the client who asked for every update on their company's tickets.

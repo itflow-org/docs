@@ -14,6 +14,7 @@ access: Admins
 - **Numbering** - the **Prefix**, such as `TCK-`, and the **Next number**.
 - **New tickets** - **Email new tickets to** a shared mailbox or list, so someone always sees them come in. **Triage new tickets with AI** gives tickets from email, the portal and the API a category and priority as they arrive - see [AI](/admin/ai).
 - **Time and billing** - **Start the timer on opening a ticket**, and whether **New tickets are billable**. How the time is billed is in [Invoices and billing](/admin/billing#billing-time).
+- **Quick tickets** - what a ticket raised with the **+** in the top bar starts with - see [Quick tickets](#quick-tickets) below.
 - **Messages to clients** - the **"Ticket assigned" message**, sent when a ticket moves into a status that [counts as the first response](#first-response) by emailing the client, and the **"Resolve - no response" message**, for a client who never answered - see [Working a ticket](/service-desk/working-a-ticket#no-response). Agents can change that one for each ticket before it goes. Words in square brackets are filled in from the ticket, as in canned responses - `[Ticket]`, `[Subject]`, `[First Name]`, `[Agent]` (who it's assigned to - or, for no response, who sends it) and the rest. The email greets each person by name, so the message needn't. Empty, the built-in wording is used.
 - **Closing** - **Close resolved tickets after** so many hours. A resolved ticket waits for the client to say it isn't fixed, then closes itself overnight. 72 hours is three days.
 - **The tickets page** - whether **Tickets open as** a list or the board, and whether agents can order tickets by hand on the board and rearrange its columns.
@@ -31,6 +32,19 @@ Once [text messaging](/admin/text-messaging) is set up, a text from one of your 
 - **Turn texts into tickets** - on to start with. Off, every text waits in [Texts](/service-desk/texts) for an agent. STOP, START and HELP are still answered.
 - **From unknown numbers too** - a text from a number that isn't a contact's opens a ticket with no client. Off, those wait in Texts, where an agent opens a ticket from one. Verification codes and spam wait there either way.
 - **Text back the ticket number** - the first text of a new ticket is answered with its number, so they know it landed and that replying adds to it.
+
+### Quick tickets {#quick-tickets}
+
+The **+** in the top bar opens [Quick ticket](/service-desk/new-ticket#quick-ticket), for a call or a walk-up. Here you set what those tickets start with:
+
+- **Show the Quick ticket button** - for everyone who can make tickets.
+- **Quick ticket goes to** - the agent making it, nobody, or one agent. The window has a switch to change it for one ticket.
+- **Quick ticket starts in** - a status, or New (Open once someone has it), as usual.
+- **Quick ticket priority**, **Quick ticket category** and **Quick ticket billing** - billing follows **New tickets are billable** unless you pick one here. The window can change the priority.
+- **Start a quick ticket's timer** - when the agent clicks **Make ticket**, from when they opened the window (the start of the call), or not at all.
+- **Start on the client's primary contact** - off, the contact starts empty.
+- **Show the contact's open tickets** - so the same problem isn't raised twice.
+- **Email the contact that it was opened** - the "ticket created" email, as from New Ticket, when emails to clients are on.
 
 ## Ticket statuses
 
