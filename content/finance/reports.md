@@ -23,6 +23,7 @@ Every report works the same way: pick a period, narrow it to one client where th
 | **Spend by Vendor** | Who you pay the most - and the vendors paid 600 or more, for 1099 forms |
 | **Tax Collected** | Tax on sales by rate, invoiced or paid, with taxable, exempt and non-taxable sales and the tax paid on purchases |
 | **Mileage** | Distance driven by agent and client, and what it comes to at your mileage rate |
+| **Tax Package** | Everything your accountant asks for at year end, in one download - see [Tax package](/finance/tax-package) |
 
 ![The Profit & Loss report](fin-report-pl.webp "Profit & Loss: income, expenses and profit by month, with last year beside it")
 

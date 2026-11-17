@@ -100,6 +100,7 @@ return [
             'accounts' => 'Accounts and transfers',
             'reconciling' => 'Reconciling an account',
             'reports' => 'Reports',
+            'tax-package' => 'Tax package',
         ],
     ],
     'portal' => [
