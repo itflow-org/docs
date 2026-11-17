@@ -36,6 +36,7 @@ return [
             'locations' => 'Locations',
             'vendors' => 'Vendors',
             'export' => 'Exporting a client\'s data',
+            'banners' => 'Banners for your team',
         ],
     ],
     'service-desk' => [

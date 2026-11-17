@@ -79,6 +79,7 @@ The same **⋮** menu has:
 
 - **New Ticket** and **New Project** for this client
 - **Onboard** - take the client on a step at a time, or **Carry on onboarding**. See [Onboarding a client](/clients/onboarding).
+- **New Banner** - a note along the top of the client's pages for your team, such as a credit hold, and below it the client's banners to change. See [Banners for your team](/clients/banners).
 - **Export Data** - a documentation PDF or a full export. See [Exporting a client's data](/clients/export).
 - **Client Review** - a report of the client's quarter, made to print for a business review. See [Reports](/finance/reports).
 - **Archive Client**

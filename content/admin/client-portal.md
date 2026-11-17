@@ -47,3 +47,5 @@ An announcement shows at the top of the portal's home page - planned maintenance
 ![A new announcement](adm-announcement-new.webp "New Announcement: what to tell clients, how loudly, and for how long")
 
 **Current** lists what's showing or still to come, and **Archived** the ones that are over.
+
+For a note your team sees rather than your clients, use a [banner](/clients/banners).
