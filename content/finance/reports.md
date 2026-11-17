@@ -1,6 +1,6 @@
 ---
 title: Reports
-description: Profit and loss, receivables, recurring revenue, client profitability, ticket and SLA performance, renewals and more - for any period, printable and exportable.
+description: Profit and loss, receivables, recurring revenue, client profitability, ticket and SLA performance, renewals, where your clients are and more - for any period, printable and exportable.
 where: Tools > Reports
 ---
 
@@ -59,8 +59,15 @@ Every report works the same way: pick a period, narrow it to one client where th
 | **Renewals & Expirations** | Domains, certificates, licenses and warranties coming up for renewal, or already lapsed |
 | **Asset Lifecycle** | How old the hardware is, its warranty and operating system support, and what's due for replacement |
 | **Documentation Coverage** | What's documented for each client, and what's missing |
+| **Geography** | Where your clients and their locations are, on a map - by country, then state or province and city |
 | **Document Templates**, **License Templates**, **Vendor Templates** | How much each template is used, and which clients that should have one don't |
 | **Credential Rotation** | Passwords that haven't changed in a while, oldest first |
+
+**Geography** opens on your own country, shaded by how many clients - or locations - are in each place: the US state by state, Canada province by province, and any other country as a chart of its regions. Pick **All countries** for the world map. Click a state, or pick it at the top, to list its cities and every location in it. A client with locations in two states counts in both.
+
+![The Geography report](fin-report-geography.webp "Geography: clients by state, darker for more")
+
+**Incomplete addresses** counts the locations it couldn't place - no city, or a country, state or province it doesn't recognise - so you can fix them. A location with no country is counted in yours. The maps are part of ITFlow, so nothing is sent anywhere to draw them.
 
 ## Activity
 
