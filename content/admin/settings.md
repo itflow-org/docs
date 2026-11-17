@@ -50,7 +50,7 @@ What forms start with - each can still be changed on the form:
 
 ## Modules
 
-Switch off the parts of ITFlow you don't use - **IT documentation**, **Ticketing**, **Invoicing and accounting** or **Client portal** - and they're hidden from everyone. Nothing is deleted: switch a module back on and everything is still there.
+Switch off the parts of ITFlow you don't use - **IT documentation**, **Ticketing**, **Invoicing and accounting** or **Client portal** - and they're hidden from everyone. Nothing is deleted: switch a module back on and everything is still there. Switching off **Client portal** also signs out every contact signed in to it.
 
 **White-label key** takes "Powered by ITFlow" off the client portal. Left empty, it shows.
 

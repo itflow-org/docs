@@ -30,6 +30,13 @@ Under **Read mail from**, pick an IMAP server, Google Workspace or Microsoft 365
 
 Every minute, the Ticket Email Parser job reads the mailbox: a new email becomes a ticket, and a reply goes onto its ticket, found by the ticket number in its subject.
 
+Who a reply is from decides what it does:
+
+- **The client's contact** - a client reply, which reopens the ticket.
+- **A watcher** - an internal note, and the ticket reopens.
+- **One of your agents** - their own internal note. The ticket stays as it is.
+- **Anyone else** - an internal note marked as from someone who isn't a contact, watcher or agent. The ticket stays as it is, and the email's attachments aren't added - they stay with the email in the mailbox's **ITFlow** folder. Anyone can put a ticket's number in a subject, so a stranger can't reopen your tickets or add files to them.
+
 ## From addresses
 
 The address and name each kind of email comes from - **System emails** (alerts, password resets), **Invoices**, **Quotes** and **Tickets** - such as `billing@` for invoices and `support@` for tickets. Each has to be an address the sending mailbox may send as: itself, an alias, or a shared mailbox it can send as.

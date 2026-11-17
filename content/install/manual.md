@@ -96,6 +96,11 @@ server {
     index index.php;
     client_max_body_size 500M;
 
+    # The security headers ITFlow's .htaccess sends on Apache
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "same-origin" always;
+    add_header Content-Security-Policy "frame-ancestors 'self'" always;
+
     # What ITFlow's .htaccess files keep private on Apache
     location ~ /\.(?!well-known/) { deny all; }
     location = /config.php { deny all; }
@@ -106,6 +111,9 @@ server {
     location ^~ /uploads/expenses/ { deny all; }
     location ^~ /uploads/tmp/ { deny all; }
     location ^~ /uploads/ {
+        # Nothing opened from here runs as a page
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Content-Security-Policy "script-src 'none'; object-src 'none'; base-uri 'none'" always;
         location ~ \.(php|phtml|phar|phps|cgi|pl|sh)$ { deny all; }
     }
 
