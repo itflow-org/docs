@@ -42,12 +42,12 @@ Above the conversation are the reply buttons. Nothing is picked for you, so who 
 |---|---|
 | **Internal note** | Only your team. For notes, findings and handovers. |
 | **Public note** | The client, in the client portal. No email is sent. |
-| **Email reply** | The contact and the ticket's watchers, by email, and it shows in the portal. Only there when mail is set up and the contact has an email address. |
+| **Email reply** | The people in its **To** line, by email - the contact and the ticket's watchers to start with - and it shows in the portal. Only there when mail is set up and the contact has an email address. |
 | **Text reply** | The contact, by text to their mobile, and it shows in the portal. Only there when [text messaging](/admin/text-messaging) is set up and the contact has a mobile number - or someone who isn't a contact is texting on the ticket. |
 
 Pick one and the reply box opens, with a line saying exactly who will see it. An email reply carries the conversation so far, as short excerpts, and a link to the ticket that opens without signing in - see [The ticket link in emails](/portal/tickets#ticket-link).
 
-![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the editor, files, the status after it and the time worked")
+![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the status after it and the time worked")
 
 1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses).
 2. Add files under **Attach files** if you need to.
@@ -56,6 +56,17 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 5. Click the button: **Add note** for an internal note, **Post note** for a public note, **Send email** for an email reply. Your signature is added to email replies.
 
 Once an email reply is sent, the message at the top says how many people it went to. If nobody got it - the ticket has no contact or watcher with an email address, or mail isn't set up - it says so, and the reply is kept as a public note.
+
+### Who an email reply goes to {#email-to}
+
+**Email reply** adds a **To** line above the reply. It starts with the contact, the watchers, and anyone at the client who asked for every update on their company's tickets.
+
+- Click the line to add the technician the ticket is assigned to or another of the client's contacts, or type an email address and press <kbd>Enter</kbd>.
+- Click **×** on anyone who shouldn't get this reply.
+- Everyone in To gets the email, each told why they're getting it.
+- What you change is kept for the ticket, so its next email reply starts with the same people. Taking a watcher out of To doesn't stop them watching - they still get the ticket's other emails.
+
+A reply won't send with nobody in To, or with something in it that isn't an email address - pick **Public note** to post it without an email. A reply sent to several tickets at once with [Reply or add a note](/service-desk/tickets#bulk-reply) still goes to each one's contact and watchers.
 
 > [!TIP]
 > If you try to leave the page with a reply half written, ITFlow asks first.
@@ -164,7 +175,7 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 ## Merge, move and delete
 
 - **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
-- **Move to another client** - for a ticket raised under the wrong client.
+- **Move to another client** - for a ticket raised under the wrong client. Watchers who aren't on your team or contacts at the new client come off it, and its [To line](#email-to) starts again.
 - **Delete ticket** - only for tickets raised by mistake. Normally resolve or close them instead.
 
 ## Billing a ticket

@@ -65,6 +65,6 @@ Tick tickets and use **Bulk Action** to:
 - **Resolve** them
 - **Delete** them
 
-### Reply to many tickets at once
+### Reply to many tickets at once {#bulk-reply}
 
 **Reply or add a note** opens **Update & Reply**, which sends the same reply to every ticket you ticked - handy when an outage affects many clients. Placeholders such as `[First Name]` and `[Ticket]` are filled in for each ticket as it's sent, and you can pick a [canned response](/service-desk/canned-responses). Set the status the tickets move to and the time worked on each, or tick **Mark as internal** to add a note only your team sees. Mentions don't tell anyone from here - mention someone in a note on the ticket itself.
