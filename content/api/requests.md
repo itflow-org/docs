@@ -62,6 +62,7 @@ curl -X POST https://itflow.example.com/api/v1/contacts/update.php \
 ```
 
 - **Updates change only what you send.** Fields you leave out keep their values.
+- **Only JSON is read.** A body that isn't a JSON object - form fields, say - is read as no fields at all.
 - **Dates** are `YYYY-MM-DD`, such as `2027-06-30`.
 - **Yes or no** fields take `1` or `0`.
 - **Ids** link records. For example, `contact_location_id` is a location's `location_id`, and `ticket_assigned_to` is an agent's `technician_id`.
@@ -97,6 +98,8 @@ A list returns 50 records unless you set `limit`, in the order they were added. 
 |---|---|
 | `limit` | How many records to return. 50 if you leave it out. |
 | `offset` | How many to skip first. 0 if you leave it out. |
+
+A `limit` under 1 is read as 1, and an `offset` under 0 as 0.
 
 `count` is the number on this page, not the total. Keep asking for pages until one comes back with fewer than `limit`. When there is nothing left, the response is `"success": "False"`:
 

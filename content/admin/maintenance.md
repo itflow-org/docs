@@ -27,7 +27,7 @@ The top of the page says when cron last ran, how many jobs are on, and which run
 
 - **Completed** - it ran.
 - **Skipped** - it had nothing to do, or what it works with isn't set up. It says why under its name - texting isn't set up, say.
-- **Failed** - it stopped with an error, shown under the job. The error stays until you click **Dismiss**, and once the job has run again it says so. A run cut off part way - by a restart, say - reads **Didn't finish**.
+- **Failed** - it stopped with an error, shown under the job - the email parser not reaching your mail server, say, with what the server answered. The error stays until you click **Dismiss**, and once the job has run again it says so. A run cut off part way - by a restart, say - reads **Didn't finish**.
 - **Queued** or **Running** - it's on its way, and the page keeps itself up to date until it's done.
 
 The list starts in the order the day runs - the every-minute jobs, then the nightly ones by time - and sorts by its headings.
