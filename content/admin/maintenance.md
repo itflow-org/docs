@@ -50,6 +50,7 @@ The list starts in the order the day runs - the every-minute jobs, then the nigh
 | Nightly Tasks | daily | Recurring invoices and tickets, reminders, autopay, late fees, clean-up |
 | Certificate Refresher | daily | Checks every certificate |
 | Domain Refresher | daily | Looks up domains that are due |
+| Cron Watch | every 5 minutes | Emails your admins when a job fails, gets stuck or falls behind. See [Alerts](#cron-alerts). |
 | Demo Reset | daily | Puts a [public demo](/install/demo) back to fresh demo data. Only there in demo mode, where the domain and certificate refreshers aren't. |
 
 Each job's menu has:
@@ -59,10 +60,47 @@ Each job's menu has:
 - **Copy the command to run it** - the command that runs that one job on the server, where it shows what it does as it goes.
 - **Turn off** - it no longer runs on its schedule, and shows **Off**. **Turn on** puts it back.
 
-Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **The cron job** has the line for your server. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
+Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **Alerts** says who hears when something goes wrong - see [below](#cron-alerts). **The cron job** has the line for your server. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
 
 > [!WARNING]
-> If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes.
+> If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes, and admins see it in the top bar.
+
+### Alerts {#cron-alerts}
+
+When something here needs you, every admin sees a heartbeat with a count in the top bar, beside the bell, on every page. It's there when:
+
+- cron isn't running, or has never run
+- cron is switched off
+- a job failed on its last run
+- a job is still running two hours after it started, and may have stopped part way
+- a job has fallen behind - an every-minute job that hasn't run for ten minutes, say, or a nightly one two hours after its time
+
+Click it for what's wrong, with a failed job's error, and a link to this page. It goes once all is well. Nobody but admins sees it.
+
+![Cron needs attention, in the top bar](adm-cron-health.webp "The top bar: a job stuck, one failed and two behind")
+
+The **Cron Watch** job also emails about it: once when a problem starts, again once a day while it lasts, and once more when it's fixed - or, when everything is, an all clear.
+
+![The Alerts card](adm-cron-alerts.webp "Alerts: who the emails go to, and the address for an uptime monitor")
+
+On the **Alerts** card beside the jobs:
+
+- **Email alerts** - turn it off and the top bar still warns, but nothing is emailed.
+- **Send to** - the addresses the emails go to, with commas between. Leave it empty and they go to every active admin, who are listed under it.
+- **Send a test** - sends a test to the addresses in the box, saved or not. It goes out with the mail queue within a minute, so cron and [mail](/admin/mail) need to be working.
+
+The card says when no alert can be emailed - Cron Watch is off, or no mail server is set up.
+
+#### Uptime monitor {#uptime-monitor}
+
+An email can't tell you cron has stopped - it's cron that sends it. For that, point an uptime monitor such as Uptime Kuma or UptimeRobot at the address under **Uptime monitor**, every 5 minutes:
+
+- while all is well it answers `OK`
+- otherwise it answers with an error (HTTP 503) and a line for each problem
+
+Your monitor tells you when that happens, however cron is doing.
+
+The address has a key in it, so keep it private: anyone with it can see which jobs are failing. If it gets out, click the red button beside it to make a new one. The old one stops working, so give your monitor the new address. A monitor that can send headers can send the key in an `X-Health-Key` header to `/health.php` instead, which keeps it out of your web server's log.
 
 ## Backup
 

@@ -14,6 +14,7 @@ From left to right:
 
 - **☰** hides or shows the menu, to give a wide list more room. ITFlow remembers your choice.
 - **Search everywhere** finds anything in ITFlow by name, number, phone number or IP address. Press <kbd>Ctrl</kbd> <kbd>K</kbd> from any page to open it. See [Searching](/getting-started/search).
+- A **heartbeat** with a count shows admins when cron needs looking at - a job failed or fell behind, say. Nobody else sees it, and it's only there while something is wrong. See [Cron alerts](/admin/maintenance#cron-alerts).
 - The **bell** shows your notifications, with a count of the unread ones. See [Notifications](/getting-started/notifications).
 - **Your name** opens a menu with **Account** (your profile, password and preferences), **Administration** if you are an admin, and **Logout**.
 
