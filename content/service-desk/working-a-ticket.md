@@ -47,15 +47,26 @@ Above the conversation are the reply buttons. Nothing is picked for you, so who 
 
 Pick one and the reply box opens, with a line saying exactly who will see it. An email reply carries the conversation so far, as short excerpts, and a link to the ticket that opens without signing in - see [The ticket link in emails](/portal/tickets#ticket-link).
 
-![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the status after it and the time worked")
+![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the time worked and when, and the status after it")
 
 1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses).
 2. Add files under **Attach files** if you need to.
 3. Pick the **Status after this** - for example, set it to On Hold while you wait for a part.
-4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work.
+4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work. **When it was worked** fills in from the timer - the work ends now - or type the date, start and end yourself. See [When the time was worked](#work-times).
 5. Click the button: **Add note** for an internal note, **Post note** for a public note, **Send email** for an email reply. Your signature is added to email replies.
 
 Once an email reply is sent, the message at the top says how many people it went to. If nobody got it - the ticket has no contact or watcher with an email address, or mail isn't set up - it says so, and the reply is kept as a public note.
+
+### When the time was worked {#work-times}
+
+A note with time on it keeps when the work was done, beside the time in the conversation - "25m (Tue Nov 17, 2:05 - 2:30 PM)".
+
+- Until you type them, the date, start and end follow the timer: the work ends now, and started the time worked ago.
+- Type a start and end - for a visit this morning, or a call you're writing up later - and the time worked follows them. Typing pauses the timer. **Use the timer** goes back to it.
+- After typing the times, changing the time worked moves the start - the end stays.
+- An end before the start runs past midnight - 11:30 PM to 12:45 AM is an hour and a quarter.
+
+A note with time worked won't send without a date, start and end. Times are your company's time zone.
 
 ### Timers in the top bar {#timers}
 
@@ -122,6 +133,8 @@ Admins also get a link to the ticket's email in the mail queue, to retry one tha
 Replies from before ITFlow kept this are marked **Public**, as it isn't known whether they were emailed - unless the mail queue still had their email when you updated, in which case they show as email replies too.
 
 Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shouldn't be kept, such as a password the client sent) and **Archive**. Editing an email reply changes it on the ticket and in the portal - the people it was emailed to keep the email as it was sent.
+
+**Edit** changes a note's time and when it was worked too: change the times and the time worked follows, or change only the time worked and the start moves. Notes from before this, and from bulk replies and the API, ended when they were posted.
 
 ## Contact, site and vendor
 
