@@ -20,14 +20,16 @@ Tickets reach ITFlow in several ways:
    - Pick a **Template** if one fits (see below).
    - Type the **Subject** and the details.
    - Set the **Priority**, the **Category**, who to **Assign to**, and a **Due** date if it has one.
+   - Pick the **Status** it starts in, if not the usual - it's New, or Open once it's assigned.
+   - To book the work now, set the **Schedule** date and time, and **Remote** or **Onsite**. Leave it empty to book it later from the ticket.
    - Add **Tags**, and switch on **Mark Billable** if the client pays for this work.
 3. On **Related**, link the **Asset** it's about (and **Other assets**), the **Site**, a **Project**, and a **Vendor** with **Their reference** if a vendor is involved. Add **Watchers** - people who get a copy of every emailed reply.
 4. On **Tasks**, add the steps to work through.
 5. Click **Create Ticket**.
 
-![The New Ticket window](sd-new-ticket.webp "New Ticket: who it's for, what it's about, and who's on it. Open tickets for the contact show at the top.")
+![The New Ticket window](sd-new-ticket.webp "New Ticket: who it's for, what it's about, who's on it, and the status and schedule it starts with. Open tickets for the contact show at the top.")
 
-The contact gets an email saying their ticket is raised, when client emails are on, and the technician you assigned it to is told.
+The contact gets an email saying their ticket is raised, when client emails are on, and the technician you assigned it to is told. Work you scheduled is booked as it is from the ticket's **Schedule** window: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite - see [Book a visit or a call](/service-desk/working-a-ticket#book-a-visit-or-a-call).
 
 ## Start from a template
 
