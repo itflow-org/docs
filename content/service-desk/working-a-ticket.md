@@ -149,11 +149,13 @@ When the work is done, click **Resolve**. ITFlow:
 - emails the contact that it's resolved (when client emails are on), with a button to reopen it if it isn't fixed
 - closes it by itself after a set time - your admin picks how long - unless the client replies, which reopens it
 
+A resolved ticket is reopened by **Reopen**, or by a reply that sets a working status such as Open. Either way its resolution SLA starts again.
+
 Click **Close** to close it straight away. Closing is final: a closed ticket can't be reopened. Clients are asked how you did when a ticket closes.
 
 ## Merge, move and delete
 
-- **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across.
+- **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
 - **Move to another client** - for a ticket raised under the wrong client.
 - **Delete ticket** - only for tickets raised by mistake. Normally resolve or close them instead.
 

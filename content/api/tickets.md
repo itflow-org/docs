@@ -128,7 +128,7 @@ The template's id is the number in its address in Admin > Ticket Templates. Fill
 
 ### Update {#tickets-update}
 
-Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields under [Create](#tickets-create) apart from `client_id`. Only what you send changes, and a closed ticket can't be changed. `ticket_project_id` `0` takes it off its project. To change a ticket's status, add a [reply](#replies-create) with `ticket_status`, or resolve or close it.
+Send `ticket_id`, `client_id` (the ticket's own client), and any of the fields under [Create](#tickets-create) apart from `client_id`. Only what you send changes, and a closed ticket can't be changed. A new `ticket_priority` picks the ticket's SLA again, as on the ticket page. `ticket_project_id` `0` takes it off its project. To change a ticket's status, add a [reply](#replies-create) with `ticket_status`, or resolve or close it.
 
 ```json
 { "client_id": 1, "ticket_id": 1880, "ticket_assigned_to": 2, "ticket_priority": "Urgent" }
@@ -207,10 +207,10 @@ To say why when you resolve, add a reply with `"ticket_status": 4` instead. See 
 | `ticket_reply` | Required. HTML is kept. |
 | `ticket_reply_type` | `Internal`, a note only your team sees - the default - or `Public`, which emails the contact and anyone watching, and counts as the first response |
 | `ticket_reply_time_worked` | Time to log, as `HH:MM:SS`. None if you leave it out. |
-| `ticket_status` | Also set the ticket's status, by number. `4` resolves it. |
+| `ticket_status` | Also set the ticket's status, by number - an active one, not New (`1`) or Closed (`5`). `4` resolves it once its tasks are done, and a working status reopens a resolved ticket. |
 | `client_id` | The ticket's client. Needed when the key's agent can see only some clients. |
 
-The reply is from the key's agent.
+The reply is from the key's agent. A closed ticket takes no replies.
 
 ```
 curl -X POST https://itflow.example.com/api/v1/ticket_replies/create.php \
