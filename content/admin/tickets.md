@@ -14,6 +14,7 @@ access: Admins
 - **Numbering** - the **Prefix**, such as `TCK-`, and the **Next number**.
 - **New tickets** - **Email new tickets to** a shared mailbox or list, so someone always sees them come in. **Triage new tickets with AI** gives tickets from email, the portal and the API a category and priority as they arrive - see [AI](/admin/ai).
 - **Time and billing** - **Start the timer on opening a ticket**, and whether **New tickets are billable**. How the time is billed is in [Invoices and billing](/admin/billing#billing-time).
+- **Messages to clients** - the **"Ticket assigned" message**, sent when a ticket moves into a status that [counts as the first response](#first-response) by emailing the client. Words in square brackets are filled in from the ticket, as in canned responses - `[Ticket]`, `[Subject]`, `[First Name]`, `[Agent]` (who it's assigned to) and the rest. The email greets each person by name, so the message needn't. Empty, the built-in wording is used.
 - **Closing** - **Close resolved tickets after** so many hours. A resolved ticket waits for the client to say it isn't fixed, then closes itself overnight. 72 hours is three days.
 - **The tickets page** - whether **Tickets open as** a list or the board, and whether agents can order tickets by hand on the board and rearrange its columns.
 
@@ -39,18 +40,28 @@ Tickets move through **New**, **Open**, **On Hold**, **Resolved** and **Closed**
 
 Each status shows as its badge, with what it's for, how many tickets are in it (click to see them), whether the SLA clock runs or pauses in it, and what a client's reply does. Drag the statuses into the order the status pickers and the ticket board show them in, or use **Move up** and **Move down** on a status's menu.
 
-ITFlow's five are marked **Built in**. They keep their names and stay switched on, and their SLA clock and what a reply does are fixed - their window says what each does and when ITFlow sets it. Their colour and description can change.
+ITFlow's five are marked **Built in**. They keep their names and stay switched on, and their SLA clock is fixed - their window says what each does and when ITFlow sets it. Their colour and description can change, and so can where a client's reply moves a ticket in one - back to Open, or a status of your own - though a reply never leaves it where it is. A closed ticket can't be replied to.
 
 ### Add or change a status
 
 Click **New Status**, or **Edit** on a status's menu.
 
-![The window for the Scheduled status](adm-status-form.webp "A status: its badge, colour, SLA clock and what a client's reply does")
+![The window for the Scheduled status](adm-status-form.webp "A status: its badge, colour, SLA clock, what a client's reply does and whether it counts as the first response")
 
 - **Name**, and a **Description** that shows when someone points at the status - in the pickers, on the board and on tickets.
 - **Color** - pick a swatch or any colour. **Looks like** shows the badge; its text turns dark or white, whichever reads on the colour.
 - **SLA resolution clock** - **Keeps running**, or paused. A ticket in a paused status never warns or breaches on resolution; the time already spent is kept, and the deadline moves out when the ticket comes back. Pause it for statuses where you're waiting on someone else. The response clock always runs.
-- **When the client replies** - **Move it back to Open**, as a reply always has, or **Leave it in this status**. Leave it for a status like Scheduled, where "thanks, see you then" shouldn't put the ticket back in the queue. It's the same by email or in the portal, and whoever the ticket is assigned to is told either way.
+- **When the client replies** - **Move it back to Open**, as a reply always has, **Leave it in this status**, or **Move it to** another status. Leave it for a status like Scheduled, where "thanks, see you then" shouldn't put the ticket back in the queue. Move it to a status such as "Client responded" - set on Open and On Hold too - and the tickets with a new answer from the client stand out on the list and the board. It's the same by email, in the portal or by text, and whoever the ticket is assigned to is told either way. If the status it moves to is switched off, the reply moves the ticket back to Open.
+- **Counts as the first response** - see below. Not for New, Resolved or Closed.
+
+### A status that counts as the first response {#first-response}
+
+Usually only a reply the client sees answers a ticket and meets the SLA's [response target](#slas). A status can count too - an "Assigned" status, say, that your team moves a ticket into as they pick it up:
+
+- **Yes - without an email** - moving a ticket into it counts as the first response, and nothing is sent.
+- **Yes - after emailing the client that it is assigned** - the contact and watchers are emailed the **"Ticket assigned" message** from [ticket settings](#ticket-settings) first, and it's kept on the ticket as a public note. If nobody could be emailed - no address, no mail set up, or client emails off - it doesn't count, and the ticket's history says so.
+
+It counts once, for a ticket nobody has answered yet, when an agent moves it into the status: setting the status by hand or in a reply, or assigning a new ticket, which moves it to Open. A client's own reply moving a ticket never counts.
 
 ### Switch off or delete a status
 
