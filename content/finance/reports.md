@@ -1,6 +1,6 @@
 ---
 title: Reports
-description: Profit and loss, receivables, recurring revenue, client profitability, ticket and SLA performance, renewals, where your clients are and more - for any period, printable and exportable to CSV or PDF.
+description: Profit and loss, receivables, recurring revenue, client profitability, ticket and SLA performance, renewals, where your clients are and more - for any period, printable, and exportable as a PDF or CSV.
 where: Tools > Reports
 ---
 
@@ -8,9 +8,9 @@ where: Tools > Reports
 
 ![The reports page](fin-reports.webp "Reports: every report in its group, with what each one shows")
 
-Every report works the same way: pick a period, narrow it to one client where that makes sense, then **Print** it or **Export** its tables to CSV or PDF. Each shows only what your role can see.
+Every report works the same way: pick a period, narrow it to one client where that makes sense, then **Print** it, or **Export** it as a PDF or its tables as CSV. Each shows only what your role can see.
 
-A PDF from **Export** is the table as the report shows it, with its totals - good for sending on. For the charts and the figures along the top as well, use **Print**: your browser's print window can save the whole page as a PDF.
+**Export > PDF** is the report as you see it - the figures, charts, map and tables with their colours - on Letter or A4 paper, in light colours even if you use dark mode. Tables come out with every row, not just the first few. It's the one to send to a client or your accountant.
 
 ## Finance
 
@@ -76,4 +76,4 @@ A PDF from **Export** is the table as the report shows it, with its totals - goo
 **Audit Activity** shows what was done in ITFlow - changes, deletions, passwords looked at, exports and sign-ins - over time, out of hours, and by person, client and kind of record.
 
 > [!TIP]
-> **Client Review** is also on each client's **⋮** menu. Print it before a quarterly business review to walk the client through their quarter.
+> **Client Review** is also on each client's **⋮** menu. Export it as a PDF, or print it, before a quarterly business review to walk the client through their quarter.
