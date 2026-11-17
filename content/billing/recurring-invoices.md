@@ -27,7 +27,8 @@ There are three ways to start one:
 3. Pick a **Category**, how often it's **Billed** - **Monthly**, **Quarterly** or **Yearly** - and the date of the **First invoice**.
 4. Add a **Discount** if there is one.
 5. Under **When it is made**, pick **Send it automatically** or **Leave a draft to check**.
-6. Click **Create**, then add its lines - the same way as on an invoice: see [Add and change the lines](/billing/invoices#add-and-change-the-lines).
+6. To send it before its date, set **Make it ahead** - see [Make it ahead](#ahead).
+7. Click **Create**, then add its lines - the same way as on an invoice: see [Add and change the lines](/billing/invoices#add-and-change-the-lines).
 
 ![The New Recurring Invoice window](bill-recurring-new.webp "New Recurring Invoice: what it's for, how often it bills, and whether it emails itself")
 
@@ -90,6 +91,15 @@ ITFlow's nightly job makes each invoice on its day, dated that day:
 - it's emailed to the client's primary and billing contacts, if it's set to **Send it automatically** and emailing is on - otherwise it's left as a draft in **Invoices**, ready for you to check and send
 
 If a run is missed - the server was off, say - the job catches up on runs up to a week old. A recurring invoice whose next date has passed further back than that is listed under **Late**, and won't bill until you use **Invoice Now** or **Edit** its **Next invoice** date.
+
+### Make it ahead {#ahead}
+
+Some clients want their invoice before the month starts. **Make it ahead** makes each invoice so many days before its date - dated the day it's made. **Due, when made ahead** sets when it's due:
+
+- **Its date, plus** the client's terms - with Net 15, an invoice for December 1 made on November 24 is due December 16
+- **On its date** - due December 1
+
+The date stays the period it bills for, and the next one is made the same number of days before its own date. Days ahead stop short of a whole period. With 0, it's made on its date, as before.
 
 A recurring invoice that bills a [contract](/billing/contracts#recurring) shows the contract, on its page and in the list. It's paused while the contract is a draft, starts when the contract is made active or renewed, and is paused once the contract ends.
 

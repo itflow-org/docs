@@ -14,7 +14,7 @@ The list shows each one's client, **How often**, **Next run**, **Last ticket** a
 
 1. Go to **Support > Recurring Tickets** (or a client's **Recurring Tickets**) and click **New Recurring Ticket**.
 2. On **Details**, pick the **Client** and **Contact**, and a **Template** if one fits. Type the **Subject** and details, and set the **Priority**, **Category**, who to **Assign to**, and whether **The tickets it raises are billable**.
-3. On **Schedule**, pick the **Frequency** - every three days, weekly, biweekly, monthly, quarterly, twice a year or yearly - and the **First run**. The schedule is written out in plain words, with when it will next run.
+3. On **Schedule**, pick the **Frequency** - every three days, weekly, biweekly, monthly, quarterly, twice a year or yearly - and the **First run**. The schedule is written out in plain words, with when it will next run. To book the work, and to raise the tickets ahead of the day, see [Book the work and make it ahead](#ahead).
 4. On **Related**, link the **Asset** it's for. On **Tasks**, add the steps.
 5. Click **Create Recurring Ticket**.
 
@@ -24,6 +24,16 @@ The nightly run raises the ticket on the day, then again each time it comes roun
 
 > [!TIP]
 > Placeholders such as `[Month]` and `[Quarter]` are filled in each time it raises a ticket, so "Monthly maintenance - [Month]" becomes "Monthly maintenance - November 2026". A template's fill-ins are answered once, here, for every ticket it raises.
+
+## Book the work and make it ahead {#ahead}
+
+Also on **Schedule**:
+
+- **Book the work for** - a time, and **Remote** or **Onsite**. Each ticket it raises is booked for its run day at that time, as booking it on the ticket would: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite, and it shows on the [calendar](/service-desk/calendar). Leave the time empty to book nothing.
+- **Make it ahead** - raise each ticket so many days before its run day, so it's on the board and on everyone's calendar in good time. The run day stays the day the work is for.
+- **Days before the 1st of its month** makes every run in a month on the same day - with 3, all of December's visits are raised on November 28, each booked for its own day. It's for monthly, quarterly, twice-yearly and yearly ones.
+
+Days ahead stop short of the next run - under a week for a weekly one, for example. The window says when the next one will be made, and the list shows the time and the days ahead under **How often**.
 
 ## Run, pause and change
 
