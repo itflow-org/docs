@@ -127,7 +127,7 @@ The **⋮** menu has:
 - **Download PDF**, **Print** and **Packing Slip** - the items without prices, to go in the box
 - **Copy Client Link** and **View as Client**
 - **Copy** - a new draft with the same lines, scope, discount and notes
-- **Make Recurring** - bill the same lines again every month, quarter or year from a [recurring invoice](/billing/recurring-invoices)
+- **Make Recurring** - bill the same lines, with the same discount, again every month, quarter or year from a [recurring invoice](/billing/recurring-invoices)
 - **Cancel Invoice** - nothing more is owed on it, and it stays on record
 - **Delete** - it goes for good, with its lines, payments and history. Its tickets become unbilled again, and its expenses and trips are to bill again.
 
