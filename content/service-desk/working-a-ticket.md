@@ -153,6 +153,14 @@ A resolved ticket is reopened by **Reopen**, or by a reply that sets a working s
 
 Click **Close** to close it straight away. Closing is final: a closed ticket can't be reopened. Clients are asked how you did when a ticket closes.
 
+### When the client never answers {#no-response}
+
+For a client who hasn't replied after several tries, use the arrow beside **Resolve** and pick **Resolve - no response**. The window has your admin's message for this, filled in for the ticket - change it if you like, then click **Send and resolve**.
+
+- The message goes on the ticket as a public note, and to the contact and watchers in place of the usual "resolved" email, when client emails are on.
+- The ticket is resolved, and closes on its own as usual - without asking the client how you did.
+- If they reply before it closes, it reopens like any resolved ticket.
+
 ## Merge, move and delete
 
 - **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
