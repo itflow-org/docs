@@ -10,7 +10,7 @@ Any contact with an email address can be given access to the client portal. What
 
 | Contact | Sees in the portal |
 |---|---|
-| **Everyone** with access | Their own tickets, raising new ones and request forms, and the devices they use |
+| **Everyone** with access | Their own tickets, raising new ones and request forms, the devices they use, and the [Knowledge Base](/service-desk/knowledge-base#portal) articles you share with their company, under **Help** |
 | **Billing** contacts | Also invoices, quotes, recurring invoices, payments, statements, and cards and autopay |
 | **Technical** contacts | Also every ticket at the company, and the company's devices, licenses, domains and certificates, documents and contacts |
 | The **Primary** contact | Everything - and adds people, changes their roles and gives or takes away their portal access |

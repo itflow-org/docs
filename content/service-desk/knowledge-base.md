@@ -1,10 +1,10 @@
 ---
 title: Knowledge Base
-description: How-tos, fixes and policies written once for every client, with categories, tags, versions and reviews to keep them right.
+description: How-tos, fixes and policies written once for every client, shared in their client portal or on a public help center, with categories, tags, versions and reviews to keep them right.
 where: Main menu > Knowledge Base
 ---
 
-The Knowledge Base is for what your team explains again and again - setting up email on a phone, the printer that shows offline, what to do with a phishing email. You write each one once, as an article, and it's there for every client.
+The Knowledge Base is for what your team explains again and again - setting up email on a phone, the printer that shows offline, what to do with a phishing email. You write each one once, as an article, and it's there for every client. Share the ones your clients can use, and they read them in their client portal - or on a public help center that anyone can open.
 
 A client's own documentation still goes in their [Files and documents](/documentation/files-and-documents). The Knowledge Base is for what isn't any one client's.
 
@@ -15,9 +15,10 @@ A client's own documentation still goes in their [Files and documents](/document
 1. Open **Knowledge Base** in the main menu and click **New Article**.
 2. Give it a **Title**, and a **Summary** - one line on what it helps with. The summary shows under the title in the list and in search.
 3. Pick a **Category**, add **Tags** if you like, and choose how often it's reviewed under **Review**.
-4. Write the article in the editor. Headings, lists, tables, links and pictures all work - paste a screenshot straight in.
-5. Leave **Published** on if it's finished, or turn it off to keep it as a draft.
-6. Click **Create Article**.
+4. Under **Who can read it**, choose who it's for - see [Share an article](#share). New articles start at **Agents only**.
+5. Write the article in the editor. Headings, lists, tables, links and pictures all work - paste a screenshot straight in.
+6. Leave **Published** on if it's finished, or turn it off to keep it as a draft.
+7. Click **Create Article**.
 
 A draft is marked **Draft** until it's published. Publish one from its page, or from its **⋮** menu in the list.
 
@@ -25,7 +26,7 @@ A draft is marked **Draft** until it's published. Publish one from its page, or 
 
 ## Find an article
 
-The list searches titles, summaries, the words in the articles and their tags. Narrow it with **Any category** and **Any tag**, or pick a view along the top:
+The list searches titles, summaries, the words in the articles and their tags. Narrow it with **Any category**, **Any tag** and **Any audience**, or pick a view along the top:
 
 - **All** - every article that isn't archived
 - **Published** - the finished ones
@@ -39,7 +40,7 @@ Tick articles in the list to change several at once: **Set category**, **Publish
 
 ## Read an article
 
-Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, print, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. The column on the right shows its category, whether it's published, when it's next reviewed and its earlier versions.
+Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, print, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions.
 
 ![An article](sd-kb-article.webp "An article: the content, with its category, review and versions beside it")
 
@@ -55,7 +56,50 @@ Once that long has passed since the article was written, edited or last reviewed
 
 ### Copy an article
 
-**Copy** makes a new draft from an article, with its pictures and tags - to start a similar one without rewriting it.
+**Copy** makes a new draft from an article, with its pictures, its tags and who can read it - to start a similar one without rewriting it.
+
+## Share an article {#share}
+
+**Who can read it**, in an article's window, says who it's for:
+
+- **Agents only** - your team, here in ITFlow. Every new article starts here.
+- **Clients** - your clients' contacts, in their client portal under **Help**. Then say which clients:
+  - **All clients** - every client
+  - **Clients tagged** - every client with any of the client tags you pick, such as **Managed**. A client given the tag later can read it too, and one whose tag is taken off no longer can.
+  - **Clients** - some clients by name
+
+  Tags and names can be picked together: a client that matches either can read it.
+- **Anyone** - every client's portal, and the [public help center](#help-center) while it's on.
+
+![Who can read it](sd-kb-share.webp "Who can read it: an article for every client tagged Managed")
+
+Only published articles are shown outside ITFlow. A draft or an archived article stays with your team, whoever it's set for.
+
+The list's **Who can read it** column shows each article's, and **Any audience** filters by it. On an article's page, the right-hand column says who can read it and where they find it.
+
+> [!WARNING]
+> Keep anything about one client - names, addresses, passwords - out of an article you share.
+
+### What clients see {#portal}
+
+Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, and **Still stuck? Ask us**, which starts a ticket about it. Every contact with portal access can read them, whatever their roles.
+
+![Help in the client portal](portal-help.webp "Help in the client portal: the articles shared with this client")
+
+To see what one contact sees, use **View portal as them** on their page - see [What clients see](/portal/overview).
+
+### The public help center {#help-center}
+
+Articles for **Anyone** can also go on a public help center: a page of its own, with your logo, that anyone with the link can read without signing in. Put it on your website, or in your email signature. It has the same categories and search as the portal.
+
+![The public help center](sd-kb-help-center.webp "The public help center: the articles anyone can read")
+
+It's off to start with. An admin switches it on in **Admin > Settings > Knowledge Base**, which also has its link to copy. While it's on:
+
+- the client portal's sign-in page links to it, as **Help center**
+- an article for anyone shows its own public link on its page, to copy and send
+
+Search engines are asked not to list it. While it's off, its link says there's nothing there, and articles for anyone are only in your clients' portals.
 
 ## Start from a client's document
 
@@ -72,4 +116,4 @@ Admins can also add a category or a tag straight from an article's form.
 Reading the Knowledge Base takes **Support** in an agent's role. Writing and changing articles takes **Edit**, and deleting them **Full**. See [Roles and permissions](/admin/roles).
 
 > [!NOTE]
-> The Knowledge Base can be switched off in [Admin > Settings > Modules](/admin/settings#modules). Its articles are kept, and they're all there again when it's switched back on.
+> The Knowledge Base can be switched off in [Admin > Settings > Modules](/admin/settings#modules). Its articles are kept, and they're all there again when it's switched back on. While it's off, clients don't see **Help** in their portal, and the public help center is closed.

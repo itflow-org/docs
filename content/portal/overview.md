@@ -9,6 +9,7 @@ The client portal is your clients' side of ITFlow. A contact you give access to 
 - raise tickets, follow them and reply, and ask for things with your request forms
 - see and pay their invoices, accept quotes and save a card for autopay
 - look up their devices, licenses, domains, documents and colleagues
+- read the how-tos you share with them, under **Help**
 
 It carries your company's name and works on a phone as well as a computer. What each contact sees depends on their roles - see [Giving contacts access](/portal/access).
 
@@ -34,7 +35,7 @@ Announcements you post - planned maintenance, a holiday closure - show at the to
 
 ## Finding their way around
 
-The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **New ticket** is always there.
+The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **Help** is there too once you've shared an article with them - see [Knowledge Base](/service-desk/knowledge-base#portal). **New ticket** is always there.
 
 Their name opens **Your account** - their details, the emails they get from you, whether you text them, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
 
