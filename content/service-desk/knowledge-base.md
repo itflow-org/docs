@@ -43,13 +43,21 @@ Tick articles in the list to change several at once: **Set category**, **Publish
 
 ## Read an article
 
-Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, print, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions.
+Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, **Review with AI** when AI is set up, print, **PDF**, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. Its files are under it. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions.
 
 ![An article](sd-kb-article.webp "An article: the content, with its category, review and versions beside it")
 
 ### Versions
 
 Every edit keeps what the article said before. Click a version under **Versions** to read it, and **Restore this version** to put it back - what the article says now is kept as a version in turn.
+
+### Files {#files}
+
+Files go with an article - a script, a form, a vendor's setup guide. Under the article, choose them in **Files** and click **Add**. An article can have up to 20, of the same kinds the client [Files](/documentation/files-and-documents) take.
+
+![An article's files](sd-kb-files.webp "Files: what goes with the article, to open or download")
+
+Whoever can read the article can download them - your team here, and the readers it's shared with in the client portal or on the public help center. Click a file's name to open it, or the download button to save it. The bin takes one off. **Copy** copies them with the article.
 
 ### Keeping articles up to date
 
@@ -58,6 +66,14 @@ Every edit keeps what the article said before. Click a version under **Versions*
 Once that long has passed since the article was written, edited or last reviewed, it's marked **Review due**, and it shows in the **Review due** view. Read it through, fix anything that's changed, and either save your edit or click **Mark reviewed**. Drafts and archived articles aren't reviewed.
 
 The number beside **Knowledge Base** in the main menu counts the articles due for review and the ones readers said didn't help.
+
+### Review with AI {#ai-review}
+
+With AI set up, **Review with AI** reads an article as a senior engineer would and says whether it **Looks good**, **Needs work** or is **Out of date** - what's unclear, missing or risky to follow, and what's old. For an article clients or anyone can read, it also points out anything about one client - a name, a person, a server - that shouldn't be in it, and steps written for a technician rather than for them.
+
+![Review with AI on an article](sd-kb-review.webp "Review with AI: what to fix or check, the most important first, and a summary to use")
+
+It suggests a summary too - **Use as its summary** saves it. **Mark reviewed** is there when the article is reviewed on a schedule. Passwords and keys in the article aren't sent. See [Using AI](/getting-started/ai).
 
 ### Copy an article
 
@@ -87,7 +103,7 @@ The list's **Who can read it** column shows each article's, and **Any audience**
 
 ### What clients see {#portal}
 
-Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, **Still stuck? Ask us**, which starts a ticket about it, and **Was this helpful?** under it - see [What readers think](#readers). Every contact with portal access can read them, whatever their roles.
+Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, **Still stuck? Ask us**, which starts a ticket about it, its files to download, and **Was this helpful?** under it - see [What readers think](#readers). Every contact with portal access can read them, whatever their roles.
 
 ![Help in the client portal](portal-help.webp "Help in the client portal: the articles shared with this client")
 

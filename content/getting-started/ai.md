@@ -46,6 +46,7 @@ From the ticket's **⋮** menu:
 
 - **Draft it with AI** on a new document writes a first draft from what you say it's for, using what ITFlow knows about the client - its sites, devices and services. See [Files and documents](/documentation/files-and-documents#write-a-document).
 - **Review with AI** on a document reads it as a senior engineer would, and points out what looks wrong, missing or out of date.
+- **Review with AI** on a [Knowledge Base](/service-desk/knowledge-base#ai-review) article does the same, and for an article clients can read, points out anything about one client that shouldn't be in it.
 
 ## Quotes and invoices
 

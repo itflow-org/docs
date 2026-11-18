@@ -69,7 +69,11 @@ Along the top: **Edit**, **Share**, **PDF** and print, and the **⋮** menu with
 
 ### Reviews
 
-A document made from a template can be due a review - every 6 months, say. Its page then says **Review due**, or when the next review is and who last reviewed it, with **Mark reviewed**. Editing a document counts as reviewing it. The client's overview counts documents due a review.
+A document can be reviewed on a schedule - every 6 months, say. Its page then says **Review due**, or when the next review is and who last reviewed it, with **Mark reviewed**. Editing a document counts as reviewing it. The client's overview counts documents due a review, and Files has a **Review due** tab.
+
+A document made from a template is reviewed as often as the template says. To change that for one document, or to review a document that isn't from a template, click **How often** beside its review and pick **Every 3 months**, **Every 6 months**, **Every year** or **Every 2 years** - or **Never**. **As its template says** puts it back. Changing it doesn't count as reviewing it.
+
+![How often a document is reviewed](doc-review.webp "How often: as its template says, or set on the document")
 
 ## Share a document or file
 
