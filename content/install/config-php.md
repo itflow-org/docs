@@ -58,6 +58,17 @@ define('CONST_GET_IP_METHOD', 'HTTP_CF_CONNECTING_IP');
 | `$config_enable_managed_by = true;` | Lets another ITFlow manage this one: adds **Admin > Managed By**, its cron job and support sign-in |
 | `$config_manager_required = true;` | Does what `$config_enable_managed_by` does, and keeps this ITFlow managed - its admins can't disconnect it. For an ITFlow you host for a customer. |
 
+## Development mode {#dev-mode}
+
+For a test copy of your ITFlow, where nothing it does should reach your clients, your team or the systems production talks to:
+
+| Line | What it does |
+|---|---|
+| `$config_dev_mode = true;` | Turns development mode on - see [Development mode](/admin/maintenance#dev-mode) |
+| `$config_dev_mail_to = 'dev@example.com';` | The test inbox every email goes to. Without one, no email is sent at all. |
+
+**Admin > Backup** writes both lines for you when ITFlow can write to config.php. They live here rather than in the database so that restoring production's backup onto the test copy can't turn it off.
+
 ## Demo mode {#demo}
 
 `$config_demo_mode = true;` makes this ITFlow a public demo: one-click sign-in as each role, fresh demo data every night, and no email, texts or changes that would reach outside it. It empties the database every night, so add it only to an ITFlow that holds nothing you want to keep. See [Running a public demo](/install/demo).

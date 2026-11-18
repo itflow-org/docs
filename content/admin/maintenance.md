@@ -127,6 +127,31 @@ Every backup is an encrypted zip, and the **Encryption key** opens it. It's hidd
 
 To restore, use `scripts/restore_cli.php` on the server - **Restoring** has the command to copy. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
 
+### Development mode {#dev-mode}
+
+For a test copy of your ITFlow - a second server you restore production's backup onto, to try an update or a new way of working. A copy of production would otherwise carry on as production does: emailing your clients, charging their cards, reading your support mailbox. Turn development mode on **before** you restore onto it.
+
+![Development mode](adm-dev-mode.webp "Development mode, on: every email goes to the test inbox")
+
+Under **Development mode** on **Admin > Backup**, switch it on, give a **Test inbox** and click **Save**. While it's on:
+
+- every email goes to the test inbox instead, with who it was for at the front of its subject - "[DEV to marla@ravenwood.example] Invoice INV-1042"
+- texts aren't sent - they wait in the queue
+- the support mailbox isn't read, so production still gets its email
+- AI Triage doesn't run
+- Stripe charges nothing - card payments, saving a card and autopay all stop
+- RMM devices still come in, but no action is done to one
+- log entries aren't sent to your syslog server
+- a [managed](/admin/managed-instances) ITFlow doesn't check in with its manager
+- the install details aren't shared with the ITFlow project
+
+Everyone sees a red **DEVELOPMENT** badge in the top bar, and the jobs that stop say why on [Cron](#cron).
+
+It's kept in [config.php](/install/config-php#dev-mode), not the database, so restoring a backup can't turn it off. When ITFlow can't write to config.php, the card shows the two lines to add on the server.
+
+> [!WARNING]
+> Never turn development mode on in production - nobody would get your email.
+
 ## Update
 
 **Admin > Update** says where your install stands - up to date, an update available, an update running, or the database still to update - with the one button for it. Alongside are this install's version, the branch it updates from, its database version and commit, when it last checked for updates and last updated, and whether cron is running.
