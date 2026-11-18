@@ -37,6 +37,8 @@ The **Day** view has a column for each technician, through the day. Hours outsid
 
 ![The Schedule window](sd-dispatch-schedule.webp "Schedule: who, when, how long, and whether the client is told")
 
+If the ticket's contact has other tickets open, the **Schedule** window lists them under the ticket - who has each, and when it's booked - so a duplicate gets noticed before anyone drives out for it. **Merge** beside one keeps one ticket and closes the other with a note pointing to it: pick which to keep, say why if you like, and choose whether to **Move its replies over too**. A booking on the ticket that's closed is taken off first, and its technician and client are sent the cancellation. Close the ticket you were booking and the window closes with it.
+
 The ticket is assigned to that technician and booked. They're emailed the time with a calendar file, and if it was someone else's, the technician who had it is sent the cancellation. If the technician - or anyone [helping](/service-desk/working-a-ticket#helpers) on the ticket - already has something at that time, ITFlow tells you what. A technician who can't see the ticket's client can't be given it, and ITFlow says so.
 
 ### Raise a new ticket from the board {#new-ticket}
