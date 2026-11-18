@@ -7,7 +7,7 @@ access: Admins
 
 ITFlow has an API, so other systems can read and write it: an RMM raising tickets from alerts, a script adding assets, a sync with another tool. Each system needs an API key.
 
-A key acts as one of your agents. It can do what that agent's role allows, for the clients they can see, and its calls show in the audit log as them - so give each system an agent of its own, with only the access it needs.
+A key acts as one of your agents. It can do what that agent's role allows, for the clients they can see, and its calls show in the audit log as them - so give each system an agent of its own, with only the access it needs. Make that agent an [API / service account](/admin/users#service-accounts), and it stays out of the calendar, the pickers and the reports, and can't sign in.
 
 ## Make a key
 

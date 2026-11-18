@@ -85,6 +85,25 @@ If someone loses their phone, open them with **Edit** and use **Reset it** under
 > [!WARNING]
 > If an agent's account may have been compromised, use **Incident response** in the menu beside **New User**. It resets the password of every other agent, shows you the new passwords once to give out by phone, and forgets every remembered browser. Client portal logins are left alone. Change your own password first.
 
+## API / service accounts {#service-accounts}
+
+An [API key](/admin/api-keys) acts as one of your agents, so a key for your RMM or a sync needs a login of its own - which would otherwise show up in the calendar, every assign picker and the reports as if it were a person. Mark that login as an API / service account:
+
+1. Open the user, or make one with **New User** - with **Set a password now**, as a service account isn't invited.
+2. On the **Sign in** tab, turn on **API / service account**, and save.
+
+![The API / service account switch](adm-user-service-account.webp "API / service account, on the Sign in tab of a user")
+
+It keeps its role, so its API keys work just as before, with the same access. But:
+
+- it's left out of the agent lists and pickers - the calendar, assigning tickets, projects and contracts, the reports and the rest
+- it gets no notifications, and isn't one of the admins that alerts go to
+- it can't sign in to ITFlow in a browser - with a session open already, it's signed out
+
+Service accounts have a tab of their own, **API accounts**, and are left out of the others - except **Archived**, so one can be found and restored. An **API** badge marks them. It still takes a seat if your ITFlow has a limit on agents. Turn the switch off to make it an ordinary agent again.
+
+![API accounts](adm-users-api-accounts.webp "Users: the API accounts tab")
+
 ## Client portal logins {#client-portal}
 
 The **Client portal** tab lists every contact who can sign in to the client portal, at all your clients - the place to check who has access, and to help one of them without finding their client first. The number on the tab is how many can sign in.
