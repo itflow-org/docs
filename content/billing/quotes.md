@@ -68,6 +68,23 @@ While the quote can still be changed, each line with a cost shows it under its n
 
 The markup or margin a new line starts with, and the buttons offered, are set in [Admin > Settings > Quotes](/admin/billing#quotes).
 
+### Pictures {#pictures}
+
+A line can show a picture beside its name - handy for hardware, so the client sees what they're getting. It's on the quote, the guest link, the client portal and the PDF.
+
+![A quote line with a picture beside it](bill-quote-picture.webp "A line with its picture, as the client sees it")
+
+To add one, open the line's **⋮ > Edit**, and under **Picture** either choose a file, or paste a link - to a picture, or to the product's page on a supplier's website, and ITFlow takes the page's main picture. Click **Save**. To take it off, tick **Remove the picture**.
+
+![The Picture field in a quote line's Edit window](bill-quote-line-picture.webp "Picture: choose a file, or paste a link to a picture or a product page")
+
+A product can keep a picture of its own, in its **Edit** window, and a line added from it takes a copy. Copying a quote copies its pictures too. ITFlow keeps its own smaller copy of each, so a picture still shows if the website it came from takes it down.
+
+> [!NOTE]
+> ITFlow only fetches pictures from public websites. A link to something on your own network won't work - save the picture and choose the file instead.
+
+To leave pictures off quotes altogether, switch off **Show pictures on quotes** in [Admin > Settings > Quotes](/admin/billing#quotes).
+
 With AI set up, **Write it with AI** under the lines drafts them from a sentence such as "three new laptops for the new starters, set up and joined to the domain". It uses your catalog's prices and the client's rate, and you check the lines before adding them. See [Using AI](/getting-started/ai).
 
 > [!TIP]

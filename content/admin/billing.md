@@ -67,6 +67,8 @@ Under **Pricing**, set how a quote line's price comes from [its cost](/billing/q
 - **Markup or margin %** - the % it starts with.
 - **Quick picks** - the % buttons in a line's **Edit** window, separated by commas, up to eight.
 
+Under **Pictures**, switch off **Show pictures on quotes** to leave [line pictures](/billing/quotes#pictures) off the quote, the guest link, the client portal and the PDF. They're kept, and come back if you switch it on again.
+
 ## Payment methods
 
 **Admin > Payment Methods** lists the ways money comes in and goes out - Cash, Check, Bank Transfer, Credit Card, and your own, such as ACH or the company card. Each shows what it's for, what it has been used on - "138 payments · 38 income", each a link to them in Transactions - and when it was last used.
