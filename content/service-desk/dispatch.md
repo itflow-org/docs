@@ -39,6 +39,10 @@ The **Day** view has a column for each technician, through the day. Hours outsid
 
 The ticket is assigned to that technician and booked. They're emailed the time with a calendar file, and if it was someone else's, the technician who had it is sent the cancellation. If the technician - or anyone [helping](/service-desk/working-a-ticket#helpers) on the ticket - already has something at that time, ITFlow tells you what. A technician who can't see the ticket's client can't be given it, and ITFlow says so.
 
+### Raise a new ticket from the board {#new-ticket}
+
+For work that isn't a ticket yet - a call that's just come in, say - drag down a technician's column over empty time on the **Day** view. **New Ticket** opens assigned to that technician, with the **Schedule** filled in from the time you dragged over. Pick the client, add the subject and details, and click **Create Ticket**: it's booked as from the Schedule window, and you're back on Dispatch on that day. A plain click on the board does nothing, so you won't open it by accident.
+
 ## Move or take off booked work
 
 - **To another time or technician** - drag a booking to the new time, or across to another technician's column. The **Schedule** window opens so you can check it; **Cancel** puts it back where it was. Drag a booking's bottom edge to make it longer or shorter.
