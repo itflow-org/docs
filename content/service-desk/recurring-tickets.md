@@ -14,16 +14,28 @@ The list shows each one's client, **How often**, **Next run**, **Last ticket** a
 
 1. Go to **Support > Recurring Tickets** (or a client's **Recurring Tickets**) and click **New Recurring Ticket**.
 2. On **Details**, pick the **Client** and **Contact**, and a **Template** if one fits. Type the **Subject** and details, and set the **Priority**, **Category**, who to **Assign to**, and whether **The tickets it raises are billable**.
-3. On **Schedule**, pick the **Frequency** - every three days, weekly, biweekly, monthly, quarterly, twice a year or yearly - and the **First run**. The schedule is written out in plain words, with when it will next run. To book the work, and to raise the tickets ahead of the day, see [Book the work and make it ahead](#ahead).
+3. On **Schedule**, pick the **Frequency** - every three days, weekly, biweekly, monthly, quarterly, twice a year or yearly - and the **First run**. For a monthly to yearly one, **Repeats on** picks the same date or the same weekday each time - see [Repeat on a weekday](#weekday). The schedule is written out in plain words, with when it will next run. To book the work, and to raise the tickets ahead of the day, see [Book the work and make it ahead](#ahead).
 4. On **Related**, link the **Asset** it's for. On **Tasks**, add the steps.
 5. Click **Create Recurring Ticket**.
 
 ![The New Recurring Ticket window](sd-recurring-new.webp "New Recurring Ticket: Details, Schedule, Related and Tasks")
 
-The nightly run raises the ticket on the day, then again each time it comes round. Monthly ones keep to the day they started on - the 31st runs on the last day of a shorter month.
+The nightly run raises the ticket on the day, then again each time it comes round. Monthly ones keep to the day they started on - the 31st runs on the last day of a shorter month - unless they repeat on a weekday.
 
 > [!TIP]
 > Placeholders such as `[Month]` and `[Quarter]` are filled in each time it raises a ticket, so "Monthly maintenance - [Month]" becomes "Monthly maintenance - November 2026". A template's fill-ins are answered once, here, for every ticket it raises.
+
+## Repeat on a weekday {#weekday}
+
+Some work follows the week, not the date: patch night on the third Wednesday, the month-end check on the last Friday. A monthly, quarterly, twice-yearly or yearly recurring ticket can repeat that way.
+
+1. On **Schedule**, pick the **Frequency** and set the **First run** to a day it should fall on - the third Wednesday of the month, say.
+2. **Repeats on** appears under it, with what that day is: **On the 16th**, and **On the third Wednesday**. A day in the last week of the month also offers **On the last Wednesday**.
+3. Pick the weekday. A yearly one stays in its month - **On the third Wednesday of December**.
+
+![Repeats on, on the Schedule tab](sd-recurring-schedule.webp "Repeats on: the same date each time, or the same weekday of the month")
+
+The list shows it under **How often** - "on the third Wednesday". When you move its next run, from **Edit** or **Set next run**, it keeps to the same kind of weekday: move a third-Wednesday one to the second Wednesday and it runs on second Wednesdays from then on. A last-Friday one stays on the last Friday whenever the new day allows it.
 
 ## Book the work and make it ahead {#ahead}
 

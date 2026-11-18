@@ -25,7 +25,7 @@ Click anything on the calendar to open its quick look. Drag a ticket or event to
 
 1. Click **New event**, or click (or drag across) a time on the calendar.
 2. Give it a **Title** and pick the **Calendar** it goes on.
-3. Under **When**, set when it **Starts** and **Ends**, or switch on **All day**. Under **Repeats**, pick how often it repeats, if it does - every so many days, weeks, months or years, with an end date and dates to skip.
+3. Under **When**, set when it **Starts** and **Ends**, or switch on **All day**. Under **Repeats**, pick how often it repeats, if it does - every so many days, weeks, months or years, with an end date and dates to skip. A monthly or yearly one can repeat on a weekday rather than the same date: **Repeats on** offers what its start day is, such as **On the third Wednesday** or **On the last Friday**.
 4. Pick the **Client**, if it's for one, and the **Location** - a client site, a room, an address, or a Teams or Zoom link.
 5. Under **Who**, add technicians and the client's contacts, and anyone else by email.
 6. Add **Notes**: what it's for, what to bring, who to ask for.

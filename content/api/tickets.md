@@ -329,7 +329,7 @@ Paused ones are listed too, with `recurring_ticket_paused_at` set. With `recurri
 }
 ```
 
-**Fields:** `recurring_ticket_id`, `recurring_ticket_category`, `recurring_ticket_subject`, `recurring_ticket_details`, `recurring_ticket_priority`, `recurring_ticket_frequency`, `recurring_ticket_billable`, `recurring_ticket_start_date`, `recurring_ticket_next_run`, `recurring_ticket_paused_at`, `recurring_ticket_created_at`, `recurring_ticket_updated_at`, `recurring_ticket_created_by`, `recurring_ticket_assigned_to`, `recurring_ticket_client_id`, `recurring_ticket_contact_id`, `recurring_ticket_asset_id`, `recurring_ticket_ticket_template_id`.
+**Fields:** `recurring_ticket_id`, `recurring_ticket_category`, `recurring_ticket_subject`, `recurring_ticket_details`, `recurring_ticket_priority`, `recurring_ticket_frequency`, `recurring_ticket_by_day`, `recurring_ticket_billable`, `recurring_ticket_start_date`, `recurring_ticket_next_run`, `recurring_ticket_paused_at`, `recurring_ticket_created_at`, `recurring_ticket_updated_at`, `recurring_ticket_created_by`, `recurring_ticket_assigned_to`, `recurring_ticket_client_id`, `recurring_ticket_contact_id`, `recurring_ticket_asset_id`, `recurring_ticket_ticket_template_id`.
 
 ### Create {#recurring-tickets-create}
 
@@ -339,6 +339,7 @@ Paused ones are listed too, with `recurring_ticket_paused_at` set. With `recurri
 | `subject` | Required, unless a template gives it one. `[Month]`, `[Quarter]` and the like are filled in each time. |
 | `frequency` | Required: `Three Days`, `Weekly`, `Biweekly`, `Monthly`, `Quarterly`, `Biannually` or `Annually` |
 | `start_date` | Its first run, as `2026-11-05` - today or later. Today if you leave it out. |
+| `repeat_on` | Monthly to yearly ones: the weekday it repeats on, as its first run falls - `3WE` the third Wednesday, `-1FR` the last Friday. Leave it out for the same date each time. One the first run doesn't fall on is refused. |
 | `details` | The description. HTML is kept. |
 | `priority` | `Low`, `Medium` (the default), `High` or `Urgent` |
 | `billable` | `1` if the time on its tickets is billable. Needs **Modify** on Sales. |
@@ -361,7 +362,7 @@ curl -X POST https://itflow.example.com/api/v1/recurring_tickets/create.php \
 
 ### Update {#recurring-tickets-update}
 
-`update.php` takes `recurring_ticket_id`, `client_id` - its own client - and any of the fields under [Create](#recurring-tickets-create) apart from `client_id` and `start_date`, and `next_date`: its next run, today or later. Only what you send changes. A moved `next_date` is the day the schedule keeps to from then. `tasks` and `asset_ids` replace what it had. Its fill-ins keep their answers but for the ones you send in `fill_ins`.
+`update.php` takes `recurring_ticket_id`, `client_id` - its own client - and any of the fields under [Create](#recurring-tickets-create) apart from `client_id` and `start_date`, and `next_date`: its next run, today or later. Only what you send changes. A moved `next_date` is the day the schedule keeps to from then, and one that repeats on a weekday keeps to the same kind of weekday. `repeat_on` is checked against its next run, and a frequency that isn't monthly to yearly clears it. `tasks` and `asset_ids` replace what it had. Its fill-ins keep their answers but for the ones you send in `fill_ins`.
 
 ### Raise now, pause and delete {#recurring-tickets-raise}
 

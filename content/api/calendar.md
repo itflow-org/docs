@@ -34,9 +34,9 @@ An event with no client is anyone's, as on the [calendar](/service-desk/calendar
 | `from`, `to` | Starting on or after, and on or before, these days - such as `2026-11-01` |
 | `limit`, `offset` | [Paging](/api/requests#paging) |
 
-A repeating event is one row: `event_repeat` - `Day`, `Week`, `Month` or `Year` - every `event_repeat_interval`, until `event_repeat_until`, without the days in `event_repeat_skip`. Each attendee has its `kind` - `agent`, `contact` or `guest` - `name`, `email` and `invited_at`, when it was sent the invitation.
+A repeating event is one row: `event_repeat` - `Day`, `Week`, `Month` or `Year` - every `event_repeat_interval`, until `event_repeat_until`, without the days in `event_repeat_skip`. A monthly or yearly one with `event_repeat_by_day` falls on that weekday of the month instead of the same date - `3WE` the third Wednesday, `-1FR` the last Friday. Each attendee has its `kind` - `agent`, `contact` or `guest` - `name`, `email` and `invited_at`, when it was sent the invitation.
 
-**Fields:** `event_id`, `event_title`, `event_location`, `event_description`, `event_start`, `event_end`, `event_all_day`, `event_repeat`, `event_repeat_interval`, `event_repeat_until`, `event_repeat_skip`, `event_sequence`, `event_created_at`, `event_updated_at`, `event_created_by`, `event_client_id`, `event_location_id`, `event_calendar_id`, `calendar_name`.
+**Fields:** `event_id`, `event_title`, `event_location`, `event_description`, `event_start`, `event_end`, `event_all_day`, `event_repeat`, `event_repeat_interval`, `event_repeat_until`, `event_repeat_by_day`, `event_repeat_skip`, `event_sequence`, `event_created_at`, `event_updated_at`, `event_created_by`, `event_client_id`, `event_location_id`, `event_calendar_id`, `calendar_name`.
 
 ### Create {#events-create}
 
@@ -52,6 +52,7 @@ A repeating event is one row: `event_repeat` - `Day`, `Week`, `Month` or `Year` 
 | `event_location_id` | One of the client's locations |
 | `event_description` | |
 | `event_repeat`, `event_repeat_interval`, `event_repeat_until` | `Week` and `2` is every other week. `event_repeat_until` is its last day. |
+| `event_repeat_by_day` | `Month` and `Year` only: the weekday it repeats on, as its start falls - `3WE` the third Wednesday, `-1FR` the last Friday. Leave it out, or send it empty, for the same date each time. One that doesn't match the start is refused. |
 | `attendee_user_ids` | Agents on it, by `technician_id` |
 | `attendee_contact_ids` | The client's contacts on it |
 | `attendee_emails` | Anyone else, by email - a list, or separated by commas |
