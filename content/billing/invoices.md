@@ -25,6 +25,20 @@ An invoice moves through these statuses:
 | **Paid** | Paid in full |
 | **Cancelled** | Nothing more is owed on it. It stays on record. |
 
+### Do several at once {#bulk}
+
+Tick invoices on the list - or the box at the top for the whole page - and use **Bulk Action**:
+
+- **Mark Sent** - drafts that went out some other way. Pick how, and add a note for their history.
+- **Send by Email** - each one goes to its client's primary and billing contacts, as **Quick Send** does. Drafts become **Sent**.
+- **Mark Paid** - each one gets a payment of what's still owed on it. Pick the **Date**, **Method** and the account it went **Into**, add a **Reference** if you have one, and choose whether each client gets one receipt listing what they paid.
+- **Set Category** - the income category reports group them by.
+- **Cancel** and **Delete** - as they do on one invoice (see below).
+
+![Mark Paid for several invoices](bill-invoices-bulk-paid.webp "Mark Paid: the invoices it pays, the ones it leaves alone and why, and how they were paid")
+
+Each one is only done to the invoices it suits - a draft can't be marked paid, a paid invoice can't be cancelled. The window lists the invoices it will change and the ones it leaves alone, with why, and the message after says the same. If you can take payments but not change invoices, you can still tick invoices to mark them paid.
+
 ## Make an invoice
 
 1. Go to **Billing > Invoices** (or the client's **Invoices**) and click **New Invoice**.
