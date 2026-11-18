@@ -176,7 +176,11 @@ A ticket raised from a template that asks questions has a **Fill-ins** card with
 
 ## Book a visit or a call
 
-Click **Scheduled** in the Details card, pick the **Date and time** and whether it's a **Remote** or **Onsite** visit. The contact, the watchers and the assigned technician are emailed the time, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar). Changing or cancelling it tells them the same way. A contact who agreed to texts is texted the time too, and reminded before it - see [Texts to clients](/admin/text-messaging#texts-to-clients).
+Click **Scheduled** in the Details card, pick the **Date and time**, **How long** it takes - an hour unless you pick otherwise - and whether it's a **Remote** or **Onsite** visit. **Agent** is who does it: picking someone else gives them the ticket, and the agent who had it is emailed that it's off their calendar. Under the fields is that agent's day, so you can see when they're free. If they already have a ticket or an event at that time, ITFlow books it anyway and tells you what overlaps.
+
+![The Schedule window](sd-ticket-schedule.webp "Schedule: the date and time, the agent, how long, remote or onsite - and the agent's day")
+
+The contact, the watchers and the assigned technician are emailed the start and end, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar) for that long. Changing or cancelling it tells them the same way. A contact who agreed to texts is texted the time too, and reminded before it - see [Texts to clients](/admin/text-messaging#texts-to-clients).
 
 ## Resolve and close
 

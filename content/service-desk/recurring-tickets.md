@@ -29,7 +29,7 @@ The nightly run raises the ticket on the day, then again each time it comes roun
 
 Also on **Schedule**:
 
-- **Book the work for** - a time, and **Remote** or **Onsite**. Each ticket it raises is booked for its run day at that time, as booking it on the ticket would: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite, and it shows on the [calendar](/service-desk/calendar). Leave the time empty to book nothing.
+- **Book the work for** - a time, how long it takes, and **Remote** or **Onsite**. Each ticket it raises is booked for its run day at that time, for that long, as booking it on the ticket would: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite, and it shows on the [calendar](/service-desk/calendar). Leave the time empty to book nothing.
 - **Make it ahead** - raise each ticket so many days before its run day, so it's on the board and on everyone's calendar in good time. The run day stays the day the work is for.
 - **Days before the 1st of its month** makes every run in a month on the same day - with 3, all of December's visits are raised on November 28, each booked for its own day. It's for monthly, quarterly, twice-yearly and yearly ones.
 

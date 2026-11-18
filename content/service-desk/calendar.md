@@ -15,7 +15,7 @@ The **Calendar** shows what's booked: tickets scheduled for a visit or a call, e
 - **Calendars** lists your team's calendars - Default, Internal, Maintenance Windows, Onsite Visits and any others you add with the **+**. Tick or untick one to show or hide it.
 - **From ITFlow** shows or hides **Scheduled tickets**, **Projects** (start and due dates), **Service reviews**, **Recurring tickets** (when they'll next run), **Renewals** (domains, certificates, licenses and warranties) and **Invoices due**.
 
-Click anything on the calendar to open its quick look. Drag a ticket or event to another time to reschedule it.
+Click anything on the calendar to open its quick look. Drag a ticket or event to another time to reschedule it. A booked ticket shows for as long as it was booked - drag its bottom edge to make it longer or shorter, and ITFlow asks before it emails the new time.
 
 ## Book an open ticket
 

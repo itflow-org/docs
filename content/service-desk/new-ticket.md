@@ -21,7 +21,7 @@ Tickets reach ITFlow in several ways:
    - Type the **Subject** and the details.
    - Set the **Priority**, the **Category**, who to **Assign to**, and a **Due** date if it has one.
    - Pick the **Status** it starts in, if not the usual - it's New, or Open once it's assigned.
-   - To book the work now, set the **Schedule** date and time, and **Remote** or **Onsite**. Leave it empty to book it later from the ticket.
+   - To book the work now, set the **Schedule** date and time, how long it takes, and **Remote** or **Onsite**. Leave it empty to book it later from the ticket.
    - Add **Tags**, and switch on **Mark Billable** if the client pays for this work.
 3. On **Related**, link the **Asset** it's about (and **Other assets**), the **Site**, a **Project**, and a **Vendor** with **Their reference** if a vendor is involved. Add **Watchers** - people who get a copy of every emailed reply.
 4. On **Tasks**, add the steps to work through.
