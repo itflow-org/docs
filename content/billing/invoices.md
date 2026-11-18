@@ -12,7 +12,7 @@ Invoices are what you bill clients. Most are made for you - by [recurring invoic
 
 Along the top: what's **Owed to you**, what's **Overdue**, what's sitting **In drafts** and what you've **Collected** in the last 30 days.
 
-The tabs are **All**, **Draft** (not sent yet - the client can't see them), **Unpaid** (sent and not paid in full), **Overdue**, **Paid** and **Cancelled**. Search by number, scope or client, and narrow by date, category or client. A circular arrow beside a number means it was made by a recurring invoice.
+The tabs are **All**, **Draft** (not sent yet - the client can't see them), **Unpaid** (sent and not paid in full), **Overdue**, **Paid** and **Cancelled**. Search by number, scope or client, and narrow by date, category or client. A circular arrow beside a number means it was made by a recurring invoice, and **Autopay** under its due date means that recurring invoice's [autopay](/billing/recurring-invoices#autopay) pays it - point at it for how it stands.
 
 An invoice moves through these statuses:
 
@@ -88,7 +88,7 @@ The **Notes** under the lines are printed on the invoice - payment details, term
 
 On the left is the invoice as the client will see it. Down the right:
 
-- **Payment** - the balance, when it's due, the client's terms, any reminders sent or due, and your margin on it.
+- **Payment** - the balance, when it's due, the client's terms, any reminders sent or due, and your margin on it. When autopay pays it, **Autopay** says which card and when - see below.
 - **Payments** - each payment taken, with **Add** for another.
 - **Hardware** - products on it that become client assets, with **Add to Assets**. See [Hardware becomes client assets](/billing/products#hardware-becomes-client-assets).
 - **Tickets** and **Expenses** - what's been billed on it, and how many unbilled tickets and expenses could go on it, with **Add**.
@@ -124,9 +124,20 @@ Once sent, **Send Again** sends it again, and **⋮ > Send Reminder** sends a pa
 > [!NOTE]
 > **Send** needs outgoing mail set up and a primary or billing contact with an email address. Without them, the invoice has **Mark Sent** instead.
 
+### When autopay pays it {#autopay}
+
+An invoice made by a recurring invoice with [autopay](/billing/recurring-invoices#autopay) says so beside its number, and under **Payment**:
+
+- **Autopay Dec 1** - the card is charged on the due date, for what's still owed then
+- **Autopay once sent** - a draft, charged on its due date once it's sent
+- **Autopay won't charge** - it won't go through: the card runs out before the due date, or the payment provider is turned off
+- **Autopay didn't pay it** - it's past its due date and still owed, with why when the card was declined. Take the payment another way, or ask the client to update their card
+
+The invoices list shows the same under the due date.
+
 ## What the client sees
 
-The link in the email opens the invoice, with **Pay Now** when your admin has set up online payments, **Download PDF**, the payments made on it, and what the client owes you in all. Clients who use the [client portal](/portal/billing) see their invoices there too.
+The link in the email opens the invoice, with **Pay Now** when your admin has set up online payments, **Download PDF**, the payments made on it, and what the client owes you in all. When autopay will pay it, it says so - which card and when - so they don't pay it twice. Clients who use the [client portal](/portal/billing) see their invoices there too.
 
 ![The invoice as the client sees it](bill-guest-invoice.webp "The client's view: what's due, Pay Now, and their other open invoices")
 

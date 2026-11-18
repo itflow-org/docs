@@ -76,7 +76,7 @@ Products set up as **Per user**, **Per device** or **Per managed device** in the
 
 ## Autopay {#autopay}
 
-When the client has saved a card in the client portal, the **Autopay** card can charge it on the due date of each invoice this makes. Pick the card - it's saved as you pick it - or **Off** for the client to pay each invoice themselves. Invoices autopay will charge aren't sent payment reminders before their due date.
+When the client has saved a card in the client portal, the **Autopay** card can charge it on the due date of each invoice this makes. Pick the card - it's saved as you pick it - or **Off** for the client to pay each invoice themselves. Invoices autopay will charge aren't sent payment reminders before their due date, and each says so on its page - see [When autopay pays it](/billing/invoices#autopay).
 
 When part of an invoice has already been paid, autopay charges what's still owed.
 
