@@ -26,7 +26,7 @@ mv /etc/cron.d/itflow /root/itflow.cron
 
 ## 3. Restore the backup {#restore}
 
-A backup up to the upload limit (500 MB) can be restored in the browser, at the setup wizard's [Restore a backup](/install/setup#restore) step. Larger backups have to be restored from the command line.
+A backup up to the upload limit (500 MB) can be restored in the browser, at the setup wizard's [Restore a backup](/install/setup#restore) step. Larger backups have to be restored from the command line. On a new server where ITFlow is already set up and cron is running, you can instead upload the backup in [Maintenance > Backup](/admin/maintenance#restore), up to 5 GB.
 
 ### From the command line {#command-line}
 

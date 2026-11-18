@@ -125,7 +125,24 @@ Every backup is an encrypted zip, and the **Encryption key** opens it. It's hidd
 
 **Export the master key**, under **Credential vault key**, gives you the key to the credential vault, for when every user's password is lost - a restore brings the vault back by itself as long as one user still knows theirs. It asks for your password, shows the key once, and files an encrypted copy with the backups. Every agent is notified that it was exported.
 
-To restore, use `scripts/restore_cli.php` on the server - **Restoring** has the command to copy. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
+### Restoring {#restore}
+
+A restore replaces the database - and, from a Full Backup, everything uploaded - with what's in the backup. Before it does, ITFlow backs itself up as it is, and keeps that in the list as **Before restore**, so a restore can be undone by restoring that one.
+
+To restore a backup in the list, pick **Restore** in its menu. To restore one that isn't here - from another ITFlow, or one you downloaded - upload it under **Restoring**, with its encryption key if another ITFlow made it. It joins the list as **Uploaded**, and its Restore window opens. A backup up to 5 GB can be uploaded: it goes up in pieces, so keep the page open until it's done.
+
+![Restoring](adm-backup-restoring.webp "Restoring: upload a backup to restore, or restore from the command line")
+
+The Restore window says what's in the backup - when it was taken, its database version against this ITFlow's, and whether it holds the uploads. A backup from a newer version of ITFlow can't be restored until you update this one. One made on another ITFlow asks for that ITFlow's key. Type your password and **RESTORE** to confirm.
+
+![The Restore window](adm-backup-restore.webp "The Restore window: what's in the backup, then your password and RESTORE")
+
+Like a backup, the restore is done by cron, within a minute. The top of the page says it's waiting, with **Cancel the restore**, then that it's running, and keeps itself up to date. A restore not started within an hour - cron was stopped - isn't done at all. While it runs, the other cron jobs wait, and anyone working may see errors. After it, the database is brought up to this version of ITFlow if the backup was older. If your account or password is different in the backup, you're asked to sign in again - with an account from the backup. The top of the page says how the last restore went for a week afterwards.
+
+A restore needs free space of about three times the backup's size. **From the command line**, under **Restoring**, has the command for a backup of any size, or for when cron isn't running. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
+
+> [!TIP]
+> Restoring production's backup onto a test server? Turn on [development mode](#dev-mode) on the test server first.
 
 ### Development mode {#dev-mode}
 
