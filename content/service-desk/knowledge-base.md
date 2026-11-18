@@ -1,6 +1,6 @@
 ---
 title: Knowledge Base
-description: How-tos, fixes and policies written once for every client, shared in their client portal or on a public help center, with categories, tags, versions and reviews to keep them right.
+description: How-tos, fixes and policies written once for every client, shared in their client portal or on a public help center, offered on tickets, with categories, tags, versions and reviews to keep them right.
 where: Main menu > Knowledge Base
 ---
 
@@ -100,6 +100,39 @@ It's off to start with. An admin switches it on in **Admin > Settings > Knowledg
 - an article for anyone shows its own public link on its page, to copy and send
 
 Search engines are asked not to list it. While it's off, its link says there's nothing there, and articles for anyone are only in your clients' portals.
+
+## On tickets {#tickets}
+
+### Send an article in a reply
+
+Above a ticket's reply box, beside **Canned response**, **Knowledge Base** opens the published articles that look like they answer the ticket, going by its subject and what was asked. The number on the button is how many there are. Type in the search box to find any other article.
+
+![The Knowledge Base picker over a ticket's reply box](sd-kb-picker.webp "Knowledge Base on a ticket: an article that might help, how the client could read it, and Link and Insert")
+
+Each article says how the ticket's client could read it - on the **Public help center**, **In their portal**, or not at all (**Agents only**, or **Not shared with them**):
+
+- **Link** puts a link to the article in your reply where the cursor is - to the public help center while it's on and the article is for anyone, otherwise to their portal, where they sign in to read it. It's only there when the client can read the article.
+- **Insert** puts what the article says in your reply, pictures and all - for an article they can't read, or when the steps are better in the reply itself. Read it through for this ticket before you send it.
+
+Click an article's title to read it first, in a new tab.
+
+### Write up a ticket {#write-up}
+
+A solved ticket often makes a good article. In the ticket's **⋮** menu, click **Write up for the Knowledge Base**. It opens a new article, as a draft for **Agents only**:
+
+- With AI set up, AI writes it from the ticket as a how-to for any client - symptoms, cause and the steps that put it right - leaving out the client, its people, and the names and addresses of its systems. Passwords and keys are always left out. See [Using AI](/getting-started/ai).
+- Without AI, it starts with the ticket's subject and what was asked, for you to write the steps.
+
+Read it through, change what you like, and click **Create Article**. The ticket's history says it was written up. Share it once you're happy with it.
+
+> [!TIP]
+> **Write up as a document**, in the same menu, is for a how-to about one client's own systems. It goes in their documents instead.
+
+### When clients raise a ticket {#raise}
+
+In the client portal, as a contact types a new ticket's subject, the Help articles that might answer it show under it. Each opens in a new tab, so the ticket they're writing stays put. Only the articles shared with their company are offered.
+
+![Help offered as a client types a subject](portal-help-suggest.webp "A new ticket in the portal: an article that might help, as the subject is typed")
 
 ## Start from a client's document
 

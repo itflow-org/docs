@@ -32,7 +32,7 @@ Each model is for one use case:
 |---|---|
 | **General** | Everything without a model of its own - rewording and translating in any editor, and client briefings |
 | **Tickets** | Drafting replies, triage, summaries, and rewording in the ticket reply editor |
-| **Documentation** | Drafting and reviewing documents, writing a ticket up as a document, and drafting document templates |
+| **Documentation** | Drafting and reviewing documents, writing a ticket up as a document or a Knowledge Base article, and drafting document templates |
 | **Billing** | Writing quotes and invoices, and describing a ticket's work for its invoice line |
 
 A **General** model is enough - every use falls back to it. Add others to send a use to a different model: a larger one for documentation, or a local one for tickets so client details stay on your network.

@@ -28,7 +28,9 @@ Most contacts see the tickets they raised. Primary and technical contacts see ev
 
 **What happens next** alongside tells them what to expect, with your phone number for when it's stopping everyone.
 
-Clients can also start a ticket from elsewhere in the portal: **Report a problem** on a device fills the device in, and **Ask us** on an invoice or quote fills in the subject.
+As they type the subject, any Help articles that might answer it show under it - see [Knowledge Base](/service-desk/knowledge-base#raise).
+
+Clients can also start a ticket from elsewhere in the portal: **Report a problem** on a device fills the device in, and **Ask us** on an invoice, a quote or a Help article fills in the subject.
 
 ### Request forms
 

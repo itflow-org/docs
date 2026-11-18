@@ -32,6 +32,7 @@ From the ticket's **⋮** menu:
 - **Summarize with AI** - the problem, what's been done, where it stands and what's next, so you can pick a ticket up cold. **Save as a note** keeps it on the ticket.
 - **Triage with AI** - suggests a category and priority, for you to apply or dismiss. Your admin can have new tickets triaged as they come in.
 - **Write up as a document** - turns a solved ticket into a how-to for the client's documentation, for next time.
+- **Write up for the Knowledge Base** - turns a ticket into a draft [Knowledge Base](/service-desk/knowledge-base#write-up) article for any client, with the client's details left out.
 
 ![An AI summary of a ticket](ai-summary.webp "Summarize with AI: what the problem is, what's been done, and what's next")
 

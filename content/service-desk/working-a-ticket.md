@@ -18,7 +18,7 @@ On the right is the one action for where the ticket is:
 - **Reopen** and **Close** once it's resolved.
 - **Invoice** once a billable ticket is done.
 
-The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **Move to another client**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai).
+The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **Move to another client**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
 
 ![The ticket's menu](sd-ticket-menu.webp "The ticket's ⋮ menu")
 
@@ -50,7 +50,7 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 
 ![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the time worked and when, and the status after it")
 
-1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses).
+1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses). To send a how-to, click **Knowledge Base** - see [Knowledge Base](/service-desk/knowledge-base#tickets).
 2. Add files under **Attach files** if you need to.
 3. Pick the **Status after this** - for example, set it to On Hold while you wait for a part.
 4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work. **When it was worked** fills in from the timer - the work ends now - or type the date, start and end yourself. See [When the time was worked](#work-times).
