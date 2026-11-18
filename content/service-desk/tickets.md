@@ -22,6 +22,7 @@ The tabs along the top are the views you'll use most, each with a count:
 | **Waiting** | Open tickets waiting on the client (you replied last) or parked in a status like On Hold |
 | **Overdue** | Open tickets past their due date or their SLA |
 | **Scheduled** | Tickets booked in for a time |
+| **Projects** | Open tickets that are part of a project - only when [project tickets are kept apart](/service-desk/projects#apart), which leaves them out of the other views except **Mine**, **Mentioned me**, **Closed** and **All** |
 | **Closed** | Resolved and closed tickets |
 | **All** | Everything |
 

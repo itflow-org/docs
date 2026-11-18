@@ -46,6 +46,19 @@ The tabs list its **Tickets** (open first), its **Tasks** across every ticket, i
 
 On the Tickets tab, tick tickets and use **Bulk Action** to assign them, set their priority or category, reply to them, resolve them, or **Take off the project**.
 
+## Keep project tickets apart {#apart}
+
+A big project can fill the service desk with tickets that aren't urgent and aren't due on an SLA - its own dates are what count. Switch on **Keep project tickets apart** under **Admin > Settings > Projects**, and while it's on, a ticket that's part of a project:
+
+- is left off the usual views of the [tickets list](/service-desk/tickets#views) - **Open**, **Unassigned**, **Needs reply** and the rest - and has a **Projects** view of its own. It's still under **Mine**, **Mentioned me**, **Closed** and **All**, and the **Project** filter shows a project's tickets as always.
+- is left out of the dashboard's unassigned count, the count beside **Tickets** in the menu, and the [Dispatch](/service-desk/dispatch) queue. It still counts in Dispatch's **Workload**.
+- has no SLA. Take a ticket out of its project and it gets its SLA back, counted from that moment, so it isn't overdue straight away.
+- is booked on the calendar and Dispatch in the project's **Calendar color**, with the project named under it - on the calendar, a dot in the technician's own colour sits beside their name.
+
+![The Project tickets settings](adm-project-tickets.webp "Project tickets: keep them apart from the service desk, and their colour on the calendar")
+
+Switching it off puts everything back as it was, and every open project ticket gets its SLA back, counted from then. A ticket that's already resolved or closed keeps the SLA result it had.
+
 ## Finish a project
 
 When the work is done, click **Mark complete**. A project with tickets still open says how many first. A completed project can be reopened from the same place.

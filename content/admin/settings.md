@@ -97,6 +97,8 @@ On a menu's tab, drag the links into the order the menu shows them in, or use **
 
 Tickets, projects, quotes, invoices and recurring invoices each have a **Prefix** and a **Next number**, on their own settings pages. Each page shows what the next one will be called, and the last one made, so you don't reuse a number by mistake.
 
+**Admin > Settings > Projects** also has **Project tickets** - see [Keep project tickets apart](/service-desk/projects#apart).
+
 ## Telemetry
 
 **Send the ITFlow project a nightly report** shares how your install is used - how many of each thing, and which features are switched on - to help the project decide what to work on. It holds no names of clients or contacts, no email addresses and nothing anyone wrote, and the page shows exactly what goes.

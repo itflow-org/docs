@@ -25,6 +25,8 @@ Click anything on the calendar to open its quick look. Drag a ticket or event to
 
 Every technician has a colour, and their booked tickets and the events assigned to them are drawn in it, so you can see whose day is whose at a glance. In the **Week**, **7 days**, **Day** and **List** views, their first name sits beside the time; hover over anything to see who it's for.
 
+While [project tickets are kept apart](/service-desk/projects#apart), a project's tickets are booked in the project colour instead, with the project named under them and a dot in the technician's colour beside their name.
+
 Everyone starts with a colour of their own. To pick yours, go to **Account > Preferences** and choose a **Calendar color** (see [Your account](/getting-started/account#preferences)); an admin can pick anyone's from **Edit** in **Admin > Users**. A ticket nobody is assigned to stays in the **Scheduled tickets** colour.
 
 A technician [helping on a ticket](/service-desk/working-a-ticket#helpers) has their booking on the calendar too, in their colour, marked "(helping)". Drag it to give them a time of their own - they're emailed the new time, and it no longer moves with the lead's.
