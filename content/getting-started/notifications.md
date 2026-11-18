@@ -36,4 +36,4 @@ What reaches you depends on your role and what you're working on. Common ones ar
 - **For admins** - repeated failed sign-ins, emails that couldn't be sent, backups and updates
 
 > [!TIP]
-> Some of these come by email too, such as tickets assigned to you, mentions and SLA warnings. Which emails go out, and to which addresses, is set by your admin in **Admin > Settings > Notifications**.
+> Some of these come by email too, such as tickets assigned to you, mentions and SLA warnings. Which of these go out - including the bell notice and the email for a ticket assigned to you - is set by your admin in [Admin > Settings > Notifications](/admin/mail#notifications).

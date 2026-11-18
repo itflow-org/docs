@@ -65,9 +65,11 @@ A ticket's conversation shows the same for each email reply: who it was emailed 
 
 ## Notifications
 
-**Admin > Settings > Notifications** decides which emails ITFlow sends clients by itself, and the alerts it raises for your team:
+**Admin > Settings > Notifications** decides which emails ITFlow sends clients by itself, what it tells your technicians about their tickets, and the alerts it raises for your team:
 
 - **Domains about to expire** - an alert 45, 7 and 1 days before a domain expires
+- **Ticket assigned - in the bell** and **Ticket assigned - by email** - what a technician gets when someone else assigns them a ticket or recurring ticket. Switch either off if your team doesn't want it - the ticket is still theirs, under **Mine**.
+- **Client replies to agents helping** - the copy of a client's reply that goes to the technicians [helping](/service-desk/working-a-ticket#helpers) on a ticket. The technician it's assigned to is always emailed.
 - **Email clients about their tickets** - the contact and watchers hear when a ticket is raised, scheduled, resolved and closed. Off, they still get the replies your agents send.
 - **Email the invoices recurring invoices make** - off, they're made as drafts to check and send
 
@@ -75,4 +77,4 @@ Payment reminders and statements have their own schedule, in [Invoices and billi
 
 Once texting is set up, **Texts to clients** on the same page decides what ITFlow texts clients by itself - see [Text messaging](/admin/text-messaging#texts-to-clients).
 
-![Notification settings](adm-notifications.webp "Notifications: the alerts your team gets, and the emails clients get by themselves")
+![Notification settings](adm-notifications.webp "Notifications: the alerts your team gets, what technicians are told about their tickets, and the emails clients get by themselves")
