@@ -31,7 +31,7 @@ A technician [helping on a ticket](/service-desk/working-a-ticket#helpers) has t
 
 ## Book an open ticket
 
-**To schedule**, under the calendars, lists open tickets that have no time booked - the technician in **Whose**, or, with **Everyone**, everyone's, with who has each. Drag one onto the calendar to book it for that time. You can also book a ticket from the ticket itself - see [Working a ticket](/service-desk/working-a-ticket#book-a-visit-or-a-call). When you book from the ticket, the window shows the assigned technician's day, so you can see when they're free.
+**To schedule**, under the calendars, lists open tickets that have no time booked - the technician in **Whose**, or, with **Everyone**, everyone's, with who has each. Drag one onto the calendar to book it for that time. You can also book a ticket from the ticket itself - see [Working a ticket](/service-desk/working-a-ticket#book-a-visit-or-a-call). When you book from the ticket, the window shows the assigned technician's day, so you can see when they're free. To hand out tickets and book them with everyone's day side by side, use [Dispatch](/service-desk/dispatch).
 
 ## Left behind {#left-behind}
 

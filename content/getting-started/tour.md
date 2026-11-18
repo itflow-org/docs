@@ -27,7 +27,7 @@ The main menu is grouped by the kind of work:
 | Group | What's in it |
 |---|---|
 | (top) | **Dashboard**, **Clients**, **All Client Docs**, **Vendors** and **Calendar** |
-| **Support** | **Tickets**, **Recurring Tickets** and **Projects** |
+| **Support** | **Tickets**, **Dispatch**, **Recurring Tickets** and **Projects** |
 | **Billing** | **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices** and **Products** |
 | **Finance** | **Income**, **Expenses**, **Recurring Expenses**, **Trips**, **Accounts**, **Transactions** and **Transfers** |
 | **Tools** | **Reports**, and any links your admin has added |

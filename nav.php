@@ -42,7 +42,7 @@ return [
     'service-desk' => [
         'title' => 'Service desk',
         'icon' => 'headset',
-        'summary' => 'Tickets from first email to resolved, recurring work, projects and the calendar.',
+        'summary' => 'Tickets from first email to resolved, recurring work, projects, the calendar and dispatch.',
         'pages' => [
             'tickets' => 'The tickets list',
             'new-ticket' => 'Raising a ticket',
@@ -52,6 +52,7 @@ return [
             'recurring-tickets' => 'Recurring tickets',
             'projects' => 'Projects',
             'calendar' => 'Calendar',
+            'dispatch' => 'Dispatch',
         ],
     ],
     'documentation' => [

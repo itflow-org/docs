@@ -64,7 +64,7 @@ When you sign in with your code, tick **Remember this browser** and ITFlow doesn
 - **Theme** - **Light** or **Dark**.
 - **Calendars start on** - the first day of the week on the calendar and date pickers.
 - **Rows on a list** - how many rows every list shows on a page. You can also change this at the foot of any list.
-- **My time zone** - for when you work somewhere other than the company. The [calendar](/service-desk/calendar), a ticket's booking, the **Schedule** and event windows, and your booking emails are then on your own clock - the emails give the company's time beside yours. Leave it on **The company's** otherwise. Bookings are still kept in the company's time, so nobody else's view changes.
+- **My time zone** - for when you work somewhere other than the company. The [calendar](/service-desk/calendar), [Dispatch](/service-desk/dispatch), a ticket's booking, the **Schedule** and event windows, and your booking emails are then on your own clock - the emails give the company's time beside yours. Leave it on **The company's** otherwise. Bookings are still kept in the company's time, so nobody else's view changes.
 - **Calendar color** - the colour your booked tickets and the events assigned to you are drawn in on the [calendar](/service-desk/calendar#colours). Click one of the twelve, or the box to pick any colour. **Automatic** goes back to the one you started with.
 
 ## Your canned responses
