@@ -1,6 +1,6 @@
 ---
 title: Knowledge Base
-description: How-tos, fixes and policies written once for every client, shared in their client portal or on a public help center, offered on tickets, with categories, tags, versions and reviews to keep them right.
+description: How-tos, fixes and policies written once for every client, shared in their client portal or on a public help center, offered on tickets, with reviews, readers' feedback and versions to keep them right.
 where: Main menu > Knowledge Base
 ---
 
@@ -32,7 +32,10 @@ The list searches titles, summaries, the words in the articles and their tags. N
 - **Published** - the finished ones
 - **Drafts** - the ones still being written
 - **Review due** - the ones due for a read-through (see below)
+- **Needs a look** - the ones readers said didn't help, that nobody has dealt with yet - see [What readers think](#readers)
 - **Archived** - kept, but out of the way
+
+The **Readers** column shows how many times each article was read by your clients, and the share of them who said it helped. Click its heading to put the most read first.
 
 Search everywhere in the top bar finds articles too, in their own **Knowledge Base** group, and the full results page also looks through the words inside them.
 
@@ -53,6 +56,8 @@ Every edit keeps what the article said before. Click a version under **Versions*
 **Review** says how often an article should be read through to check it's still right: **Every 3 months**, **Every 6 months**, **Every year** or **Every 2 years** - or **Never**. New articles start at **Every year**.
 
 Once that long has passed since the article was written, edited or last reviewed, it's marked **Review due**, and it shows in the **Review due** view. Read it through, fix anything that's changed, and either save your edit or click **Mark reviewed**. Drafts and archived articles aren't reviewed.
+
+The number beside **Knowledge Base** in the main menu counts the articles due for review and the ones readers said didn't help.
 
 ### Copy an article
 
@@ -82,7 +87,7 @@ The list's **Who can read it** column shows each article's, and **Any audience**
 
 ### What clients see {#portal}
 
-Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, and **Still stuck? Ask us**, which starts a ticket about it. Every contact with portal access can read them, whatever their roles.
+Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, **Still stuck? Ask us**, which starts a ticket about it, and **Was this helpful?** under it - see [What readers think](#readers). Every contact with portal access can read them, whatever their roles.
 
 ![Help in the client portal](portal-help.webp "Help in the client portal: the articles shared with this client")
 
@@ -133,6 +138,37 @@ Read it through, change what you like, and click **Create Article**. The ticket'
 In the client portal, as a contact types a new ticket's subject, the Help articles that might answer it show under it. Each opens in a new tab, so the ticket they're writing stays put. Only the articles shared with their company are offered.
 
 ![Help offered as a client types a subject](portal-help-suggest.webp "A new ticket in the portal: an article that might help, as the subject is typed")
+
+## What readers think {#readers}
+
+### Was this helpful?
+
+Under each article in the client portal and on the public help center, readers are asked **Was this helpful?** **Yes** thanks them. **No** asks what they were looking for, and in the portal offers a ticket instead.
+
+![Was this helpful? under an article in the portal](portal-help-feedback.webp "Was this helpful? under a Help article")
+
+A contact has one answer an article - if they answer again, it replaces the first. On the public help center it's one answer a visit.
+
+Each article also counts how many times it was read in the portal and on the help center, once a visit. **View portal as them** doesn't count, and nor does reading it here.
+
+### Deal with feedback {#feedback}
+
+On an article's page, the right-hand column says how many times it was read and how many said it helped. Below it, **Feedback** lists what readers said didn't help: what they were looking for, who said it - the contact and their client, or someone on the public help center - and when.
+
+![Feedback on an article](sd-kb-feedback.webp "Feedback: what readers said didn't help, each with Dealt with")
+
+Fix the article if it needs it, then click **Dealt with**. It stays on the list, faded, with who dealt with it, and the article leaves **Needs a look**. With more than one, the ✓✓ button at the top deals with them all.
+
+### Searches that found nothing {#not-found}
+
+**Not found**, at the top of the Knowledge Base list, shows what readers searched Help and the public help center for in the last 90 days and didn't find - where, and how many times. It's only there when there's something on it.
+
+![The Not found list](sd-kb-not-found.webp "Not found: what readers searched for, where, and how many times")
+
+Each one is an article to write, or words to add to one that's there:
+
+- **Write an article** starts a new one with the words they searched for as its title.
+- The **×** takes a search off the list, and **Clear the list** all of them. A search made again comes back.
 
 ## Start from a client's document
 
