@@ -22,6 +22,21 @@ For a server, type the **Server**, **Port** and **Encryption** (STARTTLS, usuall
 
 For Google or Microsoft, register an app with them and put its details under **The app** - **Client ID**, **Client secret** and, for Microsoft, **Tenant ID** - then connect the mailbox. The page gives you the **Redirect address** to paste into the app registration. Sending and receiving share the same app.
 
+### Microsoft 365 through Microsoft Graph {#microsoft-graph}
+
+Microsoft 365 can send email and read your support mailbox through Microsoft Graph instead of SMTP and IMAP. The mailbox then doesn't need SMTP AUTH, which Microsoft switches off by default.
+
+1. In Microsoft Entra, open the app registration and go to **API permissions**.
+2. Add the **Microsoft Graph** delegated permissions **Mail.Send**, to send, and **Mail.ReadWrite**, to read the mailbox. If ITFlow reads or sends as a shared mailbox, add **Mail.ReadWrite.Shared** and **Mail.Send.Shared** too.
+3. Click **Grant admin consent**.
+4. In ITFlow, on the **Tests** tab, click **Test OAuth Token Refresh**. It says how email now goes.
+
+ITFlow uses Graph for whichever it has permission for, and SMTP or IMAP for the rest - there's nothing to switch on. On the **OAuth** tab, **Connecting the mailbox** says which way email goes. ITFlow checks again every hour, and straight away when you save the app or connect again.
+
+![Connecting the mailbox, with email going through Microsoft Graph](adm-mail-graph.webp "Connecting the mailbox: email sent and the mailbox read through Microsoft Graph")
+
+Through Graph, **Test IMAP** checks the mailbox through Graph instead. A copy of each email ITFlow sends goes to the mailbox's **Sent Items**, and an email that's too big to send in one go - with big attachments - is sent in parts.
+
 Saved passwords and secrets are never shown again. Leave a field empty to keep what's saved.
 
 ## Receiving
