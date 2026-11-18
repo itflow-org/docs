@@ -124,7 +124,7 @@ The answer has `ticket_tasks` too, the number of tasks it got. A template that i
 
 A status or invoice that won't do is refused the same way.
 
-The template's id is the number in its address in Admin > Ticket Templates. Fill-ins are matched by name, whatever the case; ones the template doesn't have are left out. A **Yes or no** fill-in takes `Yes` or `No`, and a **Date** one `2026-11-05`.
+The template's id is the number in its address in Admin > Templates > Tickets. Fill-ins are matched by name, whatever the case; ones the template doesn't have are left out. A **Yes or no** fill-in takes `Yes` or `No`, and a **Date** one `2026-11-05`.
 
 ### Update {#tickets-update}
 

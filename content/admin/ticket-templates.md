@@ -1,7 +1,7 @@
 ---
 title: Ticket and project templates
 description: Tickets ready to raise - onboarding, offboarding, deployments, maintenance - with their tasks and the questions they ask, offered to clients as request forms, and built into project plans.
-where: Admin > Ticket Templates, Admin > Project Templates
+where: Admin > Templates
 access: Admins
 ---
 
@@ -47,7 +47,7 @@ A project template is a plan a new project can start from - onboarding a client,
 
 ![Project templates](adm-project-templates.webp "Project templates: plans made of ticket templates")
 
-Open **Admin > Project Templates**, click **New Project Template**, then add the ticket templates in order. When an agent starts a project from it, the project gets those tickets, ready to work. See [Projects](/service-desk/projects).
+Open **Admin > Templates > Projects**, click **New Project Template**, then add the ticket templates in order. When an agent starts a project from it, the project gets those tickets, ready to work. See [Projects](/service-desk/projects).
 
 > [!TIP]
 > **How they are used**, in the menu beside **New Ticket Template**, is a report of which templates are used, by whom - agents, the portal, schedules or projects - how long their tickets take, and the ones nobody uses.

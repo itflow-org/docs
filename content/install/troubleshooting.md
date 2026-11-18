@@ -6,7 +6,7 @@ access: Server admins
 
 ## Where to look {#error-logs}
 
-- **Admin > App Logs** - what ITFlow itself runs into: cron, mail, payment providers and the API. Start here when email isn't going out or a payment is refused. See [App logs](/admin/logs#app-logs).
+- **Admin > Logs > App Logs** - what ITFlow itself runs into: cron, mail, payment providers and the API. Start here when email isn't going out or a payment is refused. See [App logs](/admin/logs#app-logs).
 - **The web server's error log** - PHP's errors, such as a blank page or "500". With the install script it's `/var/log/apache2/error.log`. [Installed by hand](/install/manual#apache), it's the site's own, `/var/log/apache2/itflow.example.com-error.log`. With nginx, it's `/var/log/nginx/error.log`. `tail -f` the log while you reload the page to see the error as it happens.
 - **Admin > Debug** - checks the install and the server, and says first what needs putting right: cron, mail, backups, PHP's extensions and limits, HTTPS, disk space, and whether the database matches what the code expects. See [Debug](/admin/maintenance#debug).
 

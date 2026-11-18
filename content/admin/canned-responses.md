@@ -1,7 +1,7 @@
 ---
 title: Canned responses
 description: Shared replies your team puts into a ticket in one go - filled in from the ticket, offered on the right tickets, and setting the status and time as they go in.
-where: Admin > Canned Responses
+where: Admin > Templates > Canned Responses
 access: Admins
 ---
 

@@ -26,7 +26,7 @@ To make it compulsory, require it for each user, or several at once - see [Users
 
 Failed sign-ins are counted over 10 minutes, from one address or against one account, and an address is turned away after 15. **Tell admins** after so many failed sign-ins sends each admin a notification and an email.
 
-**Admin > Sign-ins** shows who signs in from where, and which addresses are being turned away - see [Users](/admin/users#sign-ins).
+**Admin > Logs > Sign-ins** shows who signs in from where, and which addresses are being turned away - see [Users](/admin/users#sign-ins).
 
 ## API keys {#api-keys}
 

@@ -152,10 +152,10 @@ The messages you'll see most:
 - **"Auth success but update query failed/returned no results..."** An update found nothing to change. The id or `client_id` is wrong, or the ticket is closed. An update that sends only values the record already has comes back like this too.
 - **"Auth success but delete query failed..."** The id or `client_id` is wrong, or the record hasn't been archived first.
 
-ITFlow writes each failed call to [Admin > App Logs](/admin/logs#app-logs), with the endpoint and the key's name.
+ITFlow writes each failed call to [Admin > Logs > App Logs](/admin/logs#app-logs), with the endpoint and the key's name.
 
 ## What ITFlow records {#logging}
 
-- Every change made through the API is in [Admin > Audit Logs](/admin/logs) under the key's agent, marked "via API" with the key's name. Ticket changes are also in the ticket's history.
+- Every change made through the API is in [Admin > Logs > Audit Logs](/admin/logs) under the key's agent, marked "via API" with the key's name. Ticket changes are also in the ticket's history.
 - [Admin > API Keys](/admin/api-keys) shows when each key was last used and from where, and its calls by day and endpoint.
 - Calls with a wrong or expired key are logged too. When as many come from one address in 10 minutes as **Tell admins** in [Security and sign-in](/admin/security#failed-sign-ins) allows, ITFlow alerts your admins.

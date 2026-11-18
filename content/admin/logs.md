@@ -1,13 +1,13 @@
 ---
 title: Logs
 description: The audit log of who did what and when, the app logs of what ITFlow itself runs into, how long they're kept, and sending them to a syslog server or SIEM.
-where: Admin > Audit Logs, Admin > App Logs
+where: Admin > Logs
 access: Admins
 ---
 
 ## Audit logs
 
-**Admin > Audit Logs** records who did what, when and from where: every change and deletion, every sign-in, every time someone looks at or copies a password, every share and every export.
+**Admin > Logs > Audit Logs** records who did what, when and from where: every change and deletion, every sign-in, every time someone looks at or copies a password, every share and every export.
 
 ![The audit log](adm-audit-logs.webp "Audit logs: who did what, about which client, and from where")
 
@@ -19,7 +19,7 @@ Search it, filter it by date, person, client and type, or use the tabs: **Change
 
 ## App logs
 
-**Admin > App Logs** records what ITFlow itself does and runs into: cron runs, mail going out and coming in, payment providers, the API and errors - by level: **Errors**, **Warnings** and **Info**.
+**Admin > Logs > App Logs** records what ITFlow itself does and runs into: cron runs, mail going out and coming in, payment providers, the API and errors - by level: **Errors**, **Warnings** and **Info**.
 
 ![App logs](adm-app-logs.webp "App logs: what ITFlow itself runs into")
 

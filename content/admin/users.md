@@ -143,7 +143,7 @@ You never set a password for a contact here - they choose their own from the ema
 
 ## Sign-ins
 
-**Admin > Sign-ins** shows who signs in and from where: each agent and portal contact with their last sign-in, how many sign-ins and failed ones, and how many addresses they've used. The **IP addresses** tab shows each address, the accounts it tried, and whether it's being turned away now.
+**Admin > Logs > Sign-ins** shows who signs in and from where: each agent and portal contact with their last sign-in, how many sign-ins and failed ones, and how many addresses they've used. The **IP addresses** tab shows each address, the accounts it tried, and whether it's being turned away now.
 
 ![Sign-ins](adm-sign-ins.webp "Sign-ins: who signs in, from where, and the failures")
 

@@ -1,7 +1,7 @@
 ---
 title: License and vendor templates
 description: The licenses you sell and the vendors your clients use, set up once - so adding Microsoft 365 or a client's ISP takes a click, and you can see who's missing one.
-where: Admin > License Templates, Admin > Vendor Templates
+where: Admin > Templates
 access: Admins
 ---
 

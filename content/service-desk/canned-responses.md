@@ -61,4 +61,4 @@ Your own canned responses are offered only to you. To make one:
 Your account's Canned Responses page lists yours and the shared ones, with how often you've used each.
 
 > [!NOTE]
-> The shared set is managed by admins in **Admin > Canned Responses**, including which ticket categories each is offered on. See [Shared canned responses](/admin/canned-responses).
+> The shared set is managed by admins in **Admin > Templates > Canned Responses**, including which ticket categories each is offered on. See [Shared canned responses](/admin/canned-responses).

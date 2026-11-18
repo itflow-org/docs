@@ -1,7 +1,7 @@
 ---
 title: Text messaging
 description: Text clients from one support number through Skyetel - set it up, have texts come back into ITFlow, text clients about their tickets, visits and invoices, and see who opted out and every text sent and received.
-where: Admin > Text Messaging, Admin > Text Messages
+where: Admin > Text Messaging
 access: Admins
 ---
 
@@ -88,7 +88,7 @@ Each is noted on the ticket they're texting on.
 
 ## Every text sent and received {#log}
 
-**Admin > Text Messages** lists every text, newest first. Use the tabs for **Waiting**, **Failed**, **Sent** and **Received**, and search by number, words, contact, client or ticket.
+**Admin > Text Messaging > Messages** lists every text, newest first. Use the tabs for **Waiting**, **Failed**, **Sent** and **Received**, and search by number, words, contact, client or ticket.
 
 Each text shows where it stands:
 

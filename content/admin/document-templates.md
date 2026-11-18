@@ -1,7 +1,7 @@
 ---
 title: Document templates
 description: Documents ready to start a client's from - network overviews, runbooks, build sheets, plans - that fill themselves in from the client, and say which clients should have one.
-where: Admin > Document Templates
+where: Admin > Templates > Documents
 access: Admins
 ---
 
