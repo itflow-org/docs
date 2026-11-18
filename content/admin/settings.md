@@ -70,7 +70,7 @@ What forms start with - each can still be changed on the form:
 
 Switch off the parts of ITFlow you don't use and they're hidden from everyone - from the menus, the dashboard, search, the reports and the API. Their pages and windows say they're switched off. Nothing is deleted: switch a module back on and everything is still there.
 
-- **IT documentation**, **Ticketing**, **Invoicing and accounting**, **Calendar** and **Client portal** stand on their own. Switching off **Client portal** also signs out every contact signed in to it.
+- **IT documentation**, **Ticketing**, **Invoicing and accounting**, **Calendar**, **Knowledge Base** and **Client portal** stand on their own. Switching off **Client portal** also signs out every contact signed in to it.
 - **Dispatch** comes with **Ticketing**, and **Bookkeeping**, **Purchasing** and **Trips** come with **Invoicing and accounting**. Each is listed under the module it comes with, and is off while that module is - it fades when you switch that one off.
 
 Everything starts on except **Purchasing**, which is off until you switch it on.
@@ -82,6 +82,7 @@ What each one takes away:
 - **Purchasing** - To Order, [Purchase orders](/billing/purchase-orders) and Receiving.
 - **Trips** - [Trips and mileage](/billing/trips), with the **Mileage** report and the trips in the [Tax package](/finance/tax-package).
 - **Calendar** - the [Calendar](/service-desk/calendar), its events and the calendar feeds: a calendar subscribed to a feed stops getting it. Tickets are still booked, and booked work shows on [Dispatch](/service-desk/dispatch) and the dashboard.
+- **Knowledge Base** - the [Knowledge Base](/service-desk/knowledge-base) and its articles.
 
 **White-label key** takes "Powered by ITFlow" off the client portal. Left empty, it shows.
 

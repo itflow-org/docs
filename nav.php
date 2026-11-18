@@ -48,6 +48,7 @@ return [
             'new-ticket' => 'Raising a ticket',
             'working-a-ticket' => 'Working a ticket',
             'canned-responses' => 'Canned responses',
+            'knowledge-base' => 'Knowledge Base',
             'texts' => 'Texts and verification codes',
             'recurring-tickets' => 'Recurring tickets',
             'projects' => 'Projects',

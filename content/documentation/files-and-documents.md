@@ -61,7 +61,7 @@ When a template is required for the client - every managed client should have a 
 
 ![A document's page with its contents and the records linked to it](doc-document.webp "A document: what it says, and what it's linked to")
 
-Along the top: **Edit**, **Share**, **PDF** and print, and the **⋮** menu with **Rename**, **Move**, **Link**, **Show in client portal** (or **Hide from client portal**), **Archive** and **Delete**.
+Along the top: **Edit**, **Share**, **PDF** and print, and the **⋮** menu with **Rename**, **Move**, **Link**, **Show in client portal** (or **Hide from client portal**), **Copy to Knowledge Base**, **Archive** and **Delete**. **Copy to Knowledge Base** makes a draft [Knowledge Base](/service-desk/knowledge-base) article from it, for every client.
 
 - **Linked** lists the assets, contacts, locations, licenses, vendors, services and files the document is about. Use **Link** to add more. A document linked to an asset shows on the asset's page, and so on.
 - **Versions** keeps every earlier version. View one, restore it (the current one is kept as a version too), or delete it.

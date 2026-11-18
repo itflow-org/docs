@@ -20,7 +20,7 @@ Open a role with **Edit**. An **Admin** role opens everything: every part of ITF
 | Part | Covers |
 |---|---|
 | **Clients** | Clients, contacts, locations and vendors |
-| **Support** | Tickets, projects, assets and documentation |
+| **Support** | Tickets, projects, assets, documentation and the Knowledge Base |
 | **Credentials** | Client usernames, passwords and 2FA codes, and the verification codes texted to your number ([Texts > Codes](/service-desk/texts#codes)) |
 | **Sales** | Quotes, invoices, recurring invoices and products |
 | **Financial** | Payments, income, expenses, accounts, budgets and trips |

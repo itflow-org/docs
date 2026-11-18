@@ -5,7 +5,7 @@ description: API reference for tags - reading them and setting a record's tags -
 
 ## Tags {#tags}
 
-Tags come in twelve kinds, one for each kind of record that can be tagged: `client`, `location`, `contact`, `credential`, `asset`, `vendor`, `domain`, `license`, `service`, `network`, `document` and `ticket`. A tag of one kind can't go on another kind of record.
+Tags come in thirteen kinds, one for each kind of record that can be tagged: `client`, `location`, `contact`, `credential`, `asset`, `vendor`, `domain`, `license`, `service`, `network`, `document`, `ticket` and `kb_article`. A tag of one kind can't go on another kind of record.
 
 A tag needs the role area of its kind of record - Support for asset tags, Clients for contact tags, and so on. See [Keys and permissions](/api/permissions#modules).
 
@@ -41,7 +41,7 @@ With no `kind`, the list has every kind the key's agent can read.
 }
 ```
 
-`tag_icon` is a [Font Awesome](https://fontawesome.com/icons) icon's name, and `tag_type` is the kind's number, from 1 for `client` to 12 for `ticket`.
+`tag_icon` is a [Font Awesome](https://fontawesome.com/icons) icon's name, and `tag_type` is the kind's number, from 1 for `client` to 13 for `kb_article`.
 
 ### Create {#tags-create}
 

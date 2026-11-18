@@ -14,6 +14,7 @@ Categories sort records into kinds. **Admin > Categories** has a list for each:
 - **Ticket** - what tickets are about: Network, Email, Onboarding
 - **Network Interface**, **Asset Status**, **Software Type** and **Rack Type**
 - **Contact Note Type** and **Asset Note Type**
+- **Knowledge Base** - how [Knowledge Base](/service-desk/knowledge-base) articles are grouped: Email, Printers, Security. An article's icon is its category's
 
 ![Categories](adm-categories.webp "Categories: a list for each kind, with what uses each one")
 
@@ -36,7 +37,7 @@ A tag shows as a soft badge: its icon in the tag's colour, its name in the page'
 
 ![Tags](adm-tags.webp "Tags: the tags for each kind of record, and how many records have each")
 
-**Admin > Tags** has the tags for each kind of record: clients, locations, contacts, credentials, assets, vendors, domains, licenses, services, networks, documents and tickets. Each shows how it looks and how many records have it - click to see them.
+**Admin > Tags** has the tags for each kind of record: clients, locations, contacts, credentials, assets, vendors, domains, licenses, services, networks, documents, tickets and Knowledge Base articles. Each shows how it looks and how many records have it - click to see them.
 
 Click **New** to add a tag with a name, a colour, an icon and a description of when to use it. Like categories, a tag can be edited, merged into another, archived (it stays on its records but isn't offered) or deleted.
 
