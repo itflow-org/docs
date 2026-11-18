@@ -57,7 +57,7 @@ They get a form for the website, username, password and 2FA secret. When they se
 
 ## Keep track of your links
 
-Each client has **Shared Links** in its menu, and **All Client Docs > Shared Links** shows every client's.
+Each client has **Shared Links** in its menu, and **Across clients > Shared Links**, in the top bar, shows every client's.
 
 ![The Shared Links list](doc-shares.webp "Shared Links: what went out, to whom, until when, and how often it was opened")
 

@@ -17,7 +17,7 @@ The tabs split contacts by role - **Important**, **Billing**, **Technical** and 
 - **Location** - click it to change which of the client's sites they're based at
 - **Linked** - how many assets, logins and licenses they have, and their open tickets
 
-To see the contacts of every client together, use **All Client Docs > Contacts**.
+To see the contacts of every client together, use **Across clients > Contacts** in the top bar.
 
 ## Add a contact
 

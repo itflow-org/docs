@@ -17,7 +17,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 - The location, assigned contact and status can be changed right in the row.
 - With an [RMM](/admin/rmm) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, or the assets that aren't in it.
 
-To see every client's devices together, use **All Client Docs > Assets**.
+To see every client's devices together, use **Across clients > Assets** in the top bar.
 
 ## Add an asset
 

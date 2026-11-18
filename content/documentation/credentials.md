@@ -16,7 +16,7 @@ Credentials are the logins you hold for a client: the firewall admin, the Micros
 - **For** shows the device, vendor, service or license the login is for.
 - **Changed** shows how old the password is - green when recent, amber, then red when it's due for a change - and when it was last used.
 
-To see every client's credentials, use **All Client Docs > Credentials**.
+To see every client's credentials, use **Across clients > Credentials** in the top bar.
 
 ## Add a credential
 
