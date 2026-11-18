@@ -57,13 +57,14 @@ When you sign in with your code, tick **Remember this browser** and ITFlow doesn
 
 ![The Security page: password, multi-factor authentication and remembered browsers](gs-account-security.webp "Security: your password, MFA and the browsers that skip the code")
 
-## Preferences
+## Preferences {#preferences}
 
-![Preferences: theme, the first day of the week and rows on a list](gs-account-preferences.webp "Preferences")
+![Preferences: theme, the first day of the week, rows on a list and your calendar colour](gs-account-preferences.webp "Preferences")
 
 - **Theme** - **Light** or **Dark**.
 - **Calendars start on** - the first day of the week on the calendar and date pickers.
 - **Rows on a list** - how many rows every list shows on a page. You can also change this at the foot of any list.
+- **Calendar color** - the colour your booked tickets and the events assigned to you are drawn in on the [calendar](/service-desk/calendar#colours). Click one of the twelve, or the box to pick any colour. **Automatic** goes back to the one you started with.
 
 ## Your canned responses
 

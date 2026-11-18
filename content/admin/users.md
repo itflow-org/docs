@@ -60,6 +60,8 @@ To change an invite - a different role, say - use **New User** again with the sa
 
 If your installation has a limit on agents, an invite waiting holds a seat until it's accepted, cancelled or runs out, so there's one for them when they join. On an ITFlow [managed by another](/admin/managed-instances#managed-by), the manager may set the limit; its support user, marked **Support**, doesn't take a seat.
 
+Once someone has joined, **Edit** on their **Details** tab also has their **Calendar color** - the colour their booked tickets and the events assigned to them are drawn in on the [calendar](/service-desk/calendar#colours). They can change it themselves under **Account > Preferences**.
+
 ## Which clients they see
 
 By default an agent sees every client. On **Client access** you can set each client to:
