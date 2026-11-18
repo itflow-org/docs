@@ -40,6 +40,23 @@ Every report works the same way: pick a period, narrow it to one client where th
 | **Unbilled Work** | Billable tickets that are done but not invoiced yet, with the time and value on them |
 | **Time Detail by Client** | Every reply with time on it, by client and ticket, rounded to your billing increment |
 
+### Client Profitability {#client-profitability}
+
+**Client Profitability** sets what each client brings in against what they cost you. **Net** is their income less the expenses filed against them, and **Per hour** is net divided by the hours on their tickets - your effective hourly rate, against a target you can enter.
+
+**Paid** and **Invoiced** decide what counts as income. **Paid**, the default, is money received in the period - payments and revenue, tax included. **Invoiced** is sales before tax, less discounts, on invoices dated in the period, plus revenue.
+
+Once you've set what an hour of each agent costs, in [Labor costs](/admin/labor-costs), the report goes further:
+
+![Client Profitability with labour costs](fin-report-profitability.webp "Client Profitability: income and hours, then labour, parts, profit and break-even")
+
+- **Labor cost** - the hours on each client's tickets at the cost of the agent who worked them, on the day they did. A warning marks hours by agents with no cost and no company default.
+- **Parts cost** - what the products on their invoices in the period cost you, at each product's cost now.
+- **Profit** - net less labour and parts. **Margin** is profit as a share of income.
+- **Hours / month** and **Break-even h / month** - for clients on a flat monthly fee. Break-even is how many hours a month their recurring fee pays for, after their parts and direct costs, at the cost of the agents who work for them. **Over** marks a client taking more.
+
+Along the top, the totals: labour, parts, profit and margin, how many clients are losing money, and how many are over break-even.
+
 ## Service desk
 
 | Report | What it shows |

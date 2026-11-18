@@ -132,6 +132,7 @@ return [
             'text-messaging' => 'Text messaging with Skyetel',
             'rmm' => 'RMM providers',
             'taxes' => 'Taxes',
+            'labor-costs' => 'Labor costs',
             'categories-and-tags' => 'Categories and tags',
             'ticket-templates' => 'Ticket and project templates',
             'document-templates' => 'Document templates',
