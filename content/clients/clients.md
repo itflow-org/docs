@@ -28,6 +28,8 @@ The funnel button beside the search box opens the filters: **Tags**, **Industry*
 
 A lead is a company that isn't a client yet - someone you're quoting for. The title bar shows how many clients and leads you have: click **Leads** to switch to them, and back. You can send a lead a quote and keep notes on them like any client. When they sign up, edit them and untick **Is Lead** - or [onboard them](/clients/onboarding), which makes them a client and takes you through the rest.
 
+Leads stay out of the way of the clients you work for. They aren't offered when you pick a client for something new - an asset, a contact, an invoice, a trip and so on - or in the client switcher and the client filters. They are offered when you pick a client for a quote, marked **Lead**, after your clients. Global search still finds a lead by name, marked **Lead**, after any clients that match. To add something to a lead, start from the lead's own page: whatever you add there is for it.
+
 ## Add a client
 
 1. Go to **Clients** and click **New Client**.
