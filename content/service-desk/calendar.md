@@ -21,6 +21,8 @@ If you work in another time zone, set **My time zone** under [Account > Preferen
 
 Click anything on the calendar to open its quick look. Drag a ticket or event to another time to reschedule it. A booked ticket shows for as long as it was booked - drag its bottom edge to make it longer or shorter, and ITFlow asks before it emails the new time.
 
+Onsite work stands out: a booking with a visit has an orange **Onsite** strip with a car across the top, and in the **Month** view an orange edge. Remote work has a headset beside its title.
+
 ## Each technician's colour {#colours}
 
 Every technician has a colour, and their booked tickets and the events assigned to them are drawn in it, so you can see whose day is whose at a glance. In the **Week**, **7 days**, **Day** and **List** views, their first name sits beside the time; hover over anything to see who it's for.

@@ -51,6 +51,8 @@ For work that isn't a ticket yet - a call that's just come in, say - drag down a
 
 Bookings for technicians helping on a ticket, and holidays, are on the board to plan around, but don't move from here.
 
+An onsite booking has an orange **Onsite** strip with a car across the top, as on the calendar - on the **Week** view, an orange line along the top of it.
+
 ## Week
 
 The **Week** view has a row for each technician and a column for each day, with their bookings and events in their [colour](/service-desk/calendar#colours) and the hours booked that week under each name. Drag a ticket from the queue onto a technician and a day to book it at the start of the working day, drag a booking to another day or technician (it keeps its time), or drag it back onto the queue to take it off. The **Schedule** window opens each time, as in **Day**.
