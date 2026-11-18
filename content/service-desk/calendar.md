@@ -25,6 +25,8 @@ Every technician has a colour, and their booked tickets and the events assigned 
 
 Everyone starts with a colour of their own. To pick yours, go to **Account > Preferences** and choose a **Calendar color** (see [Your account](/getting-started/account#preferences)); an admin can pick anyone's from **Edit** in **Admin > Users**. A ticket nobody is assigned to stays in the **Scheduled tickets** colour.
 
+A technician [helping on a ticket](/service-desk/working-a-ticket#helpers) has their booking on the calendar too, in their colour, marked "(helping)". Drag it to give them a time of their own - they're emailed the new time, and it no longer moves with the lead's.
+
 ## Book an open ticket
 
 **To schedule**, under the calendars, lists open tickets that have no time booked - the technician in **Whose**, or, with **Everyone**, everyone's, with who has each. Drag one onto the calendar to book it for that time. You can also book a ticket from the ticket itself - see [Working a ticket](/service-desk/working-a-ticket#book-a-visit-or-a-call). When you book from the ticket, the window shows the assigned technician's day, so you can see when they're free.

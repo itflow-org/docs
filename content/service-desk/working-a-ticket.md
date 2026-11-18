@@ -31,6 +31,7 @@ The **Details** card shows where the ticket stands. Click a value to change it.
 - **Status** - New, Open, On Hold, and any statuses your admin added, such as "Waiting on Vendor". Some statuses pause the SLA clock.
 - **Priority** - Low, Medium, High or Urgent.
 - **Assigned to** - the technician working it. They're told when you change it.
+- **Additional agents** - other technicians helping, each with their booking. See [Get help from another technician](#helpers).
 - **SLA** - the next target and when it's due, or **Breached** once it's missed. See [SLAs](#slas) below.
 - **Category**, **Scheduled** (see [Book a visit](#book-a-visit-or-a-call)), **Billing** and **Time logged**.
 
@@ -181,6 +182,21 @@ Click **Scheduled** in the Details card, pick the **Date and time**, **How long*
 ![The Schedule window](sd-ticket-schedule.webp "Schedule: the date and time, the agent, how long, remote or onsite - and the agent's day")
 
 The contact, the watchers and the assigned technician are emailed the start and end, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar) for that long. Changing or cancelling it tells them the same way. A contact who agreed to texts is texted the time too, and reminded before it - see [Texts to clients](/admin/text-messaging#texts-to-clients).
+
+## Get help from another technician {#helpers}
+
+A ticket can have more than one technician on it. The one it's **Assigned to** stays the lead; the others help.
+
+1. In the **Details** card, click **Add an agent** under **Additional agents**.
+2. Pick the **Agent** - anyone who can open the ticket.
+3. Under **When**, pick **Same time as the lead** (it moves, and is cancelled, with the lead's booking), **A time of their own** - with the **Date and time** and **How long**, and their day underneath - or **Not booked**.
+4. Click **Add**.
+
+![The Add an agent window](sd-ticket-helper.webp "Add an agent: who, and when - with the lead, a time of their own, or not booked")
+
+They're emailed their booking with a calendar invite of its own, so it never replaces the lead's - or, when they aren't booked, that they're on the ticket. A helper finds the ticket under **Mine** and on their dashboard, has their booking on the [calendar](/service-desk/calendar) and in their calendar link, and is emailed the client's replies as the lead is. The client is only ever told about the lead's booking.
+
+Click a helper in the **Details** card to change their booking, or **Take off** to take them off the ticket - a booking they had is cancelled, and they're emailed the cancellation. If a helper becomes the one it's assigned to, they're the lead from then on.
 
 ## Resolve and close
 

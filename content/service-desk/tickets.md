@@ -15,7 +15,7 @@ The tabs along the top are the views you'll use most, each with a count:
 | View | What it shows |
 |---|---|
 | **Open** | Every ticket that isn't resolved or closed |
-| **Mine** | Open tickets assigned to you |
+| **Mine** | Open tickets assigned to you, or that you're [helping on](/service-desk/working-a-ticket#helpers) |
 | **Mentioned me** | Open tickets with an internal note that [mentions you](/service-desk/working-a-ticket#mention) |
 | **Unassigned** | Open tickets nobody has picked up |
 | **Needs reply** | Open tickets where the client spoke last, or nobody has replied yet |
@@ -35,7 +35,7 @@ The search box finds tickets by number, subject, client, contact, asset or the v
 - Under the subject: the ticket number, how long ago it was opened, where it came from (an envelope for email, a globe for the client portal, arrows for a recurring ticket), its category, its asset, when it's scheduled, and how many of its tasks are done.
 - **Client / Contact** - who it's for.
 - **Status** - with **With client** underneath when you're waiting on them.
-- **Priority** and **Assigned**.
+- **Priority** and **Assigned** - with **+1**, **+2** after the technician when others are helping, or **Helping** when one of them is you.
 - **Due** - when the SLA's next target is due, or **Breached** in red once it's missed. **Paused** shows when the ticket is in a status that stops the SLA clock.
 - **Activity** - the latest reply: a paper plane when you replied, an arrow when the client did, with who and when.
 - **Billing** - a green **$** for billable, grey for not billable.
