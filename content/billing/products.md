@@ -24,7 +24,7 @@ Tick items and use the bulk menu to set their category or archive them. **Archiv
 5. Under **Billed**, pick **One time**, or **Monthly**, **Quarterly** or **Yearly** for something billed again and again. For a recurring item, **Counted** can be **Per user**, **Per device** or **Per managed device** - the client's devices in your [RMM](/admin/rmm): on a recurring invoice the quantity then comes from the client's own count (see [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat)).
 6. Add a **Code** (your SKU), the **Vendor** you buy it from and the **Vendor part number** you order it as.
 7. Write the **Description** the client sees under the line on invoices and quotes, and any **Notes** for agents - lead time, where to order it, what to check before quoting.
-8. Add a **Picture**, if you like - choose a file, or paste a link to it or to the product's page. A quote line added from the item shows a copy (see [Pictures](/billing/quotes#pictures)).
+8. Add a **Picture**, if you like - click the box to add one and crop it to the product, or paste a link to it or to the product's page. A quote line added from the item shows a copy (see [Pictures](/billing/quotes#pictures)).
 9. Click **Add**.
 
 ![The New Product or Service window](bill-product-form.webp "New Product or Service: what it is, what it costs, how it's billed and where it comes from")

@@ -74,9 +74,9 @@ A line can show a picture beside its name - handy for hardware, so the client se
 
 ![A quote line with a picture beside it](bill-quote-picture.webp "A line with its picture, as the client sees it")
 
-To add one, open the line's **⋮ > Edit**, and under **Picture** either choose a file, or paste a link - to a picture, or to the product's page on a supplier's website, and ITFlow takes the page's main picture. Click **Save**. To take it off, tick **Remove the picture**.
+To add one, open the line's **⋮ > Edit** and click the **Picture** box to open the **Picture** window. Drop, paste or choose a picture, then drag the corners and edges of the frame in to just the product, or click **Trim the edges** to cut away the plain background round it, and click **Use this picture** (see [Change a picture](/getting-started/account#picture)). Or paste a link instead - to a picture, or to the product's page on a supplier's website, and ITFlow takes the page's main picture. Click **Save**. To take it off, click the picture, then **Remove**, and save.
 
-![The Picture field in a quote line's Edit window](bill-quote-line-picture.webp "Picture: choose a file, or paste a link to a picture or a product page")
+![The Picture field in a quote line's Edit window](bill-quote-line-picture.webp "Picture: click the box to add or crop one, or paste a link to a picture or a product page")
 
 A product can keep a picture of its own, in its **Edit** window, and a line added from it takes a copy. Copying a quote copies its pictures too. ITFlow keeps its own smaller copy of each, so a picture still shows if the website it came from takes it down.
 
