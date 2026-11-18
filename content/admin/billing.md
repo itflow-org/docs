@@ -61,6 +61,12 @@ How ticket time becomes hours on an invoice:
 
 **Admin > Settings > Quotes** has the quote **Prefix** and **Next number**, the **Quote footer** printed on every quote, and **Email quote answers to** - who's told when a client accepts or declines a quote online.
 
+Under **Pricing**, set how a quote line's price comes from [its cost](/billing/quotes#cost):
+
+- **Price lines by** - **Markup** (a % added to the cost) or **Margin** (a % of the price), for a line whose cost you type in.
+- **Markup or margin %** - the % it starts with.
+- **Quick picks** - the % buttons in a line's **Edit** window, separated by commas, up to eight.
+
 ## Payment methods
 
 **Admin > Payment Methods** lists the ways money comes in and goes out - Cash, Check, Bank Transfer, Credit Card, and your own, such as ACH or the company card. Each shows what it's for, what it has been used on - "138 payments · 38 income", each a link to them in Transactions - and when it was last used.

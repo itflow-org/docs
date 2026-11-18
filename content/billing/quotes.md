@@ -48,6 +48,26 @@ Lines go on a quote the way they do on an invoice. Under the lines, type in **Ad
 
 ![A quote line's menu, with how often it is billed](bill-quote-billed.webp "A line's menu: Edit, how often it's billed, and Remove")
 
+### Your cost and margin {#cost}
+
+A quote line can carry what it costs you, and its price can come from that cost. Open the line's **⋮ > Edit** and, under **Your cost**:
+
+1. Type the **Cost each** - what one costs you.
+2. Pick how it's priced under **Price by**: **Markup** adds a % to the cost, **Margin** makes the profit a % of the price, and **Set price** leaves the price as you type it. Markup 25% on a cost of 80.00 is 100.00; margin 25% on 80.00 is 106.67.
+3. Type the **Percent**, or click one of the buttons under it. The **Price** is worked out as you go, and underneath it says what the line makes each.
+4. Click **Save**.
+
+![A quote line's Edit window, with its cost priced at a markup](bill-quote-line-cost.webp "Your cost: what one costs you, a markup or margin, and what the line makes")
+
+Typing the **Price** yourself turns the line into a set price, and the window still shows its markup and margin. A line added from a product in the catalog takes the product's **Cost** and keeps its price.
+
+While the quote can still be changed, each line with a cost shows it under its name, with its markup or margin, and the **Margin** beside the quote counts each line's own cost. Lines without a cost are left out of it - hover over it to see how many.
+
+> [!NOTE]
+> Only agents see costs. They're never on the PDF, the guest link, the client portal or the invoice made from the quote.
+
+The markup or margin a new line starts with, and the buttons offered, are set in [Admin > Settings > Quotes](/admin/billing#quotes).
+
 With AI set up, **Write it with AI** under the lines drafts them from a sentence such as "three new laptops for the new starters, set up and joined to the domain". It uses your catalog's prices and the client's rate, and you check the lines before adding them. See [Using AI](/getting-started/ai).
 
 > [!TIP]
