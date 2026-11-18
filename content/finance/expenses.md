@@ -6,7 +6,7 @@ where: Finance > Expenses
 
 An expense is money the business spent: a bill from a vendor, a card purchase, hardware for a client, a team lunch. Recording them keeps your accounts right, gives your accountant the receipts, and lets you bill a client for what you bought on their behalf.
 
-You don't have to type every one. [Recurring expenses](/finance/recurring-expenses) record the regular ones for you, and [Import Statement](/finance/importing-statements) brings in a whole card or bank statement at once.
+You don't have to type every one. [Recurring expenses](/finance/recurring-expenses), on the **Recurring** tab at the top, record the regular ones for you, and [Import Statement](/finance/importing-statements) brings in a whole card or bank statement at once.
 
 ## The expenses list
 

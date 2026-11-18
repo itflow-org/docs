@@ -1,11 +1,11 @@
 ---
 title: Purchase orders
 description: Buying from your vendors - the list of what to order, purchase orders with optional approval, tracking, receiving into stock or client assets, and recording the vendor's bill.
-where: Purchasing > To Order, Purchase Orders and Receiving
+where: Billing > Purchasing
 access: Agents with Purchasing - see Roles and permissions
 ---
 
-When you buy hardware for a client or restock your own shelf, **Purchasing** in the side menu keeps it in one place:
+When you buy hardware for a client or restock your own shelf, **Purchasing**, under **Billing** in the menu, keeps it in one place - three pages, with tabs across the top to move between them:
 
 - **To Order** - what needs buying, added by hand, from a product, or from what's low on stock.
 - **Purchase Orders** - what you've asked each vendor for: made from the list, approved if you need that, sent as a PDF, and tracked until it arrives.

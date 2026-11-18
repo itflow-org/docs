@@ -28,11 +28,13 @@ The main menu is grouped by the kind of work:
 |---|---|
 | (top) | **Dashboard**, **Clients**, **All Client Docs**, **Vendors** and **Calendar** |
 | **Support** | **Tickets**, **Dispatch**, **Recurring Tickets** and **Projects** |
-| **Billing** | **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices** and **Products** |
-| **Finance** | **Income**, **Expenses**, **Recurring Expenses**, **Trips**, **Accounts**, **Transactions** and **Transfers** |
+| **Billing** | **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices**, **Contracts**, **Products** and **Purchasing** |
+| **Finance** | **Income**, **Expenses**, **Trips**, **Accounts** and **Transactions** |
 | **Tools** | **Reports**, and any links your admin has added |
 
 The numbers beside an item tell you how many are waiting there: open tickets, unpaid invoices, tickets waiting to be billed and so on.
+
+Some items open a few pages, with tabs across the top to move between them: **Expenses** has **Recurring**, **Transactions** has **Transfers**, and **Purchasing** has **To Order**, **Purchase Orders** and **Receiving**.
 
 > [!NOTE]
 > You only see the parts of ITFlow your role can open. A technician who doesn't handle billing won't see Billing or Finance at all. Your admin sets this up in [Roles and permissions](/admin/roles). Whole parts of ITFlow can also be switched off in **Admin > Settings > Modules**.
@@ -51,7 +53,9 @@ The client menu has:
 - **Infrastructure** - **Assets**, **Networks** and **Racks**
 - **Web & Security** - **Credentials**, **Certificates**, **Domains** and **Shared Links**
 - **Documentation** - **Licenses**, **Services** and **Files**
-- **Billing** - the client's **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices**, **Income** and **Trips**
+- **Billing** - the client's **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices**, **Contracts**, **Income** and **Trips**
+
+**Calendar**, **Racks**, **Certificates**, **Shared Links**, **Services** and **Trips** stay out of the menu while the client has none of them, to keep it short - when at least two are empty. **More**, at the bottom of the menu, shows them, such as to add a client's first rack. Each one shows as soon as the client has something there.
 
 Every page inside a client starts with the client's header: their initials, name, industry and tags, with their primary location, open tickets and balance. Click the arrow at the left of the header to see more about them. The **⋮** button on the right has **New Ticket**, **New Project**, **Edit Client**, **Export Data**, **Client Review** and **Archive Client**.
 

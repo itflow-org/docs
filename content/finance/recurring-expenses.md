@@ -1,7 +1,7 @@
 ---
 title: Recurring expenses
 description: The bills you pay every month, quarter or year - rent, colocation, licensing, insurance - recorded for you on the day, and tied to what you resell.
-where: Finance > Recurring Expenses
+where: Finance > Expenses > Recurring
 ---
 
 A recurring expense is something you're committed to paying again and again: the office rent, colocation, your partner licensing, insurance, a lease. ITFlow records the expense for you each time it falls due, so your spending is always up to date without anyone typing it.
@@ -14,7 +14,7 @@ The tabs are **Active**, **Next 7 days**, **Late**, **Paused**, **Ended** and **
 
 ## Set one up
 
-1. Go to **Finance > Recurring Expenses** and click **New Recurring Expense**.
+1. Go to **Finance > Expenses**, open the **Recurring** tab at the top and click **New Recurring Expense**.
 2. Pick the **Vendor** and the **Amount each time**, and the **Tax included** if any.
 3. Pick **How often** - monthly, quarterly or yearly - and when the **First one** is. Leave **Ends** empty unless it stops on a date, such as a lease or financing that's paid off. The schedule is written out in words under it.
 4. Pick the **Category**, and the account it's **Paid from** and how it's **Paid by**.
