@@ -181,6 +181,8 @@ Click **Scheduled** in the Details card, pick the **Date and time**, **How long*
 
 ![The Schedule window](sd-ticket-schedule.webp "Schedule: the date and time, the agent, how long, remote or onsite - and the agent's day")
 
+If you've set **My time zone** in [your preferences](/getting-started/account#preferences), the time you pick, and the booking on the ticket, are on your own clock - ITFlow keeps it in the company's time for the client and everyone else.
+
 The contact, the watchers and the assigned technician are emailed the start and end, with a calendar invite, and the ticket shows on the [calendar](/service-desk/calendar) for that long. Changing or cancelling it tells them the same way. A contact who agreed to texts is texted the time too, and reminded before it - see [Texts to clients](/admin/text-messaging#texts-to-clients).
 
 ## Get help from another technician {#helpers}

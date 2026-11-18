@@ -17,6 +17,8 @@ The **Calendar** shows what's booked: tickets scheduled for a visit or a call, e
 
 What you show - the calendars, the dates from ITFlow, **Whose** and the view - is kept to your account, so the calendar opens the same way on your computer and your phone.
 
+If you work in another time zone, set **My time zone** under [Account > Preferences](/getting-started/account#preferences). The calendar is then on your clock, with a note above it saying so - and anything you drag, drop or type is kept in the company's time for everyone else.
+
 Click anything on the calendar to open its quick look. Drag a ticket or event to another time to reschedule it. A booked ticket shows for as long as it was booked - drag its bottom edge to make it longer or shorter, and ITFlow asks before it emails the new time.
 
 ## Each technician's colour {#colours}
