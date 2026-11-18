@@ -128,6 +128,8 @@ The **⋮** menu has:
 - **Copy Client Link** and **View as Client**
 - **Copy** - a new draft with the same lines, scope, discount and notes
 - **Make Recurring** - bill the same lines, with the same discount, again every month, quarter or year from a [recurring invoice](/billing/recurring-invoices)
+
+Neither copies the **Card Fee** line of an invoice paid by card - that [card fee](/admin/payment-providers#card-fee) was for that one payment. A line you typed yourself with that name is copied as usual.
 - **Cancel Invoice** - nothing more is owed on it, and it stays on record
 - **Delete** - it goes for good, with its lines, payments and history. Its tickets become unbilled again, and its expenses and trips are to bill again.
 

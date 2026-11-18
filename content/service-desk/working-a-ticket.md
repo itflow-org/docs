@@ -222,7 +222,7 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 ## Merge, move and delete
 
 - **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
-- **Move to another client** - for a ticket raised under the wrong client. Watchers who aren't on your team or contacts at the new client come off it, and its [To line](#email-to) starts again.
+- **Move to another client** - for a ticket raised under the wrong client. Watchers who aren't on your team or contacts at the new client come off it, and its [To line](#email-to) starts again. The links to the ticket, and to its task approvals, already emailed to the old client stop working - the new client gets a working link with the next email.
 - **Delete ticket** - only for tickets raised by mistake. Normally resolve or close them instead.
 
 ## Billing a ticket
