@@ -8,6 +8,9 @@ The **Calendar** shows what's booked: tickets scheduled for a visit or a call, e
 
 ![The calendar in week view, with events, scheduled tickets and service reviews](sd-calendar-week.webp "The calendar: your own calendars on the left, dates from ITFlow below them, open tickets waiting to be booked, and the ones left behind")
 
+> [!NOTE]
+> The calendar can be switched off in [Admin > Settings > Modules](/admin/settings#modules). Its events and feeds go with it, but tickets are still booked, and booked work still shows on [Dispatch](/service-desk/dispatch).
+
 ## Find your way around
 
 - **Month**, **Week**, **7 days**, **Day** and **List** at the top right switch the view. **7 days** shows seven days from any day, and its arrows move a day at a time - handy for dragging a booking from Friday to Monday without leaving the view. The arrows move back and forward, and **Today** brings you back.

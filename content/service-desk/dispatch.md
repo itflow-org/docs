@@ -8,6 +8,9 @@ where: Support > Dispatch
 
 ![Dispatch in Day view, with the queue on the left and a column for each technician](sd-dispatch.webp "Dispatch: the tickets waiting on the left, and each technician's day beside them")
 
+> [!NOTE]
+> Dispatch can be switched off in [Admin > Settings > Modules](/admin/settings#modules) - it comes with Ticketing. Tickets are still booked from the ticket.
+
 ## Find your way around
 
 - **Day**, **Week** and **Workload** at the top right switch the board. The arrows move a day (or a week) at a time, **Today** brings you back, and the date box jumps to any day.

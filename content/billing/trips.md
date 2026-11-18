@@ -10,6 +10,9 @@ A trip is a drive: to a client's site for a ticket, to the supplier to collect p
 - **paying agents back** - trips in an agent's own vehicle add up to what they're owed, at your mileage rate
 - **a mileage log** - every trip, who drove, where and why, for your records and your accountant
 
+> [!NOTE]
+> Trips can be switched off in [Admin > Settings > Modules](/admin/settings#modules) - they come with invoicing.
+
 ## Log a trip
 
 The quickest way is from the ticket: its **⋮** menu has **Log a trip**, and so does its **Trips** card. A client's location has **Log Trip**. Or go to **Finance > Trips** and click **New Trip**.

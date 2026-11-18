@@ -68,11 +68,24 @@ What forms start with - each can still be changed on the form:
 
 ## Modules
 
-Switch off the parts of ITFlow you don't use - **IT documentation**, **Ticketing**, **Invoicing and accounting** or **Client portal** - and they're hidden from everyone. Nothing is deleted: switch a module back on and everything is still there. Switching off **Client portal** also signs out every contact signed in to it.
+Switch off the parts of ITFlow you don't use and they're hidden from everyone - from the menus, the dashboard, search, the reports and the API. Their pages and windows say they're switched off. Nothing is deleted: switch a module back on and everything is still there.
+
+- **IT documentation**, **Ticketing**, **Invoicing and accounting**, **Calendar** and **Client portal** stand on their own. Switching off **Client portal** also signs out every contact signed in to it.
+- **Dispatch** comes with **Ticketing**, and **Bookkeeping**, **Purchasing** and **Trips** come with **Invoicing and accounting**. Each is listed under the module it comes with, and is off while that module is - it fades when you switch that one off.
+
+Everything starts on except **Purchasing**, which is off until you switch it on.
+
+What each one takes away:
+
+- **Dispatch** - the [Dispatch](/service-desk/dispatch) board. Tickets are still booked from the ticket, and show on the calendar.
+- **Bookkeeping** - [Accounts](/finance/accounts), Transactions, Transfers, [Reconcile](/finance/reconciling) and [Importing statements](/finance/importing-statements). Switch it off when your books are kept somewhere else: nobody picks an account any more. Payments and income go into the account set as **Payments go into** in [Defaults](#defaults), and expenses come out of the one set as **Expenses come out of** - or the first account, when there's no default. An expense is paid by **The business** or **Paid personally**.
+- **Purchasing** - To Order, [Purchase orders](/billing/purchase-orders) and Receiving.
+- **Trips** - [Trips and mileage](/billing/trips), with the **Mileage** report and the trips in the [Tax package](/finance/tax-package).
+- **Calendar** - the [Calendar](/service-desk/calendar), its events and the calendar feeds: a calendar subscribed to a feed stops getting it. Tickets are still booked, and booked work shows on [Dispatch](/service-desk/dispatch) and the dashboard.
 
 **White-label key** takes "Powered by ITFlow" off the client portal. Left empty, it shows.
 
-![Modules](adm-modules.webp "Modules: the parts of ITFlow in use")
+![Modules](adm-modules.webp "Modules: the parts of ITFlow in use, with the parts that come with each under it")
 
 ## Custom links
 

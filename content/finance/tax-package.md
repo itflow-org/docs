@@ -28,6 +28,8 @@ Along the top: the year's **Income**, **Expenses** and **Net profit**, the **Sal
 - **Mileage** - the trips by agent, how far, how much in their own vehicle, and what it comes to at the rate.
 - **Expenses with no receipt** - so you can attach the missing ones before you send the package.
 
+With **Bookkeeping** switched off in [Admin > Settings > Modules](/admin/settings#modules), **Accounts** is left out, and so is the account on each payment and expense in the spreadsheets. With **Trips** switched off, so are **Mileage** and **Trips.csv**.
+
 > [!NOTE]
 > ITFlow doesn't keep vendors' tax IDs or addresses. Ask each vendor listed for 1099s for a W-9, and let your accountant decide which of them need one - corporations and payments for goods usually don't.
 

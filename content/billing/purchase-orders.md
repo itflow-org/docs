@@ -11,7 +11,7 @@ When you buy hardware for a client or restock your own shelf, **Purchasing**, un
 - **Purchase Orders** - what you've asked each vendor for: made from the list, approved if you need that, sent as a PDF, and tracked until it arrives.
 - **Receiving** - what's on its way. What comes in goes onto the shelf, or becomes the client's assets with their serial numbers.
 
-Purchasing comes with invoicing - it's there when **Invoicing and accounting** is on in **Admin > Settings > Modules**. Admins can use all of it; for anyone else, give their role **Purchasing** in [Roles and permissions](/admin/roles):
+Purchasing is off to start with - an admin switches on **Purchasing** in [Admin > Settings > Modules](/admin/settings#modules). It comes with invoicing, so it's off while **Invoicing and accounting** is. Admins can use all of it; for anyone else, give their role **Purchasing** in [Roles and permissions](/admin/roles):
 
 | Level | What it allows |
 |---|---|
