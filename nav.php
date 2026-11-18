@@ -78,6 +78,7 @@ return [
         'summary' => 'Quotes, invoices, payments, recurring billing and contracts, and getting your time onto invoices.',
         'pages' => [
             'products' => 'Products and stock',
+            'purchase-orders' => 'Purchase orders',
             'quotes' => 'Quotes',
             'invoices' => 'Invoices',
             'payments' => 'Taking payments',

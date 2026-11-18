@@ -52,7 +52,7 @@ Click an item for its page.
 
 Switch on **Track stock** for products you keep on the shelf - spare access points, UPSs, cables. Then invoicing one takes it off the shelf, and it can't be sold past what's there. Products without it are ordered as needed, and invoicing them doesn't touch stock.
 
-Set **Reorder at** and how many to **Order**, and agents are told when stock gets down to that level. It's listed under the **Reorder** tab, with its vendor and part number, ready to order.
+Set **Reorder at** and how many to **Order**, and agents are told when stock gets down to that level. It's listed under the **Reorder** tab, with its vendor and part number, ready to order. To buy more, click **Order More** on the product's page, or add everything that's low from [To Order](/billing/purchase-orders#to-order) - a purchase order's delivery is received straight onto the shelf.
 
 Stock changes three ways, from **Receive** on the product's page or the buttons on its **Stock** card:
 

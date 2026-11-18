@@ -1,6 +1,6 @@
 ---
 title: Roles and permissions
-description: What each role lets its agents see and change - clients, support, credentials, sales, financial, reports and AI - and making your own roles.
+description: What each role lets its agents see and change - clients, support, credentials, sales, financial, purchasing, reports and AI - and making your own roles.
 where: Admin > Roles
 access: Admins
 ---
@@ -24,10 +24,11 @@ Open a role with **Edit**. An **Admin** role opens everything: every part of ITF
 | **Credentials** | Client usernames, passwords and 2FA codes, and the verification codes texted to your number ([Texts > Codes](/service-desk/texts#codes)) |
 | **Sales** | Quotes, invoices, recurring invoices and products |
 | **Financial** | Payments, income, expenses, accounts, budgets and trips |
+| **Purchasing** | Items to order, purchase orders to vendors and receiving - with invoicing on. See [Purchase orders](/billing/purchase-orders) |
 | **Reports** | The reports - each needs access to what it reports on too |
 | **AI** | Rewording, summaries and drafts - see [Using AI](/getting-started/ai) |
 
-The levels are **None**, **Read** (see them), **Modify** (add and change them) and **Full** (delete them too). Under each part, the window spells out exactly what the level picked allows - "See and copy them", "Add, edit and share them" - so there's no guessing.
+The levels are **None**, **Read** (see them), **Modify** (add and change them) and **Full** (delete them too - for **Purchasing**, approve and cancel purchase orders and undo a receipt). Under each part, the window spells out exactly what the level picked allows - "See and copy them", "Add, edit and share them" - so there's no guessing.
 
 A change applies to the role's agents from the next page they open.
 
