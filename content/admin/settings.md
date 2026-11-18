@@ -1,6 +1,6 @@
 ---
 title: Settings
-description: Where ITFlow is set up for everyone - your company details, language and currency, theme, defaults, which parts of ITFlow are in use, and custom links.
+description: Where ITFlow is set up for everyone - your company details and offices, language and currency, theme, defaults, which parts of ITFlow are in use, and custom links.
 where: Admin > Settings
 access: Admins
 ---
@@ -27,6 +27,24 @@ Your company as it appears on invoices, quotes, statements, emails and the clien
 Click the logo box to add or change it - a PNG or JPG. Drag the corners and edges in to just the logo, or click **Trim the edges** to cut away the empty space round it. A wide logo prints best, and a PNG keeps a see-through background. See [Change a picture](/getting-started/account#picture).
 
 **Your own client record** links your company to a client in ITFlow, so your own internal tickets, assets and documentation have a home.
+
+### Offices {#offices}
+
+If you work from more than one place, list the others under **Offices** on the Company details page. The **Main office** is the address and phone above.
+
+1. Click **Add an office**.
+2. Give it a **Name**, and its address, **Phone** and **Email**. Leave the phone empty to show the main office's, and the email empty to show the address ticket emails come from.
+3. In **Who works there**, pick the agents who work from it. Picking someone moves them here from wherever they were.
+4. Click **Add office**.
+
+![The Offices section](adm-offices.webp "Offices: the main office and the others, with who works from each")
+
+Each agent works from one office - anyone not put in another works from the main one. You can also pick someone's **Office** when you add or edit them in [Users](/admin/users).
+
+- **Trips** - a new trip starts **From** the driver's office (see [Trips](/billing/trips)).
+- **Ticket emails** - emails about a ticket show the address, phone and email of the office of the agent on it - the one it's assigned to, or the one sending it - at the bottom.
+
+Invoices, quotes and contracts always show the main office. To change an office, click **Edit**; **Remove** puts those who worked there back in the main office.
 
 ### Localization
 

@@ -16,7 +16,7 @@ The quickest way is from the ticket: its **⋮** menu has **Log a trip**, and so
 
 1. Check the **Date** and the **Driver**. You log your own trips; agents with Financial access can log them for anyone.
 2. Pick the **Client** and **Their site** - or **Our own - not for a client** for your own errands. Pick **For the ticket** to link it to a ticket.
-3. Type where you went **From** and **To**. Picking a site fills in where to, and picking a ticket fills in what it was for.
+3. Type where you went **From** and **To**. **From** starts where your last trip did, or at the office - the driver's own office if they work from another of your [offices](/admin/settings#offices), and picking a different driver moves it to theirs unless you've typed it in. Picking a site fills in where to, and picking a ticket fills in what it was for.
 4. Type the **Miles one way**, and leave **Round trip** on for there and back. ITFlow shows the whole trip. Or open **Odometer readings** and type the readings **At the start** and **At the end**.
 5. Leave **In their own vehicle** on if the driver used their own car, so they're paid back for it.
 6. **Bill the client for it** starts on for a billable ticket's trip. It says what the trip will bill.
