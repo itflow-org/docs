@@ -19,11 +19,24 @@ where: Clients > a client > Files
 - The list and grid buttons switch views. The grid shows real previews: image thumbnails, the first page of a PDF, the start of a document. Click one to open the previewer, and use the arrow keys to move between files.
 - Markers show which items are shared by link and which are visible in the client portal.
 
-To upload, drag files from your computer onto the list - they go into the folder you're in - or click **Upload**.
+To upload, drag files from your computer onto the list - they go into the folder you're in - or onto a folder on the left to put them there. Or click **Upload**.
 
 ![A client's Files in list view](doc-files.webp "List view: each item's type, size, when it changed and what it's linked to")
 
 Tick items and use **Bulk Action** to move, tag, archive, restore or delete them together.
+
+## Move things between folders {#move}
+
+Drag things onto a folder to move them. The folder lights up when it can take what you're dragging.
+
+![Two ticked files dragged onto a folder](doc-files-move.webp "Two ticked files dragged onto Diagrams, which lights up to take them")
+
+- **A file or document** - drag it onto a folder on the left. Tick several first and drag one of them to move them all.
+- **A folder** - drag it onto another folder to put it inside, with everything in it, or onto **Top level** to bring it out. A folder can't go inside one of its own folders.
+- **A folder inside a closed one** - hold what you're dragging over the closed folder for a moment and it opens.
+- **Up a level** - the path above the list takes a drop too. Drag onto **Top level** or a folder in the path.
+
+Each move goes in the audit log. On a phone or tablet, use **Move** in an item's **⋮** menu, or **Rename or move** in a folder's.
 
 ## Upload files
 
