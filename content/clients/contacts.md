@@ -13,16 +13,18 @@ A contact is a person at a client: the owner, the office manager, the person who
 The tabs split contacts by role - **Important**, **Billing**, **Technical** and **Portal** (those who can sign in to the client portal) - and **Invites** lists people invited to the portal who haven't joined yet. Each row shows:
 
 - the contact's name, title and department, with role labels such as **Primary** and **Billing**, and their tags
-- **Reach** - phone with extension, mobile and email, each with a copy button when you point at it
+- **Reach** - phone with extension, mobile and email, each with a copy button when you point at it, and **Email bounced** when mail to them has come back - see [Email bounced](#bounced)
 - **Location** - click it to change which of the client's sites they're based at
 - **Linked** - how many assets, logins and licenses they have, and their open tickets
+
+The **⋮** at the end of a row has **New ticket**, to raise a ticket for them straight from the list, and **Save to phone** (see [below](#phone)), with **Edit**, **Add Note** and **Archive**.
 
 To see the contacts of every client together, use **Across clients > Contacts** in the top bar.
 
 ## Add a contact
 
 1. Open the client and go to **Contacts**, then click **New Contact**.
-2. On **Details**, type their **Name**, then their **Title**, **Department / group**, **Location**, phone numbers and **Email**. ITFlow tells you if another contact already has that email.
+2. On **Details**, type their **Name**, then their **Title**, **Department / group**, **Location**, phone numbers and **Email**. ITFlow tells you if another contact already has that email - who, and at which client - here and when you change a contact's email.
 3. On **Roles**, switch on what applies:
    - **Primary contact** - the client's main contact. There is one per client, so this takes over from the current one.
    - **Important** - pinned to the top of the contacts list.
@@ -57,7 +59,7 @@ Click a contact's name to open their page.
 
 ![A contact's page with Reach, Details and tabs for assets, credentials and tickets](cl-contact.webp "A contact's page: how to reach them, their details, and everything linked to them")
 
-- Along the top: **Call** and **Email**, **New** (a ticket, recurring ticket, meeting, asset, credential, document, file, license or note for them), **Link** (to link a service, file or other record that already exists) and **Edit**.
+- Along the top: **Call** and **Email**, the QR code button to [save them to your phone](#phone), **New** (a ticket, recurring ticket, meeting, asset, credential, document, file, license or note for them), **Link** (to link a service, file or other record that already exists) and **Edit**.
 - **Reach** - their phone numbers and email.
 - **Details** - their location, their PIN, whether they can sign in to the portal and when they last did, which ticket emails they get, and whether they agreed to texts. **View portal as them** opens the client portal as they see it, read only. **Ask them by text** asks whether texts are all right - a YES turns them on.
 - **Quick notes** - notes that save as you click away.
@@ -65,6 +67,14 @@ Click a contact's name to open their page.
 
 > [!TIP]
 > Raising a ticket from a contact's page fills in the client and contact for you, and shows if they already have open tickets.
+
+### Save a contact to your phone {#phone}
+
+The QR code button on a contact's page - or **Save to phone** in their **⋮** on the contacts list, or in their quick look - shows their card as a QR code. Point your phone's camera at it and tap to add them to your contacts: their name, the client as the company, their title, phone with extension, mobile, email and their site's address. **Download .vcf** saves the same card as a file to open on your phone or computer.
+
+### Email bounced {#bounced}
+
+When an email to a contact bounces back to your ticket mailbox, every contact with that address shows **Email bounced** - on the contacts list, their page and their quick look. Point at it to see when, and what the mail server said: the mailbox doesn't exist any more, say, or it's full. It goes when an email comes in from the address, when you change the address, or with **Clear** on their page once it's been fixed at their end.
 
 ## Archive a contact
 

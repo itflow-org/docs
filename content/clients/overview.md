@@ -12,7 +12,7 @@ Opening a client takes you to its **Overview**. It's built to answer "what do I 
 
 Along the top: the client's initials, name, industry and tags, their primary contact with phone and email, their primary location, and details such as their website, how long they've been a client and who referred them.
 
-**New Ticket** raises a ticket for this client. The **⋮** menu has **New Project**, **Edit Client**, **Onboard**, **New Banner**, **Export Data**, **Client Review** and **Archive Client**.
+**New Ticket** raises a ticket for this client. The **⋮** menu has **New Project**, **Edit Client**, **Onboard**, **New Banner**, **Export Data**, **Client Review**, **Offboard** and **Archive Client**.
 
 [Banners](/clients/banners) for the client, and for every client, show above the header.
 

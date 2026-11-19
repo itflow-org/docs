@@ -84,6 +84,7 @@ The same **⋮** menu has:
 - **New Banner** - a note along the top of the client's pages for your team, such as a credit hold, and below it the client's banners to change. See [Banners for your team](/clients/banners).
 - **Export Data** - a documentation PDF or a full export. See [Exporting a client's data](/clients/export).
 - **Client Review** - a report of the client's quarter, made to print for a business review. See [Reports](/finance/reports).
+- **Offboard** - everything that still runs for a client you've stopped working with, in one go. See [Offboard a client](#offboard).
 - **Archive Client**
 
 ![The client header with its menu open](cl-client-menu.webp "The menu in a client's header")
@@ -103,3 +104,17 @@ Tick the clients in the list and click **Action**. You can:
 When you stop working with a client, archive them rather than deleting them. An archived client drops out of the lists and menus, but everything you had for them - tickets, invoices, documentation - is kept, and their contacts can no longer sign in to the client portal - anyone signed in is signed out. Their [contracts](/billing/contracts#renew) are left as they are - not renewed, ended or reminded of overnight - and a contract out for them to sign is withdrawn.
 
 Open the client, click **⋮ > Archive Client** and confirm. To see archived clients, click **Archived** on the clients list. **Restore** is in each one's **⋮** menu, and in the header menu of an archived client.
+
+### Offboard a client {#offboard}
+
+**⋮ > Offboard** does the jobs for a client you've stopped working with in one window, so none gets missed. Each step says how much it will do, and is ticked when there's something to do:
+
+- **Turn off client portal sign-in** - nobody at the client can sign in to the portal any more, and invites still waiting are cancelled.
+- **End shared links** - links you've shared with them that still work stop working.
+- **Stop recurring invoices** - nothing more is invoiced. Needs a role that can change billing.
+- **Pause recurring tickets** - no more tickets are made for them. Needs a role that can change tickets.
+- **Archive the client**, as above.
+
+![The Offboard window with a step for portal sign-in, shared links, recurring invoices, recurring tickets and archiving](cl-offboard.webp "Offboard: each step says what it will do, and is ticked when there's something to do")
+
+Untick any you want to leave, and click **Offboard**. Nothing is deleted, and everything but the ended links can be turned back on from where it lives. To keep a copy of everything first, click **Export Data** at the top of the window - see [Exporting a client's data](/clients/export). The window also says how many of their tickets are still open, to resolve or close as you finish the work.

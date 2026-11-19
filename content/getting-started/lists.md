@@ -38,6 +38,12 @@ Records that don't need a page of their own - a login, a domain, an expense, a p
 
 Quick looks also open from most places a record is mentioned - a ticket's asset, a contact's licenses, a vendor's expenses - so you can check something and carry on with what you were doing.
 
+### A client at a glance {#client-card}
+
+Rest the pointer on a client's name - on the tickets, invoices and other lists, on a ticket, or anywhere it links to the client - and a card shows their primary contact with their phone and email, their main site's phone and address, and how many open tickets they have. Phone numbers and emails in the card can be clicked, and the card stays while you move onto it.
+
+![A client's card under its name on the tickets list](gs-client-card.webp "A client at a glance: their primary contact, their main site and their open tickets")
+
 ## Change it where you see it
 
 Many values can be changed right where they are shown, without opening an edit form. Click the value, pick a new one, and it saves straight away:

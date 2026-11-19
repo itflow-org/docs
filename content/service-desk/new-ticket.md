@@ -16,7 +16,7 @@ Tickets reach ITFlow in several ways:
 
 1. Click **New Ticket** - on the tickets list, a client's page, or the page of an asset, contact, location, vendor or service, which fills in what it can for you.
 2. On **Details**:
-   - Pick the **Client** and the **Contact** it's for. If they already have open tickets, ITFlow lists them, so you can add to one of those instead if it's the same problem.
+   - Pick the **Client** and the **Contact** it's for. If they already have open tickets, ITFlow lists them, so you can add to one of those instead if it's the same problem. Someone who isn't a contact yet? The **+** beside **Contact** adds them - a name, and their email and title if you have them - and picks them, without leaving the window. The **+** beside **Site** and **Vendor** on **Related** does the same.
    - Pick a **Template** if one fits (see below).
    - Type the **Subject** and the details.
    - Set the **Priority**, the **Category**, who to **Assign to**, and a **Due** date if it has one.
