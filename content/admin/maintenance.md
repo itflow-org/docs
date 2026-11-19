@@ -63,29 +63,23 @@ Each job's menu has:
 Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **Alerts** says who hears when something goes wrong - see [below](#cron-alerts). **The cron job** has the line for your server. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
 
 > [!WARNING]
-> If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes, and admins see it in the top bar.
+> If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes.
 
 ### Alerts {#cron-alerts}
 
-When something here needs you, every admin sees a heartbeat with a count in the top bar, beside the bell, on every page. It's there when:
+The **Cron Watch** job emails your admins when a job needs looking at: once when a problem starts, again once a day while it lasts, and once more when it's fixed - or, when everything is, an all clear. It emails when:
 
-- cron isn't running, or has never run
-- cron is switched off
-- a job failed on its last run
+- a job failed on its last run, with its error
 - a job is still running two hours after it started, and may have stopped part way
 - a job has fallen behind - an every-minute job that hasn't run for ten minutes, say, or a nightly one two hours after its time
 
-Click it for what's wrong, with a failed job's error, and a link to this page. It goes once all is well. Nobody but admins sees it.
-
-![Cron needs attention, in the top bar](adm-cron-health.webp "The top bar: a job stuck, one failed and two behind")
-
-The **Cron Watch** job also emails about it: once when a problem starts, again once a day while it lasts, and once more when it's fixed - or, when everything is, an all clear.
+Cron Watch runs on cron, so it can't email when cron itself has stopped or is switched off. The Cron, Mail Queue and Backup pages say so, and an [uptime monitor](#uptime-monitor) can tell you.
 
 ![The Alerts card](adm-cron-alerts.webp "Alerts: who the emails go to, and the address for an uptime monitor")
 
 On the **Alerts** card beside the jobs:
 
-- **Email alerts** - turn it off and the top bar still warns, but nothing is emailed.
+- **Email alerts** - turn it off and nothing is emailed. The uptime monitor address still works.
 - **Send to** - the addresses the emails go to, with commas between. Leave it empty and they go to every active admin, who are listed under it.
 - **Send a test** - sends a test to the addresses in the box, saved or not. It goes out with the mail queue within a minute, so cron and [mail](/admin/mail) need to be working.
 
