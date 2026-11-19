@@ -82,7 +82,7 @@ systemctl reload apache2
 > [!WARNING]
 > Keep `AllowOverride All`. ITFlow comes with `.htaccess` files that keep `config.php`, the `.git` folder, the cron and scripts folders, backups and receipts out of reach of the web. They also stop anything uploaded from running as code. Debian and Ubuntu set Apache to ignore `.htaccess` files under `/var/www` unless the site allows them.
 
-Run PHP through mod_php, as above, or PHP-FPM. Before ITFlow 26.11.9, PHP-FPM behind Apache stopped your logo, avatars and photos from loading.
+Run PHP through mod_php, as above, or PHP-FPM. Before ITFlow 26.12, PHP-FPM behind Apache stopped your logo, avatars and photos from loading.
 
 ### nginx {#nginx}
 

@@ -8,7 +8,7 @@ A hosting control panel can run ITFlow beside your other sites. The panel makes 
 The steps are much the same on every panel - only where you click differs. Each has its own section: [HestiaCP](#hestiacp), [cPanel](#cpanel), [Plesk](#plesk) and [Jabali](#jabali). Use your own domain wherever `itflow.example.com` appears, and your panel account's name wherever `summit` does.
 
 > [!NOTE]
-> Panels run PHP through PHP-FPM. Before ITFlow 26.11.9, that stopped your logo, avatars and photos from loading. If you install an earlier version, update it first.
+> Panels run PHP through PHP-FPM. Before ITFlow 26.12, that stopped your logo, avatars and photos from loading. If you install an earlier version, update it first.
 
 ## What ITFlow needs from the panel {#needs}
 
