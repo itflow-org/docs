@@ -86,6 +86,7 @@ The same **⋮** menu has:
 - **Client Review** - a report of the client's quarter, made to print for a business review. See [Reports](/finance/reports).
 - **Offboard** - everything that still runs for a client you've stopped working with, in one go. See [Offboard a client](#offboard).
 - **Archive Client**
+- **Merge into another client** - for the same company added twice. See [Merge duplicate clients](#merge).
 
 ![The client header with its menu open](cl-client-menu.webp "The menu in a client's header")
 
@@ -118,3 +119,23 @@ Open the client, click **⋮ > Archive Client** and confirm. To see archived cli
 ![The Offboard window with a step for portal sign-in, shared links, recurring invoices, recurring tickets and archiving](cl-offboard.webp "Offboard: each step says what it will do, and is ticked when there's something to do")
 
 Untick any you want to leave, and click **Offboard**. Nothing is deleted, and everything but the ended links can be turned back on from where it lives. To keep a copy of everything first, click **Export Data** at the top of the window - see [Exporting a client's data](/clients/export). The window also says how many of their tickets are still open, to resolve or close as you finish the work.
+
+## Merge duplicate clients {#merge}
+
+When the same company has been added twice, its tickets, invoices and documentation end up split between the two. Merge them into one:
+
+1. Open the client you want to go - the duplicate - and click **⋮ > Merge into another client**.
+2. Pick the client to keep under **Merge into**. The window lists what moves across.
+3. Tick **I understand this can't be undone**, and click **Merge**.
+
+![The Merge window with the client to keep picked and what moves across](cl-merge.webp "Merge: pick the client to keep, and see what moves across")
+
+Everything the duplicate had moves to the kept client: contacts, locations, assets, tickets, projects, invoices and their payments, quotes, contracts, expenses and trips, documents, files and folders, logins, domains, certificates, networks, licenses, services, vendors and calendar events, with its tags, shared links, history and audit log. Its files and contact photos move too.
+
+The kept client's details stay as they are - name, billing settings, rates, primary contact and primary location. The duplicate's quick notes are added under the kept client's. Where the two had cards saved with the same card provider, the kept client's stay, and the duplicate's saved cards can't come across - set up autopay again on the kept client if it needs it.
+
+The duplicate is left archived and empty, named "*Name* (merged into *Other*)", so nothing that pointed at it is lost. Delete it once you're happy.
+
+If some of your technicians only see some clients, the window names any whose access differs between the two - someone who could see the duplicate but not the kept client won't see what moved. Check their access in [Users](/admin/users) afterwards.
+
+Merging takes the **Delete** level of access to clients.
