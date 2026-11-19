@@ -45,6 +45,8 @@ Under **Read mail from**, pick an IMAP server, Google Workspace or Microsoft 365
 
 Every minute, the Ticket Email Parser job reads the mailbox: a new email becomes a ticket, and a reply goes onto its ticket, found by the ticket number in its subject.
 
+Emails about a ticket start with **##- Please type your reply above this line -##**. A reply keeps what was written above that line, so the email it quotes doesn't land on the ticket again. Some mail programs put a reply under the email it quotes, and some people type below the line - what they wrote below the quote is kept instead, or as well. When nothing was written above the line and their words can't be told from the quote - typed into the middle of it - the whole email goes on the ticket, with a note saying so, rather than nothing.
+
 Who a reply is from decides what it does:
 
 - **The client's contact** - a client reply, which reopens the ticket.
