@@ -31,6 +31,8 @@ Tickets reach ITFlow in several ways:
 
 The contact gets an email saying their ticket is raised, when client emails are on, and the technician you assigned it to is told. Work you scheduled is booked as it is from the ticket's **Schedule** window: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite - see [Book a visit or a call](/service-desk/working-a-ticket#book-a-visit-or-a-call).
 
+To raise one like a ticket you already have - the same job for another client, say - use **Copy as a new ticket** in that ticket's **⋮** menu. **New Ticket** opens filled in from it. See [Copy a ticket or apply a template](/service-desk/working-a-ticket#copy).
+
 ## Quick ticket {#quick-ticket}
 
 For a call, or someone at your desk, click **+** in the top bar - it's there on every page. **Quick ticket** asks only for what you need while they're talking.

@@ -18,7 +18,7 @@ On the right is the one action for where the ticket is:
 - **Reopen** and **Close** once it's resolved.
 - **Invoice** once a billable ticket is done.
 
-The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **Move to another client**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
+The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **Move to another client**, **Copy as a new ticket**, **Apply a template**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
 
 ![The ticket's menu](sd-ticket-menu.webp "The ticket's ⋮ menu")
 
@@ -51,10 +51,14 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 ![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the time worked and when, and the status after it")
 
 1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses). To send a how-to, click **Knowledge Base** - see [Knowledge Base](/service-desk/knowledge-base#tickets).
-2. Add files under **Attach files** if you need to.
+2. Add files under **Attach files** if you need to, or drop them onto the reply box.
 3. Pick the **Status after this** - for example, set it to On Hold while you wait for a part.
-4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work. **When it was worked** fills in from the timer - the work ends now - or type the date, start and end yourself. See [When the time was worked](#work-times).
+4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work. **+15m**, **+30m** and **+1h** add time in one click - the timer stops at the new total. **When it was worked** fills in from the timer - the work ends now - or type the date, start and end yourself. See [When the time was worked](#work-times).
 5. Click the button: **Add note** for an internal note, **Post note** for a public note, **Send email** for an email reply. Your signature is added to email replies.
+
+On a billable ticket, a reply with no time asks first: **Send without time**, or **Add time** to go back and enter it.
+
+What you type is kept as you write. Leave the page, close the browser or get signed out, and it's still in the reply box next time, with a note saying so - pick who it's for to carry on, or **discard it**. Sending it clears it, and one left untouched for a month goes.
 
 Once an email reply is sent, the message at the top says how many people it went to. If nobody got it - the ticket has no contact or watcher with an email address, or mail isn't set up - it says so, and the reply is kept as a public note.
 
@@ -133,7 +137,13 @@ Admins also get a link to the ticket's email in the mail queue, to retry one tha
 
 Replies from before ITFlow kept this are marked **Public**, as it isn't known whether they were emailed - unless the mail queue still had their email when you updated, in which case they show as email replies too.
 
+Click a picture that's been shrunk to fit to see it full size. Click again, or press <kbd>Esc</kbd>, to close it.
+
+A reply that came in by email keeps the email as it arrived, as **Original-parsed-email.eml** under it - and so does a ticket raised by email. **Read** beside it shows who it was from and to, when, its headers, and everything it said, including what ITFlow trimmed off below the reply line. **Download .eml** opens it in your email app.
+
 Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shouldn't be kept, such as a password the client sent) and **Archive**. Editing an email reply changes it on the ticket and in the portal - the people it was emailed to keep the email as it was sent.
+
+A client's reply also has **Split into a new ticket** - for when they raise a second problem in a reply. Give it a subject, and pick its priority and who it's assigned to. The new ticket is for the same client and the person who wrote the reply, with what they wrote as its details and their attachments. The reply leaves this ticket, and a note on each ticket points to the other. The client is told about the new ticket as for any other.
 
 **Edit** changes a note's time and when it was worked too: change the times and the time worked follows, or change only the time worked and the start moves. Notes from before this, and from bulk replies and the API, ended when they were posted.
 
@@ -146,7 +156,7 @@ Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shoul
 
 ## Tasks
 
-Tasks are the steps to the job. They come from the ticket's template, or you add them:
+Tasks are the steps to the job. They come from the ticket's template, or you add them - or apply a template to a ticket that's already open, from the **⋮** menu (see [Copy a ticket or apply a template](#copy)):
 
 - Type in **Add a task** and press <kbd>Enter</kbd>.
 - Tick a task when it's done. Drag tasks by their handle to reorder them.
@@ -218,6 +228,11 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 - The message goes on the ticket as a public note, and to the contact and watchers in place of the usual "resolved" email, when client emails are on.
 - The ticket is resolved, and closes on its own as usual - without asking the client how you did.
 - If they reply before it closes, it reopens like any resolved ticket.
+
+## Copy a ticket or apply a template {#copy}
+
+- **Copy as a new ticket** opens **New Ticket** with this ticket's subject, details, priority, category, billing, contact, asset and tasks, for the same client. Change anything first - pick another client for the same job somewhere else.
+- **Apply a template** puts a ticket template on a ticket that's already open. Pick the template: its tasks are listed for you to change, and it asks its [fill-ins](/service-desk/new-ticket#fill-ins). **Apply** adds the tasks after the ticket's own, and its tags and due time where the ticket has none. The ticket's subject, details, category and priority stay as they are.
 
 ## Merge, move and delete
 
