@@ -13,7 +13,8 @@ Tickets, assets, invoices, credentials, expenses - every list in ITFlow is laid 
 - **Tabs** along the top split the list into the views you use most, each with a count: workstations and servers, open and closed tickets, unpaid and overdue invoices. The count follows your search and filters.
 - **Search** - the box on the left - searches just this list. Press <kbd>Enter</kbd> or click the magnifying glass.
 - **Filters** beside it narrow the list further: a client, a location, a status, a tag, a date range. Lists with many filters fold the extra ones under **More filters**, and on the busiest lists - clients and tickets - each filter you set shows as a chip you can remove on its own.
-- **Sort** by clicking a column heading. Click it again to reverse the order.
+- A filter that is on has a yellow edge. The **×** at the end of the search box clears the search and every filter at once - on clients and tickets, **Clear all** beside the chips does the same.
+- **Sort** by clicking a column heading. Click it again to reverse the order. On a long list the headings stay at the top of the screen as you scroll down, so you can still sort, or tick every row, from there.
 - **Archived** - the box button at the right of the filters - switches to the archived records. Click it again to go back.
 
 At the foot of the list you can change how many rows show on a page, from 5 to 500, and move between pages. Your choice is remembered for every list. You can also set it in [Your account](/getting-started/account).
@@ -63,7 +64,7 @@ Admins can type a new tag's name straight into the tag list to make it. See [Cat
 
 To do the same thing to several records at once:
 
-1. Tick the box at the start of each row. The box in the column heading ticks every row on the page.
+1. Tick the box at the start of each row. The box in the column heading ticks every row on the page. To tick a run of rows, tick the first, then hold <kbd>Shift</kbd> and tick the last - every row between them is ticked too. It unticks a run the same way.
 2. Click **Bulk Action** at the top of the list. It shows how many rows are ticked.
 3. Pick what to do. Some actions ask for more first - which contact to assign, which status to set - in a window.
 
@@ -85,4 +86,4 @@ Forms have an icon in front of every field. Long forms are split into tabs; if y
 
 A field with a list of choices opens it under the field, with a search box when the list is long. **Cancel** at the top closes it without changing the field, and **Done** closes one where you tick several. A click anywhere else closes it too, a reply or other text box included.
 
-ITFlow asks before it deletes or turns off anything, and before you leave a page with a reply or note you haven't saved.
+ITFlow asks before it deletes or turns off anything, and before you leave a page with a reply or note you haven't saved. A window you've typed in asks too before it closes - from a click outside it, <kbd>Esc</kbd>, its **×** or **Cancel** - so nothing you typed is lost by accident. Saving never asks.

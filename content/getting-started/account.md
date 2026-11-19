@@ -59,9 +59,10 @@ When you sign in with your code, tick **Remember this browser** and ITFlow doesn
 
 ## Preferences {#preferences}
 
-![Preferences: theme, the first day of the week, rows on a list, your time zone and your calendar colour](gs-account-preferences.webp "Preferences")
+![Preferences: theme, compact rows, the first day of the week, rows on a list, your time zone and your calendar colour](gs-account-preferences.webp "Preferences")
 
 - **Theme** - **Light** or **Dark**.
+- **Compact rows** - tighter rows on every list, so more fit on screen.
 - **Calendars start on** - the first day of the week on the calendar and date pickers.
 - **Rows on a list** - how many rows every list shows on a page. You can also change this at the foot of any list.
 - **My time zone** - for when you work somewhere other than the company. The [calendar](/service-desk/calendar), [Dispatch](/service-desk/dispatch), a ticket's booking, the **Schedule** and event windows, and your booking emails are then on your own clock - the emails give the company's time beside yours. Leave it on **The company's** otherwise. Bookings are still kept in the company's time, so nobody else's view changes.
