@@ -10,12 +10,28 @@ ITFlow lets you know when something happens that you'll want to act on. The bell
 
 Click the **bell**. A panel opens with your notifications grouped by day, newest first.
 
-![The notifications panel with Unread and All tabs](gs-notifications.webp "The panel under the bell: unread first, with the client each one is about")
+![The notifications panel with Unread and All tabs](gs-notifications.webp "The panel under the bell: unread first, with the client each one is about, and the desktop notifications switch at the bottom")
 
 - **Unread** shows the ones you haven't dealt with. **All** shows the read ones too.
 - Click a notification to open what it's about - the ticket, the invoice, the shared link - and mark it read.
 - **Mark all as read** clears them all at once.
 - **View all notifications** opens the full Notifications page.
+- **Turn on desktop notifications** - see below.
+
+## Desktop notifications {#desktop}
+
+ITFlow can also tell you on your computer's desktop, like an email or chat app does, when:
+
+- a ticket is assigned to you, or
+- a client replies on one of your tickets.
+
+Click the **bell**, then **Turn on desktop notifications** at the bottom of the panel, and allow notifications when your browser asks. They only show while you're away from ITFlow - in another program or another browser tab. Click one to open the ticket.
+
+The switch is for the browser you're using, so turn it on in each browser you work in. **Turn off desktop notifications** in the same place. If the panel says desktop notifications are blocked, allow notifications for your ITFlow site in your browser's settings, then turn them on again.
+
+## Your open tickets on the browser tab {#tab-count}
+
+The browser tab's title starts with how many open tickets are assigned to you - **(3)**, say - the same number as **Mine** on the [tickets list](/service-desk/tickets#views). It's kept up to date in the background, so you can see it from another tab.
 
 ## The Notifications page
 

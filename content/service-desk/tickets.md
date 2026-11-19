@@ -33,17 +33,26 @@ The search box finds tickets by number, subject, client, contact, asset or the v
 ## Reading a row
 
 - A **blue dot** before the subject means it's your move: the client spoke last, or nobody has replied yet.
+- A subject in **bold** means the client has written since you last opened the ticket - a reply from them, or a ticket they raised by email, in the client portal or by text. Opening the ticket, or its quick look, takes the bold away. It's your own: another technician's list goes by what they've opened.
 - Under the subject: the ticket number, how long ago it was opened, where it came from (an envelope for email, a globe for the client portal, arrows for a recurring ticket), its category, its asset, when it's scheduled, and how many of its tasks are done.
 - **Client / Contact** - who it's for.
 - **Status** - with **With client** underneath when you're waiting on them.
 - **Priority** and **Assigned** - with **+1**, **+2** after the technician when others are helping, or **Helping** when one of them is you.
 - **Due** - when the SLA's next target is due, or **Breached** in red once it's missed. **Paused** shows when the ticket is in a status that stops the SLA clock.
-- **Activity** - the latest reply: a paper plane when you replied, an arrow when the client did, with who and when.
+- **Activity** - the latest reply: a paper plane when you replied, an arrow when the client did, with who and when. Rest the pointer on it to see what the reply said, without opening the ticket.
 - **Billing** - a green **$** for billable, grey for not billable.
 
 You can change a ticket's status, priority, technician and billable right in the row: click the value and pick another. See [Lists, quick looks and bulk actions](/getting-started/lists#change-it-where-you-see-it).
 
 The **⋮** at the end of a row has **Quick look**, **Open in a new tab**, **Edit** and **Assign to me**.
+
+![A ticket's last reply showing beside its row](sd-tickets-peek.webp "Rest the pointer on Activity to read the last reply")
+
+## It keeps itself up to date
+
+While you have the list open, it checks for changes once a minute. A ticket that has changed - a reply, a new status, someone else picking it up - is updated where it is. When tickets come into the view or leave it, a bar above the list says how many: click **Show** to load the list again. A ticket you've ticked waits for **Show**, so nothing changes under a **Bulk Action**. The counts on the views stay up to date too.
+
+The board doesn't update itself - reload the page.
 
 ## The board
 
@@ -61,6 +70,7 @@ Tick tickets and use **Bulk Action** to:
 - **Set priority** or **Set category**
 - add or remove **Tags**
 - **Add to a project**
+- **Mark as read**, to take the bold off them without opening each one
 - **Reply or add a note** to each of them at once - see below
 - **Merge into a ticket**, when several tickets are about the same problem
 - **Resolve** them
