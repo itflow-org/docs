@@ -43,7 +43,7 @@ Tick articles in the list to change several at once: **Set category**, **Publish
 
 ## Read an article
 
-Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, **Review with AI** when AI is set up, print, **PDF**, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. Its files are under it. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions.
+Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, **Review with AI** when AI is set up, print, **PDF**, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. Its files are under it. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions. A long article - three headings or more - also has its **Contents** there, to jump to a section.
 
 ![An article](sd-kb-article.webp "An article: the content, with its category, review and versions beside it")
 

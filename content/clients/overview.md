@@ -34,7 +34,7 @@ A row of tiles counting what needs doing for this client. Each one opens a list 
 - **Open tickets** - the client's open tickets, with how many were opened and resolved in the last 30 days.
 - **Quick notes** - anything the next person should know: gate codes, quirks, who to ask for. Type in it and it saves when you click away.
 - **Key contacts** - the client's contacts with a role (primary, important, billing or technical), primary first, with their phone numbers and email.
-- **Favorites** - the assets and logins you've starred for this client, with a login's password and 2FA code a click away.
+- **Favorites** - the documents, assets and logins you've starred for this client, with a login's password and 2FA code a click away. A document is made a favorite from its page - see [Favorites](/documentation/files-and-documents#favorite).
 - **Coming up** - the next 14 days: scheduled tickets, events and recurring work.
 - **Projects** and **Services**, with what needs a look.
 - **Renewals** - domains, certificates, licenses and warranties expired or due in the next 45 days.
