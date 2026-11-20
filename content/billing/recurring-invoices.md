@@ -8,11 +8,13 @@ A recurring invoice is a client's agreement: the lines you bill them again and a
 
 ## The recurring invoices list
 
-![The recurring invoices list](bill-recurring.webp "Recurring invoices: what each bills, what that is a month, and when it next runs")
+![The recurring invoices list, two ticked and the Bulk Action menu open](bill-recurring.webp "Recurring invoices: what each bills, what that is a month, and when it next runs - with two ticked for a bulk action")
 
 Along the top: your **Monthly recurring** revenue (quarterly ones count as a third, yearly as a twelfth), what **Bills in 30 days**, how many are **Running**, and how many **Need a look**.
 
-The tabs are **Active**, **Next 7 days**, **Late**, **Paused** and **All**. Each row shows the amount, what that is **A month**, and the **Next** and **Last** invoice dates.
+The tabs are **Active**, **Next 7 days**, **Late**, **Paused** and **All**. Each row shows the amount, what that is **A month**, and the **Next** and **Last** invoice dates. A paused one says until when, if it has a day to run again.
+
+Tick some and **Bulk Action** can **Pause** them, **Resume** them, or change their **Next Date** or how often they're **Billed**. A new next date sets the day of the month they bill on from then. A new **Billed** keeps their lines as they are, so a monthly one made yearly bills the same amount once a year - change its lines to match.
 
 ## Set one up
 
@@ -21,6 +23,7 @@ There are three ways to start one:
 - accept a [quote](/billing/quotes#turn-it-into-an-invoice) with monthly, quarterly or yearly lines, and click **Start Billing**
 - on an invoice you've already made, use **⋮ > Make Recurring** to bill the same lines again and again
 - from scratch, as below
+- copied from another client's - see [Copy to another client](#copy)
 
 1. Go to **Billing > Recurring Invoices** (or the client's) and click **New Recurring Invoice**.
 2. Type the **Scope**. Put `{month}`, `{quarter}`, `{year}` or `{period}` in it and each invoice says the period it covers: "Managed services - {month}" reads "Managed services - November 2026".
@@ -49,9 +52,21 @@ On the left are the lines, as each invoice will have them. Down the right:
 Along the top:
 
 - **Invoice Now** makes the next invoice straight away, dated today, and moves the next one on a period.
-- **Pause** stops it making invoices until you **Resume** it.
+- **Pause** stops it making invoices. Pick a day in **Until** and it runs again by itself that day, from its next date after it - nothing is billed for the runs in between. Leave **Until** empty to pause it until you **Resume** it.
 - **Edit** changes the scope, category, how often it bills, the **Next invoice** date, the discount and how it's sent.
-- **⋮** has **Print**, **Invoices Made**, **Email the invoices** (or **Don't email the invoices**) and **Delete**. Deleting it leaves the invoices it made.
+- **⋮** has **Print**, **Invoices Made**, **Copy to Another Client**, **Email the invoices** (or **Don't email the invoices**) and **Delete**. Deleting it leaves the invoices it made.
+
+![The Pause window, paused until a day in January](bill-recurring-pause.webp "Pause: until a day, when it runs again by itself - or empty, until you resume it")
+
+## Copy to another client {#copy}
+
+When the same package goes to another client, copy it rather than building it again: **⋮ > Copy to Another Client**, on its page or in its row's menu in the list.
+
+1. Pick the **Client**.
+2. Set the day of its **First invoice**. The runs after follow on from it.
+3. Click **Copy**.
+
+The new one has the same lines, scope, category, discount and notes, bills as often and is sent the same way. A line billed per user or per device counts the new client's - the message after says what changed. A line counting license seats keeps its quantity and stops counting, as the license is the first client's: change it to the new client's license. Autopay isn't copied.
 
 ## Bill per user, per device or per seat {#bill-per-user-per-device-or-per-seat}
 

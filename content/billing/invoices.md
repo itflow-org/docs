@@ -12,7 +12,7 @@ Invoices are what you bill clients. Most are made for you - by [recurring invoic
 
 Along the top: what's **Owed to you**, what's **Overdue**, what's sitting **In drafts** and what you've **Collected** in the last 30 days.
 
-The tabs are **All**, **Draft** (not sent yet - the client can't see them), **Unpaid** (sent and not paid in full), **Overdue**, **Paid** and **Cancelled**. Search by number, scope or client, and narrow by date, category or client. A circular arrow beside a number means it was made by a recurring invoice, and **Autopay** under its due date means that recurring invoice's [autopay](/billing/recurring-invoices#autopay) pays it - point at it for how it stands.
+The tabs are **All**, **Draft** (not sent yet - the client can't see them), **Drafts left a week** (made more than seven days ago and still not sent), **Unpaid** (sent and not paid in full), **Overdue**, **Paid** and **Cancelled**. Search by number, scope or client, and narrow by date, category or client. A draft left more than a week says **Draft 12 days**, say, under its status - send it, or delete it if it isn't wanted. A circular arrow beside a number means it was made by a recurring invoice, and **Autopay** under its due date means that recurring invoice's [autopay](/billing/recurring-invoices#autopay) pays it - point at it for how it stands.
 
 An invoice moves through these statuses:
 
@@ -110,7 +110,9 @@ To bill everything waiting for a client in one go, use [Unbilled Time](/billing/
 
 Click **Send** on a draft. Pick who it goes to - the client's primary and billing contacts are ticked - add a message of your own if you like, and choose whether to **Attach the PDF**. The email has a link to view, pay and download it.
 
-![The Send Invoice window](bill-send.webp "Send Invoice: who it goes to, a message of your own, and the PDF")
+To send it to someone who isn't one of the client's contacts - their accountant, say - type their address in **Also send to**. Separate more than one with commas. It's for this once: the address isn't saved as a contact.
+
+![The Send Invoice window](bill-send.webp "Send Invoice: who it goes to, an address that isn't a contact, a message of your own, and the PDF")
 
 The arrow beside **Send** has two more ways:
 
@@ -122,7 +124,7 @@ The arrow beside **Send** has two more ways:
 Once sent, **Send Again** sends it again, and **⋮ > Send Reminder** sends a payment reminder - see [Reminders and statements](/billing/reminders-and-statements).
 
 > [!NOTE]
-> **Send** needs outgoing mail set up and a primary or billing contact with an email address. Without them, the invoice has **Mark Sent** instead.
+> **Send** needs outgoing mail set up. A client with no primary or billing contact with an email address can still be sent one, to an address typed in **Also send to** - or use **Mark Sent**.
 
 ### When autopay pays it {#autopay}
 

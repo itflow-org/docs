@@ -27,7 +27,7 @@ Tick expenses and use **Bulk** to set their category, account, payment method or
 5. Pick the account it was **Paid from** and how it was **Paid by**. If someone on the team paid it out of their own pocket, pick **Paid personally** and who paid it.
 6. If it was for a client, pick the **Client**. It counts as a direct cost of theirs in the Client Profitability report. Switch on **Bill it on to them** to bill it, with a markup.
 7. Add a **Reference** (their invoice or order number) and a **Description**.
-8. Add the **Receipt**: click **Add a receipt**, then drop, paste or choose a photo or a PDF - on a phone, you can take the picture right there. Drag the corners and edges of a photo in to just the receipt, and click **Use this picture**. A PDF goes in as it is. See [Change a picture](/getting-started/account#picture).
+8. Add the **Receipt**: click **Add a receipt**, then drop, paste or choose a photo or a PDF - on a phone or tablet, **Take a photo** opens the camera straight away. Drag the corners and edges of a photo in to just the receipt, and click **Use this picture**. A PDF goes in as it is. See [Change a picture](/getting-started/account#picture).
 9. Click **Add Expense**.
 
 ![The New Expense window](fin-expense-new.webp "New Expense: who, how much, what for, where it was paid from, and the receipt")

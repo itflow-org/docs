@@ -92,14 +92,14 @@ With AI set up, **Write it with AI** under the lines drafts them from a sentence
 
 ## Send it
 
-Click **Send**. Pick who it goes to, add a message if you like, and choose whether to **Attach the PDF**. The email has a link to view it, accept or decline it, and download it.
+Click **Send**. Pick who it goes to, add a message if you like, and choose whether to **Attach the PDF**. The email has a link to view it, accept or decline it, and download it. To send it to someone who isn't one of the client's contacts, type their address in **Also send to** - it isn't saved.
 
-![The Send Quote window](bill-quote-send.webp "Send Quote: who it goes to, a message of your own, and the PDF")
+![The Send Quote window](bill-quote-send.webp "Send Quote: who it goes to, an address that isn't a contact, a message of your own, and the PDF")
 
 The arrow beside **Send** has **Quick Send**, which sends it straight to the client's primary contact, and **Mark Sent**, for a quote you gave the client some other way - it stops being a draft and its link works.
 
 > [!NOTE]
-> **Send** needs your outgoing mail set up, and a contact with an email address who is the client's primary, billing, technical or important contact. Without them, use **Mark Sent**.
+> **Send** needs your outgoing mail set up. A client without a primary, billing, technical or important contact with an email address can still be sent one, to an address typed in **Also send to** - or use **Mark Sent**.
 
 ## What the client sees
 
@@ -112,6 +112,8 @@ When they answer, you get a notification, and an email goes to the address your 
 If they say yes by phone or email instead, use **Accepted** or **Declined** at the top of the quote yourself. Either way, its lines are locked.
 
 ### When a quote expires
+
+Three days before a sent quote runs out with no answer, everyone who can see quotes gets a [notification](/getting-started/notifications) to follow it up. It opens the quote.
 
 An expired quote can't be accepted online - the client can still see it. A banner on it says when it ran out: to give the client more time, click **Extend** and set a new **Valid until** date. If they've said yes another way, **Accepted** still works.
 

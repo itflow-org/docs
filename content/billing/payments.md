@@ -19,7 +19,9 @@ A payment marks an invoice paid - in full, or in part - and puts the money in on
 5. Leave **Email a receipt** on to send the client a receipt.
 6. Click **Add Payment**.
 
-![The Add Payment window](bill-add-payment.webp "Add Payment: how much, when, how it was paid and which account it went into")
+![The Add Payment window, with the client's other unpaid invoices](bill-add-payment.webp "Add Payment: the client's other unpaid invoices, then how much, when, how it was paid and which account it went into")
+
+If the client has other unpaid invoices, the window lists them under this one, oldest due first, with what's owed on each - and says if any were due before this one. **Pay this one** opens that invoice's **Add Payment** instead, and **Batch Payment** pays several at once - see [One payment for several invoices](#one-payment-for-several-invoices).
 
 A part payment leaves the invoice **Partial**, with what's still owed. When the balance reaches nothing, it's **Paid**. A payment can't be more than is owed when you click **Add Payment** - if someone recorded one while your window was open, it's checked against what's left.
 

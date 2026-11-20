@@ -21,7 +21,7 @@ Click **Save** when you're done.
 
 Pictures - yours, a user's or a contact's, the photos of assets, locations and racks, an expense's receipt, a product's or quote line's picture and your company's logo - show on their form as the picture itself, with a camera on it: the person's initials, or a camera and **Add a photo**, when there isn't one yet. Click it to open the **Picture** window.
 
-1. Drop a picture on the window, paste one, or click **Choose a picture**. It can be a JPG, PNG, GIF or WebP.
+1. Drop a picture on the window, paste one, or click **Choose a picture**. It can be a JPG, PNG, GIF or WebP. On a phone or tablet, **Take a photo** opens the camera straight away.
 2. Crop it to fit. It sits in a frame the shape it's shown in - a circle for a person. Drag it into place, and scroll, pinch or use the slider to zoom; on the keyboard the arrow keys move it and **+** and **-** zoom. The arrow button turns it a quarter, and the one beside it fits it again. A photo of an asset, location or rack can also be **Square**, **4:3**, **3:4** or **Whole**. A receipt, a logo or a product's picture has no set shape: drag the corners and edges of the frame in to just what you want, and drag inside it to move it. For a logo or a product's picture, **Trim the edges** cuts away the empty or plain-coloured space round it.
 3. Click **Use this picture**, then save the form. On an expense's quick look, a receipt is saved straight away.
 
