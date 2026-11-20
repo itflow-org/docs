@@ -26,6 +26,8 @@ The tabs along the top are the views you'll use most, each with a count:
 | **Closed** | Resolved and closed tickets |
 | **All** | Everything |
 
+When the views don't all fit across the screen, the last ones go into **More** - and **More** shows the Overdue count in red, or Unassigned and Needs reply in amber, when one of them is in there.
+
 Beside the search box, pick a technician (**Anyone**) or a client to narrow any view. The sliders button opens more filters: **Status**, **Priority**, **Category**, **Project**, **Tags**, **SLA**, **Billing** and when it was **Created**. Set ones open with the page, and the **×** at the end of the search box takes them all off.
 
 The search box finds tickets by number, subject, client, contact, asset or the vendor's reference.

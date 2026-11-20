@@ -10,7 +10,7 @@ Tickets, assets, invoices, credentials, expenses - every list in ITFlow is laid 
 
 ## Find what you're after
 
-- **Tabs** along the top split the list into the views you use most, each with a count: workstations and servers, open and closed tickets, unpaid and overdue invoices. The count follows your search and filters.
+- **Tabs** along the top split the list into the views you use most, each with a count: workstations and servers, open and closed tickets, unpaid and overdue invoices. The count follows your search and filters. Tabs that don't fit on a narrower screen go into **More** at the end - the tab you're on always stays out, and **More** shows a red or amber count when a tab in it needs attention, such as **Overdue**.
 - **Search** - the box on the left - searches just this list. Press <kbd>Enter</kbd> or click the magnifying glass.
 - **Filters** beside it narrow the list further: a client, a location, a status, a tag, a date range. Lists with many filters fold the extra ones under **More filters**, which opens with the page while one of them is set.
 - A filter that is on is tinted in the [theme](/admin/settings#theme) colour. The **×** at the end of the search box clears the search and every filter at once.
