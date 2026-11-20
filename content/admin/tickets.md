@@ -94,7 +94,7 @@ It counts once, for a ticket nobody has answered yet, when an agent moves it int
 
 ### Switch off or delete a status
 
-**Switch off** takes a status out of the pickers and off the board, but keeps it. Its tickets can be moved to another status first, or left where they are. Switch it on again from the **Switched off** tab.
+**Switch off** takes a status out of the pickers and off the board, but keeps it. Its tickets can be moved to another status first, or left where they are. With none moved, **Undo** on the message switches it back on. Switch it on again later from the **Switched off** tab.
 
 **Delete** moves its tickets to the status you pick first. Each ticket's history says so, and its SLA clock follows the new status. Canned responses that set the deleted status leave the status as it is instead.
 
@@ -124,7 +124,7 @@ Click **New SLA**, or an SLA's name.
 
 The window says what a day's worth comes to with your hours: with an 8-hour business day, 24 hours is 3 business days, so for two business days give 16 hours. Saving a change works the targets out again on every ticket with the SLA that isn't closed yet.
 
-**Archive**, on an SLA's menu, takes it out of use: new tickets don't get it, and tickets that have it keep their targets. ITFlow says what that changes before you confirm - a priority it was the default for gets no SLA until you pick another, and tickets under a contract that gave it get your default for their priority instead. **Restore** it from the **Archived** tab. An SLA can't be deleted.
+**Archive**, on an SLA's menu, takes it out of use: new tickets don't get it, and tickets that have it keep their targets. ITFlow says what that changes before you confirm - a priority it was the default for gets no SLA until you pick another, and tickets under a contract that gave it get your default for their priority instead. **Undo** on the message after puts it back; later, **Restore** it from the **Archived** tab. An SLA can't be deleted.
 
 ### Default SLA by priority {#default-slas}
 

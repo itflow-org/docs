@@ -85,7 +85,7 @@ Each picker only offers the methods that fit, so the company card isn't offered 
 
 - **Renaming** a method renames it on every payment, income, expense, transfer and autopay that used it, and in the defaults.
 - **Defaults** - the default for payments and the default for expenses are marked on the list. **Make the default for payments** (or expenses) on a method's menu sets one - the same settings as [Admin > Settings > Defaults](/admin/settings#defaults).
-- **Archive** a method you no longer take. It's no longer offered or a default, and the records that used it keep it. **Restore** brings it back.
+- **Archive** a method you no longer take. It's no longer offered or a default, and the records that used it keep it. **Undo** on the message puts it back as it was, default and all, and **Restore** brings it back later.
 - **Delete** a method nothing used. One that was used is merged into another instead: its records change to the method you pick, which also takes its place as a default. Good for two names for one thing, such as "Card" and "Credit Card".
 
 > [!TIP]
