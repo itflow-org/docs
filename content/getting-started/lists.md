@@ -104,7 +104,7 @@ Archiving doesn't ask "Are you sure?" first. Instead, the message that says it's
 - **Moves** - files, documents and folders moved to another folder, by dragging or with **Move**, and kit dragged to another place on a [rack](/documentation/racks#move).
 - **Bulk changes** that set a field: a ticket's priority, category or project; an asset's location, physical location, contact or status; a contact's location, department, phone number or roles; a client's industry or referral; a project's manager or due date; an invoice's or product's category; and an IP address's type.
 
-The message stays up for ten seconds, and for as long as the pointer is on it. Undo works once, and only for you. Anything changed again in the meantime - by you or anyone else - is left as it is, and the message after Undo says how many were.
+The message stays up for ten seconds, and for as long as the pointer is on it. Only the x at its right closes it - a click on the message itself does nothing, so one that just misses **Undo** doesn't lose it. Undo works once, and only for you. Anything changed again in the meantime - by you or anyone else - is left as it is, and the message after Undo says how many were.
 
 ## Record pages
 
