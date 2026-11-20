@@ -112,7 +112,7 @@ Open the client, click **⋮ > Archive Client** and confirm. To see archived cli
 
 - **Turn off client portal sign-in** - nobody at the client can sign in to the portal any more, and invites still waiting are cancelled.
 - **End shared links** - links you've shared with them that still work stop working.
-- **Stop recurring invoices** - nothing more is invoiced. Needs a role that can change billing.
+- **Stop recurring invoices** - nothing more is invoiced. Needs a role that can change invoices.
 - **Pause recurring tickets** - no more tickets are made for them. Needs a role that can change tickets.
 - **Archive the client**, as above.
 
