@@ -503,7 +503,7 @@ Archived domains are left out.
       "domain_expire": "2026-12-20",
       "domain_auto_renew": "0",
       "domain_ip": "203.0.113.10",
-      "domain_name_servers": "ns1.harbourdns.example\nns2.harbourdns.example",
+      "domain_name_servers": "ns1.harbordns.example\nns2.harbordns.example",
       "domain_mail_servers": "0 ravenwooddental.example.mail.protection.example",
       "domain_registrar": "13",
       "domain_refreshed_at": "2026-10-20 04:00:00",
