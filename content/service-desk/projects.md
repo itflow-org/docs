@@ -39,7 +39,7 @@ A project template is a set of ticket templates in order - say, "Client Onboardi
 Along the top, a warning shows when something needs a look - past its due date, over budget, stalled. Then four cards: **Tickets done**, **Tasks done**, **Time logged** against the budget (with what's billable and not yet invoiced), and **Due**.
 
 - **New Ticket** raises a ticket in the project.
-- **Add tickets** adds **Tickets already raised** - picked from a list or by number - or more tickets **From a project template**.
+- **Add tickets** adds **Tickets already raised** - ticked in a list of the client's open tickets and those closed in the last 90 days, with the project's own ticked already (untick one to take it off) - or more tickets **From a project template**.
 - **Edit**, **Mark complete**, and **⋮** for its tickets on the ticket list, **Archive** and **Delete**.
 
 The tabs list its **Tickets** (open first), its **Tasks** across every ticket, its **Timeline**, its **Activity** - the replies on its tickets - and **History**. Down the side are the **Scope**, the **Details** (client, contact, manager, dates and budget) and the **Team**, with the hours each person has logged.

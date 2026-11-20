@@ -251,11 +251,11 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 
 Link tickets that are about the same thing - one outage at several clients, or a problem that keeps coming back - so each shows the others, and one update or resolve can go to them all. Unlike merging, each ticket stays open with its own client and conversation.
 
-1. In the ticket's **⋮** menu, click **Link related tickets**.
-2. Pick the tickets it's related to. Any client's open tickets are offered, and those closed in the last 90 days - search by number, subject or client.
-3. Click **Link**.
+1. In the ticket's **⋮** menu, click **Link related tickets** - or the **+** on its **Related** card.
+2. Tick the tickets it's related to. Any client's open tickets are offered, and those closed in the last 90 days - search by number, subject or client. The ones it's related to already are ticked: untick one to take it out.
+3. Click **Done**, or anywhere else.
 
-![The Link related tickets window with two tickets picked](sd-ticket-link.webp "Link related tickets: pick the others, any client's")
+![The related tickets list with two tickets ticked](sd-ticket-link.webp "Link related tickets: tick the others, any client's")
 
 Linking a ticket to one that's already related to others brings it in with them all. To link several at once, tick them on the [tickets list](/service-desk/tickets#bulk) and use **Bulk Action** > **Link together**.
 

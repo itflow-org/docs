@@ -115,6 +115,10 @@ Most records also have a full page of their own. They share one layout:
 - the key details in cards
 - everything related - tickets, files, licenses, history - in tabs with counts. Most pages remember the last tab you had open. The tabs keep to one line: those that don't fit are under **More** at the end, which shows a red count when one in it needs attention, such as a contact's open tickets.
 
+**Link** - along the top of a page, on a tab or in a quick look - opens a list right under it of the client's records you can link: assets, documents, licenses, services and so on, or tickets on a project, a service or a ticket. What's linked already is ticked. Tick more to link them, untick one to unlink it, and click **Done** or anywhere else - the page shows the change, with a message saying what was linked and unlinked. A document's or file's **Link** lists every kind it can be linked to, in groups.
+
+![Linking assets to a contact from its Assets tab](gs-link.webp "Link on a contact's Assets tab: what's hers is ticked - tick another to give it to her")
+
 ## Forms
 
 Forms have an icon in front of every field. Long forms are split into tabs - on a small screen, the ones that don't fit are under **More**. If you save with a required field empty on another tab, ITFlow takes you to it.
