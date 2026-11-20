@@ -74,7 +74,11 @@ Point at an IP address, MAC address, serial number, email address, phone number,
 
 ## Tags
 
-Tags look the same on every list and page: a coloured label with an icon. The **+** at the end of a record's tags opens a list of tags to tick or untick. Tags are a quick way to mark things - VIP clients, devices on monitoring, logins to rotate - and to find them again with the Tags filter or search.
+Tags look the same on every list and page: a coloured label with an icon. The **+** at the end of a record's tags opens a list of tags to tick or untick. A list shows a row's tags only when it has some. To tag an untagged one, click **Tags** in its **⋮** menu - the tags you tick show on the row straight away. Cards on the tickets board and the Files grid have **Tags** in their **⋮** menu too. To tag several at once, tick them and use **Tags** in **Bulk Action**.
+
+![Tagging a contact from its row's menu](gs-row-tags.webp "Tags in a row's ⋮ menu: the tag ticked shows under the contact's name straight away")
+
+Tags are a quick way to mark things - VIP clients, devices on monitoring, logins to rotate - and to find them again with the Tags filter or search.
 
 Admins can type a new tag's name straight into the tag list to make it. See [Categories and tags](/admin/categories-and-tags).
 
