@@ -89,9 +89,22 @@ A ticket's conversation shows the same for each email reply: who it was emailed 
 - **Client replies to agents helping** - the copy of a client's reply that goes to the technicians [helping](/service-desk/working-a-ticket#helpers) on a ticket. The technician it's assigned to is always emailed.
 - **Email clients about their tickets** - the contact and watchers hear when a ticket is raised, scheduled, resolved and closed. Off, they still get the replies your agents send.
 - **Email the invoices recurring invoices make** - off, they're made as drafts to check and send
+- **Email a summary of the week** - for the owners, see [Weekly summary](#weekly-summary) below
 
 Payment reminders and statements have their own schedule, in [Invoices and billing](/admin/billing#reminders-and-statements).
 
+### Weekly summary {#weekly-summary}
+
+Switch on **Email a summary of the week** for an email, early on the day you pick, on how the last seven days went beside the seven before: tickets opened and resolved, SLAs missed, good and not-good ratings, time logged and how much was billable, new clients and - with invoicing on - what was invoiced and paid, with your busiest clients. Under **Needs a look** it lists open tickets nobody has, overdue invoices, and domains and certificates running out in the next 30 days.
+
+- **On** - the day it goes.
+- **Send it to** - addresses, separated by commas. Leave it empty and every admin gets it.
+- **Send me one now** sends you one for the last seven days, to see what it looks like. It's also under **Previews** in [Tests and previews](#tests-and-previews).
+
+![The weekly summary email](adm-weekly-summary.webp "The weekly summary: the week beside the week before, and what needs a look")
+
+It's sent by the nightly job, so cron needs to be running.
+
 Once texting is set up, **Texts to clients** on the same page decides what ITFlow texts clients by itself - see [Text messaging](/admin/text-messaging#texts-to-clients).
 
-![Notification settings](adm-notifications.webp "Notifications: the alerts your team gets, what technicians are told about their tickets, and the emails clients get by themselves")
+![Notification settings](adm-notifications.webp "Notifications: the alerts your team gets, what technicians are told about their tickets, and the weekly summary")

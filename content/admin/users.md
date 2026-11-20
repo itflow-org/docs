@@ -34,6 +34,19 @@ They get an email from you with **Accept the invite**. Until they use it, they'r
 
 **Set a password now** is still there, if you'd rather: type one, or make one up with the wand, and give it to them yourself - nothing is emailed. They should change it once they're in.
 
+### Invite several at once {#invite-several}
+
+For a few new starters, or a whole team moving to ITFlow, pick **Invite several** from the menu beside **New User**:
+
+1. Under **Who**, put one person on each line - `Jane Doe, jane@example.com`, `Sam Lee <sam@example.com>`, or just the email, and the name is made from it (`alex.morgan@example.com` becomes Alex Morgan). Up to 50 at a time.
+2. Pick the **Role** they all get, and the **Office** if you have more than one.
+3. Switch on **Require multi-factor authentication** if they should all set up two-step sign-in.
+4. Click **Send invites**.
+
+![Invite several users at once](adm-user-invite-bulk.webp "Invite several: one per line, all with the same role")
+
+Each gets their own invite email, as from **New User**. Anyone who already has an account, or a line with no email address in it, is skipped, and the message says which. If you run out of seats part way, the rest aren't invited. Limit someone to some clients from their **Client access** once they've joined. It needs email set up - without it, invite them one at a time to get each link.
+
 ### Joining
 
 The link opens a page that says who invited them and as what. They check their name, choose a password - twice - and click **Join**. From then they're an agent with the role, two-step sign-in and clients you set, and sign in on the usual page. You're notified in ITFlow, and their quick look says whose invite they joined from.

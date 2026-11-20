@@ -25,6 +25,21 @@ Switch on **Turn emails into tickets**, and an email to your support mailbox bec
 
 Email from someone who isn't a contact, at a domain no client has, is left in the mailbox, flagged and unread - unless you switch on **From unknown senders too**.
 
+#### Try an email {#try-an-email}
+
+To see what an email would become before anyone sends one, click **Try an email**. Type who it's **From** and its **Subject** - a reply to one of your emails has the ticket number in brackets, like `[TCK-123]` - and switch on **It's an automatic reply** for an out-of-office answer. **Try it** goes through what the mailbox asks, in order, and says where it ends up:
+
+- an automatic reply is skipped
+- a ticket number in the subject - a reply on that ticket: the client's reply from its contact or another of the client's contacts, a technician's own note, a watcher's note, or a note with a warning from a stranger, which doesn't reopen it. A closed ticket isn't reopened, and the sender is told.
+- the same subject as an open ticket of theirs from the last week - a reply on that ticket
+- a contact's address - a new ticket for their client
+- an address at a client's domain - a new contact, and their ticket
+- anyone else - a ticket with no client, when unknown senders are let in, or left in the mailbox
+
+![Trying an email](adm-ticket-mail-try.webp "Try an email: each step the mailbox takes, and where the email ends up")
+
+Nothing is made or sent - it uses your saved settings and the contacts, domains and tickets you have now.
+
 ### Text to ticket {#text-to-ticket}
 
 Once [text messaging](/admin/text-messaging) is set up, a text from one of your contacts - from their mobile or phone number - opens a ticket for them. What they text next goes on it as their reply, with any photos attached, and opens it again if it was resolved. A text about a ticket that's being texted on goes on that ticket for two weeks after the last text, while it's open.
