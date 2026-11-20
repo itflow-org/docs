@@ -16,7 +16,7 @@ Click the **bell**. A panel opens with your notifications grouped by day, newest
 - Click a notification to open what it's about - the ticket, the invoice, the shared link - and mark it read.
 - **Mark all as read** clears them all at once.
 - **View all notifications** opens the full Notifications page.
-- **Turn on desktop notifications** - see below.
+- **Desktop notifications** has a switch that shows whether they're on in this browser - see below.
 
 ## Desktop notifications {#desktop}
 
@@ -25,9 +25,9 @@ ITFlow can also tell you on your computer's desktop, like an email or chat app d
 - a ticket is assigned to you, or
 - a client replies on one of your tickets.
 
-Click the **bell**, then **Turn on desktop notifications** at the bottom of the panel, and allow notifications when your browser asks. They only show while you're away from ITFlow - in another program or another browser tab. Click one to open the ticket.
+Click the **bell**, then turn on the **Desktop notifications** switch at the bottom of the panel, and allow notifications when your browser asks. They only show while you're away from ITFlow - in another program or another browser tab. Click one to open the ticket.
 
-The switch is for the browser you're using, so turn it on in each browser you work in. **Turn off desktop notifications** in the same place. If the panel says desktop notifications are blocked, allow notifications for your ITFlow site in your browser's settings, then turn them on again.
+The switch is for the browser you're using, so turn it on in each browser you work in. Under it, the panel says whether they're **On in this browser** or **Off in this browser** - turn the switch off to stop them. If it says they're **Blocked by this browser**, the switch is greyed out: allow notifications for your ITFlow site in your browser's settings, then turn them on again.
 
 ## Your open tickets on the browser tab {#tab-count}
 
