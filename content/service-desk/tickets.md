@@ -26,7 +26,7 @@ The tabs along the top are the views you'll use most, each with a count:
 | **Closed** | Resolved and closed tickets |
 | **All** | Everything |
 
-Beside the search box, pick a technician (**Anyone**) or a client to narrow any view. The sliders button opens more filters: **Status**, **Priority**, **Category**, **Project**, **Tags**, **SLA**, **Billing** and when it was **Created**. Each filter you set shows as a chip under the views, with an **×** to take it off.
+Beside the search box, pick a technician (**Anyone**) or a client to narrow any view. The sliders button opens more filters: **Status**, **Priority**, **Category**, **Project**, **Tags**, **SLA**, **Billing** and when it was **Created**. Set ones open with the page, and the **×** at the end of the search box takes them all off.
 
 The search box finds tickets by number, subject, client, contact, asset or the vendor's reference.
 

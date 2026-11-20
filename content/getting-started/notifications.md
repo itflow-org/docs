@@ -31,7 +31,7 @@ The switch is for the browser you're using, so turn it on in each browser you wo
 
 ## Your open tickets on the browser tab {#tab-count}
 
-The browser tab's title starts with how many open tickets are assigned to you - **(3)**, say - the same number as **Mine** on the [tickets list](/service-desk/tickets#views). It's kept up to date in the background, so you can see it from another tab.
+The [tickets list](/service-desk/tickets#views)'s browser tab starts with how many open tickets are assigned to you - **(3)**, say - the same number as **Mine**. It's kept up to date in the background, so you can see it from another tab. Other pages keep their own title.
 
 ## The Notifications page
 
