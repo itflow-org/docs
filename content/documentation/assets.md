@@ -23,7 +23,7 @@ To see every client's devices together, use **Across clients > Assets** in the t
 
 1. Open the client, go to **Assets** and click **New Asset**.
 2. On **Details**, pick the **Type** (desktop, laptop, server, NAS, virtual machine, firewall, switch, access point, modem, UPS, PDU, printer and so on), give it a **Name** and **Status**, and fill in the **Make**, **Model**, **Serial number** and **Operating system** or **Firmware** - ITFlow says if the serial number is already on another asset, and which, and the type's own details (see [Details by type](#details-by-type)). Click the star to make it a favorite, which puts it on the client's overview.
-3. On **Assignment**, pick its **Location**, **Where in the building** it is (a room, a cupboard), and who it's **Assigned to**. The **+** beside **Location** or **Assigned to** adds a location or contact the client doesn't have yet, and picks it.
+3. On **Assignment**, pick its **Location**, **Where in the building** it is (a room, a cupboard), and who it's **Assigned to**. The **+** beside **Location** or **Assigned to** opens **New Location** or **New Contact** over the form for one the client doesn't have yet, and picks it once it's saved.
 4. On **Network**, enter its **IPv4 address** (or switch on **DHCP**), **MAC address** - ITFlow says if another asset already has it, however it's written - and any NAT or IPv6 address. **Link** is the address you open it at, such as its management page. A **Client link** shows in the client portal.
 5. On **Purchase**, pick the **Vendor**, the **Order / invoice reference**, and when it was **Purchased** and **Installed**, and when its **Warranty expires**.
 6. On **Login**, add a username and password for it, which become a credential linked to it.
