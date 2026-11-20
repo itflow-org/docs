@@ -40,7 +40,7 @@ Click an item on the drawing to edit it - for an asset, which opens its own page
 
 ## Move something {#move}
 
-Drag an item on the drawing to where it should go, front or rear, and let go. It keeps its height and depth. While you drag, the rack shows where it would land - in red, with what's there, when something is in the way. The U you hold it by is the one that lands where you let go - hold a 2U server by its bottom half to place its bottom U.
+Drag an item on the drawing to where it should go, front or rear, and let go. It keeps its height and depth. While you drag, the rack shows where it would land - in red, with what's there, when something is in the way. The U you hold it by is the one that lands where you let go - hold a 2U server by its bottom half to place its bottom U. The message after has [Undo](/getting-started/lists#undo), which puts it back - if that place is still free.
 
 ![A 2U NAS being dragged down to U3-U4 on the front of the rack](doc-rack-drag.webp "Dragging an item: where it would land, at U3-U4")
 

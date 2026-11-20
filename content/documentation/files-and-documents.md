@@ -42,7 +42,7 @@ Drag things onto a folder to move them. The folder lights up when it can take wh
 - **A folder inside a closed one** - hold what you're dragging over the closed folder for a moment and it opens.
 - **Up a level** - the path above the list takes a drop too. Drag onto **Top level** or a folder in the path.
 
-Each move goes in the audit log. On a phone or tablet, use **Move** in an item's **⋮** menu, or **Rename or move** in a folder's.
+Each move goes in the audit log, and the message after it has [Undo](/getting-started/lists#undo) to put things back where they were. On a phone or tablet, use **Move** in an item's **⋮** menu, or **Rename or move** in a folder's.
 
 ## Upload files
 

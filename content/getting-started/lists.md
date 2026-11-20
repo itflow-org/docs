@@ -90,6 +90,18 @@ To do the same thing to several records at once:
 
 What's in the Bulk Action menu depends on the list and on your role: assigning, tagging, setting a status, archiving and so on. A bulk action only changes records you're allowed to change.
 
+## Undo {#undo}
+
+Archiving doesn't ask "Are you sure?" first. Instead, the message that says it's done has **Undo**, which puts it all back as it was - and so does the message after a move or a change to several records at once.
+
+![The message after archiving an asset, with Undo](gs-undo.webp "Asset archived - Undo puts it back")
+
+- **Archiving** - one record or several, of every kind on [Archived](#archived). Undo brings back what archiving took with it too: a contact's roles, a document's links, a client's recurring invoices. Archiving a client still asks first - and has no Undo if it withdrew a contract out for signing, as that can't be put back.
+- **Moves** - files, documents and folders moved to another folder, by dragging or with **Move**, and kit dragged to another place on a [rack](/documentation/racks#move).
+- **Bulk changes** that set a field: a ticket's priority, category or project; an asset's location, physical location, contact or status; a contact's location, department, phone number or roles; a client's industry or referral; a project's manager or due date; an invoice's or product's category; and an IP address's type.
+
+The message stays up for ten seconds, and for as long as the pointer is on it. Undo works once, and only for you. Anything changed again in the meantime - by you or anyone else - is left as it is, and the message after Undo says how many were.
+
 ## Record pages
 
 Most records also have a full page of their own. They share one layout:
