@@ -158,10 +158,14 @@ A client's reply also has **Split into a new ticket** - for when they raise a se
 
 ## Contact, site and vendor
 
-- **Contact** - who the ticket is for, with their phone numbers and email. Click the pencil to change the contact.
+- **Contact** - who the ticket is for, with their phone numbers, email and PIN. Click the pencil to change the contact.
 - **Site** - the location's address, phone, opening hours and access notes, with directions.
 - **Also open** - the client's other open tickets, in case they're about the same thing.
 - **Trips** - the driving done for the ticket, for onsite work. See [Trips and mileage](/billing/trips).
+
+![The Contact card with the contact's PIN as dots](sd-ticket-contact-pin.webp "The PIN shows as dots until you click the eye")
+
+When someone calls about a ticket, ask for their PIN and click the eye beside **PIN** on the Contact card to check it - it's dots until then, in case your screen is being shared. The copy button copies it either way. The PIN is set on the contact.
 
 ## Tasks
 
