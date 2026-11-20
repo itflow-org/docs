@@ -108,9 +108,6 @@ When the phone rings and you don't know yet whether it needs a ticket, open the 
 
 A reply won't send with nobody in To, or with something in it that isn't an email address - pick **Public note** to post it without an email. A reply sent to several tickets at once with [Reply or add a note](/service-desk/tickets#bulk-reply) still goes to each one's contact and watchers.
 
-> [!TIP]
-> If you try to leave the page with a reply half written, ITFlow asks first.
-
 ### Mention someone on your team {#mention}
 
 In an internal note, type **@** to bring someone on your team in. A list of the agents who can open this ticket comes up, and narrows as you type a name or role. Click one, or press <kbd>Enter</kbd>, and their name goes into the note.
