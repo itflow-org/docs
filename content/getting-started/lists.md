@@ -113,11 +113,11 @@ Most records also have a full page of their own. They share one layout:
 
 - the actions along the top - edit, share, new ticket and the rest
 - the key details in cards
-- everything related - tickets, files, licenses, history - in tabs with counts. Most pages remember the last tab you had open.
+- everything related - tickets, files, licenses, history - in tabs with counts. Most pages remember the last tab you had open. The tabs keep to one line: those that don't fit are under **More** at the end, which shows a red count when one in it needs attention, such as a contact's open tickets.
 
 ## Forms
 
-Forms have an icon in front of every field. Long forms are split into tabs; if you save with a required field empty on another tab, ITFlow takes you to it.
+Forms have an icon in front of every field. Long forms are split into tabs - on a small screen, the ones that don't fit are under **More**. If you save with a required field empty on another tab, ITFlow takes you to it.
 
 A field with a list of choices opens it under the field, with a search box when the list is long. **Cancel** at the top closes it without changing the field, and **Done** closes one where you tick several. A click anywhere else closes it too, a reply or other text box included.
 
