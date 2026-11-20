@@ -206,6 +206,14 @@ Everything is ticked to start with. Untick what you don't want, or use **All** a
 
 ![The preview of a document template](adm-starter-preview.webp "Preview: the Network Overview document template, as it comes in")
 
+### Clear out unused {#clear-out}
+
+**Clear out unused**, beside a pack's counts, is there when some of what you have from it isn't used yet: a category no ticket, invoice, expense or product has, a tag on nothing, a template nothing was made from, a canned response never put in a reply, or a product on no invoice, quote or asset. It lists them, all ticked, and says how many are in use and stay. Untick what you want to keep and click **Archive them**.
+
+![Clear out unused, open on Categories](adm-starter-clear.webp "Clear out unused: what came from the Categories pack that nothing uses yet, to archive")
+
+They're archived, not deleted: **Undo** on the message puts them back, and any can be restored later from its own list's archived view. **Add** still counts them as here, so it doesn't make them again.
+
 The [Starter content step](/install/after-install#starter-content) of Get started has the same packs, with Pick which and Preview.
 
 Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
