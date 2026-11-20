@@ -21,19 +21,27 @@ A rack's page draws it to scale, front and rear, with everything mounted in it. 
 
 ![A rack drawn front and rear, with a server, a NAS, switches, a firewall, a patch panel, a UPS and a PDU](doc-rack.webp "The elevation: every item at its position, front and rear, in colours by kind")
 
-- Down the side: how many **U** are used and free, the **largest gap** (and where it is), how many items, and the **power** used against the budget. Then the rack's details, notes and history.
+- Down the side: how many **U** are used and free, the **largest gap** (and where it is), how many items, and the **power** used against the budget. Then what isn't racked yet, the rack's details, notes and history.
 - **Elevation** draws the front and the rear. Items are coloured by kind - servers, network, firewalls, power, patching and other. A full-depth item mounted at the front shows as a dashed outline at the rear, so you can see the space it takes.
 - **In this rack** lists every item with its position, make, model, serial number, IP address and which side it's mounted on.
-- **Not racked yet** lists the client's servers, NAS units, network gear, UPSs, PDUs and NVRs that don't have a place in a rack yet, with **Rack it** to put one in.
+- **Not racked yet** lists the client's servers, NAS units, network gear, UPSs, PDUs and NVRs that don't have a place in a rack yet. Drag one onto the drawing where it goes, or use **Rack it**.
 - The print button gives a clean page of the rack to stick on the cupboard door.
 
 ## Put something in the rack
 
-Click an empty U on the drawing, or **Add Item**:
+Click an empty U on the drawing, or **Add Item**. Or drag one of the client's assets from **Not racked yet** onto the drawing and let go where it goes - the window opens with the asset, the U and the side filled in.
 
 1. Pick an **Asset** - a server, NAS, switch, UPS or other device the client has - or, under **What is it**, an item that isn't an asset: a patch panel, cable management, a shelf, a PDU, a UPS, a KVM or a blanking panel. An asset starts at its usual size - 2U for a server, NAS or UPS, and half depth for a firewall, access point, modem or PDU - which you can change.
 2. Set the **Lowest U** it sits in and its **Height** in U, which side it's **Mounted on** (front or rear), and whether it's **Full depth**.
 3. Add its **Power draw** in watts, if you track power, and notes.
 4. Save.
 
-Click an item on the drawing to edit it or move it. An asset's own page shows which rack it's in and at which U.
+Click an item on the drawing to edit it - for an asset, which opens its own page, use the pencil that shows when you point at it. An asset's own page shows which rack it's in and at which U.
+
+## Move something {#move}
+
+Drag an item on the drawing to where it should go, front or rear, and let go. It keeps its height and depth. While you drag, the rack shows where it would land - in red, with what's there, when something is in the way. The U you hold it by is the one that lands where you let go - hold a 2U server by its bottom half to place its bottom U.
+
+![A 2U NAS being dragged down to U3-U4 on the front of the rack](doc-rack-drag.webp "Dragging an item: where it would land, at U3-U4")
+
+To change its height or depth, or which side it's mounted on without moving it, edit it instead.

@@ -10,7 +10,7 @@ Credentials are the logins you hold for a client: the firewall admin, the Micros
 
 ![A client's credentials, with logins, what each is for and when the password last changed](doc-credentials.webp "Credentials: the login, what it's for, and how old the password is")
 
-- **Tabs**: **Starred**, **With 2FA**, **No 2FA**, **Not changed in 90 days** and **Shared** (logins you've sent as a [shared link](/documentation/shared-links)).
+- **Tabs**: **Starred**, **With 2FA**, **No 2FA**, **Not changed in 90 days**, **Reused password** (see [Reused passwords](#reused)) and **Shared** (logins you've sent as a [shared link](/documentation/shared-links)).
 - **Login** shows the username with a copy button, the password as dots - click the eye to show it, or copy it without showing it - and where it opens, as a link.
 - **2FA** fetches the current 6-digit code when you click it, so you can sign in without a phone.
 - **For** shows the device, vendor, service or license the login is for.
@@ -49,9 +49,27 @@ Click a credential to open its quick look, with the username, the password (hidd
 
 ## Change a password
 
-When you change a password on the system itself, record it in ITFlow with **Change password** (in the row's menu or the quick look) - it's quicker than editing the whole credential. It saves the new password, dates the change so the credential's age starts again, and notes it in the credential's history. A new password typed in **Edit** is dated the same way.
+When you change a password on the system itself, record it in ITFlow with **Change password** (in the row's menu or the quick look) - it's quicker than editing the whole credential. It saves the new password, dates the change so the credential's age starts again, and notes it in the credential's history. A new password typed in **Edit** is dated the same way. Either way, the password it replaces is kept - see [Earlier passwords](#earlier).
 
 Passwords not changed in 90 days show on the client's overview and on the **Not changed in 90 days** tab. **Rotation report**, in the New Credential menu, shows every client's passwords by age.
+
+### Earlier passwords {#earlier}
+
+When a password is changed - with **Change password**, **Edit**, an import or the API - the one it had is kept, still encrypted. **Earlier passwords**, in the credential's quick look, lists them newest first, with when each was in use and who changed it.
+
+![A credential's quick look with the Reused password warning and an earlier password shown](doc-credential-earlier.webp "Earlier passwords: the one before, shown with the eye, and Put back")
+
+- Click the eye to show one, or copy it without showing it. Each look is recorded, as for the current password.
+- **Put back** makes it the password again - for when a change broke something that still used the old one. The password it has now takes its place under Earlier passwords.
+- With **Delete** access to credentials, the bin deletes one you don't want kept.
+
+The newest ten are kept for each credential. They go when the credential is deleted.
+
+## Reused passwords {#reused}
+
+The **Reused password** tab picks out the logins whose password another of the same client's logins also has, each marked **Reused** - hover it to see which. A credential's quick look names the others, with a link to each. If one of them leaks, so do the others: give each its own with **Change password**.
+
+ITFlow compares the passwords as the page opens, using your vault key, and keeps nothing about them. Archived credentials, and logins of different clients, aren't compared.
 
 ## Send a login to the client
 
