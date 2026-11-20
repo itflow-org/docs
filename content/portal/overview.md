@@ -37,6 +37,12 @@ Announcements you post - planned maintenance, a holiday closure - show at the to
 
 The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **Help** is there too once you've shared an article with them - see [Knowledge Base](/service-desk/knowledge-base#portal). **New ticket** is always there.
 
+### Search {#search}
+
+The **Search** box in the top bar - on a smaller screen the magnifying glass, or **Search** under their name, and on a phone the top of the menu - looks through everything they can open at once: their tickets, by subject, number and what was said on them; the documents you share with them; and your Help articles. Each shows its first eight, with **See all** for the rest on that page. When nothing is found, **Ask us** starts a ticket with what they searched for as its subject, and a search that finds no Help article goes on the Knowledge Base's [Not found](/service-desk/knowledge-base#not-found) list.
+
+![Searching the portal](portal-search.webp "One search across tickets, documents and Help")
+
 Their name opens **Your account** - their details, the emails they get from you, whether you text them, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
 
 ![The portal on a phone](portal-home-phone.webp "On a phone, the portal fits the screen")

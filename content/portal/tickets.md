@@ -20,13 +20,13 @@ Most contacts see the tickets they raised. Primary and technical contacts see ev
 
 - a **Subject**, in a few words
 - **What is happening?** - what they were doing, any error message, and when it started
-- **How much is it getting in the way?** - which sets how urgent it is
+- **How much is it getting in the way?** - which sets how urgent it is, and says how soon you reply to each, from your [SLAs](/admin/tickets#slas)
 - **What is it about?** and **Which device?** - their own devices are listed
 - **Screenshots or files**, dropped in or chosen
 
 ![Reporting a problem](portal-ticket-problem.webp "Report a problem: what's wrong, how much it's in the way, and which device")
 
-**What happens next** alongside tells them what to expect, with your phone number for when it's stopping everyone.
+**What happens next** alongside tells them what to expect - with **How soon we reply** for each priority when your SLAs set a response time - and your phone number for when it's stopping everyone.
 
 As they type the subject, any Help articles that might answer it show under it - see [Knowledge Base](/service-desk/knowledge-base#raise).
 
@@ -46,7 +46,7 @@ The ticket is raised from the form's template, with its category, priority, task
 
 ![A ticket in the portal](portal-ticket.webp "A ticket: where it stands, the conversation, and the details")
 
-The ticket shows where it stands - **Received**, **In progress**, **Resolved**, **Closed** - and the conversation, oldest first, with their own messages on the right. Your internal notes never show. Down the side: its status, priority, category, who raised it, who's working on it, the device and how many tasks are done.
+The ticket shows where it stands - **Received**, **In progress**, **Resolved**, **Closed** - and the conversation, oldest first, with their own messages on the right. Until you first reply, it also says when to expect that reply - **We'll reply by** and the time, from its SLA, as the new-ticket email does. It goes once you've replied, while the ticket is on hold, or once the time has passed, and a ticket with no SLA promises nothing. Your internal notes never show. Down the side: its status, priority, category, who raised it, who's working on it, the device and how many tasks are done.
 
 - **Add a reply**, with files, and click **Send reply**.
 - **It's fixed** marks it resolved themselves.
