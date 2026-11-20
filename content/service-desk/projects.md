@@ -42,7 +42,18 @@ Along the top, a warning shows when something needs a look - past its due date, 
 - **Add tickets** adds **Tickets already raised** - picked from a list or by number - or more tickets **From a project template**.
 - **Edit**, **Mark complete**, and **⋮** for its tickets on the ticket list, **Archive** and **Delete**.
 
-The tabs list its **Tickets** (open first), its **Tasks** across every ticket, its **Activity** - the replies on its tickets - and **History**. Down the side are the **Scope**, the **Details** (client, contact, manager, dates and budget) and the **Team**, with the hours each person has logged.
+The tabs list its **Tickets** (open first), its **Tasks** across every ticket, its **Timeline**, its **Activity** - the replies on its tickets - and **History**. Down the side are the **Scope**, the **Details** (client, contact, manager, dates and budget) and the **Team**, with the hours each person has logged.
+
+### Timeline {#timeline}
+
+The **Timeline** tab shows its booked tickets in time, each as a bar from its booking's start to its end. It runs from the project's start to its due date - or further, when a booking is outside them - by the day, the week or the month, depending on how long that is. A red line marks now, and dashed lines the start and due dates.
+
+![A project's Timeline tab](sd-project-timeline.webp "Timeline: bookings in time, a clash flagged, and the open tickets not booked yet")
+
+- Blue is open, amber is a booking that has passed while the ticket is still open, and grey is resolved or closed.
+- Two bookings of the same technician at the same time are outlined in red, with **Same time as** and the other ticket.
+- Click a bar to open its ticket. Point at it for when it's booked.
+- **Open and not booked** lists its open tickets with no booking yet. **Book** sets one up.
 
 On the Tickets tab, tick tickets and use **Bulk Action** to assign them, set their priority or category, reply to them, resolve them, or **Take off the project**.
 

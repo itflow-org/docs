@@ -54,14 +54,23 @@ Drag one onto the calendar to book it again, for as long as it was booked before
 4. Pick the **Client**, if it's for one, and the **Location** - a client site, a room, an address, or a Teams or Zoom link.
 5. Under **Invite**, add the client's contacts, and anyone else by email.
 6. Add **Notes**: what it's for, what to bring, who to ask for.
-7. Switch on **Email the invitation to the people on it** to send them a calendar invite their Outlook, Google or phone calendar adds.
-8. Click **Add event**.
+7. Pick when to **Remind** you - when it starts, or from five minutes to two days before. See [Reminders](#reminders).
+8. Switch on **Email the invitation to the people on it** to send them a calendar invite their Outlook, Google or phone calendar adds.
+9. Click **Add event**.
 
 ![The New Event window](sd-event-new.webp "New Event: who it's assigned to, when, where, who else is invited, and whether to send them an invitation")
 
 An event added while **Whose** shows one technician starts assigned to them, and shows on their calendar rather than yours.
 
 When you change or cancel an event with an invitation, the people on it get an update or a cancellation, and their calendar follows. An event's quick look changes who it's **Assigned to** without opening **Edit** - a technician taken off who had the invitation gets the cancellation, and one added gets the invitation when the others have it. The quick look can also download the event as a calendar file, or send the invitation again.
+
+## Reminders {#reminders}
+
+An event with **Remind** set sends a notification to the [bell](/getting-started/notifications) at that time - to each technician it's assigned to, or to whoever made it when nobody is. A repeating event reminds each time it comes round. Click the reminder to open the event.
+
+For your tickets, set **Remind me before work booked for me** in [Preferences](/getting-started/account#preferences): a ticket booked with you reminds you that long before. Switch on **Email me reminders too** there to get them by email as well.
+
+Reminders go out within a minute of their time, and each one only once. They need [cron](/admin/maintenance) running.
 
 ## See your schedule on your phone
 

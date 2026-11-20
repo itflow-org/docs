@@ -38,6 +38,7 @@ The list starts in the order the day runs - the every-minute jobs, then the nigh
 | Text Messages | every minute | Sends the texts waiting to go, texts reminders of visits and calls coming up, and tidies the text log. Does nothing until [text messaging](/admin/text-messaging) is set up. |
 | Ticket Email Parser | every minute | Turns email to your support mailbox into tickets and replies |
 | Ticket SLA Monitor | every minute | Warns about SLAs close to a breach, and records breaches |
+| Reminders | every minute | Sends the [reminders](/service-desk/calendar#reminders) of events and of work booked on tickets |
 | AI Triage | every minute | Triages new tickets, when that's switched on |
 | Payment Provider Fees | every 15 minutes | Records Stripe's fee on each card payment as an expense, when that's switched on |
 | RMM Sync | every 15 minutes | Brings in the devices of the clients linked to your [RMM](/admin/rmm), and keeps their assets up to date. Does nothing until an RMM is set up. |

@@ -59,13 +59,15 @@ When you sign in with your code, tick **Remember this browser** and ITFlow doesn
 
 ## Preferences {#preferences}
 
-![Preferences: theme, compact rows, the first day of the week, rows on a list, your time zone and your calendar colour](gs-account-preferences.webp "Preferences")
+![Preferences: theme, compact rows, the first day of the week, rows on a list, your time zone, reminders and your calendar colour](gs-account-preferences.webp "Preferences")
 
 - **Theme** - **Light** or **Dark**.
 - **Compact rows** - tighter rows on every list, so more fit on screen.
 - **Calendars start on** - the first day of the week on the calendar and date pickers.
 - **Rows on a list** - how many rows every list shows on a page. You can also change this at the foot of any list.
 - **My time zone** - for when you work somewhere other than the company. The [calendar](/service-desk/calendar), [Dispatch](/service-desk/dispatch), a ticket's booking, the **Schedule** and event windows, and your booking emails are then on your own clock - the emails give the company's time beside yours. Leave it on **The company's** otherwise. Bookings are still kept in the company's time, so nobody else's view changes.
+- **Remind me before work booked for me** - a [reminder](/service-desk/calendar#reminders) this long before each ticket booked with you, or **No reminder**.
+- **Email me reminders too** - reminders by email as well as on the bell, for your tickets and for events.
 - **Calendar color** - the colour your booked tickets and the events assigned to you are drawn in on the [calendar](/service-desk/calendar#colours). Click one of the twelve, or the box to pick any colour. **Automatic** goes back to the one you started with.
 
 ## Your canned responses

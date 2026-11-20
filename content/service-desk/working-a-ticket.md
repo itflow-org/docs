@@ -77,15 +77,25 @@ A note with time worked won't send without a date, start and end. Times are your
 
 ### Timers in the top bar {#timers}
 
-A ticket's timer keeps counting when you go to another page. While any ticket has time on its timer, a stopwatch shows in the top bar, with how many - it pulses while one is running. Click it to see each ticket and its time.
+A ticket's timer keeps counting when you go to another page. The stopwatch in the top bar shows how many timers have time on them - it pulses while one is running. Click it to see each ticket and its time.
 
-![Ticket timers in the top bar](sd-ticket-timers.webp "Ticket timers: one running, one paused")
+![Ticket timers in the top bar](sd-ticket-timers.webp "Timers: one without a ticket yet, two on tickets, and the time you logged this week")
 
 - Click a ticket to go back to it and log the time.
 - **Pause** or **Resume** a timer from here.
 - The bin throws a timer's time away, after you confirm - for time that shouldn't go on the ticket.
+- At the bottom, the time you've logged on tickets today and this week. The week starts on the day your [calendar does](/getting-started/account#preferences).
 
 Timers are kept in your browser, so the list shows the ones in this browser on this computer.
+
+#### A timer without a ticket {#call-timer}
+
+When the phone rings and you don't know yet whether it needs a ticket, open the stopwatch and click ▶ beside **A timer without a ticket**. It counts like a ticket's timer, and can be paused. Once you know where the time goes:
+
+- **New ticket** opens [Quick ticket](/service-desk/new-ticket#quick-ticket). The new ticket's timer carries on from yours - picking one of the contact's open tickets there instead adds the time to that one.
+- **Add to a ticket** lists your own open tickets - type a number, subject or client to find another. Click one to add the time to its timer and open it.
+
+![Adding the time without a ticket to an open ticket](sd-ticket-timer-find.webp "Add to a ticket: type to find the ticket the time goes on")
 
 ### Who an email reply goes to {#email-to}
 

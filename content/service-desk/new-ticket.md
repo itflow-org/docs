@@ -45,7 +45,7 @@ For a call, or someone at your desk, click **+** in the top bar - it's there on 
 
 ![The Quick ticket window](sd-quick-ticket.webp "Quick ticket: the client, the contact and their open tickets, and the issue")
 
-The ticket opens with its timer already running, ready for your notes. Your admin sets what a quick ticket starts with - who it goes to, its status, category and billing, when its timer starts, and whether the contact is emailed - in [Ticket settings](/admin/tickets#quick-tickets).
+The ticket opens with its timer already running, ready for your notes. Started the call on the stopwatch before you knew it needed a ticket? Click **New ticket** under the [timer without a ticket](/service-desk/working-a-ticket#call-timer), and the new ticket's timer carries on from it. Your admin sets what a quick ticket starts with - who it goes to, its status, category and billing, when its timer starts, and whether the contact is emailed - in [Ticket settings](/admin/tickets#quick-tickets).
 
 ## Start from a template
 

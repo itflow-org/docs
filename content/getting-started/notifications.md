@@ -44,6 +44,7 @@ The full page lists every notification you've had, with a search box, a filter b
 What reaches you depends on your role and what you're working on. Common ones are:
 
 - **Tickets** - a ticket assigned to you, someone [mentioning you](/service-desk/working-a-ticket#mention) in an internal note, a client replying to one of your tickets, a task waiting for your approval, and a client's rating of a ticket
+- **Reminders** - an event on the calendar, and work booked with you, at the time [set for it](/service-desk/calendar#reminders)
 - **Recurring tickets** and **projects** assigned to you
 - **Shared links** - a client opening a link you shared (you can switch this off for a link when you make it), a link locking after wrong tries, and a login a client sent back to you
 - **Billing** - an invoice paid online, draft invoices waiting to be sent (and how many have been left more than a week), a sent quote running out in three days with no answer, and stock running low on a product
