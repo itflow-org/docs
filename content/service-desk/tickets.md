@@ -62,7 +62,7 @@ Click **Board** at the top right to see the same tickets as cards in columns by 
 
 Click **List** to go back.
 
-## Do the same to many tickets
+## Do the same to many tickets {#bulk}
 
 Tick tickets and use **Bulk Action** to:
 
@@ -73,6 +73,7 @@ Tick tickets and use **Bulk Action** to:
 - **Mark as read**, to take the bold off them without opening each one
 - **Reply or add a note** to each of them at once - see below
 - **Merge into a ticket**, when several tickets are about the same problem
+- **Link together**, to keep them apart but [related](/service-desk/working-a-ticket#related) - the same outage at several clients
 - **Resolve** them
 - **Delete** them
 

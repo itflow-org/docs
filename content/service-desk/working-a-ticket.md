@@ -20,7 +20,7 @@ On the right is the one action for where the ticket is:
 - **Reopen** and **Close** once it's resolved.
 - **Invoice** once a billable ticket is done.
 
-The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **Move to another client**, **Copy as a new ticket**, **Apply a template**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
+The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **[Link related tickets](#related)**, **Move to another client**, **Copy as a new ticket**, **Apply a template**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
 
 ![The ticket's menu](sd-ticket-menu.webp "The ticket's ⋮ menu")
 
@@ -242,6 +242,28 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 
 - **Copy as a new ticket** opens **New Ticket** with this ticket's subject, details, priority, category, billing, contact, asset and tasks, for the same client. Change anything first - pick another client for the same job somewhere else.
 - **Apply a template** puts a ticket template on a ticket that's already open. Pick the template: its tasks are listed for you to change, and it asks its [fill-ins](/service-desk/new-ticket#fill-ins). **Apply** adds the tasks after the ticket's own, and its tags and due time where the ticket has none. The ticket's subject, details, category and priority stay as they are.
+
+## Related tickets {#related}
+
+Link tickets that are about the same thing - one outage at several clients, or a problem that keeps coming back - so each shows the others, and one update or resolve can go to them all. Unlike merging, each ticket stays open with its own client and conversation.
+
+1. In the ticket's **⋮** menu, click **Link related tickets**.
+2. Pick the tickets it's related to. Any client's open tickets are offered, and those closed in the last 90 days - search by number, subject or client.
+3. Click **Link**.
+
+![The Link related tickets window with two tickets picked](sd-ticket-link.webp "Link related tickets: pick the others, any client's")
+
+Linking a ticket to one that's already related to others brings it in with them all. To link several at once, tick them on the [tickets list](/service-desk/tickets#bulk) and use **Bulk Action** > **Link together**.
+
+The **Related** card on each ticket lists the others, with their client, status and technician:
+
+![The Related card with three tickets at other clients](sd-ticket-related.webp "Related: the same outage at three other clients")
+
+- **+** links more.
+- The **⋮** has **Reply to all** and **Resolve all**, for this ticket and every open one related to it - one update for an outage, sent to each client from their own ticket. See [Reply to many tickets at once](/service-desk/tickets#bulk-reply).
+- The **×** beside a ticket takes it out; the others stay related.
+
+The [tickets list](/service-desk/tickets) shows a link and a count on related tickets. Merging a ticket passes its related tickets to the one it's merged into. You only see the related tickets of clients you can open - the card says how many others there are.
 
 ## Merge, move and delete
 
