@@ -188,11 +188,11 @@ An ITFlow [managed by another](/admin/managed-instances#managed-by) is updated f
 
 **Admin > Starter Content** is a library of defaults for a typical MSP: categories, tags, ticket and project templates, canned responses, vendor templates, document templates, products and services, and license templates. Add whichever packs are useful - on a new install, or one that's been running for years.
 
-![Starter content](adm-starter.webp "Starter content: libraries of templates, categories and products, with what's already here")
+![Starter content](adm-starter.webp "Starter content: how much there is to add, each pack with its Add, and the totals at a glance")
 
-Each pack shows how many are in the library, how many you already have, and how many **Add** would bring in. **Add all** at the top adds every pack at once.
+The top of the page says how much of the library you don't have yet, and **Add all** adds all of it at once. Each pack under it says how many it would add and how many of it you already have, with its own **Add**. **At a glance**, at the side, has the totals.
 
-Adding never overwrites or deletes anything: what you already have under the same name is skipped, so adding twice never makes duplicates. When a newer version of ITFlow brings improved templates, **Update the ones you have** brings yours up to date.
+Adding never overwrites or deletes anything: what you already have under the same name is skipped, so adding twice never makes duplicates. When a newer version of ITFlow brings improved templates, **Update**, beside a pack you have some of, brings yours up to date - it asks first, as it replaces what they hold.
 
 ### Pick which {#pick-which}
 
@@ -200,7 +200,7 @@ To add only some of a pack, open **Pick which** under it. It lists what the pack
 
 ![Pick which, open on Products & Services](adm-starter-pick.webp "Pick which: what a pack would add, as it will look - untick what you don't want")
 
-Everything is ticked to start with. Untick what you don't want, or use **All** and **None**. The count under **Will be added** follows - "75 of 77" - and **Add** adds only the ones ticked.
+Everything is ticked to start with. Untick what you don't want, or use **All** and **None**. The count beside the pack's name follows - "74 of 76 to add" - and **Add** adds only the ones ticked.
 
 **Preview** shows a template in full before you add it - a ticket template's subject, category, tags, what it says and what it asks for; a document template's fill-ins and the document itself; a product's price and how it's billed.
 
@@ -210,7 +210,7 @@ The [Starter content step](/install/after-install#starter-content) of Get starte
 
 Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
 
-**Demo Data** removes the sample clients and records from a demo install, ready for your own.
+**Demo data**, under the packs, adds the sample clients and records for a demo or training install, and **Remove demo data** takes them out again in one go when you're ready for your own - it asks first, as it can't be undone.
 
 ## Debug
 
