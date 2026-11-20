@@ -17,6 +17,18 @@ Tickets, assets, invoices, credentials, expenses - every list in ITFlow is laid 
 - **Sort** by clicking a column heading. Click it again to reverse the order. On a long list the headings stay at the top of the screen as you scroll down, so you can still sort, or tick every row, from there.
 - **Archived** - the box button at the right of the filters - switches to the archived records. Click it again to go back.
 
+### Everything archived lately {#archived}
+
+**Tools > Archived** in the menu lists what was archived lately, every kind together - clients, contacts, locations, vendors, assets, credentials, documents, files, domains, certificates, networks, racks, services, licenses, projects and products - newest first, with who archived each one. It's the place to find something archived by mistake.
+
+![The Archived page](gs-archived.webp "Archived: everything archived in the last 30 days, with who archived it and Restore")
+
+- It shows the last 30 days to start with - pick the last 7 or 90 days, the last year or **Any time** instead. Narrow it to one kind or one client, or search by name.
+- **Restore** brings one back. Tick several and use **Bulk Action** > **Restore** to bring them all back at once.
+- Click a name to open it, or its list with archived ones showing.
+
+It only lists the kinds of record you can see, for the clients you can reach, and offers **Restore** where you can edit them.
+
 At the foot of the list you can change how many rows show on a page, from 5 to 500, and move between pages. Your choice is remembered for every list. You can also set it in [Your account](/getting-started/account).
 
 When a search or filter leaves nothing, the list says so, with **Clear filters** to go back to the whole list. A tab that only ever shows trouble - Overdue, Expiring soon - shows a tick when it's empty, because nothing there is good news.
@@ -91,5 +103,9 @@ Most records also have a full page of their own. They share one layout:
 Forms have an icon in front of every field. Long forms are split into tabs; if you save with a required field empty on another tab, ITFlow takes you to it.
 
 A field with a list of choices opens it under the field, with a search box when the list is long. **Cancel** at the top closes it without changing the field, and **Done** closes one where you tick several. A click anywhere else closes it too, a reply or other text box included.
+
+Long lists of clients, contacts, vendors, categories, locations, assets, technicians, projects, accounts and products start with **Recent** - the last five you picked in a field like it, anywhere in ITFlow - above **All**. Typing searches everything as usual. Recent picks are kept in your browser.
+
+![A client picker with Recent above All](gs-picker-recent.webp "A client picker: the clients you picked lately come first")
 
 ITFlow asks before it deletes or turns off anything, and before you leave a page with a reply or note you haven't saved. A window you've typed in asks too before it closes - from a click outside it, <kbd>Esc</kbd>, its **×** or **Cancel** - so nothing you typed is lost by accident. Saving never asks.

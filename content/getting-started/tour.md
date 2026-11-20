@@ -30,7 +30,7 @@ The main menu is grouped by the kind of work:
 | **Support** | **Tickets**, **Dispatch**, **Recurring Tickets** and **Projects** |
 | **Billing** | **Quotes**, **Invoices**, **Unbilled Time**, **Recurring Invoices**, **Contracts**, **Products** and **Purchasing** |
 | **Finance** | **Income**, **Expenses**, **Trips**, **Accounts** and **Transactions** |
-| **Tools** | **Reports**, and any links your admin has added |
+| **Tools** | **Reports**, [**Archived**](/getting-started/lists#archived) - everything archived lately, to restore - and any links your admin has added |
 
 The numbers beside an item tell you how many are waiting there: open tickets, unpaid invoices, tickets waiting to be billed and so on.
 
