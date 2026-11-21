@@ -21,8 +21,8 @@ Click **Save** when you're done.
 
 Pictures - yours, a user's or a contact's, the photos of assets, locations and racks, an expense's receipt, a product's or quote line's picture and your company's logo - show on their form as the picture itself, with a camera on it: the person's initials, or a camera and **Add a photo**, when there isn't one yet. Click it to open the **Picture** window.
 
-1. Drop a picture on the window, paste one, or click **Choose a picture**. It can be a JPG, PNG, GIF or WebP. On a phone or tablet, **Take a photo** opens the camera straight away.
-2. Crop it to fit. It sits in a frame the shape it's shown in - a circle for a person. Drag it into place, and scroll, pinch or use the slider to zoom; on the keyboard the arrow keys move it and **+** and **-** zoom. The arrow button turns it a quarter, and the one beside it fits it again. A photo of an asset, location or rack can also be **Square**, **4:3**, **3:4** or **Whole**. A receipt, a logo or a product's picture has no set shape: drag the corners and edges of the frame in to just what you want, and drag inside it to move it. For a logo or a product's picture, **Trim the edges** cuts away the empty or plain-coloured space round it.
+1. Drop a picture on the window, paste one, or click **Choose a picture**. It can be a JPG, PNG, GIF or WebP. On a phone or tablet, **Take a Photo** opens the camera straight away.
+2. Crop it to fit. It sits in a frame the shape it's shown in - a circle for a person. Drag it into place, and scroll, pinch or use the slider to zoom; on the keyboard the arrow keys move it and **+** and **-** zoom. The arrow button turns it a quarter, and the one beside it fits it again. A photo of an asset, location or rack can also be **Square**, **4:3**, **3:4** or **Whole**. A receipt, a logo or a product's picture has no set shape: drag the corners and edges of the frame in to just what you want, and drag inside it to move it. For a logo or a product's picture, **Trim the Edges** cuts away the empty or plain-coloured space round it.
 3. Click **Use this picture**, then save the form. On an expense's quick look, a receipt is saved straight away.
 
 ![The Picture window, cropping a contact's photo to a circle](gs-picture.webp "The Picture window: drag the picture into the frame and zoom - what's in the frame is what's kept")
@@ -37,20 +37,20 @@ What's kept is what's in the frame, at up to 512 pixels across for a person, 204
 
 1. Go to **Account > Security**.
 2. Type your **Current password**, then the **New password** twice. It must be at least 8 characters.
-3. Click **Change password**. You're signed out, so you can sign in again with the new one.
+3. Click **Change Password**. You're signed out, so you can sign in again with the new one.
 
 ### Turn on multi-factor authentication (MFA)
 
 With MFA on, signing in takes your password and a 6-digit code from an app on your phone, so a stolen password alone doesn't get anyone in. Your administrator may require it - in that case ITFlow asks you to set it up when you sign in.
 
-1. Go to **Account > Security** and click **Turn on MFA**.
+1. Go to **Account > Security** and click **Turn On MFA**.
 2. Open your authenticator app - Microsoft or Google Authenticator, 1Password, Authy, Bitwarden - and add an account.
 3. Scan the QR code. If you can't scan it, type the secret shown under it into the app instead.
-4. Type the 6-digit code the app shows into the boxes - or paste it. MFA turns on as soon as the sixth digit is in, so you don't need to click **Turn on**.
+4. Type the 6-digit code the app shows into the boxes - or paste it. MFA turns on as soon as the sixth digit is in, so you don't need to click **Turn On**.
 
 ![The window for turning on MFA, with a QR code to scan and six boxes for the code](gs-account-mfa.webp "Scan the code with your authenticator app, then type the code it shows")
 
-When you sign in, the code goes in the same six boxes and signs you in as soon as it's complete. Tick **Remember this browser** before you type it, and ITFlow doesn't ask for a code in that browser again for a while (your admin sets how long). **Remembered browsers**, on the same page, lists them. Click **Forget** beside one, or **Forget all**, and the code is asked for again there - do this if you lose a laptop or sign in on a shared computer.
+When you sign in, the code goes in the same six boxes and signs you in as soon as it's complete. Tick **Remember this browser** before you type it, and ITFlow doesn't ask for a code in that browser again for a while (your admin sets how long). **Remembered browsers**, on the same page, lists them. Click **Forget** beside one, or **Forget All**, and the code is asked for again there - do this if you lose a laptop or sign in on a shared computer.
 
 > [!NOTE]
 > Got a new phone? If you can turn MFA off yourself, turn it off and on again with the new phone. If your administrator requires MFA, ask them to reset it - you set it up again at your next sign in.

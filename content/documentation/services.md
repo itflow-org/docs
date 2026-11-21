@@ -33,9 +33,9 @@ To add many at once - with what they run on, their vendors, people and domains, 
 
 ![The Microsoft 365 service with its importance, review date, who to call and the logins it uses](doc-service.webp "A service's page: what it is, how to recover it, who to call, and everything it depends on")
 
-- **Report a problem** opens a ticket linked to the service.
+- **Report a Problem** opens a ticket linked to the service.
 - **Link** adds what the service depends on: an **Asset it runs on**, a **Login**, a **Domain**, a **Certificate**, a **Person** at the client, a **Vendor**, a **Document** or a **Ticket**.
-- **Mark reviewed**, **Edit**, and **⋮** for **New runbook document**, **Star** and **Archive**.
+- **Mark Reviewed**, **Edit**, and **⋮** for **New Runbook Document**, **Star** and **Archive**.
 
 Down the side: the **Service** card (importance, review schedule, where it opens), **Backup and recovery**, **Who to call** (its vendors with their support line, account number and PIN, and the people at the client who own it) and **Notes**.
 
@@ -55,11 +55,11 @@ Services needing attention show on the dashboard and the client's overview. A ti
 
 Regular reviews keep a service's documentation true. When one is due, it shows on the dashboard, the client's overview, the calendar (**Service reviews**) and in the nightly notifications.
 
-Click **Mark reviewed** to open the review. It lists anything needing attention now, and a checklist:
+Click **Mark Reviewed** to open the review. It lists anything needing attention now, and a checklist:
 
 - the assets it runs on are still the ones in service
 - the vendors and their support numbers are current
 - the people at the client who own it are still there
 - the backup is running and the recovery steps still work
 
-Set when to review it next, add a note for its history, and click **Mark reviewed**.
+Set when to review it next, add a note for its history, and click **Mark Reviewed**.

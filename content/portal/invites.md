@@ -8,10 +8,10 @@ You don't have to make someone a contact before they can use the portal. Invite 
 
 ## Invite people {#invite}
 
-1. Open the client's **Contacts** and click **Invite to the portal** on the **New Contact** menu - or **Invite people** on the **Invites** tab.
+1. Open the client's **Contacts** and click **Invite to the Portal** on the **New Contact** menu - or **Invite People** on the **Invites** tab.
 2. Put in their **Email addresses** - several at once, one to a line or separated by commas, with a name in front if you like: `Dana Whitlock <dwhitlock@ravenwooddental.example>`.
 3. Under **What else they see**, switch on **Technical** or **Billing** for what they should see beyond their own tickets. See [What each contact can see](/portal/access#what-each-contact-can-see).
-4. Click **Send invites**.
+4. Click **Send Invites**.
 
 ![The Invite people window](cl-contact-invite.webp "Invite people: their addresses, and what else they see")
 
@@ -35,12 +35,12 @@ The client's **Contacts** has an **Invites** tab with the invites still to be us
 
 ![The Invites tab](cl-contacts-invites.webp "Invites: who's been invited, what they'll see, and whether the link is still good")
 
-- **Send again** emails a new link. The old one stops working.
-- **Cancel invite** stops the link working.
+- **Send Again** emails a new link. The old one stops working.
+- **Cancel Invite** stops the link working.
 
 ## The primary contact invites people {#primary}
 
-A client's [primary contact](/portal/access#the-primary-contact-manages-their-own-people) can invite their own people from **Contacts** in the portal, in the same way. **Waiting to join** lists their company's invites, with **Send again** and **Cancel**. They're emailed when someone they invited joins, and every agent is notified.
+A client's [primary contact](/portal/access#the-primary-contact-manages-their-own-people) can invite their own people from **Contacts** in the portal, in the same way. **Waiting to join** lists their company's invites, with **Send Again** and **Cancel**. They're emailed when someone they invited joins, and every agent is notified.
 
 ![Inviting people from the portal](portal-invites.webp "The primary contact invites their own people")
 
@@ -55,11 +55,11 @@ The sign-in page then shows **Create an account** - while signing up is on, at l
 
 ![The sign-in page, with Create an account](portal-login-signup.webp "Create an account, on the sign-in page")
 
-They put in their work email address and click **Email me a link**. When the address is at one of the client's domains, they're emailed a link to finish - their name, job title, phone and password, as with an invite. The link lasts 24 hours.
+They put in their work email address and click **Email Me a Link**. When the address is at one of the client's domains, they're emailed a link to finish - their name, job title, phone and password, as with an invite. The link lasts 24 hours.
 
 ![Creating an account](portal-signup.webp "Create an account: their work email address, and a link to finish")
 
-A verified address is all it takes: they join as a plain contact, who sees the tickets they raise. Every agent is notified, and the client's primary contact is emailed with a link to them. Someone who's already a contact at the client signs up as that contact. **Turn off**, on the Invites tab, stops it again - and stops the links already sent.
+A verified address is all it takes: they join as a plain contact, who sees the tickets they raise. Every agent is notified, and the client's primary contact is emailed with a link to them. Someone who's already a contact at the client signs up as that contact. **Turn Off**, on the Invites tab, stops it again - and stops the links already sent.
 
 > [!NOTE]
 > The page says the same whatever address is put in - it never says whether someone has an account, or which client a domain belongs to. Someone who signs in already is emailed that they have an account, with a link to set a new password. Nothing is sent for an address at no client that lets people, one whose portal access was turned off, or a domain two such clients share. One email per address every 5 minutes, at most 20 sign-ups from one internet address in 10 minutes, and every ask is in the audit log under sign-ins.

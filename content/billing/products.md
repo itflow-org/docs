@@ -92,4 +92,4 @@ When a price goes up or down, change it on the product. Lines already on documen
 - A price it never had looks agreed with the client, so it's left alone unless you tick it.
 - Invoices already sent, and quotes out with clients, keep their prices.
 
-Change the **New price** if you need to - **Catalog price** puts the product's price back - see what each change is worth a month, and click **Update Prices**.
+Change the **New price** if you need to - **Catalog Price** puts the product's price back - see what each change is worth a month, and click **Update Prices**.

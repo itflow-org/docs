@@ -52,17 +52,17 @@ The draft invoice opens. Check it and [send it](/billing/invoices#send-an-invoic
 
 ### Work you won't bill
 
-Tick the tickets that shouldn't be billed - a warranty fix, a goodwill visit - and click **Not billable**. They stop being billable and leave the list.
+Tick the tickets that shouldn't be billed - a warranty fix, a goodwill visit - and click **Not Billable**. They stop being billable and leave the list.
 
 > [!TIP]
-> Want time on a ticket that's still open? Unbilled Time only lists tickets once they're resolved or closed, so the bill reflects finished work. To bill an open ticket now, use **⋮ > Create invoice** on the ticket.
+> Want time on a ticket that's still open? Unbilled Time only lists tickets once they're resolved or closed, so the bill reflects finished work. To bill an open ticket now, use **⋮ > Create Invoice** on the ticket.
 
 ## How the hours are worked out
 
-Each ticket's billed hours start as the time logged on it, rounded the way your admin set in **Admin > Settings > Invoices and billing**: to the nearest 15 minutes, say, or always up, and with the least a ticket bills, such as half an hour. The page says how it's rounding, with a link to change it.
+Each ticket's billed hours start as the time logged on it, rounded the way your admin set in **Admin > Settings > Invoices and Billing**: to the nearest 15 minutes, say, or always up, and with the least a ticket bills, such as half an hour. The page says how it's rounding, with a link to change it.
 
 A ticket with no time logged goes on with no charge unless you type the hours. A client whose contract sets no hourly rate - or that has no contract in force - uses your default rate from **Admin > Settings > Defaults**, and a ticket opened out of hours your default after-hours rate, when you have one.
 
-While a [contract](/billing/contracts#in-force) is in force, its rates apply - a rate of 0 too, for time it covers: each ticket bills at its own rate, an after-hours ticket says so, and the rate is left empty when a client's tickets don't all bill at one rate - type one to bill them all at it. Time covered by a contract's [prepaid hours](/billing/prepaid-hours) never shows here. **Draw now** takes what's waiting from the hours straight away, and a ticket says how much its hours were cut by.
+While a [contract](/billing/contracts#in-force) is in force, its rates apply - a rate of 0 too, for time it covers: each ticket bills at its own rate, an after-hours ticket says so, and the rate is left empty when a client's tickets don't all bill at one rate - type one to bill them all at it. Time covered by a contract's [prepaid hours](/billing/prepaid-hours) never shows here. **Draw Now** takes what's waiting from the hours straight away, and a ticket says how much its hours were cut by.
 
 **Report** opens the **Unbilled Work** report: what invoicing it all would come to, per client and then ticket by ticket, longest waiting first.

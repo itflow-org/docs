@@ -368,7 +368,7 @@ curl -X POST https://itflow.example.com/api/v1/recurring_tickets/create.php \
 
 Each takes `recurring_ticket_id` and `client_id`.
 
-- **Raise** (`raise.php`) raises its ticket now, as **Raise now** does: set up as it says, the client told when ticket emails to clients are on, and the [new-ticket address](/admin/tickets) told. Its next run moves on, so this one takes that one's place. The answer has `ticket_id`, `ticket_reference` and `next_date`.
+- **Raise** (`raise.php`) raises its ticket now, as **Raise Now** does: set up as it says, the client told when ticket emails to clients are on, and the [new-ticket address](/admin/tickets) told. Its next run moves on, so this one takes that one's place. The answer has `ticket_id`, `ticket_reference` and `next_date`.
 - **Status** (`status.php`) takes `status`: `0` pauses it - kept, raising nothing - and `1` resumes it. Runs it missed while paused aren't raised; it picks up from today. The answer has `next_date`.
 - **Delete** needs **Full** on Support. Its tasks and other assets go with it; the tickets it raised stay.
 

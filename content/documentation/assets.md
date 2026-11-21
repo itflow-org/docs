@@ -17,7 +17,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 - The location, assigned contact and status can be changed right in the row.
 - With an [RMM](/admin/rmm) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, or the assets that aren't in it.
 
-To see every client's devices together, use **Across clients > Assets** in the top bar.
+To see every client's devices together, use **Across Clients > Assets** in the top bar.
 
 ## Add an asset
 
@@ -90,7 +90,7 @@ Along the top are the asset's photo or type icon, name, status, type, model and 
 - **Web** (and **SSH** or **RDP**) to connect to it
 - **New** - a ticket, recurring ticket, credential, interface, license, document, file or note for it
 - **Link** - link a service, file or other record that already exists
-- **Copy details** - copies what a vendor's support case asks for as text, ready to paste: make and model, serial number, operating system, its details, IP and MAC address, warranty, when it was bought and installed, the site's address and its rack position. It's in the asset's quick look too.
+- **Copy Details** - copies what a vendor's support case asks for as text, ready to paste: make and model, serial number, operating system, its details, IP and MAC address, warranty, when it was bought and installed, the site's address and its rack position. It's in the asset's quick look too.
 - **Edit**, and **⋮** for **Copy** and **Archive**
 
 The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. **Quick notes** save as you click away.
@@ -122,7 +122,7 @@ Switches, firewalls, access points, modems, NAS units and NVRs show their interf
 
 ![A switch's page with its port map](doc-switch.webp "A 24-port switch with two SFP cages: which ports are connected and which are free")
 
-To set up a whole switch at once, give it its **Ports** and **SFP ports** on the asset form (see [Details by type](#details-by-type)), or use **Add a run of ports** in the New Interface menu - ports 1 to 48, say. Interfaces can also be imported and exported with their VLANs and connections, and the bulk actions on the Interfaces tab set the network, VLANs or type for many ports, set them to DHCP, or disconnect them.
+To set up a whole switch at once, give it its **Ports** and **SFP ports** on the asset form (see [Details by type](#details-by-type)), or use **Add a Run of Ports** in the New Interface menu - ports 1 to 48, say. Interfaces can also be imported and exported with their VLANs and connections, and the bulk actions on the Interfaces tab set the network, VLANs or type for many ports, set them to DHCP, or disconnect them.
 
 ## Status, warranty and lifecycle
 

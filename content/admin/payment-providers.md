@@ -20,7 +20,7 @@ The list shows each provider: whether it's on, **Live** or **Test** (as its keys
 5. Set a **Card limit** if you like: an invoice of that much or more can't be paid by card.
 6. Switch on **Record its fees as expenses** to have its fee on each card payment recorded as an expense a few minutes after Stripe settles the payment, paid to the vendor and under the category you pick - Stripe, and Processing Fee, say. The Payment Provider Fees job in [Admin > Cron](/admin/maintenance#cron) does it every 15 minutes.
 7. To have clients pay that fee instead of you, see [Clients pay the card fee](#card-fee).
-8. Save it. **Check connection** in its menu makes sure the keys work, and **Record fees now** records the fees without waiting for the job.
+8. Save it. **Check Connection** in its menu makes sure the keys work, and **Record Fees Now** records the fees without waiting for the job.
 
 ![Adding Stripe as a payment provider](adm-payment-provider-form.webp "Stripe: its keys, the account payments go into, and fees")
 
@@ -49,11 +49,11 @@ Stripe takes a fee on every card payment. Switch on **Clients pay the card fee**
 The fee is the percent of everything charged, plus the fixed part. On a $100.00 invoice at 2.9% plus $0.30, the client pays $103.30 - Stripe's fee on $103.30 is $3.30, and $100.00 reaches you.
 
 - It applies to every card payment: in the client portal, through an invoice's link, by autopay, and when your team uses **Charge Saved Card**.
-- Clients see the fee before they pay - on **Pay invoices** and the payment page in the portal, and on the page an invoice's link opens. **Cards & autopay** in the portal says autopay adds it too.
+- Clients see the fee before they pay - on **Pay Invoices** and the payment page in the portal, and on the page an invoice's link opens. **Cards & Autopay** in the portal says autopay adds it too.
 - When the payment goes through, the fee goes on the invoice as a **Card Fee** line, with no tax, and the invoice is paid in full.
 - One payment for several invoices has one fee, shared over them.
 - With **Record its fees as expenses** on too, the card fee is income on the invoice and Stripe's fee an expense, so they cancel out in your books.
-- **Refund through Stripe** on the payment gives back the fee with the rest, and takes its Card Fee line off the invoice.
+- **Refund Through Stripe** on the payment gives back the fee with the rest, and takes its Card Fee line off the invoice.
 - A client who shouldn't pay it can be let off with **No card fee** on the Billing tab of their details - see [Clients](/clients/clients#billing-details).
 
 > [!WARNING]

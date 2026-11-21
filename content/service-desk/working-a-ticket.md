@@ -20,7 +20,7 @@ On the right is the one action for where the ticket is:
 - **Reopen** and **Close** once it's resolved.
 - **Invoice** once a billable ticket is done.
 
-The **⋮** menu has the rest: **Log a trip**, **Merge into another ticket**, **[Link related tickets](#related)**, **Move to another client**, **Copy as a new ticket**, **Apply a template**, **Create quote**, **Create invoice** and **Delete ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write up as a document** - see [Using AI](/getting-started/ai). **Write up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
+The **⋮** menu has the rest: **Log a Trip**, **Merge into Another Ticket**, **[Link related tickets](#related)**, **Move to Another Client**, **Copy as a New Ticket**, **Apply a Template**, **Create Quote**, **Create Invoice** and **Delete Ticket**. With AI set up, it also has **Summarize with AI**, **Triage with AI** and **Write Up as a Document** - see [Using AI](/getting-started/ai). **Write Up for the Knowledge Base** starts a draft article from the ticket - see [Knowledge Base](/service-desk/knowledge-base#write-up).
 
 ![The ticket's menu](sd-ticket-menu.webp "The ticket's ⋮ menu")
 
@@ -52,7 +52,7 @@ Pick one and the reply box opens, with a line saying exactly who will see it. An
 
 ![The reply box with Email reply picked](sd-reply.webp "The reply box: who will see it, the To line, the editor, files, the time worked and when, and the status after it")
 
-1. Type your reply. To use a canned response, click **Canned response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses). To send a how-to, click **Knowledge Base** - see [Knowledge Base](/service-desk/knowledge-base#tickets).
+1. Type your reply. To use a canned response, click **Canned Response** or type <kbd>/</kbd> in the reply. See [Canned responses](/service-desk/canned-responses). To send a how-to, click **Knowledge Base** - see [Knowledge Base](/service-desk/knowledge-base#tickets).
 2. Add files under **Attach files** if you need to, or drop them onto the reply box.
 3. Pick the **Status after this** - for example, set it to On Hold while you wait for a part.
 4. Enter the **Time worked**, or click ▶ to start a timer and let it count while you work. **+15m**, **+30m** and **+1h** add time in one click - the timer stops at the new total. **When it was worked** fills in from the timer - the work ends now - or type the date, start and end yourself. See [When the time was worked](#work-times).
@@ -92,7 +92,7 @@ Timers are kept in your browser, so the list shows the ones in this browser on t
 
 When the phone rings and you don't know yet whether it needs a ticket, open the stopwatch and click ▶ beside **A timer without a ticket**. It counts like a ticket's timer, and can be paused. Once you know where the time goes:
 
-- **New ticket** opens [Quick ticket](/service-desk/new-ticket#quick-ticket). The new ticket's timer carries on from yours - picking one of the contact's open tickets there instead adds the time to that one.
+- **New Ticket** opens [Quick ticket](/service-desk/new-ticket#quick-ticket). The new ticket's timer carries on from yours - picking one of the contact's open tickets there instead adds the time to that one.
 - **Add to a ticket** lists your own open tickets - type a number, subject or client to find another. Click one to add the time to its timer and open it.
 
 ![Adding the time without a ticket to an open ticket](sd-ticket-timer-find.webp "Add to a ticket: type to find the ticket the time goes on")
@@ -152,7 +152,7 @@ A reply that came in by email keeps the email as it arrived, as **Original-parse
 
 Each reply's **⋮** has **Edit**, **Redact** (to blank out something that shouldn't be kept, such as a password the client sent) and **Archive**. Editing an email reply changes it on the ticket and in the portal - the people it was emailed to keep the email as it was sent.
 
-A client's reply also has **Split into a new ticket** - for when they raise a second problem in a reply. Give it a subject, and pick its priority and who it's assigned to. The new ticket is for the same client and the person who wrote the reply, with what they wrote as its details and their attachments. The reply leaves this ticket, and a note on each ticket points to the other. The client is told about the new ticket as for any other.
+A client's reply also has **Split into a New Ticket** - for when they raise a second problem in a reply. Give it a subject, and pick its priority and who it's assigned to. The new ticket is for the same client and the person who wrote the reply, with what they wrote as its details and their attachments. The reply leaves this ticket, and a note on each ticket points to the other. The client is told about the new ticket as for any other.
 
 **Edit** changes a note's time and when it was worked too: change the times and the time worked follows, or change only the time worked and the start moves. Notes from before this, and from bulk replies and the API, ended when they were posted.
 
@@ -173,8 +173,8 @@ Tasks are the steps to the job. They come from the ticket's template, or you add
 
 - Type in **Add a task** and press <kbd>Enter</kbd>.
 - Tick a task when it's done. Drag tasks by their handle to reorder them.
-- A task's **⋮** has **Require approval**: the task waits until someone approves it - **Our team** (a technician you pick) or **The client** (a contact, who approves it in the client portal or by email).
-- The menu on the card has **Mark all complete** and **Mark all incomplete**.
+- A task's **⋮** has **Require Approval**: the task waits until someone approves it - **Our team** (a technician you pick) or **The client** (a contact, who approves it in the client portal or by email).
+- The menu on the card has **Mark All Complete** and **Mark All Incomplete**.
 
 The ticket can't be resolved until its tasks are done.
 
@@ -190,7 +190,7 @@ The **Linked** card shows what the ticket is about and who's on it:
 - **Services** - the client services it affects, directly or through its asset.
 - **Watchers** - extra people copied on every emailed reply, such as the client's IT contact.
 
-Use the **+** on the card to **Change assets**, **Change vendor**, **Change project**, **Link a service** or **Add watcher**.
+Use the **+** on the card to **Change assets**, **Change vendor**, **Change project**, **Link a service** or **Add Watcher**.
 
 ## Fill-ins
 
@@ -221,7 +221,7 @@ A ticket can have more than one technician on it. The one it's **Assigned to** s
 
 They're emailed their booking with a calendar invite of its own, so it never replaces the lead's - or, when they aren't booked, that they're on the ticket. A helper finds the ticket under **Mine** and on their dashboard, has their booking on the [calendar](/service-desk/calendar) and in their calendar link, and is emailed the client's replies as the lead is. The client is only ever told about the lead's booking.
 
-Click a helper in the **Details** card to change their booking, or **Take off** to take them off the ticket - a booking they had is cancelled, and they're emailed the cancellation. If a helper becomes the one it's assigned to, they're the lead from then on.
+Click a helper in the **Details** card to change their booking, or **Take Off** to take them off the ticket - a booking they had is cancelled, and they're emailed the cancellation. If a helper becomes the one it's assigned to, they're the lead from then on.
 
 ## Resolve and close
 
@@ -236,7 +236,7 @@ Click **Close** to close it straight away. Closing is final: a closed ticket can
 
 ### When the client never answers {#no-response}
 
-For a client who hasn't replied after several tries, use the arrow beside **Resolve** and pick **Resolve - no response**. The window has your admin's message for this, filled in for the ticket - change it if you like, then click **Send and resolve**.
+For a client who hasn't replied after several tries, use the arrow beside **Resolve** and pick **Resolve - No Response**. The window has your admin's message for this, filled in for the ticket - change it if you like, then click **Send and resolve**.
 
 - The message goes on the ticket as a public note, and to the contact and watchers in place of the usual "resolved" email, when client emails are on.
 - The ticket is resolved, and closes on its own as usual - without asking the client how you did.
@@ -244,8 +244,8 @@ For a client who hasn't replied after several tries, use the arrow beside **Reso
 
 ## Copy a ticket or apply a template {#copy}
 
-- **Copy as a new ticket** opens **New Ticket** with this ticket's subject, details, priority, category, billing, contact, asset and tasks, for the same client. Change anything first - pick another client for the same job somewhere else.
-- **Apply a template** puts a ticket template on a ticket that's already open. Pick the template: its tasks are listed for you to change, and it asks its [fill-ins](/service-desk/new-ticket#fill-ins). **Apply** adds the tasks after the ticket's own, and its tags and due time where the ticket has none. The ticket's subject, details, category and priority stay as they are.
+- **Copy as a New Ticket** opens **New Ticket** with this ticket's subject, details, priority, category, billing, contact, asset and tasks, for the same client. Change anything first - pick another client for the same job somewhere else.
+- **Apply a Template** puts a ticket template on a ticket that's already open. Pick the template: its tasks are listed for you to change, and it asks its [fill-ins](/service-desk/new-ticket#fill-ins). **Apply** adds the tasks after the ticket's own, and its tags and due time where the ticket has none. The ticket's subject, details, category and priority stay as they are.
 
 ## Related tickets {#related}
 
@@ -257,7 +257,7 @@ Link tickets that are about the same thing - one outage at several clients, or a
 
 ![The related tickets list with two tickets ticked](sd-ticket-link.webp "Link related tickets: tick the others, any client's")
 
-Linking a ticket to one that's already related to others brings it in with them all. To link several at once, tick them on the [tickets list](/service-desk/tickets#bulk) and use **Bulk Action** > **Link together**.
+Linking a ticket to one that's already related to others brings it in with them all. To link several at once, tick them on the [tickets list](/service-desk/tickets#bulk) and use **Bulk Action** > **Link Together**.
 
 The **Related** card on each ticket lists the others, with their client, status and technician:
 
@@ -271,13 +271,13 @@ The [tickets list](/service-desk/tickets) shows a link and a count on related ti
 
 ## Merge, move and delete
 
-- **Merge into another ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
-- **Move to another client** - for a ticket raised under the wrong client. Watchers who aren't on your team or contacts at the new client come off it, and its [To line](#email-to) starts again. The links to the ticket, and to its task approvals, already emailed to the old client stop working - the new client gets a working link with the next email.
-- **Delete ticket** - only for tickets raised by mistake. Normally resolve or close them instead.
+- **Merge into Another Ticket** - when two tickets are about the same thing. Pick the ticket to keep and give a reason; this ticket is closed and can move its replies across, with their attachments.
+- **Move to Another Client** - for a ticket raised under the wrong client. Watchers who aren't on your team or contacts at the new client come off it, and its [To line](#email-to) starts again. The links to the ticket, and to its task approvals, already emailed to the old client stop working - the new client gets a working link with the next email.
+- **Delete Ticket** - only for tickets raised by mistake. Normally resolve or close them instead.
 
 ## Billing a ticket
 
-Set **Billing** in the Details card to **Billable** for work the client pays for. Once it's resolved, the ticket waits in [Unbilled time](/billing/unbilled-time) with everything else to bill - or click **Invoice** on the ticket to bill it on its own. The Invoice window shows the time each technician logged, the hours that bills, and the rate - the client's contract's, or your default. **Create quote** in the menu starts a quote from the ticket, for work that needs agreeing first.
+Set **Billing** in the Details card to **Billable** for work the client pays for. Once it's resolved, the ticket waits in [Unbilled time](/billing/unbilled-time) with everything else to bill - or click **Invoice** on the ticket to bill it on its own. The Invoice window shows the time each technician logged, the hours that bills, and the rate - the client's contract's, or your default. **Create Quote** in the menu starts a quote from the ticket, for work that needs agreeing first.
 
 ## SLAs
 

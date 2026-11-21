@@ -43,8 +43,8 @@ The **Address plan** tab lists, in order:
 
 It flags problems: two devices with the same address, an address in the DHCP pool that's set as fixed, a MAC address that doesn't match, and addresses outside the subnet.
 
-- **Next free** at the top fills in the next free address. Click **+** beside it to document it.
-- **Document an address** adds one address, or **a run of addresses** - up to 256 at a time.
+- **Next Free** at the top fills in the next free address. Click **+** beside it to document it.
+- **Document an Address** adds one address, or **a run of addresses** - up to 256 at a time.
 - **Free addresses** switches the free ranges on or off.
 
 The **Devices** tab lists every device with an interface on the network.
@@ -60,7 +60,7 @@ When you document an address, say **What it is**:
 | **Held back** | An address kept free on purpose, for something coming later |
 | **Floating** | An address that moves between devices, such as a cluster or failover address |
 
-Tick addresses and use **Selected** to change their kind or delete them. **Import addresses** and **Export addresses**, in the network's menu, take a CSV spreadsheet.
+Tick addresses and use **Selected** to change their kind or delete them. **Import Addresses** and **Export Addresses**, in the network's menu, take a CSV spreadsheet.
 
 > [!TIP]
 > Give a device its address on its own page, as an [interface](/documentation/assets#network-interfaces), rather than documenting it on the network. That way the network, the device and the port it's plugged into all stay in step.

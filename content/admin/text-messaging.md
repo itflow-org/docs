@@ -27,11 +27,11 @@ You need, in [Skyetel's portal](https://portal.skyetel.com):
 3. Click **Create**. If anything is wrong, it says so beside the field, and nothing is saved until it's right.
 4. Copy the address in **Texts come back to** with the copy button.
 5. In Skyetel's portal, open the number, then its **SMS** tab. Send texts to a **Callback URL**, paste the address, and pick **POST**.
-6. On the provider's menu, click **Send a test text** and send one to your own mobile.
+6. On the provider's menu, click **Send a Test Text** and send one to your own mobile.
 7. Text the number back from your mobile. It shows in **Texts > Unmatched** on the agent side, as your mobile isn't a contact.
 
 > [!NOTE]
-> The address carries a key, so only Skyetel can post texts to it. If it gets out, use **New inbound address** on the provider's menu, then paste the new one into Skyetel's portal. The old one stops working at once.
+> The address carries a key, so only Skyetel can post texts to it. If it gets out, use **New Inbound Address** on the provider's menu, then paste the new one into Skyetel's portal. The old one stops working at once.
 
 ## The provider
 
@@ -40,9 +40,9 @@ The list shows the provider, whether it's on, its number, the address texts come
 From a provider's menu:
 
 - **Edit** - its number, SID and secret. Leave the secret empty to keep the saved one.
-- **Send a test text** - to any number, through Skyetel, for real.
-- **New inbound address** - a new key for the address texts come back to.
-- **Turn off** - nothing is texted, and texts to the number aren't taken in. Texts waiting to go wait until it's on again.
+- **Send a Test Text** - to any number, through Skyetel, for real.
+- **New Inbound Address** - a new key for the address texts come back to.
+- **Turn Off** - nothing is texted, and texts to the number aren't taken in. Texts waiting to go wait until it's on again.
 - **Delete** - nothing more is texted, and texts to the number stop reaching ITFlow. The texts already sent and received stay in the log and on their tickets.
 
 ## Texts to clients {#texts-to-clients}
@@ -68,7 +68,7 @@ A contact gets these texts once they've agreed, and has a mobile number. There a
 
 - **On their contact** - on the **Roles** tab, turn on **Texts**, when they've told you they want them.
 - **Ask them by text** - on the contact's page, next to **Texts**. They're texted asking whether texts are all right, and replying **YES** within a week turns them on.
-- **In the client portal** - under **Your account**, they turn on **Text me about my tickets, visits and invoices**.
+- **In the client portal** - under **Your Account**, they turn on **Text me about my tickets, visits and invoices**.
 
 The contact's page shows when and how they agreed, as a record. If they replied STOP, it says so, and nothing is texted until they text START or turn texts on in the portal.
 
@@ -84,7 +84,7 @@ Carriers expect texts like these answered, and ITFlow answers them for you:
 
 Each is noted on the ticket they're texting on.
 
-**Opted out and blocked** lists the numbers that replied STOP, and the ones an agent marked as spam. **Opt back in** is for someone who asked for texts again by phone, email or in person. **Unblock** lets a number's texts come in like any other.
+**Opted Out and Blocked** lists the numbers that replied STOP, and the ones an agent marked as spam. **Opt Back In** is for someone who asked for texts again by phone, email or in person. **Unblock** lets a number's texts come in like any other.
 
 ## Every text sent and received {#log}
 

@@ -16,7 +16,7 @@ Credentials are the logins you hold for a client: the firewall admin, the Micros
 - **For** shows the device, vendor, service or license the login is for.
 - **Changed** shows how old the password is - green when recent, amber, then red when it's due for a change - and when it was last used.
 
-To see every client's credentials, use **Across clients > Credentials** in the top bar.
+To see every client's credentials, use **Across Clients > Credentials** in the top bar.
 
 ## Add a credential
 
@@ -49,13 +49,13 @@ Click a credential to open its quick look, with the username, the password (hidd
 
 ## Change a password
 
-When you change a password on the system itself, record it in ITFlow with **Change password** (in the row's menu or the quick look) - it's quicker than editing the whole credential. It saves the new password, dates the change so the credential's age starts again, and notes it in the credential's history. A new password typed in **Edit** is dated the same way. Either way, the password it replaces is kept - see [Earlier passwords](#earlier).
+When you change a password on the system itself, record it in ITFlow with **Change Password** (in the row's menu or the quick look) - it's quicker than editing the whole credential. It saves the new password, dates the change so the credential's age starts again, and notes it in the credential's history. A new password typed in **Edit** is dated the same way. Either way, the password it replaces is kept - see [Earlier passwords](#earlier).
 
-Passwords not changed in 90 days show on the client's overview and on the **Not changed in 90 days** tab. **Rotation report**, in the New Credential menu, shows every client's passwords by age.
+Passwords not changed in 90 days show on the client's overview and on the **Not changed in 90 days** tab. **Rotation Report**, in the New Credential menu, shows every client's passwords by age.
 
 ### Earlier passwords {#earlier}
 
-When a password is changed - with **Change password**, **Edit**, an import or the API - the one it had is kept, still encrypted. **Earlier passwords**, in the credential's quick look, lists them newest first, with when each was in use and who changed it.
+When a password is changed - with **Change Password**, **Edit**, an import or the API - the one it had is kept, still encrypted. **Earlier passwords**, in the credential's quick look, lists them newest first, with when each was in use and who changed it.
 
 ![A credential's quick look with the Reused password warning and an earlier password shown](doc-credential-earlier.webp "Earlier passwords: the one before, shown with the eye, and Put back")
 
@@ -67,7 +67,7 @@ The newest ten are kept for each credential. They go when the credential is dele
 
 ## Reused passwords {#reused}
 
-The **Reused password** tab picks out the logins whose password another of the same client's logins also has, each marked **Reused** - hover it to see which. A credential's quick look names the others, with a link to each. If one of them leaks, so do the others: give each its own with **Change password**.
+The **Reused password** tab picks out the logins whose password another of the same client's logins also has, each marked **Reused** - hover it to see which. A credential's quick look names the others, with a link to each. If one of them leaks, so do the others: give each its own with **Change Password**.
 
 ITFlow compares the passwords as the page opens, using your vault key, and keeps nothing about them. Archived credentials, and logins of different clients, aren't compared.
 
@@ -75,4 +75,4 @@ ITFlow compares the passwords as the page opens, using your vault key, and keeps
 
 Never email a password. Use **Share** (in the row's menu or the quick look) to send it as a link that works for a set time, can be opened a set number of times, and can ask for a passphrase or a code first. See [Shared links](/documentation/shared-links).
 
-To get a login *from* the client - their domain registrar, say - use **Ask the client for a login** in the New Credential menu. They get a form to fill in, and what they send waits in Shared Links for you to save.
+To get a login *from* the client - their domain registrar, say - use **Ask the Client for a Login** in the New Credential menu. They get a form to fill in, and what they send waits in Shared Links for you to save.

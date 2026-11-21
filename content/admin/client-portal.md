@@ -23,7 +23,7 @@ They prove their address with an emailed link, and join as a plain contact who s
 
 ## Signing in with Microsoft 365
 
-**Admin > Settings > Single sign-on** lets contacts sign in to the portal with their Microsoft 365 work account, instead of a password.
+**Admin > Settings > Single Sign-on** lets contacts sign in to the portal with their Microsoft 365 work account, instead of a password.
 
 ![Single sign-on](adm-sso.webp "Single sign-on: contacts sign in with their Microsoft 365 account")
 

@@ -9,7 +9,7 @@ A document template is the starting point for a document every client needs: a n
 
 ![Document templates](adm-document-templates.webp "Document templates: what each is for, how often it's used, and whether its documents are reviewed")
 
-**Starter document templates**, in the menu beside **New Document Template**, adds a library of them. Agents use them from a client's Files - see [Files and documents](/documentation/files-and-documents#start-from-a-template).
+**Starter Document Templates**, in the menu beside **New Document Template**, adds a library of them. Agents use them from a client's Files - see [Files and documents](/documentation/files-and-documents#start-from-a-template).
 
 ## A template's page
 
@@ -32,9 +32,9 @@ Set **Reviewed every** so many months to have its documents come up for review. 
 
 ### Making documents
 
-**New document for a client** makes one now. **For several clients** makes one for each client you pick - good for rolling a new template out to everyone who should have it.
+**New Document for a Client** makes one now. **For Several Clients** makes one for each client you pick - good for rolling a new template out to everyone who should have it.
 
 **Edit**, and **⋮** with **Copy**, **Archive** (documents made from it stay) and **Delete**.
 
 > [!TIP]
-> **How they are used**, in the menu beside **New Document Template**, shows how often each template is used, which clients that should have a document from it do, and the documents due a review.
+> **How They Are Used**, in the menu beside **New Document Template**, shows how often each template is used, which clients that should have a document from it do, and the documents due a review.

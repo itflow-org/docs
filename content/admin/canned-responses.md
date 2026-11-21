@@ -36,5 +36,5 @@ On a ticket raised from a [ticket template](/admin/ticket-templates#fill-ins), i
 - **Copy** a response to start a similar one.
 - **Archive** one you no longer want offered.
 - **Import** and **Export** move them to and from a file.
-- **Starter canned responses** adds a library of common ones - see [Maintenance](/admin/maintenance#starter-content).
-- **How they are used** shows which responses go into replies, on how many tickets and by whom - and the ones nobody uses.
+- **Starter Canned Responses** adds a library of common ones - see [Maintenance](/admin/maintenance#starter-content).
+- **How They Are Used** shows which responses go into replies, on how many tickets and by whom - and the ones nobody uses.

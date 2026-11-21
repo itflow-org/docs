@@ -80,7 +80,7 @@ Drag a line by its handle to move it. Its **⋮** menu has **Edit**, which has e
 The **Notes** under the lines are printed on the invoice - payment details, terms, a thank you.
 
 > [!TIP]
-> On a billable ticket, **⋮ > Create invoice** bills that one ticket's time straight away - on a new draft invoice, or added to one of the client's drafts. With AI set up, **Write it** describes the work done for the client, from the ticket's replies and notes.
+> On a billable ticket, **⋮ > Create Invoice** bills that one ticket's time straight away - on a new draft invoice, or added to one of the client's drafts. With AI set up, **Write It** describes the work done for the client, from the ticket's replies and notes.
 
 ## The invoice's page
 
@@ -163,4 +163,4 @@ Neither copies the **Card Fee** line of an invoice paid by card - that [card fee
 > [!WARNING]
 > Cancel an invoice that went to the client rather than deleting it, so your records still show it. Delete is for a draft made by mistake.
 
-Your admin sets invoice numbering, the footer printed on every invoice, and late fees in **Admin > Settings > Invoices and billing**.
+Your admin sets invoice numbering, the footer printed on every invoice, and late fees in **Admin > Settings > Invoices and Billing**.

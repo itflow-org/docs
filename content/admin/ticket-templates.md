@@ -9,7 +9,7 @@ A ticket template is a ticket you raise again and again, set up once: its subjec
 
 ![Ticket templates](adm-ticket-templates.webp "Ticket templates: what each sets up, its tasks and how often it's used")
 
-Each row shows what the template sets up, how many tasks it has and their time, and how often it's been used. **Starter templates**, in the menu beside **New Ticket Template**, adds a library of common MSP templates - see [Maintenance](/admin/maintenance#starter-content).
+Each row shows what the template sets up, how many tasks it has and their time, and how often it's been used. **Starter Templates**, in the menu beside **New Ticket Template**, adds a library of common MSP templates - see [Maintenance](/admin/maintenance#starter-content).
 
 ## A template's page
 
@@ -39,7 +39,7 @@ The tasks each ticket gets, in order, with the time each takes. A task can depen
 
 Offer the template to clients as a request form. Give it a **Title** and description in the client's words - "Onboard a new employee" - an icon, and pick **Who** sees it (everyone, or primary and technical contacts only) and **At** which clients (every client, or some). It asks the client its fill-ins that aren't for agents only. See [Tickets and requests](/portal/tickets#request-forms).
 
-**New ticket from it** raises a ticket now. **⋮** has **Copy**, **Archive** (it stays on the recurring tickets and project templates using it, but isn't offered for new tickets) and **Delete**.
+**New Ticket from It** raises a ticket now. **⋮** has **Copy**, **Archive** (it stays on the recurring tickets and project templates using it, but isn't offered for new tickets) and **Delete**.
 
 ## Project templates
 
@@ -50,4 +50,4 @@ A project template is a plan a new project can start from - onboarding a client,
 Open **Admin > Templates > Projects**, click **New Project Template**, then add the ticket templates in order. When an agent starts a project from it, the project gets those tickets, ready to work. See [Projects](/service-desk/projects).
 
 > [!TIP]
-> **How they are used**, in the menu beside **New Ticket Template**, is a report of which templates are used, by whom - agents, the portal, schedules or projects - how long their tickets take, and the ones nobody uses.
+> **How They Are Used**, in the menu beside **New Ticket Template**, is a report of which templates are used, by whom - agents, the portal, schedules or projects - how long their tickets take, and the ones nobody uses.

@@ -13,10 +13,10 @@ The number beside **Texts** in the menu is the texts in **Unmatched**, plus the 
 
 Texts from numbers that aren't a contact's.
 
-- **Open ticket** - pick the client and contact, and give it a subject. Every unmatched text from the number in the last two weeks goes on the ticket, with any photos. What the number texts next goes on it too. Leave **Save the number as their mobile** ticked, so their next text finds them. **Assign it to me** is on by default.
+- **Open Ticket** - pick the client and contact, and give it a subject. Every unmatched text from the number in the last two weeks goes on the ticket, with any photos. What the number texts next goes on it too. Leave **Save the number as their mobile** ticked, so their next text finds them. **Assign it to me** is on by default.
 - **Dismiss** - it leaves the list.
-- **Name this number** - a name shown with it in Texts and the text log.
-- **Mark as spam** - blocks the number. Its texts here move to **Spam**, and what it sends later goes straight there.
+- **Name This Number** - a name shown with it in Texts and the text log.
+- **Mark as Spam** - blocks the number. Its texts here move to **Spam**, and what it sends later goes straight there.
 
 > [!TIP]
 > An admin can have texts from unknown numbers open tickets with no client instead, with **From unknown numbers too** in [Text to ticket](/admin/tickets#text-to-ticket). Codes and spam still wait here.
@@ -31,7 +31,7 @@ Verification and MFA codes texted to your number, such as Microsoft, Google or D
 - A code's words are wiped a day after it came.
 - The list comes up to date by itself when a new code lands.
 
-**Name this sender** puts a name such as "Microsoft" on a short code, so it's clear which code is which. If something here isn't a code, **Not a code** moves it to Unmatched, where everyone who works tickets can read it.
+**Name This Sender** puts a name such as "Microsoft" on a short code, so it's clear which code is which. If something here isn't a code, **Not a Code** moves it to Unmatched, where everyone who works tickets can read it.
 
 > [!NOTE]
 > Some services won't text codes to a VoIP number like Skyetel's, so a code may never arrive. Skyetel's own advice is not to rely on its numbers for other services' sign-in codes.
@@ -40,5 +40,5 @@ Verification and MFA codes texted to your number, such as Microsoft, Google or D
 
 Texts from blocked numbers, and ones that look like bait, such as shortened links or "your package couldn't be delivered". They're deleted after 30 days.
 
-- **Not spam** - unblocks the number and moves its texts to Unmatched.
+- **Not Spam** - unblocks the number and moves its texts to Unmatched.
 - **Delete** - takes it off now.

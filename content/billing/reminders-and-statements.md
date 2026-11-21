@@ -54,4 +54,4 @@ To send one, open the client's **Invoices**, use the arrow beside **New Invoice*
 Your admin can also have a statement emailed to every client with a balance on a set day each month.
 
 > [!NOTE]
-> The reminder schedule, late fees and monthly statements are set in **Admin > Settings > Invoices and billing**, along with whether invoice, reminder and statement emails attach the PDF. Reminders and statements need outgoing mail set up.
+> The reminder schedule, late fees and monthly statements are set in **Admin > Settings > Invoices and Billing**, along with whether invoice, reminder and statement emails attach the PDF. Reminders and statements need outgoing mail set up.

@@ -29,16 +29,16 @@ The text is replaced in one step, so <kbd>Ctrl</kbd>+<kbd>Z</kbd> puts back what
 
 From the ticket's **⋮** menu:
 
-- **Summarize with AI** - the problem, what's been done, where it stands and what's next, so you can pick a ticket up cold. **Save as a note** keeps it on the ticket.
+- **Summarize with AI** - the problem, what's been done, where it stands and what's next, so you can pick a ticket up cold. **Save as a Note** keeps it on the ticket.
 - **Triage with AI** - suggests a category and priority, for you to apply or dismiss. Your admin can have new tickets triaged as they come in.
-- **Write up as a document** - turns a solved ticket into a how-to for the client's documentation, for next time.
-- **Write up for the Knowledge Base** - turns a ticket into a draft [Knowledge Base](/service-desk/knowledge-base#write-up) article for any client, with the client's details left out.
+- **Write Up as a Document** - turns a solved ticket into a how-to for the client's documentation, for next time.
+- **Write Up for the Knowledge Base** - turns a ticket into a draft [Knowledge Base](/service-desk/knowledge-base#write-up) article for any client, with the client's details left out.
 
 ![An AI summary of a ticket](ai-summary.webp "Summarize with AI: what the problem is, what's been done, and what's next")
 
 ## Before a call or a review
 
-**Briefing** on a client's overview reads what ITFlow has on them - open tickets and what keeps coming up, renewals, money owed - and writes a one-page briefing, with things worth bringing up. Pick **Last 30 days**, **Last quarter** or **Last year**. **Save as a document** keeps it in the client's files.
+**Briefing** on a client's overview reads what ITFlow has on them - open tickets and what keeps coming up, renewals, money owed - and writes a one-page briefing, with things worth bringing up. Pick **Last 30 days**, **Last quarter** or **Last year**. **Save as a Document** keeps it in the client's files.
 
 ![A client briefing](ai-briefing.webp "Briefing: how things stand with a client, before a call, a visit or a quarterly review")
 
@@ -50,13 +50,13 @@ From the ticket's **⋮** menu:
 
 ## Quotes and invoices
 
-**Write it with AI**, under the lines of a draft quote or invoice, turns a sentence such as "three new laptops for the new starters, set up and joined to the domain" into lines. It picks items from your catalog, adds labor in hours at the client's rate, and sizes per-user lines from the client's numbers.
+**Write It with AI**, under the lines of a draft quote or invoice, turns a sentence such as "three new laptops for the new starters, set up and joined to the domain" into lines. It picks items from your catalog, adds labor in hours at the client's rate, and sizes per-user lines from the client's numbers.
 
 ![Writing a quote's lines with AI](ai-quote-writer.webp "Write it with AI: lines from your catalog and labor at the client's rate, to check before adding")
 
 Prices always come from your catalog and the client's rate - AI never sets one. It tells you what it guessed, and what to confirm before you send. Change or untick any lines, and add them to the quote or invoice.
 
-When you bill a ticket with **Create invoice**, **Write it** describes the work done in plain words for the client.
+When you bill a ticket with **Create Invoice**, **Write It** describes the work done in plain words for the client.
 
 ## What it sees
 

@@ -35,7 +35,7 @@ Taking a line out again keeps what's there. An instance stays connected but stop
 
 The instance needs to be on the same version of ITFlow or newer, with cron running - it checks in from cron. It calls your ITFlow at its address, so that has to be reachable from where the instance is; nothing ever connects to the instance, so it can sit behind a firewall.
 
-Lost the code, or moving the instance to a new server? **New connection code** in its menu makes another; the old one stops working, and whatever connects with the new one takes the place of what was connected.
+Lost the code, or moving the instance to a new server? **New Connection Code** in its menu makes another; the old one stops working, and whatever connects with the new one takes the place of what was connected.
 
 ### Set up a new install and connect it in one go {#set-up-new}
 
@@ -71,7 +71,7 @@ You're notified when an instance stops checking in for ten minutes - or, for a n
 
 ## Update instances
 
-When an update is waiting, **Update to** on its page (or **Update now** in its menu in the list) updates it: it picks the request up at its next check-in, then updates its files and database in the background, the same as **Update ITFlow** on its own [Update page](/admin/maintenance#update). The page shows it updating and refreshes itself until it's done. **Check for updates** in its menu has it check straight away.
+When an update is waiting, **Update to** on its page (or **Update Now** in its menu in the list) updates it: it picks the request up at its next check-in, then updates its files and database in the background, the same as **Update ITFlow** on its own [Update page](/admin/maintenance#update). The page shows it updating and refreshes itself until it's done. **Check for Updates** in its menu has it check straight away.
 
 Or let it update itself: on **Seats & updates**, set **Updates** to **Automatically** and how many days to **Wait** after a release comes out. A release with security fixes goes on at its next check-in, without waiting. If an automatic update fails, it isn't tried again for six hours.
 
@@ -99,7 +99,7 @@ Add a **Message** to say why - "Your subscription has ended - call us to carry o
 
 ## Sign in as support
 
-**Sign in as support** opens the instance in a new tab, signed in as its support user - an admin, so you can see what its people see and put things right.
+**Sign In as Support** opens the instance in a new tab, signed in as its support user - an admin, so you can see what its people see and put things right.
 
 - No password is involved: the link is signed by your ITFlow, works once, and only for two minutes.
 - The session lasts two hours. A banner across every page says it's a support session, from whom, and when it ends.
@@ -118,7 +118,7 @@ Add a **Message** to say why - "Your subscription has ended - call us to carry o
 
 ![Managed By](adm-managed-by.webp "Managed By: who manages this ITFlow, what they set, and what it tells them")
 
-**Check in now** checks in straight away rather than waiting for cron - after the manager makes it active again, say. **Disconnect** stops it being managed: the manager is told, its support sign-ins stop, and what it set comes off.
+**Check In Now** checks in straight away rather than waiting for cron - after the manager makes it active again, say. **Disconnect** stops it being managed: the manager is told, its support sign-ins stop, and what it set comes off.
 
 > [!NOTE]
 > For an ITFlow you host for a customer, add `$config_manager_required = true;` to its `config.php`. It turns **Managed By** on, as `$config_enable_managed_by` does, and its admins then can't disconnect it.

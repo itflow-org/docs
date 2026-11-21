@@ -15,7 +15,7 @@ A trip is a drive: to a client's site for a ticket, to the supplier to collect p
 
 ## Log a trip
 
-The quickest way is from the ticket: its **⋮** menu has **Log a trip**, and so does its **Trips** card. A client's location has **Log Trip**. Or go to **Finance > Trips** and click **New Trip**.
+The quickest way is from the ticket: its **⋮** menu has **Log a Trip**, and so does its **Trips** card. A client's location has **Log Trip**. Or go to **Finance > Trips** and click **New Trip**.
 
 1. Check the **Date** and the **Driver**. You log your own trips; agents with Financial access can log them for anyone.
 2. Pick the **Client** and **Their site** - or **Our own - not for a client** for your own errands. Pick **For the ticket** to link it to a ticket.
@@ -63,4 +63,4 @@ Trips in an agent's own vehicle add up under **To pay back**, at your mileage ra
 The trips become a mileage expense the agent paid personally, under the client each was for, so each client's costs include the driving. If you didn't pay it back straight away, pay it later from the expense with **Reimburse** - see [Expenses](/finance/expenses).
 
 > [!TIP]
-> **Mileage Report**, in the menu beside **New Trip**, totals the miles for a period by driver and by client, with what they come to at a rate you can change - your tax-deduction rate, say. **Mileage Rates** takes your admin to where the rates are set, in **Admin > Settings > Invoices and billing**.
+> **Mileage Report**, in the menu beside **New Trip**, totals the miles for a period by driver and by client, with what they come to at a rate you can change - your tax-deduction rate, say. **Mileage Rates** takes your admin to where the rates are set, in **Admin > Settings > Invoices and Billing**.

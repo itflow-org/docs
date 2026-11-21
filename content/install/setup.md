@@ -23,7 +23,7 @@ Setup checks the server against what ITFlow needs.
 - **Required** checks must pass before setup can carry on: the PHP version, its extensions, and being able to write to ITFlow's folder and its `uploads` folder.
 - **Recommended** checks are worth fixing, now or later: HTTPS, a domain name, room for 500 MB uploads, the zip extension, and git for updates.
 
-Each check that fails says how to fix it. Fix it, then click **Check again**. A missing PHP extension, for example, is installed with `apt install php-intl` followed by restarting the web server.
+Each check that fails says how to fix it. Fix it, then click **Check Again**. A missing PHP extension, for example, is installed with `apt install php-intl` followed by restarting the web server.
 
 ## Database {#database}
 
@@ -54,7 +54,7 @@ Your company, as it appears on invoices, quotes and emails.
 
 ![The Company step, filled in](inst-company.webp "Company: as it shows on invoices, quotes and emails")
 
-Only the **Company name** and **Country** are needed now. The address, phone, email, website, tax ID and logo can wait. To add the logo now, click the **Logo** box - **Trim the edges** cuts away the empty space round it. You can change any of them later in [Admin > Settings](/admin/settings).
+Only the **Company name** and **Country** are needed now. The address, phone, email, website, tax ID and logo can wait. To add the logo now, click the **Logo** box - **Trim the Edges** cuts away the empty space round it. You can change any of them later in [Admin > Settings](/admin/settings).
 
 ## Region {#region}
 
@@ -85,7 +85,7 @@ If you came to setup over http://, Finish warns you that signing in needs HTTPS.
 
 ## Restore a backup instead {#restore}
 
-You can bring back an ITFlow you already have - when moving to a new server, say - instead of starting afresh. Do the **Database** step with an empty database, then click **Restore a backup** instead of making an account.
+You can bring back an ITFlow you already have - when moving to a new server, say - instead of starting afresh. Do the **Database** step with an empty database, then click **Restore a Backup** instead of making an account.
 
 ![The Restore a backup step](inst-restore.webp "Restore a backup: the archive and the key it was locked with")
 

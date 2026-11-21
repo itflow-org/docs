@@ -46,7 +46,7 @@ The search box finds tickets by number, subject, client, contact, asset or the v
 
 You can change a ticket's status, priority, technician and billable right in the row: click the value and pick another. See [Lists, quick looks and bulk actions](/getting-started/lists#change-it-where-you-see-it).
 
-The **⋮** at the end of a row has **Quick look**, **Open in a new tab**, **Edit** and **Assign to me**.
+The **⋮** at the end of a row has **Quick Look**, **Open in a New Tab**, **Edit** and **Assign to Me**.
 
 ![A ticket's last reply showing beside its row](sd-tickets-peek.webp "Rest the pointer on Activity to read the last reply")
 
@@ -69,16 +69,16 @@ Click **List** to go back.
 Tick tickets and use **Bulk Action** to:
 
 - **Assign** them to a technician - they get one email listing them all
-- **Set priority** or **Set category**
+- **Set Priority** or **Set Category**
 - add or remove **Tags**
-- **Add to a project**
-- **Mark as read**, to take the bold off them without opening each one
-- **Reply or add a note** to each of them at once - see below
-- **Merge into a ticket**, when several tickets are about the same problem
-- **Link together**, to keep them apart but [related](/service-desk/working-a-ticket#related) - the same outage at several clients
+- **Add to a Project**
+- **Mark as Read**, to take the bold off them without opening each one
+- **Reply or Add a Note** to each of them at once - see below
+- **Merge into a Ticket**, when several tickets are about the same problem
+- **Link Together**, to keep them apart but [related](/service-desk/working-a-ticket#related) - the same outage at several clients
 - **Resolve** them
 - **Delete** them
 
 ### Reply to many tickets at once {#bulk-reply}
 
-**Reply or add a note** opens **Update & Reply**, which sends the same reply to every ticket you ticked - handy when an outage affects many clients. Placeholders such as `[First Name]` and `[Ticket]` are filled in for each ticket as it's sent, and you can pick a [canned response](/service-desk/canned-responses). Set the status the tickets move to and the time worked on each, or tick **Mark as internal** to add a note only your team sees. Mentions don't tell anyone from here - mention someone in a note on the ticket itself.
+**Reply or Add a Note** opens **Update & Reply**, which sends the same reply to every ticket you ticked - handy when an outage affects many clients. Placeholders such as `[First Name]` and `[Ticket]` are filled in for each ticket as it's sent, and you can pick a [canned response](/service-desk/canned-responses). Set the status the tickets move to and the time worked on each, or tick **Mark as internal** to add a note only your team sees. Mentions don't tell anyone from here - mention someone in a note on the ticket itself.

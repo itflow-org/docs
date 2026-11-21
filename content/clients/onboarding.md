@@ -4,7 +4,7 @@ description: Take a new client on a step at a time - the company, its sites and 
 where: Clients > New Client's arrow > Onboard a client
 ---
 
-**New Client** adds a client in one window. When you are taking a client on properly, **Onboard a client** walks you through everything they need, a step at a time, on a page of its own:
+**New Client** adds a client in one window. When you are taking a client on properly, **Onboard a Client** walks you through everything they need, a step at a time, on a page of its own:
 
 1. [The company](#company) - who they are
 2. [Locations](#locations) - where they work
@@ -14,13 +14,13 @@ where: Clients > New Client's arrow > Onboard a client
 6. [IT basics](#it-basics) - their domains, vendors and licenses
 7. [Kickoff](#kickoff) - the onboarding project and its tickets
 
-Each step saves as you go, and the first one makes the client - so you can stop part way and carry on later from the client's overview. Every step after the first has **Skip for now**, and the steps along the top go back to any of them.
+Each step saves as you go, and the first one makes the client - so you can stop part way and carry on later from the client's overview. Every step after the first has **Skip for Now**, and the steps along the top go back to any of them.
 
 ## Start onboarding {#start}
 
 ![Onboard a client, under New Client's arrow](cl-onboard-menu.webp "Under New Client's arrow on the clients list")
 
-- **A new client** - on **Clients**, click the arrow beside **New Client**, then **Onboard a client**.
+- **A new client** - on **Clients**, click the arrow beside **New Client**, then **Onboard a Client**.
 - **A lead, or a client you already have** - click **Onboard** in the **⋮** menu of the client's header. A lead has it in the **⋮** at the end of its row on the leads list too, and its **Edit** window offers it under the name.
 - **Your first client** - on a new install, Get started's last step has **Or onboard them step by step**. See [After installing](/install/after-install#client).
 
@@ -30,7 +30,7 @@ Onboarding a client needs **Clients** at **Modify**, as adding one does. You onl
 
 ![The company step for a new client](cl-onboard-company.webp "The company: who they are")
 
-Give the client's **Name** and, if you like, a **Short name** (up to 6 letters - without one, ITFlow makes one from the name), their **Industry**, **Website**, **How they found you**, **Tags** and **Notes**. Then click **Add the client**.
+Give the client's **Name** and, if you like, a **Short name** (up to 6 letters - without one, ITFlow makes one from the name), their **Industry**, **Website**, **How they found you**, **Tags** and **Notes**. Then click **Add the Client**.
 
 The client is made as **New Client** makes it, and the website's domain is added and looked up, with its certificate, to watch for renewals. For a lead, saving this step makes them a client.
 
@@ -63,7 +63,7 @@ The [contract](/billing/contracts) you look after them on, from one of your [con
 
 1. Pick the **Template**, the day it runs **From** and who it is **Looked after by**.
 2. Leave **Send it to them to sign** on to send it to one of their people, picked in **To**, with **A note with it** if you like. The contract stays a draft until you countersign it, then it is active from the day you picked. See [Send it to sign](/billing/contract-signing#send).
-3. Click **Start the contract**.
+3. Click **Start the Contract**.
 
 Switch **Send it to them to sign** off to make the contract active straight away. With no contract templates yet, the step says where to make one.
 
@@ -72,7 +72,7 @@ Switch **Send it to them to sign** off to make the contract active straight away
 ![The Billing step with the agreement's recurring invoice](cl-onboard-billing.webp "Billing: who gets invoices, tax, reminders, and the recurring invoice")
 
 - **Invoices go to** - their billing contact.
-- **Tax ID**, **Tax Rate** and **Tax exempt** - as on the client's own Billing tab. See [Billing details](/clients/clients#billing-details).
+- **Tax ID**, **Tax rate** and **Tax exempt** - as on the client's own Billing tab. See [Billing details](/clients/clients#billing-details).
 - **Payment reminders and statements** - switch off to leave them out of the automatic ones.
 - **The agreement's recurring invoice** - bills the contract from the Agreement step: **Amount each time**, **How often**, the **First invoice**, its **Category**, **Line**, **Description**, **Tax**, and whether to **Email each invoice by itself**. While the contract is out to sign, the recurring invoice waits, paused, and starts once it is countersigned. See [The recurring invoice](/billing/contracts#recurring).
 
@@ -85,13 +85,13 @@ Click **Save**. If anything in the step needs putting right, nothing in it is sa
 - **Domains** - one to a line. Each is looked up as it is added - its registrar, renewal date and DNS - and its website certificate added. See [Domains](/documentation/domains).
 - **Vendors** and **Licenses** - from your [license and vendor templates](/admin/license-and-vendor-templates). The ones your templates say every client, or clients with this one's tags, should have are listed and ticked, marked **Should have**. Pick any others in **And others**.
 
-Click **Add them**. Each license comes with its template's seats, renewal and vendor - the vendor is added for the client too, when they haven't got it. Put devices and users on a license from its page afterwards. Anything the client has already is shown as **They have it**, and nothing is added twice.
+Click **Add Them**. Each license comes with its template's seats, renewal and vendor - the vendor is added for the client too, when they haven't got it. Put devices and users on a license from its page afterwards. Anything the client has already is shown as **They have it**, and nothing is added twice.
 
 ## Kickoff {#kickoff}
 
 ![The Kickoff step with the New Client Onboarding template](cl-onboard-kickoff.webp "Kickoff: the onboarding project from a project template")
 
-The onboarding [project](/service-desk/projects), with its tickets raised from a [project template](/admin/ticket-templates#project-templates) - one with onboarding in its name is picked to start with. Give it a **Name**, a **Manager**, **Their contact**, and when it **Starts** and is **Due**. **Assign its tickets to the manager** gives every ticket to them; off, each goes to whoever its ticket template names. Click **Start the project**.
+The onboarding [project](/service-desk/projects), with its tickets raised from a [project template](/admin/ticket-templates#project-templates) - one with onboarding in its name is picked to start with. Give it a **Name**, a **Manager**, **Their contact**, and when it **Starts** and is **Due**. **Assign its tickets to the manager** gives every ticket to them; off, each goes to whoever its ticket template names. Click **Start the Project**.
 
 ## Where it stands {#summary}
 

@@ -22,7 +22,7 @@ ITFlow is running, but some of it is switched off until you set it up. The first
 
 - The steps run along the top. Click any of them to go straight to it.
 - Each step is a short form. **Save and continue** saves it and goes on to the next.
-- **Skip for now** leaves a step for later. On **Your team** it's **It's just me**.
+- **Skip for Now** leaves a step for later. On **Your team** it's **It's just me**.
 - A step ticks itself off once what it's about is set up - here, or on its own settings page. A step you skipped shows a dash until then.
 - **Do it later**, at the top, leaves at any time. What you've saved stays saved, and the dashboard shows what's left to carry on from.
 - **Skip all**, beside it, skips every step that's still to do, once you say yes, and the dashboard stops showing it. Each step is still in **Admin > Get started**, and doing one there ticks it off.
@@ -38,7 +38,7 @@ Cron runs ITFlow's background work: sending email, turning email into tickets, w
 
 Once cron has run, the step says when - **Cron ran 40 seconds ago**. Until then it waits, and checks again every few seconds by itself.
 
-Cron is on in a new install, so its jobs start as soon as the cron job runs. If someone has switched it off in [Admin > Cron](/admin/maintenance#cron), the step shows **Turn cron on**.
+Cron is on in a new install, so its jobs start as soon as the cron job runs. If someone has switched it off in [Admin > Cron](/admin/maintenance#cron), the step shows **Turn Cron On**.
 
 [Cron](/admin/maintenance#cron) describes each job.
 
@@ -52,7 +52,7 @@ ITFlow needs a mailbox to send from: ticket updates, invoices, quotes and alerts
 - Under **Sent as**, give the **From address** and **From name** clients see. Invoices, quotes and ticket emails come from it too, until you give them their own in [Admin > Settings > Mail](/admin/mail#from-addresses).
 - To turn email into tickets, switch on **Turn email to a support mailbox into tickets** and give the mailbox's **IMAP server**, **Port**, **Encryption**, the **Support mailbox** and **Its password**. ITFlow reads it every minute: a new email is a new ticket, and a reply goes on its ticket.
 
-**Save and continue** saves it. **Save and send me a test** saves it and emails you a test once cron is running - [the mail queue](/admin/mail#the-mail-queue) shows how it went.
+**Save and continue** saves it. **Save and Send Me a Test** saves it and emails you a test once cron is running - [the mail queue](/admin/mail#the-mail-queue) shows how it went.
 
 > [!NOTE]
 > Microsoft 365 and Google Workspace sign in with an app you register with them, rather than a password. Set that up in [Admin > Settings > Mail](/admin/mail) first, then come back. The step keeps it and only asks for the address to send as.
@@ -118,7 +118,7 @@ If you already have default SLAs, the step shows yours - with their time to reso
 The step lists who can sign in now, and who is invited. To add someone, give their **Name**, **Email** and **Role**, and click **Invite them**. Add as many people as you like, one at a time.
 
 - With email set up, they're emailed an invite, once cron is running - a link to choose their own password and join. See [Invite someone](/admin/users#invite-someone).
-- Without email, the button is **Add them**: ITFlow makes their password and shows it to you once - give it to them to sign in with, and they change it.
+- Without email, the button is **Add Them**: ITFlow makes their password and shows it to you once - give it to them to sign in with, and they change it.
 - **Role** decides what they can see and change. Most people are **Technician**. See [Roles and permissions](/admin/roles).
 - A role that isn't an admin one sees every client, until you limit them in [Admin > Users](/admin/users#which-clients-they-see).
 
@@ -142,11 +142,11 @@ Adding never changes anything you already have. Any pack can be added later, or 
 
 ![The Your first client step, filled in](inst-start-client.webp "Your first client: a name, a website and who you talk to - or the demo data")
 
-Give the **Client** name and, if you like, their **Website**, **Who you talk to** and **Their email**. Then click **Add the client**. The website's domain and certificate are added too, to watch for renewals. The rest - their address, phones, rate and SLAs - is on the client once it's made. See [Add a client](/clients/clients#add-a-client).
+Give the **Client** name and, if you like, their **Website**, **Who you talk to** and **Their email**. Then click **Add the Client**. The website's domain and certificate are added too, to watch for renewals. The rest - their address, phones, rate and SLAs - is on the client once it's made. See [Add a client](/clients/clients#add-a-client).
 
 Or click **Or onboard them step by step** to take them on properly - their sites, people, agreement, billing and more, a step at a time. The step is done once the client is made. See [Onboarding a client](/clients/onboarding).
 
-Or click **Load the demo data** to look around first: 20 made-up clients, each with contacts, assets, tickets and a year of invoices. They come out again in one go from [Admin > Starter Content](/admin/maintenance#starter-content).
+Or click **Load the Demo Data** to look around first: 20 made-up clients, each with contacts, assets, tickets and a year of invoices. They come out again in one go from [Admin > Starter Content](/admin/maintenance#starter-content).
 
 ## Where it stands {#summary}
 

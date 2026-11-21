@@ -83,7 +83,7 @@ Click a contract to open it. The header says where it stands - draft, starts soo
 
 - **Renew** sets a new last day - a term on, to start with.
 - **Cancel** takes the last day it's in force and why. It doesn't renew after that, and a request to sign it that's still out - or waiting for you to countersign - is withdrawn.
-- **Make active**, on a draft, takes the day it starts and sets its end a term later.
+- **Make Active**, on a draft, takes the day it starts and sets its end a term later.
 
 You don't have to renew a contract that renews itself. Every night, ITFlow renews each one for another term once it ends - on the day of the month it started, unless you set its end to another day - and marks one that doesn't renew as ended.
 
@@ -109,7 +109,7 @@ A client that had its own hourly rate, net terms or SLAs before the 26.11 update
 
 ## The recurring invoice {#recurring}
 
-The recurring invoice that bills a contract goes on the contract's page. Click **Recurring invoice**:
+The recurring invoice that bills a contract goes on the contract's page. Click **Recurring Invoice**:
 
 ![The Recurring invoice window](bill-contract-recurring.webp "Make the recurring invoice that bills a contract, or link one the client has")
 

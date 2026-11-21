@@ -17,9 +17,9 @@ The tabs split contacts by role - **Important**, **Billing**, **Technical** and 
 - **Location** - click it to change which of the client's sites they're based at
 - **Linked** - how many assets, logins and licenses they have, and their open tickets
 
-The **⋮** at the end of a row has **New ticket**, to raise a ticket for them straight from the list, with **Edit**, **Add Note** and **Archive**.
+The **⋮** at the end of a row has **New Ticket**, to raise a ticket for them straight from the list, with **Edit**, **Add Note** and **Archive**.
 
-To see the contacts of every client together, use **Across clients > Contacts** in the top bar.
+To see the contacts of every client together, use **Across Clients > Contacts** in the top bar.
 
 ## Add a contact
 
@@ -51,7 +51,7 @@ On the contact's **Access** tab, set **Login**:
 
 What they see in the portal depends on their roles: billing contacts see invoices, technical contacts see devices and documentation, and the primary contact can manage their company's contacts. See [Giving contacts access](/portal/access).
 
-To bring in people who aren't contacts yet, use **Invite to the portal** on the **New Contact** menu - they fill in their own details when they join. The **Invites** tab lists the invites waiting. See [Invites and signing up](/portal/invites).
+To bring in people who aren't contacts yet, use **Invite to the Portal** on the **New Contact** menu - they fill in their own details when they join. The **Invites** tab lists the invites waiting. See [Invites and signing up](/portal/invites).
 
 ## The contact's page
 

@@ -21,7 +21,7 @@ A payment marks an invoice paid - in full, or in part - and puts the money in on
 
 ![The Add Payment window, with the client's other unpaid invoices](bill-add-payment.webp "Add Payment: the client's other unpaid invoices, then how much, when, how it was paid and which account it went into")
 
-If the client has other unpaid invoices, the window lists them under this one, oldest due first, with what's owed on each - and says if any were due before this one. **Pay this one** opens that invoice's **Add Payment** instead, and **Batch Payment** pays several at once - see [One payment for several invoices](#one-payment-for-several-invoices).
+If the client has other unpaid invoices, the window lists them under this one, oldest due first, with what's owed on each - and says if any were due before this one. **Pay This One** opens that invoice's **Add Payment** instead, and **Batch Payment** pays several at once - see [One payment for several invoices](#one-payment-for-several-invoices).
 
 A part payment leaves the invoice **Partial**, with what's still owed. When the balance reaches nothing, it's **Paid**. A payment can't be more than is owed when you click **Add Payment** - if someone recorded one while your window was open, it's checked against what's left.
 
@@ -66,7 +66,7 @@ However the last of it is paid - recorded here, online, by autopay or as part of
 
 Each payment is listed on the invoice's **Payments** card. Its **⋮** menu has **Edit** and **Delete**. Deleting a payment takes it off the invoice and its account, so the invoice is owed again - no money moves.
 
-A card payment also has **Refund through Stripe**, which gives the money back to the client's card and takes the payment off the same way. A card fee the payment carried is refunded with it, and its **Card Fee** line comes off the invoice.
+A card payment also has **Refund Through Stripe**, which gives the money back to the client's card and takes the payment off the same way. A card fee the payment carried is refunded with it, and its **Card Fee** line comes off the invoice.
 
 Every payment, and income that isn't for an invoice, is also listed in **Finance > Income**. Click one for its quick look, with **Open Invoice**, **Email Receipt**, **Edit** and **Delete**.
 

@@ -13,7 +13,7 @@ access: Admins
 
 - **Numbering** - the **Prefix**, such as `TCK-`, and the **Next number**.
 - **New tickets** - **Email new tickets to** a shared mailbox or list, so someone always sees them come in. **Triage new tickets with AI** gives tickets from email, the portal and the API a category and priority as they arrive - see [AI](/admin/ai).
-- **Assigning** - **Assign an unassigned ticket to the first agent to reply**: on, a technician who replies to a ticket nobody has - with a public note, an email reply or a text reply - is assigned it, just as **Assign to me** would. An internal note doesn't assign it, and a ticket that's already assigned keeps its technician. Switch it off if, say, someone answers new tickets before handing them on.
+- **Assigning** - **Assign an unassigned ticket to the first agent to reply**: on, a technician who replies to a ticket nobody has - with a public note, an email reply or a text reply - is assigned it, just as **Assign to Me** would. An internal note doesn't assign it, and a ticket that's already assigned keeps its technician. Switch it off if, say, someone answers new tickets before handing them on.
 - **Time and billing** - **Start the timer on opening a ticket**, and whether **New tickets are billable**. How the time is billed is in [Invoices and billing](/admin/billing#billing-time).
 - **Quick tickets** - what a ticket raised with the **+** in the top bar starts with - see [Quick tickets](#quick-tickets) below.
 - **Messages to clients** - the **"Ticket assigned" message**, sent when a ticket moves into a status that [counts as the first response](#first-response) by emailing the client, and the **"Resolve - no response" message**, for a client who never answered - see [Working a ticket](/service-desk/working-a-ticket#no-response). Agents can change that one for each ticket before it goes. Words in square brackets are filled in from the ticket, as in canned responses - `[Ticket]`, `[Subject]`, `[First Name]`, `[Agent]` (who it's assigned to - or, for no response, who sends it) and the rest. The email greets each person by name, so the message needn't. Empty, the built-in wording is used.
@@ -28,7 +28,7 @@ Email from someone who isn't a contact, at a domain no client has, is left in th
 
 #### Try an email {#try-an-email}
 
-To see what an email would become before anyone sends one, click **Try an email**. Type who it's **From** and its **Subject** - a reply to one of your emails has the ticket number in brackets, like `[TCK-123]` - and switch on **It's an automatic reply** for an out-of-office answer. **Try it** goes through what the mailbox asks, in order, and says where it ends up:
+To see what an email would become before anyone sends one, click **Try an Email**. Type who it's **From** and its **Subject** - a reply to one of your emails has the ticket number in brackets, like `[TCK-123]` - and switch on **It's an automatic reply** for an out-of-office answer. **Try It** goes through what the mailbox asks, in order, and says where it ends up:
 
 - an automatic reply is skipped
 - a ticket number in the subject - a reply on that ticket: the client's reply from its contact or another of the client's contacts, a technician's own note, a watcher's note, or a note with a warning from a stranger, which doesn't reopen it. A closed ticket isn't reopened, and the sender is told.
@@ -68,7 +68,7 @@ Tickets move through **New**, **Open**, **On Hold**, **Resolved** and **Closed**
 
 ![Ticket statuses](adm-statuses.webp "Ticket statuses: the built-in ones and your own, with their tickets, SLA clock and what a client's reply does")
 
-Each status shows as its badge, with what it's for, how many tickets are in it (click to see them), whether the SLA clock runs or pauses in it, and what a client's reply does. Drag the statuses into the order the status pickers and the ticket board show them in, or use **Move up** and **Move down** on a status's menu.
+Each status shows as its badge, with what it's for, how many tickets are in it (click to see them), whether the SLA clock runs or pauses in it, and what a client's reply does. Drag the statuses into the order the status pickers and the ticket board show them in, or use **Move Up** and **Move Down** on a status's menu.
 
 ITFlow's five are marked **Built in**. They keep their names and stay switched on, and their SLA clock is fixed - their window says what each does and when ITFlow sets it. Their colour and description can change, and so can where a client's reply moves a ticket in one - back to Open, or a status of your own - though a reply never leaves it where it is. A closed ticket can't be replied to.
 
@@ -95,7 +95,7 @@ It counts once, for a ticket nobody has answered yet, when an agent moves it int
 
 ### Switch off or delete a status
 
-**Switch off** takes a status out of the pickers and off the board, but keeps it. Its tickets can be moved to another status first, or left where they are. With none moved, **Undo** on the message switches it back on. Switch it on again later from the **Switched off** tab.
+**Switch Off** takes a status out of the pickers and off the board, but keeps it. Its tickets can be moved to another status first, or left where they are. With none moved, **Undo** on the message switches it back on. Switch it on again later from the **Switched off** tab.
 
 **Delete** moves its tickets to the status you pick first. Each ticket's history says so, and its SLA clock follows the new status. Canned responses that set the deleted status leave the status as it is instead.
 
@@ -146,7 +146,7 @@ The **Closure days** tab lists the days the office is shut - public holidays, or
 ![Closure days](adm-sla-days.webp "Closure days: each with its date and how far off it is")
 
 - **New Closure Day** adds one: its **Date**, and a **Name** for it.
-- **Add US holidays**, on the menu beside it, adds the eleven US federal holidays for the year you pick, each on the day it's observed. The window says how many of each year's are already in, and a day already on the list is left as it is.
+- **Add US Holidays**, on the menu beside it, adds the eleven US federal holidays for the year you pick, each on the day it's observed. The window says how many of each year's are already in, and a day already on the list is left as it is.
 - The bin removes a day, after asking.
 
 Search by name, date, month or day of the week, and click a heading to sort. A day that falls on one you're shut anyway says so. Days gone by move to **Past closure days**. Adding or removing a day works the targets out again on tickets that aren't closed yet.

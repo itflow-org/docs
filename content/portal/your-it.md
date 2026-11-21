@@ -26,7 +26,7 @@ A device's page shows what it is, its serial number and operating system, who us
 
 ## Domains and certificates
 
-**Domains & certificates** lists their domain names - who registers them and runs their DNS, website and email - and the certificates on their sites, each with when it expires or renews.
+**Domains & Certificates** lists their domain names - who registers them and runs their DNS, website and email - and the certificates on their sites, each with when it expires or renews.
 
 ![The client's domains](portal-domains.webp "Domains: who looks after each one, and when it expires")
 
@@ -38,7 +38,7 @@ A device's page shows what it is, its serial number and operating system, who us
 
 A document shows here once you switch on **Show in client portal** on it in ITFlow - see [Files and documents](/documentation/files-and-documents#the-documents-page).
 
-Clients can share documents with you too: **New document** writes one in the editor, and **Upload a file** sends a PDF, Word or text document. They show in the client's documents in ITFlow straight away.
+Clients can share documents with you too: **New Document** writes one in the editor, and **Upload a File** sends a PDF, Word or text document. They show in the client's documents in ITFlow straight away.
 
 ## Contacts
 

@@ -17,7 +17,7 @@ Open one to see **What a license starts with**: its name, type and license type,
 
 ![A license template](adm-license-template.webp "A license template: what each client's license starts with, and who has one")
 
-- **New license for a client** - or **For several clients** - makes licenses from it in one go.
+- **New License for a Client** - or **For Several Clients** - makes licenses from it in one go.
 - **Who should have it** - every client, or the clients with a tag. The **Required** tab then shows who's missing it.
 - **Clients with it** lists every license made from it, with their seats.
 
@@ -29,7 +29,7 @@ A vendor template is a vendor your clients use again and again - the ISPs, the h
 
 ![Vendor templates](adm-vendor-templates.webp "Vendor templates: vendors your clients share, set up once")
 
-- **Add to clients** adds it as a vendor to several clients at once.
+- **Add to Clients** adds it as a vendor to several clients at once.
 - **Who should have it** - every client, or those with a tag. **Required** shows who's missing it.
 - **Out of step** shows clients' vendors made from it whose details now differ from the template - a support number that changed, say - so you can bring them back in line.
 
@@ -37,6 +37,6 @@ Agents pick a template when they add a vendor to a client - see [Vendors](/clien
 
 ## Starter libraries
 
-Both have a starter library - **Starter license templates** and **Starter vendor templates** in the menu beside **New** - with the licenses and vendors most MSPs use. Add them, then change or archive what you don't need. See [Maintenance](/admin/maintenance#starter-content).
+Both have a starter library - **Starter License Templates** and **Starter Vendor Templates** in the menu beside **New** - with the licenses and vendors most MSPs use. Add them, then change or archive what you don't need. See [Maintenance](/admin/maintenance#starter-content).
 
 **Import** and **Export** move templates to and from a file, to share them between installs.

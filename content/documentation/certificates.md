@@ -10,7 +10,7 @@ ITFlow keeps track of the certificates that secure a client's websites, remote a
 
 ![Certificates across every client](doc-certificates.webp "Certificates: the host, who issued it, when it expires and how its last check went")
 
-Each row shows the host it's served on, the issuer, when it expires and how the last check went. The tabs are **Starred**, **Expiring soon**, **Expired**, **Problems** and **Not checked**. Tick certificates and use **Bulk Action > Check now** to check several at once.
+Each row shows the host it's served on, the issuer, when it expires and how the last check went. The tabs are **Starred**, **Expiring soon**, **Expired**, **Problems** and **Not checked**. Tick certificates and use **Bulk Action > Check Now** to check several at once.
 
 ## Add a certificate
 
@@ -26,7 +26,7 @@ To add many at once, use **Import**, under the arrow beside **New Certificate**,
 
 ## Checks
 
-**Check now** (on the certificate's quick look, or in Bulk Action) connects to the host and records what it serves: the issuer, the dates, the names covered and the fingerprint. The result is one of:
+**Check Now** (on the certificate's quick look, or in Bulk Action) connects to the host and records what it serves: the issuer, the dates, the names covered and the fingerprint. The result is one of:
 
 | Result | Meaning |
 |---|---|

@@ -75,7 +75,7 @@ Countersigning is done in ITFlow.
 
 ## Prepaid hours {#contract-hours}
 
-**Add hours** (`contract_hours/create.php`) takes `contract_id`, `client_id`, `hours` and `bought` (the day they were bought), both required, and `expires`, `price`, `note`, and `invoice` - `1` makes a draft invoice for them, in the income `category` you name. They go on a draft or active contract, or a cancelled one until its last day. The answer has `invoice_id` and `invoice_reference` when an invoice was made.
+**Add Hours** (`contract_hours/create.php`) takes `contract_id`, `client_id`, `hours` and `bought` (the day they were bought), both required, and `expires`, `price`, `note`, and `invoice` - `1` makes a draft invoice for them, in the income `category` you name. They go on a draft or active contract, or a cancelled one until its last day. The answer has `invoice_id` and `invoice_reference` when an invoice was made.
 
 **Delete hours** (`contract_hours/delete.php`) takes `contract_block_id` - from the contract's `hours` - and `client_id`. Time drawn from them keeps them; an invoice made for them stays.
 

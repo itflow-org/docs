@@ -39,17 +39,17 @@ The **Readers** column shows how many times each article was read by your client
 
 Search everywhere in the top bar finds articles too, in their own **Knowledge Base** group, and the full results page also looks through the words inside them.
 
-Tick articles in the list to change several at once: **Set category**, **Publish**, **Make drafts**, **Archive**, **Restore** or **Delete**.
+Tick articles in the list to change several at once: **Set Category**, **Publish**, **Make Drafts**, **Archive**, **Restore** or **Delete**.
 
 ## Read an article
 
-Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, **Review with AI** when AI is set up, print, **PDF**, and the **⋮** menu with **Make draft**, **Mark reviewed**, **Copy**, **Archive** and **Delete**. Its files are under it. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions. A long article - three headings or more - also has its **Contents** there, to jump to a section.
+Click an article's title to open it. Along the top are **Edit**, **Publish** for a draft, **Review with AI** when AI is set up, print, **PDF**, and the **⋮** menu with **Make Draft**, **Mark Reviewed**, **Copy**, **Archive** and **Delete**. Its files are under it. The column on the right shows its category, who can read it, whether it's published, when it's next reviewed and its earlier versions. A long article - three headings or more - also has its **Contents** there, to jump to a section.
 
 ![An article](sd-kb-article.webp "An article: the content, with its category, review and versions beside it")
 
 ### Versions
 
-Every edit keeps what the article said before. Click a version under **Versions** to read it, and **Restore this version** to put it back - what the article says now is kept as a version in turn.
+Every edit keeps what the article said before. Click a version under **Versions** to read it, and **Restore This Version** to put it back - what the article says now is kept as a version in turn.
 
 ### Files {#files}
 
@@ -63,7 +63,7 @@ Whoever can read the article can download them - your team here, and the readers
 
 **Review** says how often an article should be read through to check it's still right: **Every 3 months**, **Every 6 months**, **Every year** or **Every 2 years** - or **Never**. New articles start at **Every year**.
 
-Once that long has passed since the article was written, edited or last reviewed, it's marked **Review due**, and it shows in the **Review due** view. Read it through, fix anything that's changed, and either save your edit or click **Mark reviewed**. Drafts and archived articles aren't reviewed.
+Once that long has passed since the article was written, edited or last reviewed, it's marked **Review due**, and it shows in the **Review due** view. Read it through, fix anything that's changed, and either save your edit or click **Mark Reviewed**. Drafts and archived articles aren't reviewed.
 
 The number beside **Knowledge Base** in the main menu counts the articles due for review and the ones readers said didn't help.
 
@@ -73,7 +73,7 @@ With AI set up, **Review with AI** reads an article as a senior engineer would a
 
 ![Review with AI on an article](sd-kb-review.webp "Review with AI: what to fix or check, the most important first, and a summary to use")
 
-It suggests a summary too - **Use as its summary** saves it. **Mark reviewed** is there when the article is reviewed on a schedule. Passwords and keys in the article aren't sent. See [Using AI](/getting-started/ai).
+It suggests a summary too - **Use as Its Summary** saves it. **Mark Reviewed** is there when the article is reviewed on a schedule. Passwords and keys in the article aren't sent. See [Using AI](/getting-started/ai).
 
 ### Copy an article
 
@@ -103,7 +103,7 @@ The list's **Who can read it** column shows each article's, and **Any audience**
 
 ### What clients see {#portal}
 
-Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, **Still stuck? Ask us**, which starts a ticket about it, its files to download, and **Was this helpful?** under it - see [What readers think](#readers). Every contact with portal access can read them, whatever their roles.
+Once a client has an article to read, their contacts see **Help** in the client portal's top bar. It lists the articles shared with their company, by category, with a search box. Each article has **Print**, **Still Stuck? Ask Us**, which starts a ticket about it, its files to download, and **Was this helpful?** under it - see [What readers think](#readers). Every contact with portal access can read them, whatever their roles.
 
 ![Help in the client portal](portal-help.webp "Help in the client portal: the articles shared with this client")
 
@@ -126,7 +126,7 @@ Search engines are asked not to list it. While it's off, its link says there's n
 
 ### Send an article in a reply
 
-Above a ticket's reply box, beside **Canned response**, **Knowledge Base** opens the published articles that look like they answer the ticket, going by its subject and what was asked. The number on the button is how many there are. Type in the search box to find any other article.
+Above a ticket's reply box, beside **Canned Response**, **Knowledge Base** opens the published articles that look like they answer the ticket, going by its subject and what was asked. The number on the button is how many there are. Type in the search box to find any other article.
 
 ![The Knowledge Base picker over a ticket's reply box](sd-kb-picker.webp "Knowledge Base on a ticket: an article that might help, how the client could read it, and Link and Insert")
 
@@ -139,7 +139,7 @@ Click an article's title to read it first, in a new tab.
 
 ### Write up a ticket {#write-up}
 
-A solved ticket often makes a good article. In the ticket's **⋮** menu, click **Write up for the Knowledge Base**. It opens a new article, as a draft for **Agents only**:
+A solved ticket often makes a good article. In the ticket's **⋮** menu, click **Write Up for the Knowledge Base**. It opens a new article, as a draft for **Agents only**:
 
 - With AI set up, AI writes it from the ticket as a how-to for any client - symptoms, cause and the steps that put it right - leaving out the client, its people, and the names and addresses of its systems. Passwords and keys are always left out. See [Using AI](/getting-started/ai).
 - Without AI, it starts with the ticket's subject and what was asked, for you to write the steps.
@@ -147,7 +147,7 @@ A solved ticket often makes a good article. In the ticket's **⋮** menu, click 
 Read it through, change what you like, and click **Create Article**. The ticket's history says it was written up. Share it once you're happy with it.
 
 > [!TIP]
-> **Write up as a document**, in the same menu, is for a how-to about one client's own systems. It goes in their documents instead.
+> **Write Up as a Document**, in the same menu, is for a how-to about one client's own systems. It goes in their documents instead.
 
 ### When clients raise a ticket {#raise}
 
@@ -173,18 +173,18 @@ On an article's page, the right-hand column says how many times it was read and 
 
 ![Feedback on an article](sd-kb-feedback.webp "Feedback: what readers said didn't help, each with Dealt with")
 
-Fix the article if it needs it, then click **Dealt with**. It stays on the list, faded, with who dealt with it, and the article leaves **Needs a look**. With more than one, the ✓✓ button at the top deals with them all.
+Fix the article if it needs it, then click **Dealt With**. It stays on the list, faded, with who dealt with it, and the article leaves **Needs a look**. With more than one, the ✓✓ button at the top deals with them all.
 
 ### Searches that found nothing {#not-found}
 
-**Not found**, at the top of the Knowledge Base list, shows what readers searched Help and the public help center for in the last 90 days and didn't find - where, and how many times. It's only there when there's something on it.
+**Not Found**, at the top of the Knowledge Base list, shows what readers searched Help and the public help center for in the last 90 days and didn't find - where, and how many times. It's only there when there's something on it.
 
 ![The Not found list](sd-kb-not-found.webp "Not found: what readers searched for, where, and how many times")
 
 Each one is an article to write, or words to add to one that's there:
 
-- **Write an article** starts a new one with the words they searched for as its title.
-- The **×** takes a search off the list, and **Clear the list** all of them. A search made again comes back.
+- **Write an Article** starts a new one with the words they searched for as its title.
+- The **×** takes a search off the list, and **Clear the List** all of them. A search made again comes back.
 
 ## Start from a client's document
 

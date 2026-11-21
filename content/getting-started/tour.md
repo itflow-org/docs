@@ -13,7 +13,7 @@ ITFlow has three parts on every page: the **top bar** along the top, the **menu*
 From left to right:
 
 - **☰** hides or shows the menu, to give a wide list more room. ITFlow remembers your choice.
-- **Across clients** shows the contacts, locations and documentation of every client together. See [Across clients](#across-clients) below. On a phone it's just its icon.
+- **Across Clients** shows the contacts, locations and documentation of every client together. See [Across clients](#across-clients) below. On a phone it's just its icon.
 - **Search everywhere** finds anything in ITFlow by name, number, phone number or IP address. Press <kbd>Ctrl</kbd> <kbd>K</kbd> from any page to open it. See [Searching](/getting-started/search).
 - The **bell** shows your notifications, with a count of the unread ones. See [Notifications](/getting-started/notifications).
 - **Your name** opens a menu with **Account** (your profile, password and preferences), **Administration** if you are an admin, and **Logout**.
@@ -61,11 +61,11 @@ Every page inside a client starts with the client's header: their initials, name
 
 ### Switch to another client
 
-Click the client's name at the top of the client menu and pick another client. You stay on the same page - from one client's Assets straight to another's Assets. **All clients**, above it, takes you back to the clients list.
+Click the client's name at the top of the client menu and pick another client. You stay on the same page - from one client's Assets straight to another's Assets. **All Clients**, above it, takes you back to the clients list.
 
 ## Across clients
 
-**Across clients**, in the top bar, shows the documentation of every client together. Its menu has contacts, locations, assets, networks, racks, credentials, certificates, domains, shared links, licenses, vendors and services - pick one to go straight to that list for every client. Use it when you are looking for something and don't know which client has it, or to see every client's expiring certificates at once.
+**Across Clients**, in the top bar, shows the documentation of every client together. Its menu has contacts, locations, assets, networks, racks, credentials, certificates, domains, shared links, licenses, vendors and services - pick one to go straight to that list for every client. Use it when you are looking for something and don't know which client has it, or to see every client's expiring certificates at once.
 
 Once you're there, the menu on the left lists them all, to move from one to another. **Back** at the top of it returns you to the main menu.
 

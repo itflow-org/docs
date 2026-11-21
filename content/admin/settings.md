@@ -24,7 +24,7 @@ Your company as it appears on invoices, quotes, statements, emails and the clien
 
 ![Company details](adm-company.webp "Company details: your name, address, contact details and logo, as clients see them")
 
-Click the logo box to add or change it - a PNG or JPG. Drag the corners and edges in to just the logo, or click **Trim the edges** to cut away the empty space round it. A wide logo prints best, and a PNG keeps a see-through background. See [Change a picture](/getting-started/account#picture).
+Click the logo box to add or change it - a PNG or JPG. Drag the corners and edges in to just the logo, or click **Trim the Edges** to cut away the empty space round it. A wide logo prints best, and a PNG keeps a see-through background. See [Change a picture](/getting-started/account#picture).
 
 **Your own client record** links your company to a client in ITFlow, so your own internal tickets, assets and documentation have a home.
 
@@ -105,7 +105,7 @@ Click **New Link**, or **Edit** on a link's menu:
 - **Description** - shown when someone points at the link.
 - **Icon** - search the icons, or type any Font Awesome icon's name.
 
-On a menu's tab, drag the links into the order the menu shows them in, or use **Move up** and **Move down**. A new link goes at the end of its menu. **Copy** makes the same link again, to put it in a second menu too. **Archive** hides a link without losing it, **Restore** brings it back, and **Open** tries it.
+On a menu's tab, drag the links into the order the menu shows them in, or use **Move Up** and **Move Down**. A new link goes at the end of its menu. **Copy** makes the same link again, to put it in a second menu too. **Archive** hides a link without losing it, **Restore** brings it back, and **Open** tries it.
 
 ## Numbering
 

@@ -14,7 +14,7 @@ Click the **bell**. A panel opens with your notifications grouped by day, newest
 
 - **Unread** shows the ones you haven't dealt with. **All** shows the read ones too.
 - Click a notification to open what it's about - the ticket, the invoice, the shared link - and mark it read.
-- **Mark all as read** clears them all at once.
+- **Mark All as Read** clears them all at once.
 - **View all notifications** opens the full Notifications page.
 - **Desktop notifications** has a switch that shows whether they're on in this browser - see below.
 

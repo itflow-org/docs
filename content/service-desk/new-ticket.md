@@ -31,21 +31,21 @@ Tickets reach ITFlow in several ways:
 
 The contact gets an email saying their ticket is raised, when client emails are on, and the technician you assigned it to is told. Work you scheduled is booked as it is from the ticket's **Schedule** window: the technician, and the contact and watchers when client emails are on, get the time with a calendar invite - see [Book a visit or a call](/service-desk/working-a-ticket#book-a-visit-or-a-call).
 
-To raise one like a ticket you already have - the same job for another client, say - use **Copy as a new ticket** in that ticket's **⋮** menu. **New Ticket** opens filled in from it. See [Copy a ticket or apply a template](/service-desk/working-a-ticket#copy).
+To raise one like a ticket you already have - the same job for another client, say - use **Copy as a New Ticket** in that ticket's **⋮** menu. **New Ticket** opens filled in from it. See [Copy a ticket or apply a template](/service-desk/working-a-ticket#copy).
 
 ## Quick ticket {#quick-ticket}
 
-For a call, or someone at your desk, click **+** in the top bar - it's there on every page. **Quick ticket** asks only for what you need while they're talking.
+For a call, or someone at your desk, click **+** in the top bar - it's there on every page. **Quick Ticket** asks only for what you need while they're talking.
 
 1. Pick the **Client** - on a client's page, it starts on that client - and the **Contact**. It starts on the client's primary contact. To find someone else, type their name, email address or phone number.
-2. If the contact already has open tickets, they're listed, with who has each one. If it's the same problem, click **Work on this one** to go to that ticket instead, with its timer running.
+2. If the contact already has open tickets, they're listed, with who has each one. If it's the same problem, click **Work on This One** to go to that ticket instead, with its timer running.
 3. Type **What is the issue?**, and any **More detail**.
 4. Set the **Priority**, and leave **Assign it to** on to give it to the person shown - usually you.
 5. Click **Create**.
 
 ![The Quick ticket window](sd-quick-ticket.webp "Quick ticket: the client, the contact and their open tickets, and the issue")
 
-The ticket opens with its timer already running, ready for your notes. Started the call on the stopwatch before you knew it needed a ticket? Click **New ticket** under the [timer without a ticket](/service-desk/working-a-ticket#call-timer), and the new ticket's timer carries on from it. Your admin sets what a quick ticket starts with - who it goes to, its status, category and billing, when its timer starts, and whether the contact is emailed - in [Ticket settings](/admin/tickets#quick-tickets).
+The ticket opens with its timer already running, ready for your notes. Started the call on the stopwatch before you knew it needed a ticket? Click **New Ticket** under the [timer without a ticket](/service-desk/working-a-ticket#call-timer), and the new ticket's timer carries on from it. Your admin sets what a quick ticket starts with - who it goes to, its status, category and billing, when its timer starts, and whether the contact is emailed - in [Ticket settings](/admin/tickets#quick-tickets).
 
 ## Start from a template
 

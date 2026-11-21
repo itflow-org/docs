@@ -39,8 +39,8 @@ The page is built around calling them.
 
 ![A client's vendor page with Call support, the Support and Account cards, and the Cases tab](cl-vendor.webp "A vendor's page: call them, quote the account number, and see every case you've had with them")
 
-- **Call support** dials their support line with the extension, and **Email** and **Support site** are beside it.
-- **New** starts something with them: a **Case with them** (a ticket you're working with the vendor), a **License from them**, an **Asset bought from them**, a **Portal login** for their site, a document or a file. For your own vendors there's also an expense.
+- **Call Support** dials their support line with the extension, and **Email** and **Support site** are beside it.
+- **New** starts something with them: a **Case with Them** (a ticket you're working with the vendor), a **License from Them**, an **Asset Bought from Them**, a **Portal Login** for their site, a document or a file. For your own vendors there's also an expense.
 - **Support** - phone, hours, SLA, email, support site and status page.
 - **Account** - your account number, the PIN (hidden until you show or copy it), and your account manager's direct line and email.
 - **Notes**, such as who is allowed to call them.
@@ -54,7 +54,7 @@ For one of your own vendors, the tabs are what you spend with them: **Expenses**
 
 When you need the vendor to fix something - the internet is down, a server part has failed - raise a case:
 
-1. Open the vendor and click **New > Case with them**. This starts a ticket for the client, linked to the vendor.
+1. Open the vendor and click **New > Case with Them**. This starts a ticket for the client, linked to the vendor.
 2. Once the vendor gives you their case number, type it into **Their reference** in the ticket's Edit window.
 
 The ticket shows a **Vendor** card with their support line, hours, SLA, account number and PIN, and your case number, each with a copy button - so whoever picks up the ticket can chase the vendor without looking anything up. See [Working a ticket](/service-desk/working-a-ticket).

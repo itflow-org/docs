@@ -25,17 +25,17 @@ Clients sign in at the same address as you, with their email and password, or wi
 
 Home puts what matters first:
 
-- Along the top: their **Open tickets**, how many are **Waiting on you** (on them), what's **Due** and when, and **Renewals coming up**. **Pay invoices** is a click away when something is owed.
+- Along the top: their **Open tickets**, how many are **Waiting on you** (on them), what's **Due** and when, and **Renewals coming up**. **Pay Invoices** is a click away when something is owed.
 - **Needs you** lists what's waiting on them: tickets you've replied to, tickets you've resolved for them to confirm, approvals, overdue invoices and quotes waiting for an answer.
 - **Open tickets**, **Your devices** and what's **Coming up** for renewal.
 - **Ask for something** shows your request forms - "Ask for a new computer", "Someone is leaving" - see [Tickets and requests](/portal/tickets).
 - **Need us fast?** gives your phone number and email.
 
-Announcements you post - planned maintenance, a holiday closure - show at the top of every client's home, or one client's. Your admin adds them in **Admin > Settings > Client portal**.
+Announcements you post - planned maintenance, a holiday closure - show at the top of every client's home, or one client's. Your admin adds them in **Admin > Settings > Client Portal**.
 
 ## Finding their way around
 
-The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **Help** is there too once you've shared an article with them - see [Knowledge Base](/service-desk/knowledge-base#portal). **New ticket** is always there.
+The bar along the top has **Home**, **Tickets**, **Billing** (invoices, quotes, recurring invoices, payments, statement, and cards and autopay) and **Your IT** (devices, licenses, domains and certificates, documents and contacts). **Help** is there too once you've shared an article with them - see [Knowledge Base](/service-desk/knowledge-base#portal). **New Ticket** is always there.
 
 ### Search {#search}
 
@@ -43,7 +43,7 @@ The **Search** box in the top bar - on a smaller screen the magnifying glass, or
 
 ![Searching the portal](portal-search.webp "One search across tickets, documents and Help")
 
-Their name opens **Your account** - their details, the emails they get from you, whether you text them, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
+Their name opens **Your Account** - their details, the emails they get from you, whether you text them, their password, two-step sign-in and phone PIN - and **Activity**, every sign-in and everything they did in the portal. They can switch to dark mode there too.
 
 ![The portal on a phone](portal-home-phone.webp "On a phone, the portal fits the screen")
 

@@ -34,7 +34,7 @@ Leads stay out of the way of the clients you work for. They aren't offered when 
 
 1. Go to **Clients** and click **New Client**.
 2. On **Details**, type the client's **Name**. The rest is optional:
-   - **Shortened Name** - up to 6 letters, shown where space is tight. Without one, ITFlow uses the initials.
+   - **Shortened name** - up to 6 letters, shown where space is tight. Without one, ITFlow uses the initials.
    - **Industry**, **Referral** (where they came from), **Website** and **Tags**.
    - Tick **Is Lead**, beside the name, if they aren't a client yet.
 3. On **Location**, add their main office's address and phone. It becomes their primary location.
@@ -46,7 +46,7 @@ Leads stay out of the way of the clients you work for. They aren't offered when 
 
 You can add more locations and contacts afterwards. See [Locations](/clients/locations) and [Contacts](/clients/contacts).
 
-Taking on a client properly? **Onboard a client**, under the arrow beside **New Client**, walks you through their sites, people, agreement, billing, domains, vendors, licenses and onboarding project a step at a time. See [Onboarding a client](/clients/onboarding).
+Taking on a client properly? **Onboard a Client**, under the arrow beside **New Client**, walks you through their sites, people, agreement, billing, domains, vendors, licenses and onboarding project a step at a time. See [Onboarding a client](/clients/onboarding).
 
 ### Import clients {#import}
 
@@ -69,8 +69,8 @@ A client has no hourly rate, payment terms or SLAs of its own - they come from i
 
 - **Tax ID** - the client's own tax number, if they need it on invoices.
 - **Payment reminders and statements** - switch off to leave this client out of automatic payment reminders and monthly statements. You can still send them by hand.
-- **Tax Rate** - the tax their invoice lines start with, when it isn't your default.
-- **Tax exempt** - for a client that doesn't pay tax, such as a charity or school, with their **Exemption Certificate** number and when it **Expires**. Their new lines start untaxed, and their invoices say they are exempt.
+- **Tax rate** - the tax their invoice lines start with, when it isn't your default.
+- **Tax exempt** - for a client that doesn't pay tax, such as a charity or school, with their **Exemption certificate** number and when it **Expires**. Their new lines start untaxed, and their invoices say they are exempt.
 - **No card fee** - when clients [pay the card fee](/admin/payment-providers#card-fee), switch this on for a client who shouldn't. Their card payments are just the invoice. It shows while Stripe is set up.
 
 ## Change a client's details
@@ -86,7 +86,7 @@ The same **⋮** menu has:
 - **Client Review** - a report of the client's quarter, made to print for a business review. See [Reports](/finance/reports).
 - **Offboard** - everything that still runs for a client you've stopped working with, in one go. See [Offboard a client](#offboard).
 - **Archive Client**
-- **Merge into another client** - for the same company added twice. See [Merge duplicate clients](#merge).
+- **Merge into Another Client** - for the same company added twice. See [Merge duplicate clients](#merge).
 
 ![The client header with its menu open](cl-client-menu.webp "The menu in a client's header")
 
@@ -124,7 +124,7 @@ Untick any you want to leave, and click **Offboard**. Nothing is deleted, and ev
 
 When the same company has been added twice, its tickets, invoices and documentation end up split between the two. Merge them into one:
 
-1. Open the client you want to go - the duplicate - and click **⋮ > Merge into another client**.
+1. Open the client you want to go - the duplicate - and click **⋮ > Merge into Another Client**.
 2. Pick the client to keep under **Merge into**. The window lists what moves across.
 3. Tick **I understand this can't be undone**, and click **Merge**.
 

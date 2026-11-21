@@ -16,7 +16,7 @@ Most contacts see the tickets they raised. Primary and technical contacts see ev
 
 ## Raise a ticket
 
-**New ticket** asks what they need. **Report a problem** is a short form:
+**New Ticket** asks what they need. **Report a problem** is a short form:
 
 - a **Subject**, in a few words
 - **What is happening?** - what they were doing, any error message, and when it started
@@ -48,10 +48,10 @@ The ticket is raised from the form's template, with its category, priority, task
 
 The ticket shows where it stands - **Received**, **In progress**, **Resolved**, **Closed** - and the conversation, oldest first, with their own messages on the right. Until you first reply, it also says when to expect that reply - **We'll reply by** and the time, from its SLA, as the new-ticket email does. It goes once you've replied, while the ticket is on hold, or once the time has passed, and a ticket with no SLA promises nothing. Your internal notes never show. Down the side: its status, priority, category, who raised it, who's working on it, the device and how many tasks are done.
 
-- **Add a reply**, with files, and click **Send reply**.
-- **It's fixed** marks it resolved themselves.
-- When you've resolved it, they're asked to confirm: **Yes, close it**, or **No, reopen it** if it's still not right.
-- Once it's closed, they can rate it **Good** or **Not good**. Ratings show in the Customer Satisfaction report.
+- **Add a reply**, with files, and click **Send Reply**.
+- **It's Fixed** marks it resolved themselves.
+- When you've resolved it, they're asked to confirm: **Yes, Close It**, or **No, Reopen It** if it's still not right.
+- Once it's closed, they can rate it **Good** or **Not Good**. Ratings show in the Customer Satisfaction report.
 
 ### Approvals
 

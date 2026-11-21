@@ -5,7 +5,7 @@ where: Admin > Settings > Invoices and billing
 access: Admins
 ---
 
-**Admin > Settings > Invoices and billing** decides how billing works for everyone. Quotes have a smaller page of their own, **Admin > Settings > Quotes**.
+**Admin > Settings > Invoices and Billing** decides how billing works for everyone. Quotes have a smaller page of their own, **Admin > Settings > Quotes**.
 
 ![Invoice and billing settings](adm-invoice-settings.webp "Invoices and billing: numbering, the footer, late fees, reminders, and how time, expenses and trips are billed")
 

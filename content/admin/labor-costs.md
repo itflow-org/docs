@@ -15,7 +15,7 @@ Only admins can see this page. The audit log records that an agent's rate was se
 
 ## Set an agent's rate {#rate}
 
-Click the agent's name, or **Set a rate**. Their window lists their rates, newest first. Under **A new rate**, enter the **Cost per hour** and the date it **Counts from**, then click **Save the rate**.
+Click the agent's name, or **Set a rate**. Their window lists their rates, newest first. Under **A new rate**, enter the **Cost per hour** and the date it **Counts from**, then click **Save the Rate**.
 
 ![An agent's rates](adm-labor-cost-rates.webp "An agent's rates: what they cost from each date, and a new one")
 
@@ -23,4 +23,4 @@ A new rate applies from its date, so a raise doesn't change what last year cost.
 
 ## The company default {#default}
 
-**Company default**, at the top, is the cost per hour of any agent with no rate of their own - a blended figure for your team, say. Leave it empty and their time costs nothing in Client Profitability, which then says how many hours weren't costed.
+**Company Default**, at the top, is the cost per hour of any agent with no rate of their own - a blended figure for your team, say. Leave it empty and their time costs nothing in Client Profitability, which then says how many hours weren't costed.

@@ -20,7 +20,7 @@ Much of ITFlow happens in the background: sending email, reading the support mai
 The top of the page says when cron last ran, how many jobs are on, and which runs next. When something needs you, it says that instead:
 
 - **Cron hasn't run yet**, or **Cron has stopped** - the cron entry is missing or failing. The line for your server is there, with a button that copies it, and the page says so by itself once cron runs.
-- **Cron is switched off** - every job stops itself until you click **Turn cron on**.
+- **Cron is switched off** - every job stops itself until you click **Turn Cron On**.
 - A job failed - the top of the page names it, and what went wrong is under the job.
 
 **Jobs** lists each job with what it does, its schedule and when it next runs, when it last ran and how long that took, and how it went:
@@ -56,12 +56,12 @@ The list starts in the order the day runs - the every-minute jobs, then the nigh
 
 Each job's menu has:
 
-- **Run now** - cron picks the job up within a minute, even when it's turned off.
-- **Change the schedule** - every so many minutes, or once a day at a time you choose. Nightly Tasks, Backup and Application Update only run once a day.
-- **Copy the command to run it** - the command that runs that one job on the server, where it shows what it does as it goes.
-- **Turn off** - it no longer runs on its schedule, and shows **Off**. **Turn on** puts it back.
+- **Run Now** - cron picks the job up within a minute, even when it's turned off.
+- **Change the Schedule** - every so many minutes, or once a day at a time you choose. Nightly Tasks, Backup and Application Update only run once a day.
+- **Copy the Command to Run It** - the command that runs that one job on the server, where it shows what it does as it goes.
+- **Turn Off** - it no longer runs on its schedule, and shows **Off**. **Turn On** puts it back.
 
-Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **Alerts** says who hears when something goes wrong - see [below](#cron-alerts). **The cron job** has the line for your server. **Turn cron off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
+Beside the list, **At a glance** has whether cron is running, when it last ran, how many jobs are on and off, any that failed, the next job due, and the time zone the schedules are in. **Alerts** says who hears when something goes wrong - see [below](#cron-alerts). **The cron job** has the line for your server. **Turn Cron Off** stops every job at once without touching their schedules - what you want on a restored backup or a test copy, so it doesn't email clients or charge cards.
 
 > [!WARNING]
 > If cron stops, email stops going out, recurring invoices aren't made and SLAs aren't watched. ITFlow warns on the Cron, Mail Queue and Backup pages when it hasn't run for a few minutes.
@@ -82,7 +82,7 @@ On the **Alerts** card beside the jobs:
 
 - **Email alerts** - turn it off and nothing is emailed. The uptime monitor address still works.
 - **Send to** - the addresses the emails go to, with commas between. Leave it empty and they go to every active admin, who are listed under it.
-- **Send a test** - sends a test to the addresses in the box, saved or not. It goes out with the mail queue within a minute, so cron and [mail](/admin/mail) need to be working.
+- **Send a Test** - sends a test to the addresses in the box, saved or not. It goes out with the mail queue within a minute, so cron and [mail](/admin/mail) need to be working.
 
 The card says when no alert can be emailed - Cron Watch is off, or no mail server is set up.
 
@@ -105,20 +105,20 @@ The address has a key in it, so keep it private: anyone with it can see which jo
 
 The top of the page says when the last backup was made, what kind it was, and when the next scheduled one is due. When something needs you, it says that instead: a backup is being made, the last one didn't finish and why, there hasn't been one for a week, none has been made yet, or one is waiting because cron isn't running.
 
-- **Back up now** makes a Full Backup - the database and everything uploaded. This is the one to keep.
-- **Database only** is just the database. Much smaller and quicker, but no files or documents.
+- **Back Up Now** makes a Full Backup - the database and everything uploaded. This is the one to keep.
+- **Database Only** is just the database. Much smaller and quicker, but no files or documents.
 
 Cron makes it within a minute, so cron needs to be running. The page keeps itself up to date while it does, the backup appears in the list when it's done, and you get a notification.
 
 **Backups** lists those kept, newest first: who made each one or that the schedule did, its size, and when it was last downloaded. A failed one says why. **Download** saves one. Each backup's menu copies its path on the server, which restoring from the command line asks for, and its SHA-256 checksum, to check a copy kept somewhere else. The same menu deletes a backup, or takes one still waiting to be made off the queue.
 
-**Schedule and retention** says whether a backup is made every night, and at what time. **Change the time** is beside it, and **Turn on** when the schedule is off - the same as the Backup job's menu in [Cron](#cron). Below that are the type made each night, how many days to keep backups, and the most to keep of each type. Old backups are removed by the nightly job, never by a backup itself, so one that fails never costs you the one before it.
+**Schedule and retention** says whether a backup is made every night, and at what time. **Change the Time** is beside it, and **Turn On** when the schedule is off - the same as the Backup job's menu in [Cron](#cron). Below that are the type made each night, how many days to keep backups, and the most to keep of each type. Old backups are removed by the nightly job, never by a backup itself, so one that fails never costs you the one before it.
 
 **At a glance** has the last Full Backup and Database Only, how many backups are on the server and the room they take, the space left there, whether cron is running, and the folder they're kept in - inside ITFlow's own folder unless `$config_backup_path` in [config.php](/install/config-php) puts them somewhere else.
 
 Every backup is an encrypted zip, and the **Encryption key** opens it. It's hidden until you click the eye, and the button beside it copies it. Keep a copy somewhere other than the server - without it, a backup can't be restored, by anyone.
 
-**Export the master key**, under **Credential vault key**, gives you the key to the credential vault, for when every user's password is lost - a restore brings the vault back by itself as long as one user still knows theirs. It asks for your password, shows the key once, and files an encrypted copy with the backups. Every agent is notified that it was exported.
+**Export the Master Key**, under **Credential vault key**, gives you the key to the credential vault, for when every user's password is lost - a restore brings the vault back by itself as long as one user still knows theirs. It asks for your password, shows the key once, and files an encrypted copy with the backups. Every agent is notified that it was exported.
 
 ### Restoring {#restore}
 
@@ -132,7 +132,7 @@ The Restore window says what's in the backup - when it was taken, its database v
 
 ![The Restore window](adm-backup-restore.webp "The Restore window: what's in the backup, then your password and RESTORE")
 
-Like a backup, the restore is done by cron, within a minute. The top of the page says it's waiting, with **Cancel the restore**, then that it's running, and keeps itself up to date. A restore not started within an hour - cron was stopped - isn't done at all. While it runs, the other cron jobs wait, and anyone working may see errors. After it, the database is brought up to this version of ITFlow if the backup was older. If your account or password is different in the backup, you're asked to sign in again - with an account from the backup. The top of the page says how the last restore went for a week afterwards.
+Like a backup, the restore is done by cron, within a minute. The top of the page says it's waiting, with **Cancel the Restore**, then that it's running, and keeps itself up to date. A restore not started within an hour - cron was stopped - isn't done at all. While it runs, the other cron jobs wait, and anyone working may see errors. After it, the database is brought up to this version of ITFlow if the backup was older. If your account or password is different in the backup, you're asked to sign in again - with an account from the backup. The top of the page says how the last restore went for a week afterwards.
 
 A restore needs free space of about three times the backup's size. **From the command line**, under **Restoring**, has the command for a backup of any size, or for when cron isn't running. On a brand new install, the setup wizard also has a restore step. [Moving to a new server](/install/moving) goes through both.
 
@@ -170,7 +170,7 @@ It's kept in [config.php](/install/config-php#dev-mode), not the database, so re
 
 ![Update](adm-update.webp "Update: a newer version waiting, what to do first, and what's new in it")
 
-The Update Check job looks for updates once a day; **Check now** looks straight away. When a newer version is waiting, the page shows:
+The Update Check job looks for updates once a day; **Check Now** looks straight away. When a newer version is waiting, the page shows:
 
 - **What's new** - each release's notes from the changelog, newest first, with any step of its own under **Upgrading**. The notes for developers and the commits behind them are folded away.
 - **What to do first** - take a backup, read what's changing, pick a quiet time - and whether any of ITFlow's own files have been changed on this install. Updating puts back the released versions, so those changes would be lost. Your `config.php`, `uploads` and `custom` folders are never touched.
@@ -208,7 +208,7 @@ Everything is ticked to start with. Untick what you don't want, or use **All** a
 
 ### Clear out unused {#clear-out}
 
-**Clear out unused**, beside a pack's counts, is there when some of what you have from it isn't used yet: a category no ticket, invoice, expense or product has, a tag on nothing, a template nothing was made from, a canned response never put in a reply, or a product on no invoice, quote or asset. It lists them, all ticked, and says how many are in use and stay. Untick what you want to keep and click **Archive them**.
+**Clear out unused**, beside a pack's counts, is there when some of what you have from it isn't used yet: a category no ticket, invoice, expense or product has, a tag on nothing, a template nothing was made from, a canned response never put in a reply, or a product on no invoice, quote or asset. It lists them, all ticked, and says how many are in use and stay. Untick what you want to keep and click **Archive Them**.
 
 ![Clear out unused, open on Categories](adm-starter-clear.webp "Clear out unused: what came from the Categories pack that nothing uses yet, to archive")
 
@@ -218,7 +218,7 @@ The [Starter content step](/install/after-install#starter-content) of Get starte
 
 Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
 
-**Demo data**, under the packs, adds the sample clients and records for a demo or training install, and **Remove demo data** takes them out again in one go when you're ready for your own - it asks first, as it can't be undone.
+**Demo data**, under the packs, adds the sample clients and records for a demo or training install, and **Remove Demo Data** takes them out again in one go when you're ready for your own - it asks first, as it can't be undone.
 
 ## Debug
 
@@ -238,7 +238,7 @@ Along the top are the version and the database's version (with an update waiting
 
 Further down are the database - its tables and size, the biggest tables, and any difference from a fresh install's tables and columns - and the uploads folder by size. **Count exactly** counts every table's rows, where the page shows the database's own estimate.
 
-**Copy for support** puts the whole report on your clipboard as plain text, for a forum post or a support email: versions, what needs a look and the size of things, without host names, paths, addresses or keys. The same report is on the page, to read before you post it.
+**Copy for Support** puts the whole report on your clipboard as plain text, for a forum post or a support email: versions, what needs a look and the size of things, without host names, paths, addresses or keys. The same report is on the page, to read before you post it.
 
 The page still opens when the database is behind the code - which is when you most need it.
 

@@ -39,7 +39,7 @@ A **General** model is enough - every use falls back to it. Add others to send a
 
 ![AI models](adm-ai-models.webp "AI models: which model answers each use, and how much each is used")
 
-On **Admin > AI Models**, each model can have **Instructions** - your house style, sent with everything it's asked, such as "Write in US English" - and a **Temperature**. Leave the temperature empty unless you know the model takes one; newer models turn it away. **Try it** sends a test question.
+On **Admin > AI Models**, each model can have **Instructions** - your house style, sent with everything it's asked, such as "Write in US English" - and a **Temperature**. Leave the temperature empty unless you know the model takes one; newer models turn it away. **Try It** sends a test question.
 
 ## Who can use it
 

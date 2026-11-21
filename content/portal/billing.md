@@ -18,13 +18,13 @@ Each invoice opens in the portal as it prints, with what's due, **Pay**, **Downl
 
 ## Paying
 
-When you've connected a payment provider, **Pay invoices** - on Home, Invoices and Statement - lists everything still owed, ticked. They untick any they're not paying now, and pay the rest as **one card payment**, with a saved card or a new one on the secure payment page.
+When you've connected a payment provider, **Pay Invoices** - on Home, Invoices and Statement - lists everything still owed, ticked. They untick any they're not paying now, and pay the rest as **one card payment**, with a saved card or a new one on the secure payment page.
 
 ![Pay invoices](portal-pay.webp "Pay invoices: tick what to pay, and pay it in one go")
 
 The payment is recorded on each invoice in ITFlow straight away, and they get a receipt. See [Taking payments](/billing/payments#online-payments).
 
-When you have [clients pay the card fee](/admin/payment-providers#card-fee), **Pay invoices** shows it under what the invoices come to, with the total to pay, and follows as they tick and untick. The payment page, the invoice's **Pay** button and the page its link opens show it too. It goes on each invoice they pay as a **Card Fee** line.
+When you have [clients pay the card fee](/admin/payment-providers#card-fee), **Pay Invoices** shows it under what the invoices come to, with the total to pay, and follows as they tick and untick. The payment page, the invoice's **Pay** button and the page its link opens show it too. It goes on each invoice they pay as a **Card Fee** line.
 
 ![Pay invoices with the card fee](portal-pay-card-fee.webp "The card fee, shown before they pay and added to the total")
 
@@ -46,7 +46,7 @@ To accept, they type their name, tick that they can accept it for their company,
 
 ![Accepting a quote](portal-quote-accept.webp "Accepting: their name, a note, and that they can accept it for the company")
 
-Once accepted, **Signed copy or PO** lets them send you the signed quote or a purchase order. An expired quote says so, with **Ask for an updated quote**.
+Once accepted, **Signed copy or PO** lets them send you the signed quote or a purchase order. An expired quote says so, with **Ask for an Updated Quote**.
 
 ## Recurring invoices
 
@@ -62,7 +62,7 @@ A contract opens as its document, with where it stands and its term alongside. O
 
 ## Cards and autopay
 
-Under **Cards & autopay**, they can save a card - entered on the payment provider's own page, so the card details never reach you - and remove it again.
+Under **Cards & Autopay**, they can save a card - entered on the payment provider's own page, so the card details never reach you - and remove it again.
 
 ![Cards and autopay](portal-cards.webp "Cards & autopay: their saved cards, and which recurring invoices pay themselves")
 

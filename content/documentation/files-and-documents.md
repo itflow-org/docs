@@ -23,13 +23,13 @@ To upload, drag files or folders from your computer onto the list - they go into
 
 ![A client's Files in list view](doc-files.webp "List view: each item's type, size, when it changed and what it's linked to")
 
-Tick items and use **Bulk Action** to move, tag, archive, restore or delete them together, or **Download as zip** to get them in one go.
+Tick items and use **Bulk Action** to move, tag, archive, restore or delete them together, or **Download as Zip** to get them in one go.
 
 To rename something in the list view, point at it and click the pencil beside its name. Type the new name and press <kbd>Enter</kbd>, or <kbd>Esc</kbd> to leave it. For a file, the name is picked out without its extension, so you can type straight over it.
 
 ### Download a folder {#zip}
 
-The **⋮** beside the folder's path has **Download as zip**: everything in the folder and the folders under it, in the same folders. At the top level it's **Download everything as zip**. Documents go in as web pages, which open in any browser. Archived items are left out, and one zip can hold up to 2 GB.
+The **⋮** beside the folder's path has **Download as Zip**: everything in the folder and the folders under it, in the same folders. At the top level it's **Download everything as zip**. Documents go in as web pages, which open in any browser. Archived items are left out, and one zip can hold up to 2 GB.
 
 ## Move things between folders {#move}
 
@@ -42,7 +42,7 @@ Drag things onto a folder to move them. The folder lights up when it can take wh
 - **A folder inside a closed one** - hold what you're dragging over the closed folder for a moment and it opens.
 - **Up a level** - the path above the list takes a drop too. Drag onto **Top level** or a folder in the path.
 
-Each move goes in the audit log, and the message after it has [Undo](/getting-started/lists#undo) to put things back where they were. On a phone or tablet, use **Move** in an item's **⋮** menu, or **Rename or move** in a folder's.
+Each move goes in the audit log, and the message after it has [Undo](/getting-started/lists#undo) to put things back where they were. On a phone or tablet, use **Move** in an item's **⋮** menu, or **Rename or Move** in a folder's.
 
 ## Upload files
 
@@ -63,7 +63,7 @@ Click a file to open its quick look: a preview, its folder, who uploaded it and 
 
 ## Write a document
 
-1. In **Files**, use the arrow beside **Upload** and pick **New document**.
+1. In **Files**, use the arrow beside **Upload** and pick **New Document**.
 2. Give it a **Name** and a summary, pick its folder, and write it in the editor. Tables, images and formatting all work.
 3. Click **Create**.
 
@@ -73,7 +73,7 @@ With AI set up, **Draft it with AI** writes a first draft from what you say it's
 
 ### Start from a template
 
-Your admin can keep **document templates** - a network overview, a backup runbook, a new starter checklist - that fill themselves in from the client. Use **Document from template** in the same menu:
+Your admin can keep **document templates** - a network overview, a backup runbook, a new starter checklist - that fill themselves in from the client. Use **Document from Template** in the same menu:
 
 1. Pick the **Template**.
 2. ITFlow shows what it fills in from the client - their name, sites, contacts, and tables of their networks, servers, domains, licenses and the rest, as they are now - and the **Site** to use.
@@ -105,15 +105,15 @@ Along the top: **Edit**, **Share**, **PDF** and print, and the **⋮** menu with
 
 ### What an edit changed {#changes}
 
-The arrows beside a version in **Versions** - and beside **Now**, for the last edit - show what that edit changed, against the version before it. Lines taken out are red and lines put in are green. In a line that changed, the words that changed are marked. Lines that stayed the same are folded away, apart from a couple either side of each change. A change of name shows at the top. Formatting changes alone, such as bold or a colour, aren't shown, and a picture shows as **[Picture]**. **What changed** in a version's window opens the same view.
+The arrows beside a version in **Versions** - and beside **Now**, for the last edit - show what that edit changed, against the version before it. Lines taken out are red and lines put in are green. In a line that changed, the words that changed are marked. Lines that stayed the same are folded away, apart from a couple either side of each change. A change of name shows at the top. Formatting changes alone, such as bold or a colour, aren't shown, and a picture shows as **[Picture]**. **What Changed** in a version's window opens the same view.
 
 ![What changed in an edit: a line taken out, a line put in, a line changed with its changed words marked](doc-changes.webp "What changed: taken out in red, put in in green, the changed words marked")
 
 ### Reviews
 
-A document can be reviewed on a schedule - every 6 months, say. Its page then says **Review due**, or when the next review is and who last reviewed it, with **Mark reviewed**. Editing a document counts as reviewing it. The client's overview counts documents due a review, and Files has a **Review due** tab.
+A document can be reviewed on a schedule - every 6 months, say. Its page then says **Review due**, or when the next review is and who last reviewed it, with **Mark Reviewed**. Editing a document counts as reviewing it. The client's overview counts documents due a review, and Files has a **Review due** tab.
 
-A document made from a template is reviewed as often as the template says. To change that for one document, or to review a document that isn't from a template, click **How often** beside its review and pick **Every 3 months**, **Every 6 months**, **Every year** or **Every 2 years** - or **Never**. **As its template says** puts it back. Changing it doesn't count as reviewing it.
+A document made from a template is reviewed as often as the template says. To change that for one document, or to review a document that isn't from a template, click **How Often** beside its review and pick **Every 3 months**, **Every 6 months**, **Every year** or **Every 2 years** - or **Never**. **As its template says** puts it back. Changing it doesn't count as reviewing it.
 
 ![How often a document is reviewed](doc-review.webp "How often: as its template says, or set on the document")
 

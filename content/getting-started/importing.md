@@ -18,7 +18,7 @@ Clients, contacts, locations, vendors, credentials, networks, assets, domains, c
 6. Read what the rows will do: how many will be added, updated and skipped, and which can't be imported and why. It changes as you change the columns.
 7. Click **Import**.
 
-When it's done, the window says what happened to each row. **Rows not imported** downloads the rows that didn't go in, just as they were, with the reason in a last column. Fix them in your spreadsheet and import that file.
+When it's done, the window says what happened to each row. **Rows Not Imported** downloads the rows that didn't go in, just as they were, with the reason in a last column. Fix them in your spreadsheet and import that file.
 
 > [!TIP]
 > **Template** downloads a file with every heading and an example row. A file exported from the same list imports as it is - so to change many records at once, export them, change the file and import it with **Update it**.

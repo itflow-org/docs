@@ -23,11 +23,11 @@ And you can **ask for a login**: the client gets a form to send you one, instead
 4. **Can be opened**: once, twice, 3, 5 or 10 times, or until it expires.
 5. **Before it opens**: **Nothing**, a **Passphrase** (one is made up for you - give it to them by phone or text, not with the link), or an **Emailed code** sent to the recipient, so a forwarded link is no use to anyone else.
 6. **Tell me when it is opened** - on by default. Add a **Note for them** if you like.
-7. Click **Make the link**.
+7. Click **Make the Link**.
 
 ![The Share window for a login, filled in to send it to a contact with a passphrase](doc-share-filled.webp "Share: who it's for, how long it works, how many times it opens, and what it asks for first")
 
-The link is shown once, with the passphrase - copy them now, as they can't be shown again. **QR code** shows it as a code to scan, and **Make another** makes a fresh link with the same choices.
+The link is shown once, with the passphrase - copy them now, as they can't be shown again. **QR Code** shows it as a code to scan, and **Make Another** makes a fresh link with the same choices.
 
 ![The link is ready, with the link, the passphrase and a QR code button](doc-share-done.webp "The link is shown once: copy it, and give the passphrase another way")
 
@@ -46,7 +46,7 @@ Documents can be printed, and files and the IT documentation downloaded, from th
 
 ## Ask the client for a login
 
-1. On the client's **Credentials**, use the arrow beside **New Credential** and pick **Ask the client for a login**.
+1. On the client's **Credentials**, use the arrow beside **New Credential** and pick **Ask the Client for a Login**.
 2. Under **What do you need?**, say what it's for - "Domain registrar login". They see this, and it becomes the credential's name when you save it.
 3. Pick who to **Ask**, how long the request **Works for**, and whether it asks for a passphrase or code first.
 4. Click **Make the request**.
@@ -57,7 +57,7 @@ They get a form for the website, username, password and 2FA secret. When they se
 
 ## Keep track of your links
 
-Each client has **Shared Links** in its menu, and **Across clients > Shared Links**, in the top bar, shows every client's.
+Each client has **Shared Links** in its menu, and **Across Clients > Shared Links**, in the top bar, shows every client's.
 
 ![The Shared Links list](doc-shares.webp "Shared Links: what went out, to whom, until when, and how often it was opened")
 
@@ -67,7 +67,7 @@ Click one for its quick look and history: when it was opened, from which address
 
 ### Turn links off
 
-Turn off a link from its menu, or tick several and use **Bulk Action > Turn off**. When someone leaves your team, or a client's mailbox is compromised, **Turn off every open link** (in the menu at the top of a client's Shared Links) ends them all at once.
+Turn off a link from its menu, or tick several and use **Bulk Action > Turn Off**. When someone leaves your team, or a client's mailbox is compromised, **Turn Off Every Open Link** (in the menu at the top of a client's Shared Links) ends them all at once.
 
 The **Secure Note** button at the top of Shared Links sends a note, and the arrow beside it shares the client's IT documentation or asks for a login. Your admin sets the longest a link may last, and whether passwords and notes must have a passphrase or code, in **Admin > Settings > Security**.
 

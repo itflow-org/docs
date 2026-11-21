@@ -8,7 +8,7 @@ To move ITFlow, install a fresh copy on the new server and restore a full backup
 
 ## 1. Take a full backup of the old server {#backup}
 
-1. In [Admin > Backup](/admin/maintenance#backup), click **Back up now**. Cron makes a Full Backup within a minute, so cron needs to be running.
+1. In [Admin > Backup](/admin/maintenance#backup), click **Back Up Now**. Cron makes a Full Backup within a minute, so cron needs to be running.
 2. Click its **Download** in the list of backups.
 3. Copy the **Encryption key** from the same page, with the button beside it. You'll need it to restore.
 
@@ -43,7 +43,7 @@ Running as `www-data` keeps the restored files owned by the web server's user. T
 
 ## 4. Switch over {#switch}
 
-1. On the old server, go to **Admin > Cron**, click **Turn cron off**, and confirm.
+1. On the old server, go to **Admin > Cron**, click **Turn Cron Off**, and confirm.
 2. Point your domain name at the new server, and get its certificate. If ITFlow's address is changing, change `$config_base_url` in [config.php](/install/config-php) too.
 3. If the backup came from an older version of ITFlow, bring its database up to date:
    ```

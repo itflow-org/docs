@@ -36,7 +36,7 @@ The **Day** view has a column for each technician, through the day. Hours outsid
 1. Drag a ticket from the queue onto a technician's column, at the time you want. Drop it at the top of the column, above the hours, to book it for the start of the working day.
 2. The **Schedule** window opens with the **Agent**, **Date and time**, **How long** and **Visit** (**Remote** or **Onsite**) filled in. Change anything you need.
 3. Leave **Email the contact and watchers the time** on to tell the client, or switch it off to book it quietly. (It's only there when emails to clients are on in [ticket settings](/admin/tickets#ticket-settings).)
-4. Click **Schedule it**.
+4. Click **Schedule It**.
 
 ![The Schedule window](sd-dispatch-schedule.webp "Schedule: who, when, how long, and whether the client is told")
 
@@ -51,7 +51,7 @@ For work that isn't a ticket yet - a call that's just come in, say - drag down a
 ## Move or take off booked work
 
 - **To another time or technician** - drag a booking to the new time, or across to another technician's column. The **Schedule** window opens so you can check it; **Cancel** puts it back where it was. Drag a booking's bottom edge to make it longer or shorter.
-- **Off the schedule** - drag a booking back onto the queue and click **Take it off**. The technician, and the client when emails to clients are on, are sent the cancellation, and the ticket goes back to **Not booked**.
+- **Off the schedule** - drag a booking back onto the queue and click **Take It Off**. The technician, and the client when emails to clients are on, are sent the cancellation, and the ticket goes back to **Not booked**.
 - **Events** - a one-off event moves the same way, to another time or to another technician. The people with the invitation are sent the new time; a technician taken off it is sent the cancellation. A repeating event is moved from its **Edit**, so the whole series moves together.
 
 Bookings for technicians helping on a ticket, and holidays, are on the board to plan around, but don't move from here.

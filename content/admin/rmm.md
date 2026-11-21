@@ -45,7 +45,7 @@ A provider's **Clients** page lists the RMM's clients and the ITFlow client each
 - **Pick** links it to any of your clients.
 - **⋮ > Link the suggested**, at the top, links every suggestion at once.
 
-Linking brings the client's devices in straight away, and says how many came in and how many matched assets you had. After that they're kept up to date every 15 minutes, or with **Sync now**.
+Linking brings the client's devices in straight away, and says how many came in and how many matched assets you had. After that they're kept up to date every 15 minutes, or with **Sync Now**.
 
 The tabs show **All**, **Not linked** and **Linked** - and **Gone from Tactical** once a client Tactical had is no longer there.
 
@@ -136,10 +136,10 @@ From a provider's menu:
 
 - **Clients** - its [Clients page](#link).
 - **Edit** - its name, addresses, key and alerts. Leave the key empty to keep the saved one. Which RMM it is can't be changed.
-- **Sync now** - bring in its linked clients' devices now.
-- **Test the connection** - whether Tactical takes the key, and how many clients and devices it sees.
+- **Sync Now** - bring in its linked clients' devices now.
+- **Test the Connection** - whether Tactical takes the key, and how many clients and devices it sees.
 - **Open Tactical** - its dashboard.
-- **Turn off** - nothing is brought in, and its alerts don't open tickets. Assets keep what it last said. When it's on again, alerts that came up while it was off don't open tickets.
+- **Turn Off** - nothing is brought in, and its alerts don't open tickets. Assets keep what it last said. When it's on again, alerts that came up while it was off don't open tickets.
 - **Delete** - the links between its clients and yours are forgotten, and assets no longer show what it says. The assets and tickets stay. If recurring invoice lines bill its devices, it says how many first - look at them after.
 
 ### More than one {#more-than-one}

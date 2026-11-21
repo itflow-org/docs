@@ -73,7 +73,7 @@ Each takes `event_id` and `client_id`.
 
 - **Update** takes any of the fields under [Create](#events-create), and changes only what you send. `client_id` can move it to another client. Sending any of the attendee lists sets who is on it - a list you leave out stays. With `send_invites`, anyone new gets the invitation, those who have it get the change, and anyone taken off is told it's off for them. The answer has `emailed`.
 - **Send** emails the invitation, as **Email the invitation** does: to those not sent it yet, and again, as an update, to those who were. ITFlow has to send mail.
-- **Skip** takes `date`, one day of a repeating event to leave out, as **Skip this one** does. Those who have it get the series without that day.
+- **Skip** takes `date`, one day of a repeating event to leave out, as **Skip This One** does. Those who have it get the series without that day.
 - **Delete** tells those who have it in their calendar that it's off.
 
 ## Trips {#trips}

@@ -35,7 +35,7 @@ Some work follows the week, not the date: patch night on the third Wednesday, th
 
 ![Repeats on, on the Schedule tab](sd-recurring-schedule.webp "Repeats on: the same date each time, or the same weekday of the month")
 
-The list shows it under **How often** - "on the third Wednesday". When you move its next run, from **Edit** or **Set next run**, it keeps to the same kind of weekday: move a third-Wednesday one to the second Wednesday and it runs on second Wednesdays from then on. A last-Friday one stays on the last Friday whenever the new day allows it.
+The list shows it under **How often** - "on the third Wednesday". When you move its next run, from **Edit** or **Set Next Run**, it keeps to the same kind of weekday: move a third-Wednesday one to the second Wednesday and it runs on second Wednesdays from then on. A last-Friday one stays on the last Friday whenever the new day allows it.
 
 ## Book the work and make it ahead {#ahead}
 
@@ -51,9 +51,9 @@ Days ahead stop short of the next run - under a week for a weekly one, for examp
 
 From a recurring ticket's **⋮** menu, or **Bulk Action** for several:
 
-- **Raise now** - raise the next ticket straight away, without waiting for its day.
+- **Raise Now** - raise the next ticket straight away, without waiting for its day.
 - **Pause** and **Resume** - stop it for a while, such as while a client is between contracts.
-- **Assign**, **Set priority**, **Set category**, **Set billing** and **Set next run**.
+- **Assign**, **Set Priority**, **Set Category**, **Set Billing** and **Set Next Run**.
 - **Edit** and **Delete**.
 
 The technician a recurring ticket goes to can be changed right in the list. Each ticket it raises is marked with the recurring arrows in the tickets list.

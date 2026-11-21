@@ -15,7 +15,7 @@ Each entry shows when, who (an agent, or a portal contact), the client, what kin
 
 Search it, filter it by date, person, client and type, or use the tabs: **Changes**, **Deletions**, **Sign-ins**, **Security** and **Data out** (exports and shares). **Export** saves what's shown, for an insurer or an investigation.
 
-**Activity report**, in the Export menu, shows activity over time, out of hours, and by person, client and kind of record.
+**Activity Report**, in the Export menu, shows activity over time, out of hours, and by person, client and kind of record.
 
 ## App logs
 
@@ -31,7 +31,7 @@ When something isn't working - email not sending, a payment provider refusing - 
 
 ![Log settings](adm-log-settings.webp "Logs: how long they're kept, and sending them on to a syslog server or SIEM")
 
-For forwarding, set the **Server**, **Port**, whether it goes **Over** UDP, TCP or TLS, and **As** JSON, CEF or plain text. Pick which app logs to send, and whether to send **The audit log - every entry**. **Save and send a test** checks it arrives. If the server can't be reached, ITFlow isn't slowed down: it tries again a minute later, and the entries in between stay in ITFlow's own logs.
+For forwarding, set the **Server**, **Port**, whether it goes **Over** UDP, TCP or TLS, and **As** JSON, CEF or plain text. Pick which app logs to send, and whether to send **The audit log - every entry**. **Save and Send a Test** checks it arrives. If the server can't be reached, ITFlow isn't slowed down: it tries again a minute later, and the entries in between stay in ITFlow's own logs.
 
 > [!TIP]
 > Keep the audit log as long as your clients or your cyber insurer need you to be able to say who did what. Each entry is small; keeping it for a year or more is reasonable.

@@ -38,7 +38,7 @@ Anything nothing fills in - a contract with no contact, say - is pointed out bef
 
 ## Send it to sign {#send}
 
-1. On the contract's page, click **Send to sign**.
+1. On the contract's page, click **Send to Sign**.
 2. Pick **Who signs** - one of the client's contacts, each shown with their job title and the address it goes to - or type **a name** and **their email**. A contact with no email address can't be picked.
 3. Add **A note for them**, if you like. It goes in the email.
 4. Click **Send**. **Preview** shows the document first.
@@ -70,7 +70,7 @@ The **Signing** card on the contract's page says where it stands - sent, opened,
 
 ![The Signing card, waiting to be countersigned](bill-contract-signing.webp "Signing: sent, opened and signed by the client - and waiting for you to countersign")
 
-It also has the signing link to copy, **Send the link again**, **Withdraw**, the copy sent or signed - **Copy sent** or **Signed copy** - to view or download, and the requests before this one.
+It also has the signing link to copy, **Send the Link Again**, **Withdraw**, the copy sent or signed - **Copy sent** or **Signed copy** - to view or download, and the requests before this one.
 
 The signed PDF ends with how it was signed: when it was sent and opened, who signed it, when and from which IP address, and the document's SHA-256 fingerprint.
 

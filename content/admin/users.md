@@ -36,12 +36,12 @@ They get an email from you with **Accept the invite**. Until they use it, they'r
 
 ### Invite several at once {#invite-several}
 
-For a few new starters, or a whole team moving to ITFlow, pick **Invite several** from the menu beside **New User**:
+For a few new starters, or a whole team moving to ITFlow, pick **Invite Several** from the menu beside **New User**:
 
 1. Under **Who**, put one person on each line - `Jane Doe, jane@example.com`, `Sam Lee <sam@example.com>`, or just the email, and the name is made from it (`alex.morgan@example.com` becomes Alex Morgan). Up to 50 at a time.
 2. Pick the **Role** they all get, and the **Office** if you have more than one.
 3. Switch on **Require multi-factor authentication** if they should all set up two-step sign-in.
-4. Click **Send invites**.
+4. Click **Send Invites**.
 
 ![Invite several users at once](adm-user-invite-bulk.webp "Invite several: one per line, all with the same role")
 
@@ -63,9 +63,9 @@ The **Invited** tab lists everyone invited who hasn't joined yet - their role, w
 
 From a row's menu:
 
-- **Send again** emails them a new link, good for another 7 days. The one sent before stops working.
-- **Get the link** makes a new link for you to send them yourself, shown once at the top of the page. The one sent before stops working.
-- **Cancel invite** stops the link working.
+- **Send Again** emails them a new link, good for another 7 days. The one sent before stops working.
+- **Get the Link** makes a new link for you to send them yourself, shown once at the top of the page. The one sent before stops working.
+- **Cancel Invite** stops the link working.
 
 ![An invite link to pass on](adm-user-invite-link.webp "Get the link: shown once, to send them yourself")
 
@@ -90,7 +90,7 @@ The **No MFA** tab shows who isn't using two-step sign-in. Tick users and use **
 
 If someone loses their phone, open them with **Edit** and use **Reset it** under **Multi-factor authentication**. Their authenticator app and their remembered browsers are forgotten, and they set it up again.
 
-**Forget remembered browsers**, in the bulk menu, makes them enter a code again everywhere.
+**Forget Remembered Browsers**, in the bulk menu, makes them enter a code again everywhere.
 
 ## When someone leaves
 
@@ -98,7 +98,7 @@ If someone loses their phone, open them with **Edit** and use **Reset it** under
 - **Archive** is for good. They're signed out and can't sign in, their password and copy of the credential vault key are wiped, and you hand their open tickets to someone else - or leave them unassigned. Everything they did stays, under their name.
 
 > [!WARNING]
-> If an agent's account may have been compromised, use **Incident response** in the menu beside **New User**. It resets the password of every other agent, shows you the new passwords once to give out by phone, and forgets every remembered browser. Client portal logins are left alone. Change your own password first.
+> If an agent's account may have been compromised, use **Incident Response** in the menu beside **New User**. It resets the password of every other agent, shows you the new passwords once to give out by phone, and forgets every remembered browser. Client portal logins are left alone. Change your own password first.
 
 ## API / service accounts {#service-accounts}
 
@@ -136,18 +136,18 @@ Two pickers beside the search narrow the list:
 
 From a row's menu:
 
-- **Open contact** goes to their contact page, and **View the portal as them** opens the portal as they see it, read only.
-- **Audit log** shows their sign-ins and what they did.
-- **Email a password link** sends them a link to choose a new password, good for an hour. Their password stays as it is until they use it. For someone who has never signed in, **Send the invite again** sends their invite.
-- **Turn off two-step sign-in** is for a lost or replaced phone. They sign in with their password alone until they set it up again, and are emailed that it was turned off.
-- **Forget remembered browsers** makes every browser ask for their code again.
-- **Turn off portal access** signs them out on their next click, and they can't sign in. Their contact stays as it is.
+- **Open Contact** goes to their contact page, and **View the Portal as Them** opens the portal as they see it, read only.
+- **Audit Log** shows their sign-ins and what they did.
+- **Email a Password Link** sends them a link to choose a new password, good for an hour. Their password stays as it is until they use it. For someone who has never signed in, **Send the Invite Again** sends their invite.
+- **Turn Off Two-step Sign-in** is for a lost or replaced phone. They sign in with their password alone until they set it up again, and are emailed that it was turned off.
+- **Forget Remembered Browsers** makes every browser ask for their code again.
+- **Turn Off Portal Access** signs them out on their next click, and they can't sign in. Their contact stays as it is.
 
 ![A portal login's menu](adm-users-portal-menu.webp "A row's menu: open the contact, email a password link, turn off two-step sign-in, or turn their access off")
 
 Tick several and use **Bulk Action** to email password links, turn off two-step sign-in, or turn off access for all of them. The actions that send an email show once [Mail](/admin/mail) is set up.
 
-To turn someone's access back on, show **Access off** and use **Turn on portal access** in their row's menu: pick how they sign in, and whether to email them how. The password they had still works. A login whose contact or client is archived stays off until that's restored.
+To turn someone's access back on, show **Access off** and use **Turn On Portal Access** in their row's menu: pick how they sign in, and whether to email them how. The password they had still works. A login whose contact or client is archived stays off until that's restored.
 
 You never set a password for a contact here - they choose their own from the emailed link. New portal logins aren't made here either: give a contact access from their own page, as in [Giving contacts access](/portal/access).
 

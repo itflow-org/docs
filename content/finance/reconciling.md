@@ -18,7 +18,7 @@ The page shows where the account is **Reconciled to**, and how many lines haven'
 
 1. Set the date the **Statement ends** and its **Ending balance**. It starts from where the last statement ended.
 2. Add **Notes** if you like - the statement's number, or anything to remember.
-3. Click **Start reconciling**.
+3. Click **Start Reconciling**.
 
 > [!NOTE]
 > For an account's first statement, ITFlow can start from the bank's balance on the day it starts, counting everything before it as reconciled. If ITFlow was out from the bank that day, the opening balance can be corrected to match.
@@ -31,10 +31,10 @@ Every line on the account up to the statement's end that hasn't cleared yet is l
 
 - Along the top: where it's **Starting from**, **The statement**'s ending balance, what you've **Cleared** so far, and the **Difference**.
 - Lines brought in from a [bank statement](/finance/importing-statements) start ticked.
-- **Find a line** searches by who, reference or amount. The tabs show **Money in**, **Money out**, **Not ticked** and **Ticked**, and **Tick all shown** ticks everything the search or tab shows.
+- **Find a line** searches by who, reference or amount. The tabs show **Money in**, **Money out**, **Not ticked** and **Ticked**, and **Tick All Shown** ticks everything the search or tab shows.
 - Ticks are saved as you go, so you can leave it and come back to finish another time.
 
-Missing a line - a bank fee, interest, a charge nobody entered? The arrow beside **Finish** has **New Expense**, **New Income** and **New Transfer** to add it there and then, and **Change the statement** if you typed the date or balance wrong.
+Missing a line - a bank fee, interest, a charge nobody entered? The arrow beside **Finish** has **New Expense**, **New Income** and **New Transfer** to add it there and then, and **Change the Statement** if you typed the date or balance wrong.
 
 When the **Difference** comes to nothing, click **Finish**. The ticked lines are marked cleared, with a tick by their date in **Transactions**.
 

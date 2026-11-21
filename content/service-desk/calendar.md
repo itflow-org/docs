@@ -48,7 +48,7 @@ Drag one onto the calendar to book it again, for as long as it was booked before
 
 ## Add an event
 
-1. Click **New event**, or click (or drag across) a time on the calendar.
+1. Click **New Event**, or click (or drag across) a time on the calendar.
 2. Give it a **Title**, and pick who it's **Assigned to** - the technicians it's for. It goes on their calendar, in their colour. With more than one calendar, also pick the **Calendar** it's kept on.
 3. Under **When**, set when it **Starts** and **Ends**, or switch on **All day**. Under **Repeats**, pick how often it repeats, if it does - every so many days, weeks, months or years, with an end date and dates to skip. A monthly or yearly one can repeat on a weekday rather than the same date: **Repeats on** offers what its start day is, such as **On the third Wednesday** or **On the last Friday**.
 4. Pick the **Client**, if it's for one, and the **Location** - a client site, a room, an address, or a Teams or Zoom link.
@@ -76,14 +76,14 @@ Reminders go out within a minute of their time, and each one only once. They nee
 
 Every technician has a private link to subscribe to from their phone, Outlook, Google Calendar, Apple Calendar, Nextcloud or Thunderbird. It stays up to date as work is booked.
 
-1. On the calendar, click **Set it up** (or **My calendar link** once you have one) under the calendars.
+1. On the calendar, click **Set it up** (or **My Calendar Link** once you have one) under the calendars.
 2. Under **What it shows**, pick **Just mine** or **The whole team**, and which of **Scheduled tickets**, **Events** and **Projects** to include.
 3. Switch on **Busy only** to show just the times, with no titles, clients or addresses - for a calendar other people can see.
-4. Click **Make my link**, copy it, and follow the setup help for your calendar app.
+4. Click **Make My Link**, copy it, and follow the setup help for your calendar app.
 
 ![The My calendar link window](sd-calendar-feed.webp "Your calendar link: just yours or the whole team's, and how much it shows")
 
 > [!WARNING]
-> Anyone with the link can read what it shows, so keep it to yourself. If it gets out, click **Make a new link** in the same window - the old one stops working - or **Stop the link** altogether. It also stops working when your account is disabled, and only shows what your role and client access let you see.
+> Anyone with the link can read what it shows, so keep it to yourself. If it gets out, click **Make a New Link** in the same window - the old one stops working - or **Stop the Link** altogether. It also stops working when your account is disabled, and only shows what your role and client access let you see.
 
 A calendar can be shared the same way: **Share** in its **⋮** menu makes a subscription link for that calendar alone.

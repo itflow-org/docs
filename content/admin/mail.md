@@ -62,7 +62,7 @@ The address and name each kind of email comes from - **System emails** (alerts, 
 
 **Tests** sends a test email, checks that the support mailbox can be read, and - with Google or Microsoft - that the sign-in still works, so you see a problem before your clients do.
 
-**Previews** shows every email ITFlow sends, as it goes out - with your logo, your details and your From addresses - and who gets it. Each is made on sample records, so looking sends and saves nothing. **Send me a copy** sends one to you, to see it in your own mail app.
+**Previews** shows every email ITFlow sends, as it goes out - with your logo, your details and your From addresses - and who gets it. Each is made on sample records, so looking sends and saves nothing. **Send Me a Copy** sends one to you, to see it in your own mail app.
 
 ![Previews of every email ITFlow sends](adm-mail-previews.webp "Previews: every email, who gets it, and how it looks")
 
@@ -72,7 +72,7 @@ Everything ITFlow sends goes through **Admin > Mail Queue**. The Mail Queue job 
 
 ![The mail queue](adm-mail-queue.webp "The mail queue: what's been sent, what's waiting and what failed")
 
-The tabs are **Waiting**, **Sending**, **Retrying**, **Failed**, **Sent** and **Cancelled**. A failed email is tried again a few times before it's marked **Failed** - its row says why, such as an address that doesn't exist. Tick emails to **Retry now**, **Cancel** or **Delete** them. Sent, failed and cancelled email is kept for 90 days.
+The tabs are **Waiting**, **Sending**, **Retrying**, **Failed**, **Sent** and **Cancelled**. A failed email is tried again a few times before it's marked **Failed** - its row says why, such as an address that doesn't exist. Tick emails to **Retry Now**, **Cancel** or **Delete** them. Sent, failed and cancelled email is kept for 90 days.
 
 Click an email to see it as it went. A sent email keeps what it said, its attachments and its calendar file. One with a link or code that opens something - a shared login and its code, a client portal or agent invite, a password link, a contract to sign or a task to approve - is cleared once it's sent, so the link isn't kept where others can see it, and a day after it was queued if it failed or was cancelled. One cleared like that can't be retried: send a new one from where it came from.
 
@@ -99,7 +99,7 @@ Switch on **Email a summary of the week** for an email, early on the day you pic
 
 - **On** - the day it goes.
 - **Send it to** - addresses, separated by commas. Leave it empty and every admin gets it.
-- **Send me one now** sends you one for the last seven days, to see what it looks like. It's also under **Previews** in [Tests and previews](#tests-and-previews).
+- **Send Me One Now** sends you one for the last seven days, to see what it looks like. It's also under **Previews** in [Tests and previews](#tests-and-previews).
 
 ![The weekly summary email](adm-weekly-summary.webp "The weekly summary: the week beside the week before, and what needs a look")
 

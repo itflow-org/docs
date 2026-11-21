@@ -19,16 +19,16 @@ The PDF has a cover, a contents page with page numbers, and an overview with the
 
 1. Open the client and click **⋮ > Export Data**.
 2. Leave **Documentation PDF** picked, and tick the parts to include. **All** and **None** tick or untick the lot.
-3. Click **Download PDF** - or **Share a link** to send it to someone securely instead.
+3. Click **Download PDF** - or **Share a Link** to send it to someone securely instead.
 
 ### Share it as a link {#share}
 
 Rather than downloading the PDF and attaching it to an email, you can send it as a [shared link](/documentation/shared-links): one that only works for as long and as many times as you set, can ask for a passphrase or an emailed code first, and tells you when it's downloaded.
 
-1. In **Export Data**, tick the parts to include and click **Share a link**. Or, on the client's **Shared Links**, use the arrow beside **Secure Note** and pick **Share the IT documentation**.
+1. In **Export Data**, tick the parts to include and click **Share a Link**. Or, on the client's **Shared Links**, use the arrow beside **Secure Note** and pick **Share the IT Documentation**.
 2. The share window opens with the same parts ticked - change them here if you like.
 3. Pick who it's for, how long it **Works for**, how many times it **Can be opened** and what it asks for **Before it opens**, as for any shared link.
-4. Click **Make the link**. Copy the link, and the passphrase if it has one - they're shown once.
+4. Click **Make the Link**. Copy the link, and the passphrase if it has one - they're shown once.
 
 ![The share window for the IT documentation, with the parts to include, passwords switched on, and who it's for](cl-export-share.webp "Share the IT documentation: the parts to include, then who it's for and how long it works")
 

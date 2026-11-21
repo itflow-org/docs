@@ -31,7 +31,7 @@ There are three ways onto the list:
 
 - **New Item** - type what it is, or pick a **Product** to fill in its name, cost and vendor. Set **How many**, the **Unit cost**, the **Vendor** and who it's **For**: a client, or your own stock. A **Note** is for your team.
 - **Order** on a product's page - the same window, with the product already picked. It says **Order More** when the product is low on stock.
-- **Add them to the list** - when products you track stock for are at or under their reorder level and not already on order, an alert at the top names them. One click adds each with its reorder quantity, marked **Restock**. Set the level on the product (see [Keep track of stock](/billing/products#keep-track-of-stock)).
+- **Add Them to the List** - when products you track stock for are at or under their reorder level and not already on order, an alert at the top names them. One click adds each with its reorder quantity, marked **Restock**. Set the level on the product (see [Keep track of stock](/billing/products#keep-track-of-stock)).
 
 Narrow the list by vendor or by who it's for, or search it. **Edit** in an item's **⋮** menu changes it, and **Take Off the List** removes it - nothing is ordered.
 
@@ -66,7 +66,7 @@ Either way, its lines appear on **Receiving**. If approval is on (below) and the
 
 ## Approval {#approval}
 
-Approval is off to start with: anyone with Modify can order straight from a draft. To have purchase orders approved first, go to **Admin > Settings > Purchase orders**:
+Approval is off to start with: anyone with Modify can order straight from a draft. To have purchase orders approved first, go to **Admin > Settings > Purchase Orders**:
 
 ![Purchase order settings](adm-purchase-orders.webp "Purchase Orders settings: numbering, and when a purchase order needs approving")
 

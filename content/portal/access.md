@@ -39,10 +39,10 @@ An admin can see everyone with access, at every client, in one list - who signs 
 
 A client's primary contact - usually the owner or office manager - can look after their own people in the portal, under **Your IT > Contacts**:
 
-- **Add a person**, with their roles
+- **Add a Person**, with their roles
 - change a person's details and roles
-- **Give access and email an invite**, send it again, or turn access off
-- **Invite people** by email, who join as their colleagues - see [Invites and signing up](/portal/invites#primary)
+- **Give Access and Email an Invite**, send it again, or turn access off
+- **Invite People** by email, who join as their colleagues - see [Invites and signing up](/portal/invites#primary)
 - **Left the company** for someone who's gone: their access is turned off straight away, and a ticket is opened for you to close down their email, accounts and devices
 
 ![The client's primary contact managing a colleague in the portal](portal-contact.webp "The primary contact can give a colleague access, change their roles, or tell you they've left")
@@ -51,13 +51,13 @@ They can't change their own record or another primary contact's. What they chang
 
 ## Signing in safely
 
-Each contact sets their own password, and can turn on **Two-step sign-in** with an authenticator app under **Your account**. Your admin can require it for everyone who signs in with a password, in **Admin > Settings > Client portal**.
+Each contact sets their own password, and can turn on **Two-step sign-in** with an authenticator app under **Your Account**. Your admin can require it for everyone who signs in with a password, in **Admin > Settings > Client portal**.
 
 If a contact loses their phone, open their contact page and use **Turn off two-step sign-in** - or an admin can from [Client portal logins](/admin/users#client-portal). They sign in with their password alone until they set it up again.
 
-Each contact also has a **Phone PIN** you can ask for when they call, to check it's really them. They can see and change it under **Your account**.
+Each contact also has a **Phone PIN** you can ask for when they call, to check it's really them. They can see and change it under **Your Account**.
 
 ![The contact's own account page](portal-profile.webp "Your account: their details, their phone numbers, the emails they get, and how they sign in")
 
 > [!TIP]
-> Under **Your account**, contacts choose which ticket emails they get - every update, or only replies and fixes - and whether to hear about other people's tickets at their company.
+> Under **Your Account**, contacts choose which ticket emails they get - every update, or only replies and fixes - and whether to hear about other people's tickets at their company.

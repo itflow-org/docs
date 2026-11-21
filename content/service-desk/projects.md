@@ -39,8 +39,8 @@ A project template is a set of ticket templates in order - say, "Client Onboardi
 Along the top, a warning shows when something needs a look - past its due date, over budget, stalled. Then four cards: **Tickets done**, **Tasks done**, **Time logged** against the budget (with what's billable and not yet invoiced), and **Due**.
 
 - **New Ticket** raises a ticket in the project.
-- **Add tickets** adds **Tickets already raised** - ticked in a list of the client's open tickets and those closed in the last 90 days, with the project's own ticked already (untick one to take it off) - or more tickets **From a project template**.
-- **Edit**, **Mark complete**, and **⋮** for its tickets on the ticket list, **Archive** and **Delete**.
+- **Add Tickets** adds **Tickets already raised** - ticked in a list of the client's open tickets and those closed in the last 90 days, with the project's own ticked already (untick one to take it off) - or more tickets **From a Project Template**.
+- **Edit**, **Mark Complete**, and **⋮** for its tickets on the ticket list, **Archive** and **Delete**.
 
 The tabs list its **Tickets** (open first), its **Tasks** across every ticket, its **Timeline**, its **Activity** - the replies on its tickets - and **History**. Down the side are the **Scope**, the **Details** (client, contact, manager, dates and budget) and the **Team**, with the hours each person has logged.
 
@@ -55,7 +55,7 @@ The **Timeline** tab shows its booked tickets in time, each as a bar from its bo
 - Click a bar to open its ticket. Point at it for when it's booked.
 - **Open and not booked** lists its open tickets with no booking yet. **Book** sets one up.
 
-On the Tickets tab, tick tickets and use **Bulk Action** to assign them, set their priority or category, reply to them, resolve them, or **Take off the project**.
+On the Tickets tab, tick tickets and use **Bulk Action** to assign them, set their priority or category, reply to them, resolve them, or **Take Off the Project**.
 
 ## Keep project tickets apart {#apart}
 
@@ -72,4 +72,4 @@ Switching it off puts everything back as it was, and every open project ticket g
 
 ## Finish a project
 
-When the work is done, click **Mark complete**. A project with tickets still open says how many first. A completed project can be reopened from the same place.
+When the work is done, click **Mark Complete**. A project with tickets still open says how many first. A completed project can be reopened from the same place.

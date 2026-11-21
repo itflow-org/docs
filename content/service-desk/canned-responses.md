@@ -9,7 +9,7 @@ A canned response is a reply you write once and reuse: "we've received your tick
 ## Use a canned response
 
 1. On a ticket, pick **Internal note**, **Public note** or **Email reply** to open the reply box.
-2. Click **Canned response**, or type <kbd>/</kbd> in the reply and keep typing to narrow the list.
+2. Click **Canned Response**, or type <kbd>/</kbd> in the reply and keep typing to narrow the list.
 3. Search by name or by what it says, and click one (or press <kbd>Enter</kbd> for the first).
 
 Changed your mind? **Cancel**, beside the search, closes the list and puts you back in your reply - or just click into the reply.

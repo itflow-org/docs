@@ -10,7 +10,7 @@ Accounts are where your money is: your checking and savings accounts, the compan
 
 Along the top: what's **In the accounts** (cards aside), what's **Owed on cards**, and what came **In** and went **Out** this month - money moved between your own accounts left out.
 
-Each account shows its **Kind**, what it **Holds** (what's owed, for a card), this month in and out, its **Latest** line, and how far it's been reconciled. Click one to open its transactions. Its **⋮** menu has **Transactions**, **Income into it**, **Expenses from it**, **Reconcile**, **Edit**, **Transfer from it** and, for a card, **Pay the Card**.
+Each account shows its **Kind**, what it **Holds** (what's owed, for a card), this month in and out, its **Latest** line, and how far it's been reconciled. Click one to open its transactions. Its **⋮** menu has **Transactions**, **Income into It**, **Expenses from It**, **Reconcile**, **Edit**, **Transfer from It** and, for a card, **Pay the Card**.
 
 > [!NOTE]
 > If your books are kept somewhere else, an admin can switch off **Bookkeeping** in [Admin > Settings > Modules](/admin/settings#modules). Accounts, Transactions, Transfers, reconciling and importing statements go, and payments and expenses use your default accounts without asking.

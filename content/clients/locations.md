@@ -12,7 +12,7 @@ A location is one of the client's sites: the head office, a branch, a warehouse.
 
 The primary location comes first. Each row shows the address with **Directions**, the phone number and opening hours, who to **ask for** on site, and how many people, devices, networks and racks are there.
 
-The **⋮** on a row has **Quick look**, **Edit** and **Make primary**.
+The **⋮** on a row has **Quick Look**, **Edit** and **Make Primary**.
 
 ## Add a location
 
@@ -23,7 +23,7 @@ The **⋮** on a row has **Quick look**, **Edit** and **Make primary**.
 5. On **Access**, add the **Access notes**: door codes, where to park, where the equipment is.
 6. Click **Create**.
 
-A client's first location becomes its primary location by itself. To make another one primary, use **Make primary** in its menu.
+A client's first location becomes its primary location by itself. To make another one primary, use **Make Primary** in its menu.
 
 To add many at once, use **Import**, under the arrow beside **New Location**, with a CSV spreadsheet. See [Importing from a spreadsheet](/getting-started/importing).
 
@@ -34,8 +34,8 @@ To add many at once, use **Import**, under the arrow beside **New Location**, wi
 Along the top:
 
 - **Directions** opens the address in your maps app, and **Call** rings the site.
-- **New** starts something already set to this location: a **Ticket here**, a **Visit here** on the calendar, a contact, asset, network, rack, document or file upload, or a **Trip here**.
-- **Move here** moves contacts, assets, networks or racks to this location in one go - when a client moves office, say - or links a document or file to it.
+- **New** starts something already set to this location: a **Ticket Here**, a **Visit Here** on the calendar, a contact, asset, network, rack, document or file upload, or a **Trip Here**.
+- **Move Here** moves contacts, assets, networks or racks to this location in one go - when a client moves office, say - or links a document or file to it.
 - **Edit**, and **⋮** for the rest.
 
 Down the side:

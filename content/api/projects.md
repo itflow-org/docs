@@ -105,7 +105,7 @@ A name left out, a date that isn't one, or a manager, contact, client or templat
 
 A ticket goes on a project with `ticket_project_id` on [tickets/create.php](/api/tickets#tickets-create) or [tickets/update.php](/api/tickets#tickets-update), and comes off with `0`. The project has to be the ticket's client's, or an internal one.
 
-**Apply a template** (`apply_template.php`) raises a project template's tickets on an open project, as **Add tickets** does on its page. It takes `project_id`, `client_id`, `project_template_id` and `assign_to_manager` - `1` gives them to the project's manager. The answer has `tickets_raised`.
+**Apply a Template** (`apply_template.php`) raises a project template's tickets on an open project, as **Add Tickets** does on its page. It takes `project_id`, `client_id`, `project_template_id` and `assign_to_manager` - `1` gives them to the project's manager. The answer has `tickets_raised`.
 
 ### Complete, reopen, archive and delete {#projects-complete}
 

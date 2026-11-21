@@ -47,7 +47,7 @@ On the left are the lines, as each invoice will have them. Down the right:
 - **Seats** - lines counted from the client's users, devices or licenses, with what they count now.
 - **Costs** - the recurring expenses it pays for, such as the licenses, hosting or backup it resells. **Add** one to see the margin it leaves each month.
 - **Autopay** - a saved card to charge on each invoice's due date.
-- **Invoices Made** - every invoice it has made, and whether each is paid.
+- **Invoices made** - every invoice it has made, and whether each is paid.
 
 Along the top:
 
