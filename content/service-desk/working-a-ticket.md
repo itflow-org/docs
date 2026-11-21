@@ -12,7 +12,7 @@ Click a ticket to open its page. On the left is the conversation and the reply b
 
 At the top: the ticket number, the client and contact, the subject (click the pencil to edit the ticket), where it came from, and its tags. If someone else on your team has the ticket open, it says so here, so you don't both reply.
 
-If you can see invoices and the client owes on invoices past their due date, a red **overdue** badge beside their name says how much - point at it for how many invoices and how late the oldest is, or click it to open them.
+If you can see invoices and the client owes on invoices past their due date, a red **overdue** badge beside their name says how much - point at it for how many invoices and how late the oldest is, or click it to open them. When you open the ticket from the client, the client's header shows what they owe instead.
 
 On the right is the one action for where the ticket is:
 
