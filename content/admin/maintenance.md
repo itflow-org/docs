@@ -186,7 +186,7 @@ An ITFlow [managed by another](/admin/managed-instances#managed-by) is updated f
 
 ## Starter content
 
-**Admin > Starter Content** is a library of defaults for a typical MSP: categories, tags, ticket and project templates, canned responses, vendor templates, document templates, products and services, and license templates. Add whichever packs are useful - on a new install, or one that's been running for years.
+**Admin > Starter Content** is a library of defaults for a typical MSP: categories, tags, ticket and project templates, canned responses, Knowledge Base articles, vendor templates, document templates, products and services, and license templates. Add whichever packs are useful - on a new install, or one that's been running for years.
 
 ![Starter content](adm-starter.webp "Starter content: how much there is to add, each pack with its Add, and the totals at a glance")
 
@@ -208,7 +208,7 @@ Everything is ticked to start with. Untick what you don't want, or use **All** a
 
 ### Clear out unused {#clear-out}
 
-**Clear out unused**, beside a pack's counts, is there when some of what you have from it isn't used yet: a category no ticket, invoice, expense or product has, a tag on nothing, a template nothing was made from, a canned response never put in a reply, or a product on no invoice, quote or asset. It lists them, all ticked, and says how many are in use and stay. Untick what you want to keep and click **Archive Them**.
+**Clear out unused**, beside a pack's counts, is there when some of what you have from it isn't used yet: a category no ticket, invoice, expense or product has, a tag on nothing, a template nothing was made from, a canned response never put in a reply, a Knowledge Base article still the draft it came in as, or a product on no invoice, quote or asset. It lists them, all ticked, and says how many are in use and stay. Untick what you want to keep and click **Archive Them**.
 
 ![Clear out unused, open on Categories](adm-starter-clear.webp "Clear out unused: what came from the Categories pack that nothing uses yet, to archive")
 
@@ -216,7 +216,7 @@ They're archived, not deleted: **Undo** on the message puts them back, and any c
 
 The [Starter content step](/install/after-install#starter-content) of Get started has the same packs, with Pick which and Preview.
 
-Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
+Request forms come with the ticket templates, turned off - turn each on in its template's **Client portal** card. Knowledge Base articles come in as drafts only your team can see - see [Start from the starter articles](/service-desk/knowledge-base#starter). Products come priced as starting points: hardware and resold licensing at zero, because they're quoted per deal.
 
 **Demo data**, under the packs, adds the sample clients and records for a demo or training install, and **Remove Demo Data** takes them out again in one go when you're ready for your own - it asks first, as it can't be undone.
 

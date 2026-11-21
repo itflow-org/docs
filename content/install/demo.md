@@ -46,7 +46,7 @@ Every page has a note along the top: it's a demo, anyone can sign in so nothing 
 The **Demo Reset** job in [Admin > Cron](/admin/maintenance#cron) runs at 2:00 AM. It:
 
 - empties the database and makes it again, as a new install
-- loads all of the [starter content](/admin/maintenance#starter-content) and the twenty demo clients, with two years of tickets, invoices, documentation and finances up to that day
+- loads all of the [starter content](/admin/maintenance#starter-content) and the twenty demo clients, with two years of tickets, invoices, documentation and finances up to that day, and a Knowledge Base with its readers' feedback
 - makes the four demo accounts again
 - empties the uploads folder, apart from the company's logo
 - signs everyone out

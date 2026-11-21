@@ -126,7 +126,7 @@ Working on your own? Click **It's just me**.
 
 ## Starter content {#starter-content}
 
-Starter content is a library of ready-made categories, tags, ticket and project templates, canned responses, vendor and document templates, products and license templates for a typical MSP.
+Starter content is a library of ready-made categories, tags, ticket and project templates, canned responses, Knowledge Base articles, vendor and document templates, products and license templates for a typical MSP.
 
 ![The Starter content step, with Pick which open on the ticket templates](inst-start-content.webp "Starter content: each pack ticked to add, and Pick which to choose what's in it")
 

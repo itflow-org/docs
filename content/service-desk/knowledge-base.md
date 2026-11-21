@@ -186,6 +186,12 @@ Each one is an article to write, or words to add to one that's there:
 - **Write an Article** starts a new one with the words they searched for as its title.
 - The **×** takes a search off the list, and **Clear the List** all of them. A search made again comes back.
 
+## Start from the starter articles {#starter}
+
+[Starter content](/admin/maintenance#starter-content) has a **Knowledge Base Articles** pack: 29 how-tos and fixes for your clients' staff - passwords and MFA, phishing, Outlook, OneDrive, the VPN, printers, Teams, Wi-Fi, and new starters and leavers. Each comes under its category with tags, and is reviewed once a year.
+
+They arrive as drafts only your team can see, each ending with how to reach you, taken from your [Company details](/admin/settings#company-details). Read each one, make it say what your clients use - the name of your VPN, the printers they have - and publish it to the clients it suits. Add the **Categories** and **Tags** packs first: they bring the Knowledge Base categories and article tags the articles are filed under.
+
 ## Start from a client's document
 
 A how-to written for one client can often help everyone. On the document's page, open the **⋮** menu and click **Copy to Knowledge Base**. It becomes a draft article, pictures and all. Take out anything that's only about that client - names, addresses, passwords - before you publish it.
