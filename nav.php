@@ -137,6 +137,7 @@ return [
             'taxes' => 'Taxes',
             'labor-costs' => 'Labor costs',
             'categories-and-tags' => 'Categories and tags',
+            'asset-types' => 'Asset types',
             'ticket-templates' => 'Ticket and project templates',
             'document-templates' => 'Document templates',
             'license-and-vendor-templates' => 'License and vendor templates',

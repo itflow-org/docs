@@ -119,6 +119,8 @@ Send `asset_id`, `client_id` (the asset's own client), and any of the fields und
 | `Camera` | `resolution` |
 | `NVR/DVR` | `channels`, `storage`, `ports` |
 
+A type of your own from [Admin > Asset Types](/admin/asset-types) takes the keys picked for it, and its own details as `custom_` and a number, such as `custom_12` - read an asset of that type to see them.
+
 `ports` and `sfp_ports` add the network interfaces the asset doesn't have yet when they are new or changed, as the asset form does - see [Details by type](/documentation/assets#details-by-type).
 
 ```

@@ -10,7 +10,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 
 ![A client's assets list](gs-list.webp "Assets: type tabs, filters, and each device's type, model, IP address, who has it and where it is")
 
-- **Tabs** split the list by type - **Workstations**, **Servers & NAS**, **Virtual**, **Network**, **Power** (UPSs and PDUs), **Printers** and **Other** - each with a count. **New** on a tab starts that kind of asset.
+- **Tabs** split the list by type - **Workstations**, **Servers & NAS**, **Virtual**, **Network**, **Power** (UPSs and PDUs), **Printers** and **Other** - each with a count. Your own [asset types](/admin/asset-types) are on their group's tab. **New** on a tab starts that kind of asset.
 - **Filters**: location, status, tags and warranty. **More columns** adds columns to the list - **Details** shows each device's own details, such as a switch's ports or an access point's Wi-Fi.
 - Each row shows the device's type icon, name and description, its tags, type and operating system, make, model and serial number, IP address, who it's assigned to, its location and its status. A UPS whose battery is due for replacing soon, or overdue, has a badge by its model.
 - **Web**, **SSH** and **RDP** buttons beside an IP address open a connection to the device - the browser for Web, your SSH or remote desktop app for the others.
@@ -22,7 +22,7 @@ To see every client's devices together, use **Across Clients > Assets** in the t
 ## Add an asset
 
 1. Open the client, go to **Assets** and click **New Asset**.
-2. On **Details**, pick the **Type** (desktop, laptop, server, NAS, virtual machine, firewall, switch, access point, modem, UPS, PDU, printer and so on), give it a **Name** and **Status**, and fill in the **Make**, **Model**, **Serial number** and **Operating system** or **Firmware** - ITFlow says if the serial number is already on another asset, and which, and the type's own details (see [Details by type](#details-by-type)). Click the star to make it a favorite, which puts it on the client's overview.
+2. On **Details**, pick the **Type** (desktop, laptop, server, NAS, virtual machine, firewall, switch, access point, modem, UPS, PDU, printer and so on, and any of your own), give it a **Name** and **Status**, and fill in the **Make**, **Model**, **Serial number** and **Operating system** or **Firmware** - ITFlow says if the serial number is already on another asset, and which, and the type's own details (see [Details by type](#details-by-type)). Click the star to make it a favorite, which puts it on the client's overview.
 3. On **Assignment**, pick its **Location**, **Where in the building** it is (a room, a cupboard), and who it's **Assigned to**. The **+** beside **Location** or **Assigned to** opens **New Location** or **New Contact** over the form for one the client doesn't have yet, and picks it once it's saved.
 4. On **Network**, enter its **IPv4 address** (or switch on **DHCP**), **MAC address** - ITFlow says if another asset already has it, however it's written - and any NAT or IPv6 address. **Link** is the address you open it at, such as its management page. A **Client link** shows in the client portal.
 5. On **Purchase**, pick the **Vendor**, the **Order / invoice reference**, and when it was **Purchased** and **Installed**, and when its **Warranty expires**.
@@ -74,6 +74,8 @@ Under **Details**, the form has a section of what only that kind of device has:
 | NVR/DVR | Channels, storage, ports |
 
 ![The New Asset window for a switch, with its ports, SFP ports, PoE budget and management](doc-asset-details.webp "A switch's details: give it its ports and its interfaces are made")
+
+A type of your own has the details picked for it and details of its own, such as a badge reader's door or a vehicle's VIN - see [Asset types](/admin/asset-types#details).
 
 A value a detail can't take - a word where a number goes, a date that doesn't exist - isn't kept, and the message after saving says which and why.
 
