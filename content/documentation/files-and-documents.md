@@ -29,7 +29,7 @@ To rename something in the list view, point at it and click the pencil beside it
 
 ### Download a folder {#zip}
 
-The **⋯** beside the folder's path has **Download as zip**: everything in the folder and the folders under it, in the same folders. At the top level it's **Download everything as zip**. Documents go in as web pages, which open in any browser. Archived items are left out, and one zip can hold up to 2 GB.
+The **⋮** beside the folder's path has **Download as zip**: everything in the folder and the folders under it, in the same folders. At the top level it's **Download everything as zip**. Documents go in as web pages, which open in any browser. Archived items are left out, and one zip can hold up to 2 GB.
 
 ## Move things between folders {#move}
 

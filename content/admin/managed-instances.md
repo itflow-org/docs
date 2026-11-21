@@ -88,7 +88,7 @@ On **Seats & updates**:
 
 ## Read-only and suspended
 
-On **Access**, or from **⋯** on its page:
+On **Access**, or from **⋮** on its page:
 
 - **Read-only** - its people can sign in, look around, export and download, but nothing can be changed: agents, the client portal and guest links alike. Mail still goes out, and backups and updates still run. Every page says so.
 - **Suspended** - nobody can use it. Agents, the client portal, guest links and the API get a notice instead, with your email and phone. Its data stays as it is, and backups and updates still run.
