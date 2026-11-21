@@ -32,7 +32,7 @@ The **Details** card shows where the ticket stands. Click a value to change it.
 
 - **Status** - New, Open, On Hold, and any statuses your admin added, such as "Waiting on Vendor". Some statuses pause the SLA clock.
 - **Priority** - Low, Medium, High or Urgent.
-- **Assigned to** - the technician working it. They're told when you change it.
+- **Assigned to** - the technician working it. They're told when you change it. If nobody has it, the first technician to reply where the client can see it - a public note, an email reply or a text reply - is assigned it. An internal note doesn't assign it, so you can look into a ticket or [mention someone](#mention) on it without taking it. Your admin can switch this off.
 - **Additional agents** - other technicians helping, each with their booking. See [Get help from another technician](#helpers).
 - **SLA** - the next target and when it's due, or **Breached** once it's missed. See [SLAs](#slas) below.
 - **Category**, **Scheduled** (see [Book a visit](#book-a-visit-or-a-call)), **Billing** and **Time logged**.
