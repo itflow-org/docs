@@ -59,7 +59,7 @@ On the Tickets tab, tick tickets and use **Bulk Action** to assign them, set the
 
 ## Keep project tickets apart {#apart}
 
-A big project can fill the service desk with tickets that aren't urgent and aren't due on an SLA - its own dates are what count. Switch on **Keep project tickets apart** under **Admin > Settings > Projects** - it's on to start with on a new ITFlow, and off on one updated from an earlier version. While it's on, a ticket that's part of a project:
+A big project can fill the service desk with tickets that aren't urgent and aren't due on an SLA - its own dates are what count. Switch on **Keep project tickets apart** under **Admin > Settings > Projects** - it starts off, on a new ITFlow too. While it's on, a ticket that's part of a project:
 
 - is left off the usual views of the [tickets list](/service-desk/tickets#views) - **Open**, **Unassigned**, **Needs reply** and the rest - and has a **Projects** view of its own. It's still under **Mine**, **Mentioned me**, **Closed** and **All**, and the **Project** filter shows a project's tickets as always.
 - is left out of the dashboard's unassigned count, the count beside **Tickets** in the menu, and the [Dispatch](/service-desk/dispatch) queue. It still counts in Dispatch's **Workload**.
