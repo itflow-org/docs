@@ -46,11 +46,11 @@ With MFA on, signing in takes your password and a 6-digit code from an app on yo
 1. Go to **Account > Security** and click **Turn on MFA**.
 2. Open your authenticator app - Microsoft or Google Authenticator, 1Password, Authy, Bitwarden - and add an account.
 3. Scan the QR code. If you can't scan it, type the secret shown under it into the app instead.
-4. Type the 6-digit code the app shows, and click **Turn on**.
+4. Type the 6-digit code the app shows into the boxes - or paste it. MFA turns on as soon as the sixth digit is in, so you don't need to click **Turn on**.
 
-![The window for turning on MFA, with a QR code to scan and a box for the code](gs-account-mfa.webp "Scan the code with your authenticator app, then type the code it shows")
+![The window for turning on MFA, with a QR code to scan and six boxes for the code](gs-account-mfa.webp "Scan the code with your authenticator app, then type the code it shows")
 
-When you sign in with your code, tick **Remember this browser** and ITFlow doesn't ask for a code in that browser again for a while (your admin sets how long). **Remembered browsers**, on the same page, lists them. Click **Forget** beside one, or **Forget all**, and the code is asked for again there - do this if you lose a laptop or sign in on a shared computer.
+When you sign in, the code goes in the same six boxes and signs you in as soon as it's complete. Tick **Remember this browser** before you type it, and ITFlow doesn't ask for a code in that browser again for a while (your admin sets how long). **Remembered browsers**, on the same page, lists them. Click **Forget** beside one, or **Forget all**, and the code is asked for again there - do this if you lose a laptop or sign in on a shared computer.
 
 > [!NOTE]
 > Got a new phone? If you can turn MFA off yourself, turn it off and on again with the new phone. If your administrator requires MFA, ask them to reset it - you set it up again at your next sign in.
