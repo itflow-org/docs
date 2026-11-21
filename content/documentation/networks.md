@@ -60,7 +60,7 @@ When you document an address, say **What it is**:
 | **Held back** | An address kept free on purpose, for something coming later |
 | **Floating** | An address that moves between devices, such as a cluster or failover address |
 
-Tick addresses and use **Selected** to change their kind or delete them. **Import Addresses** and **Export Addresses**, in the network's menu, take a CSV spreadsheet.
+Tick addresses and use **Bulk Action** to change their kind or delete them. **Import Addresses** and **Export Addresses**, in the network's menu, take a CSV spreadsheet.
 
 > [!TIP]
 > Give a device its address on its own page, as an [interface](/documentation/assets#network-interfaces), rather than documenting it on the network. That way the network, the device and the port it's plugged into all stay in step.
