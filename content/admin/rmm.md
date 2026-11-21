@@ -79,7 +79,7 @@ The card shows what Tactical said at the last sync, and says when that was.
 - **A device Tactical no longer has** keeps its asset, marked **No longer in Tactical RMM** - its agent was removed, or it moved to a client that isn't linked. If it comes back, it picks up where it was.
 - **An asset you delete in ITFlow** isn't made again by the next sync. To have it back, use **⋮ > Bring back** on its client's row on the **Clients** page.
 - **Linking a client to another of yours** brings its devices in there. The assets made for the first client stay with it, no longer kept up - archive them if they were never theirs.
-- **Unlink** stops its devices coming in. Their assets stay, with what Tactical last said.
+- **Unlink** stops its devices coming in. Their assets stay, with what Tactical last said, but ITFlow no longer counts them as in Tactical - no dot, card or **Take Control**, and they stop counting as managed devices. Link the client again and its devices are matched back to the same assets.
 - An archived client's devices aren't brought in.
 
 ## Alerts open tickets {#alerts}
