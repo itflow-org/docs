@@ -12,7 +12,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 
 - **Tabs** split the list by type - **Workstations**, **Servers & NAS**, **Virtual**, **Network**, **Power** (UPSs and PDUs), **Printers** and **Other** - each with a count. Your own [asset types](/admin/asset-types) are on their group's tab. **New** on a tab starts that kind of asset.
 - **Filters**: location, status, tags and warranty. **More columns** adds columns to the list - **Details** shows each device's own details, such as a switch's ports or an access point's Wi-Fi.
-- Each row shows the device's type icon, name and description, its tags, type and operating system, make, model and serial number, IP address, who it's assigned to, its location and its status. A UPS whose battery is due for replacing soon, or overdue, has a badge by its model.
+- Each row shows the device's type icon, name and description, its tags, type and operating system, make, model and serial number, IP address, who it's assigned to, its location and its status. A UPS whose battery is due for replacing soon, or overdue, has a badge by its model, and so does a date one of your own [asset types](/admin/asset-types#details) flags, such as a badge reader's last test.
 - **Web**, **SSH** and **RDP** buttons beside an IP address open a connection to the device - the browser for Web, your SSH or remote desktop app for the others.
 - The location, assigned contact and status can be changed right in the row.
 - With an [RMM](/admin/rmm) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, or the assets that aren't in it.
@@ -46,7 +46,7 @@ To bring in many at once, open the client's **Assets** and use **Import** in the
 - Order Reference, Purchase Date, Install Date and Warranty Expire
 - Tags and Notes
 
-Assigned To, Location, Vendor and Network are the client's own, by name - Assigned To by email too. A status that isn't one of yours yet is added. Any of the [details by type](#details-by-type) can follow, headed as the asset export heads them - `Ports`, `RAM (GB)`, `Capacity (VA)`, `Host` and so on. A virtual machine's Host can be a server further down the same file. Updating an asset changes its primary interface, and adds the file's details to the ones it has. A file exported from the assets list imports as it is.
+Assigned To, Location, Vendor and Network are the client's own, by name - Assigned To by email too. A status that isn't one of yours yet is added. Any of the [details by type](#details-by-type) can follow, headed as the asset export heads them - `Ports`, `RAM (GB)`, `Capacity (VA)`, `Host` and so on, and your own types' details with their type, such as `Badge Reader: Door`. A virtual machine's Host can be a server further down the same file. Updating an asset changes its primary interface, and adds the file's details to the ones it has. A file exported from the assets list imports as it is.
 
 > [!TIP]
 > Hardware you sell on an invoice can become the client's assets straight from the invoice, with **Add to Assets**. See [Products and stock](/billing/products#hardware-becomes-client-assets).
@@ -132,7 +132,7 @@ An asset's **Status** - Ready to Deploy, Deployed, Out for Repair, Lost, Stolen,
 
 Warranties coming up for renewal show on the client's overview, the dashboard and in [Reports](/finance/reports) (Asset Lifecycle and Renewals & Expirations).
 
-A UPS's **Replace battery by** date is watched the same way: its page says how long is left, the list shows a badge by its model as the date nears or passes, and agents are notified 45, 7 and 1 days before.
+A UPS's **Replace battery by** date is watched the same way: its page says how long is left, the list shows a badge by its model as the date nears or passes, and agents are notified 45, 7 and 1 days before. So is any date one of your own [asset types](/admin/asset-types#details) flags as it nears.
 
 ## Archive and move
 

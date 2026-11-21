@@ -35,7 +35,7 @@ Under **Its own details** on **Details**, click **Add a Detail** for each fact t
 
 - **Text** - a door, a VIN, a cluster name
 - **Number** - with a **Unit**, such as `cores` or `kg`
-- **Date** - turn on **Flag as it nears** to flag it on the asset's page like a warranty, with a notification 45, 7 and 1 days before
+- **Date** - turn on **Flag as it nears** to flag it like a warranty, on the asset's page and with a badge on the assets list, and notify agents 45, 7 and 1 days before
 - **List** - type its choices with commas between, such as `Card, Fob, Keypad`
 
 Tick **Only this one has it** for a detail that belongs to the one asset, such as a serial or a plate, so it isn't copied when the asset is copied.
