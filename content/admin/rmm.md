@@ -26,12 +26,12 @@ You also need the address of Tactical's API. Tactical's install puts it at an ad
 
 ## Add Tactical RMM
 
-1. In **Admin > RMM Providers**, click **Add Provider**.
+1. In **Admin > RMM Providers**, click **New Provider**.
 2. **RMM** is **Tactical RMM**. Leave the **Name** as it is, unless you have more than one Tactical - see [More than one](#more-than-one).
 3. Enter the **API address** and the **API key**. The **Dashboard address** can stay empty when it's the API's address with `rmm.` for `api.`.
-4. Click **Add**. ITFlow tries the key, brings in Tactical's clients and opens its **Clients** page. If something is wrong, it says what - a key Tactical turned away, or an address that isn't Tactical's API.
+4. Click **Create**. ITFlow tries the key, brings in Tactical's clients and opens its **Clients** page. If something is wrong, it says what - a key Tactical turned away, or an address that isn't Tactical's API.
 
-![The Add RMM Provider window](adm-rmm-provider-form.webp "Add RMM Provider: which RMM, its API address and key, and whether its alerts open tickets")
+![The New RMM Provider window](adm-rmm-provider-form.webp "New RMM Provider: which RMM, its API address and key, and whether its alerts open tickets")
 
 No devices come in yet. They come in once you link their client.
 

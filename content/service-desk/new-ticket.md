@@ -25,7 +25,7 @@ Tickets reach ITFlow in several ways:
    - Add **Tags**, and switch on **Mark Billable** if the client pays for this work.
 3. On **Related**, link the **Asset** it's about (and **Other assets**), the **Site**, a **Project**, and a **Vendor** with **Their reference** if a vendor is involved. Add **Watchers** - people who get a copy of every emailed reply.
 4. On **Tasks**, add the steps to work through.
-5. Click **Create Ticket**.
+5. Click **Create**.
 
 ![The New Ticket window](sd-new-ticket.webp "New Ticket: who it's for, what it's about, who's on it, and the status and schedule it starts with. Open tickets for the contact show at the top.")
 
@@ -41,7 +41,7 @@ For a call, or someone at your desk, click **+** in the top bar - it's there on 
 2. If the contact already has open tickets, they're listed, with who has each one. If it's the same problem, click **Work on this one** to go to that ticket instead, with its timer running.
 3. Type **What is the issue?**, and any **More detail**.
 4. Set the **Priority**, and leave **Assign it to** on to give it to the person shown - usually you.
-5. Click **Make ticket**.
+5. Click **Create**.
 
 ![The Quick ticket window](sd-quick-ticket.webp "Quick ticket: the client, the contact and their open tickets, and the issue")
 

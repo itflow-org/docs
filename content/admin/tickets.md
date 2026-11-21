@@ -57,7 +57,7 @@ The **+** in the top bar opens [Quick ticket](/service-desk/new-ticket#quick-tic
 - **Quick ticket goes to** - the agent making it, nobody, or one agent. The window has a switch to change it for one ticket.
 - **Quick ticket starts in** - a status, or New (Open once someone has it), as usual.
 - **Quick ticket priority**, **Quick ticket category** and **Quick ticket billing** - billing follows **New tickets are billable** unless you pick one here. The window can change the priority.
-- **Start a quick ticket's timer** - when the agent clicks **Make ticket**, from when they opened the window (the start of the call), or not at all.
+- **Start a quick ticket's timer** - when the agent clicks **Create**, from when they opened the window (the start of the call), or not at all.
 - **Start on the client's primary contact** - off, the contact starts empty.
 - **Show the contact's open tickets** - so the same problem isn't raised twice.
 - **Email the contact that it was opened** - the "ticket created" email, as from New Ticket, when emails to clients are on.
@@ -125,7 +125,7 @@ Click **New SLA**, or an SLA's name.
 
 The window says what a day's worth comes to with your hours: with an 8-hour business day, 24 hours is 3 business days, so for two business days give 16 hours. Saving a change works the targets out again on every ticket with the SLA that isn't closed yet.
 
-**Archive**, on an SLA's menu, takes it out of use: new tickets don't get it, and tickets that have it keep their targets. ITFlow says what that changes before you confirm - a priority it was the default for gets no SLA until you pick another, and tickets under a contract that gave it get your default for their priority instead. **Undo** on the message after puts it back; later, **Restore** it from the **Archived** tab. An SLA can't be deleted.
+**Archive**, on an SLA's menu, takes it out of use: new tickets don't get it, and tickets that have it keep their targets. A priority it was the default for gets no SLA until you pick another, and tickets under a contract that gave it get your default for their priority instead. **Undo** on the message after puts it back; later, **Restore** it from the **Archived** tab. An SLA can't be deleted.
 
 ### Default SLA by priority {#default-slas}
 

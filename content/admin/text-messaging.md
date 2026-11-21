@@ -22,9 +22,9 @@ You need, in [Skyetel's portal](https://portal.skyetel.com):
 
 ## Set it up
 
-1. In **Admin > Text Messaging**, click **Add Provider**.
+1. In **Admin > Text Messaging**, click **New Provider**.
 2. Enter the **Number texts go from**, with its dial code (+1 412 555 0100), and the **SID** and **Secret**.
-3. Click **Add**. If anything is wrong, it says so beside the field, and nothing is saved until it's right.
+3. Click **Create**. If anything is wrong, it says so beside the field, and nothing is saved until it's right.
 4. Copy the address in **Texts come back to** with the copy button.
 5. In Skyetel's portal, open the number, then its **SMS** tab. Send texts to a **Callback URL**, paste the address, and pick **POST**.
 6. On the provider's menu, click **Send a test text** and send one to your own mobile.

@@ -23,7 +23,7 @@ The quickest way is from the ticket: its **⋮** menu has **Log a trip**, and so
 4. Type the **Miles one way**, and leave **Round trip** on for there and back. ITFlow shows the whole trip. Or open **Odometer readings** and type the readings **At the start** and **At the end**.
 5. Leave **In their own vehicle** on if the driver used their own car, so they're paid back for it.
 6. **Bill the client for it** starts on for a billable ticket's trip. It says what the trip will bill.
-7. Say **What for**, and click **Log Trip**.
+7. Say **What for**, and click **Create**.
 
 ![The New Trip window](bill-trip-form.webp "New Trip: who drove, where to, how far, and whether it's paid back or billed")
 

@@ -29,7 +29,7 @@ An agent who can only see some clients only sees the purchase orders whose lines
 
 There are three ways onto the list:
 
-- **Add Item** - type what it is, or pick a **Product** to fill in its name, cost and vendor. Set **How many**, the **Unit cost**, the **Vendor** and who it's **For**: a client, or your own stock. A **Note** is for your team.
+- **New Item** - type what it is, or pick a **Product** to fill in its name, cost and vendor. Set **How many**, the **Unit cost**, the **Vendor** and who it's **For**: a client, or your own stock. A **Note** is for your team.
 - **Order** on a product's page - the same window, with the product already picked. It says **Order More** when the product is low on stock.
 - **Add them to the list** - when products you track stock for are at or under their reorder level and not already on order, an alert at the top names them. One click adds each with its reorder quantity, marked **Restock**. Set the level on the product (see [Keep track of stock](/billing/products#keep-track-of-stock)).
 
@@ -39,7 +39,7 @@ Narrow the list by vendor or by who it's for, or search it. **Edit** in an item'
 
 1. Tick the items to order together, then pick **Make a Purchase Order** from the bulk menu. One item can also be ordered from its own **⋮** menu.
 2. Pick the **Vendor** - it starts as the items' own vendor.
-3. Click **Make Draft**.
+3. Click **Create**.
 
 The draft is numbered **PO-1**, **PO-2** and so on, and its items leave the list. To add more items to a draft you've already started, tick them and pick **Put on a Draft** instead. You can also start an empty one with **New Purchase Order** on the **Purchase Orders** list, and add lines to it.
 

@@ -11,14 +11,14 @@ AI in ITFlow is optional and off until you connect a provider. Once it's set up,
 
 A provider is the service that runs the model: OpenAI, Anthropic (Claude), Google Gemini, Mistral, Azure OpenAI, Groq or OpenRouter in the cloud - or Ollama, LM Studio or any OpenAI-compatible server on your own network, so nothing leaves it.
 
-1. Go to **Admin > AI Providers** and click **Add Provider**.
+1. Go to **Admin > AI Providers** and click **New Provider**.
 2. Pick its **Kind**. The **Name** and **Address** are filled in for you.
 3. For a cloud provider, paste its **API key** - the window links to where you make one. Give ITFlow a key of its own, so it can be turned off on its own.
 4. Leave **Take passwords and keys out of what is sent** on. Passwords, PINs, API keys, private keys, 2FA links and card numbers in a ticket or reply then go as placeholders, and are put back in the answer - the provider never sees them.
 5. Type its first **Model**, as the provider names it, and click **Test** to check ITFlow can reach it.
 6. Save it.
 
-![Adding an AI provider](adm-ai-provider-form.webp "Add AI Provider: the kind, its address and key, and taking secrets out of what is sent")
+![Adding an AI provider](adm-ai-provider-form.webp "New AI Provider: the kind, its address and key, and taking secrets out of what is sent")
 
 ![AI providers](adm-ai-providers.webp "AI providers: each provider, its models, and its use over the last 30 days")
 

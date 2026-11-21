@@ -24,10 +24,10 @@ Taking a line out again keeps what's there. An instance stays connected but stop
 
 ## Add an instance
 
-1. Go to **Admin > Managed Instances** and click **Add Instance**.
+1. Go to **Admin > Managed Instances** and click **New Instance**.
 2. Give it a **Name**, and pick the **Client** it belongs to, if it's a client's. **Address** is where it will be reached, such as `itflow.ravenwooddental.com` - it goes in the [setup command](#set-up-new). Once it connects, its address is the one it says it has.
 3. On **Seats & updates** and **Access**, set what you want to control now - you can change it any time.
-4. Click **Add**. Its page opens with a **connection code**.
+4. Click **Create**. Its page opens with a **connection code**.
 5. Copy the code. It's shown this once, and works once, for a week.
 6. On the other ITFlow - with managed mode [turned on](#turn-on) there too - an admin goes to **Admin > Managed By**, pastes the code and clicks **Connect**.
 

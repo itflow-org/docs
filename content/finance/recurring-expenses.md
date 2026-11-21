@@ -23,7 +23,7 @@ The tabs are **Active**, **Next 7 days**, **Late**, **Paused**, **Ended** and **
    - **Billed on to them each time** - each expense waits in Unbilled Time to go on their invoice
    - **Covered by their recurring invoice** - pick the recurring invoice that pays for it, so you can see the margin it leaves
 6. Add a **Reference**, such as the account or contract number - it goes on each expense - and a **Description**.
-7. Click **Set Up**.
+7. Click **Create**.
 
 ![The New Recurring Expense window](fin-recurring-expense-new.webp "New Recurring Expense: who, how much, how often, and whether a client pays for it")
 

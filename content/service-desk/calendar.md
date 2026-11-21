@@ -56,7 +56,7 @@ Drag one onto the calendar to book it again, for as long as it was booked before
 6. Add **Notes**: what it's for, what to bring, who to ask for.
 7. Pick when to **Remind** you - when it starts, or from five minutes to two days before. See [Reminders](#reminders).
 8. Switch on **Email the invitation to the people on it** to send them a calendar invite their Outlook, Google or phone calendar adds.
-9. Click **Add event**.
+9. Click **Create**.
 
 ![The New Event window](sd-event-new.webp "New Event: who it's assigned to, when, where, who else is invited, and whether to send them an invitation")
 

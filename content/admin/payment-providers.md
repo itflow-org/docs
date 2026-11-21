@@ -13,7 +13,7 @@ The list shows each provider: whether it's on, **Live** or **Test** (as its keys
 
 ## Connect Stripe
 
-1. Click **Add Provider**.
+1. Click **New Provider**.
 2. Switch it on - clients can pay invoices by card.
 3. Paste the **Publishable key** and **Secret key** from Stripe's **Developers > API keys**. Use both test keys while you try it out, then both live keys. A restricted key works too, with the access the window lists.
 4. Pick the account **Payments go into**. An account of its own, named for it - "Stripe" or "Merchant Settlement" - makes its payouts to your bank easy to match. See [Accounts](/finance/accounts).

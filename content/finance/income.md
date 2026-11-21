@@ -26,7 +26,7 @@ For money that isn't for an invoice. A payment on an invoice is added from the i
 3. Pick the account it was **Paid into** and the **Date**.
 4. If it came from a client, pick them under **From client**. It then counts for them in Income by Client and Client Profitability.
 5. Pick how it was **Paid by**, add a **Reference** such as the deposit number, and a **Description**. Its first line shows in the list.
-6. Click **Add Income**.
+6. Click **Create**.
 
 ![The New Income window](fin-income-new.webp "New Income: for money in that isn't a payment on an invoice")
 

@@ -18,7 +18,7 @@ A client's own documentation still goes in their [Files and documents](/document
 4. Under **Who can read it**, choose who it's for - see [Share an article](#share). New articles start at **Agents only**.
 5. Write the article in the editor. Headings, lists, tables, links and pictures all work - paste a screenshot straight in.
 6. Leave **Published** on if it's finished, or turn it off to keep it as a draft.
-7. Click **Create Article**.
+7. Click **Create**.
 
 A draft is marked **Draft** until it's published. Publish one from its page, or from its **⋮** menu in the list.
 

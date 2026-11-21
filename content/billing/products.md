@@ -25,7 +25,7 @@ Tick items and use the bulk menu to set their category or archive them. **Archiv
 6. Add a **Code** (your SKU), the **Vendor** you buy it from and the **Vendor part number** you order it as.
 7. Write the **Description** the client sees under the line on invoices and quotes, and any **Notes** for agents - lead time, where to order it, what to check before quoting.
 8. Add a **Picture**, if you like - click the box to add one and crop it to the product, or paste a link to it or to the product's page. A quote line added from the item shows a copy (see [Pictures](/billing/quotes#pictures)).
-9. Click **Add**.
+9. Click **Create**.
 
 ![The New Product or Service window](bill-product-form.webp "New Product or Service: what it is, what it costs, how it's billed and where it comes from")
 

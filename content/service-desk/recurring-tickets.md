@@ -16,7 +16,7 @@ The list shows each one's client, **How often**, **Next run**, **Last ticket** a
 2. On **Details**, pick the **Client** and **Contact**, and a **Template** if one fits. Type the **Subject** and details, and set the **Priority**, **Category**, who to **Assign to**, and whether **The tickets it raises are billable**.
 3. On **Schedule**, pick the **Frequency** - every three days, weekly, biweekly, monthly, quarterly, twice a year or yearly - and the **First run**. For a monthly to yearly one, **Repeats on** picks the same date or the same weekday each time - see [Repeat on a weekday](#weekday). The schedule is written out in plain words, with when it will next run. To book the work, and to raise the tickets ahead of the day, see [Book the work and make it ahead](#ahead).
 4. On **Related**, link the **Asset** it's for. On **Tasks**, add the steps.
-5. Click **Create Recurring Ticket**.
+5. Click **Create**.
 
 ![The New Recurring Ticket window](sd-recurring-new.webp "New Recurring Ticket: Details, Schedule, Related and Tasks")
 
