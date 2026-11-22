@@ -300,7 +300,7 @@ An address has to be inside the network's subnet and documented on it only once.
 | POST `rack_units/update.php` | Moves or changes an item |
 | POST `rack_units/delete.php` | Takes an item out |
 
-Read takes `rack_id`, or `client_id`, with `limit` and `offset`. Archived racks are listed too. With `rack_id` the rack has `units`, what's mounted in it, from U1 up: each item's `unit_start_number` to `unit_end_number`, `unit_face` (`front` or `rear`), `unit_full_depth`, and the `asset_id` and `asset_name` it is - or its own `unit_device` name and `unit_type`.
+Read takes `rack_id`, or `client_id`, with `limit` and `offset`. Archived racks are listed too. With `rack_id` the rack has `units`, what's mounted in it, from U1 up: each item's `unit_start_number` to `unit_end_number`, `unit_face` (`front` or `rear`), `unit_full_depth`, and the `asset_id` and `asset_name` it is - or its own `unit_device` name and `unit_type`. A [holder](/documentation/racks#holders) has `unit_slots`, how many it holds side by side, and is followed by what's in it: each with `unit_parent_id`, the holder, and `unit_position`, its slot.
 
 **A rack** takes `client_id`, `rack_name`, `rack_type` - one of your [rack types](/admin/categories-and-tags) - and `rack_units`, how tall it is (1 to 70), all required to create one. Then `rack_units_descending` (`1` when U1 is at the top), `rack_model`, `rack_depth`, `rack_power_capacity` (watts), `rack_location_id` (one of the client's locations), `rack_physical_location`, `rack_description` and `rack_notes`. Update takes `rack_id` and changes only what you send - a rack can't be made shorter than the highest item in it. Delete needs **Full** on Support and the rack archived first; what's in it goes with it, and its assets stay. Photos are added in ITFlow.
 
@@ -315,9 +315,12 @@ Read takes `rack_id`, or `client_id`, with `limit` and `offset`. Archived racks 
 | `unit_height` | How many units. 1 if you leave it out. |
 | `unit_face` | `front` (the default) or `rear` |
 | `unit_full_depth` | `1` when it takes the front and the rear |
+| `unit_slots` | It's a holder - a bracket, shelf or chassis - with this many devices side by side (1 to 24). `0`, the default, for anything else. |
+| `unit_parent_id` | The holder it goes in, instead of a place of its own. It takes the holder's units, side and depth. |
+| `unit_position` | Its slot in the holder - 1 is the first, counting across and then a row on. The first free one if you leave it out. |
 | `unit_power_watts`, `unit_notes` | |
 
-It has to fit the rack, with nothing else on that face. Update changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the rack's client.
+It has to fit the rack, with nothing else on that face - or a free slot in a holder in the same rack. A holder can't go in a holder, and one with devices in it can't be set back to `unit_slots` `0`. Moving a holder moves what's in it, and deleting it takes what's in it out of the rack too. Update changes only what you send. Delete needs **Full** on Support. Each takes `client_id`, the rack's client.
 
 ```json
 { "rack_id": 1, "asset_id": 12, "unit_start_number": 10, "unit_height": 2 }

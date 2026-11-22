@@ -23,7 +23,7 @@ A rack's page draws it to scale, front and rear, with everything mounted in it. 
 
 - Down the side: how many **U** are used and free, the **largest gap** (and where it is), how many items, and the **power** used against the budget. Then what isn't racked yet, the rack's details, notes and history.
 - **Elevation** draws the front and the rear. Items are coloured by kind - servers, network, firewalls, power, patching and other. A full-depth item mounted at the front shows as a dashed outline at the rear, so you can see the space it takes.
-- **In this rack** lists every item with its position, make, model, serial number, IP address and which side it's mounted on.
+- **In this rack** lists every item with its position, make, model, serial number, IP address and which side it's mounted on. What's in a [holder](#holders) is listed under it, with its slot.
 - **Not racked yet** lists the client's servers, NAS units, network gear, UPSs, PDUs and NVRs that don't have a place in a rack yet. Drag one onto the drawing where it goes, or use **Rack It**.
 - The print button gives a clean page of the rack to stick on the cupboard door.
 
@@ -37,6 +37,28 @@ Click an empty U on the drawing, or **Add Item**. Or drag one of the client's as
 4. Save.
 
 Click an item on the drawing to edit it - for an asset, which opens its own page, use the pencil that shows when you point at it. An asset's own page shows which rack it's in and at which U.
+
+To take something out of the rack, edit it and click **Remove from rack**. The asset itself stays.
+
+## More than one device in a U {#holders}
+
+Some kit sits side by side: two Tiny PCs in a 1U bracket, a shelf of Raspberry Pis, the cards in a media converter chassis, PLCs stacked on a shelf. Put the bracket, shelf or chassis in the rack as a holder, then put the devices in its slots.
+
+![A 2U shelf with six Raspberry Pis in two rows of four, and a 1U bracket with two Tiny PCs](doc-rack-holder.webp "Holders: devices side by side, wrapping onto another row")
+
+1. Add the holder as you would anything else - an asset, such as a chassis, or a **Shelf** under **What is it** - with its U, height, side and depth.
+2. Turn on **Holds devices side by side** and set how many fit **across**. More than that wrap onto another row, so three stacks of three Tiny PCs on a shelf is 3 across.
+3. Save.
+
+The holder is drawn with its slots in it. To put something in one:
+
+- Click an empty slot, or drag an asset from **Not racked yet** onto it, and save.
+- Or, when you add an item, pick the holder under **Goes in**, then the **Slot**. Slot 1 is at the bottom left, counting across and then up a row - or from the top left, down a row, when U1 is at the top.
+- Drag an item that's already in the rack onto an empty slot to put it in the holder.
+
+A device in a holder takes the holder's U, side and depth. Drag it to another empty slot to move it - the message has [Undo](/getting-started/lists#undo). To take it out of the holder, edit it and pick **The rack** under **Goes in**. The holder itself is the tab at its left: click it to edit the holder, or drag it to move the holder with everything in it.
+
+Removing a holder takes the devices in it out of the rack too - ITFlow asks first, and the assets themselves stay. A holder can't go in another holder, and while it has devices in it, **Holds devices side by side** stays on.
 
 ## Move something {#move}
 
