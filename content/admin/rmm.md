@@ -100,6 +100,7 @@ A client with devices in Tactical has a **Tactical RMM** card on its [overview](
 ## When devices come and go {#devices-come-and-go}
 
 - **A device Tactical no longer has** keeps its asset, marked **No longer in Tactical RMM** - its agent was removed, or it moved to a client that isn't linked. If it comes back, it picks up where it was.
+- **Most of a client's devices gone at once** - three or more, and at least half of them - are kept as they were for a day. That is far more often Tactical, or a change to what its API key can see, than the devices themselves, and marking them gone would drop them from [managed device](#billing) counts. The provider's row names the client and how many, and the sync shows as failed until it is sorted out. Still missing after a day, they are marked gone. If a client really has gone, unlink it.
 - **An agent reinstalled in Tactical** is a new device there. ITFlow matches it to the asset the old agent had, by its serial number or name, so you don't get a second one.
 - **A device moved to another linked client in Tactical** is matched or made at that client. The asset it had stays with the first client, no longer kept up, and its history says where the device went.
 - **An asset you delete in ITFlow** isn't made again by the next sync. To have it back, use **⋮ > Bring back** on its client's row on the **Clients** page - it's there as soon as you've deleted it.
@@ -180,6 +181,6 @@ Two jobs in [Maintenance > Cron](/admin/maintenance#cron) do the work:
 | RMM Sync | every 15 minutes | Brings in the devices of every linked client, and keeps their assets up to date |
 | RMM Alerts | every minute | Opens tickets for new alerts, and resolves them when the alerts clear |
 
-A sync stops after two minutes and picks up where it left off next time, so a large RMM takes a few runs to bring in at first. If one client's devices can't be fetched, the rest still come in, and that client's devices aren't marked as gone.
+A sync stops after two minutes and picks up where it left off next time, so a large RMM takes a few runs to bring in at first. If one client's devices can't be fetched, the rest still come in, and that client's devices aren't marked as gone. The same goes for one device that can't be saved: the rest come in, and the provider's row names it. An answer from Tactical that isn't what its API gives - an error page, say - changes nothing.
 
 When something doesn't work - Tactical can't be reached, or the key is turned away - the provider's row says so, and so do [App logs](/admin/logs#app-logs) and the job in **Maintenance > Cron**.
