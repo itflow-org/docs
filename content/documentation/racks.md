@@ -58,7 +58,21 @@ The holder is drawn with its slots in it. To put something in one:
 
 A device in a holder takes the holder's U, side and depth. Drag it to another empty slot to move it - the message has [Undo](/getting-started/lists#undo). To take it out of the holder, edit it and pick **The rack** under **Goes in**. The holder itself is the tab at its left: click it to edit the holder, or drag it to move the holder with everything in it.
 
+A device's own page shows its slot under **Where & who**, with a link to the holder when the holder is an asset. A holder that's an asset has **Devices in it** on its page, listing what's in each slot.
+
 Removing a holder takes the devices in it out of the rack too - ITFlow asks first, and the assets themselves stay. A holder can't go in another holder, and while it has devices in it, **Holds devices side by side** stays on.
+
+### Multi-node servers and blade chassis {#chassis}
+
+A multi-node server - a 2U box with four server nodes, such as a Supermicro BigTwin - or a blade chassis is a holder too. The chassis is one asset, with the system's serial number and warranty, and each node or blade is an asset of its own, with its own serial, management IP, operating system and RMM agent.
+
+1. Add the chassis as an asset - a **Server**, or a type of your own such as **Chassis** made in [Asset Types](/admin/asset-types) - and rack it with its height and **Full depth** on. When the nodes slide in from the back, mount it on the **Rear**, so the slots are drawn on the side you see them from.
+2. Turn on **Holds devices side by side** with how many nodes sit side by side - 2 across for a 2U four-node server gives two rows of two.
+3. Add each node as a **Server** asset and drag it from **Not racked yet** into the slot it sits in.
+
+Name the nodes by the letter or number on the chassis - RDG-BT-01-A, RDG-BT-01-B - as the maker's order may not match ITFlow's slot numbers. Put the power draw on the chassis, not the nodes, so it isn't counted twice.
+
+![A chassis asset's page: its rack position, and Devices in it listing its four nodes by slot](doc-asset-chassis.webp "A chassis's page lists its nodes")
 
 ## Move something {#move}
 

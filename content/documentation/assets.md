@@ -95,7 +95,7 @@ Along the top are the asset's photo or type icon, name, status, type, model and 
 - **Copy Details** - copies what a vendor's support case asks for as text, ready to paste: make and model, serial number, operating system, its details, IP and MAC address, warranty, when it was bought and installed, the site's address and its rack position. It's in the asset's quick look too.
 - **Edit**, and **⋮** for **Copy** and **Archive**
 
-The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. **Quick notes** save as you click away.
+The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. In a [rack holder](/documentation/racks#holders) it shows its slot and the holder; a holder that's an asset, such as a [multi-node server's chassis](/documentation/racks#chassis), has **Devices in it** too. **Quick notes** save as you click away.
 
 A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session.
 
