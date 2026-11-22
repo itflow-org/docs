@@ -29,9 +29,10 @@ You also need the address of Tactical's API. Tactical's install puts it at an ad
 1. In **Admin > RMM Providers**, click **New Provider**.
 2. **RMM** is **Tactical RMM**. Leave the **Name** as it is, unless you have more than one Tactical - see [More than one](#more-than-one).
 3. Enter the **API address** and the **API key**. The **Dashboard address** can stay empty when it's the API's address with `rmm.` for `api.`.
-4. Click **Create**. ITFlow tries the key, brings in Tactical's clients and opens its **Clients** page. If something is wrong, it says what - a key Tactical turned away, or an address that isn't Tactical's API.
+4. Under **Asset types**, pick what **Desktops**, **Laptops**, **Servers** and **Virtual machines** come in as - ITFlow's own types, or one of [your own](/admin/asset-types) such as a Workstation. Leave them as they are to keep ITFlow's.
+5. Click **Create**. ITFlow tries the key, brings in Tactical's clients and opens its **Clients** page. If something is wrong, it says what - a key Tactical turned away, or an address that isn't Tactical's API.
 
-![The New RMM Provider window](adm-rmm-provider-form.webp "New RMM Provider: which RMM, its API address and key, and whether its alerts open tickets")
+![The New RMM Provider window](adm-rmm-provider-form.webp "New RMM Provider: which RMM, its API address and key, whether its alerts open tickets, and the asset type each kind of device comes in as")
 
 No devices come in yet. They come in once you link their client.
 
@@ -58,28 +59,50 @@ Each device becomes one of its client's assets. When the client has the asset al
 1. by serial number,
 2. or by name, when only one of the client's assets has it.
 
-A matched asset keeps what it has - only what it's missing is filled in. Otherwise a new asset is made, with its name, type, make and model, serial number, operating system, IP address, CPU and storage. Its type is worked out from what Tactical says: virtual machine, server, laptop or desktop. Its location is the client's location named like its site in Tactical, if there is one.
+A matched asset keeps what it has - only what it's missing is filled in. Otherwise a new asset is made, with its name, type, make and model, serial number, operating system, IP address, CPU and storage. Its type is worked out from what Tactical says - virtual machine, server, laptop or desktop - and is the type the provider's **Asset types** has for it. Its location is the client's location named like its site in Tactical, if there is one.
 
-After that, each of those details follows Tactical - a device renamed in Tactical is renamed here - until you change it in ITFlow. A detail you've changed stays as you set it, and an empty detail in Tactical never empties one here. The asset's **History** tab says what Tactical changed.
+After that, each of those details follows Tactical - a device renamed in Tactical is renamed here - until you change it in ITFlow. A detail you've changed stays as you set it, and an empty detail in Tactical never empties one here. The asset's **History** tab says what Tactical changed. Change the provider's **Asset types** later and the assets whose type Tactical set follow at the next sync. Recurring invoice lines that count [managed devices](#billing) by type count the new type, so check them.
+
+If a device was matched to the wrong asset, or came in as a new one beside the asset you had for it, link it to the right one - see [Link to another asset](#link-to-another-asset).
 
 ## On the asset {#on-the-asset}
 
 An asset from Tactical shows whether the device is **Online**, **Offline** or **Overdue** beside its status. Its **Tactical RMM** card has when it was last seen, who's signed in, how long it's been up, its public IP, its site and its agent, and what needs attention: a reboot waiting, patches waiting, checks failing, and alerts with their tickets.
 
-![An asset from Tactical RMM](doc-asset-rmm.webp "A desktop from Tactical: online, who's signed in, a failing check, and the ticket its alert opened")
+![An asset from Tactical RMM](doc-asset-rmm.webp "A desktop from Tactical: online, who's signed in with Assign to make them its contact, a failing check, and the ticket its alert opened")
 
 - **Take Control** opens Tactical's remote session for the device, in a new tab. Its menu has **Open in Tactical RMM** and **Remote Background**.
 - The asset's quick look has the same state, and **Take Control**.
-- On the [assets list](/documentation/assets#the-assets-list), a dot after a device's name says how it is - green online, grey offline, red overdue. The **Tactical RMM** filter shows the ones online, offline or overdue, every device in Tactical, or the assets that aren't in it.
+- On the [assets list](/documentation/assets#the-assets-list), a dot after a device's name says how it is - green online, grey offline, red overdue. The **Tactical RMM** filter shows the ones online, offline or overdue, the ones that need a reboot, have patches waiting or have checks failing, every device in Tactical, or the assets that aren't in it.
 
 The card shows what Tactical said at the last sync, and says when that was.
+
+### Who it's assigned to {#assign}
+
+When the asset isn't assigned to anyone and the person signed in is one of the client's contacts, the card offers **Assign** with their name. Click it to make them the asset's contact. The username is matched to the contact's email, or to their name - `RDG\mwhitfield`, `marla.whitfield` and `AzureAD\MarlaWhitfield` are all Marla Whitfield. Nothing is offered when no contact matches, or when more than one could.
+
+To do it for many assets at once, tick them on the assets list and use **Bulk Action > Assign Signed-in Users**. Only assets with nobody assigned are changed, and the message says how many were assigned and how many had nobody to match.
+
+### Link to another asset {#link-to-another-asset}
+
+When a device is linked to the wrong asset - or came in as a new asset beside the one you'd already entered for it - use **⋮ > Link to another asset** on its card. Pick the asset it is. Assets another device from Tactical already has can't be picked.
+
+![The Link to another asset window](doc-asset-rmm-link.webp "Link to another asset: the asset it is, and archiving the one Tactical made for it")
+
+The asset you pick keeps its name and what you've entered, and gets what it's missing from Tactical straight away. Tick **Archive** to archive the asset the device had - it's ticked when Tactical made that asset for this device. The message has **Undo** for the archive. Both assets' history says what was linked.
+
+## On the client overview {#client-overview}
+
+A client with devices in Tactical has a **Tactical RMM** card on its [overview](/clients/overview#technical), beside **Assets**: how many are online, offline and overdue, and how many need a reboot, have patches waiting or have checks failing. Each line opens the client's assets list showing those devices. Devices that are overdue are also counted under **Needs attention**.
+
+![The Tactical RMM card on a client's overview](cl-overview-rmm.webp "A client's overview: their assets by kind, and their devices in Tactical - online, offline, overdue and what needs a look")
 
 ## When devices come and go {#devices-come-and-go}
 
 - **A device Tactical no longer has** keeps its asset, marked **No longer in Tactical RMM** - its agent was removed, or it moved to a client that isn't linked. If it comes back, it picks up where it was.
 - **An agent reinstalled in Tactical** is a new device there. ITFlow matches it to the asset the old agent had, by its serial number or name, so you don't get a second one.
 - **A device moved to another linked client in Tactical** is matched or made at that client. The asset it had stays with the first client, no longer kept up, and its history says where the device went.
-- **An asset you delete in ITFlow** isn't made again by the next sync. To have it back, use **⋮ > Bring back** on its client's row on the **Clients** page. It shows there once a sync has run since you deleted it - click **Sync Now** if you don't want to wait.
+- **An asset you delete in ITFlow** isn't made again by the next sync. To have it back, use **⋮ > Bring back** on its client's row on the **Clients** page - it's there as soon as you've deleted it.
 - **Linking a client to another of yours** brings its devices in there. The assets made for the first client stay with it, no longer kept up - archive them if they were never theirs.
 - **Unlink** stops its devices coming in. Their assets stay, with what Tactical last said, but ITFlow no longer counts them as in Tactical - no dot, card or **Take Control**, and they stop counting as managed devices. Link the client again and its devices are matched back to the same assets.
 - An archived client's devices aren't brought in.

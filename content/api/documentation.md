@@ -29,7 +29,7 @@ These endpoints need the **Support** area of the key's role, apart from credenti
 | `client_id` | Just this client's assets |
 | `limit`, `offset` | [Paging](/api/requests#paging) |
 
-The list and `asset_mac` include each asset's primary network interface - its IP and MAC address and network. The other lookups return the asset alone. The list includes archived assets. Every asset comes with its details as `asset_specs` - see [Details](#assets-details).
+The list and `asset_mac` include each asset's primary network interface - its IP and MAC address and network. The other lookups return the asset alone. The list includes archived assets. Every asset comes with its details as `asset_specs` - see [Details](#assets-details). And with its devices in your [RMM](/admin/rmm) as `asset_rmm` - see [Devices in an RMM](#assets-rmm).
 
 ```
 curl -G https://itflow.example.com/api/v1/assets/read.php \
@@ -58,13 +58,31 @@ curl -G https://itflow.example.com/api/v1/assets/read.php \
       "interface_mac": "02:56:C0:D6:2E:2C",
       "interface_network_id": "1",
       "tags": [ { "tag_id": 65, "tag_name": "Business Critical", "tag_kind": "asset", "tag_color": "#d81b60", "tag_icon": "exclamation-circle" } ],
-      "asset_specs": { "ports": "6", "sfp_ports": "2" }
+      "asset_specs": { "ports": "6", "sfp_ports": "2" },
+      "asset_rmm": []
     }
   ]
 }
 ```
 
 **Fields:** `asset_id`, `asset_type`, `asset_name`, `asset_description`, `asset_make`, `asset_model`, `asset_serial`, `asset_os`, `asset_uri`, `asset_uri_2`, `asset_uri_client`, `asset_status`, `asset_purchase_reference`, `asset_purchase_date`, `asset_warranty_expire`, `asset_install_date`, `asset_photo`, `asset_physical_location`, `asset_notes`, `asset_favorite`, `asset_vendor_id`, `asset_location_id`, `asset_contact_id`, `asset_client_id`, `asset_product_id`, `asset_invoice_id`, `asset_invoice_item_id`, `asset_created_at`, `asset_updated_at`, `asset_archived_at`, `asset_accessed_at`, `tags`. With the interface: `interface_id`, `interface_name`, `interface_description`, `interface_type`, `interface_mac`, `interface_ip`, `interface_nat_ip`, `interface_ipv6`, `interface_vlans`, `interface_notes`, `interface_primary`, `interface_network_id`. And `asset_specs`, its details (`{}` for none).
+
+### Devices in an RMM {#assets-rmm}
+
+`asset_rmm` lists the asset's devices in your RMM providers - one for each provider that has it, the one most likely to matter first, and `[]` for an asset in none. Each has `provider_id` and `provider` (its name in ITFlow), `device_id` (its id in the RMM), `hostname`, `site`, `status` (`online`, `offline`, `overdue`, `removed` once the RMM no longer has it, or empty when it doesn't say), `last_seen_at`, `boot_at`, `logged_user`, `public_ip`, `local_ips`, `needs_reboot`, `patches_pending`, `checks_total`, `checks_failing`, `maintenance`, `agent_version`, `synced_at` (when the sync last brought it in) and `removed_at`. It is what the RMM said at the last sync, read only - the API doesn't change it.
+
+```json
+"asset_rmm": [
+  {
+    "provider_id": 1, "provider": "Tactical RMM", "device_id": "RDG00mepxbcudnvbtgbcqqc",
+    "hostname": "RDG-LT-01", "site": "Main Office", "status": "online",
+    "last_seen_at": "2026-11-21 18:47:48", "boot_at": "2026-11-10 18:49:09", "logged_user": "RDG\\mwhitfield",
+    "public_ip": "203.0.113.24", "local_ips": "192.168.11.100",
+    "needs_reboot": false, "patches_pending": false, "checks_total": 6, "checks_failing": 0, "maintenance": false,
+    "agent_version": "2.12.0", "synced_at": "2026-11-21 19:10:46", "removed_at": null
+  }
+]
+```
 
 ### Create {#assets-create}
 

@@ -25,11 +25,12 @@ A row of tiles counting what needs doing for this client. Each one opens a list 
 - tickets **past their SLA**, **unassigned tickets** and **overdue projects**
 - work **resolved, not invoiced** and **expenses to bill**
 - **service reviews due**, **passwords due for a change**, **licenses over seats** and **certificate problems**
+- devices **overdue** in your [RMM](/admin/rmm#client-overview) - not checking in
 - documents, licenses or vendors the client should have and doesn't
 - warranties, licenses, domains and certificates **expired** or **expiring soon**
 - [contracts](/billing/contracts) **ending** or **renewing soon**
 
-## Technical
+## Technical {#technical}
 
 - **Open tickets** - the client's open tickets, with how many were opened and resolved in the last 30 days.
 - **Quick notes** - anything the next person should know: gate codes, quirks, who to ask for. Type in it and it saves when you click away.
@@ -39,6 +40,7 @@ A row of tiles counting what needs doing for this client. Each one opens a list 
 - **Projects** and **Services**, with what needs a look.
 - **Renewals** - domains, certificates, licenses and warranties expired or due in the next 45 days.
 - **Assets** - how many of each kind, and how many warranties are covered or expired.
+- **Tactical RMM**, or whatever you call your [RMM](/admin/rmm#client-overview), when the client has devices in it - how many are online, offline or overdue, and how many need a reboot, have patches waiting or have checks failing. Each line opens those devices on the assets list.
 - **Shared links** that are still open, and **Recent activity** - the latest changes, with a link to the client's audit log.
 
 ## Financial
