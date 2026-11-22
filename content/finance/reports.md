@@ -27,6 +27,8 @@ Every report works the same way: pick a period, narrow it to one client where th
 
 ![The Profit & Loss report](fin-report-pl.webp "Profit & Loss: income, expenses and profit by month, with last year beside it")
 
+**Profit & Loss** and **Tax Collected** go by month or quarter. On **Quarterly**, a card for each quarter takes the place of the chart: its income, expenses and net profit - or its taxable sales, tax collected and net tax - each with its change on the same quarter last year. The quarter under way says **So far** and is compared with last year's to the same date.
+
 ## Sales and billing
 
 | Report | What it shows |
