@@ -10,6 +10,7 @@ ITFlow reads the platform that manages your clients' networks, so their gateways
 - Each site you link to a client has its devices as that client's assets - matched to the ones you already have by their MAC address, and kept up to date. See [What comes in](#what-comes-in).
 - An asset shows whether the device is online, how long it's been up, its public IP and whether a firmware update is waiting. See [On the asset](#on-the-asset).
 - The site's networks and VLANs are the client's [networks](/documentation/networks), with their subnet, gateway, DNS and DHCP range kept up to date. See [Networks and VLANs](#networks).
+- Each of the client's assets shows where it plugs in - the switch and port, or the access point - and each switch and access point what's on it. See [Where things plug in](#where-things-plug-in).
 
 It works like an [RMM provider](/admin/rmm), and uses the same sync - but network platforms have a page of their own, and their devices don't count as [managed devices](/admin/rmm#billing).
 
@@ -124,6 +125,21 @@ The network's page has a card for the platform, with the site and what UniFi cal
 
 > [!NOTE]
 > Through a console or Site Manager, networks come from UniFi Network's API, which only lists them in recent versions. On an older one, devices still come in, without their networks - update UniFi Network to have them.
+
+## Where things plug in {#where-things-plug-in}
+
+With each sync, ITFlow asks UniFi what's connected to the site's switches and access points, and keeps it for the devices that are the client's assets - a workstation from your [RMM](/admin/rmm), a printer or a server you entered. A device is one of its assets when one of the asset's interfaces has its MAC address or, failing that, when only one of the client's assets has its name. Everything else that's connected - phones, visitors' laptops - isn't kept.
+
+![Where things plug in](doc-asset-connection.webp "A workstation plugged into port 7 of the core switch, and the switch with what's plugged into each of its ports")
+
+- **An asset's Connection card** says what it's plugged into and which port, or which access point and Wi-Fi network it's on, with its IP address and network as UniFi saw it. The switch or access point links to its asset. It says **Connected now** while UniFi still sees it, and when it was last seen there once it doesn't.
+- **A switch's or access point's card** lists the client's assets on it - **Plugged in here**, by port, or **On its Wi-Fi** - over the last 30 days. One that isn't there now is greyed.
+- **UniFi's own switches and access points** show what they're plugged into too - a switch's uplink port on the gateway, or the access point a meshed one connects through.
+
+What a site saw of a device is kept for 90 days after it was last seen. Moving a device to another port shows at the next sync.
+
+> [!NOTE]
+> Through a console or Site Manager, UniFi's API says which switch or access point a device is on, but not the port or Wi-Fi network, nor what UniFi's own devices are plugged into. A controller signed in to with a user name says all of it.
 
 ## When devices come and go {#devices-come-and-go}
 
