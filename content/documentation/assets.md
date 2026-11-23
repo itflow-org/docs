@@ -15,7 +15,7 @@ An asset is a device: a laptop, a server, a NAS, a switch, a firewall, a UPS, a 
 - Each row shows the device's type icon, name and description, its tags, type and operating system, make, model and serial number, IP address, who it's assigned to, its location and its status. A UPS whose battery is due for replacing soon, or overdue, has a badge by its model, and so does a date one of your own [asset types](/admin/asset-types#details) flags, such as a badge reader's last test.
 - **Web**, **SSH** and **RDP** buttons beside an IP address open a connection to the device - the browser for Web, your SSH or remote desktop app for the others.
 - The location, assigned contact and status can be changed right in the row.
-- With an [RMM](/admin/rmm) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, the ones that need a reboot, have patches waiting or have checks failing, or the assets that aren't in it. **Bulk Action > Assign Signed-in Users** assigns each one with nobody assigned to the contact signed in to it - see [Who it's assigned to](/admin/rmm#assign).
+- With an [RMM](/admin/rmm) or a [network platform](/admin/network-platforms) set up, a dot after a device's name says whether it's online, offline or overdue there, and a filter shows the ones in each state, the ones that need a reboot, have patches waiting or have checks failing, or the assets that aren't in it. **Bulk Action > Assign Signed-in Users** assigns each one with nobody assigned to the contact signed in to it - see [Who it's assigned to](/admin/rmm#assign).
 
 To see every client's devices together, use **Across Clients > Assets** in the top bar.
 
@@ -97,7 +97,7 @@ Along the top are the asset's photo or type icon, name, status, type, model and 
 
 The cards show its **Network** details, its **Hardware** - model, serial, operating system or firmware, its details, warranty, when it was bought and installed, the vendor and order reference - and **Where & who**: its location, rack position and who has it. In a [rack holder](/documentation/racks#holders) it shows its slot and the holder; a holder that's an asset, such as a [multi-node server's chassis](/documentation/racks#chassis), has **Devices in it** too. **Quick notes** save as you click away.
 
-A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session.
+A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session. A gateway, switch or access point from a [network platform](/admin/network-platforms#on-the-asset) shows whether it's online, how long it's been up and whether a firmware update is waiting.
 
 A desk phone that reports to your [phone system](/admin/phone-systems#phones) has a card saying whether it's registered and its extension, and keeps its model, firmware and IP address up to date.
 

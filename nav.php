@@ -135,6 +135,7 @@ return [
             'payment-providers' => 'Card payments with Stripe',
             'text-messaging' => 'Text messaging with Skyetel',
             'rmm' => 'RMM providers',
+            'network-platforms' => 'Network platforms with UniFi',
             'phone-systems' => 'Phone systems with FusionPBX',
             'taxes' => 'Taxes',
             'labor-costs' => 'Labor costs',

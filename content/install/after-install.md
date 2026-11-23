@@ -174,5 +174,6 @@ Get started covers what ITFlow needs to run. Go through [Admin > Settings](/admi
 - Let clients sign in: [Client portal settings](/admin/client-portal) and [Giving contacts access](/portal/access)
 - Connect an AI model: [AI providers and models](/admin/ai)
 - Bring in devices and alerts from Tactical RMM: [RMM providers](/admin/rmm)
+- Bring in UniFi gateways, switches and access points: [Network platforms with UniFi](/admin/network-platforms)
 - Connect another RMM or your scripts: [API keys](/admin/api-keys)
 - Send logs to your SIEM: [Logs](/admin/logs#keeping-and-forwarding-logs)

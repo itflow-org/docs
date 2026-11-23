@@ -146,7 +146,7 @@ The alerts ITFlow sees are the ones in Tactical's dashboard. Each check's and ag
 
 ## Bill per managed device {#billing}
 
-A recurring invoice line can count the client's devices in Tactical: set its **Quantity from** to **Managed devices**. It can count only some types - Desktop and Laptop for a managed workstation, Server and Virtual Machine for a managed server - or only those with a tag. A device Tactical no longer has stops counting at the next invoice. See [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat).
+A recurring invoice line can count the client's devices in Tactical: set its **Quantity from** to **Managed devices**. It can count only some types - Desktop and Laptop for a managed workstation, Server and Virtual Machine for a managed server - or only those with a tag. A device Tactical no longer has stops counting at the next invoice, and a [network platform's](/admin/network-platforms) gateways, switches and access points never count. See [Recurring invoices](/billing/recurring-invoices#bill-per-user-per-device-or-per-seat).
 
 ![The Edit Line window, counting managed servers](bill-edit-line-managed.webp "Edit Line: a per-server line counting the client's servers in Tactical")
 
