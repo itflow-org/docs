@@ -63,7 +63,7 @@ Click a contact's name to open their page.
 - **Reach** - their phone numbers and email.
 - **Details** - their location, their PIN, whether they can sign in to the portal and when they last did, which ticket emails they get, and whether they agreed to texts. **View portal as them** opens the client portal as they see it, read only. **Ask them by text** asks whether texts are all right - a YES turns them on.
 - **Quick notes** - notes that save as you click away.
-- Tabs for their **Assets**, **Credentials**, **Tickets**, **Recurring** tickets, **Licenses**, **Documents**, **Files**, **Services**, **Notes** and **History**.
+- Tabs for their **Assets**, **Credentials**, **Tickets**, **Calls** (once a [phone system](/admin/phone-systems) is set up), **Recurring** tickets, **Licenses**, **Documents**, **Files**, **Services**, **Notes** and **History**.
 
 > [!TIP]
 > Raising a ticket from a contact's page fills in the client and contact for you, and shows if they already have open tickets.
