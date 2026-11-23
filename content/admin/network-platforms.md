@@ -9,6 +9,7 @@ ITFlow reads the platform that manages your clients' networks, so their gateways
 
 - Each site you link to a client has its devices as that client's assets - matched to the ones you already have by their MAC address, and kept up to date. See [What comes in](#what-comes-in).
 - An asset shows whether the device is online, how long it's been up, its public IP and whether a firmware update is waiting. See [On the asset](#on-the-asset).
+- The site's networks and VLANs are the client's [networks](/documentation/networks), with their subnet, gateway, DNS and DHCP range kept up to date. See [Networks and VLANs](#networks).
 
 It works like an [RMM provider](/admin/rmm), and uses the same sync - but network platforms have a page of their own, and their devices don't count as [managed devices](/admin/rmm#billing).
 
@@ -100,6 +101,29 @@ An asset from UniFi shows whether the device is **Online** or **Offline** beside
 On the [assets list](/documentation/assets#the-assets-list), a dot after a device's name says whether it's online. The filter is named after the platform when it's the only one, and is called **Monitoring** once there's another platform or an RMM beside it. Its **patches waiting** shows the UniFi devices with a firmware update.
 
 If a device was matched to the wrong asset, use **⋮ > Link to another asset** on its card - see [Link to another asset](/admin/rmm#link-to-another-asset).
+
+## Networks and VLANs {#networks}
+
+Each linked site's networks come in as its client's [networks](/documentation/networks), after its devices. When the client has a network with the same subnet already, it's matched; otherwise a new one is made, with its name, type, VLAN, subnet, gateway, DNS servers and DHCP range.
+
+- **Its type** is **Guest** for a guest network, **VPN** for a remote access VPN, and otherwise worked out from its name, as the form does - "Cameras" is **IoT**.
+- **Its DNS servers** are the ones UniFi's DHCP hands out - the gateway, unless the network names others.
+- **The default network** has no VLAN written down. UniFi calls it VLAN 1, which is untagged.
+- **What isn't a network here** doesn't come in: WAN connections, site-to-site VPNs, VLANs with no subnet of their own, and networks that are turned off.
+
+As with an asset, each detail follows UniFi until you change it in ITFlow - a DHCP range widened in UniFi is widened here - and a matched network keeps what it had, getting only what it was missing. The DNS servers go together: change one here and UniFi changes neither. The network's **History** says what UniFi changed.
+
+![A network kept up from UniFi](doc-network-unifi.webp "A client's office LAN, matched to UniFi's Default network: the gateway and DHCP range filled in from UniFi, its own DNS server kept")
+
+The network's page has a card for the platform, with the site and what UniFi calls the network.
+
+- **A network UniFi no longer has** stays, and its card says when UniFi stopped listing it.
+- **A network you delete in ITFlow** isn't made again. **⋮ > Bring back** on its site's row brings deleted networks back with deleted devices.
+- **A network you archive** is left as it is.
+- **Unlink** the site and its networks stay, no longer kept up.
+
+> [!NOTE]
+> Through a console or Site Manager, networks come from UniFi Network's API, which only lists them in recent versions. On an older one, devices still come in, without their networks - update UniFi Network to have them.
 
 ## When devices come and go {#devices-come-and-go}
 

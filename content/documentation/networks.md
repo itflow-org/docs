@@ -25,6 +25,8 @@ Search finds the network an IP address belongs to: type `192.168.10.57` and the 
 
 ITFlow warns you when a new network overlaps one the client already has.
 
+With a [network platform](/admin/network-platforms#networks) such as UniFi linked to the client, its networks and VLANs come in by themselves and are kept up to date.
+
 To add many at once, use **Import**, under the arrow beside **New Network**, with a CSV spreadsheet - each network is checked as the form checks it. See [Importing from a spreadsheet](/getting-started/importing).
 
 ## The address plan
