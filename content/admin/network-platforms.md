@@ -1,6 +1,6 @@
 ---
 title: Network platforms with UniFi
-description: Bring your clients' UniFi gateways, switches and access points into ITFlow as assets and keep them up to date - from a controller you host, a UniFi console, or UniFi's Site Manager.
+description: Bring your clients' UniFi gateways, switches and access points into ITFlow as assets, with their networks and VLANs, where each device plugs in, and a ticket when one goes offline - from a controller you host, a UniFi console, or UniFi's Site Manager.
 where: Admin > Network Platforms
 access: Admins
 ---
@@ -11,6 +11,7 @@ ITFlow reads the platform that manages your clients' networks, so their gateways
 - An asset shows whether the device is online, how long it's been up, its public IP and whether a firmware update is waiting. See [On the asset](#on-the-asset).
 - The site's networks and VLANs are the client's [networks](/documentation/networks), with their subnet, gateway, DNS and DHCP range kept up to date. See [Networks and VLANs](#networks).
 - Each of the client's assets shows where it plugs in - the switch and port, or the access point - and each switch and access point what's on it. See [Where things plug in](#where-things-plug-in).
+- A device that goes offline can open a ticket, resolved when it's back. See [Offline alerts](#offline-alerts).
 
 It works like an [RMM provider](/admin/rmm), and uses the same sync - but network platforms have a page of their own, and their devices don't count as [managed devices](/admin/rmm#billing).
 
@@ -60,7 +61,7 @@ Site Manager reaches each console through UniFi's cloud, so ITFlow needs no addr
 4. Under **Asset types**, pick what **Gateways**, **Switches**, **Access points** and **Other UniFi devices** come in as - ITFlow's own types, or one of [your own](/admin/asset-types). Leave them as they are to keep ITFlow's.
 5. Click **Create**. ITFlow signs in, brings in its sites and opens its **Sites** page. If something is wrong, it says what - a password or key UniFi turned away, an account with two-step sign-in, or a certificate that needs **Accept the certificate it made for itself**.
 
-![The New Network Platform window](adm-np-platform-form.webp "New Network Platform: a classic controller, signed in to with a local admin, and the asset type each kind of device comes in as")
+![The New Network Platform window](adm-np-platform-form.webp "New Network Platform: a classic controller, signed in to with a local admin, its offline alerts, and the asset type each kind of device comes in as")
 
 No devices come in yet. They come in once you link their site to a client.
 
@@ -141,6 +142,29 @@ What a site saw of a device is kept for 90 days after it was last seen. Moving a
 > [!NOTE]
 > Through a console or Site Manager, UniFi's API says which switch or access point a device is on, but not the port or Wi-Fi network, nor what UniFi's own devices are plugged into. A controller signed in to with a user name says all of it.
 
+## Offline alerts {#offline-alerts}
+
+A device that goes offline can open a ticket. UniFi has no alerts for ITFlow to read, so ITFlow asks it every minute which devices of the linked sites are offline, and makes them alerts:
+
+| Device | Alert |
+|---|---|
+| A gateway or switch | an error - a **High** priority ticket |
+| An access point, or anything else | a warning - a **Medium** priority ticket |
+
+Turn them on in the platform's **Edit**, with **Alerts open tickets** - **Errors** for gateways and switches only, **Errors and warnings** for every device - and, if you like, the **Ticket category** they go in. From there they work as [an RMM's alerts](/admin/rmm#alerts) do:
+
+- The ticket is on the device's asset, with no contact. The device going offline again while that ticket isn't closed goes on it as a note.
+- When the device is back online, its ticket gets a note and is resolved - unless someone has written on it or moved it to another status.
+- Devices already offline when you turn this on don't open tickets.
+
+![A ticket opened by an offline gateway](sd-ticket-unifi.webp "A gateway gone offline: one High priority ticket, saying the rest of the site went with it")
+
+**A site whose gateway goes offline** gets the one ticket, for the gateway, saying how many of the site's other devices went offline with it - not a ticket for every switch and access point behind it.
+
+**Through Site Manager**, a console that's offline can't be asked about its devices at all. When Site Manager says the console isn't connected, its site gets an alert on its gateway - "RDG UDM Pro went offline - Site Manager can't reach it" - resolved once the console is back.
+
+UniFi decides when a device is offline. One that reboots can be offline for a minute or two - long enough to open a ticket, which is resolved when it's back.
+
 ## When devices come and go {#devices-come-and-go}
 
 Devices come and go as they do from an RMM - see [When devices come and go](/admin/rmm#devices-come-and-go). A device removed from UniFi keeps its asset, marked as no longer there; most of a site's devices gone at once are held for a day; and a deleted asset comes back with **⋮ > Bring back** on its site's row.
@@ -149,18 +173,18 @@ A device that moves to another site is matched or made at that site's client, by
 
 ## The platform {#the-platform}
 
-![Network Platforms](adm-np-platforms.webp "Network Platforms: a controller, a console and a Site Manager account, how many of their sites are linked and their devices in ITFlow")
+![Network Platforms](adm-np-platforms.webp "Network Platforms: a controller, a console and a Site Manager account, how many of their sites are linked, their devices in ITFlow and which offline alerts open tickets")
 
-The list shows each platform, which kind it is, how many of its sites are linked and how many have a suggestion waiting, how many of its devices are assets here, and when it last synced. Hover over the sync to see what it brought in.
+The list shows each platform, which kind it is, how many of its sites are linked and how many have a suggestion waiting, how many of its devices are assets here, which [offline alerts](#offline-alerts) open tickets, and when it last synced. Hover over the sync to see what it brought in.
 
 From a platform's menu:
 
 - **Sites** - its [Sites page](#link).
-- **Edit** - its name, address, sign-in or key. Leave the password or key empty to keep the saved one. Which kind of UniFi it is can't be changed.
+- **Edit** - its name, address, sign-in or key, and its alerts. Leave the password or key empty to keep the saved one. Which kind of UniFi it is can't be changed.
 - **Sync Now** - bring in its linked sites' devices now.
 - **Test the Connection** - whether UniFi lets ITFlow in, how many sites and devices it sees, and - through Site Manager - any console it couldn't reach.
 - **Open UniFi** - the controller or console, or unifi.ui.com for Site Manager.
-- **Turn Off** - nothing is brought in. Assets keep what it last said.
+- **Turn Off** - nothing is brought in, and devices going offline don't open tickets. Assets keep what it last said.
 - **Delete** - the links between its sites and your clients are forgotten, and assets no longer show what it says. The assets stay.
 
 ## Syncing {#syncing}
