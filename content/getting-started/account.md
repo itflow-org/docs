@@ -69,6 +69,7 @@ When you sign in, the code goes in the same six boxes and signs you in as soon a
 - **Remind me before work booked for me** - a [reminder](/service-desk/calendar#reminders) this long before each ticket booked with you, or **No reminder**.
 - **Email me reminders too** - reminders by email as well as on the bell, for your tickets and for events.
 - **Calendar color** - the colour your booked tickets and the events assigned to you are drawn in on the [calendar](/service-desk/calendar#colours). Click one of the twelve, or the box to pick any colour. **Automatic** goes back to the one you started with.
+- **My desk phone** - your extension, once an admin has set up a [phone system](/admin/phone-systems). Calls on it [pop up](/service-desk/calls#pops) in ITFlow as they ring, with who's calling.
 
 ## Your canned responses
 

@@ -10,6 +10,7 @@ ITFlow keeps your phone system's calls with the people they were with. FusionPBX
 - Each call's record, as it hangs up. It shows on [Calls](/service-desk/calls) and the contact's page, with who it was with and how long you talked, and can go on a ticket with its talk time.
 - A question as each call comes in: who is this? ITFlow answers with the contact and their client, so your desk phones show **Marla Whitfield - Ravenwood Dental** as they ring. See [Caller ID](#caller-id).
 - The desk phones themselves, as they start up and register: each becomes an asset of its client, with its model, firmware, IP address and extension. See [Phones](#phones).
+- What happens on each desk phone as a call rings, is answered and ends, so a call on an agent's desk phone [pops up](/service-desk/calls#pops) in ITFlow with who's calling.
 
 ## Add FusionPBX
 
@@ -57,6 +58,8 @@ Each phone is kept by its MAC address. Once its domain is [linked to a client](#
 - If you link the domain to a different client, the old asset stays where it is and the phone becomes an asset of the new client.
 
 The Domains page counts the **Phones** on each domain, so you can see them reporting before you link it.
+
+The same lines send what happens on each phone as a call rings, is answered and ends. Agents who pick their extension in **Your account > Preferences** get those calls [popping up](/service-desk/calls#pops) in ITFlow.
 
 ## Link its domains {#domains}
 

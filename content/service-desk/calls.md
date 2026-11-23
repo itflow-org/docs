@@ -1,6 +1,6 @@
 ---
 title: Calls
-description: Every call from your phone system with the contact it was with, the extension that took it and how long you talked - and putting a call on a ticket with its talk time.
+description: Every call from your phone system with the contact it was with, the extension that took it and how long you talked, calls on your desk phone popping up as they ring, and putting a call on a ticket with its talk time.
 where: Calls
 access: Agents with access to Support
 ---
@@ -19,11 +19,11 @@ Each row shows:
 
 The tabs show **Inbound**, **Outbound**, **Missed** (missed and voicemail) and **Unknown** - numbers that aren't a contact's. Search finds a call by the contact, the caller ID name, the client, the extension, the agent or part of the number.
 
-The button at the end of a row opens the call's page in FusionPBX, with its recording.
+The menu at the end of a row has **Add to Ticket** and **Open in FusionPBX** - the call's page there, with its recording.
 
 ## Put a call on a ticket {#ticket}
 
-Click **Add to Ticket** on the call.
+In the call's menu, click **Add to Ticket**.
 
 1. Pick one of the client's open tickets. The contact's own tickets come first, and the one they're on is picked to start with. For a caller ITFlow doesn't know, any client's open ticket can be picked.
 2. Leave **Count the call as time worked** on to log its talk time, rounded up to the minute, with when the call started and ended.
@@ -35,6 +35,19 @@ An internal note on the ticket says what the call was - **Inbound call from Marl
 **New Ticket** in the same window opens New Ticket with the client, the contact and the call filled in. The ticket is made with the call on it, its talk time logged, and its source set to Phone.
 
 A caller ITFlow didn't know becomes the ticket's client and contact, so their next calls are easier to place - add their number to the contact to have ITFlow know them.
+
+## Calls on your desk phone {#pops}
+
+Set your desk phone and its calls pop up at the bottom right of the page as they ring, wherever you are in ITFlow - apart from Admin and your account's pages. In **Your account > Preferences**, pick your extension under **My desk phone**. The list has the extensions your phones and calls have shown ITFlow, each with its client and phone; two agents who share a desk phone can both pick it.
+
+![Two calls popping up: one ringing, with the contact's open tickets and New Ticket, and one just ended, with Add to Ticket](doc-calls-pop.webp "A call ringing, and one just ended")
+
+- **Ringing** - who's calling: the contact and their client, or the name and number the phone shows, and their open tickets, the contact's first. **New Ticket** opens Quick Ticket - or New Ticket, if Quick Ticket is off - with the client and contact picked. Its timer doesn't start, because the call's talk time can go on the ticket when the call ends.
+- **On a call** - once you answer, it counts how long you've been talking.
+- **Call ended** - once the phone system has sent the call's record, **Add to Ticket** opens [Add to Ticket](#ticket) for the call, with the ticket you made from the pop picked. It stays for ten minutes.
+- The **x** puts a call away, in every tab you have open.
+
+The pops come from the desk phone itself, so the phones need the lines from the phone system's [Setup window](/admin/phone-systems#phones). Calls between extensions don't pop up, and a page that's in the background catches up as soon as you look at it.
 
 ## On a contact {#contact}
 
