@@ -99,6 +99,10 @@ The cards show its **Network** details, its **Hardware** - model, serial, operat
 
 A device from your [RMM](/admin/rmm#on-the-asset) shows whether it's online beside its status, and has a card with who's signed in, what needs attention and its alerts - and **Take Control** along the top opens a remote session.
 
+A desk phone that reports to your [phone system](/admin/phone-systems#phones) has a card saying whether it's registered and its extension, and keeps its model, firmware and IP address up to date.
+
+![A desk phone's asset with its phone system card, saying it's registered on extension 104](doc-asset-phone.webp "A phone that reports itself: registered, on Ext 104")
+
 A server or NAS lists the virtual machines that run on it, under **Runs**, and a virtual machine links to its host. A UPS shows how long is left until its battery is to be replaced:
 
 ![A UPS's page, with its capacity, runtime and the battery due for replacing in 24 days](doc-asset-ups.webp "A UPS: its capacity, output, runtime and outlets, and when the battery went in and is due out")

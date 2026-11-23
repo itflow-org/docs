@@ -1,6 +1,6 @@
 ---
 title: Phone systems with FusionPBX
-description: Keep every call with the contact it was with, put calls on tickets with their talk time, and have desk phones show who's calling - from FusionPBX, without its API or its database.
+description: Keep every call with the contact it was with, put calls on tickets with their talk time, have desk phones show who's calling and keep them as assets - from FusionPBX, without its API or its database.
 where: Admin > Phone Systems
 access: Admins
 ---
@@ -9,6 +9,7 @@ ITFlow keeps your phone system's calls with the people they were with. FusionPBX
 
 - Each call's record, as it hangs up. It shows on [Calls](/service-desk/calls) and the contact's page, with who it was with and how long you talked, and can go on a ticket with its talk time.
 - A question as each call comes in: who is this? ITFlow answers with the contact and their client, so your desk phones show **Marla Whitfield - Ravenwood Dental** as they ring. See [Caller ID](#caller-id).
+- The desk phones themselves, as they start up and register: each becomes an asset of its client, with its model, firmware, IP address and extension. See [Phones](#phones).
 
 ## Add FusionPBX
 
@@ -39,6 +40,24 @@ A call made after that shows on **Calls** within seconds of hanging up, and the 
 
 The name is only set when ITFlow knows the number, so a caller ITFlow doesn't know keeps the name the carrier sent.
 
+### Phones {#phones}
+
+Desk phones tell ITFlow about themselves - they reach ITFlow's address directly, so they need to be able to get to it. The window's **Phones** part has the lines for each make:
+
+- **Yealink** - add the `action_url` lines to the template FusionPBX provisions your Yealink phones with, then have the phones check for new settings. For a single phone, you can instead enter each address in its own web page under **Features > Action URL**.
+- **Polycom** - add the `telNotification` line to the configuration your Polycom phones are provisioned with.
+
+![The Phones part of the Setup window, with the lines for Yealink and Polycom phones](adm-phone-setup-phones.webp "Phones: the lines that have Yealink and Polycom phones report to ITFlow")
+
+Each phone is kept by its MAC address. Once its domain is [linked to a client](#domains), it becomes a **Phone** asset of that client, named after its extension - **PH-104** - with its make, model, firmware, IP and MAC address and its extension. If the client already has an asset with that MAC address, the phone uses it instead of making another.
+
+- What the phone says keeps the asset up to date - a new firmware, a new IP address - unless you changed that field in ITFlow, which is then left as you have it. Its history says what changed.
+- The asset has a card for the phone system, saying whether the phone is registered and since when, and its extension. A phone only says something when it starts up, registers or has a call, so the card says how long ago that was.
+- A phone asset you delete isn't made again. If you add one by hand with its MAC address, the phone uses that.
+- If you link the domain to a different client, the old asset stays where it is and the phone becomes an asset of the new client.
+
+The Domains page counts the **Phones** on each domain, so you can see them reporting before you link it.
+
 ## Link its domains {#domains}
 
 Each domain - a FusionPBX tenant - shows on the system's **Domains** page with its first call. Link it to the client it is:
@@ -62,6 +81,6 @@ A number is matched to a contact by their mobile or phone. A mobile wins over an
 ## Turn it off, or delete it
 
 - **Turn Off**, in its menu, turns away what it sends - calls aren't kept and caller ID gets no names - until it's on again.
-- **Delete** removes it, its domains and its calls. Notes already on tickets stay.
+- **Delete** removes it, its domains, its calls and what its phones said. Notes already on tickets and the phones' assets stay.
 
 Calls over 400 days old that aren't on a ticket are deleted each night.
