@@ -56,7 +56,7 @@ Until its cron job runs, the instance shows as **Waiting for its cron job** here
 
 ![Managed instances](adm-managed-instances.webp "Managed instances: each one's version, health, seats and last check-in")
 
-The list shows each instance with its version and whether an update is waiting - a security update stands out - and whether it updates itself; what needs a look; its agents against its seat limit; and when it last checked in. A green dot is checking in, a red one has stopped, and a yellow one is a new instance **Waiting for its cron job** - connected, but its cron has never run.
+The list shows each instance with its version and whether an update is waiting - a security update stands out - and whether it updates itself; what needs a look; its agents against its seat limit; its **Last 30 days** - tickets opened, how many of its agents signed in and when one last did, and API calls; and when it last checked in. Sort by **Last 30 days** to find the ones that are hardly used. A green dot is checking in, a red one has stopped, and a yellow one is a new instance **Waiting for its cron job** - connected, but its cron has never run.
 
 Click an instance for everything it reported:
 
@@ -64,7 +64,7 @@ Click an instance for everything it reported:
 
 - **Health** lists what needs a look: cron switched off or not running, a database update not applied, the last update failed, an update or security update waiting, the last backup failed or none for three days, errors logged today and the categories they were logged under, every seat taken - or **All good**. A problem that has opened a [ticket](#problem-tickets) links to it.
 - **Agents** lists who holds its seats: each active agent's name and email, their role, whether they sign in with MFA, and when they last signed in - then the invites waiting, with the day each runs out. API accounts are marked. Its support user isn't there, as it takes no seat. An instance on an older version shows only how many, until it's updated.
-- **History** is how it has done day by day - its agents, clients, storage, uptime, errors and backups. See [History](#history).
+- **History** is how it has done day by day - its agents, clients, storage, uptime, errors and backups - and how much it's used. See [History](#history).
 - **Requests** is what you've asked it to do - updates and checks for updates, yours and automatic ones - and how they went.
 - **The instance** has its version, branch and database, when it last checked for updates, its agents and clients, last backup, cron, errors today, storage, PHP, time zone and where it checks in from. Under **Errors today**, the count and each category [sign you in to it as support](#sign-in-as-support) on its **App Logs**, showing just those errors.
 
@@ -82,10 +82,21 @@ You're notified when an instance stops checking in for ten minutes - or, for a n
 - **Errors** each day, with the categories they came under over the period.
 - **Backups** - a strip of the days: a backup made, one that failed, or none.
 
-Over a year, errors, uptime and backups go by the week. History is kept for good - a line a day for each instance - from the day your ITFlow started keeping it; there's none from before.
+Under **Usage**, the same period shows how much it's used, as it counts it by its own date:
+
+![Usage](adm-managed-instance-usage.webp "Usage: tickets, replies, sign-ins, billing, email and API calls over 90 days")
+
+- **Tickets** opened and resolved each day, and how many came in by email.
+- **Replies** - replies and notes by its agents.
+- **Signing in** - how many of its agents signed in each day, how many signed in over the last 30 days, and the client portal sign-ins.
+- **Billing** - invoices made and payments recorded.
+- **Email** sent, and email that failed.
+- **API calls**, with the keys that made the most of them, by name.
+
+Over a year, the bar charts and backups go by the week. History is kept for good - a line a day for each instance - from the day your ITFlow started keeping it; there's none from before. An instance shows its usage once it's on a version that counts it.
 
 > [!NOTE]
-> Instances send how they're doing and who their agents are - never tickets, documents, credentials, invoices or contacts. Of their errors they send only how many and the categories they were logged under, never what they say, as an error can hold a client's email address or a ticket's subject. Their admins can see exactly what's sent on **Admin > Managed By**.
+> Instances send how they're doing and who their agents are - never tickets, documents, credentials, invoices or contacts. Of their errors they send only how many and the categories they were logged under, never what they say, as an error can hold a client's email address or a ticket's subject. Of their use they send only counts - how many tickets, replies, invoices, payments, sign-ins, emails and API calls, with each API key's name. Their admins can see exactly what's sent on **Admin > Managed By**.
 
 ## Problem tickets {#problem-tickets}
 
