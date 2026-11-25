@@ -24,6 +24,6 @@ Installing ITFlow on a server of your own? Start with [Before you install](/inst
 
 ## About these docs
 
-These pages describe ITFlow 26.12. The screenshots come from a demo company, Summit IT Partners, and its made-up clients. Your ITFlow shows your own clients, and only the parts your role lets you open, so a menu item or button in a screenshot may not be there for you. If something is missing, ask whoever runs ITFlow at your company.
+These pages describe ITFlow 26.12.1. The screenshots come from a demo company, Summit IT Partners, and its made-up clients. Your ITFlow shows your own clients, and only the parts your role lets you open, so a menu item or button in a screenshot may not be there for you. If something is missing, ask whoever runs ITFlow at your company.
 
 Click any screenshot to see it full size. Press <kbd>Ctrl</kbd> <kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>K</kbd> on a Mac) on any page to search the docs.

@@ -1,11 +1,11 @@
 ---
 title: Managing other ITFlow installs
-description: Run other ITFlow installs from your own - see how each is doing, update them, set their seat limit and white label, sign in as support, and make one read-only or suspend it.
+description: Run other ITFlow installs from your own - see how each is doing and who its agents are, have their problems open tickets, update them, set their seat limit and white label, sign in as support, and make one read-only or suspend it.
 where: Admin > Managed Instances
 access: Admins
 ---
 
-One ITFlow can manage others: your clients' own ITFlows, a reseller's, or the ones you host. Each one checks in with yours every minute, so you see how they're all doing in one list, and from there you can update them, set how many agents they can have and their white-label key, sign in to one as support, and make one read-only or suspend it.
+One ITFlow can manage others: your clients' own ITFlows, a reseller's, or the ones you host. Each one checks in with yours every minute, so you see how they're all doing in one list - and their problems can open tickets - and from there you can update them, set how many agents they can have and their white-label key, sign in to one as support, and make one read-only or suspend it.
 
 The ITFlow that manages is the **manager**; the ones it manages are **instances**. Any ITFlow can be either, or both - a reseller's ITFlow can be managed by its provider and manage its own clients'.
 
@@ -35,6 +35,8 @@ Taking a line out again keeps what's there. An instance stays connected but stop
 
 The instance needs to be on the same version of ITFlow or newer, with cron running - it checks in from cron. It calls your ITFlow at its address, so that has to be reachable from where the instance is; nothing ever connects to the instance, so it can sit behind a firewall.
 
+Your ITFlow can sit behind a web application firewall - ModSecurity with the OWASP Core Rule Set, say - with nothing to exclude for check-ins: an instance sends its report encoded, so the cron command and error text in it don't look like an attack. An instance on an older version sends it as plain text until it's updated, and a firewall may turn that away - its **Managed By** page says "The manager answered 403". Update it, or exclude the rule the firewall names for `/api/managed/checkin.php` until you do.
+
 Lost the code, or moving the instance to a new server? **New Connection Code** in its menu makes another; the old one stops working, and whatever connects with the new one takes the place of what was connected.
 
 ### Set up a new install and connect it in one go {#set-up-new}
@@ -60,14 +62,33 @@ Click an instance for everything it reported:
 
 ![An instance](adm-managed-instance.webp "An instance: what needs a look, what it's been asked, what you set and what it reported")
 
-- **Health** lists what needs a look: cron switched off or not running, a database update not applied, the last update failed, an update or security update waiting, the last backup failed or none for three days, errors logged today, every seat taken - or **All good**.
+- **Health** lists what needs a look: cron switched off or not running, a database update not applied, the last update failed, an update or security update waiting, the last backup failed or none for three days, errors logged today and the categories they were logged under, every seat taken - or **All good**. A problem that has opened a [ticket](#problem-tickets) links to it.
+- **Agents** lists who holds its seats: each active agent's name and email, their role, whether they sign in with MFA, and when they last signed in - then the invites waiting, with the day each runs out. API accounts are marked. Its support user isn't there, as it takes no seat. An instance on an older version shows only how many, until it's updated.
 - **Requests** is what you've asked it to do - updates and checks for updates, yours and automatic ones - and how they went.
-- **The instance** has its version, branch and database, when it last checked for updates, its agents and clients, last backup, cron, errors today, storage, PHP, time zone and where it checks in from.
+- **The instance** has its version, branch and database, when it last checked for updates, its agents and clients, last backup, cron, errors today, storage, PHP, time zone and where it checks in from. Under **Errors today**, the count and each category [sign you in to it as support](#sign-in-as-support) on its **App Logs**, showing just those errors.
 
-You're notified when an instance stops checking in for ten minutes - or, for a new one, that it's still waiting for its cron job - and again when it's back, and when an update on one fails.
+You're notified when an instance stops checking in for ten minutes - or, for a new one, that it's still waiting for its cron job - and again when it's back, and when an update on one fails. Turn on [problem tickets](#problem-tickets) to have its problems open tickets as well.
 
 > [!NOTE]
-> Instances send how they're doing - never tickets, documents, credentials, invoices or contacts. Their admins can see exactly what's sent on **Admin > Managed By**.
+> Instances send how they're doing and who their agents are - never tickets, documents, credentials, invoices or contacts. Of their errors they send only how many and the categories they were logged under, never what they say, as an error can hold a client's email address or a ticket's subject. Their admins can see exactly what's sent on **Admin > Managed By**.
+
+## Problem tickets {#problem-tickets}
+
+An instance's problems can open tickets, so they land in your queue with the rest of your work. It's off to start with.
+
+1. On **Admin > Managed Instances**, click **Problem Tickets**.
+2. Pick which **Problems open tickets**:
+   - **Problems** - it has stopped checking in, cron isn't running, an update failed, its database update isn't applied, or a security update is waiting on one that doesn't update itself. These open at High priority.
+   - **Problems and warnings** - those, and its backups failing or none for three days, and errors being logged. Warnings open at Medium.
+3. Pick a **Ticket category** for them, if you like, and click **Save**.
+
+![Problem Tickets](adm-managed-problem-tickets.webp "Problem Tickets: which problems open tickets, and their category")
+
+- A problem opens a ticket once it has lasted ten minutes, so a blip doesn't. The ticket is on the instance's client - or, when it has none, on your own client record, set in [Company details](/admin/settings#company-details); with neither, it waits until one is set. It says what's wrong, with the instance's address, version and last check-in, what to look at, and a link to its page here.
+- The same problem coming back goes on its ticket as a note while that isn't closed, and reopens it if it was resolved.
+- When the problem clears, the ticket gets a note and is resolved - unless someone has written on it, and then it stays as it is for you to close.
+- A new instance waiting for its cron job opens none, and neither does a suspended one. A problem already there when you turn this on opens a ticket too, once it has lasted ten minutes.
+- On an instance's page, each problem under **Health** links to its ticket.
 
 ## Update instances
 
