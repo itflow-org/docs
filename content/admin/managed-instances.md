@@ -1,6 +1,6 @@
 ---
 title: Managing other ITFlow installs
-description: Run other ITFlow installs from your own - see how each is doing and who its agents are, have their problems open tickets, update them, set their seat limit and white label, sign in as support, and make one read-only or suspend it.
+description: Run other ITFlow installs from your own - see how each is doing, who its agents are and its history, have their problems open tickets, update them, set their seat limit and white label, sign in as support, and make one read-only or suspend it.
 where: Admin > Managed Instances
 access: Admins
 ---
@@ -64,10 +64,25 @@ Click an instance for everything it reported:
 
 - **Health** lists what needs a look: cron switched off or not running, a database update not applied, the last update failed, an update or security update waiting, the last backup failed or none for three days, errors logged today and the categories they were logged under, every seat taken - or **All good**. A problem that has opened a [ticket](#problem-tickets) links to it.
 - **Agents** lists who holds its seats: each active agent's name and email, their role, whether they sign in with MFA, and when they last signed in - then the invites waiting, with the day each runs out. API accounts are marked. Its support user isn't there, as it takes no seat. An instance on an older version shows only how many, until it's updated.
+- **History** is how it has done day by day - its agents, clients, storage, uptime, errors and backups. See [History](#history).
 - **Requests** is what you've asked it to do - updates and checks for updates, yours and automatic ones - and how they went.
 - **The instance** has its version, branch and database, when it last checked for updates, its agents and clients, last backup, cron, errors today, storage, PHP, time zone and where it checks in from. Under **Errors today**, the count and each category [sign you in to it as support](#sign-in-as-support) on its **App Logs**, showing just those errors.
 
 You're notified when an instance stops checking in for ten minutes - or, for a new one, that it's still waiting for its cron job - and again when it's back, and when an update on one fails. Turn on [problem tickets](#problem-tickets) to have its problems open tickets as well.
+
+### History {#history}
+
+**History**, on an instance's page, shows how it has done a day at a time, over **30 days**, **90 days** or **1 year**:
+
+![History](adm-managed-instance-history.webp "History: an instance's agents, clients, storage, uptime, errors and backups over 90 days")
+
+- **Agents** against its seat limit, with the invites waiting, and its **Clients**.
+- **Storage** - its uploads and its database.
+- **Uptime** - the minutes each day it wasn't checking in, counting only gaps of more than ten minutes, with the latest gaps listed: when each started and how long it lasted.
+- **Errors** each day, with the categories they came under over the period.
+- **Backups** - a strip of the days: a backup made, one that failed, or none.
+
+Over a year, errors, uptime and backups go by the week. History is kept for good - a line a day for each instance - from the day your ITFlow started keeping it; there's none from before.
 
 > [!NOTE]
 > Instances send how they're doing and who their agents are - never tickets, documents, credentials, invoices or contacts. Of their errors they send only how many and the categories they were logged under, never what they say, as an error can hold a client's email address or a ticket's subject. Their admins can see exactly what's sent on **Admin > Managed By**.
