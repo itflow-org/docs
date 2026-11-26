@@ -36,7 +36,7 @@ Click an empty U on the drawing, or **Add Item**. Or drag one of the client's as
 3. Add its **Power draw** in watts, if you track power, and notes.
 4. Save.
 
-Click an item on the drawing to edit it - for an asset, which opens its own page, use the pencil that shows when you point at it. An asset's own page shows which rack it's in and at which U.
+Click an item on the drawing to edit it - for an asset, which opens its own page, use the pencil at its right. Every item also has a pencil on its row under **In this rack**. An asset's own page shows which rack it's in and at which U under **Where & who**, with **Edit or remove**.
 
 To take something out of the rack, edit it and click **Remove from rack**. The asset itself stays.
 
