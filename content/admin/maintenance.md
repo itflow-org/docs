@@ -246,4 +246,4 @@ The page still opens when the database is behind the code - which is when you mo
 
 - **Admin > Mail Queue** - every email sent or waiting. See [Mail](/admin/mail#the-mail-queue).
 - **Admin > Text Messaging > Messages** - every text sent and received, once texting is set up. See [Text messaging](/admin/text-messaging#log).
-- **Admin > Logs** - **Audit Logs**, **Sign-ins** and **App Logs**, as tabs. See [Logs](/admin/logs).
+- **Admin > Logs** - **Audit Logs**, **Sign-ins**, **App Logs** and their **Settings**, as tabs. See [Logs](/admin/logs).

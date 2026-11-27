@@ -27,9 +27,9 @@ When something isn't working - email not sending, a payment provider refusing - 
 
 ## Keeping and forwarding logs
 
-**Admin > Settings > Logs** sets how long each is kept - so many days, or forever - and can send every entry on to a syslog server or SIEM as it's written: Graylog, Splunk, Wazuh, Microsoft Sentinel and the like.
+The **Settings** tab, beside **App Logs**, sets how long each is kept - so many days, or forever - and can send every entry on to a syslog server or SIEM as it's written: Graylog, Splunk, Wazuh, Microsoft Sentinel and the like.
 
-![Log settings](adm-log-settings.webp "Logs: how long they're kept, and sending them on to a syslog server or SIEM")
+![Log settings](adm-log-settings.webp "Logs > Settings: how long they're kept, and sending them on to a syslog server or SIEM")
 
 For forwarding, set the **Server**, **Port**, whether it goes **Over** UDP, TCP or TLS, and **As** JSON, CEF or plain text. Pick which app logs to send, and whether to send **The audit log - every entry**. **Save and Send a Test** checks it arrives. If the server can't be reached, ITFlow isn't slowed down: it tries again a minute later, and the entries in between stay in ITFlow's own logs.
 
