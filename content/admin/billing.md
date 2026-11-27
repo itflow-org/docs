@@ -34,7 +34,7 @@ Switch on **Email payment reminders** and set the schedule:
 - **After it is due** - such as 7, 14, 30 (days late)
 - **Then every** so many days until it's paid - 0 for no more after the last one
 
-The page writes the schedule out in plain words as you set it. Reminders go to each client's primary and billing contacts, with a button to view and pay. A client can be left out on the **Billing** tab of their Edit window.
+The page writes the schedule out in plain words as you set it. Reminders go to each client's primary and billing contacts, with a button to view and pay. A client can be left out on the **Billing** tab of their Edit window. A client with more than one invoice late gets one reminder listing all they owe, on the days of the oldest - see [A client with several late invoices](/billing/reminders-and-statements#several-late).
 
 **Email a statement each month to every client with a balance** sends statements on the **Day of the month** you pick.
 

@@ -26,6 +26,12 @@ Some things are left out:
 
 Agents get a notification about late invoices on their reminder days too, so someone can pick up the phone.
 
+### A client with several late invoices {#several-late}
+
+A client with more than one invoice late isn't sent a reminder for each. On the days of their oldest late invoice, one reminder lists everything they owe - each invoice with its link, the late ones marked, and the total - with the statement PDF attached. An invoice that goes late in between waits for the next one, and its **Payment** card says when that is.
+
+A client with just one late invoice gets that invoice's own reminder. Reminders before and on the due date are always one per invoice. If the monthly statement falls on the same day, the reminder goes instead of it.
+
 ### Late fees
 
 Your admin can also add a late fee: a percent of what's still owed, added to the invoice as a line of its own every 30 days late, while reminders are on. Say so in your invoice footer, so clients know before it comes.
