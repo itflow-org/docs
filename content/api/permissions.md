@@ -58,7 +58,7 @@ An agent who can see every client - every admin, and anyone whose access isn't l
 
 ## Credentials {#credentials}
 
-Usernames, passwords and 2FA keys in ITFlow are encrypted. To read or write [credentials](/api/documentation#credentials), send the key's **credential decryption password** as `api_key_decrypt_password`. It was shown with the key when the key was made.
+Usernames, passwords and 2FA keys in ITFlow are encrypted. To read or write [credentials](/api/documentation#credentials), send the key's **credential decryption password** as `api_key_decrypt_password`. It was shown with the key when the key was made. Opening the vault with it is slow by design, so a call that reads or writes credentials takes about half a second longer than one that doesn't.
 
 It goes in a JSON body - on a read too, so a GET request carries a body:
 

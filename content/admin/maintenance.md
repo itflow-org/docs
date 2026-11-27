@@ -120,6 +120,8 @@ Every backup is an encrypted zip, and the **Encryption key** opens it. It's hidd
 
 **Export the Master Key**, under **Credential vault key**, gives you the key to the credential vault, for when every user's password is lost - a restore brings the vault back by itself as long as one user still knows theirs. It asks for your password, shows the key once, and files an encrypted copy with the backups. Every agent is notified that it was exported.
 
+Each agent, and each API key that reads credentials, has its own copy of the vault's key, sealed under its password with AES-256. **Copies of the key**, under it, says how many are sealed the current way. A copy made before 26.12.2 is sealed the older, weaker way and moves on by itself - an agent's the next time they sign in, an API key's on its next call that reads credentials. Those still waiting are listed by name. **Retire the Old Copies** stops them opening the vault, for agents who've left or keys no longer used: an agent gets the vault back when an admin resets their password, and an API key has to be made again. It's there once your own copy is sealed the current way, so a copy that opens the vault is always left.
+
 ### Restoring {#restore}
 
 A restore replaces the database - and, from a Full Backup, everything uploaded - with what's in the backup. Before it does, ITFlow backs itself up as it is, and keeps that in the list as **Before restore**, so a restore can be undone by restoring that one.
