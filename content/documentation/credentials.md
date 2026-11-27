@@ -25,7 +25,7 @@ To see every client's credentials, use **Across Clients > Credentials** in the t
    - Give it a **Name**, such as "Firewall Administrator". Click the star to make it a favorite.
    - Type the **Username / ID**.
    - Type the **Password / key**, or click the generator to make one - a passphrase or a random password. The strength meter shows how strong it is.
-   - Paste the **2FA secret** if it has one. It takes the secret with or without spaces, or the whole `otpauth://` link from the setup QR code, and shows the current code so you can check it's right.
+   - Paste the **2FA secret** if it has one. It takes the secret with or without spaces, or the whole `otpauth://` link from the setup QR code, and shows the current code so you can check it's right. It's kept encrypted, as the username and password are.
    - **Opens at** is the address you sign in at. **Also at** is a second address.
 3. On **Belongs to**, link the **Asset** or **Contact** it's for.
 4. On **Details**, add a **Description** and **Tags** - such as Break Glass, Local Admin or Rotate Quarterly.
