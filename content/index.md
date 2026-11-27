@@ -20,10 +20,10 @@ Installing ITFlow on a server of your own? Start with [Before you install](/inst
 | Answer questions from clients | [What clients see](/portal/overview) |
 | Run ITFlow for your company | [Settings](/admin/settings), [Users](/admin/users), [Roles and permissions](/admin/roles) |
 | Connect your RMM, phone system or scripts | [Getting started with the API](/api/overview), [Examples](/api/examples) |
-| Look after the server it runs on | [Before you install](/install/requirements), [Updating ITFlow](/install/updating), [When something goes wrong](/install/troubleshooting) |
+| Look after the server it runs on | [Before you install](/install/requirements), [Updating ITFlow](/install/updating), [What's new](/install/whats-new), [When something goes wrong](/install/troubleshooting) |
 
 ## About these docs
 
-These pages describe ITFlow 26.12.1. The screenshots come from a demo company, Summit IT Partners, and its made-up clients. Your ITFlow shows your own clients, and only the parts your role lets you open, so a menu item or button in a screenshot may not be there for you. If something is missing, ask whoever runs ITFlow at your company.
+These pages describe ITFlow 26.12.2 - see [What's new in ITFlow](/install/whats-new) for what changed in each release. The screenshots come from a demo company, Summit IT Partners, and its made-up clients. Your ITFlow shows your own clients, and only the parts your role lets you open, so a menu item or button in a screenshot may not be there for you. If something is missing, ask whoever runs ITFlow at your company.
 
 Click any screenshot to see it full size. Press <kbd>Ctrl</kbd> <kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>K</kbd> on a Mac) on any page to search the docs.

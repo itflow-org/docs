@@ -189,6 +189,7 @@ return [
             'config-php' => 'config.php',
             'demo' => 'Running a public demo',
             'updating' => 'Updating ITFlow',
+            'whats-new' => 'What\'s new',
             'moving' => 'Moving to a new server',
             'troubleshooting' => 'When something goes wrong',
         ],

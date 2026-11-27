@@ -9,7 +9,7 @@ A new version of ITFlow comes with new features and fixes. Most updates change t
 ## Before you update {#before}
 
 - **Take a backup.** A snapshot of the whole VM is safest, because you can roll back in a minute if something goes wrong. Otherwise, make a [Full Backup](/admin/maintenance#backup) and copy it off the server.
-- **Read what's new.** The Update page shows the notes for each release between yours and the newest, and [GitHub](https://github.com/itflow-org/itflow/blob/master/CHANGELOG.md) has them all. Some releases need a step of their own, under **Upgrading**, and each release says what changes for your team.
+- **Read what's new.** The Update page shows the notes for each release between yours and the newest, and [GitHub](https://github.com/itflow-org/itflow/blob/master/CHANGELOG.md) has them all. Some releases need a step of their own, under **Upgrading** - [What's new in ITFlow](/install/whats-new) lists them, with the highlights of every release.
 - **Pick a quiet time.** Your team may see errors for a minute or two while an update runs.
 
 ## From ITFlow {#from-itflow}

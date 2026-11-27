@@ -20,7 +20,7 @@ $docs = [
     'base' => '',
 
     // The version of ITFlow these pages describe
-    'version' => '26.11',
+    'version' => '26.12.2',
 
     // Links in the top bar and the footer
     'website_url' => 'https://itflow.org',
